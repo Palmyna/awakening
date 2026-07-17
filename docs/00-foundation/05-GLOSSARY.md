@@ -170,7 +170,7 @@ Les variantes narratives n’introduisent pas un niveau de regroupement supplém
 
 **Définition :** Valeur principale propre à une créature et susceptible d’être influencée par sa progression et sa personnalisation.
 
-Les **points de caractéristiques** sont les points que le joueur répartit pour augmenter les caractéristiques d’une créature.
+Les **points de caractéristiques** sont attribués à la créature concernée lors de ses montées de niveau. Le joueur les répartit librement sur cette même créature afin d’augmenter ses caractéristiques selon le build souhaité.
 
 **Terme à éviter :** « statistique » comme synonyme direct d’une caractéristique principale.
 

@@ -47,7 +47,7 @@ Deux joueurs possédant exactement les mêmes créatures doivent pouvoir créer 
 
 ### Conséquences sur la conception
 
-* Le joueur doit disposer de choix dans la répartition des caractéristiques.
+* Le joueur doit pouvoir répartir sur chaque créature les points de caractéristiques qu’elle reçoit lors de ses montées de niveau.
 * Les compétences apprises, l’équipement, l’évolution et le rôle dans l’équipe doivent contribuer à différencier les créatures.
 * Les synergies entre les membres d’une équipe doivent encourager plusieurs compositions.
 * La conception des créatures doit favoriser une diversité de builds et d’usages.

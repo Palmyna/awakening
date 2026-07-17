@@ -79,7 +79,7 @@ Le projet doit éviter :
 
 Le joueur ne doit jamais obtenir directement la forme finale d’une créature. Une invocation donne accès à la forme de base d’une famille de créatures, que le joueur accompagne ensuite jusqu’à sa forme finale.
 
-La progression individuelle, l’expérience gagnée en combat, la répartition des points de caractéristiques et l’amélioration des étoiles doivent donner de la valeur au temps consacré à chaque créature.
+La progression individuelle, l’expérience gagnée en combat, les points de caractéristiques reçus par chaque créature lors de ses montées de niveau, leur répartition par le joueur et l’amélioration des étoiles doivent donner de la valeur au temps consacré à chaque créature.
 
 Les doublons de créature servent à augmenter progressivement le potentiel de la créature concernée sans obliger le joueur à recommencer son évolution. Ils doivent soutenir la continuité de la progression, non annuler l’investissement déjà réalisé.
 

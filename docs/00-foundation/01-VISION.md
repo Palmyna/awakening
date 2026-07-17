@@ -140,7 +140,7 @@ Le joueur fait ensuite évoluer cette créature au fil de sa progression jusqu�
 
 Les créatures gagnent de l’expérience en participant aux combats.
 
-À chaque montée de niveau, le joueur obtient des points de caractéristiques qu’il répartit librement selon le build souhaité.
+À chaque montée de niveau, la créature concernée reçoit des points de caractéristiques que le joueur peut répartir librement sur celle-ci selon le build souhaité.
 
 Les doublons de créature servent à améliorer le niveau d’étoiles de la créature concernée et à augmenter progressivement son potentiel, sans nécessiter de recommencer son évolution.
 
