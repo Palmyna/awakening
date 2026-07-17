@@ -29,7 +29,7 @@ Avant toute contribution, les agents IA doivent également consulter :
 
 * ✅ [`01-VISION.md`](./docs/00-foundation/01-VISION.md)
 * 🚧 [`02-PILLARS.md`](./docs/00-foundation/02-PILLARS.md) — Rédigé, en attente de validation finale
-* ⬜ `03-PROJECT_PHILOSOPHY.md`
+* 🚧 [`03-PROJECT_PHILOSOPHY.md`](./docs/00-foundation/03-PROJECT_PHILOSOPHY.md) — Rédigé, en attente de validation finale
 * ⬜ `04-MONETIZATION.md`
 * ⬜ `05-GLOSSARY.md`
 

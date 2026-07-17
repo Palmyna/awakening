@@ -1,5 +1,7 @@
 # Project Awakening — Piliers fondamentaux
 
+**Statut :** Rédigé, en attente de validation finale
+
 ## 1. Rôle du document
 
 Ce document définit les piliers fondamentaux de **Project Awakening**.
@@ -31,6 +33,10 @@ Le joueur construit une relation durable avec ses monstres en les faisant progre
 * Permettre d’obtenir directement une forme finale et ainsi contourner le parcours d’évolution.
 * Imposer la perte ou la reprise complète de la progression lors de l’amélioration d’un monstre.
 
+**Éléments à préciser ultérieurement :**
+
+* Le rythme, les coûts, les ressources et l’équilibrage détaillé de la progression.
+
 ## 3. La personnalisation au cœur du gameplay
 
 ### Ce que ce pilier signifie
@@ -53,6 +59,10 @@ Deux joueurs possédant exactement les mêmes créatures doivent pouvoir créer 
 * Faire dépendre la valeur d’une équipe uniquement de la rareté de ses membres.
 * Réduire l’optimisation à une progression linéaire identique pour tous.
 * Concevoir les systèmes de manière à rendre les différentes possibilités de builds purement anecdotiques.
+
+**Éléments à préciser ultérieurement :**
+
+* Les règles détaillées des caractéristiques, des compétences, des objets, des évolutions, des rôles et de leur équilibrage.
 
 ## 4. La stratégie avant les réflexes
 
@@ -77,6 +87,14 @@ Les combats sont principalement automatisés afin que la profondeur du jeu repos
 * Rendre la composition d’équipe secondaire face à la seule puissance brute.
 * Concevoir une automatisation qui efface l’impact des choix effectués par le joueur.
 
+**Question ouverte :**
+
+* Le choix définitif entre un combat entièrement automatique et un combat semi-automatique permettant au joueur de déclencher les compétences ultimes.
+
+**Éléments à préciser ultérieurement :**
+
+* La liste définitive des éléments et les relations entre eux.
+
 ## 5. Une expérience mobile accessible et profonde
 
 ### Ce que ce pilier signifie
@@ -99,6 +117,10 @@ L’accessibilité ne doit pas supprimer les possibilités d’optimisation, et 
 * Dépendre d’interactions peu adaptées à un écran tactile.
 * Confondre profondeur et complexité inutile.
 * Simplifier le jeu au point de supprimer l’expérimentation, l’optimisation ou la diversité des builds.
+
+**Éléments à préciser ultérieurement :**
+
+* Les règles détaillées d’interface, d’ergonomie, d’accompagnement du joueur et de parcours utilisateur.
 
 ## 6. Un modèle Free-to-Play équitable et respectueux
 
@@ -124,6 +146,10 @@ Les joueurs doivent obtenir principalement les monstres et les invocations grâc
 * Limiter l’accès aux monstres principalement à des transactions payantes.
 * Concevoir des ouvertures cosmétiques dont les doublons seraient dépourvus de valeur.
 * Sacrifier le respect des joueurs ou l’équité pour accélérer la monétisation.
+
+**Éléments à préciser ultérieurement :**
+
+* Les prix, les probabilités, les quantités, les rythmes d’obtention, les contenus exacts des offres et l’équilibrage économique.
 
 ## 7. Une identité originale portée par la collection
 
@@ -172,6 +198,11 @@ Sa longévité repose sur un univers riche, une progression profonde, une forte 
 * Choisir des solutions dont les coûts de développement ou d’exploitation sont incompatibles avec le budget.
 * Ajouter du contenu sans préserver la cohérence de l’univers et des systèmes existants.
 * Privilégier des gains à court terme qui compromettraient la capacité du projet à évoluer pendant plusieurs années.
+
+**Éléments à préciser ultérieurement :**
+
+* Le périmètre initial, l’ordre de production, les priorités, les jalons et le rythme des mises à jour.
+* Les responsabilités détaillées, les procédures de validation, les outils et les workflows liés à l’intelligence artificielle.
 
 ## 9. Principe d’arbitrage
 
