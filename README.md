@@ -2,7 +2,7 @@
 
 Project Awakening est un projet de jeu mobile Free-to-Play centré sur la collection, la progression et la personnalisation de monstres représentés sous forme de cartes.
 
-Ce dépôt contient la documentation de conception, de production et de développement du projet.
+Ce dépôt regroupe la documentation de conception, de production et de développement de Project Awakening, ainsi que, progressivement, l’ensemble des fichiers nécessaires au développement du jeu.
 
 ## Documentation principale
 
