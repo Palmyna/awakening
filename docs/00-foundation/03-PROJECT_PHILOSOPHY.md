@@ -50,7 +50,9 @@ Le projet doit éviter :
 * de rendre la préparation secondaire ou artificielle ;
 * de proposer une automatisation qui efface l’influence des décisions du joueur.
 
-**Question ouverte :** le choix définitif entre un combat entièrement automatique et un combat semi-automatique permettant de déclencher les compétences ultimes n’est pas encore arrêté.
+**Question ouverte :**
+
+* le choix définitif entre un combat entièrement automatique et un combat semi-automatique permettant de déclencher les compétences ultimes n’est pas encore arrêté.
 
 ### 3.2. Faire de la personnalisation le cœur de l’expérience
 
@@ -67,7 +69,9 @@ Le projet doit éviter :
 * une conception dans laquelle la rareté détermine à elle seule la valeur d’un monstre ;
 * une situation où une seule manière de développer ou d’utiliser une créature rendrait les autres possibilités anecdotiques.
 
-**Éléments à préciser ultérieurement :** les règles détaillées des caractéristiques, des compétences, des objets, des évolutions, des rôles et de leur équilibrage devront être définies dans le GDD et les documents spécialisés.
+**Éléments à préciser ultérieurement :**
+
+* les règles détaillées des caractéristiques, des compétences, des objets, des évolutions, des rôles et de leur équilibrage devront être définies dans le GDD et les documents spécialisés.
 
 ## 4. Philosophie de progression
 
@@ -92,7 +96,9 @@ Le projet doit éviter :
 * de contourner le parcours d’évolution par l’obtention directe d’une forme finale ;
 * d’effacer ou de faire recommencer la progression lors de l’amélioration d’un monstre.
 
-**Éléments à préciser ultérieurement :** le rythme, les coûts, les ressources et l’équilibrage détaillé de la progression ne sont pas encore définis.
+**Éléments à préciser ultérieurement :**
+
+* le rythme, les coûts, les ressources et l’équilibrage détaillé de la progression ne sont pas encore définis.
 
 ## 5. Philosophie de l’expérience joueur
 
@@ -113,7 +119,9 @@ Le projet est exclusivement destiné à Android et iOS. L’ensemble de l’exp�
 
 Les interactions, la présentation des informations et le rythme général doivent rester cohérents avec les contraintes d’un appareil mobile. Le jeu ne doit pas être conçu comme une expérience pour ordinateur adaptée tardivement à un écran tactile.
 
-**Éléments à préciser ultérieurement :** les règles détaillées d’interface, d’ergonomie, d’accompagnement du joueur et de parcours utilisateur devront être définies dans les documents spécialisés.
+**Éléments à préciser ultérieurement :**
+
+* les règles détaillées d’interface, d’ergonomie, d’accompagnement du joueur et de parcours utilisateur devront être définies dans les documents spécialisés.
 
 ## 6. Philosophie de monétisation
 
@@ -137,7 +145,9 @@ Le projet doit éviter :
 * de supprimer la valeur d’une ouverture lorsqu’elle contient un doublon cosmétique ;
 * de compromettre l’équité afin d’accélérer la monétisation.
 
-**Éléments à préciser ultérieurement :** les prix, les probabilités, les quantités, les rythmes d’obtention, les contenus exacts des offres et l’équilibrage économique ne sont pas encore définis. Ils devront respecter les principes précédents et être traités dans le document consacré à la monétisation.
+**Éléments à préciser ultérieurement :**
+
+* les prix, les probabilités, les quantités, les rythmes d’obtention, les contenus exacts des offres et l’équilibrage économique ne sont pas encore définis. Ils devront respecter les principes précédents et être traités dans le document consacré à la monétisation.
 
 ## 7. Philosophie de production
 
@@ -161,7 +171,9 @@ Le projet doit éviter :
 * l’ajout de contenu sans cohérence avec les systèmes et l’univers existants ;
 * des décisions à court terme qui compromettraient l’évolution du jeu sur plusieurs années.
 
-**Éléments à préciser ultérieurement :** l’ordre de production, les priorités, les jalons et le rythme des mises à jour devront être définis dans les documents de production.
+**Éléments à préciser ultérieurement :**
+
+* l’ordre de production, les priorités, les jalons et le rythme des mises à jour devront être définis dans les documents de production.
 
 ### 7.2. Utiliser l’intelligence artificielle comme outil de production
 
@@ -178,7 +190,9 @@ Le projet doit éviter :
 * de confondre accélération de la production et extension incontrôlée du périmètre ;
 * de déléguer à l’IA la responsabilité finale des choix de conception, de direction artistique ou de production.
 
-**Éléments à préciser ultérieurement :** les responsabilités détaillées, les procédures de validation, les outils et les workflows liés à l’IA devront être définis dans la documentation spécialisée.
+**Éléments à préciser ultérieurement :**
+
+* les responsabilités détaillées, les procédures de validation, les outils et les workflows liés à l’IA devront être définis dans la documentation spécialisée.
 
 ## 8. Choix contraires à la philosophie du projet
 
