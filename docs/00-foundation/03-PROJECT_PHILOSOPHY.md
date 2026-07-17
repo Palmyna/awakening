@@ -131,11 +131,17 @@ Project Awakening adopte un modèle Free-to-Play. Les monstres doivent s’obten
 
 Les achats ne doivent jamais devenir la principale source de puissance. La monétisation repose avant tout sur des éléments cosmétiques, notamment des packs d’illustrations et des skins de cartes.
 
-Les doublons de skins doivent conserver une valeur grâce à leur conversion en une monnaie permettant d’obtenir des récompenses utiles, comme des invocations supplémentaires.
+Au lancement, les achats payants portent sur des packs ou collections d’illustrations dont le contenu et le prix réel sont connus avant l’achat. Les ouvertures cosmétiques aléatoires sont réservées aux packs et récompenses obtenus en jouant. Les packs aléatoires payants et la monnaie premium ne font pas partie du modèle initial.
+
+Les invocations et les ressources de progression ne sont pas vendues directement au lancement.
+
+Les doublons de skins sont convertis à valeur fixe en une monnaie permanente donnant accès à un catalogue limité. Ce catalogue peut comprendre des récompenses cosmétiques, certaines récompenses utiles et éventuellement des invocations supplémentaires.
 
 ### 6.2. Préserver l’équité et le respect des joueurs
 
 Une décision économique doit être évaluée non seulement selon sa capacité à financer le développement, mais aussi selon son impact sur la progression et l’environnement compétitif.
+
+Tout avantage indirect issu d’un achat doit rester secondaire par rapport aux gains normaux obtenus en jouant, être également accessible par le jeu et être plafonné lorsqu’il influence la progression.
 
 Le projet doit éviter :
 
@@ -143,11 +149,28 @@ Le projet doit éviter :
 * de réserver principalement la puissance ou les monstres aux joueurs payants ;
 * de créer un avantage compétitif reposant avant tout sur le paiement ;
 * de supprimer la valeur d’une ouverture lorsqu’elle contient un doublon cosmétique ;
+* de proposer des packs aléatoires payants dans le modèle initial ;
+* de masquer le coût réel d’un produit ;
+* de créer une pression artificielle ou ambiguë autour des offres temporaires ;
 * de compromettre l’équité afin d’accélérer la monétisation.
 
 **Éléments à préciser ultérieurement :**
 
-* les prix, les probabilités, les quantités, les rythmes d’obtention, les contenus exacts des offres et l’équilibrage économique ne sont pas encore définis. Ils devront respecter les principes précédents et être traités dans le document consacré à la monétisation.
+* les prix et probabilités exacts, les quantités, les rythmes d’obtention, les taux de conversion, les plafonds périodiques et les seuils d’évaluation ;
+* le contenu détaillé du catalogue utilisant la monnaie issue des doublons.
+
+### 6.3. Évolutions non validées
+
+Les publicités, les passes, les abonnements, la monnaie premium, les services de confort et l’achat direct d’invocations ne font pas partie du modèle initial.
+
+Leur éventuelle introduction après le lancement nécessitera une nouvelle décision explicite et une vérification de leur compatibilité avec les principes d’équité, de transparence et de respect des joueurs.
+
+**Questions ouvertes :**
+
+* l’introduction éventuelle de publicités après le lancement ;
+* la création éventuelle d’un passe ou d’un abonnement après la définition des saisons et des capacités de production ;
+* l’introduction éventuelle d’une monnaie premium répondant à un besoin réel sans masquer le coût des produits ;
+* l’autorisation future de services de confort ou d’achats directs d’invocations après définition et équilibrage des systèmes concernés.
 
 ## 7. Philosophie de production
 
@@ -219,7 +242,8 @@ Les points suivants ne sont pas suffisamment définis dans la documentation actu
 * la liste finale des éléments et leurs relations ;
 * les règles détaillées et l’équilibrage de la progression, des builds, des compétences et des objets ;
 * les modalités précises permettant de concilier accessibilité et profondeur dans l’interface et les parcours utilisateur ;
-* les paramètres complets de l’économie et de la monétisation ;
+* les paramètres numériques, le catalogue détaillé de conversion et les seuils d’évaluation de la monétisation ;
+* l’éventuelle évolution du modèle de monétisation après le lancement ;
 * le périmètre initial, les priorités de production, les jalons et le rythme des mises à jour ;
 * le cadre opérationnel d’utilisation et de validation du travail assisté par l’intelligence artificielle.
 

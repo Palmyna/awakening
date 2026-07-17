@@ -30,7 +30,7 @@ Avant toute contribution, les agents IA doivent également consulter :
 * ✅ [`01-VISION.md`](./docs/00-foundation/01-VISION.md)
 * 🚧 [`02-PILLARS.md`](./docs/00-foundation/02-PILLARS.md) — Rédigé, en attente de validation finale
 * 🚧 [`03-PROJECT_PHILOSOPHY.md`](./docs/00-foundation/03-PROJECT_PHILOSOPHY.md) — Rédigé, en attente de validation finale
-* ⬜ `04-MONETIZATION.md`
+* 🚧 [`04-MONETIZATION.md`](./docs/00-foundation/04-MONETIZATION.md) — Rédigé, en attente de validation finale
 * ⬜ `05-GLOSSARY.md`
 
 ### 01-game-design

@@ -136,7 +136,10 @@ Les joueurs doivent obtenir principalement les monstres et les invocations grâc
 * Les quêtes quotidiennes, les événements, les récompenses et les différentes activités doivent permettre d’obtenir des invocations.
 * Les achats ne doivent jamais devenir la principale source de puissance.
 * Les illustrations et skins de cartes doivent constituer le cœur de la monétisation.
-* Les doublons de skins doivent conserver une valeur grâce à leur conversion en une monnaie donnant accès à des récompenses utiles.
+* Au lancement, les produits payants doivent avoir un contenu connu et afficher leur prix réel.
+* Les ouvertures cosmétiques aléatoires doivent être réservées aux packs et récompenses obtenus en jouant.
+* Les doublons de skins doivent être convertis en une monnaie permanente donnant accès à un catalogue limité.
+* Les récompenses utiles obtenues grâce aux doublons doivent rester secondaires et être plafonnées lorsqu’elles influencent la progression.
 * Les décisions économiques doivent préserver l’équité de l’environnement compétitif.
 
 ### Ce que le projet doit éviter
@@ -145,11 +148,14 @@ Les joueurs doivent obtenir principalement les monstres et les invocations grâc
 * Rendre les achats indispensables à une progression normale.
 * Limiter l’accès aux monstres principalement à des transactions payantes.
 * Concevoir des ouvertures cosmétiques dont les doublons seraient dépourvus de valeur.
+* Proposer des packs aléatoires payants dans le modèle initial.
+* Masquer le coût réel d’un produit derrière une monnaie premium ou une présentation ambiguë.
 * Sacrifier le respect des joueurs ou l’équité pour accélérer la monétisation.
 
 **Éléments à préciser ultérieurement :**
 
-* Les prix, les probabilités, les quantités, les rythmes d’obtention, les contenus exacts des offres et l’équilibrage économique.
+* Les prix et probabilités exacts, les quantités, les rythmes d’obtention, les taux de conversion, les plafonds périodiques et les autres paramètres numériques nécessaires à l’équilibrage économique.
+* Le contenu détaillé du catalogue de conversion de la monnaie issue des doublons.
 
 ## 7. Une identité originale portée par la collection
 
