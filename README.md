@@ -1,6 +1,6 @@
 # Project Awakening
 
-Project Awakening est un projet de jeu mobile Free-to-Play centré sur la collection, la progression et la personnalisation de monstres représentés sous forme de cartes.
+Project Awakening est un projet de jeu mobile Free-to-Play centré sur la collection, la progression et la personnalisation de créatures représentées sous forme de cartes.
 
 Ce dépôt regroupe la documentation de conception, de production et de développement de Project Awakening, ainsi que, progressivement, l’ensemble des fichiers nécessaires au développement du jeu.
 
@@ -31,13 +31,13 @@ Avant toute contribution, les agents IA doivent également consulter :
 * 🚧 [`02-PILLARS.md`](./docs/00-foundation/02-PILLARS.md) — Rédigé, en attente de validation finale
 * 🚧 [`03-PROJECT_PHILOSOPHY.md`](./docs/00-foundation/03-PROJECT_PHILOSOPHY.md) — Rédigé, en attente de validation finale
 * 🚧 [`04-MONETIZATION.md`](./docs/00-foundation/04-MONETIZATION.md) — Rédigé, en attente de validation finale
-* ⬜ `05-GLOSSARY.md`
+* 🚧 [`05-GLOSSARY.md`](./docs/00-foundation/05-GLOSSARY.md) — Rédigé, en attente de validation finale
 
 ### 01-game-design
 
 * ⬜ `01-GAME_DESIGN_DOCUMENT.md`
 * ⬜ `02-COMBAT.md`
-* ⬜ `03-MONSTERS.md`
+* ⬜ `03-CREATURES.md`
 * ⬜ `04-SKILLS.md`
 * ⬜ `05-ELEMENTS.md`
 * ⬜ `06-EVOLUTIONS.md`

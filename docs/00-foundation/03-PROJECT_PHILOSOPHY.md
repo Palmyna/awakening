@@ -14,13 +14,13 @@ Cette philosophie repose en priorité sur la [vision du projet](./01-VISION.md).
 
 Project Awakening doit proposer une expérience mobile durable, accessible et équitable dans laquelle le joueur prend plaisir à faire grandir ses créatures, à les personnaliser et à construire des équipes adaptées aux contenus rencontrés.
 
-La valeur de l’expérience ne doit pas reposer uniquement sur l’obtention des monstres les plus rares. Elle doit provenir de la progression dans le temps, des choix de build, des synergies et de l’attachement aux créatures développées par le joueur.
+La valeur de l’expérience ne doit pas reposer uniquement sur l’obtention des créatures les plus rares. Elle doit provenir de la progression dans le temps, des choix de build, des synergies et de l’attachement aux créatures développées par le joueur.
 
 Chaque décision doit ainsi être examinée selon sa capacité à :
 
 * renforcer la stratégie et la préparation des équipes ;
 * offrir des choix de personnalisation réels ;
-* valoriser la progression des monstres déjà possédés ;
+* valoriser la progression des créatures déjà possédées ;
 * rester accessible sur mobile sans supprimer la profondeur ;
 * préserver une relation équitable avec les joueurs ;
 * rester compatible avec les moyens humains et financiers du projet ;
@@ -30,15 +30,15 @@ Chaque décision doit ainsi être examinée selon sa capacité à :
 
 ### 3.1. Privilégier la préparation plutôt que les réflexes
 
-Les combats doivent récompenser en priorité les décisions prises lors de la préparation : choix des monstres, composition de l’équipe, répartition des rôles, compétences, objets, éléments et synergies.
+Les combats doivent récompenser en priorité les décisions prises lors de la préparation : choix des créatures, composition de l’équipe, répartition des rôles, compétences, équipements, éléments et synergies.
 
 Le joueur doit gagner parce qu’il comprend ses créatures et construit une équipe pertinente, non parce qu’il exécute plus rapidement une série d’actions. L’automatisation principale des combats sert cette intention en déplaçant le centre de la stratégie vers la préparation et l’optimisation.
 
-Les combats doivent néanmoins rester rapides et dynamiques. L’automatisation ne doit pas rendre les choix du joueur sans conséquence : la composition et le développement des monstres doivent rester déterminants dans le résultat.
+Les combats doivent néanmoins rester rapides et dynamiques. L’automatisation ne doit pas rendre les choix du joueur sans conséquence : la composition et le développement des créatures doivent rester déterminants dans le résultat.
 
 Les décisions de conception doivent donc :
 
-* donner une importance réelle à la composition d’une équipe de six monstres ;
+* donner une importance réelle à la composition d’une équipe de six créatures ;
 * encourager l’étude des rôles, des compétences, des éléments et des synergies ;
 * rendre perceptible l’effet des choix effectués avant le combat ;
 * maintenir la priorité de la stratégie d’équipe sur l’exécution gestuelle.
@@ -58,15 +58,15 @@ Le projet doit éviter :
 
 La personnalisation ne doit pas être un système périphérique. Elle constitue le cœur du gameplay et la principale source de diversité entre les joueurs.
 
-Un monstre doit pouvoir être développé à travers la répartition de ses caractéristiques, les compétences qu’il apprend, l’objet qu’il équipe, son évolution et son rôle dans l’équipe. Les synergies entre les membres d’une composition doivent également participer à cette différenciation.
+Une créature doit pouvoir être développée à travers la répartition de ses caractéristiques, les compétences qu’elle apprend, son équipement, son évolution et son rôle dans l’équipe. Les synergies entre les membres d’une composition doivent également participer à cette différenciation.
 
-Deux joueurs possédant les mêmes monstres doivent pouvoir aboutir à des builds et à des équipes différents. Les choix du joueur doivent donc conserver une influence réelle sur la manière dont ses créatures sont utilisées.
+Deux joueurs possédant les mêmes créatures doivent pouvoir aboutir à des builds et à des équipes différents. Les choix du joueur doivent donc conserver une influence réelle sur la manière dont ses créatures sont utilisées.
 
 Le projet doit éviter :
 
 * une progression entièrement linéaire et identique pour tous ;
 * des choix de personnalisation sans effet significatif ;
-* une conception dans laquelle la rareté détermine à elle seule la valeur d’un monstre ;
+* une conception dans laquelle la rareté détermine à elle seule la valeur d’une créature ;
 * une situation où une seule manière de développer ou d’utiliser une créature rendrait les autres possibilités anecdotiques.
 
 **Éléments à préciser ultérieurement :**
@@ -77,24 +77,24 @@ Le projet doit éviter :
 
 ### 4.1. Valoriser le développement dans le temps
 
-Le joueur ne doit jamais obtenir directement la forme finale d’un monstre. Une invocation donne accès à la forme de base d’une famille, que le joueur accompagne ensuite jusqu’à son évolution finale.
+Le joueur ne doit jamais obtenir directement la forme finale d’une créature. Une invocation donne accès à la forme de base d’une famille de créatures, que le joueur accompagne ensuite jusqu’à sa forme finale.
 
 La progression individuelle, l’expérience gagnée en combat, la répartition des points de caractéristiques et l’amélioration des étoiles doivent donner de la valeur au temps consacré à chaque créature.
 
-Les doublons servent à augmenter progressivement le potentiel d’un monstre sans obliger le joueur à recommencer son évolution. Ils doivent soutenir la continuité de la progression, non annuler l’investissement déjà réalisé.
+Les doublons de créature servent à augmenter progressivement le potentiel de la créature concernée sans obliger le joueur à recommencer son évolution. Ils doivent soutenir la continuité de la progression, non annuler l’investissement déjà réalisé.
 
-### 4.2. Favoriser l’attachement aux monstres
+### 4.2. Favoriser l’attachement aux créatures
 
-Le plaisir doit venir de la croissance et de l’optimisation des créatures, pas seulement du renouvellement de la collection. Le joueur doit pouvoir conserver, développer et personnaliser ses monstres favoris au fil du temps.
+Le plaisir doit venir de la croissance et de l’optimisation des créatures, pas seulement du renouvellement de la collection. Le joueur doit pouvoir conserver, développer et personnaliser ses créatures favorites au fil du temps.
 
-Les illustrations et skins de cartes participent également à cet attachement en permettant au joueur d’appliquer les visuels débloqués aux créatures qu’il préfère.
+Les illustrations et skins de carte participent également à cet attachement en permettant au joueur d’appliquer les skins de carte débloqués aux cartes des créatures qu’il préfère.
 
 Le projet doit éviter :
 
-* de rendre rapidement inutiles les monstres déjà développés ;
+* de rendre rapidement inutiles les créatures déjà développées ;
 * de pousser le joueur à abandonner constamment ses créatures au profit des plus rares ;
 * de contourner le parcours d’évolution par l’obtention directe d’une forme finale ;
-* d’effacer ou de faire recommencer la progression lors de l’amélioration d’un monstre.
+* d’effacer ou de faire recommencer la progression lors de l’amélioration d’une créature.
 
 **Éléments à préciser ultérieurement :**
 
@@ -127,15 +127,15 @@ Les interactions, la présentation des informations et le rythme général doive
 
 ### 6.1. Financer le projet sans faire de l’achat la principale source de puissance
 
-Project Awakening adopte un modèle Free-to-Play. Les monstres doivent s’obtenir principalement en jouant, et les invocations doivent être accessibles grâce aux quêtes quotidiennes, aux événements, aux récompenses et aux différentes activités.
+Project Awakening adopte un modèle Free-to-Play. Les créatures doivent s’obtenir principalement en jouant, et les invocations doivent être accessibles grâce aux quêtes quotidiennes, aux événements, aux récompenses et aux différentes activités.
 
-Les achats ne doivent jamais devenir la principale source de puissance. La monétisation repose avant tout sur des éléments cosmétiques, notamment des packs d’illustrations et des skins de cartes.
+Les achats ne doivent jamais devenir la principale source de puissance. La monétisation repose avant tout sur des éléments cosmétiques, notamment des collections d’illustrations payantes, des packs d’illustrations obtenus en jouant et des skins de carte.
 
-Au lancement, les achats payants portent sur des packs ou collections d’illustrations dont le contenu et le prix réel sont connus avant l’achat. Les ouvertures cosmétiques aléatoires sont réservées aux packs et récompenses obtenus en jouant. Les packs aléatoires payants et la monnaie premium ne font pas partie du modèle initial.
+Au lancement, les achats payants portent sur des collections d’illustrations dont le contenu et le prix réel sont connus avant l’achat. Les ouvertures cosmétiques aléatoires sont réservées aux packs d’illustrations et aux récompenses obtenus en jouant. Les packs aléatoires payants et la monnaie premium ne font pas partie du modèle initial.
 
 Les invocations et les ressources de progression ne sont pas vendues directement au lancement.
 
-Les doublons de skins sont convertis à valeur fixe en une monnaie permanente donnant accès à un catalogue limité. Ce catalogue peut comprendre des récompenses cosmétiques, certaines récompenses utiles et éventuellement des invocations supplémentaires.
+Les doublons de skins de carte sont convertis à valeur fixe en une monnaie permanente provisoirement nommée « monnaie de conversion des doublons ». Cette monnaie donne accès à un catalogue limité pouvant comprendre des récompenses cosmétiques, certaines récompenses ayant un effet sur la progression et éventuellement des invocations supplémentaires.
 
 ### 6.2. Préserver l’équité et le respect des joueurs
 
@@ -146,9 +146,9 @@ Tout avantage indirect issu d’un achat doit rester secondaire par rapport aux 
 Le projet doit éviter :
 
 * de rendre les achats indispensables à une progression normale ;
-* de réserver principalement la puissance ou les monstres aux joueurs payants ;
+* de réserver principalement la puissance ou les créatures aux joueurs payants ;
 * de créer un avantage compétitif reposant avant tout sur le paiement ;
-* de supprimer la valeur d’une ouverture lorsqu’elle contient un doublon cosmétique ;
+* de supprimer la valeur d’une ouverture lorsqu’elle contient un doublon de skin de carte ;
 * de proposer des packs aléatoires payants dans le modèle initial ;
 * de masquer le coût réel d’un produit ;
 * de créer une pression artificielle ou ambiguë autour des offres temporaires ;
@@ -157,7 +157,7 @@ Le projet doit éviter :
 **Éléments à préciser ultérieurement :**
 
 * les prix et probabilités exacts, les quantités, les rythmes d’obtention, les taux de conversion, les plafonds périodiques et les seuils d’évaluation ;
-* le contenu détaillé du catalogue utilisant la monnaie issue des doublons.
+* le contenu détaillé du catalogue utilisant la monnaie de conversion des doublons.
 
 ### 6.3. Évolutions non validées
 
@@ -178,7 +178,7 @@ Leur éventuelle introduction après le lancement nécessitera une nouvelle déc
 
 Le projet est développé par une équipe humaine de deux personnes avec un budget volontairement très limité. Les décisions de conception, de contenu et de technologie doivent rester compatibles avec cette réalité.
 
-L’ambition d’une licence durable doit être poursuivie par un enrichissement progressif du jeu. Les systèmes doivent pouvoir accueillir de nouveaux monstres, builds, illustrations et contenus au fil du développement sans imposer des coûts incompatibles avec les moyens disponibles.
+L’ambition d’une licence durable doit être poursuivie par un enrichissement progressif du jeu. Les systèmes doivent pouvoir accueillir de nouvelles créatures, de nouveaux builds, de nouvelles illustrations et de nouveaux contenus au fil du développement sans imposer des coûts incompatibles avec les moyens disponibles.
 
 Le projet doit privilégier :
 
@@ -222,7 +222,7 @@ Le projet doit éviter :
 Une décision contredit la philosophie de Project Awakening si elle conduit notamment à :
 
 * privilégier les réflexes au détriment de la préparation et de la stratégie d’équipe ;
-* réduire les monstres à leur rareté ou à une progression identique pour tous ;
+* réduire les créatures à leur rareté ou à une progression identique pour tous ;
 * rendre les choix de build sans conséquence réelle ;
 * dévaloriser les créatures dans lesquelles le joueur a investi ;
 * supprimer la profondeur au nom de l’accessibilité, ou rendre le jeu inutilement complexe ;

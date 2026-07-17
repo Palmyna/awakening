@@ -4,7 +4,7 @@
 
 Ce dépôt contient la documentation et, à terme, le code source de **Project Awakening**.
 
-Project Awakening est un jeu mobile Free-to-Play centré sur la collection, la progression et la personnalisation de monstres représentés sous forme de cartes.
+Project Awakening est un jeu mobile Free-to-Play centré sur la collection, la progression et la personnalisation de créatures représentées sous forme de cartes.
 
 ## Instructions obligatoires
 
@@ -64,7 +64,7 @@ Lorsqu’une modification concerne le code ou l’architecture technique, l’ag
 Lorsqu’une modification concerne le gameplay ou les données du jeu, l’agent doit vérifier si elle nécessite une mise à jour de la documentation, notamment pour :
 
 * les combats ;
-* les monstres ;
+* les créatures jouables et les monstres ennemis ;
 * les compétences ;
 * les éléments ;
 * les évolutions ;

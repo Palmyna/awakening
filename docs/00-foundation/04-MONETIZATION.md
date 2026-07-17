@@ -28,31 +28,31 @@ La recherche de revenus ne doit jamais prendre le pas sur l’équité, la trans
 
 ### 3.1. Un modèle Free-to-Play centré sur le jeu
 
-Les monstres et les invocations doivent être obtenus principalement en jouant, notamment grâce aux quêtes quotidiennes, aux événements, aux récompenses et aux différentes activités.
+Les créatures et les invocations doivent être obtenues principalement en jouant, notamment grâce aux quêtes quotidiennes, aux événements, aux récompenses et aux différentes activités.
 
-Une dépense ne doit pas être nécessaire pour progresser normalement, développer ses monstres ou rester compétitif.
+Une dépense ne doit pas être nécessaire pour progresser normalement, développer ses créatures ou rester compétitif.
 
 Au lancement :
 
-* les invocations de monstres ne sont pas vendues directement ;
+* les invocations de créatures ne sont pas vendues directement ;
 * les ressources de progression ne sont pas vendues directement ;
-* aucun monstre n’est exclusivement accessible par paiement ;
+* aucune créature n’est exclusivement accessible par paiement ;
 * aucun contenu payant indispensable à la progression ou à la compétition n’est proposé.
 
 ### 3.2. Une monétisation principalement cosmétique
 
-Le cœur de la monétisation repose sur les illustrations alternatives et les skins de cartes.
+Le cœur de la monétisation repose sur les illustrations alternatives et les skins de carte.
 
-Ces éléments enrichissent la collection et permettent aux joueurs de personnaliser l’apparence de leurs monstres favoris. Ils restent strictement cosmétiques et ne modifient aucune caractéristique de jeu.
+Ces éléments enrichissent la collection et permettent aux joueurs de personnaliser l’apparence de leurs créatures favorites. Ils restent strictement cosmétiques et ne modifient aucune caractéristique de jeu.
 
-Le catalogue peut comprendre :
+Le catalogue peut comprendre des skins de carte :
 
-* des illustrations obtenables en jouant ;
-* des illustrations achetables directement ;
-* des illustrations liées à des événements ;
-* des illustrations accessibles par plusieurs voies.
+* obtenables en jouant ;
+* achetables directement ;
+* liés à des événements ;
+* accessibles par plusieurs voies.
 
-Certaines illustrations peuvent être exclusivement payantes, à condition que leur caractère cosmétique et leur mode d’acquisition soient clairement annoncés.
+Certains skins de carte peuvent être exclusivement payants, à condition que leur caractère cosmétique et leur mode d’acquisition soient clairement annoncés.
 
 ### 3.3. Des limites claires à la puissance payante
 
@@ -61,7 +61,7 @@ Le projet combine des interdictions absolues et des limites mesurables.
 Sont interdits :
 
 * la vente directe de statistiques ou de puissance exclusive ;
-* la vente de monstres exclusivement accessibles par paiement ;
+* la vente de créatures exclusivement accessibles par paiement ;
 * tout contenu payant indispensable pour rester compétitif ;
 * toute offre permettant de contourner de manière importante la progression normale.
 
@@ -77,10 +77,10 @@ Tout avantage indirect issu d’un achat doit :
 
 Le modèle de lancement comprend uniquement :
 
-* la vente directe de packs ou de collections d’illustrations à contenu connu ;
-* des packs cosmétiques obtenus en jouant ;
-* un système de conversion des doublons de skins ;
-* une monnaie permanente issue de ces doublons ;
+* la vente directe de collections d’illustrations à contenu connu ;
+* des packs d’illustrations obtenus en jouant ;
+* un système de conversion des doublons de skins de carte ;
+* une monnaie permanente issue de ces doublons, provisoirement nommée « monnaie de conversion des doublons » ;
 * un catalogue permanent et limité utilisant cette monnaie.
 
 Ce périmètre doit rester compatible avec les capacités humaines, techniques et financières du projet.
@@ -89,7 +89,7 @@ Ce périmètre doit rester compatible avec les capacités humaines, techniques e
 
 Ne sont pas prévus au lancement :
 
-* l’achat direct d’invocations de monstres ;
+* l’achat direct d’invocations de créatures ;
 * la vente directe de ressources de progression ;
 * les packs aléatoires payants ;
 * une monnaie premium ;
@@ -100,7 +100,7 @@ Ne sont pas prévus au lancement :
 
 Ces exclusions définissent le modèle initial. Elles ne constituent pas une autorisation implicite d’ajouter ces systèmes ultérieurement : toute évolution devra faire l’objet d’une nouvelle décision explicite et d’une vérification de sa cohérence avec la documentation de fondation.
 
-## 5. Acquisition des illustrations
+## 5. Acquisition des skins de carte
 
 ### 5.1. Achats directs
 
@@ -110,13 +110,13 @@ Le modèle initial n’utilise pas de monnaie premium. Cette règle limite la co
 
 ### 5.2. Ouvertures obtenues en jouant
 
-Les packs et récompenses cosmétiques obtenus gratuitement en jouant peuvent contenir des illustrations aléatoires.
+Les packs d’illustrations et les récompenses cosmétiques obtenus gratuitement en jouant peuvent permettre d’obtenir aléatoirement des skins de carte.
 
-Les ouvertures aléatoires payantes ne font pas partie du modèle initial. Les doublons proviennent principalement des ouvertures obtenues en jeu.
+Les ouvertures aléatoires payantes ne font pas partie du modèle initial. Les doublons de skins de carte proviennent principalement des ouvertures obtenues en jeu.
 
 **Éléments à préciser ultérieurement :**
 
-* Les probabilités exactes, les quantités distribuées et les rythmes d’obtention des packs cosmétiques gratuits.
+* Les probabilités exactes, les quantités distribuées et les rythmes d’obtention des packs d’illustrations gratuits.
 
 ### 5.3. Rareté cosmétique
 
@@ -137,42 +137,42 @@ Cette rareté reste uniquement cosmétique et ne confère aucun avantage de jeu.
 
 Les ouvertures cosmétiques aléatoires ne comportent aucune protection contre les doublons ou la malchance.
 
-Elles ne garantissent pas l’obtention d’une nouvelle illustration après un certain nombre d’ouvertures et ne permettent pas, dans le cadre de ces ouvertures, de choisir directement une illustration manquante.
+Elles ne garantissent pas l’obtention d’un nouveau skin de carte après un certain nombre d’ouvertures et ne permettent pas, dans le cadre de ces ouvertures, de choisir directement un skin de carte manquant.
 
-Les doublons font partie du système de collection. Leur valeur est préservée par leur conversion en une monnaie dédiée.
+Les doublons de skins de carte font partie du système de collection. Leur valeur est préservée par leur conversion en monnaie de conversion des doublons.
 
-Les probabilités, les règles de doublons et la valeur de conversion doivent être communiquées clairement aux joueurs.
+Les probabilités, les règles concernant les doublons de skins de carte et la valeur de conversion doivent être communiquées clairement aux joueurs.
 
 ### 6.2. Valeur de conversion
 
-Dans le modèle initial, chaque doublon possède une valeur de conversion fixe et identique.
+Dans le modèle initial, chaque doublon de skin de carte possède une valeur de conversion fixe et identique.
 
 Cette règle ne pourra être réévaluée que si plusieurs niveaux de rareté cosmétique sont introduits ultérieurement par une décision explicite.
 
 **Éléments à préciser ultérieurement :**
 
-* La valeur numérique de conversion d’un doublon.
+* La valeur numérique de conversion d’un doublon de skin de carte.
 
-### 6.3. Monnaie permanente
+### 6.3. Monnaie de conversion des doublons — nom provisoire
 
-La monnaie issue des doublons est permanente et n’expire pas.
+La monnaie de conversion des doublons est permanente et n’expire pas.
 
 Elle est commune à toutes les collections et n’est pas fragmentée par collection ou par saison dans le modèle initial.
 
 ### 6.4. Catalogue de conversion
 
-La monnaie issue des doublons donne accès à un catalogue permanent et limité pouvant comprendre :
+La monnaie de conversion des doublons donne accès à un catalogue permanent et limité pouvant comprendre :
 
 * des récompenses cosmétiques ;
-* certaines récompenses utiles ;
+* certaines récompenses ayant un effet sur la progression ;
 * éventuellement des invocations supplémentaires.
 
-Les récompenses utiles doivent rester secondaires par rapport aux gains normaux obtenus en jouant.
+Les récompenses ayant un effet sur la progression doivent rester secondaires par rapport aux gains normaux obtenus en jouant.
 
 **Éléments à préciser ultérieurement :**
 
 * Le contenu détaillé du catalogue de conversion.
-* La nature et les quantités des récompenses utiles.
+* La nature et les quantités des récompenses ayant un effet sur la progression.
 
 ### 6.5. Limitation de la puissance indirecte
 
@@ -181,11 +181,11 @@ Deux garde-fous s’appliquent aux récompenses ayant un effet sur la progressio
 * leur taux d’obtention par conversion doit rester volontairement secondaire par rapport aux récompenses obtenues normalement en jouant ;
 * leur acquisition par conversion doit être soumise à un plafond périodique.
 
-Un joueur effectuant de nombreuses dépenses ne doit pas pouvoir transformer les doublons en source principale d’invocations ou de puissance.
+Un joueur effectuant de nombreuses dépenses ne doit pas pouvoir transformer les doublons de skins de carte en source principale d’invocations ou de puissance.
 
 **Éléments à préciser ultérieurement :**
 
-* Les taux de conversion applicables aux récompenses utiles.
+* Les taux de conversion applicables aux récompenses ayant un effet sur la progression.
 * La durée et les valeurs des plafonds périodiques.
 
 ## 7. Collections temporaires et exclusivité
@@ -237,7 +237,7 @@ Les prix seront établis après :
 
 **Éléments à préciser ultérieurement :**
 
-* Les prix exacts des packs et collections.
+* Les prix exacts des collections d’illustrations.
 * Les éventuelles variations de prix entre les types d’offres.
 
 ## 9. Transparence et protection des joueurs
@@ -253,7 +253,7 @@ Selon le produit concerné, le joueur doit pouvoir connaître clairement avant l
 * sa durée de disponibilité ;
 * sa politique de retour ;
 * les probabilités éventuelles ;
-* les règles concernant les doublons ;
+* les règles concernant les doublons de skins de carte ;
 * la valeur de conversion ;
 * les éventuelles limitations.
 
@@ -264,7 +264,7 @@ Le modèle prévoit au minimum :
 * une confirmation claire avant chaque achat ;
 * un historique lisible des achats ;
 * l’affichage du coût réel ;
-* des protections spécifiques pour toute acquisition pouvant indirectement produire des récompenses utiles ;
+* des protections spécifiques pour toute acquisition pouvant indirectement produire des récompenses ayant un effet sur la progression ;
 * des plafonds sur les conversions ayant un effet sur la progression.
 
 **Question ouverte :**

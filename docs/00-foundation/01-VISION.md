@@ -14,14 +14,14 @@ Ce document constitue la référence principale permettant de comprendre rapidem
 
 ## 2. Vision
 
-Créer un jeu mobile **Free-to-Play** de collection de monstres représentés sous forme de cartes, inspiré des jeux gacha modernes, dans lequel le plaisir de jeu repose avant tout sur :
+Créer un jeu mobile **Free-to-Play** de collection de créatures représentées sous forme de cartes, inspiré des jeux gacha modernes, dans lequel le plaisir de jeu repose avant tout sur :
 
 * la stratégie ;
 * la personnalisation ;
-* la progression des monstres ;
+* la progression des créatures ;
 * la création et l’optimisation d’équipes.
 
-Le jeu souhaite proposer une expérience durable, accessible et équitable, dans laquelle les joueurs développent leurs propres créatures au fil du temps plutôt que de rechercher uniquement les personnages les plus rares.
+Le jeu souhaite proposer une expérience durable, accessible et équitable, dans laquelle les joueurs développent leurs propres créatures au fil du temps plutôt que de rechercher uniquement les créatures les plus rares.
 
 L’objectif est de construire une licence originale capable d’évoluer pendant plusieurs années grâce à :
 
@@ -71,7 +71,7 @@ Ces inspirations servent uniquement de base de réflexion afin de construire une
 
 Le jeu prend place dans un multivers où les sources d’inspiration sont infinies.
 
-Chaque famille de monstres est une création originale imaginée à partir d’une référence issue de la culture populaire, par exemple :
+Chaque famille de créatures est une création originale imaginée à partir d’une référence issue de la culture populaire, par exemple :
 
 * le cinéma ;
 * les mangas ;
@@ -86,19 +86,19 @@ Par exemple, un héros en armure futuriste pourrait inspirer une famille de scar
 
 De la même manière, un chevalier associé au phénix pourrait inspirer une lignée de créatures évoluant d’un jeune oiseau de feu jusqu’à un majestueux phénix.
 
-Chaque famille de monstres possède généralement trois formes :
+Chaque famille de créatures possède généralement trois formes :
 
 1. une forme de base ;
-2. une évolution intermédiaire ;
-3. une évolution finale.
+2. une forme intermédiaire ;
+3. une forme finale.
 
 Cette approche permet de créer un univers extrêmement varié tout en développant une identité propre.
 
 ## 7. Concept général
 
-Le joueur collectionne des monstres représentés sous forme de cartes.
+Le joueur collectionne des créatures représentées sous forme de cartes.
 
-Chaque monstre possède notamment :
+Chaque créature possède notamment :
 
 * une rareté ;
 * un élément ;
@@ -110,7 +110,7 @@ Chaque monstre possède notamment :
 * six caractéristiques principales ;
 * une progression individuelle.
 
-Le joueur constitue une équipe de six monstres afin d’affronter les différents contenus du jeu.
+Le joueur constitue une équipe de six créatures afin d’affronter les différents contenus du jeu.
 
 Les combats sont principalement automatisés afin de mettre l’accent sur la préparation des équipes et la stratégie plutôt que sur les réflexes.
 
@@ -118,31 +118,31 @@ Les combats sont principalement automatisés afin de mettre l’accent sur la pr
 
 Le cœur du jeu repose sur la personnalisation.
 
-Le plaisir ne provient pas uniquement de l’obtention de nouveaux monstres, mais surtout de leur évolution et de leur optimisation.
+Le plaisir ne provient pas uniquement de l’obtention de nouvelles créatures, mais surtout de leur évolution et de leur optimisation.
 
-Chaque joueur doit pouvoir développer des monstres uniques grâce à :
+Chaque joueur doit pouvoir développer des créatures uniques grâce à :
 
-* la répartition des statistiques ;
+* la répartition des caractéristiques ;
 * les compétences apprises ;
-* les objets équipés ;
-* les évolutions d’étoiles ;
+* les équipements ;
+* l’amélioration du niveau d’étoiles ;
 * les synergies entre les membres de l’équipe.
 
-Deux joueurs possédant exactement les mêmes monstres doivent pouvoir construire des équipes différentes.
+Deux joueurs possédant exactement les mêmes créatures doivent pouvoir construire des équipes différentes.
 
 ## 9. Progression
 
-Le joueur n’obtient jamais directement la forme finale d’un monstre.
+Le joueur n’obtient jamais directement la forme finale d’une créature.
 
-Chaque invocation permet d’obtenir la forme de base d’une famille.
+Chaque invocation permet d’obtenir la forme de base d’une famille de créatures.
 
-Le joueur fait ensuite évoluer cette créature au fil de sa progression jusqu’à son évolution finale.
+Le joueur fait ensuite évoluer cette créature au fil de sa progression jusqu’à sa forme finale.
 
-Les monstres gagnent de l’expérience en participant aux combats.
+Les créatures gagnent de l’expérience en participant aux combats.
 
 À chaque montée de niveau, le joueur obtient des points de caractéristiques qu’il répartit librement selon le build souhaité.
 
-Les doublons servent à améliorer le niveau d’étoiles du monstre et à augmenter progressivement son potentiel, sans nécessiter de recommencer son évolution.
+Les doublons de créature servent à améliorer le niveau d’étoiles de la créature concernée et à augmenter progressivement son potentiel, sans nécessiter de recommencer son évolution.
 
 ## 10. Système de combat
 
@@ -159,7 +159,7 @@ Le jeu récompense avant tout la qualité de la préparation des équipes.
 
 ## 11. Éléments
 
-Chaque monstre appartient à un élément.
+Chaque créature appartient à un élément.
 
 Exemples envisagés :
 
@@ -177,11 +177,11 @@ La liste définitive ainsi que les relations entre les éléments seront précis
 
 La personnalisation constitue l’élément central du projet.
 
-Chaque monstre peut être personnalisé grâce :
+Chaque créature peut être personnalisée grâce :
 
 * à la répartition de ses caractéristiques ;
 * aux compétences qu’il apprend ;
-* à l’objet qu’il équipe ;
+* à l’équipement qu’elle équipe ;
 * à son évolution ;
 * à son rôle dans l’équipe.
 
@@ -189,9 +189,9 @@ L’objectif est de favoriser la créativité des joueurs et la diversité des b
 
 ## 13. Équipement
 
-Chaque monstre peut équiper un unique objet.
+Chaque créature peut équiper un unique équipement.
 
-Les objets possèdent notamment :
+Les équipements possèdent notamment :
 
 * une qualité ;
 * des statistiques générées selon leur qualité ;
@@ -202,7 +202,7 @@ Le système est inspiré des jeux Hack’n Slash afin d’encourager la recherch
 
 ## 14. Direction artistique
 
-Le style graphique principal repose sur des illustrations 2D de qualité représentant les monstres sous forme de cartes.
+Le style graphique principal repose sur des illustrations 2D de qualité représentant les créatures sous forme de cartes.
 
 À terme, plusieurs styles d’illustrations pourront être proposés, par exemple :
 
@@ -212,9 +212,9 @@ Le style graphique principal repose sur des illustrations 2D de qualité représ
 * style semi-réaliste ;
 * style 3D illustrée.
 
-Ces différents styles seront proposés sous forme de collections de skins de cartes.
+Ces différents styles seront proposés sous forme de collections de skins de carte.
 
-Les joueurs pourront appliquer librement les illustrations qu’ils auront débloquées à leurs monstres favoris.
+Les joueurs pourront appliquer librement les skins de carte qu’ils auront débloqués aux cartes de leurs créatures favorites.
 
 ## 15. Modes de jeu envisagés
 
@@ -237,17 +237,17 @@ Le projet adopte un modèle **Free-to-Play**.
 
 Les principes fondamentaux sont les suivants :
 
-* les monstres s’obtiennent principalement en jouant ;
+* les créatures s’obtiennent principalement en jouant ;
 * les invocations sont obtenues grâce aux quêtes quotidiennes, aux événements, aux récompenses de jeu et aux différentes activités ;
 * les achats ne doivent jamais devenir la principale source de puissance.
 
 La monétisation repose principalement sur des éléments cosmétiques.
 
-Les joueurs pourront notamment obtenir ou acheter des packs d’illustrations contenant différents skins de cartes.
+Les joueurs pourront notamment obtenir des packs d’illustrations en jouant ou acheter des collections d’illustrations à contenu connu.
 
-Ces packs pourront être proposés de manière permanente ou temporaire à l’occasion d’événements.
+Ces collections pourront être proposées de manière permanente ou temporaire à l’occasion d’événements.
 
-Les doublons de skins seront convertis en une monnaie permettant d’obtenir des récompenses utiles, comme des invocations supplémentaires, afin que chaque ouverture conserve de la valeur.
+Les doublons de skins de carte seront convertis en une monnaie permanente, provisoirement nommée « monnaie de conversion des doublons », permettant d’obtenir des récompenses ayant un effet sur la progression, comme des invocations supplémentaires, afin que chaque ouverture conserve de la valeur.
 
 L’objectif est de financer le développement du jeu tout en préservant un environnement compétitif équitable.
 
@@ -284,12 +284,12 @@ Elle sera utilisée afin de :
 
 L’objectif n’est pas simplement de créer un nouveau jeu gacha.
 
-Project Awakening souhaite construire une licence originale de collection de monstres dans laquelle les joueurs prennent plaisir à :
+Project Awakening souhaite construire une licence originale de collection de créatures dans laquelle les joueurs prennent plaisir à :
 
 * faire grandir leurs créatures ;
 * expérimenter de nouvelles stratégies ;
 * créer des builds personnalisés ;
-* collectionner des illustrations ;
+* collectionner des skins de carte ;
 * découvrir régulièrement de nouveaux contenus.
 
 Chaque décision prise durant le développement devra contribuer à renforcer cette vision :
