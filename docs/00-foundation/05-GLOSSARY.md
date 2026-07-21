@@ -174,6 +174,76 @@ Les **points de caractéristiques** sont attribués à la créature concernée l
 
 **Terme à éviter :** « statistique » comme synonyme direct d’une caractéristique principale.
 
+Chaque créature possède exactement six caractéristiques principales : les points de vie, l’Attaque, l’Attaque spéciale, la Défense, la Défense spéciale et l’Agilité.
+
+### Points de vie
+
+**Domaine :** Combat, progression des créatures
+
+**Définition :** Caractéristique représentant la quantité de dégâts qu’une créature peut subir avant d’être mise hors combat.
+
+**Abréviation officielle :** PV
+
+Lors de la première introduction de la notion dans un document, la formulation « points de vie (PV) » peut être employée. L’abréviation peut ensuite être utilisée dans l’interface, les tableaux et les contextes nécessitant une forme compacte.
+
+### Attaque
+
+**Domaine :** Combat, progression des créatures
+
+**Définition :** Caractéristique offensive intervenant par défaut dans le calcul des dégâts physiques.
+
+### Attaque spéciale
+
+**Domaine :** Combat, progression des créatures
+
+**Définition :** Caractéristique offensive intervenant par défaut dans le calcul des dégâts spéciaux.
+
+Le terme « spécial » ne désigne pas uniquement la magie. Il peut couvrir des capacités élémentaires, énergétiques, psychiques, techniques ou reposant sur une autre forme de puissance non physique.
+
+### Défense
+
+**Domaine :** Combat, progression des créatures
+
+**Définition :** Caractéristique défensive protégeant par défaut contre les dégâts physiques.
+
+### Défense spéciale
+
+**Domaine :** Combat, progression des créatures
+
+**Définition :** Caractéristique défensive protégeant par défaut contre les dégâts spéciaux.
+
+### Agilité
+
+**Domaine :** Combat, progression des créatures
+
+**Définition :** Caractéristique liée au minimum à la vitesse d’une créature et à ses chances de coup critique.
+
+L’Agilité constitue une base du calcul des chances de coup critique, sans en être nécessairement l’unique source. Son influence exacte sur l’ordre et la fréquence des actions reste à définir dans la documentation du combat.
+
+### Dégâts physiques
+
+**Domaine :** Combat
+
+**Définition :** Catégorie de dégâts utilisant par défaut l’Attaque comme caractéristique offensive et la Défense comme caractéristique défensive.
+
+### Dégâts spéciaux
+
+**Domaine :** Combat
+
+**Définition :** Catégorie de dégâts utilisant par défaut l’Attaque spéciale comme caractéristique offensive et la Défense spéciale comme caractéristique défensive.
+
+Par défaut, une source de dégâts est physique ou spéciale. Toute source ne dépendant d’aucune caractéristique offensive, ignorant une défense, appliquant une valeur fixe ou suivant une règle particulière doit être déclarée explicitement.
+
+Chaque compétence offensive doit déclarer sa catégorie de dégâts ainsi que la caractéristique offensive utilisée : Attaque, Attaque spéciale ou, exceptionnellement, aucune lorsqu’elle suit une formule particulière.
+
+### Coup critique
+
+**Domaine :** Combat
+
+**Définition :** Résultat particulier pouvant modifier les dégâts d’une attaque selon des règles qui restent à définir.
+
+Les dégâts physiques et spéciaux peuvent produire des coups critiques par défaut. Une compétence peut exceptionnellement les interdire si cette propriété est explicite. Les compétences, les équipements, les effets de statut et d’autres effets documentés peuvent modifier les chances de coup critique.
+
 ### Statistique
 
 **Domaine :** Données, analyse, description générale
@@ -287,7 +357,173 @@ Les monstres ennemis ne font pas partie de l’équipe du joueur.
 
 **Variante autorisée :** « composition » lorsque le contexte est explicite.
 
-## 6. Acquisition, hasard et récompenses
+## 6. Éléments et affinités
+
+### Élément
+
+**Domaine :** Créatures, compétences, combat
+
+**Définition :** Propriété représentant principalement la nature des pouvoirs, des capacités, des résistances et du style de combat d’une créature. Elle n’est pas déterminée uniquement par son apparence, son espèce, son habitat ou son histoire.
+
+Chaque forme d’une créature déclare explicitement un ou deux éléments au maximum. Une évolution peut ajouter, perdre ou remplacer un élément lorsque l’évolution des pouvoirs, des capacités, des résistances ou du style de combat le justifie.
+
+Les neuf éléments officiels sont :
+
+1. Feu ;
+2. Eau ;
+3. Terre ;
+4. Vent ;
+5. Plante ;
+6. Métal ;
+7. Électricité ;
+8. Lumière ;
+9. Ténèbres.
+
+**Terme à éviter :** « Lumineux » comme nom de l’élément. Le mot reste autorisé comme adjectif.
+
+### Créature mono-élément
+
+**Domaine :** Créatures, éléments
+
+**Définition :** Créature possédant un seul élément dans sa forme actuelle.
+
+### Créature bi-élément
+
+**Domaine :** Créatures, éléments
+
+**Définition :** Créature possédant deux éléments dans sa forme actuelle. Ses deux éléments sont mécaniquement égaux et ne sont pas hiérarchisés comme principal et secondaire.
+
+Les affinités des deux éléments se combinent de manière multiplicative. Deux faiblesses ou deux résistances peuvent produire une interaction renforcée ; une faiblesse et une résistance peuvent se neutraliser. La présence de deux éléments ne confère aucun avantage ou désavantage global automatique.
+
+Toutes les combinaisons sont autorisées par défaut. Une interdiction éventuelle doit répondre à un problème de conception ou d’équilibrage explicitement identifié.
+
+### Affinité élémentaire
+
+**Domaine :** Éléments, combat
+
+**Définition :** Relation entre l’élément d’une compétence offensive et le ou les éléments de sa cible, déterminant une faiblesse, une résistance ou une interaction neutre.
+
+Les relations de la table élémentaire sont réciproques. Un élément résiste à lui-même. Le nombre exact de forces et de faiblesses de chaque élément doit respecter une plage commune qui reste à définir.
+
+### Faiblesse élémentaire
+
+**Domaine :** Éléments, combat
+
+**Définition :** Affinité dans laquelle l’élément d’une compétence offensive est efficace contre un élément de la cible.
+
+### Résistance élémentaire
+
+**Domaine :** Éléments, combat
+
+**Définition :** Affinité dans laquelle un élément de la cible réduit l’efficacité de l’élément d’une compétence offensive.
+
+### Interaction neutre
+
+**Domaine :** Éléments, combat
+
+**Définition :** Résultat d’une confrontation entre deux éléments lorsqu’aucune faiblesse ni résistance ne s’applique.
+
+Cette notion ne doit pas être confondue avec une compétence sans élément.
+
+### Faiblesse renforcée
+
+**Domaine :** Éléments, combat
+
+**Définition :** Résultat pouvant être produit lorsqu’une compétence rencontre la même faiblesse sur les deux éléments d’une créature bi-élément.
+
+### Résistance renforcée
+
+**Domaine :** Éléments, combat
+
+**Définition :** Résultat pouvant être produit lorsqu’une compétence rencontre la même résistance sur les deux éléments d’une créature bi-élément.
+
+### Compétence sans élément
+
+**Domaine :** Compétences, éléments
+
+**Définition :** Compétence qui ne possède aucun élément. Une compétence offensive possède exactement un élément ou est explicitement déclarée sans élément ; elle ne possède pas deux éléments simultanément dans le système initial.
+
+### Immunité élémentaire
+
+**Domaine :** Éléments, combat
+
+**Définition :** Propriété particulière empêchant explicitement une interaction ou ses effets. Elle ne provient pas automatiquement de la table élémentaire de base, qui ne contient aucune immunité générale.
+
+Par défaut, une immunité explicitement déclarée domine une faiblesse élémentaire, sauf règle contraire elle aussi explicite.
+
+**Question ouverte :**
+
+* L’existence d’un bonus lorsqu’une compétence partage un élément avec la créature qui l’utilise.
+
+**Éléments à préciser ultérieurement :**
+
+* La table exacte des affinités, les plages communes de forces et de faiblesses et les coefficients applicables aux interactions simples ou renforcées.
+
+## 7. Effets de statut
+
+### Effet de statut
+
+**Domaine :** Combat, compétences, créatures
+
+**Définition :** Modification temporaire appliquée dans le cadre du combat afin d’influencer une créature ou une règle de combat.
+
+Un effet de statut peut cumuler plusieurs fonctions : modifier des caractéristiques, limiter ou empêcher des actions, produire un effet continu, réagir à un événement ou modifier temporairement une règle. Les compétences en constituent une source principale, mais d’autres systèmes explicitement documentés peuvent en appliquer, modifier ou retirer.
+
+L’association entre un effet de statut et un élément est facultative. Elle doit être déclarée explicitement et ne peut pas être déduite uniquement de son nom ou de son apparence.
+
+### Effet positif
+
+**Domaine :** Effets de statut
+
+**Définition :** Effet de statut constituant un avantage pour la créature concernée.
+
+### Effet négatif
+
+**Domaine :** Effets de statut
+
+**Définition :** Effet de statut constituant un désavantage pour la créature concernée.
+
+### Effet neutre
+
+**Domaine :** Effets de statut
+
+**Définition :** Effet de statut ne constituant objectivement ni un avantage ni un désavantage. Cette polarité doit rester rare.
+
+### Résistance à un effet de statut
+
+**Domaine :** Effets de statut, combat
+
+**Définition :** Propriété pouvant limiter l’application ou, si cela est défini ultérieurement, la durée ou l’intensité d’un effet de statut.
+
+Cette propriété ne constitue pas une septième caractéristique principale. Les mécanismes portant sur l’application, la durée et l’intensité restent distincts et ne sont pas tous considérés comme validés.
+
+### Immunité à un effet de statut
+
+**Domaine :** Effets de statut, combat
+
+**Définition :** Propriété empêchant totalement l’application d’un effet de statut dans le périmètre explicitement déclaré.
+
+### Retirer un effet de statut
+
+**Domaine :** Effets de statut, compétences
+
+**Définition :** Action générique mettant fin à un effet avant son expiration normale. Chaque effet doit préciser s’il peut être retiré et, le cas échéant, selon quelles conditions générales.
+
+Des termes spécialisés comme « dissiper », « purifier » ou « soigner » ne doivent être employés comme actions distinctes que si leur sens est défini dans la documentation spécialisée.
+
+### Coexistence et cumul des effets de statut
+
+**Domaine :** Effets de statut, combat
+
+**Définition :** Des effets différents peuvent coexister sur une même créature. Chaque effet définit individuellement le comportement de plusieurs applications identiques, notamment leur absence d’accumulation, leur renouvellement, leur durée, leur intensité, leurs instances ou leur remplacement.
+
+Des incompatibilités entre certains effets peuvent être déclarées lorsqu’elles sont explicitement documentées.
+
+**Éléments à préciser ultérieurement :**
+
+* La liste des effets de statut, leurs conditions et chances d’application, leurs durées, leurs valeurs, leurs règles individuelles de cumul et de renouvellement, leurs interactions, leur retrait ainsi que les mécanismes détaillés de résistance et d’immunité.
+
+## 8. Acquisition, hasard et récompenses
 
 ### Invocation
 
@@ -384,7 +620,7 @@ Une monnaie peut être considérée techniquement comme une catégorie de ressou
 
 **Définition :** Élément consommable utilisé par un système de progression ou de jeu.
 
-## 7. Illustrations, cosmétiques et commerce
+## 9. Illustrations, cosmétiques et commerce
 
 ### Illustration
 
@@ -504,7 +740,7 @@ Une offre peut contenir un produit comprenant une collection d’illustrations e
 
 Un catalogue désigne un ensemble de contenus disponibles ; la boutique désigne l’interface qui les présente.
 
-## 8. Modes de jeu et combats
+## 10. Modes de jeu et combats
 
 ### Mode de jeu
 
@@ -520,7 +756,7 @@ Un catalogue désigne un ensemble de contenus disponibles ; la boutique désigne
 
 **Terme à éviter :** « mode de jeu » pour désigner le degré d’automatisation d’un combat.
 
-## 9. Conception, expérience et intelligence artificielle
+## 11. Conception, expérience et intelligence artificielle
 
 ### Game design
 
@@ -566,7 +802,7 @@ Un catalogue désigne un ensemble de contenus disponibles ; la boutique désigne
 
 Les assistants autorisés à intervenir sur le repository, à lire son contenu ou à modifier ses fichiers peuvent être désignés comme des agents IA.
 
-## 10. Développement et production
+## 12. Développement et production
 
 Les termes de cette section conservent leur forme anglaise conventionnelle dans la documentation technique et de production.
 
@@ -682,7 +918,7 @@ Le terme **repository** est prioritaire dans les définitions techniques, les co
 
 **Définition :** Organisation d’une suite de tâches, d’interventions et de validations destinée à produire un résultat.
 
-## 11. Modèles, documents et plateformes
+## 13. Modèles, documents et plateformes
 
 ### Free-to-Play
 

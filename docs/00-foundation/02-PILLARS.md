@@ -48,7 +48,7 @@ Deux joueurs possédant exactement les mêmes créatures doivent pouvoir créer 
 ### Conséquences sur la conception
 
 * Le joueur doit pouvoir répartir sur chaque créature les points de caractéristiques qu’elle reçoit lors de ses montées de niveau.
-* Les compétences apprises, l’équipement, l’évolution et le rôle dans l’équipe doivent contribuer à différencier les créatures.
+* Les compétences apprises, l’équipement, l’évolution, les interactions avec les effets de statut et le rôle dans l’équipe doivent contribuer à différencier les créatures.
 * Les synergies entre les membres d’une équipe doivent encourager plusieurs compositions.
 * La conception des créatures doit favoriser une diversité de builds et d’usages.
 * La rareté d’une créature ne doit pas être son unique source de valeur.
@@ -62,20 +62,21 @@ Deux joueurs possédant exactement les mêmes créatures doivent pouvoir créer 
 
 **Éléments à préciser ultérieurement :**
 
-* Les règles détaillées des caractéristiques, des compétences, des objets, des évolutions, des rôles et de leur équilibrage.
+* Les règles détaillées des caractéristiques, des compétences, des objets, des évolutions, des rôles, des effets de statut et de leur équilibrage.
 
 ## 4. La stratégie avant les réflexes
 
 ### Ce que ce pilier signifie
 
-La réussite doit récompenser en priorité la préparation de l’équipe, la compréhension des créatures, leurs synergies et les choix de composition.
+La réussite doit récompenser en priorité la préparation de l’équipe, la compréhension des créatures, des éléments et des effets de statut, leurs synergies et les choix de composition.
 
 Les combats sont principalement automatisés afin que la profondeur du jeu repose davantage sur les décisions prises avant et autour du combat que sur l’exécution gestuelle.
 
 ### Conséquences sur la conception
 
 * Le joueur doit constituer et optimiser une équipe de six créatures.
-* Les rôles, compétences, éléments, objets et synergies doivent influencer la pertinence d’une composition.
+* Les rôles, compétences, éléments, effets de statut, objets et synergies doivent influencer la pertinence d’une composition.
+* Les effets de statut doivent soutenir des styles de jeu variés, renforcer certaines identités élémentaires et enrichir les interactions entre les créatures.
 * Les combats doivent rester rapides et dynamiques, avec une durée moyenne visée de 30 à 60 secondes.
 * L’automatisation doit rendre visibles les conséquences des choix de préparation.
 * Tout contrôle laissé au joueur pendant un combat doit rester cohérent avec la priorité donnée à la stratégie d’équipe.
@@ -86,6 +87,7 @@ Les combats sont principalement automatisés afin que la profondeur du jeu repos
 * Transformer les combats en séquences longues qui affaiblissent le rythme recherché.
 * Rendre la composition d’équipe secondaire face à la seule puissance brute.
 * Concevoir une automatisation qui efface l’impact des choix effectués par le joueur.
+* Réduire les effets de statut à des effets accessoires sans influence réelle sur la préparation ou le déroulement des combats.
 
 **Question ouverte :**
 
@@ -93,7 +95,8 @@ Les combats sont principalement automatisés afin que la profondeur du jeu repos
 
 **Éléments à préciser ultérieurement :**
 
-* La liste définitive des éléments et les relations entre eux.
+* La table exacte des affinités entre les neuf éléments, leurs coefficients et l’existence éventuelle d’un bonus entre une créature et une compétence partageant son élément.
+* La liste et les règles détaillées des effets de statut, notamment leur application, leur durée, leur cumul, leur renouvellement, leur retrait, les résistances et les immunités.
 
 ## 5. Une expérience mobile accessible et profonde
 

@@ -30,16 +30,18 @@ Chaque décision doit ainsi être examinée selon sa capacité à :
 
 ### 3.1. Privilégier la préparation plutôt que les réflexes
 
-Les combats doivent récompenser en priorité les décisions prises lors de la préparation : choix des créatures, composition de l’équipe, répartition des rôles, compétences, équipements, éléments et synergies.
+Les combats doivent récompenser en priorité les décisions prises lors de la préparation : choix des créatures, composition de l’équipe, répartition des rôles, compétences, équipements, éléments, effets de statut et synergies.
 
 Le joueur doit gagner parce qu’il comprend ses créatures et construit une équipe pertinente, non parce qu’il exécute plus rapidement une série d’actions. L’automatisation principale des combats sert cette intention en déplaçant le centre de la stratégie vers la préparation et l’optimisation.
 
 Les combats doivent néanmoins rester rapides et dynamiques. L’automatisation ne doit pas rendre les choix du joueur sans conséquence : la composition et le développement des créatures doivent rester déterminants dans le résultat.
 
+Les effets de statut constituent un système central du combat. Ils doivent créer des styles de jeu variés, renforcer la profondeur des compétences et des éléments, et donner de l’importance à l’anticipation, aux résistances, aux immunités et aux possibilités de retrait. Ils contribuent ainsi aux piliers existants de stratégie et de personnalisation sans former un pilier fondamental indépendant.
+
 Les décisions de conception doivent donc :
 
 * donner une importance réelle à la composition d’une équipe de six créatures ;
-* encourager l’étude des rôles, des compétences, des éléments et des synergies ;
+* encourager l’étude des rôles, des compétences, des éléments, des effets de statut et des synergies ;
 * rendre perceptible l’effet des choix effectués avant le combat ;
 * maintenir la priorité de la stratégie d’équipe sur l’exécution gestuelle.
 
@@ -48,7 +50,8 @@ Le projet doit éviter :
 * de faire des réflexes ou de la précision manuelle le principal facteur de réussite ;
 * de réduire les combats à une comparaison de puissance brute ;
 * de rendre la préparation secondaire ou artificielle ;
-* de proposer une automatisation qui efface l’influence des décisions du joueur.
+* de proposer une automatisation qui efface l’influence des décisions du joueur ;
+* de traiter les effets de statut comme des effets accessoires sans rôle stratégique réel.
 
 **Question ouverte :**
 
@@ -58,7 +61,7 @@ Le projet doit éviter :
 
 La personnalisation ne doit pas être un système périphérique. Elle constitue le cœur du gameplay et la principale source de diversité entre les joueurs.
 
-Une créature doit pouvoir être développée à travers la répartition de ses caractéristiques, les compétences qu’elle apprend, son équipement, son évolution et son rôle dans l’équipe. Les synergies entre les membres d’une composition doivent également participer à cette différenciation.
+Une créature doit pouvoir être développée à travers la répartition de ses caractéristiques, les compétences qu’elle apprend, son équipement, son évolution, ses interactions avec les effets de statut et son rôle dans l’équipe. Les synergies entre les membres d’une composition doivent également participer à cette différenciation.
 
 Deux joueurs possédant les mêmes créatures doivent pouvoir aboutir à des builds et à des équipes différents. Les choix du joueur doivent donc conserver une influence réelle sur la manière dont ses créatures sont utilisées.
 
@@ -71,7 +74,7 @@ Le projet doit éviter :
 
 **Éléments à préciser ultérieurement :**
 
-* les règles détaillées des caractéristiques, des compétences, des objets, des évolutions, des rôles et de leur équilibrage devront être définies dans le GDD et les documents spécialisés.
+* les règles détaillées des caractéristiques, des compétences, des objets, des évolutions, des rôles, des effets de statut et de leur équilibrage devront être définies dans le GDD et les documents spécialisés.
 
 ## 4. Philosophie de progression
 
@@ -106,7 +109,7 @@ Le projet doit éviter :
 
 Project Awakening s’adresse à un public large tout en visant une profondeur suffisante pour les joueurs les plus investis.
 
-L’accessibilité doit permettre de comprendre et d’utiliser les systèmes essentiels sans supprimer les possibilités d’expérimentation. La profondeur doit provenir des interactions entre la progression, les builds, les objets, les compétences, les éléments et les compositions d’équipe, et non d’une complexité ajoutée sans bénéfice pour le joueur.
+L’accessibilité doit permettre de comprendre et d’utiliser les systèmes essentiels sans supprimer les possibilités d’expérimentation. La profondeur doit provenir des interactions entre la progression, les builds, les objets, les compétences, les éléments, les effets de statut et les compositions d’équipe, et non d’une complexité ajoutée sans bénéfice pour le joueur.
 
 Le projet doit éviter deux extrêmes :
 
@@ -239,8 +242,10 @@ Lorsqu’une décision semble renforcer un principe tout en en affaiblissant un 
 Les points suivants ne sont pas suffisamment définis dans la documentation actuelle :
 
 * le mode de contrôle définitif des combats ;
-* la liste finale des éléments et leurs relations ;
-* les règles détaillées et l’équilibrage de la progression, des builds, des compétences et des objets ;
+* la table exacte des affinités entre les neuf éléments, leurs coefficients et l’existence éventuelle d’un bonus entre une créature et une compétence partageant son élément ;
+* le rôle exact de l’Agilité dans l’ordre et la fréquence des actions ainsi que les formules de dégâts et de coups critiques ;
+* les règles détaillées et l’équilibrage de la progression, des builds, des compétences, des objets et des effets de statut ;
+* la liste des effets de statut et leurs règles détaillées d’application, de durée, de cumul, de renouvellement, de retrait, de résistance et d’immunité ;
 * les modalités précises permettant de concilier accessibilité et profondeur dans l’interface et les parcours utilisateur ;
 * les paramètres numériques, le catalogue détaillé de conversion et les seuils d’évaluation de la monétisation ;
 * l’éventuelle évolution du modèle de monétisation après le lancement ;

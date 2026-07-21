@@ -107,7 +107,14 @@ Chaque créature possède notamment :
   * une compétence active ;
   * deux compétences passives ;
   * une compétence ultime ;
-* six caractéristiques principales ;
+* six caractéristiques principales :
+
+  * les points de vie (PV) ;
+  * l’Attaque ;
+  * l’Attaque spéciale ;
+  * la Défense ;
+  * la Défense spéciale ;
+  * l’Agilité ;
 * une progression individuelle.
 
 Le joueur constitue une équipe de six créatures afin d’affronter les différents contenus du jeu.
@@ -155,39 +162,80 @@ Deux modes de contrôle sont envisagés :
 * un combat entièrement automatique ;
 * un combat semi-automatique permettant au joueur de choisir le moment où déclencher les compétences ultimes.
 
+Par défaut, les dégâts sont physiques ou spéciaux. Chaque compétence offensive doit déclarer la catégorie de dégâts et la caractéristique offensive qu’elle utilise : Attaque, Attaque spéciale ou, exceptionnellement, aucune lorsqu’elle suit une formule particulière. Toute exception aux règles ordinaires de dégâts doit être explicite.
+
+Les dégâts physiques et spéciaux peuvent produire des coups critiques par défaut. L’Agilité constitue une base de leur probabilité et peut être complétée par des compétences, des équipements, des effets de statut ou d’autres effets documentés. Son influence exacte sur l’ordre ou la fréquence des actions reste à définir dans le document consacré au combat.
+
 Le jeu récompense avant tout la qualité de la préparation des équipes.
 
 ## 11. Éléments
 
-Chaque créature appartient à un élément.
+Chaque forme d’une créature appartient à un ou deux éléments au maximum :
 
-Exemples envisagés :
+* une créature **mono-élément** possède un seul élément ;
+* une créature **bi-élément** en possède deux, mécaniquement égaux et sans hiérarchie principale ou secondaire.
 
-* Feu ;
-* Eau ;
-* Électricité ;
-* Lumière ;
-* Ténèbres.
+La liste officielle comprend neuf éléments :
 
-Les éléments disposent de forces et de faiblesses afin d’encourager la création de compositions stratégiques.
+1. Feu ;
+2. Eau ;
+3. Terre ;
+4. Vent ;
+5. Plante ;
+6. Métal ;
+7. Électricité ;
+8. Lumière ;
+9. Ténèbres.
 
-La liste définitive ainsi que les relations entre les éléments seront précisées dans le Game Design Document.
+L’élément d’une créature représente principalement la nature de ses pouvoirs, de ses capacités, de ses résistances et de son style de combat. Il n’est pas déterminé uniquement par son apparence, son espèce, son habitat ou son histoire.
 
-## 12. Personnalisation
+Une compétence offensive possède exactement un élément ou est explicitement sans élément. Une compétence ne possède pas deux éléments simultanément dans le système initial.
+
+Les relations élémentaires sont réciproques et peuvent produire une faiblesse, une résistance ou une interaction neutre. Un élément résiste à lui-même. La table élémentaire de base ne produit aucune immunité générale.
+
+Pour une créature bi-élément, les affinités de ses deux éléments se combinent de manière multiplicative. Deux faiblesses ou deux résistances peuvent ainsi se renforcer, tandis qu’une faiblesse et une résistance peuvent se neutraliser. Les coefficients exacts restent à définir.
+
+Toutes les combinaisons de deux éléments sont autorisées par défaut. Chaque forme déclare explicitement son ou ses éléments, qui peuvent changer lors d’une évolution lorsque les pouvoirs, les capacités, les résistances ou le style de combat de la créature le justifient.
+
+Une créature bi-élément ne reçoit aucun avantage ou désavantage global automatique, et une créature mono-élément aucune compensation systématique. Leur équilibre doit être évalué à partir de leur profil complet.
+
+**Question ouverte :**
+
+* L’existence d’un bonus lorsqu’une compétence partage un élément avec la créature qui l’utilise.
+
+**Éléments à préciser ultérieurement :**
+
+* La table exacte des affinités, les plages communes de forces et de faiblesses ainsi que les coefficients de faiblesse, de résistance et de neutralisation.
+
+## 12. Effets de statut
+
+Les effets de statut constituent un système central du combat. Ils contribuent à la profondeur stratégique, à la personnalisation des créatures, à la diversité des builds et aux interactions entre créatures, compétences et éléments.
+
+Un effet de statut peut être positif, négatif ou, plus rarement, neutre. Ses fonctions sont cumulables : il peut notamment modifier des caractéristiques, limiter des actions, produire un effet continu, réagir à un événement ou modifier temporairement une règle du combat.
+
+Les compétences constituent une source principale d’effets de statut sans être nécessairement leur seule source. L’association entre un effet et un élément est facultative et doit être déclarée explicitement lorsqu’elle existe.
+
+Le système doit permettre de définir des résistances et des immunités aux effets de statut sans créer une septième caractéristique principale. Chaque effet doit également préciser s’il peut être retiré avant son expiration.
+
+Des effets différents peuvent coexister sur une même créature. Le comportement de plusieurs applications d’un même effet doit être défini individuellement, sans imposer une règle universelle de cumul ou de renouvellement.
+
+La liste des effets, leurs valeurs, leurs conditions d’application, leurs durées et leurs interactions détaillées seront définies dans le futur document consacré aux effets de statut.
+
+## 13. Personnalisation
 
 La personnalisation constitue l’élément central du projet.
 
 Chaque créature peut être personnalisée grâce :
 
 * à la répartition de ses caractéristiques ;
-* aux compétences qu’il apprend ;
-* à l’équipement qu’elle équipe ;
+* aux compétences qu’elle apprend ;
+* à son équipement ;
 * à son évolution ;
 * à son rôle dans l’équipe.
 
 L’objectif est de favoriser la créativité des joueurs et la diversité des builds.
 
-## 13. Équipement
+## 14. Équipement
 
 Chaque créature peut équiper un unique équipement.
 
@@ -200,7 +248,7 @@ Les équipements possèdent notamment :
 
 Le système est inspiré des jeux Hack’n Slash afin d’encourager la recherche d’équipements optimaux.
 
-## 14. Direction artistique
+## 15. Direction artistique
 
 Le style graphique principal repose sur des illustrations 2D de qualité représentant les créatures sous forme de cartes.
 
@@ -216,7 +264,7 @@ Ces différents styles seront proposés sous forme de collections de skins de ca
 
 Les joueurs pourront appliquer librement les skins de carte qu’ils auront débloqués aux cartes de leurs créatures favorites.
 
-## 15. Modes de jeu envisagés
+## 16. Modes de jeu envisagés
 
 Le projet prévoit à long terme plusieurs modes de jeu, notamment :
 
@@ -231,7 +279,7 @@ Le projet prévoit à long terme plusieurs modes de jeu, notamment :
 
 Le contenu sera progressivement enrichi au fil du développement.
 
-## 16. Modèle économique
+## 17. Modèle économique
 
 Le projet adopte un modèle **Free-to-Play**.
 
@@ -251,7 +299,7 @@ Les doublons de skins de carte seront convertis en une monnaie permanente, provi
 
 L’objectif est de financer le développement du jeu tout en préservant un environnement compétitif équitable.
 
-## 17. Contraintes du projet
+## 18. Contraintes du projet
 
 ### Budget
 
@@ -280,7 +328,7 @@ Elle sera utilisée afin de :
 * maintenir une documentation cohérente ;
 * assister le développement et les tests.
 
-## 18. Ambition
+## 19. Ambition
 
 L’objectif n’est pas simplement de créer un nouveau jeu gacha.
 

@@ -40,17 +40,18 @@ Avant toute contribution, les agents IA doivent également consulter :
 * ⬜ `03-CREATURES.md`
 * ⬜ `04-SKILLS.md`
 * ⬜ `05-ELEMENTS.md`
-* ⬜ `06-EVOLUTIONS.md`
-* ⬜ `07-ITEMS.md`
-* ⬜ `08-GACHA.md`
-* ⬜ `09-PROGRESSION.md`
-* ⬜ `10-MODES.md`
-* ⬜ `11-PVP.md`
-* ⬜ `12-GUILDS.md`
-* ⬜ `13-EVENTS.md`
-* ⬜ `14-QUESTS.md`
-* ⬜ `15-ACHIEVEMENTS.md`
-* ⬜ `16-UI_FLOW.md`
+* ⬜ `06-STATUS_EFFECTS.md`
+* ⬜ `07-EVOLUTIONS.md`
+* ⬜ `08-ITEMS.md`
+* ⬜ `09-GACHA.md`
+* ⬜ `10-PROGRESSION.md`
+* ⬜ `11-MODES.md`
+* ⬜ `12-PVP.md`
+* ⬜ `13-GUILDS.md`
+* ⬜ `14-EVENTS.md`
+* ⬜ `15-QUESTS.md`
+* ⬜ `16-ACHIEVEMENTS.md`
+* ⬜ `17-UI_FLOW.md`
 
 ### 02-world
 
