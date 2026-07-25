@@ -319,9 +319,9 @@ La présence d’un équipement dans un coffre reste une possibilité non valid�
 
 ### Rareté
 
-**Domaine :** Créatures, illustrations et cosmétiques
+**Domaine :** Créatures et cosmétiques
 
-**Définition :** Notion qui doit toujours être qualifiée selon son domaine : **rareté d’une créature**, **rareté d’une illustration** ou **rareté d’un cosmétique**.
+**Définition :** Notion qui doit toujours être qualifiée selon son domaine : **rareté d’une créature**, **rareté d’un skin de carte** ou **rareté d’un autre cosmétique**.
 
 La rareté n’est pas automatiquement équivalente à la qualité.
 
@@ -533,19 +533,63 @@ Des incompatibilités entre certains effets peuvent être déclarées lorsqu’e
 
 ## 8. Acquisition, hasard et récompenses
 
-### Invocation
+### Obtention de créature
 
 **Domaine :** Acquisition des créatures
 
-**Définition :** Système d’acquisition aléatoire de créatures. Une invocation permet d’obtenir la forme de base d’une famille de créatures.
+**Définition :** Processus permettant au joueur d’ajouter une créature jouable à sa collection.
+
+L’invocation constitue la voie principale d’obtention. Certaines créatures peuvent néanmoins être accordées directement par le gameplay comme exceptions explicitement documentées.
+
+### Invocation de créature
+
+**Domaine :** Acquisition des créatures
+
+**Définition :** Système principal d’acquisition aléatoire de créatures. Une invocation de créature permet d’obtenir la forme de base d’une famille de créatures.
+
+**Variante autorisée :** « invocation » lorsque le contexte ne crée aucune ambiguïté.
 
 **Terme à éviter :** « invocation » pour l’ouverture d’un contenu cosmétique, d’un objet ou d’un coffre.
 
-### Ouverture
+### Ressource générale d’invocation
 
-**Domaine :** Acquisition, cosmétiques, objets
+**Statut :** Provisoire — modèle initial à confirmer
 
-**Définition :** Action qui révèle le contenu d’un pack d’illustrations ou, si cette proposition est validée ultérieurement, d’un coffre.
+**Domaine :** Acquisition des créatures, économie
+
+**Définition :** Ressource générale envisagée pour effectuer les invocations de créatures dans le modèle initial.
+
+Cette ressource doit être obtenue principalement en jouant. L’ajout de ressources événementielles ou de catégories particulières d’invocation n’est pas validé.
+
+### Œuf
+
+**Statut :** Provisoire — présentation visuelle non validée
+
+**Domaine :** Invocation de créature, interface, animation
+
+**Définition :** Présentation visuelle qui pourrait précéder la révélation d’une créature lors d’une invocation.
+
+Le terme ne remplace pas « invocation de créature » et ne doit pas être présenté comme le nom officiel du système.
+
+### Éclosion
+
+**Statut :** Provisoire — présentation visuelle non validée
+
+**Domaine :** Invocation de créature, interface, animation
+
+**Définition :** Animation ou étape de révélation qui pourrait être associée à un œuf dans une future présentation de l’invocation.
+
+Le terme ne constitue pas un synonyme officiel d’« invocation de créature ».
+
+### Ouverture d’un paquet de skins de carte
+
+**Domaine :** Acquisition, cosmétiques
+
+**Définition :** Action qui révèle les skins de carte contenus dans un paquet de skins de carte.
+
+**Variante autorisée :** « ouverture » lorsque le contexte cosmétique ne crée aucune ambiguïté.
+
+**Terme à éviter :** « ouverture de paquet » pour désigner une invocation de créature.
 
 ### Tirage
 
@@ -553,7 +597,7 @@ Des incompatibilités entre certains effets peuvent être déclarées lorsqu’e
 
 **Définition :** Terme générique interne décrivant une sélection aléatoire.
 
-**Terme à éviter :** « tirage » comme nom officiel d’une fonctionnalité destinée au joueur lorsqu’un terme fonctionnel plus précis, comme « invocation » ou « ouverture », s’applique.
+**Terme à éviter :** « tirage » comme nom officiel d’une fonctionnalité destinée au joueur lorsqu’un terme fonctionnel plus précis, comme « invocation de créature » ou « ouverture d’un paquet de skins de carte », s’applique.
 
 ### Gacha
 
@@ -573,7 +617,7 @@ Les entrées suivantes sont validées dans les domaines fonctionnels du jeu :
 | **Acquérir** | Forme plus soutenue ou plus formelle d’« obtenir », adaptée aux documents de conception. |
 | **Acheter** | Obtenir un produit en échange d’argent réel. |
 | **Débloquer** | Rendre un élément définitivement disponible sur le compte. |
-| **Ouvrir** | Révéler ou recevoir le contenu d’un pack d’illustrations ou d’un coffre éventuel. |
+| **Ouvrir** | Révéler les skins contenus dans un paquet de skins de carte ou le contenu d’un coffre éventuel. |
 | **Invoquer** | Effectuer une invocation de créature. |
 | **Équiper** | Attribuer un équipement à une créature. |
 | **Appliquer** | Attribuer un skin de carte à la carte d’une créature. |
@@ -592,7 +636,7 @@ Le verbe « sélectionner » peut décrire le choix effectué dans un menu, mais
 
 **Définition :** Élément ou bénéfice remis au joueur à la suite d’une activité, d’un objectif, d’un événement ou d’un autre système prévu par le jeu.
 
-La nature possible d’un élément ne valide pas son mode réel d’acquisition. Le glossaire ne confirme donc pas qu’une créature, un équipement ou un coffre puisse être remis directement comme récompense.
+Certaines créatures et certains skins de carte peuvent être remis directement comme récompenses de gameplay lorsque cette méthode d’obtention est explicitement documentée. Cette possibilité ne confirme pas qu’un équipement ou un coffre puisse être remis directement comme récompense.
 
 ### Récompense ayant un effet sur la progression
 
@@ -676,9 +720,27 @@ La collection de créatures ne doit pas être confondue avec le catalogue des cr
 
 **Définition :** Regroupement thématique cohérent de plusieurs skins de carte.
 
-Une série de skins de carte n’est ni un produit ni une offre commerciale, même si certains de ses skins peuvent être obtenus au moyen d’un produit ou d’une offre.
+Une série distribuée par paquets est associée à des paquets de skins de carte dont tous les contenus possibles appartiennent à cette même série.
+
+Une série de skins de carte n’est ni un produit ni une offre commerciale, même si les paquets permettant d’obtenir ses skins peuvent être achetés dans la boutique cosmétique.
 
 **Terme à éviter :** « collection d’illustrations » pour désigner une série de skins de carte ou une offre commerciale.
+
+### Catégorie de skins obtenus hors paquets
+
+**Statut :** Provisoire — nom officiel à définir
+
+**Domaine :** Collection, cosmétiques
+
+**Définition :** Regroupement prévu pour les skins de carte accordés directement par des récompenses de gameplay et n’appartenant à aucune série distribuée par paquets.
+
+Cette catégorie peut notamment réunir des récompenses événementielles, de haut fait, narratives, de progression, commémoratives ou liées à une opération spéciale.
+
+**Éléments à préciser ultérieurement :**
+
+* le nom officiel de la catégorie ;
+* sa structure ;
+* ses règles de complétion.
 
 ### Progression de collection
 
@@ -722,24 +784,47 @@ Un skin de carte ne modifie ni la créature, ni ses caractéristiques, ni ses ca
 
 * La compatibilité d’un skin de carte avec une créature indépendamment de sa forme, avec une forme précise ou avec plusieurs formes compatibles.
 
+### Rareté d’un skin de carte
+
+**Domaine :** Cosmétique, acquisition, collection
+
+**Définition :** Niveau visible déterminant notamment la fréquence d’obtention d’un skin de carte dans les paquets de sa série.
+
+Les différentes raretés possèdent des probabilités d’obtention et des valeurs de conversion de doublon différentes. Elles concernent uniquement la fréquence d’obtention, la valeur de collection, la présentation visuelle et la valeur perçue du skin. Elles ne confèrent aucun avantage de jeu.
+
+**Éléments à préciser ultérieurement :**
+
+* les noms et le nombre des raretés ;
+* leurs probabilités exactes ;
+* les valeurs de conversion associées.
+
 ### Visuel
 
 **Domaine :** Description générale
 
 **Définition :** Terme générique désignant un élément visuel sans lui attribuer de statut artistique, cosmétique ou fonctionnel précis.
 
-### Pack d’illustrations
+### Paquet de skins de carte
 
 **Domaine :** Cosmétique, acquisition
 
-**Définition :** Conteneur cosmétique gratuit et aléatoire obtenu en jouant, permettant de recevoir des skins de carte dont l’identité est révélée lors de son ouverture.
+**Définition :** Contenu cosmétique ouvrable permettant d’obtenir un nombre fixe de plusieurs skins de carte appartenant à une même série.
 
-**Variantes autorisées :** « pack » lorsque le contexte cosmétique est explicite.
+Un paquet peut être gagné en jouant ou acheté directement contre de l’argent réel dans la boutique cosmétique. Pour une même série, les paquets gratuits et payants possèdent le même ensemble de skins, les mêmes probabilités, le même nombre de skins, les mêmes règles de doublons et les mêmes règles d’ouverture.
+
+Tous les emplacements sont déterminés aléatoirement selon les probabilités associées aux raretés. Aucun emplacement ne garantit automatiquement une rareté, un skin précis ou un skin non possédé.
+
+**Variante autorisée :** « paquet » lorsque le contexte cosmétique ne crée aucune ambiguïté.
 
 **Termes à éviter :**
 
-* « pack » pour un contenu payant connu à l’avance dans le modèle initial ;
-* « coffre » comme synonyme d’un pack d’illustrations.
+* « pack d’illustrations » ;
+* « coffre » comme synonyme d’un paquet de skins de carte ;
+* « invocation » pour l’ouverture d’un paquet.
+
+**Élément à préciser ultérieurement :**
+
+* le nombre exact de skins contenus dans un paquet.
 
 ### Produit
 
@@ -753,7 +838,7 @@ Un skin de carte ne modifie ni la créature, ni ses caractéristiques, ni ses ca
 
 **Définition :** Présentation commerciale, temporaire ou permanente, d’un ou de plusieurs produits.
 
-Une offre peut contenir un produit donnant accès à un ou plusieurs skins de carte appartenant à une même série.
+Une offre peut notamment présenter un ou plusieurs paquets de skins de carte appartenant à une même série.
 
 ### Offre commerciale
 
@@ -775,7 +860,7 @@ Les termes « produit » et « offre » restent prioritaires lorsque leur distin
 
 **Domaine :** Cosmétique, économie
 
-**Définition :** Nouvelle obtention d’un skin de carte déjà débloqué, convertie en monnaie de conversion des doublons.
+**Définition :** Nouvelle obtention d’un skin de carte déjà débloqué, convertie en monnaie de conversion des doublons selon la valeur fixe associée à sa rareté.
 
 **Variante autorisée :** « doublon » lorsque le contexte cosmétique ne laisse aucune ambiguïté.
 
@@ -784,7 +869,9 @@ Les termes « produit » et « offre » restent prioritaires lorsque leur distin
 **Statut :** Provisoire — nom descriptif interne  
 **Domaine :** Économie, cosmétiques
 
-**Définition :** Monnaie permanente provenant de la conversion des doublons de skins de carte et utilisable dans le catalogue de conversion.
+**Définition :** Monnaie cosmétique permanente provenant de la conversion des doublons de skins de carte et utilisable dans le catalogue de conversion.
+
+Chaque rareté possède une valeur de conversion fixe différente. Cette monnaie ne permet d’obtenir aucune créature, invocation, ressource de progression, équipement, récompense de combat ou autre forme de puissance.
 
 **Élément à préciser ultérieurement :**
 
@@ -794,7 +881,11 @@ Les termes « produit » et « offre » restent prioritaires lorsque leur distin
 
 **Domaine :** Interface, monétisation
 
-**Définition :** Interface générale dans laquelle le joueur consulte les contenus et les produits disponibles.
+**Définition :** Interface exclusivement consacrée à la consultation et à l’achat de contenus et de produits cosmétiques.
+
+Dans le modèle initial, la boutique permet notamment d’acheter directement contre de l’argent réel des paquets de skins de carte. Elle ne vend aucune créature, invocation, ressource de progression, équipement, avantage de combat ou autre forme de puissance.
+
+**Variante autorisée :** « boutique cosmétique » lorsqu’il est utile de rappeler explicitement son périmètre.
 
 ### Catalogue commercial
 
@@ -806,7 +897,7 @@ Les termes « produit » et « offre » restent prioritaires lorsque leur distin
 
 **Domaine :** Économie, cosmétiques
 
-**Définition :** Ensemble des contenus accessibles avec la monnaie de conversion des doublons.
+**Définition :** Ensemble des contenus strictement cosmétiques accessibles avec la monnaie de conversion des doublons.
 
 Un catalogue désigne un ensemble de contenus disponibles ; la boutique désigne l’interface qui les présente.
 

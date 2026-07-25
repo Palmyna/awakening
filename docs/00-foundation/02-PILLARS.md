@@ -131,7 +131,7 @@ L’accessibilité ne doit pas supprimer les possibilités d’optimisation, et 
 
 Le modèle économique doit financer le développement sans faire des achats la principale source de puissance.
 
-Les joueurs doivent obtenir principalement les créatures et les invocations grâce au jeu. La monétisation repose avant tout sur des éléments cosmétiques, notamment les skins de carte utilisant des illustrations alternatives, afin de préserver un environnement compétitif équitable.
+Les joueurs doivent obtenir principalement les créatures et les invocations grâce au jeu. La boutique est exclusivement cosmétique, et la monétisation repose avant tout sur les skins de carte utilisant des illustrations alternatives, afin de préserver un environnement compétitif équitable.
 
 ### Conséquences sur la conception
 
@@ -139,11 +139,15 @@ Les joueurs doivent obtenir principalement les créatures et les invocations gr�
 * Les quêtes quotidiennes, les événements, les récompenses et les différentes activités doivent permettre d’obtenir des invocations.
 * Les achats ne doivent jamais devenir la principale source de puissance.
 * Les skins de carte et les illustrations alternatives qu’ils utilisent doivent constituer le cœur de la monétisation.
-* Au lancement, les produits payants doivent avoir un contenu connu et afficher leur prix réel.
-* Les ouvertures cosmétiques aléatoires doivent être réservées aux packs d’illustrations et aux récompenses obtenus en jouant.
-* Les doublons de skins de carte doivent être convertis en une monnaie permanente provisoirement nommée « monnaie de conversion des doublons » et donnant accès à un catalogue limité.
-* Les récompenses ayant un effet sur la progression obtenues grâce aux doublons de skins de carte doivent rester secondaires et être plafonnées.
+* Les séries de skins de carte doivent être distribuées principalement au moyen de paquets de skins de carte pouvant être gagnés en jouant ou achetés contre de l’argent réel.
+* Les paquets gratuits et payants d’une même série doivent suivre les mêmes règles et donner accès aux mêmes skins avec les mêmes probabilités.
+* Avant un achat, le joueur doit connaître la série, le nombre de skins contenus, les skins pouvant être obtenus, leurs probabilités, les règles concernant les doublons et la durée de disponibilité éventuelle.
+* Les niveaux de rareté des skins de carte doivent rester visibles, strictement cosmétiques et associés à des probabilités clairement communiquées.
+* Les ouvertures ne doivent comporter aucune protection contre les doublons ou la malchance.
+* Les doublons de skins de carte doivent être convertis en une monnaie cosmétique permanente, chaque rareté possédant une valeur de conversion fixe différente.
+* La monnaie issue des doublons doit donner accès uniquement à des récompenses cosmétiques.
 * La complétion d’une série de skins de carte ne doit fournir aucun avantage automatique de puissance.
+* L’obtention des créatures doit rester indépendante de la boutique cosmétique et des paquets de skins de carte.
 * Les décisions économiques doivent préserver l’équité de l’environnement compétitif.
 
 ### Ce que le projet doit éviter
@@ -152,14 +156,17 @@ Les joueurs doivent obtenir principalement les créatures et les invocations gr�
 * Rendre les achats indispensables à une progression normale.
 * Limiter l’accès aux créatures principalement à des transactions payantes.
 * Concevoir des ouvertures cosmétiques dont les doublons seraient dépourvus de valeur.
-* Proposer des packs aléatoires payants dans le modèle initial.
+* Réserver certains skins d’une série à la version payante de son paquet.
+* Permettre à une dépense dans la boutique cosmétique de produire directement ou indirectement une créature, une invocation ou de la puissance.
+* Présenter un paquet de skins de carte comme une invocation de créature, ou inversement.
 * Masquer le coût réel d’un produit derrière une monnaie premium ou une présentation ambiguë.
+* Masquer les probabilités, les règles de doublons ou la nature aléatoire d’un paquet payant.
 * Sacrifier le respect des joueurs ou l’équité pour accélérer la monétisation.
 
 **Éléments à préciser ultérieurement :**
 
-* Les prix et probabilités exacts, les quantités, les rythmes d’obtention, les taux de conversion, les plafonds périodiques et les autres paramètres numériques nécessaires à l’équilibrage économique.
-* Le contenu détaillé du catalogue de conversion de la monnaie de conversion des doublons.
+* Les prix, les probabilités exactes, le nombre de skins par paquet, les quantités, les rythmes d’obtention, les valeurs de conversion propres à chaque rareté et les autres paramètres numériques nécessaires à l’équilibrage économique.
+* Le contenu cosmétique détaillé du catalogue de conversion de la monnaie de conversion des doublons.
 
 ## 7. Une identité originale portée par la collection
 

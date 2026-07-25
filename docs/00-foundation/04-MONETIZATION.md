@@ -8,7 +8,7 @@ Ce document définit le cadre de monétisation de **Project Awakening**.
 
 Il formalise les principes économiques, le modèle conceptuel prévu au lancement, les limites imposées aux achats et les règles destinées à préserver une expérience équitable et respectueuse.
 
-Il ne fixe aucune valeur numérique. Les prix, quantités, probabilités, taux de conversion, plafonds et seuils d’évaluation devront être déterminés pendant les phases de conception détaillée, d’équilibrage et de test.
+Il ne fixe aucune valeur numérique. Les prix, quantités, probabilités, valeurs de conversion, limites et seuils d’évaluation devront être déterminés pendant les phases de conception détaillée, d’équilibrage et de test.
 
 Ce document complète la [vision du projet](./01-VISION.md), les [piliers fondamentaux](./02-PILLARS.md) et la [philosophie du projet](./03-PROJECT_PHILOSOPHY.md). Il ne remplace pas les futurs documents consacrés aux invocations, à la progression, aux événements, aux cartes ou à l’économie détaillée.
 
@@ -39,20 +39,21 @@ Au lancement :
 * aucune créature n’est exclusivement accessible par paiement ;
 * aucun contenu payant indispensable à la progression ou à la compétition n’est proposé.
 
+La boutique est exclusivement cosmétique. Elle ne vend aucune créature, aucune invocation, aucune ressource de progression, aucun équipement, aucun avantage de combat et aucune autre forme de puissance.
+
 ### 3.2. Une monétisation principalement cosmétique
 
 Le cœur de la monétisation repose sur les skins de carte utilisant des illustrations alternatives.
 
 Ces éléments enrichissent la collection et permettent aux joueurs de personnaliser l’apparence de leurs créatures favorites. Ils restent strictement cosmétiques et ne modifient aucune caractéristique de jeu.
 
-Le catalogue peut comprendre des skins de carte :
+Les skins appartenant aux séries distribuées par paquets sont principalement obtenus par l’ouverture de paquets de skins de carte. Ces paquets peuvent être gagnés en jouant ou achetés directement contre de l’argent réel.
 
-* obtenables en jouant ;
-* achetables directement ;
-* liés à des événements ;
-* accessibles par plusieurs voies.
+Pour une même série, les paquets gratuits et payants donnent accès au même ensemble de skins, avec les mêmes probabilités, le même nombre de skins, les mêmes règles de doublons et les mêmes règles d’ouverture. Aucun skin ne peut être réservé exclusivement à une version payante du même paquet.
 
-Certains skins de carte peuvent être exclusivement payants, à condition que leur caractère cosmétique et leur mode d’acquisition soient clairement annoncés.
+L’achat direct d’un skin précis appartenant à une série distribuée par paquets ne fait pas partie du modèle principal.
+
+Certains skins peuvent être accordés directement par des récompenses de gameplay, mais ils ne doivent appartenir à aucune série distribuée par paquets. Ils doivent être clairement regroupés et identifiés comme des contenus obtenus hors paquets.
 
 Le système de collection doit contribuer à leur mise en valeur en permettant de consulter les skins débloqués et non débloqués, de parcourir les séries de skins de carte et de visualiser la progression au sein de chaque série.
 
@@ -69,11 +70,9 @@ Sont interdits :
 * tout contenu payant indispensable pour rester compétitif ;
 * toute offre permettant de contourner de manière importante la progression normale.
 
-Tout avantage indirect issu d’un achat doit :
+Une dépense effectuée dans la boutique cosmétique ne doit produire directement ou indirectement aucune créature, invocation, ressource de progression, équipement, avantage de combat ou autre forme de puissance.
 
-* rester secondaire par rapport aux récompenses obtenues normalement en jouant ;
-* être également accessible par le jeu ;
-* être soumis à des plafonds lorsqu’il influence la progression.
+Toute monnaie ou récompense provenant d’un achat cosmétique ou de la conversion d’un doublon de skin de carte doit rester strictement cosmétique.
 
 ## 4. Modèle de lancement
 
@@ -81,11 +80,12 @@ Tout avantage indirect issu d’un achat doit :
 
 Le modèle de lancement comprend uniquement :
 
-* la vente directe d’offres commerciales de skins de carte à contenu connu ;
-* des packs d’illustrations obtenus en jouant ;
+* une boutique exclusivement consacrée aux contenus cosmétiques ;
+* la vente directe, contre de l’argent réel, de paquets de skins de carte aléatoires ;
+* des paquets de skins de carte obtenus en jouant ;
 * un système de conversion des doublons de skins de carte ;
 * une monnaie permanente issue de ces doublons, provisoirement nommée « monnaie de conversion des doublons » ;
-* un catalogue permanent et limité utilisant cette monnaie.
+* un catalogue cosmétique permanent et limité utilisant cette monnaie.
 
 Ce périmètre doit rester compatible avec les capacités humaines, techniques et financières du projet.
 
@@ -95,67 +95,122 @@ Ne sont pas prévus au lancement :
 
 * l’achat direct d’invocations de créatures ;
 * la vente directe de ressources de progression ;
-* les packs aléatoires payants ;
 * une monnaie premium ;
 * les publicités ;
 * les abonnements ;
 * les passes ;
+* l’achat direct d’un skin précis appartenant à une série distribuée par paquets ;
 * tout autre système commercial supplémentaire.
 
 Ces exclusions définissent le modèle initial. Elles ne constituent pas une autorisation implicite d’ajouter ces systèmes ultérieurement : toute évolution devra faire l’objet d’une nouvelle décision explicite et d’une vérification de sa cohérence avec la documentation de fondation.
 
+Des produits cosmétiques directs distincts des séries distribuées par paquets pourront être envisagés ultérieurement. Leur introduction constituera une décision séparée et ne doit pas être considérée comme validée par le présent document.
+
 ## 5. Acquisition des skins de carte
 
-### 5.1. Achats directs
+### 5.1. Paquets achetés
 
-Les produits achetés avec de l’argent réel ont un contenu connu avant l’achat et affichent leur prix réel.
+La boutique cosmétique peut vendre directement contre de l’argent réel des paquets de skins de carte appartenant à une série déterminée.
 
-Le modèle initial n’utilise pas de monnaie premium. Cette règle limite la complexité et évite de masquer le coût réel des produits.
+Avant l’achat, le joueur doit connaître :
 
-### 5.2. Ouvertures obtenues en jouant
+* la série concernée ;
+* le nombre de skins contenus dans le paquet ;
+* la liste des skins pouvant être obtenus ;
+* les probabilités d’obtention ;
+* les règles concernant les doublons ;
+* la durée de disponibilité de la série lorsqu’elle est temporaire ;
+* le prix réel du paquet.
 
-Les packs d’illustrations et les récompenses cosmétiques obtenus gratuitement en jouant peuvent permettre d’obtenir aléatoirement des skins de carte.
+Le joueur ne connaît pas les skins précis qu’il recevra avant l’ouverture.
 
-Les ouvertures aléatoires payantes ne font pas partie du modèle initial. Les doublons de skins de carte proviennent principalement des ouvertures obtenues en jeu.
+Le modèle initial n’utilise pas de monnaie premium. Les paquets payants affichent directement leur prix en argent réel.
+
+### 5.2. Paquets obtenus en jouant
+
+Des paquets de skins de carte peuvent être obtenus gratuitement en jouant, notamment grâce aux quêtes, aux événements, aux activités et à la progression.
+
+Pour une même série, un paquet obtenu en jouant et un paquet acheté utilisent :
+
+* le même ensemble de skins ;
+* les mêmes probabilités ;
+* le même nombre de skins ;
+* les mêmes règles de doublons ;
+* les mêmes règles d’ouverture.
+
+La méthode d’obtention du paquet constitue leur seule différence. Un joueur Free-to-Play participe ainsi aux mêmes séries, même s’il obtient généralement moins de paquets qu’un joueur qui en achète.
 
 **Éléments à préciser ultérieurement :**
 
-* Les probabilités exactes, les quantités distribuées et les rythmes d’obtention des packs d’illustrations gratuits.
+* Les quantités distribuées et les rythmes d’obtention des paquets de skins de carte gratuits.
 
-### 5.3. Rareté cosmétique
+### 5.3. Contenu et rareté cosmétique
 
-Le modèle initial ne prévoit pas plusieurs niveaux de rareté associés à des probabilités différentes au sein d’un même pack.
+Un paquet contient un nombre fixe de plusieurs skins appartenant à une même série. Ce nombre ne varie pas aléatoirement d’un paquet à l’autre.
 
-La rareté éventuelle d’un skin de carte peut dépendre :
+Tous les emplacements du paquet sont déterminés aléatoirement parmi les skins de la série, selon les probabilités annoncées. Aucun emplacement ne garantit automatiquement :
 
-* de sa série ;
-* de sa période de disponibilité ;
-* de son mode d’obtention ;
-* de son caractère événementiel.
+* une rareté donnée ;
+* un skin précis ;
+* un skin non encore possédé.
 
-Cette rareté reste uniquement cosmétique et ne confère aucun avantage de jeu.
+Les skins d’une même série appartiennent à plusieurs niveaux de rareté visibles et possèdent des probabilités d’obtention différentes.
+
+La rareté d’un skin concerne uniquement sa fréquence d’obtention, sa valeur de collection, sa présentation visuelle et sa valeur perçue. Elle ne confère aucun avantage de jeu.
+
+**Éléments à préciser ultérieurement :**
+
+* Le nombre exact de skins contenus dans un paquet.
+* Les noms et le nombre des niveaux de rareté.
+* La répartition des skins entre les raretés.
+* Les probabilités exactes.
+
+### 5.4. Skins obtenus directement hors paquets
+
+Certaines activités ou récompenses peuvent accorder directement un skin précis sans passer par un paquet, notamment comme récompense :
+
+* événementielle ;
+* de haut fait ;
+* narrative ;
+* de progression particulière ;
+* commémorative ;
+* liée à une opération spéciale.
+
+Ces skins ne doivent appartenir à aucune série distribuée par paquets et ne doivent pas pouvoir être obtenus aléatoirement dans ces séries. Leur méthode d’obtention doit être indiquée dans le système de collection.
+
+Ils pourront être regroupés dans une catégorie dédiée dont le nom, la structure et les règles de complétion ne sont pas encore validés.
+
+**Éléments à préciser ultérieurement :**
+
+* Le nom officiel de la catégorie regroupant les skins obtenus hors paquets.
+* Sa structure et ses règles de complétion.
 
 ## 6. Gestion des doublons
 
 ### 6.1. Absence de protection contre les doublons
 
-Les ouvertures cosmétiques aléatoires ne comportent aucune protection contre les doublons ou la malchance.
+Les ouvertures de paquets de skins de carte ne comportent aucune protection contre les doublons ou la malchance, qu’ils aient été obtenus gratuitement ou achetés.
 
-Elles ne garantissent pas l’obtention d’un nouveau skin de carte après un certain nombre d’ouvertures et ne permettent pas, dans le cadre de ces ouvertures, de choisir directement un skin de carte manquant.
+Elles ne prévoient :
+
+* aucun système de garantie après un nombre défini d’ouvertures ;
+* aucune augmentation progressive des probabilités ;
+* aucune garantie d’obtenir un skin non possédé ;
+* aucune protection particulière pour les paquets payants.
 
 Les doublons de skins de carte font partie du système de collection. Leur valeur est préservée par leur conversion en monnaie de conversion des doublons.
 
-Les probabilités, les règles concernant les doublons de skins de carte et la valeur de conversion doivent être communiquées clairement aux joueurs.
+Les probabilités, les règles concernant les doublons de skins de carte et les valeurs de conversion propres aux raretés doivent être communiquées clairement aux joueurs.
 
 ### 6.2. Valeur de conversion
 
-Dans le modèle initial, chaque doublon de skin de carte possède une valeur de conversion fixe et identique.
+Chaque doublon de skin de carte possède une valeur de conversion fixe déterminée par sa rareté.
 
-Cette règle ne pourra être réévaluée que si plusieurs niveaux de rareté cosmétique sont introduits ultérieurement par une décision explicite.
+Les différentes raretés possèdent des valeurs de conversion différentes. Deux doublons de même rareté possèdent la même valeur de conversion.
 
 **Éléments à préciser ultérieurement :**
 
-* La valeur numérique de conversion d’un doublon de skin de carte.
+* La valeur numérique de conversion propre à chaque rareté.
 
 ### 6.3. Monnaie de conversion des doublons — nom provisoire
 
@@ -167,41 +222,40 @@ Elle est commune à toutes les séries de skins de carte et n’est pas fragment
 
 La monnaie de conversion des doublons donne accès à un catalogue permanent et limité pouvant comprendre :
 
-* des récompenses cosmétiques ;
-* certaines récompenses ayant un effet sur la progression ;
-* éventuellement des invocations supplémentaires.
+* des skins de carte ;
+* des paquets de skins de carte ;
+* d’autres éléments cosmétiques ;
+* d’autres récompenses strictement esthétiques définies ultérieurement.
 
-Les récompenses ayant un effet sur la progression doivent rester secondaires par rapport aux gains normaux obtenus en jouant.
-
-**Éléments à préciser ultérieurement :**
-
-* Le contenu détaillé du catalogue de conversion.
-* La nature et les quantités des récompenses ayant un effet sur la progression.
-
-### 6.5. Limitation de la puissance indirecte
-
-Deux garde-fous s’appliquent aux récompenses ayant un effet sur la progression :
-
-* leur taux d’obtention par conversion doit rester volontairement secondaire par rapport aux récompenses obtenues normalement en jouant ;
-* leur acquisition par conversion doit être soumise à un plafond périodique.
-
-Un joueur effectuant de nombreuses dépenses ne doit pas pouvoir transformer les doublons de skins de carte en source principale d’invocations ou de puissance.
+Ce catalogue ne doit contenir aucune invocation, ressource de progression, équipement, récompense de combat ou autre forme de puissance.
 
 **Éléments à préciser ultérieurement :**
 
-* Les taux de conversion applicables aux récompenses ayant un effet sur la progression.
-* La durée et les valeurs des plafonds périodiques.
+* Le contenu cosmétique détaillé du catalogue de conversion.
+
+### 6.5. Séparation complète avec la puissance
+
+Une dépense effectuée dans la boutique cosmétique ne doit jamais permettre directement ou indirectement :
+
+* d’obtenir une créature ;
+* d’effectuer une invocation ;
+* d’obtenir une ressource de progression ;
+* d’obtenir un équipement ;
+* d’obtenir un avantage de combat ;
+* d’accélérer une progression de puissance.
+
+Cette interdiction s’applique également à la monnaie de conversion des doublons et à l’ensemble de son catalogue.
 
 ## 7. Disponibilité temporaire et exclusivité
 
 ### 7.1. Disponibilité et retour
 
-Les règles de disponibilité et de retour d’un skin de carte ou d’une offre commerciale doivent être annoncées clairement avant toute acquisition.
+Les règles de disponibilité et de retour d’une série de skins de carte et de ses paquets doivent être annoncées clairement avant toute acquisition.
 
-Un skin de carte ou une offre commerciale temporaire doit normalement suivre l’un des modèles suivants :
+Une série temporaire doit normalement suivre l’un des modèles suivants :
 
 * revenir selon une rotation annoncée ;
-* être intégré ultérieurement au catalogue permanent.
+* être intégrée ultérieurement au catalogue permanent.
 
 Un skin de carte temporairement indisponible doit rester visible dans sa série avec une indication claire de son indisponibilité actuelle. Certains skins secrets, surprises ou non encore officiellement révélés peuvent cependant rester masqués.
 
@@ -211,7 +265,7 @@ Certaines récompenses commémoratives ou événementielles peuvent exceptionnel
 
 ### 7.2. Absence de pression artificielle
 
-Les skins temporairement disponibles et les offres événementielles ne doivent pas reposer sur une présentation artificielle ou ambiguë de l’urgence.
+Les séries et paquets temporairement disponibles ne doivent pas reposer sur une présentation artificielle ou ambiguë de l’urgence.
 
 Le projet doit notamment éviter :
 
@@ -243,8 +297,8 @@ Les prix seront établis après :
 
 **Éléments à préciser ultérieurement :**
 
-* Les prix exacts des produits et offres commerciales de skins de carte.
-* Les éventuelles variations de prix entre les types d’offres.
+* Les prix exacts des paquets de skins de carte.
+* Les éventuelles variations de prix entre les séries.
 
 ## 9. Transparence et protection des joueurs
 
@@ -252,16 +306,21 @@ Les prix seront établis après :
 
 La transparence s’applique à toutes les acquisitions et ouvertures, gratuites ou payantes.
 
-Selon le produit concerné, le joueur doit pouvoir connaître clairement avant l’acquisition :
+Avant l’achat d’un paquet de skins de carte, le joueur doit pouvoir connaître clairement :
 
-* son contenu ;
+* la série concernée ;
+* le nombre de skins contenus ;
+* la liste des skins pouvant être obtenus ;
+* les niveaux de rareté ;
+* les probabilités d’obtention ;
+* les règles concernant les doublons de skins de carte ;
+* les valeurs de conversion propres aux différentes raretés ;
 * son prix réel ;
 * sa durée de disponibilité ;
-* sa politique de retour ;
-* les probabilités éventuelles ;
-* les règles concernant les doublons de skins de carte ;
-* la valeur de conversion ;
+* la politique de retour de la série ;
 * les éventuelles limitations.
+
+Le résultat précis de l’ouverture reste inconnu avant l’achat.
 
 ### 9.2. Garde-fous de dépense
 
@@ -270,8 +329,9 @@ Le modèle prévoit au minimum :
 * une confirmation claire avant chaque achat ;
 * un historique lisible des achats ;
 * l’affichage du coût réel ;
-* des protections spécifiques pour toute acquisition pouvant indirectement produire des récompenses ayant un effet sur la progression ;
-* des plafonds sur les conversions ayant un effet sur la progression.
+* l’affichage des probabilités ;
+* une présentation claire de l’absence de protection contre les doublons ou la malchance ;
+* une présentation claire des règles et valeurs de conversion des doublons.
 
 **Question ouverte :**
 
@@ -284,6 +344,8 @@ Les évolutions suivantes ne sont pas validées et ne font pas partie du modèle
 ### 10.1. Invocations et services de confort
 
 L’achat direct d’invocations pourra uniquement être réévalué après la définition et l’équilibrage complets du système d’invocation.
+
+Une éventuelle décision future en ce sens ne devra jamais intégrer les invocations à la boutique cosmétique ni confondre leur parcours avec celui des paquets de skins de carte.
 
 Des services de confort pourront éventuellement être étudiés, mais ils ne devront :
 
@@ -360,7 +422,7 @@ La monétisation doit être évaluée à partir :
 * d’indicateurs d’engagement ;
 * de la satisfaction des joueurs ;
 * de leur perception de l’équité ;
-* de l’influence réelle des achats sur la progression.
+* de la vérification qu’aucun achat cosmétique n’influence directement ou indirectement la progression.
 
 Une offre doit être refusée lorsqu’elle contrevient aux principes d’équité, de transparence ou de respect des joueurs, même si elle est rentable.
 

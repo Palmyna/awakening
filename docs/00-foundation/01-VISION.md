@@ -151,6 +151,8 @@ Chaque invocation permet d’obtenir la forme de base d’une famille de créatu
 
 Le joueur fait ensuite évoluer cette créature au fil de sa progression jusqu’à sa forme finale.
 
+L’invocation constitue la voie principale d’obtention des créatures. Certaines créatures peuvent néanmoins être accordées directement par le gameplay, notamment comme créature de départ ou comme récompense narrative, événementielle, de progression ou d’activité. Ces exceptions doivent être explicitement documentées et ne remettent pas en cause le rôle central de l’invocation.
+
 Les créatures gagnent de l’expérience en participant aux combats.
 
 À chaque montée de niveau, la créature concernée reçoit des points de caractéristiques que le joueur peut répartir librement sur celle-ci selon le build souhaité.
@@ -270,6 +272,8 @@ Ces différents styles pourront être organisés en séries de skins de carte.
 
 Les joueurs pourront appliquer librement les skins de carte qu’ils auront débloqués aux cartes de leurs créatures favorites.
 
+Certains skins de carte peuvent être accordés directement comme récompenses sans appartenir à une série distribuée par paquets. Ils doivent rester clairement distingués de ces séries et leur méthode d’obtention doit être indiquée dans le système de collection.
+
 ## 16. Modes de jeu envisagés
 
 Le projet prévoit à long terme plusieurs modes de jeu, notamment :
@@ -293,17 +297,25 @@ Les principes fondamentaux sont les suivants :
 
 * les créatures s’obtiennent principalement en jouant ;
 * les invocations sont obtenues grâce aux quêtes quotidiennes, aux événements, aux récompenses de jeu et aux différentes activités ;
-* les achats ne doivent jamais devenir la principale source de puissance.
+* aucun achat effectué dans la boutique cosmétique ne doit permettre directement ou indirectement d’obtenir une créature, une invocation ou de la puissance.
 
-La monétisation repose principalement sur des éléments cosmétiques.
+La monétisation repose principalement sur une boutique exclusivement consacrée aux contenus cosmétiques.
 
-Les joueurs pourront notamment obtenir des packs d’illustrations en jouant ou acheter des offres commerciales de skins de carte à contenu connu.
+Les skins appartenant aux séries distribuées par paquets s’obtiennent principalement en ouvrant des **paquets de skins de carte**. Ces paquets peuvent être gagnés en jouant ou achetés directement contre de l’argent réel dans la boutique cosmétique.
 
-Ces offres pourront être proposées de manière permanente ou temporaire à l’occasion d’événements.
+Pour une même série, les paquets gratuits et payants donnent accès au même ensemble de skins, avec les mêmes probabilités, le même nombre de skins, les mêmes règles de doublons et les mêmes règles d’ouverture. Aucun skin ne doit être réservé exclusivement à la version payante d’un même paquet.
+
+Un paquet contient un nombre fixe de plusieurs skins appartenant à une même série. Tous ses emplacements sont déterminés aléatoirement selon les probabilités associées aux différents niveaux de rareté cosmétique. Les raretés sont visibles et n’accordent aucun avantage de jeu.
+
+Avant un achat, le joueur connaît la série concernée, le nombre de skins contenus, la liste des skins pouvant être obtenus, leurs probabilités, les règles concernant les doublons et, le cas échéant, la durée de disponibilité. Il ne connaît pas les skins précis qu’il recevra avant l’ouverture.
+
+Les séries et leurs paquets peuvent être proposés de manière permanente ou temporaire à l’occasion d’événements. L’achat direct d’un skin précis appartenant à une série distribuée par paquets ne fait pas partie du modèle principal.
 
 La complétion d’une série de skins de carte ne fournira aucun avantage automatique de puissance.
 
-Les doublons de skins de carte seront convertis en une monnaie permanente, provisoirement nommée « monnaie de conversion des doublons », permettant d’obtenir des récompenses ayant un effet sur la progression, comme des invocations supplémentaires, afin que chaque ouverture conserve de la valeur.
+Les ouvertures ne comportent aucune protection contre les doublons ou la malchance. Les doublons de skins de carte sont convertis en une monnaie permanente, provisoirement nommée « monnaie de conversion des doublons ». Chaque rareté possède une valeur de conversion fixe, différente de celle des autres raretés.
+
+Cette monnaie donne accès uniquement à des récompenses cosmétiques. Elle ne permet jamais d’obtenir une créature, une invocation, une ressource de progression, un équipement, un avantage de combat ou une autre forme de puissance.
 
 L’objectif est de financer le développement du jeu tout en préservant un environnement compétitif équitable.
 
