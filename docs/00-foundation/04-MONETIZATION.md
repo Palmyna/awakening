@@ -1,6 +1,6 @@
 # Project Awakening — Monétisation
 
-**Statut :** Rédigé, en attente de validation finale
+**Statut :** Rédigé — référence actuelle, à maintenir à jour
 
 ## 1. Rôle du document
 

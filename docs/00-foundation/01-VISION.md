@@ -1,5 +1,7 @@
 # Project Awakening — Vision du projet
 
+**Statut :** Rédigé — référence actuelle, à maintenir à jour
+
 **Nom de code :** Project Awakening
 
 ## 1. Présentation
@@ -107,7 +109,7 @@ La collection de skins de carte permet de consulter les skins débloqués et non
 Chaque créature possède notamment :
 
 * une rareté ;
-* un élément ;
+* un ou deux éléments au maximum ;
 * quatre compétences :
 
   * une compétence active ;

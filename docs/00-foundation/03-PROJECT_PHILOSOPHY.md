@@ -1,6 +1,6 @@
 # Project Awakening — Philosophie du projet
 
-**Statut :** Rédigé, en attente de validation finale
+**Statut :** Rédigé — référence actuelle, à maintenir à jour
 
 ## 1. Rôle du document
 
@@ -8,7 +8,7 @@ Ce document définit la philosophie générale de conception de **Project Awaken
 
 Il précise la manière dont la vision du projet doit guider les décisions de game design, de progression, d’expérience joueur, de monétisation et de production. Il ne remplace pas le **Game Design Document (GDD)** ni les documents spécialisés, qui devront décrire les mécaniques et leurs paramètres détaillés.
 
-Cette philosophie repose en priorité sur la [vision du projet](./01-VISION.md). Elle s’appuie également sur les [piliers fondamentaux](./02-PILLARS.md), actuellement rédigés mais en attente de validation finale. Les formulations propres à ce document provisoire ne doivent donc pas être considérées comme de nouvelles décisions validées.
+Cette philosophie repose en priorité sur la [vision du projet](./01-VISION.md) et s’appuie également sur les [piliers fondamentaux](./02-PILLARS.md). Ces documents constituent les fondations de référence actuelles du projet et doivent être maintenus à jour lorsque de nouvelles décisions validées les font évoluer.
 
 ## 2. Principe directeur
 
@@ -53,9 +53,16 @@ Le projet doit éviter :
 * de proposer une automatisation qui efface l’influence des décisions du joueur ;
 * de traiter les effets de statut comme des effets accessoires sans rôle stratégique réel.
 
-**Question ouverte :**
+**Questions ouvertes :**
 
 * le choix définitif entre un combat entièrement automatique et un combat semi-automatique permettant de déclencher les compétences ultimes n’est pas encore arrêté.
+* l’existence éventuelle d’un bonus lorsqu’une compétence partage un élément avec la créature qui l’utilise.
+
+**Éléments à préciser ultérieurement :**
+
+* la table exacte des affinités entre les neuf éléments et leurs coefficients ;
+* le rôle exact de l’Agilité dans l’ordre et la fréquence des actions ainsi que les formules de dégâts et de coups critiques ;
+* la liste des effets de statut et leurs règles détaillées d’application, de durée, de cumul, de renouvellement, de retrait, de résistance et d’immunité.
 
 ### 3.2. Faire de la personnalisation le cœur de l’expérience
 
@@ -146,7 +153,13 @@ Le système de collection doit rester distinct de l’inventaire : la collection
 
 * la navigation précise, les filtres et l’ergonomie de l’espace de collection ;
 * les règles détaillées de découverte et de présentation des créatures ou skins secrets ;
-* les règles exactes de calcul de la progression de collection et le traitement détaillé des contenus historiques.
+* les règles exactes de calcul de la progression de collection et le traitement détaillé des contenus historiques ;
+* la nature des éventuelles reconnaissances non compétitives accordées pour la complétion d’une collection ;
+* le nom, la structure et les règles de complétion de la catégorie consacrée aux skins obtenus hors paquets.
+
+**Question ouverte :**
+
+* la compatibilité des skins de carte avec une créature, une forme précise ou plusieurs formes compatibles.
 
 ### 5.4. Distinguer les parcours cosmétiques et l’obtention des créatures
 
@@ -161,7 +174,12 @@ Ces parcours doivent employer des terminologies, des ressources, des interfaces,
 **Éléments à préciser ultérieurement :**
 
 * la présentation artistique de l’invocation, qui pourra éventuellement utiliser un œuf, une éclosion, un rituel, un portail ou une autre représentation cohérente avec l’univers ;
-* les écrans, animations et parcours détaillés des deux systèmes.
+* les écrans, animations et parcours détaillés des deux systèmes ;
+* les règles détaillées d’obtention d’une éventuelle ressource générale d’invocation, si celle-ci est définitivement validée.
+
+**Question ouverte :**
+
+* la validation définitive d’une ressource générale d’invocation pour le modèle initial.
 
 ## 6. Philosophie de monétisation
 
@@ -288,27 +306,3 @@ Une décision contredit la philosophie de Project Awakening si elle conduit nota
 * laisser un outil d’intelligence artificielle transformer une proposition en décision sans validation humaine.
 
 Lorsqu’une décision semble renforcer un principe tout en en affaiblissant un autre, le conflit doit être signalé et documenté avant validation.
-
-## 9. Questions ouvertes
-
-Les points suivants ne sont pas suffisamment définis dans la documentation actuelle :
-
-* le mode de contrôle définitif des combats ;
-* la table exacte des affinités entre les neuf éléments, leurs coefficients et l’existence éventuelle d’un bonus entre une créature et une compétence partageant son élément ;
-* le rôle exact de l’Agilité dans l’ordre et la fréquence des actions ainsi que les formules de dégâts et de coups critiques ;
-* les règles détaillées et l’équilibrage de la progression, des builds, des compétences, des objets et des effets de statut ;
-* la liste des effets de statut et leurs règles détaillées d’application, de durée, de cumul, de renouvellement, de retrait, de résistance et d’immunité ;
-* les modalités précises permettant de concilier accessibilité et profondeur dans l’interface et les parcours utilisateur ;
-* les règles exactes de progression et de complétion des collections ;
-* la compatibilité des skins de carte avec une créature, une forme précise ou plusieurs formes compatibles ;
-* la nature des éventuelles reconnaissances non compétitives accordées pour la complétion d’une collection ;
-* le nombre exact de skins par paquet, les noms et probabilités des raretés ainsi que les valeurs de conversion propres à chacune ;
-* le nom, la structure et les règles de complétion de la catégorie consacrée aux skins obtenus hors paquets ;
-* le contenu cosmétique détaillé du catalogue de conversion et les seuils d’évaluation de la monétisation ;
-* l’éventuelle évolution du modèle de monétisation après le lancement ;
-* la validation définitive d’une ressource générale d’invocation pour le modèle initial et les règles détaillées de son obtention ;
-* la présentation artistique et le déroulement détaillé de l’invocation de créature ;
-* le périmètre initial, les priorités de production, les jalons et le rythme des mises à jour ;
-* le cadre opérationnel d’utilisation et de validation du travail assisté par l’intelligence artificielle.
-
-Ces questions devront être traitées dans les documents spécialisés correspondants. Elles ne doivent pas être considérées comme résolues par le présent document.

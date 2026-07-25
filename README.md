@@ -27,11 +27,13 @@ Avant toute contribution, les agents IA doivent également consulter :
 
 ### 00-foundation
 
-* ✅ [`01-VISION.md`](./docs/00-foundation/01-VISION.md)
-* 🚧 [`02-PILLARS.md`](./docs/00-foundation/02-PILLARS.md) — Rédigé, en attente de validation finale
-* 🚧 [`03-PROJECT_PHILOSOPHY.md`](./docs/00-foundation/03-PROJECT_PHILOSOPHY.md) — Rédigé, en attente de validation finale
-* 🚧 [`04-MONETIZATION.md`](./docs/00-foundation/04-MONETIZATION.md) — Rédigé, en attente de validation finale
-* 🚧 [`05-GLOSSARY.md`](./docs/00-foundation/05-GLOSSARY.md) — Rédigé, en attente de validation finale
+* ✅ [`01-VISION.md`](./docs/00-foundation/01-VISION.md) — Rédigé — référence actuelle, à maintenir à jour
+* ✅ [`02-PILLARS.md`](./docs/00-foundation/02-PILLARS.md) — Rédigé — référence actuelle, à maintenir à jour
+* ✅ [`03-PROJECT_PHILOSOPHY.md`](./docs/00-foundation/03-PROJECT_PHILOSOPHY.md) — Rédigé — référence actuelle, à maintenir à jour
+* ✅ [`04-MONETIZATION.md`](./docs/00-foundation/04-MONETIZATION.md) — Rédigé — référence actuelle, à maintenir à jour
+* ✅ [`05-GLOSSARY.md`](./docs/00-foundation/05-GLOSSARY.md) — Rédigé — référence actuelle, à maintenir à jour
+
+Ces documents constituent les fondations de référence actuelles du projet. Ils restent susceptibles d’évoluer lorsque de nouvelles décisions sont validées dans les documents spécialisés ou pendant le développement.
 
 ### 01-game-design
 
@@ -102,7 +104,7 @@ Avant toute contribution, les agents IA doivent également consulter :
 
 ## Légende
 
-* ✅ Document créé et disponible
+* ✅ Document rédigé et disponible comme référence actuelle, à maintenir à jour
 * 🚧 Document en cours de rédaction
 * ⬜ Document prévu mais non créé
 
@@ -112,4 +114,4 @@ Avant toute contribution, les agents IA doivent également consulter :
 * Les documents du dossier `docs/00-foundation/` sont prioritaires sur les autres documents.
 * Aucun document ne doit contredire la vision du projet.
 * Les décisions importantes doivent être clairement distinguées des hypothèses et des questions ouvertes.
-* L’état de la documentation doit être mis à jour dans ce fichier après la création ou la validation d’un document.
+* L’état de la documentation doit être mis à jour dans ce fichier après la création d’un document ou tout changement réel de son statut.
