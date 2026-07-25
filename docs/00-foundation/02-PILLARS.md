@@ -131,18 +131,19 @@ L’accessibilité ne doit pas supprimer les possibilités d’optimisation, et 
 
 Le modèle économique doit financer le développement sans faire des achats la principale source de puissance.
 
-Les joueurs doivent obtenir principalement les créatures et les invocations grâce au jeu. La monétisation repose avant tout sur des éléments cosmétiques, notamment les illustrations alternatives des cartes, afin de préserver un environnement compétitif équitable.
+Les joueurs doivent obtenir principalement les créatures et les invocations grâce au jeu. La monétisation repose avant tout sur des éléments cosmétiques, notamment les skins de carte utilisant des illustrations alternatives, afin de préserver un environnement compétitif équitable.
 
 ### Conséquences sur la conception
 
 * Les créatures doivent s’obtenir principalement en jouant.
 * Les quêtes quotidiennes, les événements, les récompenses et les différentes activités doivent permettre d’obtenir des invocations.
 * Les achats ne doivent jamais devenir la principale source de puissance.
-* Les illustrations et skins de carte doivent constituer le cœur de la monétisation.
+* Les skins de carte et les illustrations alternatives qu’ils utilisent doivent constituer le cœur de la monétisation.
 * Au lancement, les produits payants doivent avoir un contenu connu et afficher leur prix réel.
 * Les ouvertures cosmétiques aléatoires doivent être réservées aux packs d’illustrations et aux récompenses obtenus en jouant.
 * Les doublons de skins de carte doivent être convertis en une monnaie permanente provisoirement nommée « monnaie de conversion des doublons » et donnant accès à un catalogue limité.
 * Les récompenses ayant un effet sur la progression obtenues grâce aux doublons de skins de carte doivent rester secondaires et être plafonnées.
+* La complétion d’une série de skins de carte ne doit fournir aucun avantage automatique de puissance.
 * Les décisions économiques doivent préserver l’équité de l’environnement compétitif.
 
 ### Ce que le projet doit éviter
@@ -168,7 +169,9 @@ Project Awakening doit construire une licence originale, fondée sur un multiver
 
 Les références issues de la culture populaire, des mythologies et des légendes servent de sources d’inspiration. Elles doivent être réinterprétées à travers des codes visuels, narratifs ou symboliques propres au projet, et non reproduites.
 
-La représentation des créatures sous forme de cartes et la collection d’illustrations participent pleinement à cette identité.
+La représentation des créatures sous forme de cartes, la collection de créatures et la collection de skins de carte participent pleinement à cette identité.
+
+Le système de collection doit valoriser les éléments obtenus, rendre visible la progression du joueur et lui permettre d’identifier ce qui lui manque. Il constitue une expérience à part entière et ne doit pas être réduit à un simple inventaire technique.
 
 ### Conséquences sur la conception
 
@@ -176,6 +179,9 @@ La représentation des créatures sous forme de cartes et la collection d’illu
 * Les inspirations doivent être transformées et intégrées à l’identité propre du projet.
 * Les familles doivent généralement proposer une progression cohérente entre une forme de base, une forme intermédiaire et une forme finale.
 * Les illustrations 2D de qualité doivent mettre en valeur les créatures sous forme de cartes.
+* Le système de collection doit distinguer clairement la collection de créatures de la collection de skins de carte.
+* Le catalogue des créatures doit permettre de consulter les créatures disponibles ou connues, sous réserve des contenus qui doivent rester secrets.
+* Les skins de carte doivent être organisés en séries cohérentes dont la progression peut être consultée.
 * Les joueurs doivent pouvoir appliquer librement les skins de carte qu’ils ont débloqués aux cartes de leurs créatures favorites.
 
 ### Ce que le projet doit éviter
@@ -184,6 +190,8 @@ La représentation des créatures sous forme de cartes et la collection d’illu
 * Se contenter d’imiter les œuvres et les jeux qui inspirent le projet.
 * Créer des évolutions sans continuité visuelle, narrative ou symbolique au sein d’une famille.
 * Traiter les illustrations comme un élément sans importance dans une expérience centrée sur les cartes et leur collection.
+* Confondre le système de collection avec l’inventaire consacré aux objets et aux ressources.
+* Limiter la collection à l’acquisition sans permettre au joueur de consulter et de valoriser ce qu’il possède.
 
 ## 8. Une expérience durable et capable d’évoluer
 

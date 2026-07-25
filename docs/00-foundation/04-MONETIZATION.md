@@ -41,7 +41,7 @@ Au lancement :
 
 ### 3.2. Une monétisation principalement cosmétique
 
-Le cœur de la monétisation repose sur les illustrations alternatives et les skins de carte.
+Le cœur de la monétisation repose sur les skins de carte utilisant des illustrations alternatives.
 
 Ces éléments enrichissent la collection et permettent aux joueurs de personnaliser l’apparence de leurs créatures favorites. Ils restent strictement cosmétiques et ne modifient aucune caractéristique de jeu.
 
@@ -53,6 +53,10 @@ Le catalogue peut comprendre des skins de carte :
 * accessibles par plusieurs voies.
 
 Certains skins de carte peuvent être exclusivement payants, à condition que leur caractère cosmétique et leur mode d’acquisition soient clairement annoncés.
+
+Le système de collection doit contribuer à leur mise en valeur en permettant de consulter les skins débloqués et non débloqués, de parcourir les séries de skins de carte et de visualiser la progression au sein de chaque série.
+
+La complétion d’une série de skins de carte ne fournit aucun avantage automatique de puissance. Une éventuelle reconnaissance de cette complétion doit rester non compétitive.
 
 ### 3.3. Des limites claires à la puissance payante
 
@@ -77,7 +81,7 @@ Tout avantage indirect issu d’un achat doit :
 
 Le modèle de lancement comprend uniquement :
 
-* la vente directe de collections d’illustrations à contenu connu ;
+* la vente directe d’offres commerciales de skins de carte à contenu connu ;
 * des packs d’illustrations obtenus en jouant ;
 * un système de conversion des doublons de skins de carte ;
 * une monnaie permanente issue de ces doublons, provisoirement nommée « monnaie de conversion des doublons » ;
@@ -122,9 +126,9 @@ Les ouvertures aléatoires payantes ne font pas partie du modèle initial. Les d
 
 Le modèle initial ne prévoit pas plusieurs niveaux de rareté associés à des probabilités différentes au sein d’un même pack.
 
-La rareté éventuelle d’une illustration peut dépendre :
+La rareté éventuelle d’un skin de carte peut dépendre :
 
-* de sa collection ;
+* de sa série ;
 * de sa période de disponibilité ;
 * de son mode d’obtention ;
 * de son caractère événementiel.
@@ -157,7 +161,7 @@ Cette règle ne pourra être réévaluée que si plusieurs niveaux de rareté co
 
 La monnaie de conversion des doublons est permanente et n’expire pas.
 
-Elle est commune à toutes les collections et n’est pas fragmentée par collection ou par saison dans le modèle initial.
+Elle est commune à toutes les séries de skins de carte et n’est pas fragmentée par série ou par saison dans le modèle initial.
 
 ### 6.4. Catalogue de conversion
 
@@ -188,16 +192,18 @@ Un joueur effectuant de nombreuses dépenses ne doit pas pouvoir transformer les
 * Les taux de conversion applicables aux récompenses ayant un effet sur la progression.
 * La durée et les valeurs des plafonds périodiques.
 
-## 7. Collections temporaires et exclusivité
+## 7. Disponibilité temporaire et exclusivité
 
 ### 7.1. Disponibilité et retour
 
-Les règles de disponibilité et de retour d’une collection doivent être annoncées clairement avant toute acquisition.
+Les règles de disponibilité et de retour d’un skin de carte ou d’une offre commerciale doivent être annoncées clairement avant toute acquisition.
 
-Une collection temporaire doit normalement suivre l’un des modèles suivants :
+Un skin de carte ou une offre commerciale temporaire doit normalement suivre l’un des modèles suivants :
 
 * revenir selon une rotation annoncée ;
-* être intégrée ultérieurement au catalogue permanent.
+* être intégré ultérieurement au catalogue permanent.
+
+Un skin de carte temporairement indisponible doit rester visible dans sa série avec une indication claire de son indisponibilité actuelle. Certains skins secrets, surprises ou non encore officiellement révélés peuvent cependant rester masqués.
 
 Les exclusivités définitives reposant uniquement sur la peur de manquer doivent être évitées.
 
@@ -205,7 +211,7 @@ Certaines récompenses commémoratives ou événementielles peuvent exceptionnel
 
 ### 7.2. Absence de pression artificielle
 
-Les collections temporaires et les offres événementielles ne doivent pas reposer sur une présentation artificielle ou ambiguë de l’urgence.
+Les skins temporairement disponibles et les offres événementielles ne doivent pas reposer sur une présentation artificielle ou ambiguë de l’urgence.
 
 Le projet doit notamment éviter :
 
@@ -218,7 +224,7 @@ Le projet doit notamment éviter :
 
 ### 8.1. Structure commerciale
 
-Le projet propose un catalogue stable complété par des offres ou des collections événementielles occasionnelles.
+Le projet propose un catalogue stable complété par des offres événementielles occasionnelles.
 
 Il doit éviter :
 
@@ -237,7 +243,7 @@ Les prix seront établis après :
 
 **Éléments à préciser ultérieurement :**
 
-* Les prix exacts des collections d’illustrations.
+* Les prix exacts des produits et offres commerciales de skins de carte.
 * Les éventuelles variations de prix entre les types d’offres.
 
 ## 9. Transparence et protection des joueurs
@@ -320,22 +326,30 @@ Son ajout futur nécessiterait un besoin réel et ne devrait pas masquer le coû
 
 * L’introduction éventuelle d’une monnaie premium après le lancement.
 
-## 11. Production des collections
+### 10.5. Fonctions communautaires et échanges liés à la collection
+
+Les fonctions permettant de consulter ou comparer les collections d’autres joueurs, d’afficher publiquement des éléments de collection, d’utiliser une liste de souhaits, de partager une série complétée ou d’échanger des éléments ne font pas partie du périmètre obligatoire de la première version.
+
+Ces possibilités ne sont ni validées ni promises. Leur éventuelle introduction nécessitera une décision explicite et, lorsqu’elles influencent la visibilité ou le partage, un cadrage consacré à la confidentialité.
+
+L’échange entre joueurs devra faire l’objet d’un cadrage indépendant avant toute validation. Ce cadrage devra notamment examiner ses conséquences sur l’économie, la monétisation, la propriété des éléments, les doublons, la fraude, les comptes secondaires, la sécurité et un éventuel marché secondaire.
+
+## 11. Production des séries de skins de carte
 
 La cadence commerciale doit rester compatible avec :
 
 * la roadmap ;
 * le budget artistique ;
 * les capacités réelles de production ;
-* le temps nécessaire à la création de chaque collection.
+* le temps nécessaire à la création de chaque série de skins de carte.
 
 Aucune cadence fixe ne doit être annoncée avant l’évaluation de ces éléments.
 
-L’ajout de nouvelles collections ne doit pas dégrader la qualité des illustrations ni créer une charge de production que l’équipe ne pourrait pas soutenir.
+L’ajout de nouvelles séries de skins de carte ne doit pas dégrader la qualité des illustrations ni créer une charge de production que l’équipe ne pourrait pas soutenir.
 
 **Éléments à préciser ultérieurement :**
 
-* La cadence de production et de publication des collections après établissement de la roadmap et évaluation des capacités artistiques.
+* La cadence de production et de publication des séries de skins de carte après établissement de la roadmap et évaluation des capacités artistiques.
 
 ## 12. Évaluation de la monétisation
 

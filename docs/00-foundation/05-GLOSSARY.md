@@ -272,6 +272,14 @@ Les dégâts physiques et spéciaux peuvent produire des coups critiques par dé
 
 Un équipement est une catégorie d’objet. Tous les objets ne sont pas des équipements.
 
+### Inventaire
+
+**Domaine :** Objets, ressources, interface
+
+**Définition :** Espace consacré aux objets, aux ressources et aux autres éléments stockables du joueur.
+
+L’inventaire reste distinct du système de collection. Il ne constitue pas l’espace de consultation des créatures et des skins de carte collectionnés.
+
 ### Équipement
 
 **Domaine :** Progression, personnalisation
@@ -620,7 +628,73 @@ Une monnaie peut être considérée techniquement comme une catégorie de ressou
 
 **Définition :** Élément consommable utilisé par un système de progression ou de jeu.
 
-## 9. Illustrations, cosmétiques et commerce
+## 9. Collection, illustrations, cosmétiques et commerce
+
+### Système de collection
+
+**Domaine :** Collection, interface
+
+**Définition :** Fonctionnalité globale permettant de consulter, d’organiser et de valoriser les éléments collectionnables.
+
+Le système de collection comprend au minimum une partie consacrée aux créatures et une partie consacrée aux skins de carte. Ces deux catégories appartiennent au même espace général, mais ne sont pas mélangées dans une liste unique.
+
+Le système de collection reste distinct de l’inventaire.
+
+### Collection du joueur
+
+**Domaine :** Collection
+
+**Définition :** Ensemble des éléments collectionnables effectivement possédés ou débloqués par le joueur.
+
+Ce terme n’inclut pas les objets, les ressources et les autres éléments stockables relevant de l’inventaire.
+
+### Catalogue des créatures
+
+**Domaine :** Collection, créatures
+
+**Définition :** Ensemble des créatures disponibles ou connues dans le jeu, qu’elles soient possédées ou non par le joueur.
+
+Les créatures qui doivent rester secrètes pour des raisons narratives, événementielles ou de découverte peuvent être masquées ou présentées sous forme de silhouette.
+
+### Collection de créatures
+
+**Domaine :** Collection, créatures
+
+**Définition :** Ensemble des créatures possédées par le joueur.
+
+La collection de créatures ne doit pas être confondue avec le catalogue des créatures, qui peut également comprendre des créatures non possédées.
+
+### Collection de skins de carte
+
+**Domaine :** Collection, cosmétiques
+
+**Définition :** Ensemble des skins de carte débloqués par le joueur.
+
+### Série de skins de carte
+
+**Domaine :** Collection, cosmétiques
+
+**Définition :** Regroupement thématique cohérent de plusieurs skins de carte.
+
+Une série de skins de carte n’est ni un produit ni une offre commerciale, même si certains de ses skins peuvent être obtenus au moyen d’un produit ou d’une offre.
+
+**Terme à éviter :** « collection d’illustrations » pour désigner une série de skins de carte ou une offre commerciale.
+
+### Progression de collection
+
+**Domaine :** Collection
+
+**Définition :** Mesure de l’avancement du joueur dans l’acquisition des éléments d’une collection ou d’un catalogue.
+
+La progression de la collection de créatures et celle de la collection de skins de carte sont présentées séparément. Pour les skins de carte, elle est principalement suivie par série.
+
+### Complétion d’une collection
+
+**Domaine :** Collection
+
+**Définition :** État atteint lorsque les conditions de progression définies pour une collection, un catalogue ou une série sont remplies.
+
+La complétion d’une collection cosmétique ne confère aucun avantage automatique de puissance.
 
 ### Illustration
 
@@ -644,33 +718,21 @@ Un skin de carte ne modifie ni la créature, ni ses caractéristiques, ni ses ca
 
 * un éventuel nom destiné au joueur, davantage lié à l’univers, pourra être défini lors de la conception de l’interface.
 
+**Question ouverte :**
+
+* La compatibilité d’un skin de carte avec une créature indépendamment de sa forme, avec une forme précise ou avec plusieurs formes compatibles.
+
 ### Visuel
 
 **Domaine :** Description générale
 
 **Définition :** Terme générique désignant un élément visuel sans lui attribuer de statut artistique, cosmétique ou fonctionnel précis.
 
-### Collection d’illustrations
-
-**Domaine :** Cosmétique, monétisation
-
-**Définition :** Ensemble cohérent d’illustrations ou de skins de carte partageant un thème. Dans le modèle économique initial, ce terme désigne également le contenu payant connu avant l’achat.
-
-Une collection peut être vendue sous la forme d’un produit.
-
-### Collection de créatures
-
-**Domaine :** Collection
-
-**Définition :** Ensemble des créatures possédées par le joueur ou disponibles dans le jeu, selon le contexte.
-
-Ce terme reste distinct de « collection d’illustrations ».
-
 ### Pack d’illustrations
 
 **Domaine :** Cosmétique, acquisition
 
-**Définition :** Conteneur cosmétique gratuit et aléatoire obtenu en jouant, dont les éléments précis sont révélés lors de son ouverture.
+**Définition :** Conteneur cosmétique gratuit et aléatoire obtenu en jouant, permettant de recevoir des skins de carte dont l’identité est révélée lors de son ouverture.
 
 **Variantes autorisées :** « pack » lorsque le contexte cosmétique est explicite.
 
@@ -691,7 +753,15 @@ Ce terme reste distinct de « collection d’illustrations ».
 
 **Définition :** Présentation commerciale, temporaire ou permanente, d’un ou de plusieurs produits.
 
-Une offre peut contenir un produit comprenant une collection d’illustrations entière ou une partie de celle-ci.
+Une offre peut contenir un produit donnant accès à un ou plusieurs skins de carte appartenant à une même série.
+
+### Offre commerciale
+
+**Domaine :** Monétisation
+
+**Définition :** Terme générique désignant un produit ou une offre permettant d’obtenir du contenu.
+
+Les termes « produit » et « offre » restent prioritaires lorsque leur distinction est nécessaire. Une offre commerciale ne doit pas être appelée « collection ».
 
 ### Doublon de créature
 

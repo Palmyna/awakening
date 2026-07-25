@@ -98,6 +98,12 @@ Cette approche permet de créer un univers extrêmement varié tout en développ
 
 Le joueur collectionne des créatures représentées sous forme de cartes.
 
+Le système de collection doit permettre de consulter et de valoriser les éléments collectionnables du joueur. Il réunit un espace consacré aux créatures et un espace consacré aux skins de carte, sans mélanger ces deux catégories dans une liste unique.
+
+Le catalogue des créatures présente les créatures disponibles ou connues dans le jeu, qu’elles soient possédées ou non, sous réserve des contenus qui doivent rester secrets pour des raisons narratives, événementielles ou de découverte.
+
+La collection de skins de carte permet de consulter les skins débloqués et non débloqués, de les parcourir par série, de visualiser la progression de collection et d’appliquer les skins débloqués aux cartes des créatures concernées.
+
 Chaque créature possède notamment :
 
 * une rareté ;
@@ -260,7 +266,7 @@ Le style graphique principal repose sur des illustrations 2D de qualité représ
 * style semi-réaliste ;
 * style 3D illustrée.
 
-Ces différents styles seront proposés sous forme de collections de skins de carte.
+Ces différents styles pourront être organisés en séries de skins de carte.
 
 Les joueurs pourront appliquer librement les skins de carte qu’ils auront débloqués aux cartes de leurs créatures favorites.
 
@@ -291,9 +297,11 @@ Les principes fondamentaux sont les suivants :
 
 La monétisation repose principalement sur des éléments cosmétiques.
 
-Les joueurs pourront notamment obtenir des packs d’illustrations en jouant ou acheter des collections d’illustrations à contenu connu.
+Les joueurs pourront notamment obtenir des packs d’illustrations en jouant ou acheter des offres commerciales de skins de carte à contenu connu.
 
-Ces collections pourront être proposées de manière permanente ou temporaire à l’occasion d’événements.
+Ces offres pourront être proposées de manière permanente ou temporaire à l’occasion d’événements.
+
+La complétion d’une série de skins de carte ne fournira aucun avantage automatique de puissance.
 
 Les doublons de skins de carte seront convertis en une monnaie permanente, provisoirement nommée « monnaie de conversion des doublons », permettant d’obtenir des récompenses ayant un effet sur la progression, comme des invocations supplémentaires, afin que chaque ouverture conserve de la valeur.
 

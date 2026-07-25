@@ -45,13 +45,14 @@ Avant toute contribution, les agents IA doivent également consulter :
 * ⬜ `08-ITEMS.md`
 * ⬜ `09-GACHA.md`
 * ⬜ `10-PROGRESSION.md`
-* ⬜ `11-MODES.md`
-* ⬜ `12-PVP.md`
-* ⬜ `13-GUILDS.md`
-* ⬜ `14-EVENTS.md`
-* ⬜ `15-QUESTS.md`
-* ⬜ `16-ACHIEVEMENTS.md`
-* ⬜ `17-UI_FLOW.md`
+* ⬜ `11-COLLECTION.md`
+* ⬜ `12-MODES.md`
+* ⬜ `13-PVP.md`
+* ⬜ `14-GUILDS.md`
+* ⬜ `15-EVENTS.md`
+* ⬜ `16-QUESTS.md`
+* ⬜ `17-ACHIEVEMENTS.md`
+* ⬜ `18-UI_FLOW.md`
 
 ### 02-world
 

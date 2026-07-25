@@ -92,6 +92,8 @@ Le plaisir doit venir de la croissance et de l’optimisation des créatures, pa
 
 Les illustrations et skins de carte participent également à cet attachement en permettant au joueur d’appliquer les skins de carte débloqués aux cartes des créatures qu’il préfère.
 
+Le système de collection doit prolonger cet attachement en donnant au joueur un espace clair pour consulter ses créatures, parcourir les différentes apparences disponibles et mesurer sa progression de collection. Il doit valoriser les acquisitions déjà réalisées sans réduire l’expérience à la recherche permanente de nouveaux éléments.
+
 Le projet doit éviter :
 
 * de rendre rapidement inutiles les créatures déjà développées ;
@@ -126,15 +128,33 @@ Les interactions, la présentation des informations et le rythme général doive
 
 * les règles détaillées d’interface, d’ergonomie, d’accompagnement du joueur et de parcours utilisateur devront être définies dans les documents spécialisés.
 
+### 5.3. Faire de la collection une expérience lisible et valorisante
+
+Le système de collection doit réunir dans un même espace général deux parties clairement séparées : la collection de créatures et la collection de skins de carte. Ces deux catégories ne doivent pas être mélangées dans une liste unique.
+
+Le joueur doit pouvoir consulter ce qu’il possède, identifier ce qui lui manque, parcourir les séries de skins de carte et visualiser sa progression. Le système doit également permettre de rechercher et de filtrer les éléments, de consulter les skins disponibles pour une créature et d’appliquer un skin de carte débloqué.
+
+Le catalogue des créatures doit présenter les créatures disponibles ou connues dans le jeu, même lorsqu’elles ne sont pas encore possédées. Les contenus qui doivent rester secrets pour des raisons narratives, événementielles ou de découverte peuvent cependant être masqués ou présentés sous forme de silhouette.
+
+Les skins de carte non débloqués doivent rester consultables avec leur série, leur statut de disponibilité et leur mode général d’obtention lorsque celui-ci peut être communiqué. Certains skins secrets, surprises ou non encore officiellement révélés peuvent rester masqués.
+
+Le système de collection doit rester distinct de l’inventaire : la collection sert à consulter, organiser et valoriser les éléments collectionnables, tandis que l’inventaire est consacré aux objets, aux ressources et aux autres éléments stockables.
+
+**Éléments à préciser ultérieurement :**
+
+* la navigation précise, les filtres et l’ergonomie de l’espace de collection ;
+* les règles détaillées de découverte et de présentation des créatures ou skins secrets ;
+* les règles exactes de calcul de la progression de collection et le traitement détaillé des contenus historiques.
+
 ## 6. Philosophie de monétisation
 
 ### 6.1. Financer le projet sans faire de l’achat la principale source de puissance
 
 Project Awakening adopte un modèle Free-to-Play. Les créatures doivent s’obtenir principalement en jouant, et les invocations doivent être accessibles grâce aux quêtes quotidiennes, aux événements, aux récompenses et aux différentes activités.
 
-Les achats ne doivent jamais devenir la principale source de puissance. La monétisation repose avant tout sur des éléments cosmétiques, notamment des collections d’illustrations payantes, des packs d’illustrations obtenus en jouant et des skins de carte.
+Les achats ne doivent jamais devenir la principale source de puissance. La monétisation repose avant tout sur des skins de carte, proposés dans des offres commerciales à contenu connu ou obtenus en jouant grâce à des packs d’illustrations et à des récompenses cosmétiques.
 
-Au lancement, les achats payants portent sur des collections d’illustrations dont le contenu et le prix réel sont connus avant l’achat. Les ouvertures cosmétiques aléatoires sont réservées aux packs d’illustrations et aux récompenses obtenus en jouant. Les packs aléatoires payants et la monnaie premium ne font pas partie du modèle initial.
+Au lancement, les achats payants portent sur des offres commerciales de skins de carte dont le contenu et le prix réel sont connus avant l’achat. Les ouvertures cosmétiques aléatoires sont réservées aux packs d’illustrations et aux récompenses obtenus en jouant. Les packs aléatoires payants et la monnaie premium ne font pas partie du modèle initial.
 
 Les invocations et les ressources de progression ne sont pas vendues directement au lancement.
 
@@ -145,6 +165,8 @@ Les doublons de skins de carte sont convertis à valeur fixe en une monnaie perm
 Une décision économique doit être évaluée non seulement selon sa capacité à financer le développement, mais aussi selon son impact sur la progression et l’environnement compétitif.
 
 Tout avantage indirect issu d’un achat doit rester secondaire par rapport aux gains normaux obtenus en jouant, être également accessible par le jeu et être plafonné lorsqu’il influence la progression.
+
+La présentation des séries de skins de carte doit permettre au joueur de comprendre et d’apprécier ce qu’il a obtenu sans transformer la complétion cosmétique en obligation de puissance. La complétion d’une série ne doit fournir aucun avantage automatique de puissance.
 
 Le projet doit éviter :
 
@@ -231,6 +253,8 @@ Une décision contredit la philosophie de Project Awakening si elle conduit nota
 * supprimer la profondeur au nom de l’accessibilité, ou rendre le jeu inutilement complexe ;
 * concevoir une expérience qui ne serait pas adaptée au mobile et au tactile ;
 * faire du paiement la principale voie d’accès à la puissance ;
+* confondre la collection cosmétique avec une progression de puissance ;
+* réduire le système de collection à un inventaire technique ou à une simple liste d’acquisitions ;
 * reproduire directement les œuvres dont le projet s’inspire au lieu de construire une identité originale ;
 * adopter un périmètre ou des coûts incompatibles avec la taille de l’équipe et le budget ;
 * laisser un outil d’intelligence artificielle transformer une proposition en décision sans validation humaine.
@@ -247,6 +271,9 @@ Les points suivants ne sont pas suffisamment définis dans la documentation actu
 * les règles détaillées et l’équilibrage de la progression, des builds, des compétences, des objets et des effets de statut ;
 * la liste des effets de statut et leurs règles détaillées d’application, de durée, de cumul, de renouvellement, de retrait, de résistance et d’immunité ;
 * les modalités précises permettant de concilier accessibilité et profondeur dans l’interface et les parcours utilisateur ;
+* les règles exactes de progression et de complétion des collections ;
+* la compatibilité des skins de carte avec une créature, une forme précise ou plusieurs formes compatibles ;
+* la nature des éventuelles reconnaissances non compétitives accordées pour la complétion d’une collection ;
 * les paramètres numériques, le catalogue détaillé de conversion et les seuils d’évaluation de la monétisation ;
 * l’éventuelle évolution du modèle de monétisation après le lancement ;
 * le périmètre initial, les priorités de production, les jalons et le rythme des mises à jour ;
