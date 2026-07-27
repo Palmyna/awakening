@@ -48,7 +48,8 @@ Deux joueurs possédant exactement les mêmes créatures doivent pouvoir créer 
 ### Conséquences sur la conception
 
 * Le joueur doit pouvoir répartir sur chaque créature les points de caractéristiques qu’elle reçoit lors de ses montées de niveau.
-* Les compétences apprises, l’équipement, l’évolution, les interactions avec les effets de statut et le rôle dans l’équipe doivent contribuer à différencier les créatures.
+* Chaque créature doit posséder un ensemble prédéfini de quatre compétences qui définit son identité fonctionnelle, son rôle et ses synergies potentielles.
+* Le joueur ne doit ni choisir ni remplacer les compétences d’une créature. Il personnalise son fonctionnement à travers ses caractéristiques, son équipement, sa progression, son évolution, son niveau d’étoiles et son intégration dans une équipe.
 * Les synergies entre les membres d’une équipe doivent encourager plusieurs compositions.
 * La conception des créatures doit favoriser une diversité de builds et d’usages.
 * La rareté d’une créature ne doit pas être son unique source de valeur.
@@ -78,6 +79,8 @@ Les combats sont principalement automatisés afin que la profondeur du jeu repos
 * Les rôles, compétences, éléments, effets de statut, objets et synergies doivent influencer la pertinence d’une composition.
 * Les effets de statut doivent soutenir des styles de jeu variés, renforcer certaines identités élémentaires et enrichir les interactions entre les créatures.
 * Les combats doivent rester rapides et dynamiques, avec une durée moyenne visée de 30 à 60 secondes.
+* Les attaques et compétences ordinaires doivent être utilisées automatiquement.
+* Le joueur doit pouvoir déclencher manuellement les compétences ultimes ou activer leur déclenchement automatique.
 * L’automatisation doit rendre visibles les conséquences des choix de préparation.
 * Tout contrôle laissé au joueur pendant un combat doit rester cohérent avec la priorité donnée à la stratégie d’équipe.
 
@@ -88,10 +91,6 @@ Les combats sont principalement automatisés afin que la profondeur du jeu repos
 * Rendre la composition d’équipe secondaire face à la seule puissance brute.
 * Concevoir une automatisation qui efface l’impact des choix effectués par le joueur.
 * Réduire les effets de statut à des effets accessoires sans influence réelle sur la préparation ou le déroulement des combats.
-
-**Question ouverte :**
-
-* Le choix définitif entre un combat entièrement automatique et un combat semi-automatique permettant au joueur de déclencher les compétences ultimes.
 
 **Éléments à préciser ultérieurement :**
 
@@ -133,6 +132,8 @@ Le modèle économique doit financer le développement sans faire des achats la 
 
 Les joueurs doivent obtenir principalement les créatures et les invocations grâce au jeu. La boutique est exclusivement cosmétique, et la monétisation repose avant tout sur les skins de carte utilisant des illustrations alternatives, afin de préserver un environnement compétitif équitable.
 
+Une exception de confort strictement limitée peut permettre de redistribuer les points de caractéristiques déjà gagnés par une créature sans recommencer sa progression en niveaux. Elle ne doit accorder aucun point supplémentaire, aucune expérience, aucune puissance inaccessible gratuitement ni aucune augmentation du potentiel maximal.
+
 ### Conséquences sur la conception
 
 * Les créatures doivent s’obtenir principalement en jouant.
@@ -148,6 +149,10 @@ Les joueurs doivent obtenir principalement les créatures et les invocations gr�
 * La monnaie issue des doublons doit donner accès uniquement à des récompenses cosmétiques.
 * La complétion d’une série de skins de carte ne doit fournir aucun avantage automatique de puissance.
 * L’obtention des créatures doit rester indépendante de la boutique cosmétique et des paquets de skins de carte.
+* Le joueur doit pouvoir recommencer gratuitement la progression en niveaux d’une créature afin de modifier sa répartition de caractéristiques.
+* Un objet rare obtenu en jouant doit permettre de redistribuer les points déjà gagnés sans ramener la créature au niveau 1.
+* Un service payant distinct de la boutique cosmétique peut fournir le même résultat immédiat, à condition que son utilisation soit limitée et qu’il ne fournisse aucun avantage de potentiel par rapport aux méthodes gratuites.
+* La vente d’expérience, de points de caractéristiques, d’énergie, d’équipements ou de ressources de progression doit rester interdite.
 * Les décisions économiques doivent préserver l’équité de l’environnement compétitif.
 
 ### Ce que le projet doit éviter
@@ -155,6 +160,7 @@ Les joueurs doivent obtenir principalement les créatures et les invocations gr�
 * Créer un avantage compétitif principalement accessible par le paiement.
 * Rendre les achats indispensables à une progression normale.
 * Limiter l’accès aux créatures principalement à des transactions payantes.
+* Permettre à un service payant d’accorder des points de caractéristiques supplémentaires, d’augmenter le potentiel maximal ou de fournir un résultat impossible à obtenir gratuitement.
 * Concevoir des ouvertures cosmétiques dont les doublons seraient dépourvus de valeur.
 * Réserver certains skins d’une série à la version payante de son paquet.
 * Permettre à une dépense dans la boutique cosmétique de produire directement ou indirectement une créature, une invocation ou de la puissance.
@@ -167,6 +173,8 @@ Les joueurs doivent obtenir principalement les créatures et les invocations gr�
 
 * Les prix, les probabilités exactes, le nombre de skins par paquet, les quantités, les rythmes d’obtention, les valeurs de conversion propres à chaque rareté et les autres paramètres numériques nécessaires à l’équilibrage économique.
 * Le contenu cosmétique détaillé du catalogue de conversion de la monnaie de conversion des doublons.
+* Les limites exactes du service payant de réinitialisation, notamment leur portée par compte ou par créature.
+* La méthode d’obtention et le rythme de distribution de l’objet rare permettant une réinitialisation sans retour au niveau 1.
 
 ## 7. Une identité originale portée par la collection
 

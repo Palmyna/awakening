@@ -125,6 +125,10 @@ Chaque créature possède notamment :
   * l’Agilité ;
 * une progression individuelle.
 
+L’ensemble de quatre compétences d’une créature est prédéfini. Lorsqu’une créature est obtenue, le joueur ne choisit pas ses compétences, ne les remplace pas et ne construit pas son build en sélectionnant des compétences dans une liste. Ces compétences définissent son identité fonctionnelle, son rôle et ses synergies potentielles.
+
+La question de savoir si une nouvelle forme obtenue lors d’une évolution conserve les mêmes compétences ou possède un nouvel ensemble prédéfini reste à définir. Dans tous les cas, le joueur ne sélectionne pas librement les compétences de la forme obtenue.
+
 Le joueur constitue une équipe de six créatures afin d’affronter les différents contenus du jeu.
 
 Les combats sont principalement automatisés afin de mettre l’accent sur la préparation des équipes et la stratégie plutôt que sur les réflexes.
@@ -138,10 +142,13 @@ Le plaisir ne provient pas uniquement de l’obtention de nouvelles créatures, 
 Chaque joueur doit pouvoir développer des créatures uniques grâce à :
 
 * la répartition des caractéristiques ;
-* les compétences apprises ;
 * les équipements ;
+* la progression et l’évolution ;
 * l’amélioration du niveau d’étoiles ;
+* le choix des créatures réunies dans une équipe ;
 * les synergies entre les membres de l’équipe.
+
+Les compétences fixes ne constituent pas un choix de personnalisation. Elles fournissent le profil fonctionnel autour duquel le joueur construit le développement et les usages de la créature.
 
 Deux joueurs possédant exactement les mêmes créatures doivent pouvoir construire des équipes différentes.
 
@@ -159,6 +166,10 @@ Les créatures gagnent de l’expérience en participant aux combats.
 
 À chaque montée de niveau, la créature concernée reçoit des points de caractéristiques que le joueur peut répartir librement sur celle-ci selon le build souhaité.
 
+Cette répartition constitue un choix important et n’est pas librement réversible. Le joueur peut recommencer gratuitement la progression en niveaux de la créature depuis le niveau 1 afin de modifier progressivement sa répartition. Un objet rare obtenu en jouant ou un service payant strictement limité peuvent également permettre de redistribuer les points déjà gagnés sans revenir au niveau 1.
+
+Le service payant n’accorde aucun point supplémentaire, aucune expérience et aucune augmentation du potentiel maximal. Une méthode gratuite obtenue par le gameplay doit permettre d’atteindre le même résultat. Les règles de conservation de l’évolution, du niveau d’étoiles et des autres éléments ainsi que les limites exactes du service restent à définir.
+
 Les doublons de créature servent à améliorer le niveau d’étoiles de la créature concernée et à augmenter progressivement son potentiel, sans nécessiter de recommencer son évolution.
 
 ## 10. Système de combat
@@ -167,10 +178,9 @@ Les combats sont conçus pour être rapides et dynamiques.
 
 La durée moyenne d’un combat doit être comprise entre **30 et 60 secondes**.
 
-Deux modes de contrôle sont envisagés :
+Les attaques et les compétences ordinaires sont utilisées automatiquement. Le joueur peut choisir le moment où déclencher les compétences ultimes ou activer une option qui les gère également de manière automatique.
 
-* un combat entièrement automatique ;
-* un combat semi-automatique permettant au joueur de choisir le moment où déclencher les compétences ultimes.
+Le joueur peut ainsi intervenir de manière limitée ou laisser le combat se dérouler entièrement automatiquement. Cette intervention ne doit pas remplacer la préparation de l’équipe comme principal facteur de réussite.
 
 Par défaut, les dégâts sont physiques ou spéciaux. Chaque compétence offensive doit déclarer la catégorie de dégâts et la caractéristique offensive qu’elle utilise : Attaque, Attaque spéciale ou, exceptionnellement, aucune lorsqu’elle suit une formule particulière. Toute exception aux règles ordinaires de dégâts doit être explicite.
 
@@ -238,10 +248,14 @@ La personnalisation constitue l’élément central du projet.
 Chaque créature peut être personnalisée grâce :
 
 * à la répartition de ses caractéristiques ;
-* aux compétences qu’elle apprend ;
 * à son équipement ;
+* à sa progression ;
+* à l’amélioration de son niveau d’étoiles ;
 * à son évolution ;
-* à son rôle dans l’équipe.
+* à son rôle dans l’équipe ;
+* au choix de ses partenaires et aux synergies de la composition.
+
+Chaque créature possède un ensemble fixe de quatre compétences. Ces compétences ne sont ni choisies ni remplacées par le joueur : elles définissent l’identité et les possibilités autour desquelles ses choix de personnalisation s’organisent.
 
 L’objectif est de favoriser la créativité des joueurs et la diversité des builds.
 
@@ -302,6 +316,10 @@ Les principes fondamentaux sont les suivants :
 * aucun achat effectué dans la boutique cosmétique ne doit permettre directement ou indirectement d’obtenir une créature, une invocation ou de la puissance.
 
 La monétisation repose principalement sur une boutique exclusivement consacrée aux contenus cosmétiques.
+
+Une exception limitée de service de confort permet de redistribuer les points de caractéristiques déjà gagnés par une créature sans la ramener au niveau 1. Ce service reste distinct de la boutique cosmétique, ne fournit aucun point supplémentaire et ne permet pas de dépasser le potentiel accessible gratuitement. Son utilisation payante doit être limitée et un objet rare obtenu en jouant doit permettre d’obtenir le même résultat.
+
+Cette exception n’autorise pas la vente de créatures, d’invocations, d’expérience, de points de caractéristiques, d’équipements, d’énergie, de ressources de progression ni d’une augmentation du potentiel maximal d’une créature.
 
 Les skins appartenant aux séries distribuées par paquets s’obtiennent principalement en ouvrant des **paquets de skins de carte**. Ces paquets peuvent être gagnés en jouant ou achetés directement contre de l’argent réel dans la boutique cosmétique.
 

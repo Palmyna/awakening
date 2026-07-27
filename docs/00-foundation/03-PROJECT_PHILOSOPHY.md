@@ -36,6 +36,8 @@ Le joueur doit gagner parce qu’il comprend ses créatures et construit une éq
 
 Les combats doivent néanmoins rester rapides et dynamiques. L’automatisation ne doit pas rendre les choix du joueur sans conséquence : la composition et le développement des créatures doivent rester déterminants dans le résultat.
 
+Les attaques et les compétences ordinaires sont utilisées automatiquement. Le joueur peut déclencher manuellement les compétences ultimes ou activer leur déclenchement automatique. Cette possibilité d’intervention doit renforcer son implication sans déplacer le cœur de la réussite vers le timing ou les réflexes.
+
 Les effets de statut constituent un système central du combat. Ils doivent créer des styles de jeu variés, renforcer la profondeur des compétences et des éléments, et donner de l’importance à l’anticipation, aux résistances, aux immunités et aux possibilités de retrait. Ils contribuent ainsi aux piliers existants de stratégie et de personnalisation sans former un pilier fondamental indépendant.
 
 Les décisions de conception doivent donc :
@@ -53,9 +55,8 @@ Le projet doit éviter :
 * de proposer une automatisation qui efface l’influence des décisions du joueur ;
 * de traiter les effets de statut comme des effets accessoires sans rôle stratégique réel.
 
-**Questions ouvertes :**
+**Question ouverte :**
 
-* le choix définitif entre un combat entièrement automatique et un combat semi-automatique permettant de déclencher les compétences ultimes n’est pas encore arrêté.
 * l’existence éventuelle d’un bonus lorsqu’une compétence partage un élément avec la créature qui l’utilise.
 
 **Éléments à préciser ultérieurement :**
@@ -68,7 +69,9 @@ Le projet doit éviter :
 
 La personnalisation ne doit pas être un système périphérique. Elle constitue le cœur du gameplay et la principale source de diversité entre les joueurs.
 
-Une créature doit pouvoir être développée à travers la répartition de ses caractéristiques, les compétences qu’elle apprend, son équipement, son évolution, ses interactions avec les effets de statut et son rôle dans l’équipe. Les synergies entre les membres d’une composition doivent également participer à cette différenciation.
+Chaque créature possède un ensemble prédéfini de quatre compétences déjà déterminé lors de son obtention. Le joueur ne choisit pas ces compétences, ne les remplace pas et ne construit pas son build en les sélectionnant dans une liste. Elles définissent l’identité fonctionnelle, le rôle et les synergies potentielles de la créature.
+
+Le joueur développe la créature autour de cet ensemble fixe à travers la répartition de ses caractéristiques, son équipement, sa progression, son évolution, son niveau d’étoiles, ses interactions avec les effets de statut et son rôle dans l’équipe. Les choix de composition et les synergies entre les membres d’une équipe participent également à cette différenciation.
 
 Deux joueurs possédant les mêmes créatures doivent pouvoir aboutir à des builds et à des équipes différents. Les choix du joueur doivent donc conserver une influence réelle sur la manière dont ses créatures sont utilisées.
 
@@ -93,6 +96,14 @@ L’invocation constitue la voie principale d’obtention des créatures. Certai
 
 La progression individuelle, l’expérience gagnée en combat, les points de caractéristiques reçus par chaque créature lors de ses montées de niveau, leur répartition par le joueur et l’amélioration des étoiles doivent donner de la valeur au temps consacré à chaque créature.
 
+La répartition des points de caractéristiques constitue un choix important et n’est pas librement réversible. Trois voies permettent néanmoins de modifier une répartition :
+
+* une réinitialisation complète gratuite ramène la créature au niveau 1 et lui impose de regagner par le jeu les points liés à ses niveaux ;
+* un objet rare obtenu en jouant permet de redistribuer les points déjà gagnés sans revenir au niveau 1 ;
+* un service payant strictement limité peut fournir le même résultat immédiat que cet objet, sans accorder de point, d’expérience, de puissance ou de potentiel supplémentaire.
+
+Le service payant ne doit jamais fournir un résultat impossible à obtenir gratuitement. Les règles de conservation de l’évolution, du niveau d’étoiles et des autres éléments, la méthode d’obtention de l’objet ainsi que les limites exactes du service restent à définir dans les documents spécialisés.
+
 Les doublons de créature servent à augmenter progressivement le potentiel de la créature concernée sans obliger le joueur à recommencer son évolution. Ils doivent soutenir la continuité de la progression, non annuler l’investissement déjà réalisé.
 
 ### 4.2. Favoriser l’attachement aux créatures
@@ -108,7 +119,7 @@ Le projet doit éviter :
 * de rendre rapidement inutiles les créatures déjà développées ;
 * de pousser le joueur à abandonner constamment ses créatures au profit des plus rares ;
 * de contourner le parcours d’évolution par l’obtention directe d’une forme finale ;
-* d’effacer ou de faire recommencer la progression lors de l’amélioration d’une créature.
+* d’effacer ou de faire recommencer la progression lors de l’amélioration d’une créature, en dehors d’une réinitialisation complète volontaire utilisée pour modifier sa répartition de caractéristiques.
 
 **Éléments à préciser ultérieurement :**
 
@@ -171,15 +182,13 @@ Le parcours des créatures part principalement de récompenses et de ressources 
 
 Ces parcours doivent employer des terminologies, des ressources, des interfaces, des animations et des règles économiques distinctes. Une ouverture cosmétique ne doit jamais donner de créature, et une invocation de créature ne doit pas être présentée comme l’ouverture d’un paquet cosmétique.
 
+Une ressource générale principale d’invocation est utilisée dans le modèle initial. Elle doit être obtenue principalement grâce au mode Histoire, aux quêtes journalières, aux activités, aux récompenses de progression et aux événements. Elle reste entièrement séparée de l’économie cosmétique.
+
 **Éléments à préciser ultérieurement :**
 
 * la présentation artistique de l’invocation, qui pourra éventuellement utiliser un œuf, une éclosion, un rituel, un portail ou une autre représentation cohérente avec l’univers ;
 * les écrans, animations et parcours détaillés des deux systèmes ;
-* les règles détaillées d’obtention d’une éventuelle ressource générale d’invocation, si celle-ci est définitivement validée.
-
-**Question ouverte :**
-
-* la validation définitive d’une ressource générale d’invocation pour le modèle initial.
+* le nom, la représentation, les quantités et le rythme d’obtention de la ressource générale d’invocation.
 
 ## 6. Philosophie de monétisation
 
@@ -188,6 +197,10 @@ Ces parcours doivent employer des terminologies, des ressources, des interfaces,
 Project Awakening adopte un modèle Free-to-Play. Les créatures doivent s’obtenir principalement en jouant, et les invocations doivent être accessibles grâce aux quêtes quotidiennes, aux événements, aux récompenses et aux différentes activités.
 
 La boutique est exclusivement consacrée aux contenus cosmétiques. Elle ne vend aucune créature, aucune invocation, aucun avantage de combat et aucune progression de puissance.
+
+Une exception de confort strictement encadrée, distincte de la boutique cosmétique, permet de payer pour redistribuer les points de caractéristiques déjà gagnés par une créature sans la ramener au niveau 1. Elle ne donne aucun point supplémentaire, aucune expérience, aucune ressource et aucune augmentation du potentiel maximal. Son utilisation payante doit être limitée et un objet rare obtenu en jouant doit permettre d’obtenir le même résultat.
+
+La réinitialisation complète depuis le niveau 1 reste accessible gratuitement sans objet. Cette exception n’autorise pas la vente de créatures, d’invocations, d’expérience, de points de caractéristiques, d’équipements, d’énergie ou de ressources de progression.
 
 Les skins appartenant aux séries distribuées par paquets sont principalement obtenus grâce à des paquets de skins de carte. Ces paquets peuvent être gagnés en jouant ou achetés directement contre de l’argent réel dans la boutique cosmétique.
 
@@ -208,6 +221,8 @@ Les doublons de skins de carte sont convertis en une monnaie permanente provisoi
 Une décision économique doit être évaluée non seulement selon sa capacité à financer le développement, mais aussi selon son impact sur la progression, la transparence et l’environnement compétitif.
 
 Aucun achat effectué dans la boutique cosmétique ne doit produire directement ou indirectement un avantage de progression ou de combat.
+
+Le service payant de réinitialisation ne doit pas augmenter la puissance maximale accessible, accorder des points supplémentaires ni remplacer l’existence de méthodes gratuites. Il permet uniquement d’éviter de recommencer la progression en niveaux lors d’une redistribution.
 
 La présentation des séries de skins de carte doit permettre au joueur de comprendre et d’apprécier ce qu’il a obtenu sans transformer la complétion cosmétique en obligation de puissance. La complétion d’une série ne doit fournir aucun avantage automatique de puissance.
 
@@ -230,7 +245,7 @@ Le projet doit éviter :
 
 ### 6.3. Évolutions non validées
 
-Les publicités, les passes, les abonnements, la monnaie premium, les services de confort et l’achat direct d’invocations ne font pas partie du modèle initial.
+À l’exception du service limité de réinitialisation des points de caractéristiques, les autres services de confort, les publicités, les passes, les abonnements, la monnaie premium et l’achat direct d’invocations ne font pas partie du modèle initial.
 
 Leur éventuelle introduction après le lancement nécessitera une nouvelle décision explicite et une vérification de leur compatibilité avec les principes d’équité, de transparence et de respect des joueurs.
 
@@ -241,7 +256,7 @@ Une éventuelle décision future autorisant l’achat direct d’invocations dev
 * l’introduction éventuelle de publicités après le lancement ;
 * la création éventuelle d’un passe ou d’un abonnement après la définition des saisons et des capacités de production ;
 * l’introduction éventuelle d’une monnaie premium répondant à un besoin réel sans masquer le coût des produits ;
-* l’autorisation future de services de confort ou d’achats directs d’invocations après définition et équilibrage des systèmes concernés.
+* l’autorisation future d’autres services de confort ou d’achats directs d’invocations après définition et équilibrage des systèmes concernés.
 
 ## 7. Philosophie de production
 

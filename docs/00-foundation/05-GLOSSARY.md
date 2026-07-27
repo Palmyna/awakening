@@ -172,6 +172,8 @@ Les variantes narratives n’introduisent pas un niveau de regroupement supplém
 
 Les **points de caractéristiques** sont attribués à la créature concernée lors de ses montées de niveau. Le joueur les répartit librement sur cette même créature afin d’augmenter ses caractéristiques selon le build souhaité.
 
+Cette répartition constitue un choix important et n’est pas librement réversible. Les méthodes validées permettant de la modifier sont définies par les entrées consacrées aux réinitialisations.
+
 **Terme à éviter :** « statistique » comme synonyme direct d’une caractéristique principale.
 
 Chaque créature possède exactement six caractéristiques principales : les points de vie, l’Attaque, l’Attaque spéciale, la Défense, la Défense spéciale et l’Agilité.
@@ -264,6 +266,20 @@ Les dégâts physiques et spéciaux peuvent produire des coups critiques par dé
 
 **Termes à éviter :** « évolution d’étoiles » et « évolution des étoiles ».
 
+### Ensemble de compétences
+
+**Domaine :** Créatures, compétences
+
+**Définition :** Groupe prédéfini de quatre compétences appartenant à une créature : une compétence active, deux compétences passives et une compétence ultime.
+
+Lorsqu’une créature est obtenue, son ensemble de compétences est déjà déterminé. Le joueur ne choisit pas ces compétences, ne les remplace pas et ne construit pas son build en sélectionnant des compétences dans une liste. Elles définissent l’identité fonctionnelle, le rôle et les synergies potentielles de la créature.
+
+**Variante autorisée :** « compétences fixes » lorsqu’il est utile d’insister sur l’absence de sélection ou de remplacement par le joueur.
+
+**Question ouverte :**
+
+* Une nouvelle forme obtenue lors d’une évolution conserve-t-elle les mêmes compétences ou possède-t-elle un nouvel ensemble prédéfini ?
+
 ### Objet
 
 **Domaine :** Systèmes de jeu
@@ -337,9 +353,50 @@ La qualité n’est pas automatiquement équivalente à la rareté.
 
 **Domaine :** Game design
 
-**Définition :** Ensemble des choix de personnalisation qui déterminent la manière dont une créature fonctionne, notamment ses caractéristiques, ses compétences et son équipement.
+**Définition :** Ensemble des choix de personnalisation effectués autour de l’ensemble de compétences fixe d’une créature afin de déterminer la manière dont elle fonctionne, notamment la répartition de ses caractéristiques, son équipement, sa progression, son évolution et son niveau d’étoiles.
 
 **Variante autorisée :** « build » lorsque le contexte de game design est explicite et sans ambiguïté.
+
+### Réinitialisation complète de la progression en niveaux
+
+**Domaine :** Progression des créatures
+
+**Définition :** Méthode gratuite permettant de modifier la répartition future des points de caractéristiques en ramenant une créature au niveau 1, sans objet ni paiement.
+
+Les points obtenus grâce aux niveaux sont retirés. Le joueur doit refaire progresser la créature afin de les récupérer et de les répartir différemment.
+
+**Éléments à préciser ultérieurement :**
+
+* les règles de conservation de l’évolution, du niveau d’étoiles, de l’équipement et des autres éléments ;
+* les écrans de confirmation et les protections contre une utilisation accidentelle.
+
+### Objet de réinitialisation des points de caractéristiques
+
+**Statut :** Provisoire — nom descriptif interne
+
+**Domaine :** Progression des créatures, objets
+
+**Définition :** Objet rare obtenu en jouant permettant de redistribuer les points de caractéristiques déjà gagnés par une créature sans la ramener au niveau 1.
+
+**Éléments à préciser ultérieurement :**
+
+* le nom officiel de l’objet ;
+* sa méthode d’obtention ;
+* sa rareté et son rythme de distribution.
+
+### Service payant de réinitialisation des points de caractéristiques
+
+**Domaine :** Progression des créatures, monétisation
+
+**Définition :** Service de confort strictement limité permettant de redistribuer les points de caractéristiques déjà gagnés par une créature sans la ramener au niveau 1.
+
+Ce service ne donne aucun point supplémentaire, aucune expérience, aucune ressource, aucun équipement et aucune augmentation du potentiel maximal. Il fournit le même résultat immédiat que l’objet de réinitialisation obtenu en jouant et reste distinct de la boutique cosmétique.
+
+**Éléments à préciser ultérieurement :**
+
+* la limite exacte de son utilisation payante ;
+* la portée de cette limite par compte ou par créature ;
+* son prix et sa présentation.
 
 ### Build d’équipe
 
@@ -553,13 +610,13 @@ L’invocation constitue la voie principale d’obtention. Certaines créatures 
 
 ### Ressource générale d’invocation
 
-**Statut :** Provisoire — modèle initial à confirmer
-
 **Domaine :** Acquisition des créatures, économie
 
-**Définition :** Ressource générale envisagée pour effectuer les invocations de créatures dans le modèle initial.
+**Définition :** Ressource générale principale utilisée pour effectuer les invocations de créatures dans le modèle initial.
 
-Cette ressource doit être obtenue principalement en jouant. L’ajout de ressources événementielles ou de catégories particulières d’invocation n’est pas validé.
+Cette ressource doit être obtenue principalement grâce au mode Histoire, aux quêtes journalières, aux activités, aux récompenses de progression et aux événements. Elle reste entièrement séparée de l’économie cosmétique.
+
+L’ajout de ressources événementielles ou de catégories particulières d’invocation n’est pas validé.
 
 ### Œuf
 
@@ -830,7 +887,7 @@ Tous les emplacements sont déterminés aléatoirement selon les probabilités a
 
 **Domaine :** Monétisation
 
-**Définition :** Élément pouvant être acheté contre de l’argent réel.
+**Définition :** Contenu ou service pouvant être acheté contre de l’argent réel.
 
 ### Offre
 
@@ -884,6 +941,8 @@ Chaque rareté possède une valeur de conversion fixe différente. Cette monnaie
 **Définition :** Interface exclusivement consacrée à la consultation et à l’achat de contenus et de produits cosmétiques.
 
 Dans le modèle initial, la boutique permet notamment d’acheter directement contre de l’argent réel des paquets de skins de carte. Elle ne vend aucune créature, invocation, ressource de progression, équipement, avantage de combat ou autre forme de puissance.
+
+Le service payant de réinitialisation des points de caractéristiques reste distinct de la boutique cosmétique.
 
 **Variante autorisée :** « boutique cosmétique » lorsqu’il est utile de rappeler explicitement son périmètre.
 

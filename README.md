@@ -37,7 +37,7 @@ Ces documents constituent les fondations de référence actuelles du projet. Ils
 
 ### 01-game-design
 
-* ⬜ `01-GAME_DESIGN_DOCUMENT.md`
+* ✅ [`01-GAME_DESIGN_DOCUMENT.md`](./docs/01-game-design/01-GAME_DESIGN_DOCUMENT.md) — Rédigé — référence actuelle, à maintenir à jour
 * ⬜ `02-COMBAT.md`
 * ⬜ `03-CREATURES.md`
 * ⬜ `04-SKILLS.md`

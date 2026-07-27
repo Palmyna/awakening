@@ -35,11 +35,15 @@ Une dépense ne doit pas être nécessaire pour progresser normalement, dévelop
 Au lancement :
 
 * les invocations de créatures ne sont pas vendues directement ;
+* l’expérience et les points de caractéristiques ne sont pas vendus directement ;
+* l’énergie et les équipements ne sont pas vendus directement ;
 * les ressources de progression ne sont pas vendues directement ;
 * aucune créature n’est exclusivement accessible par paiement ;
 * aucun contenu payant indispensable à la progression ou à la compétition n’est proposé.
 
 La boutique est exclusivement cosmétique. Elle ne vend aucune créature, aucune invocation, aucune ressource de progression, aucun équipement, aucun avantage de combat et aucune autre forme de puissance.
+
+Une exception limitée, distincte de la boutique cosmétique, autorise un service payant de réinitialisation des points de caractéristiques. Ce service redistribue uniquement les points déjà gagnés par une créature et ne lui accorde aucune expérience, aucun point supplémentaire ni aucune augmentation de son potentiel maximal.
 
 ### 3.2. Une monétisation principalement cosmétique
 
@@ -66,9 +70,12 @@ Le projet combine des interdictions absolues et des limites mesurables.
 Sont interdits :
 
 * la vente directe de statistiques ou de puissance exclusive ;
+* la vente d’expérience, de points de caractéristiques, d’énergie, d’équipements ou de ressources de progression ;
 * la vente de créatures exclusivement accessibles par paiement ;
 * tout contenu payant indispensable pour rester compétitif ;
 * toute offre permettant de contourner de manière importante la progression normale.
+
+Le service payant de réinitialisation constitue l’unique exception de confort validée dans le modèle initial. Son périmètre étroit ne doit pas être étendu afin d’accélérer la progression normale : il redistribue des points déjà gagnés sans accorder de niveau, d’expérience, de ressource ou de potentiel supplémentaire.
 
 Une dépense effectuée dans la boutique cosmétique ne doit produire directement ou indirectement aucune créature, invocation, ressource de progression, équipement, avantage de combat ou autre forme de puissance.
 
@@ -85,7 +92,8 @@ Le modèle de lancement comprend uniquement :
 * des paquets de skins de carte obtenus en jouant ;
 * un système de conversion des doublons de skins de carte ;
 * une monnaie permanente issue de ces doublons, provisoirement nommée « monnaie de conversion des doublons » ;
-* un catalogue cosmétique permanent et limité utilisant cette monnaie.
+* un catalogue cosmétique permanent et limité utilisant cette monnaie ;
+* un service payant strictement limité permettant de redistribuer les points de caractéristiques déjà gagnés par une créature sans la ramener au niveau 1.
 
 Ce périmètre doit rester compatible avec les capacités humaines, techniques et financières du projet.
 
@@ -100,11 +108,42 @@ Ne sont pas prévus au lancement :
 * les abonnements ;
 * les passes ;
 * l’achat direct d’un skin précis appartenant à une série distribuée par paquets ;
-* tout autre système commercial supplémentaire.
+* tout autre système commercial supplémentaire en dehors du service limité de réinitialisation validé.
 
 Ces exclusions définissent le modèle initial. Elles ne constituent pas une autorisation implicite d’ajouter ces systèmes ultérieurement : toute évolution devra faire l’objet d’une nouvelle décision explicite et d’une vérification de sa cohérence avec la documentation de fondation.
 
 Des produits cosmétiques directs distincts des séries distribuées par paquets pourront être envisagés ultérieurement. Leur introduction constituera une décision séparée et ne doit pas être considérée comme validée par le présent document.
+
+### 4.3. Exception limitée — réinitialisation des points de caractéristiques
+
+La répartition des points de caractéristiques constitue un choix important et n’est pas librement réversible.
+
+Le système prévoit trois méthodes pour modifier une répartition :
+
+1. une réinitialisation complète gratuite, sans objet ni paiement, qui ramène la créature au niveau 1 et oblige le joueur à regagner par le jeu les points associés à ses niveaux ;
+2. un objet rare obtenu en jouant, qui permet de redistribuer les points déjà gagnés sans ramener la créature au niveau 1 ;
+3. un service payant qui fournit le même résultat immédiat que cet objet.
+
+Le service payant doit respecter toutes les limites suivantes :
+
+* il ne donne aucun point de caractéristique supplémentaire ;
+* il ne donne aucune expérience, aucun niveau, aucune ressource et aucun équipement ;
+* il ne permet pas de dépasser le potentiel accessible gratuitement ;
+* il ne modifie pas le niveau d’étoiles et n’augmente pas le potentiel maximal de la créature ;
+* il permet uniquement d’éviter de recommencer la progression en niveaux afin de redistribuer des points déjà gagnés ;
+* son utilisation payante est limitée ;
+* un objet obtenu en jouant permet d’obtenir le même résultat sans paiement ;
+* il reste distinct de la boutique cosmétique et de l’économie des skins de carte.
+
+Le service ne doit jamais devenir nécessaire pour progresser normalement, corriger un build ou rester compétitif. Sa présentation doit indiquer clairement sa fonction, son prix réel, sa limite d’utilisation et l’existence des méthodes gratuites.
+
+**Éléments à préciser ultérieurement :**
+
+* La portée exacte de la limite d’utilisation payante, notamment par compte ou par créature.
+* La fréquence exacte de cette limite.
+* Le prix du service.
+* La méthode d’obtention, la rareté et le rythme de distribution de l’objet permettant une réinitialisation sans retour au niveau 1.
+* Les règles de conservation de l’évolution, du niveau d’étoiles, de l’équipement et des autres éléments lors d’une réinitialisation complète.
 
 ## 5. Acquisition des skins de carte
 
@@ -299,6 +338,7 @@ Les prix seront établis après :
 
 * Les prix exacts des paquets de skins de carte.
 * Les éventuelles variations de prix entre les séries.
+* Le prix du service limité de réinitialisation des points de caractéristiques.
 
 ## 9. Transparence et protection des joueurs
 
@@ -333,6 +373,14 @@ Le modèle prévoit au minimum :
 * une présentation claire de l’absence de protection contre les doublons ou la malchance ;
 * une présentation claire des règles et valeurs de conversion des doublons.
 
+Avant l’achat d’une réinitialisation des points de caractéristiques, le joueur doit également connaître :
+
+* son effet exact ;
+* sa limite d’utilisation ;
+* le fait qu’elle n’accorde aucun point supplémentaire ;
+* l’existence d’une réinitialisation complète gratuite ;
+* l’existence d’un objet obtenu en jouant permettant le même résultat sans retour au niveau 1.
+
 **Question ouverte :**
 
 * L’ajout éventuel de limites volontaires configurables par le joueur, selon les capacités techniques du projet.
@@ -341,13 +389,13 @@ Le modèle prévoit au minimum :
 
 Les évolutions suivantes ne sont pas validées et ne font pas partie du modèle initial.
 
-### 10.1. Invocations et services de confort
+### 10.1. Invocations et autres services de confort
 
 L’achat direct d’invocations pourra uniquement être réévalué après la définition et l’équilibrage complets du système d’invocation.
 
 Une éventuelle décision future en ce sens ne devra jamais intégrer les invocations à la boutique cosmétique ni confondre leur parcours avec celui des paquets de skins de carte.
 
-Des services de confort pourront éventuellement être étudiés, mais ils ne devront :
+En dehors du service limité de réinitialisation déjà validé, d’autres services de confort pourront éventuellement être étudiés, mais ils ne devront :
 
 * conférer aucune puissance exclusive ;
 * supprimer aucune étape essentielle du jeu ;
@@ -356,7 +404,7 @@ Des services de confort pourront éventuellement être étudiés, mais ils ne de
 **Questions ouvertes :**
 
 * L’autorisation future d’acheter directement des invocations.
-* La nature et les limites d’éventuels services de confort.
+* La nature et les limites d’éventuels autres services de confort.
 
 ### 10.2. Publicités
 
@@ -422,7 +470,8 @@ La monétisation doit être évaluée à partir :
 * d’indicateurs d’engagement ;
 * de la satisfaction des joueurs ;
 * de leur perception de l’équité ;
-* de la vérification qu’aucun achat cosmétique n’influence directement ou indirectement la progression.
+* de la vérification qu’aucun achat cosmétique n’influence directement ou indirectement la progression ;
+* de la vérification que le service de réinitialisation n’accorde aucun point, aucune expérience, aucun potentiel supplémentaire et aucun résultat inaccessible gratuitement.
 
 Une offre doit être refusée lorsqu’elle contrevient aux principes d’équité, de transparence ou de respect des joueurs, même si elle est rentable.
 
