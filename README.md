@@ -58,11 +58,11 @@ Ces documents constituent les fondations de référence actuelles du projet. Ils
 
 ### 02-world
 
-* ⬜ `01-LORE.md`
-* ⬜ `02-FACTIONS.md`
-* ⬜ `03-REGIONS.md`
-* ⬜ `04-TIMELINE.md`
-* ⬜ `05-CREATURE_LORE.md`
+* ✅ [`01-LORE.md`](./docs/02-world/01-LORE.md) — Rédigé — référence actuelle, à maintenir à jour
+* ⬜ `02-CREATURE_LORE.md`
+* ⬜ `03-FORCES_AND_FACTIONS.md`
+* ⬜ `04-REGIONS.md`
+* ⬜ `05-TIMELINE.md`
 
 ### 03-art
 

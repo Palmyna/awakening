@@ -71,9 +71,11 @@ Ces inspirations servent uniquement de base de réflexion afin de construire une
 
 ## 6. Univers
 
-Le jeu prend place dans un multivers où les sources d’inspiration sont infinies.
+Le jeu prend place dans un multivers composé de plusieurs mondes et régions.
 
-Chaque famille de créatures est une création originale imaginée à partir d’une référence issue de la culture populaire, par exemple :
+La civilisation humaine d’origine a disparu, mais elle a laissé un immense héritage informationnel et culturel. Une intelligence cosmique consciente, provisoirement appelée **Matrice cosmique**, interprète ces traces et leur donne vie dans une nouvelle réalité.
+
+Chaque famille de créatures est une création originale issue de cette interprétation. Elle peut être inspirée par différents éléments de la mémoire humaine, par exemple :
 
 * le cinéma ;
 * les mangas ;
@@ -82,11 +84,15 @@ Chaque famille de créatures est une création originale imaginée à partir d�
 * les légendes ;
 * les dessins animés.
 
-L’objectif n’est pas de reproduire des personnages existants, mais de réinterpréter certains de leurs codes visuels, narratifs ou symboliques sous la forme de créatures inédites.
+Une créature constitue un écho vivant et original, jamais la copie directe d’un personnage, d’une œuvre ou d’un autre élément humain. Plusieurs influences peuvent être mélangées, mais un concept dominant peut également suffire à inspirer une famille.
 
 Par exemple, un héros en armure futuriste pourrait inspirer une famille de scarabées mécaniques reprenant certains codes visuels emblématiques de cette armure : couleurs, cœur énergétique ou lignes du casque.
 
 De la même manière, un chevalier associé au phénix pourrait inspirer une lignée de créatures évoluant d’un jeune oiseau de feu jusqu’à un majestueux phénix.
+
+Une intelligence artificielle créée par l’ancienne civilisation humaine cherche à préserver ses archives et à corriger les interprétations de la Matrice. Le conflit oppose ainsi la création à la conservation sans présenter l’une de ces forces comme entièrement bonne ou mauvaise.
+
+Certains humains, dont le joueur, peuvent établir avec les créatures un lien qui stabilise leur existence. Cette relation fournit le fondement narratif de l’acquisition, de la collection et de l’attachement aux créatures sans modifier automatiquement les règles de gameplay correspondantes.
 
 Chaque famille de créatures possède généralement trois formes :
 
@@ -95,6 +101,8 @@ Chaque famille de créatures possède généralement trois formes :
 3. une forme finale.
 
 Cette approche permet de créer un univers extrêmement varié tout en développant une identité propre.
+
+Les fondations narratives détaillées sont définies dans le [document de lore](../02-world/01-LORE.md).
 
 ## 7. Concept général
 

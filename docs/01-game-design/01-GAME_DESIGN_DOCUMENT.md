@@ -35,6 +35,8 @@ Le présent document applique en priorité :
 
 Il ne répète pas l’intégralité de ces fondations. Il en traduit les décisions en une structure fonctionnelle globale.
 
+Pour les aspects narratifs qui soutiennent le rôle du joueur et l’acquisition des créatures, il applique également les fondations définies dans le [document de lore](../02-world/01-LORE.md).
+
 ### 1.3. Répartition avec les documents spécialisés
 
 Le GDD définit notamment :
@@ -95,9 +97,11 @@ La collection et les invocations apportent de nouvelles possibilités de composi
 
 ### 2.2. Rôle du joueur
 
-Le joueur possède un rôle fictionnel légèrement défini. Il est capable de créer un lien avec les créatures, de révéler leur potentiel, de les accompagner et de diriger plusieurs équipes.
+Le joueur possède un rôle fictionnel légèrement défini. Il fait partie des humains capables de créer un lien avec les créatures, de stabiliser leur existence, de révéler leur potentiel, de les accompagner et de diriger plusieurs équipes.
 
 Le nom provisoire de ce rôle est **Éveilleur**. Ce nom ne constitue pas encore un terme définitif de l’univers.
+
+Le joueur n’est ni le seul humain possédant cette aptitude ni l’élu unique du multivers. Le maintien de l’équilibre entre les forces décrites par le lore constitue une direction narrative et ne valide aucun système de choix moraux, d’embranchements ou de fins multiples.
 
 Le rôle fonctionnel du joueur consiste à :
 
@@ -763,11 +767,17 @@ Une invocation accorde la forme de base d’une famille de créatures, jamais di
 
 Certaines créatures peuvent être accordées directement par le gameplay lorsqu’elles constituent une exception explicitement documentée.
 
+Narrativement, une invocation établit ou révèle le lien entre le joueur et une manifestation vivante d’un écho, puis la stabilise. Elle ne crée pas artificiellement une nouvelle forme de vie. Une obtention directe établit également un lien sans devenir une invocation.
+
+Une nouvelle obtention d’une créature déjà possédée reste fonctionnellement un doublon utilisé pour améliorer son niveau d’étoiles. Elle peut être interprétée narrativement comme une nouvelle manifestation ou résonance du même écho qui renforce la créature déjà liée, sans modifier le fonctionnement du niveau d’étoiles.
+
 ### 15.2. Créature de départ
 
 Le joueur choisit directement sa première créature parmi trois.
 
 Cette obtention constitue une exception validée à l’invocation comme voie principale.
+
+Un lien avec cette créature est établi lors de son obtention.
 
 ### 15.3. Ressource générale d’invocation
 

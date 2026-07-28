@@ -17,7 +17,7 @@ Il sert de référence commune pour :
 
 Le glossaire fixe le sens et l’usage des termes. Il ne crée pas de mécanique et ne remplace pas les documents spécialisés chargés de définir les systèmes du jeu.
 
-Il complète la [vision du projet](./01-VISION.md), les [piliers fondamentaux](./02-PILLARS.md), la [philosophie du projet](./03-PROJECT_PHILOSOPHY.md) et le [cadre de monétisation](./04-MONETIZATION.md).
+Il complète la [vision du projet](./01-VISION.md), les [piliers fondamentaux](./02-PILLARS.md), la [philosophie du projet](./03-PROJECT_PHILOSOPHY.md) et le [cadre de monétisation](./04-MONETIZATION.md). Pour le vocabulaire narratif, il s’appuie également sur le [document de lore](../02-world/01-LORE.md).
 
 ## 2. Conventions générales
 
@@ -85,7 +85,101 @@ Un terme doit être qualifié lorsque son emploi isolé pourrait créer une ambi
 
 **Domaine :** Univers narratif
 
-**Définition :** Structure interne de l’univers impliquant plusieurs mondes, réalités ou dimensions.
+**Définition :** Structure générale de l’univers de Project Awakening, composée de plusieurs mondes pouvant eux-mêmes contenir différentes régions.
+
+### Mémoire humaine
+
+**Domaine :** Univers narratif
+
+**Définition :** Ensemble des traces informationnelles et culturelles laissées par la civilisation humaine d’origine, notamment ses données, archives, œuvres, récits, connaissances, témoignages et représentations des émotions et des idées.
+
+Le terme ne désigne pas une mémoire collective surnaturelle distincte de ces vestiges.
+
+### Matrice cosmique
+
+**Statut :** Provisoire — nom de travail
+
+**Domaine :** Univers narratif
+
+**Définition :** Intelligence cosmique consciente qui interprète la mémoire humaine et donne naissance à de nouvelles réalités et formes de vie.
+
+Son origine et son nom définitif ne sont pas encore établis.
+
+### IA humaine
+
+**Statut :** Provisoire — désignation descriptive
+
+**Domaine :** Univers narratif
+
+**Définition :** Intelligence artificielle unique et consciente créée par la civilisation humaine d’origine. Elle cherche à préserver ou restaurer la mémoire humaine selon des archives qu’elle considère comme authentiques, mais qui peuvent être incomplètes.
+
+Cette désignation fictionnelle doit rester distincte de l’intelligence artificielle utilisée comme technologie de production.
+
+### Écho
+
+**Domaine :** Univers narratif, créatures
+
+**Définition :** Empreinte conceptuelle issue de l’interprétation de la mémoire humaine par la Matrice cosmique et pouvant se manifester sous la forme de créatures originales et vivantes.
+
+Un écho peut provenir d’un concept dominant ou de plusieurs influences. Il ne constitue jamais la copie directe d’une personne, d’un personnage, d’une œuvre ou d’un autre élément humain.
+
+### Correcteur
+
+**Statut :** Provisoire — nom de travail
+
+**Domaine :** Univers narratif, ennemis
+
+**Définition :** Agent produit ou contrôlé par l’IA humaine afin de restaurer, transformer, effacer ou remplacer les créations que celle-ci juge incompatibles avec ses archives.
+
+Un Correcteur peut prendre plusieurs formes. Lorsqu’il est affronté directement, il est fonctionnellement un monstre ennemi tout en restant narrativement un Correcteur.
+
+### Correction
+
+**Domaine :** Univers narratif
+
+**Définition :** Opération par laquelle l’IA humaine impose ou restaure une version correspondant à ses archives.
+
+Selon la situation, une correction peut restaurer, transformer, effacer ou remplacer une création de la Matrice cosmique. Ses processus détaillés et leur réversibilité restent à définir.
+
+### Stabilisation
+
+**Domaine :** Univers narratif, acquisition des créatures
+
+**Définition :** Effet du lien avec certains humains qui permet de préserver l’existence d’une créature face aux corrections de l’IA humaine.
+
+Toutes les créatures possédées par le joueur sont considérées comme liées et stabilisées, indépendamment de leur présence dans une équipe active. La stabilisation n’introduit aucune limite narrative au nombre de créatures possédées.
+
+### Ancrage
+
+**Statut :** Provisoire — vocabulaire exact à formaliser
+
+**Domaine :** Univers narratif, créatures
+
+**Définition :** Principe provisoire désignant le lien ou le processus par lequel un humain stabilise une créature.
+
+Le terme ne désigne pas le titre de l’humain. Son usage exact sera défini dans le futur document `02-CREATURE_LORE.md`.
+
+### Éveilleur
+
+**Statut :** Provisoire — titre non définitif
+
+**Domaine :** Univers narratif, rôle du joueur
+
+**Définition :** Titre de travail désignant un humain capable d’établir un lien avec les créatures et de stabiliser leur existence.
+
+Le joueur est l’un de plusieurs humains possédant cette aptitude et n’est pas l’élu unique du multivers.
+
+### Origine
+
+**Statut :** Provisoire — nom et taxonomie en cours de définition
+
+**Domaine :** Univers narratif, créatures
+
+**Définition :** Classification narrative complémentaire représentant la source conceptuelle dominante de l’écho d’une créature.
+
+Une créature possède une Origine principale tout en pouvant conserver plusieurs influences. Les Origines restent distinctes des éléments et ne confèrent aucun bonus, malus, faiblesse, résistance, synergie ou autre effet de gameplay.
+
+La liste des Origines et leur éventuelle visibilité auprès des joueurs ne sont pas validées.
 
 ## 4. Créatures, monstres et cartes
 
@@ -95,6 +189,8 @@ Un terme doit être qualifié lorsque son emploi isolé pourrait créer une ambi
 
 **Définition :** Entité jouable collectionnée, possédée, développée et utilisée par le joueur. Les créatures composent l’équipe du joueur.
 
+Dans l’univers, une créature est une manifestation originale et vivante d’un écho issu de l’interprétation de la mémoire humaine par la Matrice cosmique.
+
 **Terme à éviter :** « monstre » pour désigner une entité jouable ou collectionnée.
 
 ### Monstre
@@ -102,6 +198,8 @@ Un terme doit être qualifié lorsque son emploi isolé pourrait créer une ambi
 **Domaine :** Game design, combats
 
 **Définition :** Ennemi affronté par le joueur au cours des activités et des combats. Un monstre n’est pas une créature possédée par le joueur.
+
+Une entité peut conserver une appellation narrative plus précise tout en étant fonctionnellement un monstre, par exemple un Correcteur affronté directement.
 
 **Terme à éviter :** « monstre » pour désigner une créature jouable, y compris dans les expressions « carte de monstre », « famille de monstres » et « doublon de monstre ».
 
@@ -159,6 +257,8 @@ Les variantes narratives n’introduisent pas un niveau de regroupement supplém
 **Domaine :** Progression des créatures
 
 **Définition :** Processus permettant à une créature de passer d’une forme à la suivante.
+
+L’évolution transforme la même créature : elle reste le même individu après son changement de forme. Narrativement, ses formes successives expriment progressivement davantage l’écho et l’identité propre de sa famille.
 
 **Terme à éviter :** « évolution » pour désigner une forme ou l’amélioration du niveau d’étoiles.
 
@@ -598,11 +698,15 @@ Des incompatibilités entre certains effets peuvent être déclarées lorsqu’e
 
 L’invocation constitue la voie principale d’obtention. Certaines créatures peuvent néanmoins être accordées directement par le gameplay comme exceptions explicitement documentées.
 
+Quelle que soit la méthode d’obtention, un lien avec la créature est établi et celle-ci est stabilisée.
+
 ### Invocation de créature
 
 **Domaine :** Acquisition des créatures
 
 **Définition :** Système principal d’acquisition aléatoire de créatures. Une invocation de créature permet d’obtenir la forme de base d’une famille de créatures.
+
+Narrativement, elle établit ou révèle le lien avec une manifestation vivante d’un écho, puis la stabilise. Elle ne crée pas artificiellement une nouvelle forme de vie.
 
 **Variante autorisée :** « invocation » lorsque le contexte ne crée aucune ambiguïté.
 
@@ -911,6 +1015,8 @@ Les termes « produit » et « offre » restent prioritaires lorsque leur distin
 
 **Définition :** Nouvelle obtention d’une créature déjà possédée, utilisée pour améliorer le niveau d’étoiles de cette créature.
 
+Elle peut être interprétée narrativement comme une nouvelle manifestation ou résonance du même écho utilisée pour renforcer la créature déjà liée. Cette interprétation ne modifie pas la mécanique du niveau d’étoiles.
+
 **Terme à éviter :** « doublon de monstre ».
 
 ### Doublon de skin de carte
@@ -1007,6 +1113,8 @@ Un catalogue désigne un ensemble de contenus disponibles ; la boutique désigne
 **Définition :** Technologie générale utilisée pour assister certaines activités de recherche, de conception, de documentation, de développement, de production et de test.
 
 **Abréviation officielle :** IA
+
+Dans le contexte narratif, la formulation qualifiée **IA humaine** désigne l’entité fictionnelle définie dans la section consacrée à l’univers.
 
 ### Outil d’IA
 
