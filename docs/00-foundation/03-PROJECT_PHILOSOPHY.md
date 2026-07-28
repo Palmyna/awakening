@@ -178,7 +178,9 @@ L’ouverture d’un paquet de skins de carte et l’invocation d’une créatur
 
 Le parcours cosmétique part d’une récompense de gameplay ou de la boutique cosmétique, conduit à l’ouverture d’un paquet de skins de carte et permet d’obtenir uniquement des skins de carte.
 
-Le parcours des créatures part principalement de récompenses et de ressources obtenues en jouant, conduit à une invocation de créature et permet d’obtenir une créature jouable sous sa forme de base.
+Le parcours des créatures part principalement de récompenses et de ressources obtenues en jouant, conduit à une invocation de créature et permet d’obtenir une créature jouable sous sa forme de base. Narrativement, l’invocation établit ou révèle un lien avec une manifestation vivante, puis la stabilise ; elle ne crée pas artificiellement une nouvelle forme de vie.
+
+Certaines créatures peuvent être obtenues directement par le gameplay comme exceptions explicitement documentées. Un lien est également établi dans ce cas, sans que cette obtention directe devienne une invocation.
 
 Ces parcours doivent employer des terminologies, des ressources, des interfaces, des animations et des règles économiques distinctes. Une ouverture cosmétique ne doit jamais donner de créature, et une invocation de créature ne doit pas être présentée comme l’ouverture d’un paquet cosmétique.
 
@@ -186,7 +188,7 @@ Une ressource générale principale d’invocation est utilisée dans le modèle
 
 **Éléments à préciser ultérieurement :**
 
-* la présentation artistique de l’invocation, qui pourra éventuellement utiliser un œuf, une éclosion, un rituel, un portail ou une autre représentation cohérente avec l’univers ;
+* la présentation artistique de l’invocation, qui pourra éventuellement utiliser un œuf, une éclosion, un rituel, un portail ou une autre représentation cohérente avec l’établissement, la révélation et la stabilisation du lien ;
 * les écrans, animations et parcours détaillés des deux systèmes ;
 * le nom, la représentation, les quantités et le rythme d’obtention de la ressource générale d’invocation.
 
