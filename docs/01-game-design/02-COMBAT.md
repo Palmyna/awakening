@@ -205,22 +205,32 @@ Cette durée est indépendante de la vitesse de visualisation choisie par le jou
 
 Priorités :
 
+Priorités :
+
 1. équipe possédant le plus de créatures vivantes ;
-2. si égalité, équipe possédant le meilleur pourcentage global de PV restants parmi ses survivants ;
+2. si égalité, équipe possédant le meilleur ratio global de PV restants parmi ses survivants ;
 3. si égalité parfaite, victoire de l'attaquant.
+
+Le ratio global de PV restants est calculé ainsi :
+
+> somme des PV actuels des survivants / somme des PV maximum de ces mêmes survivants.
 
 Une créature non vivante, comme un Phoenix en œuf, ne compte pas comme survivante.
 
 ## 7.2 Modes à objectif
 
-Le même timer de 120 secondes peut être utilisé pour :
+Tous les combats utilisent par défaut une durée maximale de **120 secondes de simulation**, quel que soit le mode.
 
-* boss ;
-* score de dégâts ;
-* survie ;
-* autres objectifs spécifiques.
+Le mode détermine en revanche sa propre condition de victoire, de défaite ou de score.
 
-La condition de victoire ou de score dépend alors du mode.
+Cela peut notamment concerner :
+
+* un combat contre un boss ;
+* un objectif de dégâts ;
+* un objectif de survie ;
+* d'autres objectifs spécifiques.
+
+Un mode ne peut utiliser une durée différente que si cette exception est explicitement définie.
 
 Exemple :
 
@@ -249,7 +259,7 @@ Le jeu mémorise la dernière vitesse utilisée et la réutilise par défaut lor
 Ces options ne changent jamais :
 
 * la durée de simulation ;
-* les statistiques ;
+* les caractéristiques ;
 * les événements ;
 * le RNG ;
 * la seed ;
@@ -294,7 +304,7 @@ Il définit notamment :
 
 * son nom ;
 * son coefficient de dégâts ;
-* la statistique offensive utilisée ;
+* la caractéristiques offensive utilisée ;
 * sa catégorie de dégâts ;
 * son élément ;
 * son intervalle de base ;
@@ -340,7 +350,11 @@ Une Active se déclenche après **X Basic Attacks réussies**.
 
 La Basic correspondante est alors remplacée par l'Active.
 
-Chaque Active possède son propre compteur si la créature en possède plusieurs.
+Si plusieurs Active sont prêtes au même moment, elles sont résolues selon leur ordre défini sur la fiche de la créature.
+
+Une seule Active peut remplacer une même opportunité de Basic Attack.
+
+Les autres Active déjà prêtes restent disponibles et sont utilisées lors des prochaines opportunités d'action, selon leur ordre de priorité.
 
 Une Active :
 
@@ -391,7 +405,29 @@ La jauge ne peut jamais dépasser 100.
 
 Toute énergie supplémentaire gagnée à 100 est perdue.
 
-## 13.1 Gain d'énergie
+## 13.1 Priorité d'action
+
+L'Ultimate utilise la même opportunité d'action qu'une Active ou une Basic Attack.
+
+Elle ne constitue pas une action supplémentaire indépendante entre deux Basics.
+
+Lorsqu'une créature est prête à agir, la priorité standard est :
+
+1. Ultimate prête ;
+2. Active prête ;
+3. Basic Attack.
+
+Si l'Ultimate est disponible au moment où une Active devait être utilisée :
+
+> l'Ultimate est prioritaire.
+
+L'Active reste prête et sera utilisée lors de la prochaine opportunité d'action valide.
+
+L'action effectivement utilisée remplace la Basic Attack qui aurait normalement eu lieu à cet instant.
+
+Une règle explicite de Skill peut exceptionnellement modifier cette priorité.
+
+## 13.2 Gain d'énergie
 
 La quantité d'énergie générée par une Basic fait partie des propriétés de cette Basic.
 
@@ -411,13 +447,13 @@ Des Skills ou Passives peuvent :
 * voler de l'énergie ;
 * modifier la quantité d'énergie générée.
 
-## 13.2 Auto
+## 13.3 Auto
 
 En mode Auto :
 
 > l'Ultimate est utilisée immédiatement dès que la jauge atteint 100.
 
-## 13.3 Manuel
+## 13.4 Manuel
 
 En mode Manuel :
 
@@ -671,13 +707,25 @@ Pour une attaque comportant plusieurs hits :
 * chaque hit possède son propre jet d'Esquive ;
 * chaque hit possède son propre jet de Critique.
 
-Une Active multi-hit est considérée utilisée même si tous ses hits sont esquivés.
+Pour une Basic Attack multi-hit ou multi-cible, la Basic est considérée comme réussie si au moins un de ses hits touche au moins une cible.
+
+Dans ce cas :
+
+* son gain d'énergie est accordé une seule fois ;
+* les compteurs d'Active progressent une seule fois ;
+
+indépendamment du nombre de hits ou de cibles effectivement touchés.
+
+Si tous les hits sont esquivés par toutes les cibles :
+
+* aucune énergie n'est gagnée ;
+* les compteurs d'Active ne progressent pas.
 
 ---
 
-# 23. Statistiques principales
+# 23. Caractéristiques principales
 
-Les 6 statistiques principales sont :
+Les 6 caractéristiques principales sont :
 
 * PV ;
 * Attaque ;
@@ -686,19 +734,19 @@ Les 6 statistiques principales sont :
 * Défense spéciale ;
 * Agilité.
 
-Seules ces statistiques peuvent recevoir les points de caractéristiques gagnés lors des montées de niveau.
+Seules ces caractéristiques peuvent recevoir les points de caractéristiques gagnés lors des montées de niveau.
 
 ---
 
-# 24. Statistiques secondaires
+# 24. Caractéristiques secondaires
 
-Les statistiques secondaires système retenues sont :
+Les caractéristiques secondaires système retenues sont :
 
 * Crit ;
 * Dégâts critiques ;
 * Esquive.
 
-Elles ne reçoivent pas directement les points de caractéristiques gagnés au niveau.
+Contrairement aux six caractéristiques principales, elles ne peuvent pas recevoir directement les points de caractéristiques gagnés lors des montées de niveau.
 
 Elles peuvent notamment provenir de :
 
@@ -710,7 +758,7 @@ Elles peuvent notamment provenir de :
 * debuffs ;
 * autres systèmes de progression.
 
-Il n'est pas prévu d'ajouter systématiquement des statistiques comme :
+Il n'est pas prévu d'ajouter systématiquement des caractéristiques secondaires comme :
 
 * Puissance de soin ;
 * Puissance de bouclier ;
@@ -725,7 +773,7 @@ Ces mécaniques sont principalement gérées directement par les Skills.
 
 Project Awakening privilégie des **valeurs numériques compactes et lisibles**.
 
-L'objectif est d'éviter l'inflation permanente des statistiques et des dégâts.
+L'objectif est d'éviter l'inflation permanente des caractéristiques et des dégâts.
 
 Chaque point doit avoir une valeur perceptible.
 
@@ -739,7 +787,7 @@ Les exemples utilisant de très grands nombres pendant la conception ne constitu
 
 Le moteur conserve **3 décimales** pour les calculs internes.
 
-L'interface n'affiche normalement pas ces décimales pour les statistiques standards.
+L'interface n'affiche normalement pas ces décimales pour les caractéristiques standards.
 
 Les dégâts, soins et protections sont calculés avec cette précision jusqu'à leur application finale.
 
@@ -775,9 +823,9 @@ Exemples :
 
 ---
 
-# 28. Modifications des autres statistiques
+# 28. Modifications des autres caractéristiques
 
-Toutes les statistiques autres que les PV sont modifiées au niveau de leurs **points internes**.
+Toutes les caractéristiques autres que les PV sont modifiées au niveau de leurs **points internes**.
 
 Exemple :
 
@@ -814,7 +862,7 @@ Cette règle s'applique notamment à :
 
 # 29. Valeur de départ en combat
 
-Le moteur de combat reçoit directement les statistiques finales de la créature préparées hors combat.
+Le moteur de combat reçoit directement les caractéristiques finales de la créature préparées hors combat.
 
 Ces valeurs intègrent déjà notamment :
 
@@ -830,7 +878,7 @@ Les effets de l'équipement sont visibles directement sur la fiche de la créatu
 
 ---
 
-# 30. Modifications chronologiques des statistiques
+# 30. Modifications chronologiques des caractéristiques
 
 Pendant le combat, les modificateurs sont appliqués dans leur **ordre réel de déclenchement**.
 
@@ -869,13 +917,13 @@ Lorsqu'un modificateur expire ou est retiré :
 
 > la valeur est recalculée en rejouant les modificateurs restants dans leur ordre d'origine.
 
-Une statistique ne peut jamais descendre sous 0 point.
+Une caractéristique ne peut jamais descendre sous 0 point.
 
 ---
 
 # 31. Modifications jusqu'à la fin du combat
 
-Certains effets peuvent modifier une statistique jusqu'à la fin du combat.
+Certains effets peuvent modifier une caractéristique jusqu'à la fin du combat.
 
 Ces effets :
 
@@ -913,8 +961,8 @@ Les buffs et debuffs sont des effets temporaires distincts des modifications per
 
 Ils peuvent modifier les points de :
 
-* statistiques principales ;
-* statistiques secondaires.
+* caractéristiques principales ;
+* caractéristiques secondaires.
 
 Les modifications successives sont appliquées dans leur ordre réel.
 
@@ -935,7 +983,7 @@ devient :
 
 Formule standard :
 
-> **Dégâts bruts = statistique offensive × coefficient de l'action.**
+> **Dégâts bruts = caractéristique offensive × coefficient de l'action.**
 
 Une action Physique utilise :
 
@@ -951,7 +999,7 @@ Exemples :
 
 * dégâts basés sur les PV max ;
 * dégâts basés sur la Défense ;
-* dégâts utilisant plusieurs statistiques ;
+* dégâts utilisant plusieurs caractéristiques ;
 * etc.
 
 ---
@@ -1326,7 +1374,7 @@ Les Boucliers sont appliqués avant les PV.
 
 Les Boucliers ne Critiquent pas.
 
-Leur valeur peut dépendre de différentes statistiques selon le Skill :
+Leur valeur peut dépendre de différentes caractéristiques selon le Skill :
 
 * PV du lanceur ;
 * Attaque ;
@@ -1334,7 +1382,7 @@ Leur valeur peut dépendre de différentes statistiques selon le Skill :
 * Défense ;
 * etc.
 
-Il n'existe pas nécessairement de statistique système « Puissance de Bouclier ».
+Il n'existe pas nécessairement de caractéristique système « Puissance de Bouclier ».
 
 ---
 
@@ -1377,7 +1425,7 @@ Une fois appliqué :
 
 Chaque DoT utilise un **snapshot** au moment de son application.
 
-Les modifications ultérieures des statistiques de la source ne modifient pas un DoT déjà appliqué.
+Les modifications ultérieures des caractéristiques de la source ne modifient pas un DoT déjà appliqué.
 
 ---
 
@@ -1711,15 +1759,31 @@ Le ciblage défensif repose sur :
 
 # 71. Snapshot
 
-Les effets périodiques comme DoT et HoT utilisent un snapshot.
+Les effets périodiques comme les DoT et HoT utilisent un snapshot de leur source.
 
 Lorsqu'un effet est appliqué :
 
-> ses paramètres offensifs ou de soin sont enregistrés à cet instant.
+> les paramètres offensifs, de soin et autres valeurs dépendant de la source sont enregistrés à cet instant.
 
-Les modifications ultérieures des statistiques de la source ne modifient pas l'effet déjà présent.
+Les modifications ultérieures des caractéristiques de la source ne modifient pas l'effet déjà présent.
 
-Une nouvelle application peut utiliser un nouveau snapshot.
+Une nouvelle application utilise un nouveau snapshot correspondant à l'état de la source au moment de cette nouvelle application.
+
+En revanche, l'état de la cible reste dynamique.
+
+À chaque tick, le moteur utilise les valeurs et protections actuelles de la cible lorsque celles-ci sont pertinentes, notamment :
+
+* Défense ou Défense spéciale ;
+* résistances élémentaires ;
+* réductions de dégâts ;
+* Absorption ;
+* Boucliers ;
+* réduction des soins reçus ;
+* autres effets défensifs applicables.
+
+Ainsi :
+
+> **la source est snapshotée à l'application, tandis que la cible est recalculée à chaque tick.**
 
 ---
 
