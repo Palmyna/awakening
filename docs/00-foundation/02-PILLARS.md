@@ -48,7 +48,7 @@ Deux joueurs possédant exactement les mêmes créatures doivent pouvoir créer 
 ### Conséquences sur la conception
 
 * Le joueur doit pouvoir répartir sur chaque créature les points de caractéristiques qu’elle reçoit lors de ses montées de niveau.
-* Chaque créature doit posséder un ensemble prédéfini de quatre compétences qui définit son identité fonctionnelle, son rôle et ses synergies potentielles.
+* Chaque créature doit posséder exactement quatre Skills prédéfinis : une Ultimate et trois autres Skills formant une combinaison fixe d’Active et de Passive.
 * Le joueur ne doit ni choisir ni remplacer les compétences d’une créature. Il personnalise son fonctionnement à travers ses caractéristiques, son équipement, sa progression, son évolution, son niveau d’étoiles et son intégration dans une équipe.
 * Les synergies entre les membres d’une équipe doivent encourager plusieurs compositions.
 * La conception des créatures doit favoriser une diversité de builds et d’usages.
@@ -75,10 +75,10 @@ Les combats sont principalement automatisés afin que la profondeur du jeu repos
 
 ### Conséquences sur la conception
 
-* Le joueur doit constituer et optimiser une équipe de six créatures.
+* Le joueur doit constituer et optimiser une équipe pouvant réunir jusqu’à six créatures.
 * Les rôles, compétences, éléments, effets de statut, objets et synergies doivent influencer la pertinence d’une composition.
 * Les effets de statut doivent soutenir des styles de jeu variés, renforcer certaines identités élémentaires et enrichir les interactions entre les créatures.
-* Les combats doivent rester rapides et dynamiques, avec une durée moyenne visée de 30 à 60 secondes.
+* Les combats doivent rester rapides et dynamiques, avec une durée moyenne visée de 30 à 60 secondes et un timeout standard de 120 secondes de simulation.
 * Les attaques et compétences ordinaires doivent être utilisées automatiquement.
 * Le joueur doit pouvoir déclencher manuellement les compétences ultimes ou activer leur déclenchement automatique.
 * L’automatisation doit rendre visibles les conséquences des choix de préparation.
@@ -94,8 +94,8 @@ Les combats sont principalement automatisés afin que la profondeur du jeu repos
 
 **Éléments à préciser ultérieurement :**
 
-* La table exacte des affinités entre les neuf éléments, leurs coefficients et l’existence éventuelle d’un bonus entre une créature et une compétence partageant son élément.
-* La liste et les règles détaillées des effets de statut, notamment leur application, leur durée, leur cumul, leur renouvellement, leur retrait, les résistances et les immunités.
+* Les coefficients exacts de réduction des résistances élémentaires simples et doubles.
+* Les valeurs, durées et probabilités des effets de statut, leurs règles individuelles de cumul et de renouvellement, les paramètres des diminishing returns des CC et le périmètre des immunités explicites.
 
 ## 5. Une expérience mobile accessible et profonde
 
@@ -132,7 +132,7 @@ Le modèle économique doit financer le développement sans faire des achats la 
 
 Les joueurs doivent obtenir principalement les créatures et les invocations grâce au jeu. La boutique est exclusivement cosmétique, et la monétisation repose avant tout sur les skins de carte utilisant des illustrations alternatives, afin de préserver un environnement compétitif équitable.
 
-Une exception de confort strictement limitée peut permettre de redistribuer les points de caractéristiques déjà gagnés par une créature sans recommencer sa progression en niveaux. Elle ne doit accorder aucun point supplémentaire, aucune expérience, aucune puissance inaccessible gratuitement ni aucune augmentation du potentiel maximal.
+Deux services de confort strictement limités sont validés en dehors de la boutique cosmétique : la redistribution payante de points déjà gagnés sans recommencer la progression en niveaux, et les vitesses de visualisation accélérées ×2 et ×4 des combats. Aucun ne doit accorder de puissance inaccessible gratuitement ni modifier le résultat ou les récompenses d’un combat.
 
 ### Conséquences sur la conception
 
@@ -152,6 +152,8 @@ Une exception de confort strictement limitée peut permettre de redistribuer les
 * Le joueur doit pouvoir recommencer gratuitement la progression en niveaux d’une créature afin de modifier sa répartition de caractéristiques.
 * Un objet rare obtenu en jouant doit permettre de redistribuer les points déjà gagnés sans ramener la créature au niveau 1.
 * Un service payant distinct de la boutique cosmétique peut fournir le même résultat immédiat, à condition que son utilisation soit limitée et qu’il ne fournisse aucun avantage de potentiel par rapport aux méthodes gratuites.
+* La visualisation des combats doit rester disponible gratuitement en ×1 ; ×2 et ×4 peuvent être achetés comme services de confort, sans modifier le temps de simulation, les calculs, la seed RNG, les statistiques, les événements, le résultat, les récompenses ou le coût en énergie.
+* Le joueur doit pouvoir acheter directement ×4 ou payer seulement la différence après l’achat de ×2 ; les prix exacts restent à définir.
 * La vente d’expérience, de points de caractéristiques, d’énergie, d’équipements ou de ressources de progression doit rester interdite.
 * Les décisions économiques doivent préserver l’équité de l’environnement compétitif.
 
@@ -160,7 +162,7 @@ Une exception de confort strictement limitée peut permettre de redistribuer les
 * Créer un avantage compétitif principalement accessible par le paiement.
 * Rendre les achats indispensables à une progression normale.
 * Limiter l’accès aux créatures principalement à des transactions payantes.
-* Permettre à un service payant d’accorder des points de caractéristiques supplémentaires, d’augmenter le potentiel maximal ou de fournir un résultat impossible à obtenir gratuitement.
+* Permettre à un service payant d’accorder des points de caractéristiques supplémentaires, d’augmenter le potentiel maximal ou d’influencer le résultat et les récompenses d’un combat.
 * Concevoir des ouvertures cosmétiques dont les doublons seraient dépourvus de valeur.
 * Réserver certains skins d’une série à la version payante de son paquet.
 * Permettre à une dépense dans la boutique cosmétique de produire directement ou indirectement une créature, une invocation ou de la puissance.
@@ -175,6 +177,7 @@ Une exception de confort strictement limitée peut permettre de redistribuer les
 * Le contenu cosmétique détaillé du catalogue de conversion de la monnaie de conversion des doublons.
 * Les limites exactes du service payant de réinitialisation, notamment leur portée par compte ou par créature.
 * La méthode d’obtention et le rythme de distribution de l’objet rare permettant une réinitialisation sans retour au niveau 1.
+* Les prix et la présentation des paliers de vitesse de visualisation ×2 et ×4.
 
 ## 7. Une identité originale portée par la collection
 

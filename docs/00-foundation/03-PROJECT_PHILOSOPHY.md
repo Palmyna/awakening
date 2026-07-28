@@ -42,7 +42,7 @@ Les effets de statut constituent un système central du combat. Ils doivent cré
 
 Les décisions de conception doivent donc :
 
-* donner une importance réelle à la composition d’une équipe de six créatures ;
+* donner une importance réelle à la composition d’une équipe pouvant réunir jusqu’à six créatures ;
 * encourager l’étude des rôles, des compétences, des éléments, des effets de statut et des synergies ;
 * rendre perceptible l’effet des choix effectués avant le combat ;
 * maintenir la priorité de la stratégie d’équipe sur l’exécution gestuelle.
@@ -55,21 +55,17 @@ Le projet doit éviter :
 * de proposer une automatisation qui efface l’influence des décisions du joueur ;
 * de traiter les effets de statut comme des effets accessoires sans rôle stratégique réel.
 
-**Question ouverte :**
-
-* l’existence éventuelle d’un bonus lorsqu’une compétence partage un élément avec la créature qui l’utilise.
-
 **Éléments à préciser ultérieurement :**
 
-* la table exacte des affinités entre les neuf éléments et leurs coefficients ;
-* le rôle exact de l’Agilité dans l’ordre et la fréquence des actions ainsi que les formules de dégâts et de coups critiques ;
+* les coefficients exacts des résistances élémentaires ;
+* les paramètres exacts des courbes d’Agilité, de Crit et d’Esquive ainsi que les formules de dégâts ;
 * la liste des effets de statut et leurs règles détaillées d’application, de durée, de cumul, de renouvellement, de retrait, de résistance et d’immunité.
 
 ### 3.2. Faire de la personnalisation le cœur de l’expérience
 
 La personnalisation ne doit pas être un système périphérique. Elle constitue le cœur du gameplay et la principale source de diversité entre les joueurs.
 
-Chaque créature possède un ensemble prédéfini de quatre compétences déjà déterminé lors de son obtention. Le joueur ne choisit pas ces compétences, ne les remplace pas et ne construit pas son build en les sélectionnant dans une liste. Elles définissent l’identité fonctionnelle, le rôle et les synergies potentielles de la créature.
+Chaque créature possède exactement quatre Skills prédéfinis : une Ultimate et trois autres Skills formant une combinaison fixe d’Active et de Passive. Le joueur ne choisit pas ces Skills, ne les remplace pas et ne construit pas son build en les sélectionnant dans une liste. Ils définissent l’identité fonctionnelle, le rôle et les synergies potentielles de la créature.
 
 Le joueur développe la créature autour de cet ensemble fixe à travers la répartition de ses caractéristiques, son équipement, sa progression, son évolution, son niveau d’étoiles, ses interactions avec les effets de statut et son rôle dans l’équipe. Les choix de composition et les synergies entre les membres d’une équipe participent également à cette différenciation.
 
@@ -200,9 +196,14 @@ Project Awakening adopte un modèle Free-to-Play. Les créatures doivent s’obt
 
 La boutique est exclusivement consacrée aux contenus cosmétiques. Elle ne vend aucune créature, aucune invocation, aucun avantage de combat et aucune progression de puissance.
 
-Une exception de confort strictement encadrée, distincte de la boutique cosmétique, permet de payer pour redistribuer les points de caractéristiques déjà gagnés par une créature sans la ramener au niveau 1. Elle ne donne aucun point supplémentaire, aucune expérience, aucune ressource et aucune augmentation du potentiel maximal. Son utilisation payante doit être limitée et un objet rare obtenu en jouant doit permettre d’obtenir le même résultat.
+Deux services de confort strictement encadrés et distincts de la boutique cosmétique sont validés :
 
-La réinitialisation complète depuis le niveau 1 reste accessible gratuitement sans objet. Cette exception n’autorise pas la vente de créatures, d’invocations, d’expérience, de points de caractéristiques, d’équipements, d’énergie ou de ressources de progression.
+* la redistribution payante des points de caractéristiques déjà gagnés par une créature sans la ramener au niveau 1 ; son utilisation doit être limitée et un objet rare obtenu en jouant doit permettre le même résultat ;
+* les vitesses de visualisation accélérées ×2 et ×4 des combats, tandis que ×1 reste gratuit.
+
+La réinitialisation complète depuis le niveau 1 reste accessible gratuitement sans objet. Les vitesses accélérées changent uniquement la restitution en temps réel : elles ne modifient ni les 120 secondes de simulation, ni les calculs, la seed RNG, les statistiques, les événements, le résultat, les récompenses ou le coût en énergie.
+
+Ces services n’autorisent pas la vente de créatures, d’invocations, d’expérience, de points de caractéristiques, d’équipements, d’énergie, de ressources de progression ou de puissance.
 
 Les skins appartenant aux séries distribuées par paquets sont principalement obtenus grâce à des paquets de skins de carte. Ces paquets peuvent être gagnés en jouant ou achetés directement contre de l’argent réel dans la boutique cosmétique.
 
@@ -224,7 +225,7 @@ Une décision économique doit être évaluée non seulement selon sa capacité 
 
 Aucun achat effectué dans la boutique cosmétique ne doit produire directement ou indirectement un avantage de progression ou de combat.
 
-Le service payant de réinitialisation ne doit pas augmenter la puissance maximale accessible, accorder des points supplémentaires ni remplacer l’existence de méthodes gratuites. Il permet uniquement d’éviter de recommencer la progression en niveaux lors d’une redistribution.
+Le service payant de réinitialisation ne doit pas augmenter la puissance maximale accessible, accorder des points supplémentaires ni remplacer l’existence de méthodes gratuites. Les vitesses accélérées ne doivent jamais influencer la simulation, le résultat ou les récompenses d’un combat.
 
 La présentation des séries de skins de carte doit permettre au joueur de comprendre et d’apprécier ce qu’il a obtenu sans transformer la complétion cosmétique en obligation de puissance. La complétion d’une série ne doit fournir aucun avantage automatique de puissance.
 
@@ -247,7 +248,7 @@ Le projet doit éviter :
 
 ### 6.3. Évolutions non validées
 
-À l’exception du service limité de réinitialisation des points de caractéristiques, les autres services de confort, les publicités, les passes, les abonnements, la monnaie premium et l’achat direct d’invocations ne font pas partie du modèle initial.
+À l’exception du service limité de réinitialisation des points de caractéristiques et des vitesses de visualisation accélérées ×2 et ×4, les autres services de confort, les publicités, les passes, les abonnements, la monnaie premium et l’achat direct d’invocations ne font pas partie du modèle initial.
 
 Leur éventuelle introduction après le lancement nécessitera une nouvelle décision explicite et une vérification de leur compatibilité avec les principes d’équité, de transparence et de respect des joueurs.
 

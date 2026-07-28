@@ -1,14 +1,31 @@
-# Combat
+# Project Awakening — Combat
 
-> **Statut : draft de conception**
->
-> Ce document décrit les règles structurelles du système de combat de Project Awakening.
->
-> Les formules, caps, coefficients, durées et valeurs numériques qui ne sont pas explicitement validés restent des paramètres de balancing et pourront évoluer sans remettre en cause les règles structurelles décrites ici.
+**Statut :** Draft de conception — base actuelle à compléter
 
----
+## 1. Rôle et périmètre du document
 
-## 1. Principes généraux
+Ce document définit les règles structurelles communes du système de combat de **Project Awakening**.
+
+Il constitue la référence actuelle pour le moteur de combat, notamment pour :
+
+* la simulation temporelle ;
+* les équipes et la formation ;
+* les actions et leur priorité ;
+* le ciblage et les zones ;
+* les caractéristiques et autres statistiques ;
+* les dégâts, soins et protections ;
+* les éléments ;
+* les effets de statut ;
+* les états de vie, de présence et de contrôle ;
+* les conditions de fin d’un combat standard.
+
+Il reste un document de game design. Il ne constitue pas une spécification technique d’implémentation.
+
+Les formules, caps, coefficients, durées et valeurs numériques explicitement indiqués comme restant à équilibrer peuvent évoluer sans remettre en cause les décisions structurelles présentées ici.
+
+Les futurs documents consacrés aux créatures, aux Skills, aux éléments et aux effets de statut reprennent et approfondissent leurs domaines respectifs sans contredire les règles système nécessaires au combat.
+
+## 2. Principes de simulation
 
 Les combats de Project Awakening reposent sur une **simulation mathématique en temps continu**.
 
@@ -34,11 +51,13 @@ Le RNG reste présent pour certaines mécaniques, notamment :
 
 ---
 
-# 2. Composition des équipes
+## 3. Équipes, formation et états de présence
+
+### 3.1. Composition des équipes
 
 Une équipe peut contenir jusqu'à **6 créatures**.
 
-Les 6 créatures sont présentes simultanément sur le terrain.
+Toutes les créatures sélectionnées sont présentes simultanément sur le terrain.
 
 Une équipe utilise une formation composée de :
 
@@ -55,7 +74,7 @@ Le positionnement exact en colonnes est ensuite géré automatiquement.
 
 ---
 
-# 3. Grille de formation
+### 3.2. Grille de formation
 
 Le terrain utilise conceptuellement une grille de :
 
@@ -91,7 +110,7 @@ Le joueur ne choisit pas directement les colonnes.
 
 ---
 
-# 4. Positions pendant le combat
+### 3.3. Positions pendant le combat
 
 Les positions restent fixes pendant tout le combat.
 
@@ -109,7 +128,7 @@ Un Skill peut exceptionnellement déplacer ou modifier une position si sa descri
 
 ---
 
-# 5. Créatures vivantes, présentes et non vivantes
+### 3.4. Créatures vivantes, présentes et non vivantes
 
 Une créature **vivante et présente dans le combat** peut normalement :
 
@@ -121,7 +140,7 @@ Une créature **vivante et présente dans le combat** peut normalement :
 
 Certains effets peuvent modifier temporairement cet état.
 
-## 5.1 Créature morte
+#### 3.4.1. Créature morte
 
 Une créature à 0 PV est considérée comme morte.
 
@@ -136,7 +155,7 @@ Il n'existe pas de résurrection générale d'un allié.
 
 Seules certaines Passives propres à la créature peuvent permettre une **auto-résurrection**.
 
-## 5.2 Créature exclue
+#### 3.4.2. Créature exclue
 
 Une créature sous un effet d'Exclusion :
 
@@ -148,7 +167,7 @@ Une créature sous un effet d'Exclusion :
 
 Ses effets et timers personnels sont gelés pendant l'Exclusion.
 
-## 5.3 Cas du Phoenix / auto-résurrection
+#### 3.4.3. Cas du Phoenix et auto-résurrection
 
 Une créature disposant d'une auto-résurrection peut avoir un état intermédiaire, par exemple un Phoenix transformé en œuf.
 
@@ -168,7 +187,9 @@ Une auto-résurrection peut fonctionner plusieurs fois ou indéfiniment si la Pa
 
 ---
 
-# 6. Début du combat
+## 4. Déroulement global du combat
+
+### 4.1. Début du combat
 
 Sauf indication contraire :
 
@@ -191,7 +212,7 @@ Ordre déterministe en cas d'effets nécessitant réellement une résolution suc
 
 ---
 
-# 7. Temps de combat
+### 4.2. Temps de combat
 
 La durée maximale standard d'un combat est de :
 
@@ -201,9 +222,7 @@ Cette durée est indépendante de la vitesse de visualisation choisie par le jou
 
 À la fin du temps réglementaire, la règle de victoire dépend du mode.
 
-## 7.1 Combat standard
-
-Priorités :
+#### 4.2.1. Combat standard
 
 Priorités :
 
@@ -217,7 +236,7 @@ Le ratio global de PV restants est calculé ainsi :
 
 Une créature non vivante, comme un Phoenix en œuf, ne compte pas comme survivante.
 
-## 7.2 Modes à objectif
+#### 4.2.2. Modes à objectif
 
 Tous les combats utilisent par défaut une durée maximale de **120 secondes de simulation**, quel que soit le mode.
 
@@ -238,13 +257,13 @@ Exemple :
 
 ---
 
-# 8. Vitesse de visualisation
+### 4.3. Vitesse de visualisation
 
 Le combat repose sur 120 secondes de **temps de simulation**, indépendamment de sa vitesse d'affichage.
 
-Des vitesses de visualisation accélérées peuvent être proposées comme **services de confort payants**.
+Les vitesses de visualisation accélérées constituent des **services de confort payants**.
 
-Principe prévu :
+Principe validé :
 
 * ×1 disponible gratuitement ;
 * ×2 comme premier palier de confort payant ;
@@ -259,10 +278,10 @@ Le jeu mémorise la dernière vitesse utilisée et la réutilise par défaut lor
 Ces options ne changent jamais :
 
 * la durée de simulation ;
+* les calculs ;
 * les caractéristiques ;
 * les événements ;
-* le RNG ;
-* la seed ;
+* la seed RNG ;
 * les récompenses ;
 * le coût en énergie ;
 * le résultat du combat.
@@ -271,7 +290,9 @@ Elles modifient uniquement le temps réel nécessaire à la visualisation.
 
 ---
 
-# 9. Structure des actions d'une créature
+## 5. Modèle d’action
+
+### 5.1. Structure des actions d’une créature
 
 Chaque créature possède :
 
@@ -294,9 +315,9 @@ Ils font partie de son identité de gameplay.
 
 ---
 
-# 10. Basic Attack
+### 5.2. Basic Attack
 
-Le Basic Attack est une action automatique propre à chaque créature.
+La Basic Attack est une action automatique propre à chaque créature.
 
 Il est représenté sur sa fiche de manière comparable à un Skill.
 
@@ -304,7 +325,7 @@ Il définit notamment :
 
 * son nom ;
 * son coefficient de dégâts ;
-* la caractéristiques offensive utilisée ;
+* la caractéristique offensive utilisée ;
 * sa catégorie de dégâts ;
 * son élément ;
 * son intervalle de base ;
@@ -312,26 +333,26 @@ Il définit notamment :
 * son éventuel nombre de hits ;
 * son éventuelle règle de ciblage particulière.
 
-## 10.1 Catégorie de dégâts
+#### 5.2.1. Catégorie de dégâts
 
-Un Basic peut être :
+Une Basic Attack peut être :
 
 * **Physique** ;
 * **Spécial**.
 
-Un Basic Physique utilise :
+Une Basic Attack Physique utilise :
 
 * Attaque ;
 * Défense de la cible.
 
-Un Basic Spécial utilise :
+Une Basic Attack Spéciale utilise :
 
 * Attaque spéciale ;
 * Défense spéciale de la cible.
 
-Un Basic n'est donc pas obligatoirement Physique.
+Une Basic Attack n'est donc pas obligatoirement Physique.
 
-## 10.2 Première attaque
+#### 5.2.2. Première attaque
 
 Une créature doit attendre son intervalle complet avant sa première Basic Attack.
 
@@ -342,7 +363,7 @@ Exemple :
 
 ---
 
-# 11. Active Skills
+### 5.3. Active Skills
 
 Les Active Skills sont déclenchés automatiquement selon leur cycle.
 
@@ -368,7 +389,7 @@ Une Basic esquivée :
 
 ---
 
-# 12. Passive Skills
+### 5.4. Passive Skills
 
 Les Passive Skills réagissent à des événements ou conditions.
 
@@ -389,7 +410,7 @@ Une Passive peut créer des exceptions aux règles générales si sa description
 
 ---
 
-# 13. Ultimate
+### 5.5. Ultimate
 
 Chaque créature possède exactement **1 Ultimate**.
 
@@ -405,7 +426,7 @@ La jauge ne peut jamais dépasser 100.
 
 Toute énergie supplémentaire gagnée à 100 est perdue.
 
-## 13.1 Priorité d'action
+#### 5.5.1. Priorité d’action
 
 L'Ultimate utilise la même opportunité d'action qu'une Active ou une Basic Attack.
 
@@ -427,7 +448,7 @@ L'action effectivement utilisée remplace la Basic Attack qui aurait normalement
 
 Une règle explicite de Skill peut exceptionnellement modifier cette priorité.
 
-## 13.2 Gain d'énergie
+#### 5.5.2. Gain d’énergie
 
 La quantité d'énergie générée par une Basic fait partie des propriétés de cette Basic.
 
@@ -447,25 +468,28 @@ Des Skills ou Passives peuvent :
 * voler de l'énergie ;
 * modifier la quantité d'énergie générée.
 
-## 13.3 Auto
+#### 5.5.3. Auto
 
 En mode Auto :
 
-> l'Ultimate est utilisée immédiatement dès que la jauge atteint 100.
+> lorsqu'une Ultimate est à 100 énergie, elle est sélectionnée à la prochaine opportunité d'action valide.
 
-## 13.4 Manuel
+Elle reste prioritaire sur une Active prête et sur la Basic Attack.
+
+#### 5.5.4. Manuel
 
 En mode Manuel :
 
 * le joueur peut conserver son Ultimate à 100 ;
 * aucune énergie supplémentaire ne peut être stockée au-delà de 100 ;
-* le joueur choisit le moment de son déclenchement.
+* le joueur choisit de demander son déclenchement ;
+* l'Ultimate demandée est utilisée à la prochaine opportunité d'action valide.
 
 La vitesse de visualisation peut être changée même en mode Manuel.
 
 ---
 
-# 14. Timers et contrôle
+### 5.6. Timers et contrôle
 
 Les actions se déroulent sur une timeline continue.
 
@@ -481,7 +505,7 @@ Un Skill peut explicitement définir :
 * un effet périodique ;
 * une autre temporalité particulière.
 
-## 14.1 Crowd Control total
+#### 5.6.1. Crowd Control total
 
 Les CC totaux standards comprennent notamment :
 
@@ -503,7 +527,7 @@ Pendant un CC total :
 
 Les DoT, HoT, buffs et debuffs continuent cependant à évoluer normalement pendant un CC classique.
 
-## 14.2 Égalité temporelle avec un CC
+#### 5.6.2. Égalité temporelle avec un CC
 
 Si un CC empêchant une action et l'action elle-même sont programmés exactement au même timestamp :
 
@@ -511,7 +535,7 @@ Si un CC empêchant une action et l'action elle-même sont programmés exactemen
 
 ---
 
-# 15. Événements simultanés
+### 5.7. Événements simultanés
 
 Tous les événements déclenchés au même timestamp forment un bloc temporel commun.
 
@@ -531,23 +555,25 @@ Si les deux équipes remplissent simultanément leur condition de défaite :
 
 ---
 
-# 16. Ciblage standard des Basic Attacks
+## 6. Ciblage, géométrie et résolution des hits
+
+### 6.1. Ciblage standard des Basic Attacks
 
 Le ciblage standard fonctionne comme suit.
 
-## 16.1 Ligne prioritaire
+#### 6.1.1. Ligne prioritaire
 
 Le moteur identifie la **première ligne ennemie occupée**.
 
 Les Basics standards ne ciblent normalement que cette ligne.
 
-## 16.2 Ordre des cibles
+#### 6.1.2. Ordre des cibles
 
 Les cibles valides de la ligne sont ordonnées :
 
 > gauche → droite.
 
-## 16.3 Ordre des attaquants
+#### 6.1.3. Ordre des attaquants
 
 Les attaquants sont ordonnés :
 
@@ -555,7 +581,7 @@ Les attaquants sont ordonnés :
 2. ligne 2 gauche → droite ;
 3. ligne 3 gauche → droite.
 
-## 16.4 Distribution cyclique
+#### 6.1.4. Distribution cyclique
 
 Les attaquants sont distribués cycliquement parmi les cibles valides.
 
@@ -571,7 +597,7 @@ Le ciblage est recalculé lorsqu'une cible meurt ou que la composition de la lig
 
 ---
 
-# 17. Priorité des règles de ciblage
+### 6.2. Priorité des règles de ciblage
 
 Ordre général :
 
@@ -590,7 +616,7 @@ Les tanks protègent principalement leur équipe via :
 
 ---
 
-# 18. Voisinage et géométrie
+### 6.3. Voisinage et géométrie
 
 Deux créatures sont voisines uniquement si elles sont directement adjacentes :
 
@@ -611,15 +637,15 @@ Deux créatures séparées par un emplacement vide ne sont plus voisines.
 
 ---
 
-# 19. AoE et multi-ciblage
+### 6.4. AoE et multi-ciblage
 
 Les Skills peuvent utiliser différentes formes de ciblage.
 
-## 19.1 AoE globale
+#### 6.4.1. AoE globale
 
 Touche toutes les créatures ennemies vivantes et ciblables.
 
-## 19.2 AoE de ligne
+#### 6.4.2. AoE de ligne
 
 Touche toutes les créatures ciblables d'une ligne.
 
@@ -629,11 +655,11 @@ Sans précision supplémentaire :
 
 Une AoE de ligne ne déborde jamais automatiquement vers une ligne suivante.
 
-## 19.3 AoE de colonne
+#### 6.4.3. AoE de colonne
 
 Un Skill peut cibler toutes les créatures présentes dans une même colonne.
 
-## 19.4 Splash de proximité
+#### 6.4.4. Splash de proximité
 
 Un Skill peut toucher :
 
@@ -644,7 +670,7 @@ Un Skill peut toucher :
 
 Les diagonales ne sont jamais incluses.
 
-## 19.5 Multi-cible limité
+#### 6.4.5. Multi-cible limité
 
 Un Skill peut cibler un nombre défini de créatures selon une règle explicite.
 
@@ -658,7 +684,7 @@ Exemples :
 
 ---
 
-# 20. Basic Attacks AoE
+### 6.5. Basic Attacks AoE
 
 Une Basic Attack peut être multi-cible ou AoE si sa fiche le prévoit.
 
@@ -678,7 +704,7 @@ Les Active et Ultimate peuvent utiliser des AoE plus complexes.
 
 ---
 
-# 21. Résolution indépendante des cibles
+### 6.6. Résolution indépendante des cibles
 
 Chaque cible d'une attaque multi-cible ou AoE est résolue indépendamment.
 
@@ -700,7 +726,7 @@ Une même AoE peut donc :
 
 ---
 
-# 22. Multi-hit
+### 6.7. Multi-hit
 
 Pour une attaque comportant plusieurs hits :
 
@@ -723,7 +749,9 @@ Si tous les hits sont esquivés par toutes les cibles :
 
 ---
 
-# 23. Caractéristiques principales
+## 7. Caractéristiques et conventions numériques
+
+### 7.1. Caractéristiques principales
 
 Les 6 caractéristiques principales sont :
 
@@ -738,7 +766,7 @@ Seules ces caractéristiques peuvent recevoir les points de caractéristiques ga
 
 ---
 
-# 24. Caractéristiques secondaires
+### 7.2. Caractéristiques secondaires
 
 Les caractéristiques secondaires système retenues sont :
 
@@ -769,7 +797,7 @@ Ces mécaniques sont principalement gérées directement par les Skills.
 
 ---
 
-# 25. Philosophie des valeurs numériques
+### 7.3. Philosophie des valeurs numériques
 
 Project Awakening privilégie des **valeurs numériques compactes et lisibles**.
 
@@ -783,7 +811,7 @@ Les exemples utilisant de très grands nombres pendant la conception ne constitu
 
 ---
 
-# 26. Précision des calculs
+### 7.4. Précision des calculs
 
 Le moteur conserve **3 décimales** pour les calculs internes.
 
@@ -802,7 +830,7 @@ Exemples :
 
 ---
 
-# 27. PV
+### 7.5. PV
 
 Les PV utilisent une conversion simple :
 
@@ -823,7 +851,7 @@ Exemples :
 
 ---
 
-# 28. Modifications des autres caractéristiques
+### 7.6. Modifications des autres caractéristiques
 
 Toutes les caractéristiques autres que les PV sont modifiées au niveau de leurs **points internes**.
 
@@ -860,7 +888,7 @@ Cette règle s'applique notamment à :
 
 ---
 
-# 29. Valeur de départ en combat
+### 7.7. Valeur de départ en combat
 
 Le moteur de combat reçoit directement les caractéristiques finales de la créature préparées hors combat.
 
@@ -878,7 +906,7 @@ Les effets de l'équipement sont visibles directement sur la fiche de la créatu
 
 ---
 
-# 30. Modifications chronologiques des caractéristiques
+### 7.8. Modifications chronologiques des caractéristiques
 
 Pendant le combat, les modificateurs sont appliqués dans leur **ordre réel de déclenchement**.
 
@@ -921,7 +949,7 @@ Une caractéristique ne peut jamais descendre sous 0 point.
 
 ---
 
-# 31. Modifications jusqu'à la fin du combat
+### 7.9. Modifications jusqu’à la fin du combat
 
 Certains effets peuvent modifier une caractéristique jusqu'à la fin du combat.
 
@@ -955,7 +983,7 @@ Cela permet notamment des créatures de scaling dont la puissance augmente avec 
 
 ---
 
-# 32. Buffs et debuffs
+### 7.10. Buffs et debuffs
 
 Les buffs et debuffs sont des effets temporaires distincts des modifications permanentes de combat.
 
@@ -979,7 +1007,9 @@ devient :
 
 ---
 
-# 33. Attaque et Attaque spéciale
+## 8. Dégâts et interactions élémentaires
+
+### 8.1. Attaque et Attaque spéciale
 
 Formule standard :
 
@@ -1004,7 +1034,7 @@ Exemples :
 
 ---
 
-# 34. Défense et Défense spéciale
+### 8.2. Défense et Défense spéciale
 
 La Défense réduit les dégâts Physiques.
 
@@ -1031,7 +1061,7 @@ Le même principe s'applique à Défense spéciale.
 
 ---
 
-# 35. Agilité
+### 8.3. Agilité
 
 L'Agilité contrôle la vitesse des Basic Attacks.
 
@@ -1051,7 +1081,7 @@ L'Agilité n'augmente pas le Crit.
 
 ---
 
-# 36. Crit
+### 8.4. Crit
 
 Le Crit est exprimé en points.
 
@@ -1069,7 +1099,7 @@ Les constantes sont des paramètres de balancing.
 
 ---
 
-# 37. Dégâts critiques
+### 8.5. Dégâts critiques
 
 Le multiplicateur Critique de base est prévu autour de :
 
@@ -1091,7 +1121,7 @@ Le coefficient exact sera défini pendant le balancing.
 
 ---
 
-# 38. Esquive
+### 8.6. Esquive
 
 L'Esquive est exprimée en points.
 
@@ -1118,7 +1148,7 @@ Un Skill peut être explicitement **inesquivable**.
 
 ---
 
-# 39. Ordre Esquive / Critique
+### 8.7. Ordre Esquive et Critique
 
 Pour un hit standard :
 
@@ -1130,7 +1160,7 @@ Aucun jet de Critique n'est effectué sur une attaque esquivée.
 
 ---
 
-# 40. Critiques autorisés
+### 8.8. Critiques autorisés
 
 Peuvent Critiquer :
 
@@ -1153,7 +1183,7 @@ Un Skill peut définir explicitement une exception.
 
 ---
 
-# 41. Éléments des attaques
+### 8.9. Éléments des attaques
 
 Chaque Basic possède un élément.
 
@@ -1173,7 +1203,7 @@ Une attaque Neutre ne déclenche aucune interaction élémentaire.
 
 ---
 
-# 42. Résistances élémentaires
+### 8.10. Résistances élémentaires
 
 Le système élémentaire est principalement **défensif**.
 
@@ -1195,7 +1225,7 @@ Un Skill peut exceptionnellement créer une immunité spécifique.
 
 ---
 
-# 43. Créatures bi-élément
+### 8.11. Créatures bi-élément
 
 Une créature peut avoir 1 ou maximum 2 éléments.
 
@@ -1215,7 +1245,7 @@ Les résistances ne sont jamais additionnées directement.
 
 ---
 
-# 44. Tableau des résistances élémentaires
+### 8.12. Table des résistances élémentaires
 
 Élément de la cible → éléments d'attaque auxquels il résiste :
 
@@ -1237,7 +1267,7 @@ Chaque élément offensif est résisté par exactement 3 éléments.
 
 ---
 
-# 45. Chaîne de calcul des dégâts standards
+### 8.13. Chaîne de calcul des dégâts standards
 
 Ordre conceptuel :
 
@@ -1258,7 +1288,7 @@ Les valeurs intermédiaires sont conservées avec 3 décimales.
 
 ---
 
-# 46. True Damage
+### 8.14. True Damage
 
 Le True Damage ignore :
 
@@ -1297,7 +1327,9 @@ Chaîne :
 
 ---
 
-# 47. Soins
+## 9. Soins et protections
+
+### 9.1. Soins
 
 Les soins peuvent Critiquer.
 
@@ -1314,7 +1346,7 @@ Un Skill peut explicitement créer une mécanique utilisant le surplus de soin.
 
 ---
 
-# 48. HoT
+### 9.2. HoT
 
 Les HoT fonctionnent selon les mêmes principes temporels généraux que les DoT.
 
@@ -1330,7 +1362,7 @@ Ils :
 
 ---
 
-# 49. Vol et drain de vie
+### 9.3. Vol et drain de vie
 
 Le Vol de vie peut restaurer une partie des dégâts réellement infligés.
 
@@ -1346,7 +1378,7 @@ Un Skill peut également utiliser un Drain de vie avec sa propre formule explici
 
 ---
 
-# 50. Boucliers
+### 9.4. Boucliers
 
 Un Bouclier est une **réserve universelle de dégâts flat**.
 
@@ -1386,7 +1418,7 @@ Il n'existe pas nécessairement de caractéristique système « Puissance de Bou
 
 ---
 
-# 51. Absorption
+### 9.5. Absorption
 
 L'Absorption est distincte du Bouclier.
 
@@ -1410,7 +1442,9 @@ Elles sont appliquées avant les Boucliers.
 
 ---
 
-# 52. DoT
+## 10. Effets périodiques et application des statuts
+
+### 10.1. DoT
 
 Les DoT utilisent une fréquence de tick globale.
 
@@ -1429,7 +1463,7 @@ Les modifications ultérieures des caractéristiques de la source ne modifient p
 
 ---
 
-# 53. Brûlure
+### 10.2. Brûlure
 
 La Brûlure :
 
@@ -1446,7 +1480,7 @@ Les valeurs exactes et règles de stacks seront détaillées ultérieurement.
 
 ---
 
-# 54. Poison
+### 10.3. Poison
 
 Le Poison :
 
@@ -1462,7 +1496,7 @@ Des Skills peuvent interagir spécifiquement avec le tag `Poison`.
 
 ---
 
-# 55. Saignement
+### 10.4. Saignement
 
 Le Saignement :
 
@@ -1477,7 +1511,7 @@ Des Skills peuvent interagir avec le tag `Saignement`.
 
 ---
 
-# 56. Sources multiples de DoT / HoT
+### 10.5. Sources multiples de DoT et HoT
 
 Deux créatures différentes appliquant le même type d'effet créent des effets indépendants.
 
@@ -1493,7 +1527,7 @@ La mort de la source ne supprime pas l'effet.
 
 ---
 
-# 57. Réapplication des statuts
+### 10.6. Réapplication des statuts
 
 La règle de réapplication dépend du statut.
 
@@ -1508,11 +1542,11 @@ Les règles détaillées doivent être définies par type de statut.
 
 ---
 
-# 58. Application d'un statut
+### 10.7. Application d’un statut
 
 Deux comportements existent.
 
-## 58.1 Statut lié directement au hit
+#### 10.7.1. Statut lié directement au hit
 
 Exemple :
 
@@ -1530,7 +1564,7 @@ Si l'attaque est esquivée :
 
 Il n'existe pas de second jet d'application caché.
 
-## 58.2 Probabilité explicitement définie
+#### 10.7.2. Probabilité explicitement définie
 
 Exemple :
 
@@ -1546,7 +1580,9 @@ Un Skill inesquivable peut toujours conserver une probabilité indépendante d'a
 
 ---
 
-# 59. CC total et tags
+## 11. Contrôles et autres effets de statut
+
+### 11.1. CC total et tags
 
 Les statuts suivants partagent la même mécanique de CC total :
 
@@ -1566,7 +1602,7 @@ Ils partagent néanmoins les mêmes règles générales de diminishing returns s
 
 ---
 
-# 60. Diminishing returns des CC
+### 11.2. Diminishing returns des CC
 
 Chaque créature possède son propre historique temporaire de CC.
 
@@ -1590,7 +1626,7 @@ La diminution porte prioritairement sur la **durée du CC** plutôt que sur sa c
 
 ---
 
-# 61. Immunités aux CC
+### 11.3. Immunités aux CC
 
 Un Skill peut donner temporairement une immunité à certains CC ou statuts.
 
@@ -1606,7 +1642,7 @@ Il n'existe pas d'immunité naturelle permanente basée uniquement sur l'éléme
 
 ---
 
-# 62. Silence
+### 11.4. Silence
 
 Pendant Silence :
 
@@ -1624,7 +1660,7 @@ Une Ultimate à 100 reste également disponible après la fin du Silence.
 
 ---
 
-# 63. Exclusion
+### 11.5. Exclusion
 
 L'Exclusion retire temporairement une créature du combat.
 
@@ -1654,7 +1690,7 @@ Elle ne compte pas comme créature actuellement présente/ciblable pour une AoE 
 
 ---
 
-# 64. Ralentissement et accélération
+### 11.6. Ralentissement et accélération
 
 Il n'existe pas de système séparé de Slow / Haste.
 
@@ -1671,7 +1707,7 @@ La conversion normale de l'Agilité détermine ensuite la vitesse réelle de Bas
 
 ---
 
-# 65. Réduction des soins
+### 11.7. Réduction des soins
 
 La réduction des soins reçus peut exister comme debuff indépendant.
 
@@ -1683,7 +1719,7 @@ La valeur exacte du cap reste à équilibrer.
 
 ---
 
-# 66. Cleanse
+### 11.8. Cleanse
 
 Cleanse retire des effets négatifs d'un allié ou de soi-même.
 
@@ -1702,7 +1738,7 @@ Exemples :
 
 ---
 
-# 67. Dispel
+### 11.9. Dispel
 
 Dispel retire des effets positifs d'un ennemi.
 
@@ -1714,7 +1750,7 @@ Un Skill peut définir une autre règle.
 
 ---
 
-# 68. Buff identique réappliqué
+### 11.10. Buff identique réappliqué
 
 Plusieurs buffs provenant de sources différentes peuvent coexister et leurs modifications sont appliquées successivement.
 
@@ -1724,7 +1760,7 @@ Lorsqu'une même source réapplique exactement le même buff :
 
 ---
 
-# 69. Drain et vol d'énergie
+### 11.11. Drain et vol d’énergie
 
 Un Skill peut :
 
@@ -1739,7 +1775,7 @@ Il n'existe pas de statut général empêchant totalement toute génération d'�
 
 ---
 
-# 70. Root et Taunt
+### 11.12. Root et Taunt
 
 Il n'existe pas de mécanique générale de :
 
@@ -1757,7 +1793,7 @@ Le ciblage défensif repose sur :
 
 ---
 
-# 71. Snapshot
+### 11.13. Snapshot
 
 Les effets périodiques comme les DoT et HoT utilisent un snapshot de leur source.
 
@@ -1787,7 +1823,7 @@ Ainsi :
 
 ---
 
-# 72. Éléments à équilibrer ultérieurement
+## 12. Paramètres à équilibrer ultérieurement
 
 Les décisions structurelles sont validées, mais de nombreux paramètres numériques restent volontairement ouverts.
 
@@ -1830,16 +1866,18 @@ Ces éléments devront être déterminés par :
 
 ---
 
-# 73. Documents spécialisés liés
+## 13. Dépendances et principe d’exception
+
+### 13.1. Documents spécialisés liés
 
 Ce document définit les règles communes du moteur de combat.
 
 Les systèmes spécialisés devront être développés plus précisément dans leurs documents dédiés, notamment :
 
-* `03-CREATURES.md`
-* `04-SKILLS.md`
-* `05-ELEMENTS.md`
-* `06-STATUS_EFFECTS.md`
+* [`03-CREATURES.md`](./03-CREATURES.md)
+* [`04-SKILLS.md`](./04-SKILLS.md)
+* [`05-ELEMENTS.md`](./05-ELEMENTS.md)
+* [`06-STATUS_EFFECTS.md`](./06-STATUS_EFFECTS.md)
 * `07-EVOLUTIONS.md`
 * `08-ITEMS.md`
 * `10-PROGRESSION.md`
@@ -1848,7 +1886,7 @@ Ces documents doivent respecter les règles structurelles définies ici et peuve
 
 ---
 
-# 74. Principe d'exception explicite
+### 13.2. Principe d’exception explicite
 
 Les règles de ce document constituent le comportement standard du moteur.
 

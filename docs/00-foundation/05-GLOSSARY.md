@@ -268,15 +268,17 @@ L’évolution transforme la même créature : elle reste le même individu apr�
 
 **Domaine :** Progression des créatures
 
-**Définition :** Valeur principale propre à une créature et susceptible d’être influencée par sa progression et sa personnalisation.
+**Définition :** Valeur propre à une créature et susceptible d’influencer son fonctionnement.
 
-Les **points de caractéristiques** sont attribués à la créature concernée lors de ses montées de niveau. Le joueur les répartit librement sur cette même créature afin d’augmenter ses caractéristiques selon le build souhaité.
+Une caractéristique est **principale** ou **secondaire**. Les **points de caractéristiques** attribués lors des montées de niveau peuvent uniquement être répartis entre les caractéristiques principales de la créature concernée.
 
 Cette répartition constitue un choix important et n’est pas librement réversible. Les méthodes validées permettant de la modifier sont définies par les entrées consacrées aux réinitialisations.
 
-**Terme à éviter :** « statistique » comme synonyme direct d’une caractéristique principale.
+**Terme à éviter :** « statistique » comme synonyme direct d’une caractéristique.
 
 Chaque créature possède exactement six caractéristiques principales : les points de vie, l’Attaque, l’Attaque spéciale, la Défense, la Défense spéciale et l’Agilité.
+
+Les caractéristiques secondaires système sont le Crit, les Dégâts critiques et l’Esquive. Elles peuvent notamment provenir des valeurs de base, de l’équipement, des Skills, des Passive, des buffs, des debuffs ou d’autres systèmes de progression explicitement documentés, mais ne reçoivent pas directement les points gagnés lors des montées de niveau.
 
 ### Points de vie
 
@@ -318,9 +320,9 @@ Le terme « spécial » ne désigne pas uniquement la magie. Il peut couvrir des
 
 **Domaine :** Combat, progression des créatures
 
-**Définition :** Caractéristique liée au minimum à la vitesse d’une créature et à ses chances de coup critique.
+**Définition :** Caractéristique principale contrôlant l’intervalle des Basic Attacks selon une courbe de rendement décroissant.
 
-L’Agilité constitue une base du calcul des chances de coup critique, sans en être nécessairement l’unique source. Son influence exacte sur l’ordre et la fréquence des actions reste à définir dans la documentation du combat.
+L’Agilité n’augmente pas le Crit.
 
 ### Dégâts physiques
 
@@ -338,13 +340,25 @@ Par défaut, une source de dégâts est physique ou spéciale. Toute source ne d
 
 Chaque compétence offensive doit déclarer sa catégorie de dégâts ainsi que la caractéristique offensive utilisée : Attaque, Attaque spéciale ou, exceptionnellement, aucune lorsqu’elle suit une formule particulière.
 
-### Coup critique
+### Crit
 
 **Domaine :** Combat
 
-**Définition :** Résultat particulier pouvant modifier les dégâts d’une attaque selon des règles qui restent à définir.
+**Définition :** Caractéristique secondaire déterminant la probabilité qu’un effet autorisé produise un coup critique.
 
-Les dégâts physiques et spéciaux peuvent produire des coups critiques par défaut. Une compétence peut exceptionnellement les interdire si cette propriété est explicite. Les compétences, les équipements, les effets de statut et d’autres effets documentés peuvent modifier les chances de coup critique.
+**Terme associé :** Un **coup critique** est le résultat produit lorsque le jet de Crit réussit.
+
+### Dégâts critiques
+
+**Domaine :** Combat
+
+**Définition :** Caractéristique secondaire déterminant le multiplicateur appliqué lorsqu’un effet produit un coup critique.
+
+### Esquive
+
+**Domaine :** Combat
+
+**Définition :** Caractéristique secondaire déterminant la probabilité qu’un hit esquivable manque sa cible.
 
 ### Statistique
 
@@ -370,15 +384,45 @@ Les dégâts physiques et spéciaux peuvent produire des coups critiques par dé
 
 **Domaine :** Créatures, compétences
 
-**Définition :** Groupe prédéfini de quatre compétences appartenant à une créature : une compétence active, deux compétences passives et une compétence ultime.
+**Définition :** Groupe prédéfini de quatre Skills appartenant à une créature : exactement une Ultimate et trois autres Skills formant une combinaison fixe d’Active et de Passive.
 
-Lorsqu’une créature est obtenue, son ensemble de compétences est déjà déterminé. Le joueur ne choisit pas ces compétences, ne les remplace pas et ne construit pas son build en sélectionnant des compétences dans une liste. Elles définissent l’identité fonctionnelle, le rôle et les synergies potentielles de la créature.
+Lorsqu’une créature est obtenue, son ensemble de Skills est déjà déterminé. Le joueur ne choisit pas ces Skills, ne les remplace pas et ne construit pas son build en sélectionnant des Skills dans une liste. Ils définissent l’identité fonctionnelle, le rôle et les synergies potentielles de la créature.
 
 **Variante autorisée :** « compétences fixes » lorsqu’il est utile d’insister sur l’absence de sélection ou de remplacement par le joueur.
 
 **Question ouverte :**
 
 * Une nouvelle forme obtenue lors d’une évolution conserve-t-elle les mêmes compétences ou possède-t-elle un nouvel ensemble prédéfini ?
+
+### Skill
+
+**Domaine :** Créatures, combat
+
+**Définition :** Capacité prédéfinie appartenant à l’ensemble fixe d’une créature. Un Skill est une Active, une Passive ou une Ultimate.
+
+### Basic Attack
+
+**Domaine :** Créatures, combat
+
+**Définition :** Action offensive de base d’une créature. Elle est distincte de ses quatre Skills et possède notamment son propre intervalle, son propre élément, son gain d’énergie et ses règles de ciblage.
+
+### Active
+
+**Domaine :** Skills, combat
+
+**Définition :** Skill déclenché automatiquement lorsqu’il est prêt à une opportunité d’action valide, après un nombre défini de Basic Attacks réussies. Si plusieurs Active sont prêtes, leur ordre sur la fiche de la créature définit leur priorité.
+
+### Passive
+
+**Domaine :** Skills, combat
+
+**Définition :** Skill produisant un effet permanent, conditionnel ou déclenché sans occuper une opportunité d’action comme une Active ou une Ultimate, sauf exception explicitement définie.
+
+### Ultimate
+
+**Domaine :** Skills, combat
+
+**Définition :** Skill associé à une jauge d’énergie allant de 0 à 100. Lorsqu’elle est prête et autorisée à se déclencher, l’Ultimate a priorité sur une Active puis sur la Basic Attack à la prochaine opportunité d’action valide.
 
 ### Objet
 
@@ -415,7 +459,7 @@ L’inventaire reste distinct du système de collection. Il ne constitue pas l�
 
 ### Coffre
 
-**Statut :** Provisoire — proposition non validée  
+**Statut :** Provisoire — proposition non validée
 **Domaine :** Objets
 
 **Définition :** Objet qui pourrait être obtenu, stocké dans un inventaire puis ouvert afin de recevoir un contenu.
@@ -510,7 +554,7 @@ Le terme doit rester qualifié. Une composition d’équipe ne doit pas être ap
 
 **Domaine :** Game design
 
-**Définition :** Ensemble concret de six créatures sélectionnées ou utilisées par le joueur.
+**Définition :** Ensemble concret pouvant réunir jusqu’à six créatures sélectionnées ou utilisées par le joueur.
 
 Les monstres ennemis ne font pas partie de l’équipe du joueur.
 
@@ -522,7 +566,7 @@ Les monstres ennemis ne font pas partie de l’équipe du joueur.
 
 **Variante autorisée :** « composition » lorsque le contexte est explicite.
 
-## 6. Éléments et affinités
+## 6. Éléments et résistances
 
 ### Élément
 
@@ -541,10 +585,10 @@ Les neuf éléments officiels sont :
 5. Plante ;
 6. Métal ;
 7. Électricité ;
-8. Lumière ;
+8. Lumineux ;
 9. Ténèbres.
 
-**Terme à éviter :** « Lumineux » comme nom de l’élément. Le mot reste autorisé comme adjectif.
+**Terme à éviter :** « Lumière » comme nom de l’élément.
 
 ### Créature mono-élément
 
@@ -558,71 +602,55 @@ Les neuf éléments officiels sont :
 
 **Définition :** Créature possédant deux éléments dans sa forme actuelle. Ses deux éléments sont mécaniquement égaux et ne sont pas hiérarchisés comme principal et secondaire.
 
-Les affinités des deux éléments se combinent de manière multiplicative. Deux faiblesses ou deux résistances peuvent produire une interaction renforcée ; une faiblesse et une résistance peuvent se neutraliser. La présence de deux éléments ne confère aucun avantage ou désavantage global automatique.
+Lorsqu’un seul de ses éléments résiste à l’élément d’une attaque, la réduction est appliquée une fois. Lorsque ses deux éléments y résistent, les deux réductions sont appliquées successivement et de manière multiplicative. La présence de deux éléments ne confère aucun avantage ou désavantage global automatique.
 
 Toutes les combinaisons sont autorisées par défaut. Une interdiction éventuelle doit répondre à un problème de conception ou d’équilibrage explicitement identifié.
 
-### Affinité élémentaire
+### Interaction élémentaire
 
 **Domaine :** Éléments, combat
 
-**Définition :** Relation entre l’élément d’une compétence offensive et le ou les éléments de sa cible, déterminant une faiblesse, une résistance ou une interaction neutre.
+**Définition :** Relation défensive entre l’élément d’une attaque et le ou les éléments de sa cible, déterminant une résistance ou une interaction neutre.
 
-Les relations de la table élémentaire sont réciproques. Un élément résiste à lui-même. Le nombre exact de forces et de faiblesses de chaque élément doit respecter une plage commune qui reste à définir.
-
-### Faiblesse élémentaire
-
-**Domaine :** Éléments, combat
-
-**Définition :** Affinité dans laquelle l’élément d’une compétence offensive est efficace contre un élément de la cible.
+Une relation standard n’accorde aucun bonus offensif automatique. Les relations ne sont pas obligatoirement réciproques et le même élément contre lui-même est neutre.
 
 ### Résistance élémentaire
 
 **Domaine :** Éléments, combat
 
-**Définition :** Affinité dans laquelle un élément de la cible réduit l’efficacité de l’élément d’une compétence offensive.
+**Définition :** Interaction dans laquelle un élément de la cible réduit les dégâts d’une attaque possédant l’un des éléments auxquels il résiste.
 
 ### Interaction neutre
 
 **Domaine :** Éléments, combat
 
-**Définition :** Résultat d’une confrontation entre deux éléments lorsqu’aucune faiblesse ni résistance ne s’applique.
+**Définition :** Résultat d’une confrontation entre deux éléments lorsqu’aucune résistance ne s’applique. Le même élément contre lui-même est neutre.
 
 Cette notion ne doit pas être confondue avec une compétence sans élément.
 
-### Faiblesse renforcée
+### Double résistance
 
 **Domaine :** Éléments, combat
 
-**Définition :** Résultat pouvant être produit lorsqu’une compétence rencontre la même faiblesse sur les deux éléments d’une créature bi-élément.
-
-### Résistance renforcée
-
-**Domaine :** Éléments, combat
-
-**Définition :** Résultat pouvant être produit lorsqu’une compétence rencontre la même résistance sur les deux éléments d’une créature bi-élément.
+**Définition :** Interaction produite lorsque les deux éléments d’une créature bi-élément résistent à l’élément d’une attaque. Les deux réductions sont appliquées successivement et de manière multiplicative, jamais additionnées.
 
 ### Compétence sans élément
 
 **Domaine :** Compétences, éléments
 
-**Définition :** Compétence qui ne possède aucun élément. Une compétence offensive possède exactement un élément ou est explicitement déclarée sans élément ; elle ne possède pas deux éléments simultanément dans le système initial.
+**Définition :** Basic Attack ou Skill ne possédant aucun élément. Une attaque possède exactement un élément ou est explicitement déclarée sans élément ; elle ne possède pas deux éléments simultanément dans le système initial.
 
 ### Immunité élémentaire
 
 **Domaine :** Éléments, combat
 
-**Définition :** Propriété particulière empêchant explicitement une interaction ou ses effets. Elle ne provient pas automatiquement de la table élémentaire de base, qui ne contient aucune immunité générale.
+**Définition :** Propriété particulière empêchant explicitement une interaction ou ses effets. Elle ne provient jamais automatiquement de la table élémentaire, qui ne contient aucune immunité naturelle.
 
-Par défaut, une immunité explicitement déclarée domine une faiblesse élémentaire, sauf règle contraire elle aussi explicite.
-
-**Question ouverte :**
-
-* L’existence d’un bonus lorsqu’une compétence partage un élément avec la créature qui l’utilise.
+Une immunité élémentaire doit être créée explicitement par un Skill ou un autre effet documenté.
 
 **Éléments à préciser ultérieurement :**
 
-* La table exacte des affinités, les plages communes de forces et de faiblesses et les coefficients applicables aux interactions simples ou renforcées.
+* Les coefficients de réduction applicables aux résistances simples et doubles.
 
 ## 7. Effets de statut
 
@@ -658,9 +686,7 @@ L’association entre un effet de statut et un élément est facultative. Elle d
 
 **Domaine :** Effets de statut, combat
 
-**Définition :** Propriété pouvant limiter l’application ou, si cela est défini ultérieurement, la durée ou l’intensité d’un effet de statut.
-
-Cette propriété ne constitue pas une septième caractéristique principale. Les mécanismes portant sur l’application, la durée et l’intensité restent distincts et ne sont pas tous considérés comme validés.
+**Définition :** Propriété explicitement définie pouvant limiter l’application, la durée ou l’intensité d’un effet de statut. Elle ne constitue ni une caractéristique principale ni une caractéristique secondaire système.
 
 ### Immunité à un effet de statut
 
@@ -674,7 +700,19 @@ Cette propriété ne constitue pas une septième caractéristique principale. Le
 
 **Définition :** Action générique mettant fin à un effet avant son expiration normale. Chaque effet doit préciser s’il peut être retiré et, le cas échéant, selon quelles conditions générales.
 
-Des termes spécialisés comme « dissiper », « purifier » ou « soigner » ne doivent être employés comme actions distinctes que si leur sens est défini dans la documentation spécialisée.
+Les actions spécialisées Cleanse et Dispel sont définies ci-dessous.
+
+### Cleanse
+
+**Domaine :** Effets de statut, Skills
+
+**Définition :** Action retirant par défaut un effet négatif aléatoire d’un allié ou de soi-même. Un Skill peut définir une sélection ou une quantité différente.
+
+### Dispel
+
+**Domaine :** Effets de statut, Skills
+
+**Définition :** Action retirant par défaut un effet positif aléatoire d’un ennemi. Un Skill peut définir une sélection ou une quantité différente.
 
 ### Coexistence et cumul des effets de statut
 
@@ -687,6 +725,68 @@ Des incompatibilités entre certains effets peuvent être déclarées lorsqu’e
 **Éléments à préciser ultérieurement :**
 
 * La liste des effets de statut, leurs conditions et chances d’application, leurs durées, leurs valeurs, leurs règles individuelles de cumul et de renouvellement, leurs interactions, leur retrait ainsi que les mécanismes détaillés de résistance et d’immunité.
+
+### DoT
+
+**Domaine :** Effets de statut, combat
+
+**Définition :** Effet infligeant des dégâts périodiques selon une fréquence de tick globale.
+
+### HoT
+
+**Domaine :** Effets de statut, combat
+
+**Définition :** Effet appliquant des soins périodiques selon une fréquence de tick globale.
+
+### Snapshot
+
+**Domaine :** Effets périodiques, combat
+
+**Définition :** Conservation de l’état de la source au moment de l’application d’un effet périodique. L’état de la cible reste dynamique et est recalculé à chaque tick.
+
+### Buff
+
+**Domaine :** Effets de statut, combat
+
+**Définition :** Effet positif temporaire. Un buff reste distinct d’une modification de caractéristique explicitement appliquée jusqu’à la fin du combat.
+
+### Debuff
+
+**Domaine :** Effets de statut, combat
+
+**Définition :** Effet négatif temporaire. Un debuff reste distinct d’une modification de caractéristique explicitement appliquée jusqu’à la fin du combat.
+
+### Crowd Control
+
+**Domaine :** Effets de statut, combat
+
+**Définition :** Effet limitant ou empêchant les actions d’une créature. Les tags de CC total standards sont Stun, Glacé et Peur ; ils partagent les mêmes règles générales de diminishing returns.
+
+**Abréviation autorisée :** CC
+
+### Exclusion
+
+**Domaine :** Effets de statut, combat
+
+**Définition :** Effet retirant temporairement une créature du combat sans la tuer. La créature ne peut ni agir ni être ciblée, et ses timers personnels ainsi que ses effets temporaires sont gelés jusqu’à son retour.
+
+### Bouclier
+
+**Domaine :** Combat, protections
+
+**Définition :** Réserve universelle de dégâts flat consommée avant les PV. Les Boucliers peuvent coexister comme réserves séparées.
+
+### Absorption
+
+**Domaine :** Combat, protections
+
+**Définition :** Réduction en pourcentage appliquée aux dégâts avant les Boucliers. Le même effet d’Absorption renouvelle sa durée sans se cumuler ; des effets différents peuvent coexister.
+
+### True Damage
+
+**Domaine :** Combat, dégâts
+
+**Définition :** Catégorie particulière de dégâts ignorant les Défenses et plusieurs réductions générales, mais restant soumise aux résistances élémentaires, à l’Absorption et aux Boucliers. Elle ne peut pas produire de Crit par défaut.
 
 ## 8. Acquisition, hasard et récompenses
 
@@ -1029,7 +1129,7 @@ Elle peut être interprétée narrativement comme une nouvelle manifestation ou 
 
 ### Monnaie de conversion des doublons
 
-**Statut :** Provisoire — nom descriptif interne  
+**Statut :** Provisoire — nom descriptif interne
 **Domaine :** Économie, cosmétiques
 
 **Définition :** Monnaie cosmétique permanente provenant de la conversion des doublons de skins de carte et utilisable dans le catalogue de conversion.
@@ -1048,7 +1148,7 @@ Chaque rareté possède une valeur de conversion fixe différente. Cette monnaie
 
 Dans le modèle initial, la boutique permet notamment d’acheter directement contre de l’argent réel des paquets de skins de carte. Elle ne vend aucune créature, invocation, ressource de progression, équipement, avantage de combat ou autre forme de puissance.
 
-Le service payant de réinitialisation des points de caractéristiques reste distinct de la boutique cosmétique.
+Les services payants de réinitialisation des points de caractéristiques et de vitesse de visualisation des combats restent distincts de la boutique cosmétique.
 
 **Variante autorisée :** « boutique cosmétique » lorsqu’il est utile de rappeler explicitement son périmètre.
 
@@ -1081,6 +1181,20 @@ Un catalogue désigne un ensemble de contenus disponibles ; la boutique désigne
 **Définition :** Manière dont les actions sont contrôlées pendant un combat, notamment le combat automatique ou semi-automatique.
 
 **Terme à éviter :** « mode de jeu » pour désigner le degré d’automatisation d’un combat.
+
+### Timeout
+
+**Domaine :** Combat
+
+**Définition :** Durée maximale de simulation d’un combat avant l’application de sa règle de départage. Le timeout standard est de 120 secondes de simulation, sauf exception explicitement définie par un mode.
+
+### Vitesse de visualisation
+
+**Domaine :** Combat, monétisation
+
+**Définition :** Vitesse à laquelle la simulation de combat est restituée au joueur dans le temps réel. ×1 est gratuit ; ×2 et ×4 sont des services de confort payants.
+
+La vitesse de visualisation ne modifie jamais la simulation, sa seed RNG, ses calculs, ses statistiques, ses événements, son résultat, ses récompenses ou son coût en énergie.
 
 ## 11. Conception, expérience et intelligence artificielle
 

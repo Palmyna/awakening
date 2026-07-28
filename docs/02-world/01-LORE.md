@@ -294,7 +294,7 @@ Le vocabulaire narratif définitif de ce processus sera établi dans `02-CREATUR
 
 ### 7.3. Éléments et Origines
 
-Les éléments restent une classification de gameplay représentant principalement les pouvoirs, les capacités, les résistances, les faiblesses et le style de combat d’une créature.
+Les éléments restent une classification de gameplay représentant principalement les pouvoirs, les capacités, les résistances et le style de combat d’une créature. Leurs interactions mécaniques sont définies par la documentation de game design et ne doivent pas être déduites du lore.
 
 Les neuf éléments validés sont :
 
@@ -305,7 +305,7 @@ Les neuf éléments validés sont :
 5. Plante ;
 6. Métal ;
 7. Électricité ;
-8. Lumière ;
+8. Lumineux ;
 9. Ténèbres.
 
 Une classification narrative complémentaire provisoirement appelée **Origine** est en cours de définition.

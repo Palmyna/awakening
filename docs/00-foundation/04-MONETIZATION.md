@@ -43,7 +43,7 @@ Au lancement :
 
 La boutique est exclusivement cosmétique. Elle ne vend aucune créature, aucune invocation, aucune ressource de progression, aucun équipement, aucun avantage de combat et aucune autre forme de puissance.
 
-Une exception limitée, distincte de la boutique cosmétique, autorise un service payant de réinitialisation des points de caractéristiques. Ce service redistribue uniquement les points déjà gagnés par une créature et ne lui accorde aucune expérience, aucun point supplémentaire ni aucune augmentation de son potentiel maximal.
+Deux services de confort limités, distincts de la boutique cosmétique, sont validés : la réinitialisation payante des points de caractéristiques déjà gagnés et les vitesses de visualisation accélérées des combats. Ils ne doivent accorder aucune puissance ni influencer le résultat ou les récompenses d’un combat.
 
 ### 3.2. Une monétisation principalement cosmétique
 
@@ -75,7 +75,10 @@ Sont interdits :
 * tout contenu payant indispensable pour rester compétitif ;
 * toute offre permettant de contourner de manière importante la progression normale.
 
-Le service payant de réinitialisation constitue l’unique exception de confort validée dans le modèle initial. Son périmètre étroit ne doit pas être étendu afin d’accélérer la progression normale : il redistribue des points déjà gagnés sans accorder de niveau, d’expérience, de ressource ou de potentiel supplémentaire.
+Les services de confort validés dans le modèle initial sont strictement limités :
+
+* la réinitialisation payante redistribue des points déjà gagnés sans accorder de niveau, d’expérience, de ressource ou de potentiel supplémentaire ;
+* les vitesses ×2 et ×4 accélèrent uniquement la visualisation du combat en temps réel, sans modifier sa simulation.
 
 Une dépense effectuée dans la boutique cosmétique ne doit produire directement ou indirectement aucune créature, invocation, ressource de progression, équipement, avantage de combat ou autre forme de puissance.
 
@@ -93,7 +96,8 @@ Le modèle de lancement comprend uniquement :
 * un système de conversion des doublons de skins de carte ;
 * une monnaie permanente issue de ces doublons, provisoirement nommée « monnaie de conversion des doublons » ;
 * un catalogue cosmétique permanent et limité utilisant cette monnaie ;
-* un service payant strictement limité permettant de redistribuer les points de caractéristiques déjà gagnés par une créature sans la ramener au niveau 1.
+* un service payant strictement limité permettant de redistribuer les points de caractéristiques déjà gagnés par une créature sans la ramener au niveau 1 ;
+* des paliers payants ×2 et ×4 de vitesse de visualisation des combats, en complément du palier ×1 gratuit.
 
 Ce périmètre doit rester compatible avec les capacités humaines, techniques et financières du projet.
 
@@ -108,7 +112,7 @@ Ne sont pas prévus au lancement :
 * les abonnements ;
 * les passes ;
 * l’achat direct d’un skin précis appartenant à une série distribuée par paquets ;
-* tout autre système commercial supplémentaire en dehors du service limité de réinitialisation validé.
+* tout autre système commercial supplémentaire en dehors des services limités de réinitialisation et de vitesse de visualisation validés.
 
 Ces exclusions définissent le modèle initial. Elles ne constituent pas une autorisation implicite d’ajouter ces systèmes ultérieurement : toute évolution devra faire l’objet d’une nouvelle décision explicite et d’une vérification de sa cohérence avec la documentation de fondation.
 
@@ -144,6 +148,36 @@ Le service ne doit jamais devenir nécessaire pour progresser normalement, corri
 * Le prix du service.
 * La méthode d’obtention, la rareté et le rythme de distribution de l’objet permettant une réinitialisation sans retour au niveau 1.
 * Les règles de conservation de l’évolution, du niveau d’étoiles, de l’équipement et des autres éléments lors d’une réinitialisation complète.
+
+### 4.4. Exception limitée — vitesses de visualisation accélérées
+
+La visualisation d’un combat est disponible selon trois paliers :
+
+* ×1, gratuit ;
+* ×2, premier palier payant ;
+* ×4, palier payant supérieur.
+
+Le joueur peut acheter directement ×4 ou, s’il possède déjà ×2, payer seulement la différence pour effectuer l’upgrade. Les prix exacts restent à définir.
+
+La vitesse peut être changée à tout moment pendant un combat, en mode Auto comme en mode Manuel. Le dernier choix du joueur est conservé pour le combat suivant.
+
+Ce service accélère uniquement la restitution du combat dans le temps réel. Il ne change jamais :
+
+* les 120 secondes de simulation ;
+* les calculs ;
+* la seed RNG ;
+* les statistiques ;
+* les événements ;
+* le résultat ;
+* les récompenses ;
+* le coût en énergie.
+
+**Éléments à préciser ultérieurement :**
+
+* Le prix de ×2.
+* Le prix de ×4.
+* La différence demandée lors du passage de ×2 à ×4.
+* La présentation commerciale et les confirmations d’achat.
 
 ## 5. Acquisition des skins de carte
 
@@ -339,6 +373,7 @@ Les prix seront établis après :
 * Les prix exacts des paquets de skins de carte.
 * Les éventuelles variations de prix entre les séries.
 * Le prix du service limité de réinitialisation des points de caractéristiques.
+* Les prix des vitesses de visualisation ×2 et ×4 ainsi que de leur upgrade.
 
 ## 9. Transparence et protection des joueurs
 
@@ -381,6 +416,13 @@ Avant l’achat d’une réinitialisation des points de caractéristiques, le jo
 * l’existence d’une réinitialisation complète gratuite ;
 * l’existence d’un objet obtenu en jouant permettant le même résultat sans retour au niveau 1.
 
+Avant l’achat d’une vitesse de visualisation accélérée, le joueur doit également connaître :
+
+* le palier acheté ;
+* son prix réel ;
+* la possibilité d’acheter directement ×4 ou de payer seulement la différence après ×2 ;
+* le fait que la vitesse modifie uniquement la restitution en temps réel et n’influence pas la simulation, le résultat, les récompenses ou le coût en énergie.
+
 **Question ouverte :**
 
 * L’ajout éventuel de limites volontaires configurables par le joueur, selon les capacités techniques du projet.
@@ -395,7 +437,7 @@ L’achat direct d’invocations pourra uniquement être réévalué après la d
 
 Une éventuelle décision future en ce sens ne devra jamais intégrer les invocations à la boutique cosmétique ni confondre leur parcours avec celui des paquets de skins de carte.
 
-En dehors du service limité de réinitialisation déjà validé, d’autres services de confort pourront éventuellement être étudiés, mais ils ne devront :
+En dehors du service limité de réinitialisation et des vitesses de visualisation ×2 et ×4 déjà validés, d’autres services de confort pourront éventuellement être étudiés, mais ils ne devront :
 
 * conférer aucune puissance exclusive ;
 * supprimer aucune étape essentielle du jeu ;
@@ -471,7 +513,8 @@ La monétisation doit être évaluée à partir :
 * de la satisfaction des joueurs ;
 * de leur perception de l’équité ;
 * de la vérification qu’aucun achat cosmétique n’influence directement ou indirectement la progression ;
-* de la vérification que le service de réinitialisation n’accorde aucun point, aucune expérience, aucun potentiel supplémentaire et aucun résultat inaccessible gratuitement.
+* de la vérification que le service de réinitialisation n’accorde aucun point, aucune expérience, aucun potentiel supplémentaire et aucun résultat inaccessible gratuitement ;
+* de la vérification que les vitesses de visualisation payantes n’influencent jamais la simulation, le résultat, les récompenses ou le coût en énergie.
 
 Une offre doit être refusée lorsqu’elle contrevient aux principes d’équité, de transparence ou de respect des joueurs, même si elle est rentable.
 

@@ -118,11 +118,10 @@ Chaque créature possède notamment :
 
 * une rareté ;
 * un ou deux éléments au maximum ;
-* quatre compétences :
+* exactement quatre Skills :
 
-  * une compétence active ;
-  * deux compétences passives ;
-  * une compétence ultime ;
+  * exactement une Ultimate ;
+  * trois autres Skills formant une combinaison fixe d’Active et de Passive ;
 * six caractéristiques principales :
 
   * les points de vie (PV) ;
@@ -131,13 +130,18 @@ Chaque créature possède notamment :
   * la Défense ;
   * la Défense spéciale ;
   * l’Agilité ;
+* trois caractéristiques secondaires :
+
+  * le Crit ;
+  * les Dégâts critiques ;
+  * l’Esquive ;
 * une progression individuelle.
 
-L’ensemble de quatre compétences d’une créature est prédéfini. Lorsqu’une créature est obtenue, le joueur ne choisit pas ses compétences, ne les remplace pas et ne construit pas son build en sélectionnant des compétences dans une liste. Ces compétences définissent son identité fonctionnelle, son rôle et ses synergies potentielles.
+L’ensemble de quatre Skills d’une créature est prédéfini. Lorsqu’une créature est obtenue, le joueur ne choisit pas ses Skills, ne les remplace pas et ne construit pas son build en les sélectionnant dans une liste. Ces Skills définissent son identité fonctionnelle, son rôle et ses synergies potentielles.
 
 La question de savoir si une nouvelle forme obtenue lors d’une évolution conserve les mêmes compétences ou possède un nouvel ensemble prédéfini reste à définir. Dans tous les cas, le joueur ne sélectionne pas librement les compétences de la forme obtenue.
 
-Le joueur constitue une équipe de six créatures afin d’affronter les différents contenus du jeu.
+Le joueur constitue une équipe pouvant réunir jusqu’à six créatures afin d’affronter les différents contenus du jeu.
 
 Les combats sont principalement automatisés afin de mettre l’accent sur la préparation des équipes et la stratégie plutôt que sur les réflexes.
 
@@ -184,7 +188,7 @@ Les doublons de créature servent à améliorer le niveau d’étoiles de la cr�
 
 Les combats sont conçus pour être rapides et dynamiques.
 
-La durée moyenne d’un combat doit être comprise entre **30 et 60 secondes**.
+La durée moyenne recherchée d’un combat doit être comprise entre **30 et 60 secondes**. Tous les combats utilisent par défaut un timeout de **120 secondes de simulation**, sauf exception explicitement définie par un mode.
 
 Les attaques et les compétences ordinaires sont utilisées automatiquement. Le joueur peut choisir le moment où déclencher les compétences ultimes ou activer une option qui les gère également de manière automatique.
 
@@ -192,7 +196,7 @@ Le joueur peut ainsi intervenir de manière limitée ou laisser le combat se dé
 
 Par défaut, les dégâts sont physiques ou spéciaux. Chaque compétence offensive doit déclarer la catégorie de dégâts et la caractéristique offensive qu’elle utilise : Attaque, Attaque spéciale ou, exceptionnellement, aucune lorsqu’elle suit une formule particulière. Toute exception aux règles ordinaires de dégâts doit être explicite.
 
-Les dégâts physiques et spéciaux peuvent produire des coups critiques par défaut. L’Agilité constitue une base de leur probabilité et peut être complétée par des compétences, des équipements, des effets de statut ou d’autres effets documentés. Son influence exacte sur l’ordre ou la fréquence des actions reste à définir dans le document consacré au combat.
+Les dégâts physiques et spéciaux peuvent produire des coups critiques par défaut. Le Crit est une caractéristique secondaire indépendante. L’Agilité contrôle l’intervalle des Basic Attacks et n’augmente pas le Crit.
 
 Le jeu récompense avant tout la qualité de la préparation des équipes.
 
@@ -212,28 +216,24 @@ La liste officielle comprend neuf éléments :
 5. Plante ;
 6. Métal ;
 7. Électricité ;
-8. Lumière ;
+8. Lumineux ;
 9. Ténèbres.
 
 L’élément d’une créature représente principalement la nature de ses pouvoirs, de ses capacités, de ses résistances et de son style de combat. Il n’est pas déterminé uniquement par son apparence, son espèce, son habitat ou son histoire.
 
-Une compétence offensive possède exactement un élément ou est explicitement sans élément. Une compétence ne possède pas deux éléments simultanément dans le système initial.
+Chaque Basic Attack et chaque Skill offensif possède exactement un élément ou est explicitement sans élément. Une attaque ne possède pas deux éléments simultanément dans le système initial.
 
-Les relations élémentaires sont réciproques et peuvent produire une faiblesse, une résistance ou une interaction neutre. Un élément résiste à lui-même. La table élémentaire de base ne produit aucune immunité générale.
+Le système élémentaire standard est défensif. Il n’accorde aucun bonus offensif automatique : un élément de la cible peut résister à l’élément de l’attaque, tandis qu’une relation non déclarée et le même élément contre lui-même restent neutres. La table élémentaire de base ne produit aucune immunité naturelle.
 
-Pour une créature bi-élément, les affinités de ses deux éléments se combinent de manière multiplicative. Deux faiblesses ou deux résistances peuvent ainsi se renforcer, tandis qu’une faiblesse et une résistance peuvent se neutraliser. Les coefficients exacts restent à définir.
+Pour une créature bi-élément, une résistance applicable sur un seul de ses éléments est appliquée une fois. Lorsque ses deux éléments résistent à l’attaque, les deux réductions sont appliquées successivement et de manière multiplicative. Les coefficients exacts restent à équilibrer.
 
 Toutes les combinaisons de deux éléments sont autorisées par défaut. Chaque forme déclare explicitement son ou ses éléments, qui peuvent changer lors d’une évolution lorsque les pouvoirs, les capacités, les résistances ou le style de combat de la créature le justifient.
 
 Une créature bi-élément ne reçoit aucun avantage ou désavantage global automatique, et une créature mono-élément aucune compensation systématique. Leur équilibre doit être évalué à partir de leur profil complet.
 
-**Question ouverte :**
-
-* L’existence d’un bonus lorsqu’une compétence partage un élément avec la créature qui l’utilise.
-
 **Éléments à préciser ultérieurement :**
 
-* La table exacte des affinités, les plages communes de forces et de faiblesses ainsi que les coefficients de faiblesse, de résistance et de neutralisation.
+* Les coefficients de réduction applicables aux résistances élémentaires simples et doubles.
 
 ## 12. Effets de statut
 
@@ -243,11 +243,11 @@ Un effet de statut peut être positif, négatif ou, plus rarement, neutre. Ses f
 
 Les compétences constituent une source principale d’effets de statut sans être nécessairement leur seule source. L’association entre un effet et un élément est facultative et doit être déclarée explicitement lorsqu’elle existe.
 
-Le système doit permettre de définir des résistances et des immunités aux effets de statut sans créer une septième caractéristique principale. Chaque effet doit également préciser s’il peut être retiré avant son expiration.
+Les applications répétées de CC totaux utilisent des diminishing returns centrés sur leur durée. Un Skill peut accorder explicitement une immunité à certains CC ou statuts. Ces mécanismes ne créent aucune caractéristique principale ou secondaire supplémentaire.
 
 Des effets différents peuvent coexister sur une même créature. Le comportement de plusieurs applications d’un même effet doit être défini individuellement, sans imposer une règle universelle de cumul ou de renouvellement.
 
-La liste des effets, leurs valeurs, leurs conditions d’application, leurs durées et leurs interactions détaillées seront définies dans le futur document consacré aux effets de statut.
+La liste des effets, leurs valeurs, leurs conditions d’application, leurs durées et leurs interactions détaillées sont organisées dans le [draft consacré aux effets de statut](../01-game-design/06-STATUS_EFFECTS.md).
 
 ## 13. Personnalisation
 
@@ -263,7 +263,7 @@ Chaque créature peut être personnalisée grâce :
 * à son rôle dans l’équipe ;
 * au choix de ses partenaires et aux synergies de la composition.
 
-Chaque créature possède un ensemble fixe de quatre compétences. Ces compétences ne sont ni choisies ni remplacées par le joueur : elles définissent l’identité et les possibilités autour desquelles ses choix de personnalisation s’organisent.
+Chaque créature possède un ensemble fixe de quatre Skills. Ces Skills ne sont ni choisis ni remplacés par le joueur : ils définissent l’identité et les possibilités autour desquelles ses choix de personnalisation s’organisent.
 
 L’objectif est de favoriser la créativité des joueurs et la diversité des builds.
 
@@ -325,9 +325,14 @@ Les principes fondamentaux sont les suivants :
 
 La monétisation repose principalement sur une boutique exclusivement consacrée aux contenus cosmétiques.
 
-Une exception limitée de service de confort permet de redistribuer les points de caractéristiques déjà gagnés par une créature sans la ramener au niveau 1. Ce service reste distinct de la boutique cosmétique, ne fournit aucun point supplémentaire et ne permet pas de dépasser le potentiel accessible gratuitement. Son utilisation payante doit être limitée et un objet rare obtenu en jouant doit permettre d’obtenir le même résultat.
+Deux services de confort limités sont validés en dehors de la boutique cosmétique :
 
-Cette exception n’autorise pas la vente de créatures, d’invocations, d’expérience, de points de caractéristiques, d’équipements, d’énergie, de ressources de progression ni d’une augmentation du potentiel maximal d’une créature.
+* la redistribution payante des points de caractéristiques déjà gagnés par une créature, sans retour au niveau 1, avec une utilisation limitée et un objet rare obtenu en jouant fournissant le même résultat ;
+* l’accès aux vitesses de visualisation accélérées des combats, avec ×1 gratuit, ×2 comme premier palier payant et ×4 comme palier supérieur payant.
+
+Les vitesses accélérées modifient uniquement la restitution du combat en temps réel. Elles ne changent ni la simulation, ni sa seed RNG, ni ses calculs, ses statistiques, ses événements, son résultat, ses récompenses ou son coût en énergie. Le joueur peut acheter directement ×4 ou payer seulement la différence après ×2 ; les prix restent à définir.
+
+Ces services n’autorisent pas la vente de créatures, d’invocations, d’expérience, de points de caractéristiques, d’équipements, d’énergie, de ressources de progression ni d’une augmentation du potentiel maximal d’une créature.
 
 Les skins appartenant aux séries distribuées par paquets s’obtiennent principalement en ouvrant des **paquets de skins de carte**. Ces paquets peuvent être gagnés en jouant ou achetés directement contre de l’argent réel dans la boutique cosmétique.
 

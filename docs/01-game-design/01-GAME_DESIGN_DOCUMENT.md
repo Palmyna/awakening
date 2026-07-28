@@ -68,7 +68,7 @@ Lorsqu’une décision spécialisée modifie une boucle ou une relation globale,
 Ce document ne définit pas :
 
 * les formules de dégâts ou de progression ;
-* les coefficients et tables d’affinités ;
+* les coefficients et la table détaillée des résistances élémentaires ;
 * les coûts en énergie ;
 * les temps de régénération ;
 * les valeurs d’expérience ;
@@ -161,7 +161,7 @@ Le contrôle laissé au joueur pendant le combat offre une implication limitée.
 
 Chaque créature possède une identité fonctionnelle déterminée notamment par :
 
-* son ensemble fixe de quatre compétences ;
+* son ensemble fixe de quatre Skills, comprenant une Ultimate et trois autres Skills formant une combinaison d’Active et de Passive ;
 * son ou ses éléments ;
 * son profil de caractéristiques ;
 * son rôle et ses synergies potentielles.
@@ -291,7 +291,7 @@ Le joueur doit pouvoir :
 * comprendre leurs compétences fixes et leur rôle ;
 * répartir leurs points de caractéristiques ;
 * attribuer ou remplacer leur équipement ;
-* créer une équipe de six créatures ;
+* créer une équipe pouvant réunir jusqu’à six créatures ;
 * modifier et supprimer une équipe ;
 * nommer librement chaque équipe ;
 * conserver plusieurs compositions préparées.
@@ -483,7 +483,8 @@ Elle possède notamment :
 * une rareté de créature ;
 * un ou deux éléments au maximum ;
 * six caractéristiques principales ;
-* un ensemble fixe de quatre compétences ;
+* trois caractéristiques secondaires ;
+* un ensemble fixe de quatre Skills ;
 * une progression individuelle ;
 * un niveau d’étoiles ;
 * une forme dans sa famille de créatures ;
@@ -491,11 +492,15 @@ Elle possède notamment :
 
 ### 10.2. Compétences fixes
 
-L’ensemble de compétences comprend :
+L’ensemble de Skills comprend exactement :
 
-* une compétence active ;
-* deux compétences passives ;
-* une compétence ultime.
+* une Ultimate ;
+* trois autres Skills formant une combinaison fixe d’Active et de Passive.
+
+Les répartitions possibles comprennent notamment :
+
+* une Active, deux Passive et une Ultimate ;
+* deux Active, une Passive et une Ultimate.
 
 Lorsqu’une créature est obtenue, cet ensemble est déjà déterminé.
 
@@ -544,12 +549,12 @@ Le service payant n’accorde aucun point, aucune expérience, aucune ressource 
 
 ### 10.4. Équipes enregistrées
 
-Une équipe complète comporte six créatures.
+Une équipe peut réunir jusqu’à six créatures. Une équipe complète en comporte six.
 
 Le joueur peut :
 
 * créer plusieurs équipes ;
-* sélectionner les six créatures de chacune ;
+* sélectionner jusqu’à six créatures dans chacune ;
 * modifier une équipe ;
 * supprimer une équipe ;
 * nommer librement une équipe ;
@@ -574,37 +579,41 @@ Le combat met à l’épreuve :
 * la répartition de leurs caractéristiques ;
 * leurs équipements ;
 * leurs compétences fixes ;
-* les affinités élémentaires ;
+* les résistances élémentaires ;
 * les effets de statut ;
 * les synergies de la composition.
 
 ### 11.2. Mode de contrôle
 
-Les attaques et compétences ordinaires sont utilisées automatiquement.
+Les Basic Attacks et les Skills ordinaires sont utilisés automatiquement.
 
 Le joueur peut :
 
 * déclencher manuellement les compétences ultimes ;
 * activer une option automatique qui gère également les compétences ultimes.
 
-Le combat peut ainsi être semi-automatique ou entièrement automatique selon le choix du joueur.
+Le combat peut ainsi être semi-automatique ou entièrement automatique selon le choix du joueur. À chaque opportunité d’action valide, une Ultimate prête est prioritaire sur une Active prête, elle-même prioritaire sur la Basic Attack. Une Ultimate ou une Active remplace la Basic Attack qui aurait normalement eu lieu.
 
 Les contenus déjà maîtrisés doivent pouvoir être joués entièrement automatiquement.
 
 ### 11.3. Rythme et lisibilité
 
-La durée moyenne visée d’un combat est de **30 à 60 secondes**.
+La durée moyenne visée d’un combat est de **30 à 60 secondes**. Le timeout standard est de **120 secondes de simulation**, sauf exception explicitement définie par un mode.
+
+À ce timeout, un combat standard départage les équipes selon le nombre de créatures vivantes, puis selon le ratio entre les PV actuels et les PV maximum des survivants. Une égalité parfaite donne la victoire à l’attaquant. Une créature non vivante en attente d’une auto-résurrection ne compte pas comme survivante.
+
+La visualisation est disponible gratuitement en ×1. Les paliers ×2 et ×4 sont des services de confort payants et peuvent être changés à tout moment, en Auto comme en Manuel. Le dernier choix est conservé pour le combat suivant. La vitesse ne modifie jamais la simulation, la seed RNG, les calculs, les statistiques, les événements, le résultat, les récompenses ou le coût en énergie.
 
 Le combat doit rendre visibles :
 
 * les actions importantes ;
 * les effets de statut ;
-* les affinités déterminantes ;
+* les résistances élémentaires déterminantes ;
 * les compétences ultimes ;
 * les éliminations ;
 * les changements majeurs dans l’équilibre du combat.
 
-Les règles exactes d’ordre des actions, de ciblage, de dégâts, de coups critiques et d’intelligence de combat seront définies dans `02-COMBAT.md`.
+Les règles exactes d’ordre des actions, de ciblage, de dégâts, de Crit, d’Esquive et d’intelligence de combat sont définies dans [`02-COMBAT.md`](./02-COMBAT.md).
 
 ## 12. Résultats, victoire et défaite
 
@@ -862,9 +871,12 @@ Elle ne vend :
 * aucune ressource de progression ;
 * aucune augmentation du potentiel maximal.
 
-Le service payant de réinitialisation des points de caractéristiques constitue une exception de confort limitée, distincte de la boutique cosmétique. Il permet uniquement de redistribuer des points déjà gagnés sans retour au niveau 1 et ne fournit aucun avantage de potentiel par rapport aux méthodes gratuites.
+Deux services de confort limités sont validés en dehors de la boutique cosmétique :
 
-Les règles complètes de la boutique, des paquets de skins de carte, des doublons et de cette exception sont définies par le cadre de monétisation.
+* la réinitialisation payante des points de caractéristiques déjà gagnés sans retour au niveau 1, sans avantage de potentiel par rapport aux méthodes gratuites ;
+* les vitesses de visualisation ×2 et ×4 des combats, qui accélèrent uniquement la restitution en temps réel et n’influencent ni la simulation, ni le résultat, ni les récompenses.
+
+Les règles complètes de la boutique, des paquets de skins de carte, des doublons et de ces services sont définies par le [cadre de monétisation](../00-foundation/04-MONETIZATION.md).
 
 ## 17. Motivation et retour au jeu
 
@@ -985,7 +997,7 @@ La vertical slice comprend :
 La vertical slice doit inclure au minimum :
 
 * une sélection limitée de créatures ;
-* quatre compétences fixes par créature ;
+* quatre Skills fixes par créature ;
 * quelques éléments ;
 * quelques effets de statut ;
 * plusieurs niveaux du mode Histoire ;
@@ -1051,13 +1063,13 @@ La vertical slice remplit son objectif si elle permet de vérifier que :
 
 ### 20.1. Dépendances documentaires
 
-Le GDD dépendra des futurs documents suivants pour les détails :
+Le GDD dépend des documents spécialisés suivants pour les détails :
 
-* `02-COMBAT.md` — déroulement, ordre des actions, ciblage, dégâts et contrôle ;
-* `03-CREATURES.md` — modèle des créatures, caractéristiques, rôles et règles de progression propres ;
-* `04-SKILLS.md` — structure et règles des compétences fixes ;
-* `05-ELEMENTS.md` — table des affinités et coefficients ;
-* `06-STATUS_EFFECTS.md` — liste, application, cumul, retrait, résistances et immunités ;
+* [`02-COMBAT.md`](./02-COMBAT.md) — déroulement, ordre des actions, ciblage, dégâts et contrôle ;
+* [`03-CREATURES.md`](./03-CREATURES.md) — structure des créatures, caractéristiques, rôles et règles de progression propres ;
+* [`04-SKILLS.md`](./04-SKILLS.md) — structure et règles des Skills fixes ;
+* [`05-ELEMENTS.md`](./05-ELEMENTS.md) — table des résistances et coefficients ;
+* [`06-STATUS_EFFECTS.md`](./06-STATUS_EFFECTS.md) — liste, application, cumul, retrait, diminishing returns des CC et immunités ;
 * `07-EVOLUTIONS.md` — conditions et effets des évolutions ;
 * `08-ITEMS.md` — équipements et objets, dont l’objet de réinitialisation ;
 * `09-GACHA.md` — règles de l’invocation de créature ;
@@ -1071,14 +1083,14 @@ Le GDD dépendra des futurs documents suivants pour les détails :
 Les questions suivantes ne bloquent pas le fonctionnement global décrit par le GDD :
 
 * le nom définitif du rôle provisoirement appelé « Éveilleur » ;
-* le maintien ou le remplacement prédéfini des compétences lors d’une évolution ;
-* l’existence d’un bonus entre une créature et une compétence partageant son élément ;
-* la table exacte des affinités et ses coefficients ;
-* le rôle exact de l’Agilité dans l’ordre et la fréquence des actions ;
-* les règles détaillées des effets de statut ;
+* le maintien ou le remplacement prédéfini des Skills lors d’une évolution ;
+* les coefficients exacts des résistances élémentaires ;
+* les paramètres exacts des courbes d’Agilité, de Crit et d’Esquive ;
+* les valeurs et règles individuelles encore ouvertes des effets de statut ;
 * les règles de conservation lors d’une réinitialisation complète ;
 * la méthode d’obtention et le rythme de distribution de l’objet de réinitialisation ;
 * la limite et le prix du service payant de réinitialisation ;
+* les prix et la présentation des vitesses de visualisation ×2 et ×4 ;
 * les courbes d’expérience et l’existence éventuelle de niveaux maximaux ;
 * les récompenses et usages secondaires du niveau de compte ;
 * les coûts, la régénération et l’accumulation exacte de l’énergie ;
