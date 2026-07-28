@@ -1061,23 +1061,44 @@ Le même principe s'applique à Défense spéciale.
 
 ---
 
-### 8.3. Agilité
+# 35. Agilité
 
 L'Agilité contrôle la vitesse des Basic Attacks.
 
-Chaque Basic possède son propre intervalle de base.
+Chaque Basic Attack possède son propre **intervalle de base**. Il n'existe donc pas d'intervalle universel commun à toutes les créatures.
 
-L'Agilité réduit cet intervalle selon une **courbe exponentielle à rendement décroissant**.
+L'Agilité réduit cet intervalle selon une courbe exponentielle à rendement décroissant.
 
-Principe conceptuel :
+La réduction de l'intervalle est calculée selon le principe suivant :
 
-> plus l'Agilité augmente, plus la Basic devient rapide, mais chaque point supplémentaire apporte progressivement moins de réduction.
+> **RéductionIntervalle = RéductionMax × (1 − e^(-Agilité / K))**
 
-Il existe un **intervalle minimal absolu** qu'aucune Basic ne peut dépasser.
+Puis :
 
-La valeur exacte de ce minimum reste à équilibrer.
+> **IntervalleFinal = IntervalleBaseBasic × (1 − RéductionIntervalle)**
 
-L'Agilité n'augmente pas le Crit.
+Enfin, un intervalle minimum global est appliqué :
+
+> **IntervalleFinal = max(IntervalleMinimum, IntervalleFinal calculé)**
+
+Avec :
+
+* `Agilité` : nombre de points d'Agilité de la créature ;
+* `K` : constante globale contrôlant la vitesse de progression de la courbe ;
+* `RéductionMax` : réduction maximale théorique apportée par l'Agilité ;
+* `IntervalleBaseBasic` : intervalle propre à la Basic Attack concernée ;
+* `IntervalleMinimum` : limite absolue qu'aucune Basic Attack ne peut dépasser.
+
+Les valeurs exactes de `K`, `RéductionMax` et `IntervalleMinimum` restent des paramètres de balancing.
+
+Cette courbe permet :
+
+* aux premiers points d'Agilité d'avoir un impact perceptible ;
+* de ralentir progressivement les gains à haute Agilité ;
+* d'empêcher une croissance incontrôlée de la vitesse d'attaque ;
+* de conserver des différences naturelles entre une Basic rapide et une Basic lente.
+
+L'Agilité n'augmente pas la chance de Critique.
 
 ---
 
