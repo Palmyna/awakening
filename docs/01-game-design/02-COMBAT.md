@@ -232,7 +232,15 @@ Priorités :
 
 Le ratio global de PV restants est calculé ainsi :
 
-> somme des PV actuels des survivants / somme des PV maximum de ces mêmes survivants.
+> **RatioPVSurvivants = SommePVActuelsSurvivants / SommePVMaximumSurvivants**
+
+Avec :
+
+* `SommePVActuelsSurvivants` : somme des PV actuels de toutes les créatures vivantes de l'équipe ;
+* `SommePVMaximumSurvivants` : somme des PV maximum de ces mêmes créatures ;
+* `RatioPVSurvivants` : proportion de PV restants utilisée pour comparer les équipes.
+
+Le ratio compare donc uniquement l'état des survivants de chaque équipe. Les créatures mortes ou non vivantes sont exclues des deux sommes.
 
 Une créature non vivante, comme un Phoenix en œuf, ne compte pas comme survivante.
 
@@ -821,7 +829,13 @@ Les dégâts, soins et protections sont calculés avec cette précision jusqu'à
 
 Lorsqu'une valeur doit réellement modifier des PV ou un Bouclier :
 
-> elle est arrondie à l'entier le plus proche.
+> **ValeurAppliquée = arrondi(ValeurCalculée)**
+
+Avec :
+
+* `ValeurCalculée` : résultat conservé avec 3 décimales jusqu'à l'application finale ;
+* `ValeurAppliquée` : entier qui modifie réellement les PV ou le Bouclier ;
+* `arrondi` : arrondi à l'entier le plus proche.
 
 Exemples :
 
@@ -834,7 +848,14 @@ Exemples :
 
 Les PV utilisent une conversion simple :
 
-> **1 point de PV = 10 PV réels.**
+> **PVRéels = PointsPV × 10**
+
+Avec :
+
+* `PointsPV` : nombre de points de la caractéristique principale PV ;
+* `PVRéels` : quantité de PV maximum fournie au moteur de combat.
+
+Le facteur `10` est une constante système validée. Il permet de conserver des valeurs de caractéristiques compactes tout en utilisant des réserves de PV suffisamment lisibles en combat.
 
 Exemples :
 
@@ -855,7 +876,17 @@ Exemples :
 
 Toutes les caractéristiques autres que les PV sont modifiées au niveau de leurs **points internes**.
 
-Exemple :
+Un modificateur en pourcentage utilise le principe suivant :
+
+> **ValeurModifiée = ValeurActuelle × (1 + ModificateurPourcentage)**
+
+Avec :
+
+* `ValeurActuelle` : nombre de points de la caractéristique au moment où le modificateur est appliqué ;
+* `ModificateurPourcentage` : variation exprimée sous forme décimale, par exemple `0,10` pour `+10 %` ;
+* `ValeurModifiée` : nouveau nombre de points avant l'application des modificateurs suivants.
+
+Exemple avec le Crit :
 
 Une créature possède :
 
@@ -972,6 +1003,18 @@ Une augmentation de PV max :
 * augmente les PV max ;
 * ajoute immédiatement la même quantité aux PV actuels.
 
+Le changement d'état suit donc les formules suivantes :
+
+> **NouveauxPVMaximum = AnciensPVMaximum + AugmentationPVMaximum**
+
+> **NouveauxPVActuels = AnciensPVActuels + AugmentationPVMaximum**
+
+Avec :
+
+* `AugmentationPVMaximum` : quantité de PV maximum ajoutée par l'effet ;
+* `AnciensPVMaximum` et `AnciensPVActuels` : valeurs avant l'application ;
+* `NouveauxPVMaximum` et `NouveauxPVActuels` : valeurs immédiatement après l'application.
+
 Exemple :
 
 > 100 / 200 PV
@@ -996,6 +1039,16 @@ Les modifications successives sont appliquées dans leur ordre réel.
 
 Deux effets en pourcentage sont donc successifs / multiplicatifs.
 
+Pour plusieurs effets successifs :
+
+> **ValeurFinale = ValeurInitiale × (1 + Modificateur1) × (1 + Modificateur2) × …**
+
+Avec :
+
+* `ValeurInitiale` : nombre de points avant l'application de la séquence ;
+* `Modificateur1`, `Modificateur2`, etc. : variations successives exprimées sous forme décimale ;
+* `ValeurFinale` : résultat obtenu après application de tous les modificateurs dans leur ordre réel.
+
 Exemple :
 
 > +20 %
@@ -1011,17 +1064,25 @@ devient :
 
 ### 8.1. Attaque et Attaque spéciale
 
-Formule standard :
+Les dégâts bruts d'une action sont calculés avant les défenses, les résistances et les autres protections.
 
-> **Dégâts bruts = caractéristique offensive × coefficient de l'action.**
+La formule standard est :
 
-Une action Physique utilise :
+> **DégâtsBruts = CaractéristiqueOffensive × CoefficientAction**
 
-> Attaque.
+Avec :
 
-Une action Spéciale utilise :
+* `CaractéristiqueOffensive` : Attaque pour une action Physique ou Attaque spéciale pour une action Spéciale ;
+* `CoefficientAction` : coefficient propre à la Basic Attack, à l'Active ou à l'Ultimate utilisée ;
+* `DégâtsBruts` : montant obtenu avant le Critique, la Défense, les résistances et les autres protections applicables.
 
-> Attaque spéciale.
+Les coefficients exacts appartiennent au balancing de chaque action.
+
+Cette formule permet :
+
+* de conserver une relation lisible entre la caractéristique offensive et la puissance de l'action ;
+* de différencier les actions d'une même créature grâce à leurs coefficients propres ;
+* de faire évoluer les dégâts avec la progression de la caractéristique utilisée.
 
 Les Skills peuvent explicitement utiliser d'autres formules.
 
@@ -1040,16 +1101,24 @@ La Défense réduit les dégâts Physiques.
 
 La Défense spéciale réduit les dégâts Spéciaux.
 
-Les deux utilisent une courbe à rendement décroissant de type :
+Les deux utilisent une courbe à rendement décroissant selon le principe suivant :
 
-> **Réduction = Cap × Défense / (Défense + K)**
+> **RéductionDéfensive = CapDéfensif × CaractéristiqueDéfensive / (CaractéristiqueDéfensive + KDéfensif)**
 
-La valeur exacte :
+Puis :
 
-* du cap ;
-* de K ;
+> **DégâtsAprèsDéfense = DégâtsAvantDéfense × (1 − RéductionDéfensive)**
 
-reste à déterminer pendant le balancing.
+Avec :
+
+* `CaractéristiqueDéfensive` : Défense contre des dégâts Physiques ou Défense spéciale contre des dégâts Spéciaux ;
+* `CapDéfensif` : réduction maximale théorique applicable à la catégorie concernée ;
+* `KDéfensif` : constante contrôlant la vitesse à laquelle la courbe approche son cap ;
+* `RéductionDéfensive` : proportion de dégâts retirée par la caractéristique défensive ;
+* `DégâtsAvantDéfense` : montant obtenu après le calcul offensif et les éventuels effets précédant la Défense, dont le Critique lorsqu'il s'applique ;
+* `DégâtsAprèsDéfense` : montant restant avant la résistance élémentaire et les autres protections.
+
+Les valeurs exactes des caps et des constantes `K` de Défense et de Défense spéciale restent des paramètres de balancing.
 
 La courbe doit :
 
@@ -1057,11 +1126,9 @@ La courbe doit :
 * réduire progressivement le rendement des investissements élevés ;
 * approcher un cap sans le dépasser.
 
-Le même principe s'applique à Défense spéciale.
-
 ---
 
-# 35. Agilité
+### 8.3. Agilité
 
 L'Agilité contrôle la vitesse des Basic Attacks.
 
@@ -1071,23 +1138,27 @@ L'Agilité réduit cet intervalle selon une courbe exponentielle à rendement d�
 
 La réduction de l'intervalle est calculée selon le principe suivant :
 
-> **RéductionIntervalle = RéductionMax × (1 − e^(-Agilité / K))**
+> **RéductionIntervalle = RéductionMax × (1 − e^(−Agilité / K))**
 
 Puis :
 
-> **IntervalleFinal = IntervalleBaseBasic × (1 − RéductionIntervalle)**
+> **IntervalleAprèsAgilité = IntervalleBaseBasic × (1 − RéductionIntervalle)**
 
 Enfin, un intervalle minimum global est appliqué :
 
-> **IntervalleFinal = max(IntervalleMinimum, IntervalleFinal calculé)**
+> **IntervalleFinal = max(IntervalleMinimum, IntervalleAprèsAgilité)**
 
 Avec :
 
 * `Agilité` : nombre de points d'Agilité de la créature ;
+* `e` : base de la fonction exponentielle ;
 * `K` : constante globale contrôlant la vitesse de progression de la courbe ;
 * `RéductionMax` : réduction maximale théorique apportée par l'Agilité ;
+* `RéductionIntervalle` : proportion de l'intervalle de base retirée par l'Agilité ;
 * `IntervalleBaseBasic` : intervalle propre à la Basic Attack concernée ;
-* `IntervalleMinimum` : limite absolue qu'aucune Basic Attack ne peut dépasser.
+* `IntervalleAprèsAgilité` : intervalle obtenu avant l'application de la limite minimale ;
+* `IntervalleMinimum` : limite absolue en dessous de laquelle aucun intervalle de Basic Attack ne peut descendre ;
+* `IntervalleFinal` : intervalle réellement utilisé après la réduction et l'application de la limite minimale.
 
 Les valeurs exactes de `K`, `RéductionMax` et `IntervalleMinimum` restent des paramètres de balancing.
 
@@ -1106,39 +1177,64 @@ L'Agilité n'augmente pas la chance de Critique.
 
 Le Crit est exprimé en points.
 
-À :
+La conversion des points de Crit en chance réelle utilise une courbe à rendement décroissant avec cap :
 
-> 0 point de Crit = 0 % de chance de Critique.
+> **ChanceCrit = CapCrit × Crit / (Crit + KCrit)**
+
+Avec :
+
+* `Crit` : nombre de points de Crit de la créature au moment du jet ;
+* `CapCrit` : chance maximale théorique de Critique apportée par cette courbe ;
+* `KCrit` : constante contrôlant la vitesse à laquelle la courbe approche son cap ;
+* `ChanceCrit` : probabilité finale utilisée pour le jet de Critique.
+
+À `0` point de Crit, la formule produit `0 %` de chance de Critique.
 
 Les créatures disposent normalement déjà de points de Crit de base.
 
-La conversion des points de Crit en chance réelle utilise une courbe à rendement décroissant avec cap, similaire dans son principe à la Défense :
+Les valeurs exactes de `CapCrit` et `KCrit` restent des paramètres de balancing.
 
-> **Chance Crit = CapCrit × Crit / (Crit + KCrit)**
+Cette courbe permet :
 
-Les constantes sont des paramètres de balancing.
+* de donner un impact perceptible aux premiers points de Crit ;
+* de réduire progressivement le rendement des investissements élevés ;
+* d'approcher un cap sans permettre une croissance incontrôlée de la chance de Critique.
 
 ---
 
 ### 8.5. Dégâts critiques
 
-Le multiplicateur Critique de base est prévu autour de :
+Les Dégâts critiques augmentent de manière linéaire le multiplicateur appliqué lorsqu'un Critique est réussi.
 
-> **×1,10 à 0 point de Dégâts critiques.**
+La formule suit le principe suivant :
 
-La valeur finale exacte pourra être ajustée.
+> **MultiplicateurCritFinal = MultiplicateurCritBase + PointsDégâtsCritiques × CoefficientDégâtsCritiques**
 
-Contrairement au Crit ou à l'Esquive :
+Avec :
 
-* les Dégâts critiques progressent de manière **linéaire** ;
-* la progression est volontairement lente ;
-* il n'existe pas de cap système.
+* `PointsDégâtsCritiques` : nombre de points de la caractéristique secondaire Dégâts critiques ;
+* `MultiplicateurCritBase` : multiplicateur appliqué à `0` point de Dégâts critiques ;
+* `CoefficientDégâtsCritiques` : gain linéaire de multiplicateur apporté par chaque point ;
+* `MultiplicateurCritFinal` : multiplicateur utilisé lorsqu'un effet produit un Critique.
 
-Principe :
+Lorsqu'un hit produit un Critique :
 
-> Multiplicateur Crit = multiplicateur de base + PointsCritDamage × coefficient.
+> **DégâtsAprèsCritique = DégâtsAvantCritique × MultiplicateurCritFinal**
 
-Le coefficient exact sera défini pendant le balancing.
+Avec :
+
+* `DégâtsAvantCritique` : montant offensif avant application du multiplicateur ;
+* `DégâtsAprèsCritique` : montant transmis aux étapes défensives suivantes.
+
+Le multiplicateur de base est actuellement prévu autour de `×1,10`, mais sa valeur exacte reste ajustable.
+
+Le coefficient exact reste un paramètre de balancing.
+
+Cette progression :
+
+* reste volontairement lente ;
+* conserve la même valeur marginale pour chaque point ;
+* ne possède pas de cap système.
 
 ---
 
@@ -1146,15 +1242,28 @@ Le coefficient exact sera défini pendant le balancing.
 
 L'Esquive est exprimée en points.
 
-À :
+La conversion vers la chance réelle utilise une courbe à rendement décroissant avec cap :
 
-> 0 point d'Esquive = 0 % d'Esquive.
+> **ChanceEsquive = CapEsquive × Esquive / (Esquive + KEsquive)**
+
+Avec :
+
+* `Esquive` : nombre de points d'Esquive de la créature au moment du jet ;
+* `CapEsquive` : chance maximale théorique d'Esquive apportée par cette courbe ;
+* `KEsquive` : constante contrôlant la vitesse à laquelle la courbe approche son cap ;
+* `ChanceEsquive` : probabilité finale utilisée pour le jet d'Esquive.
+
+À `0` point d'Esquive, la formule produit `0 %` d'Esquive.
 
 Les créatures possèdent normalement déjà des points d'Esquive de base.
 
-La conversion vers la chance réelle utilise une courbe à rendement décroissant avec cap :
+Les valeurs exactes de `CapEsquive` et `KEsquive` restent des paramètres de balancing.
 
-> **Chance Esquive = CapEsquive × Esquive / (Esquive + KEsquive)**
+Cette courbe permet :
+
+* de donner un impact perceptible aux premiers points d'Esquive ;
+* de réduire progressivement le rendement des investissements élevés ;
+* d'approcher un cap sans rendre l'Esquive incontrôlable.
 
 Le cap d'Esquive doit être contrôlé car une Esquive possède plusieurs conséquences.
 
@@ -1232,9 +1341,21 @@ Un avantage élémentaire ne donne pas de bonus offensif automatique.
 
 Lorsqu'un élément de la cible résiste à l'élément de l'attaque :
 
-> les dégâts reçus sont réduits selon une valeur globale de résistance élémentaire.
+> **DégâtsAprèsRésistance = DégâtsAvantRésistance × (1 − TauxRésistanceÉlémentaire)**
 
-Cette valeur est la même pour toutes les relations standard et constitue un paramètre de balancing.
+Avec :
+
+* `DégâtsAvantRésistance` : montant obtenu après la Défense ou montant de True Damage avant l'interaction élémentaire ;
+* `TauxRésistanceÉlémentaire` : proportion globale retirée par une résistance élémentaire standard ;
+* `DégâtsAprèsRésistance` : montant restant avant les autres réductions, l'Absorption et les Boucliers.
+
+Le `TauxRésistanceÉlémentaire` est identique pour toutes les relations standard. Sa valeur exacte reste un paramètre de balancing.
+
+Cette formule permet :
+
+* de conserver une lecture uniforme de toutes les résistances standard ;
+* de séparer l'élément de l'attaque de sa catégorie Physique, Spéciale ou True Damage ;
+* d'appliquer la même règle avant les protections suivantes.
 
 Il n'existe pas de résistance automatique lorsqu'une attaque et la cible partagent simplement le même élément.
 
@@ -1252,15 +1373,26 @@ Une créature peut avoir 1 ou maximum 2 éléments.
 
 Si un seul de ses éléments résiste à l'attaque :
 
-> la résistance est appliquée une fois.
+> **DégâtsAprèsRésistanceSimple = DégâtsAvantRésistance × (1 − TauxRésistanceÉlémentaire)**
 
 Si ses deux éléments résistent :
 
-> les deux résistances sont appliquées successivement / multiplicativement.
+> **DégâtsAprèsDoubleRésistance = DégâtsAvantRésistance × (1 − TauxRésistanceÉlémentaire) × (1 − TauxRésistanceÉlémentaire)**
+
+Soit, sous une forme condensée :
+
+> **DégâtsAprèsDoubleRésistance = DégâtsAvantRésistance × (1 − TauxRésistanceÉlémentaire)²**
+
+Avec :
+
+* `DégâtsAvantRésistance` : montant entrant avant toute résistance élémentaire ;
+* `TauxRésistanceÉlémentaire` : valeur globale d'une résistance standard ;
+* `DégâtsAprèsRésistanceSimple` : montant restant lorsqu'un seul élément de la cible résiste ;
+* `DégâtsAprèsDoubleRésistance` : montant restant lorsque les deux éléments de la cible résistent.
 
 Exemple avec une valeur théorique de 30 % :
 
-> dégâts ×0,70 ×0,70.
+> **DégâtsAprèsDoubleRésistance = DégâtsAvantRésistance × 0,70 × 0,70**
 
 Les résistances ne sont jamais additionnées directement.
 
@@ -1294,8 +1426,8 @@ Ordre conceptuel :
 
 1. action / hit ;
 2. Esquive si applicable ;
-3. Critique si applicable ;
-4. calcul offensif brut ;
+3. jet de Critique si applicable ;
+4. calcul offensif brut et application éventuelle du multiplicateur Critique ;
 5. Défense ou Défense spéciale ;
 6. résistance élémentaire ;
 7. autres réductions de dégâts ;
@@ -1389,11 +1521,23 @@ Le Vol de vie peut restaurer une partie des dégâts réellement infligés.
 
 Il se base sur les dégâts ayant réellement traversé toutes les protections.
 
-Exemple :
+La formule standard suit le principe suivant :
+
+> **PVRestaurés = DégâtsRéellementInfligés × TauxVolDeVie**
+
+Avec :
+
+* `DégâtsRéellementInfligés` : quantité de PV effectivement retirée à la cible après toutes les protections ;
+* `TauxVolDeVie` : proportion des dégâts réels convertie en soin ;
+* `PVRestaurés` : soin produit avant son application finale.
+
+Le taux exact appartient au Skill ou à l'effet qui accorde le Vol de vie.
+
+Exemple avec un taux théorique de 20 % :
 
 > 20 % de Vol de vie
 > 500 dégâts réellement infligés
-> → 100 PV restaurés.
+> **PVRestaurés = 500 × 0,20 = 100 PV**
 
 Un Skill peut également utiliser un Drain de vie avec sa propre formule explicite.
 
@@ -1423,6 +1567,21 @@ Lorsqu'un dégât doit être appliqué :
 
 > le Bouclier compatible le plus ancien est consommé en premier.
 
+Pour chaque Bouclier consommé, le calcul suit le principe suivant :
+
+> **DégâtsAprèsBouclier = max(0, DégâtsAvantBouclier − ValeurBouclierDisponible)**
+
+> **BouclierRestant = max(0, ValeurBouclierDisponible − DégâtsAvantBouclier)**
+
+Avec :
+
+* `DégâtsAvantBouclier` : montant restant après les étapes précédentes de la chaîne et arrondi au moment de son application au Bouclier ;
+* `ValeurBouclierDisponible` : réserve restante du Bouclier actuellement consommé ;
+* `DégâtsAprèsBouclier` : montant transmis au Bouclier suivant ou aux PV ;
+* `BouclierRestant` : réserve conservée par le Bouclier après l'impact.
+
+Si plusieurs Boucliers sont nécessaires, le même calcul est répété dans leur ordre de consommation.
+
 Les Boucliers sont appliqués avant les PV.
 
 Les Boucliers ne Critiquent pas.
@@ -1444,6 +1603,18 @@ Il n'existe pas nécessairement de caractéristique système « Puissance de Bou
 L'Absorption est distincte du Bouclier.
 
 Elle réduit un **pourcentage** de dégâts selon les conditions définies par le Skill.
+
+Lorsqu'elle s'applique, la formule suit le principe suivant :
+
+> **DégâtsAprèsAbsorption = DégâtsAvantAbsorption × (1 − TauxAbsorption)**
+
+Avec :
+
+* `DégâtsAvantAbsorption` : montant obtenu après les réductions précédentes de la chaîne de dégâts ;
+* `TauxAbsorption` : proportion de dégâts retirée par l'effet d'Absorption ;
+* `DégâtsAprèsAbsorption` : montant transmis aux Boucliers puis, si nécessaire, aux PV.
+
+Le taux et les conditions d'application appartiennent au Skill qui crée l'Absorption.
 
 Exemples :
 
@@ -1850,18 +2021,13 @@ Les décisions structurelles sont validées, mais de nombreux paramètres numér
 
 Notamment :
 
-* cap de Défense ;
-* cap de Défense spéciale ;
-* constantes K de Défense ;
-* constante et courbe exacte d'Agilité ;
-* intervalle minimal absolu des Basic ;
-* cap de Crit ;
-* constante K du Crit ;
-* cap d'Esquive ;
-* constante K de l'Esquive ;
-* coefficient linéaire de Dégâts critiques ;
-* valeur exacte du multiplicateur Critique de base autour de ×1,10 ;
-* résistance élémentaire standard ;
+* valeurs exactes de `CapDéfensif` et `KDéfensif` pour la Défense et la Défense spéciale ;
+* valeurs exactes de `K`, `RéductionMax` et `IntervalleMinimum` pour l'Agilité ;
+* valeurs exactes de `CapCrit` et `KCrit` ;
+* valeurs exactes de `CapEsquive` et `KEsquive` ;
+* valeur exacte de `CoefficientDégâtsCritiques` ;
+* valeur exacte de `MultiplicateurCritBase`, actuellement prévue autour de `×1,10` ;
+* valeur exacte de `TauxRésistanceÉlémentaire` ;
 * diminishing returns des CC ;
 * durée avant récupération des diminishing returns ;
 * durée standard des différents statuts ;
