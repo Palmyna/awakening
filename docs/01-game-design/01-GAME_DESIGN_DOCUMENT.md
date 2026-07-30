@@ -216,7 +216,7 @@ La circulation principale est la suivante :
 
 L’invocation de créature alimente cette circulation en ouvrant de nouvelles possibilités de composition.
 
-La collection valorise ce que le joueur possède et lui permet de visualiser ce qu’il lui manque. Elle ne remplace ni la gestion des créatures ni l’inventaire.
+La collection valorise ce que le joueur possède et rend sa progression visible. L’identification des éléments manquants dépend des règles de découverte de chaque sous-système : l’encyclopédie des créatures ne révèle pas les familles encore inconnues. La collection ne remplace ni la gestion des créatures ni l’inventaire.
 
 La personnalisation cosmétique renforce l’attachement et la collection sans produire de puissance.
 
@@ -273,7 +273,7 @@ Pendant une activité, le joueur cherche à :
 * maîtriser plusieurs équipes spécialisées ;
 * progresser toujours plus loin dans les mondes du mode Histoire ;
 * obtenir des créatures ouvrant de nouvelles synergies ;
-* compléter le catalogue des créatures ;
+* enrichir l’encyclopédie des créatures ;
 * compléter des séries de skins de carte ;
 * participer ultérieurement à des contenus compétitifs ou communautaires.
 
@@ -478,17 +478,19 @@ Les niveaux exacts, l’ordre détaillé et les récompenses de ces jalons reste
 
 Chaque créature est une entité jouable représentée dans l’interface par une carte de créature.
 
-Elle possède notamment :
+Le système distingue :
 
-* une rareté de créature ;
-* un ou deux éléments au maximum ;
-* six caractéristiques principales ;
-* trois caractéristiques secondaires ;
-* un ensemble fixe de quatre Skills ;
-* une progression individuelle ;
-* un niveau d’étoiles ;
-* une forme dans sa famille de créatures ;
-* un emplacement d’équipement.
+* la **famille**, qui porte notamment la rareté, le numéro d’encyclopédie, le lore général et l’identité de la Basic Attack et des quatre Skills ;
+* la **forme**, qui porte notamment l’apparence, les éléments, le profil de caractéristiques de base, les rôles suggérés, le profil offensif et les versions des capacités ;
+* l’**instance possédée**, individu persistant développé par le joueur ;
+* le **stade d’évolution**, parmi les trois stades parcourus par chaque instance ;
+* la **branche d’évolution**, chemin définitif suivi par l’instance dans l’arbre de sa famille.
+
+Une famille peut contenir de nombreuses formes et branches. Chaque instance parcourt cependant exactement trois stades et conserve sa progression individuelle à travers ses évolutions.
+
+La rareté appartient à la famille et reste identique pour toutes ses formes et branches. Les raretés validées sont Rare, Épique, Légendaire et Mythique. Elles représentent principalement l’obtention et la collection, non une hiérarchie automatique de puissance.
+
+Il n’existe aucun IV ni variation aléatoire cachée des valeurs intrinsèques : deux instances d’une même forme possèdent les mêmes valeurs de base avant les choix de progression du joueur.
 
 ### 10.2. Compétences fixes
 
@@ -511,13 +513,7 @@ Le joueur :
 * ne sélectionne pas un ensemble alternatif ;
 * ne construit pas le build à partir d’une liste de compétences.
 
-Les compétences définissent l’identité fonctionnelle, le rôle et les synergies potentielles de la créature.
-
-**Question ouverte :**
-
-* Une nouvelle forme obtenue lors d’une évolution conserve-t-elle les mêmes compétences ou possède-t-elle un nouvel ensemble prédéfini ?
-
-Dans tous les cas, le joueur ne sélectionne pas librement les compétences de la forme obtenue.
+La Basic Attack et les quatre Skills définissent l’identité fonctionnelle de la famille et la conservent à travers ses évolutions. Une nouvelle forme peut améliorer ou enrichir les versions de ces mêmes capacités, et des branches différentes peuvent les faire évoluer différemment, sans les remplacer par des capacités sans rapport.
 
 ### 10.3. Build de créature
 
@@ -542,14 +538,17 @@ Le service payant n’accorde aucun point, aucune expérience, aucune ressource 
 
 **Éléments à préciser ultérieurement :**
 
-* La conservation de l’évolution, du niveau d’étoiles, de l’équipement et des autres éléments lors d’une réinitialisation complète.
 * La méthode d’obtention et le rythme de distribution de l’objet.
 * La limite exacte du service payant, notamment par compte ou par créature.
 * Le prix et la présentation du service.
 
+La réinitialisation complète conserve la forme actuelle, la branche, le niveau d’étoiles, l’équipement, le surnom, les tags et les apparences déjà débloquées. Elle ne fait jamais régresser une évolution déjà obtenue.
+
 ### 10.4. Équipes enregistrées
 
 Une équipe peut réunir jusqu’à six créatures. Une équipe complète en comporte six.
+
+Deux instances d’une même famille peuvent cohabiter dans une équipe uniquement lorsque leurs chemins d’évolution ont réellement divergé. Une forme située sur leur tronc commun reste incompatible avec toute autre instance de cette famille. Cette règle s’applique globalement à tous les modes.
 
 Le joueur peut :
 
@@ -591,6 +590,8 @@ Le joueur peut :
 
 * déclencher manuellement les compétences ultimes ;
 * activer une option automatique qui gère également les compétences ultimes.
+
+Une attaque peut comporter plusieurs composantes de dégâts dans un même hit hybride. Ce hit utilise un seul jet d’Esquive et un seul jet de Critique, tandis que ses composantes Physique et Spéciale sont calculées séparément selon leurs caractéristiques, défenses, résistances et modificateurs applicables.
 
 Le combat peut ainsi être semi-automatique ou entièrement automatique selon le choix du joueur. À chaque opportunité d’action valide, une Ultimate prête est prioritaire sur une Active prête, elle-même prioritaire sur la Basic Attack. Une Ultimate ou une Active remplace la Basic Attack qui aurait normalement eu lieu.
 
@@ -675,10 +676,12 @@ Les créatures gagnent de l’expérience en participant aux combats remportés.
 Lorsqu’une créature monte de niveau :
 
 * sa progression individuelle augmente ;
-* elle reçoit des points de caractéristiques ;
+* elle reçoit actuellement cinq points de caractéristiques ;
 * le joueur répartit ces points sur cette même créature.
 
-La progression doit pouvoir se poursuivre très longtemps. Le temps nécessaire à chaque nouveau niveau augmente progressivement selon un principe de rendements décroissants.
+Le niveau ne possède pas de maximum et n’augmente aucune caractéristique automatiquement. Seuls les points attribués par le joueur aux six caractéristiques principales modifient alors le build ; les points non attribués peuvent être conservés indéfiniment.
+
+L’XP d’une activité est attribuée individuellement après le combat à chaque créature participante et n’est jamais divisée entre les membres de l’équipe. Toutes les participantes reçoivent leur gain, y compris si elles sont mortes, contrôlées ou temporairement exclues à la fin du combat. Les règles de ratio liées aux niveaux et leurs valeurs actuelles sont définies dans le [draft Progression](./10-PROGRESSION.md).
 
 ### 13.2. Progression du compte
 
@@ -712,12 +715,12 @@ Le développement des créatures et du compte provient des activités réellemen
 
 Les documents spécialisés devront définir :
 
-* la présence ou l’absence d’un niveau maximal strict ;
 * les courbes d’expérience ;
 * les valeurs nécessaires à chaque niveau ;
+* les règles d’arrondi de l’XP et la validation finale des paramètres actuels ;
+* les multiplicateurs et exigences exacts des montées d’étoiles ;
 * les récompenses du niveau de compte ;
-* les éventuels déblocages secondaires ;
-* les interactions entre niveau, évolution et niveau d’étoiles.
+* les éventuels déblocages secondaires.
 
 ## 14. Énergie et régulation
 
@@ -778,7 +781,7 @@ Certaines créatures peuvent être accordées directement par le gameplay lorsqu
 
 Narrativement, une invocation établit ou révèle le lien entre le joueur et une manifestation vivante d’un écho, puis la stabilise. Elle ne crée pas artificiellement une nouvelle forme de vie. Une obtention directe établit également un lien sans devenir une invocation.
 
-Une nouvelle obtention d’une créature déjà possédée reste fonctionnellement un doublon utilisé pour améliorer son niveau d’étoiles. Elle peut être interprétée narrativement comme une nouvelle manifestation ou résonance du même écho qui renforce la créature déjà liée, sans modifier le fonctionnement du niveau d’étoiles.
+Une nouvelle obtention d’une famille déjà possédée crée une nouvelle instance individuelle au stade 1, niveau 1, à 0 étoile et sans point attribué. Elle peut être développée séparément, suivre une autre branche ou servir ultérieurement de matériau d’étoiles pour une instance de la même famille.
 
 ### 15.2. Créature de départ
 
@@ -843,13 +846,14 @@ Ces catégories appartiennent au même espace général sans être mélangées d
 
 Le système de collection reste distinct de l’inventaire consacré aux objets et ressources.
 
+La gestion des instances possédées reste distincte de l’encyclopédie des créatures. L’encyclopédie conserve les découvertes du compte, affiche uniquement les familles réellement obtenues et enrichit progressivement les formes et branches connues sans révéler le nombre total de familles existantes.
+
 ### 16.2. Fonction dans la boucle globale
 
 La collection :
 
 * valorise les acquisitions ;
 * rend visible la progression du joueur ;
-* permet d’identifier ce qui manque ;
 * soutient la découverte ;
 * renforce l’attachement aux créatures ;
 * fournit des objectifs de complétion.
@@ -871,10 +875,13 @@ Elle ne vend :
 * aucune ressource de progression ;
 * aucune augmentation du potentiel maximal.
 
-Deux services de confort limités sont validés en dehors de la boutique cosmétique :
+Les services de confort actuellement validés en dehors de la boutique cosmétique sont :
 
 * la réinitialisation payante des points de caractéristiques déjà gagnés sans retour au niveau 1, sans avantage de potentiel par rapport aux méthodes gratuites ;
-* les vitesses de visualisation ×2 et ×4 des combats, qui accélèrent uniquement la restitution en temps réel et n’influencent ni la simulation, ni le résultat, ni les récompenses.
+* les vitesses de visualisation ×2 et ×4 des combats, qui accélèrent uniquement la restitution en temps réel et n’influencent ni la simulation, ni le résultat, ni les récompenses ;
+* les extensions permanentes de capacité de créatures possédées, qui n’accordent aucune puissance et ne remplacent pas la capacité gratuite.
+
+Cette liste décrit les services actuellement validés sans constituer une liste définitivement exhaustive. Tout nouveau service exige une décision explicite et doit respecter les garde-fous Free-to-Play et non-Pay-to-Win.
 
 Les règles complètes de la boutique, des paquets de skins de carte, des doublons et de ces services sont définies par le [cadre de monétisation](../00-foundation/04-MONETIZATION.md).
 
@@ -889,7 +896,7 @@ Les principaux moteurs de long terme sont :
 3. progresser dans les mondes et niveaux du mode Histoire ;
 4. débloquer de nouvelles fonctionnalités et activités ;
 5. obtenir de nouvelles créatures et synergies ;
-6. compléter le catalogue des créatures ;
+6. enrichir l’encyclopédie des créatures et découvrir de nouvelles branches ;
 7. compléter les séries de skins de carte ;
 8. progresser ultérieurement en PvP ;
 9. participer ultérieurement à une guilde ou à des objectifs communautaires.
@@ -903,7 +910,7 @@ La progression très longue est maîtrisée par :
 * l’augmentation progressive de la difficulté ;
 * le besoin de diversifier les équipes et stratégies.
 
-Ces principes ne valident pas encore une progression strictement infinie ni une formule précise.
+Le niveau des créatures ne possède pas de maximum. La formule exacte de la courbe d’XP reste cependant à définir.
 
 ### 17.3. Événements et rotations
 
@@ -1070,28 +1077,30 @@ Le GDD dépend des documents spécialisés suivants pour les détails :
 * [`04-SKILLS.md`](./04-SKILLS.md) — structure et règles des Skills fixes ;
 * [`05-ELEMENTS.md`](./05-ELEMENTS.md) — table des résistances et coefficients ;
 * [`06-STATUS_EFFECTS.md`](./06-STATUS_EFFECTS.md) — liste, application, cumul, retrait, diminishing returns des CC et immunités ;
-* `07-EVOLUTIONS.md` — conditions et effets des évolutions ;
-* `08-ITEMS.md` — équipements et objets, dont l’objet de réinitialisation ;
-* `09-GACHA.md` — règles de l’invocation de créature ;
-* `10-PROGRESSION.md` — expérience, niveaux, énergie, réinitialisations et progression du compte ;
-* `11-COLLECTION.md` — catalogue et collections ;
+* [`07-EVOLUTIONS.md`](./07-EVOLUTIONS.md) — conditions, branches et effets des évolutions ;
+* [`08-ITEMS.md`](./08-ITEMS.md) — équipements et objets, dont l’objet de réinitialisation ;
+* [`09-GACHA.md`](./09-GACHA.md) — règles de l’invocation de créature ;
+* [`10-PROGRESSION.md`](./10-PROGRESSION.md) — expérience, niveaux, étoiles, énergie, réinitialisations et progression du compte ;
+* [`11-COLLECTION.md`](./11-COLLECTION.md) — gestion des instances, encyclopédie et capacité ;
 * `12-MODES.md` à `17-ACHIEVEMENTS.md` — activités et objectifs spécialisés ;
-* `18-UI_FLOW.md` — écrans, navigation, tutoriels et parcours.
+* [`18-UI_FLOW.md`](./18-UI_FLOW.md) — écrans, navigation, tutoriels et parcours.
 
 ### 20.2. Questions ouvertes conservées
 
 Les questions suivantes ne bloquent pas le fonctionnement global décrit par le GDD :
 
 * le nom définitif du rôle provisoirement appelé « Éveilleur » ;
-* le maintien ou le remplacement prédéfini des Skills lors d’une évolution ;
 * les coefficients exacts des résistances élémentaires ;
 * les paramètres exacts des courbes d’Agilité, de Crit et d’Esquive ;
 * les valeurs et règles individuelles encore ouvertes des effets de statut ;
-* les règles de conservation lors d’une réinitialisation complète ;
 * la méthode d’obtention et le rythme de distribution de l’objet de réinitialisation ;
 * la limite et le prix du service payant de réinitialisation ;
 * les prix et la présentation des vitesses de visualisation ×2 et ×4 ;
-* les courbes d’expérience et l’existence éventuelle de niveaux maximaux ;
+* la courbe d’expérience sans niveau maximal, les règles d’arrondi et la validation finale des paramètres actuels d’XP et de points par niveau ;
+* les multiplicateurs et exigences exacts des quinze montées d’étoiles ;
+* la formule exacte du score de Puissance ;
+* les emplacements, règles et caps d’iLvl détaillés de l’équipement ;
+* les prix et tailles des extensions permanentes de capacité ;
 * les récompenses et usages secondaires du niveau de compte ;
 * les coûts, la régénération et l’accumulation exacte de l’énergie ;
 * le nom, la représentation et le rythme d’obtention de la ressource générale d’invocation ;

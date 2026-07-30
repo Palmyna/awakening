@@ -1,0 +1,121 @@
+# Project Awakening — UI Flow
+
+**Statut :** Draft de conception — base initiale à compléter
+
+## 1. Rôle et périmètre du document
+
+Ce document rassemble les besoins fonctionnels validés concernant les écrans, les informations et les parcours liés aux créatures.
+
+Il ne fixe aucune mise en page, navigation finale, quantité d’onglets, grammaire de recherche ou direction visuelle.
+
+## 2. Principes
+
+L’interface est conçue d’abord pour Android et iOS et doit rester adaptée au tactile.
+
+Elle doit :
+
+* distinguer clairement gestion des instances, encyclopédie, inventaire et collection de skins ;
+* rendre lisibles les conséquences des actions irréversibles ;
+* présenter les informations nécessaires sans révéler les branches et conditions encore secrètes ;
+* accompagner chaque fonctionnalité par un tutoriel court lors de son déblocage.
+
+## 3. Fiche d’une instance
+
+Le joueur doit pouvoir accéder aux informations pertinentes de l’instance, notamment :
+
+* numéro de famille ;
+* nom officiel de la forme et surnom éventuel ;
+* lore ;
+* rareté ;
+* niveau, XP et étoiles ;
+* stade et branche ;
+* éléments, rôles suggérés et profil offensif ;
+* score de Puissance ;
+* caractéristiques principales et secondaires ;
+* points disponibles ;
+* Basic Attack et quatre Skills ;
+* ensemble d’équipement ;
+* tags et verrouillage ;
+* apparences de formes débloquées ;
+* informations d’évolution déjà découvertes.
+
+La disposition et les regroupements restent à définir.
+
+## 4. Parcours de gestion d’une instance
+
+L’interface doit permettre d’accéder aux actions validées :
+
+* attribuer des points ;
+* gérer l’équipement ;
+* modifier le surnom et les tags ;
+* verrouiller ou déverrouiller l’instance ;
+* choisir une apparence de forme déjà débloquée ;
+* consulter les conditions d’évolution découvertes ;
+* effectuer une réinitialisation ou une redistribution ;
+* utiliser des instances non verrouillées comme matériaux d’étoiles.
+
+Les actions irréversibles ou destructives doivent disposer d’une présentation et de confirmations adaptées. Le détail de ces protections reste à définir.
+
+## 5. Liste des instances
+
+La liste doit prendre en charge :
+
+* la recherche dynamique sensible aux formes ;
+* les tris validés ;
+* l’identification de la forme, du stade et de la branche ;
+* le score de Puissance recalculé ;
+* l’état verrouillé ;
+* l’état inutilisable pour dépassement de capacité.
+
+## 6. Encyclopédie
+
+L’encyclopédie doit :
+
+* afficher uniquement les familles découvertes ;
+* utiliser leurs numéros permanents sans zéro superflu ;
+* ne jamais révéler le nombre total de familles ;
+* distinguer lore familial et lore de forme ;
+* présenter progressivement les formes et branches découvertes ;
+* masquer le nombre et l’identité des branches encore inconnues.
+
+## 7. Arbre d’évolution
+
+Avant toute découverte complète, l’arbre peut afficher :
+
+> Forme de base → ??? → ???
+
+Les nouvelles branches et conditions connues enrichissent la vue du compte. Si plusieurs branches sont valides au même déclenchement, l’interface doit permettre le choix exceptionnel prévu par le système.
+
+Une suite de plusieurs évolutions obtenues après une même récompense d’XP doit être présentée dans l’ordre.
+
+## 8. Capacité et file d’attente
+
+L’interface doit distinguer :
+
+* la capacité gratuite ;
+* les extensions permanentes ;
+* la capacité totale ;
+* le nombre d’instances actuellement possédées ;
+* les instances grisées et inutilisables ;
+* leur ordre dans la file de déblocage.
+
+Elle doit indiquer qu’une créature obtenue au-delà de la capacité n’est jamais perdue et que la plus ancienne instance bloquée redevient automatiquement utilisable lorsqu’une place se libère.
+
+## 9. Acquisition
+
+Le parcours d’invocation doit rester clairement distinct de l’ouverture d’un paquet de skins de carte.
+
+L’obtention d’une instance doit permettre d’identifier sa famille, sa rareté et son ajout éventuel à la file de dépassement de capacité, sans révéler les branches encore secrètes.
+
+## 10. Éléments à préciser ultérieurement
+
+* L’architecture de navigation.
+* La disposition et le nombre d’écrans ou d’onglets.
+* La grammaire et les contrôles exacts de recherche.
+* La présentation des tris et filtres.
+* Les confirmations des actions irréversibles.
+* Les règles détaillées d’accessibilité.
+* Les tutoriels et leur ordre exact.
+* Les animations d’invocation, d’évolution et de montée d’étoile.
+* La présentation commerciale des extensions de capacité.
+

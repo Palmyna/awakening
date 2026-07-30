@@ -219,7 +219,9 @@ Une éventuelle représentation d’un monstre ennemi sous forme de carte devra 
 
 **Domaine :** Game design, univers
 
-**Définition :** Ensemble des formes appartenant à une même chaîne d’évolution.
+**Définition :** Identité de lignée persistante regroupant toutes les formes et branches d’un même arbre d’évolution.
+
+La famille porte notamment sa rareté, son numéro permanent dans l’encyclopédie, son lore général et l’identité de sa Basic Attack et de ses quatre Skills. Elle peut contenir plus de trois formes lorsque son arbre possède plusieurs branches.
 
 **Variantes autorisées :**
 
@@ -230,17 +232,51 @@ Une éventuelle représentation d’un monstre ennemi sous forme de carte devra 
 
 Les variantes narratives n’introduisent pas un niveau de regroupement supplémentaire.
 
+### Forme
+
+**Domaine :** Créatures, progression
+
+**Définition :** État fonctionnel et visuel précis d’une créature à un endroit de son arbre d’évolution.
+
+Une forme porte notamment son nom, son apparence, son lore propre, son ou ses éléments, son profil de caractéristiques de base, ses rôles suggérés, son profil offensif et les versions de sa Basic Attack et de ses Skills.
+
+### Instance possédée
+
+**Domaine :** Créatures, collection, progression
+
+**Définition :** Individu concret d’une famille obtenu et possédé par le joueur.
+
+L’instance reste la même créature à travers ses évolutions. Elle conserve son niveau, son XP, ses points, ses étoiles, son équipement, son surnom, ses tags, son verrouillage, son chemin d’évolution et les apparences de formes débloquées sur ce chemin. Plusieurs instances d’une même famille peuvent être possédées simultanément.
+
+**Variante autorisée :** « instance » lorsque le contexte ne laisse aucune ambiguïté.
+
+### Stade d’évolution
+
+**Domaine :** Progression des créatures
+
+**Définition :** Position atteinte par une instance dans son parcours d’évolution en trois étapes : stade 1 de base, stade 2 intermédiaire et stade 3 final.
+
+Une famille peut contenir de nombreuses formes et branches, mais chaque instance parcourt toujours exactement trois stades.
+
+### Branche d’évolution
+
+**Domaine :** Progression des créatures
+
+**Définition :** Chemin d’évolution distinct qu’une instance peut suivre au sein de l’arbre de sa famille.
+
+Une divergence peut commencer au stade 2 ou au stade 3. Le choix d’une branche est définitif pour l’instance concernée.
+
 ### Forme de base
 
 **Domaine :** Progression des créatures
 
-**Définition :** Première forme d’une famille de créatures. Une invocation de créature donne accès à cette forme, jamais directement à la forme finale.
+**Définition :** Forme correspondant au stade 1 d’une famille. Une invocation de créature donne normalement accès à cette forme, jamais directement à une forme évoluée.
 
 ### Forme intermédiaire
 
 **Domaine :** Progression des créatures
 
-**Définition :** Forme située entre la forme de base et la forme finale dans une famille de créatures qui comporte trois formes.
+**Définition :** Forme correspondant au stade 2 du parcours d’une instance.
 
 **Terme à éviter :** « évolution intermédiaire » pour désigner la forme obtenue.
 
@@ -248,7 +284,7 @@ Les variantes narratives n’introduisent pas un niveau de regroupement supplém
 
 **Domaine :** Progression des créatures
 
-**Définition :** Dernière forme actuellement prévue dans la chaîne d’évolution d’une famille de créatures.
+**Définition :** Forme correspondant au stade 3 du parcours d’une instance. Plusieurs formes finales peuvent exister dans une famille lorsque son arbre possède des branches.
 
 **Terme à éviter :** « évolution finale » pour désigner la forme obtenue.
 
@@ -256,7 +292,7 @@ Les variantes narratives n’introduisent pas un niveau de regroupement supplém
 
 **Domaine :** Progression des créatures
 
-**Définition :** Processus permettant à une créature de passer d’une forme à la suivante.
+**Définition :** Transformation permanente permettant à une instance de passer d’une forme à la suivante sur son chemin d’évolution.
 
 L’évolution transforme la même créature : elle reste le même individu après son changement de forme. Narrativement, ses formes successives expriment progressivement davantage l’écho et l’identité propre de sa famille.
 
@@ -336,9 +372,9 @@ L’Agilité n’augmente pas le Crit.
 
 **Définition :** Catégorie de dégâts utilisant par défaut l’Attaque spéciale comme caractéristique offensive et la Défense spéciale comme caractéristique défensive.
 
-Par défaut, une source de dégâts est physique ou spéciale. Toute source ne dépendant d’aucune caractéristique offensive, ignorant une défense, appliquant une valeur fixe ou suivant une règle particulière doit être déclarée explicitement.
+Une source de dégâts utilise une ou plusieurs composantes physiques ou spéciales. Un hit hybride peut réunir plusieurs composantes tout en restant un seul hit pour l’Esquive, le Critique et les effets liés au hit.
 
-Chaque compétence offensive doit déclarer sa catégorie de dégâts ainsi que la caractéristique offensive utilisée : Attaque, Attaque spéciale ou, exceptionnellement, aucune lorsqu’elle suit une formule particulière.
+Chaque compétence offensive doit déclarer ses composantes de dégâts ainsi que les caractéristiques offensives utilisées : Attaque, Attaque spéciale ou, exceptionnellement, aucune lorsqu’elle suit une formule particulière.
 
 ### Crit
 
@@ -370,13 +406,17 @@ Chaque compétence offensive doit déclarer sa catégorie de dégâts ainsi que 
 
 **Domaine :** Progression des créatures
 
-**Définition :** État actuel d’une créature dans le système d’étoiles.
+**Définition :** État actuel d’une instance dans le système d’étoiles, de 0 étoile à 15 montées regroupées visuellement en Bronze ★1 à ★5, Argent ★1 à ★5 et Or ★1 à ★5.
+
+Les étoiles augmentent uniquement les six caractéristiques principales de base de la forme et du stade actuels. Elles n’augmentent pas directement le Crit, les Dégâts critiques ou l’Esquive.
 
 ### Amélioration du niveau d’étoiles
 
 **Domaine :** Progression des créatures
 
-**Définition :** Processus utilisant les doublons de créature afin d’augmenter progressivement le potentiel de la créature concernée.
+**Définition :** Processus irréversible consommant une ou plusieurs instances de la même famille afin d’augmenter le niveau d’étoiles de l’instance cible.
+
+La forme et la branche des instances utilisées comme matériaux ne constituent pas des conditions. Certains paliers peuvent toutefois demander que ces instances possèdent elles-mêmes un niveau d’étoiles minimum.
 
 **Termes à éviter :** « évolution d’étoiles » et « évolution des étoiles ».
 
@@ -390,9 +430,7 @@ Lorsqu’une créature est obtenue, son ensemble de Skills est déjà détermin�
 
 **Variante autorisée :** « compétences fixes » lorsqu’il est utile d’insister sur l’absence de sélection ou de remplacement par le joueur.
 
-**Question ouverte :**
-
-* Une nouvelle forme obtenue lors d’une évolution conserve-t-elle les mêmes compétences ou possède-t-elle un nouvel ensemble prédéfini ?
+La Basic Attack et les quatre Skills conservent leur identité à travers les évolutions. Une nouvelle forme peut améliorer ou enrichir leurs versions et une branche peut les faire évoluer différemment, sans les remplacer par des capacités sans rapport.
 
 ### Skill
 
@@ -444,7 +482,7 @@ L’inventaire reste distinct du système de collection. Il ne constitue pas l�
 
 **Domaine :** Progression, personnalisation
 
-**Définition :** Catégorie d’objet pouvant être équipée par une créature afin de participer à sa personnalisation et à son fonctionnement.
+**Définition :** Catégorie d’objet pouvant être placée dans un emplacement de l’ensemble d’équipement actif d’une instance afin de participer à sa personnalisation et à son fonctionnement.
 
 **Variantes autorisées :**
 
@@ -456,6 +494,16 @@ L’inventaire reste distinct du système de collection. Il ne constitue pas l�
 **Domaine :** Progression, personnalisation
 
 **Définition :** Système permettant de gérer, d’attribuer, de remplacer ou de retirer les équipements des créatures.
+
+Chaque instance possède un ensemble d’équipement actif composé de plusieurs objets répartis dans plusieurs emplacements.
+
+### iLvl
+
+**Domaine :** Équipements, progression
+
+**Définition :** Niveau de puissance propre, visible, d’un objet d’équipement.
+
+L’iLvl possède un cap. Les valeurs, caps et règles détaillées appartiennent au document consacré aux objets.
 
 ### Coffre
 
@@ -485,6 +533,8 @@ La présence d’un équipement dans un coffre reste une possibilité non valid�
 
 La rareté n’est pas automatiquement équivalente à la qualité.
 
+La rareté d’une créature appartient à sa famille et reste identique pour toutes ses formes et branches. Les raretés de créature validées sont **Rare**, **Épique**, **Légendaire** et **Mythique**. Elles représentent principalement l’obtention, la collection et le prestige, sans constituer une hiérarchie automatique de puissance.
+
 ### Qualité
 
 **Domaine :** Équipements et objets
@@ -509,9 +559,10 @@ La qualité n’est pas automatiquement équivalente à la rareté.
 
 Les points obtenus grâce aux niveaux sont retirés. Le joueur doit refaire progresser la créature afin de les récupérer et de les répartir différemment.
 
-**Éléments à préciser ultérieurement :**
+La forme actuelle, la branche, les étoiles, l’équipement, le surnom, les tags et les apparences déjà débloquées sont conservés.
 
-* les règles de conservation de l’évolution, du niveau d’étoiles, de l’équipement et des autres éléments ;
+**Élément à préciser ultérieurement :**
+
 * les écrans de confirmation et les protections contre une utilisation accidentelle.
 
 ### Objet de réinitialisation des points de caractéristiques
@@ -542,6 +593,22 @@ Ce service ne donne aucun point supplémentaire, aucune expérience, aucune ress
 * la portée de cette limite par compte ou par créature ;
 * son prix et sa présentation.
 
+### Score de Puissance
+
+**Domaine :** Créatures, progression, interface
+
+**Définition :** Estimation synthétique du développement et de la puissance numérique actuelle d’une instance.
+
+Le score est recalculé en temps réel lorsqu’une source de puissance réellement active change. Les points de caractéristiques non attribués ne l’augmentent pas. Il facilite le tri et la comparaison générale sans mesurer absolument l’efficacité stratégique dans toutes les situations.
+
+### Créature verrouillée
+
+**Domaine :** Créatures, gestion
+
+**Définition :** Instance dont le verrouillage volontaire empêche la consommation comme matériau, la suppression, la réinitialisation complète et la redistribution de caractéristiques.
+
+Le verrouillage ne bloque pas l’XP, les niveaux, l’évolution, les étoiles, l’équipement ou l’utilisation normale.
+
 ### Build d’équipe
 
 **Domaine :** Game design
@@ -565,6 +632,16 @@ Les monstres ennemis ne font pas partie de l’équipe du joueur.
 **Définition :** Choix et organisation stratégique des créatures qui composent une équipe.
 
 **Variante autorisée :** « composition » lorsque le contexte est explicite.
+
+Deux instances d’une même famille peuvent appartenir à la même équipe uniquement lorsque leurs chemins d’évolution ont réellement divergé. Une forme située sur le tronc commun reste incompatible avec toute autre instance de sa famille dans cette équipe.
+
+### Capacité de créatures
+
+**Domaine :** Collection, gestion, monétisation
+
+**Définition :** Nombre d’instances possédées pouvant être utilisables simultanément sur un compte.
+
+La capacité totale additionne une capacité gratuite, recalculée selon le nombre de branches d’évolution disponibles, et les extensions permanentes achetées. Une instance obtenue au-delà de la capacité n’est jamais perdue : elle reste possédée, compte comme découverte et rejoint une file temporairement inutilisable.
 
 ## 6. Éléments et résistances
 
@@ -804,7 +881,7 @@ Quelle que soit la méthode d’obtention, un lien avec la créature est établi
 
 **Domaine :** Acquisition des créatures
 
-**Définition :** Système principal d’acquisition aléatoire de créatures. Une invocation de créature permet d’obtenir la forme de base d’une famille de créatures.
+**Définition :** Système principal d’acquisition aléatoire de créatures. Une invocation de créature permet normalement d’obtenir une nouvelle instance au stade 1 de la forme de base d’une famille.
 
 Narrativement, elle établit ou révèle le lien avec une manifestation vivante d’un écho, puis la stabilise. Elle ne crée pas artificiellement une nouvelle forme de vie.
 
@@ -953,13 +1030,17 @@ Le système de collection reste distinct de l’inventaire.
 
 Ce terme n’inclut pas les objets, les ressources et les autres éléments stockables relevant de l’inventaire.
 
-### Catalogue des créatures
+### Encyclopédie des créatures
 
 **Domaine :** Collection, créatures
 
-**Définition :** Ensemble des créatures disponibles ou connues dans le jeu, qu’elles soient possédées ou non par le joueur.
+**Définition :** Répertoire de compte présentant uniquement les familles réellement obtenues par le joueur et les informations intrinsèques découvertes à leur sujet.
 
-Les créatures qui doivent rester secrètes pour des raisons narratives, événementielles ou de découverte peuvent être masquées ou présentées sous forme de silhouette.
+Chaque famille possède un numéro permanent affiché sans zéro superflu, un lore général et un lore propre à chacune de ses formes. L’encyclopédie ne révèle jamais le nombre total de familles existantes. Les formes, branches et conditions d’évolution encore inconnues restent masquées et enrichissent progressivement l’arbre connu après leur découverte.
+
+Voir ou affronter une créature ne suffit pas à la découvrir : le joueur doit obtenir réellement une instance de sa famille.
+
+**Terme à éviter :** « catalogue des créatures » pour désigner l’encyclopédie.
 
 ### Collection de créatures
 
@@ -967,7 +1048,7 @@ Les créatures qui doivent rester secrètes pour des raisons narratives, événe
 
 **Définition :** Ensemble des créatures possédées par le joueur.
 
-La collection de créatures ne doit pas être confondue avec le catalogue des créatures, qui peut également comprendre des créatures non possédées.
+La collection de créatures ne doit pas être confondue avec l’encyclopédie, qui conserve les découvertes du compte indépendamment des instances actuellement possédées.
 
 ### Collection de skins de carte
 
@@ -1007,15 +1088,15 @@ Cette catégorie peut notamment réunir des récompenses événementielles, de h
 
 **Domaine :** Collection
 
-**Définition :** Mesure de l’avancement du joueur dans l’acquisition des éléments d’une collection ou d’un catalogue.
+**Définition :** Mesure de l’avancement du joueur dans l’acquisition des éléments d’une collection dont le périmètre est connu.
 
-La progression de la collection de créatures et celle de la collection de skins de carte sont présentées séparément. Pour les skins de carte, elle est principalement suivie par série.
+L’encyclopédie des créatures ne présente aucun taux de complétion global puisqu’elle ne révèle jamais le nombre total de familles. Pour les skins de carte, la progression est principalement suivie par série.
 
 ### Complétion d’une collection
 
 **Domaine :** Collection
 
-**Définition :** État atteint lorsque les conditions de progression définies pour une collection, un catalogue ou une série sont remplies.
+**Définition :** État atteint lorsque les conditions de progression définies pour une collection ou une série au périmètre connu sont remplies.
 
 La complétion d’une collection cosmétique ne confère aucun avantage automatique de puissance.
 
@@ -1113,11 +1194,21 @@ Les termes « produit » et « offre » restent prioritaires lorsque leur distin
 
 **Domaine :** Progression des créatures
 
-**Définition :** Nouvelle obtention d’une créature déjà possédée, utilisée pour améliorer le niveau d’étoiles de cette créature.
+**Définition :** Terme descriptif pour une nouvelle instance obtenue dans une famille déjà possédée.
 
-Elle peut être interprétée narrativement comme une nouvelle manifestation ou résonance du même écho utilisée pour renforcer la créature déjà liée. Cette interprétation ne modifie pas la mécanique du niveau d’étoiles.
+Cette obtention crée toujours une instance individuelle gérée séparément. Elle peut ensuite être développée, suivre une autre branche ou être volontairement consommée comme matériau d’étoiles pour une autre instance de la même famille.
 
 **Terme à éviter :** « doublon de monstre ».
+
+### Instance utilisée comme matériau
+
+**Domaine :** Progression des créatures
+
+**Définition :** Instance de la même famille que l’instance cible, volontairement consommée lors d’une amélioration du niveau d’étoiles.
+
+Avant sa disparition, tous ses objets équipés sont automatiquement replacés dans l’inventaire. Une instance verrouillée ne peut pas être utilisée comme matériau.
+
+**Terme à éviter :** « food » dans la documentation destinée à faire référence.
 
 ### Doublon de skin de carte
 

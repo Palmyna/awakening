@@ -94,11 +94,13 @@ Une intelligence artificielle créée par l’ancienne civilisation humaine cher
 
 Certains humains, dont le joueur, peuvent établir avec les créatures un lien qui stabilise leur existence. Cette relation fournit le fondement narratif de l’acquisition, de la collection et de l’attachement aux créatures sans modifier automatiquement les règles de gameplay correspondantes.
 
-Chaque famille de créatures possède généralement trois formes :
+Une famille peut contenir plusieurs formes et plusieurs branches d’évolution. Chaque instance possédée parcourt cependant exactement trois stades :
 
-1. une forme de base ;
-2. une forme intermédiaire ;
-3. une forme finale.
+1. un stade de base ;
+2. un stade intermédiaire ;
+3. un stade final.
+
+Les branches peuvent diverger au stade 2 ou au stade 3. Le choix d’une branche est définitif pour l’instance concernée.
 
 Cette approche permet de créer un univers extrêmement varié tout en développant une identité propre.
 
@@ -110,13 +112,13 @@ Le joueur collectionne des créatures représentées sous forme de cartes.
 
 Le système de collection doit permettre de consulter et de valoriser les éléments collectionnables du joueur. Il réunit un espace consacré aux créatures et un espace consacré aux skins de carte, sans mélanger ces deux catégories dans une liste unique.
 
-Le catalogue des créatures présente les créatures disponibles ou connues dans le jeu, qu’elles soient possédées ou non, sous réserve des contenus qui doivent rester secrets pour des raisons narratives, événementielles ou de découverte.
+L’encyclopédie des créatures est distincte de la gestion des instances possédées. Elle présente uniquement les familles réellement obtenues par le joueur, enrichit progressivement les formes et branches découvertes et ne révèle jamais le nombre total de familles existantes.
 
 La collection de skins de carte permet de consulter les skins débloqués et non débloqués, de les parcourir par série, de visualiser la progression de collection et d’appliquer les skins débloqués aux cartes des créatures concernées.
 
-Chaque créature possède notamment :
+Chaque créature possédée constitue une instance individuelle persistante au sein d’une famille. Elle possède notamment :
 
-* une rareté ;
+* une rareté définie par sa famille ;
 * un ou deux éléments au maximum ;
 * exactement quatre Skills :
 
@@ -137,9 +139,7 @@ Chaque créature possède notamment :
   * l’Esquive ;
 * une progression individuelle.
 
-L’ensemble de quatre Skills d’une créature est prédéfini. Lorsqu’une créature est obtenue, le joueur ne choisit pas ses Skills, ne les remplace pas et ne construit pas son build en les sélectionnant dans une liste. Ces Skills définissent son identité fonctionnelle, son rôle et ses synergies potentielles.
-
-La question de savoir si une nouvelle forme obtenue lors d’une évolution conserve les mêmes compétences ou possède un nouvel ensemble prédéfini reste à définir. Dans tous les cas, le joueur ne sélectionne pas librement les compétences de la forme obtenue.
+La Basic Attack et les quatre Skills sont prédéfinis à l’échelle de la famille. Lorsqu’une créature est obtenue, le joueur ne les choisit pas, ne les remplace pas et ne construit pas son build en les sélectionnant dans une liste. Leur identité est conservée à travers les évolutions, qui peuvent améliorer ou enrichir leurs versions sans les remplacer par des capacités sans rapport.
 
 Le joueur constitue une équipe pouvant réunir jusqu’à six créatures afin d’affronter les différents contenus du jeu.
 
@@ -176,13 +176,13 @@ L’invocation constitue la voie principale d’obtention des créatures. Certai
 
 Les créatures gagnent de l’expérience en participant aux combats.
 
-À chaque montée de niveau, la créature concernée reçoit des points de caractéristiques que le joueur peut répartir librement sur celle-ci selon le build souhaité.
+Le niveau d’une créature ne possède pas de maximum et n’augmente aucune caractéristique automatiquement. À chaque montée de niveau, la créature concernée reçoit actuellement cinq points de caractéristiques que le joueur peut répartir librement entre ses six caractéristiques principales. Cette valeur reste ajustable pendant le balancing.
 
 Cette répartition constitue un choix important et n’est pas librement réversible. Le joueur peut recommencer gratuitement la progression en niveaux de la créature depuis le niveau 1 afin de modifier progressivement sa répartition. Un objet rare obtenu en jouant ou un service payant strictement limité peuvent également permettre de redistribuer les points déjà gagnés sans revenir au niveau 1.
 
-Le service payant n’accorde aucun point supplémentaire, aucune expérience et aucune augmentation du potentiel maximal. Une méthode gratuite obtenue par le gameplay doit permettre d’atteindre le même résultat. Les règles de conservation de l’évolution, du niveau d’étoiles et des autres éléments ainsi que les limites exactes du service restent à définir.
+Le service payant n’accorde aucun point supplémentaire, aucune expérience et aucune augmentation du potentiel maximal. Une méthode gratuite obtenue par le gameplay doit permettre d’atteindre le même résultat.
 
-Les doublons de créature servent à améliorer le niveau d’étoiles de la créature concernée et à augmenter progressivement son potentiel, sans nécessiter de recommencer son évolution.
+La réinitialisation complète conserve la forme, la branche, les étoiles, l’équipement, le surnom, les tags et les apparences déjà débloquées. Une nouvelle obtention d’une famille déjà découverte crée une nouvelle instance individuelle. Des instances de la même famille peuvent être consommées comme matériaux pour améliorer le niveau d’étoiles d’une autre instance.
 
 ## 10. Système de combat
 
@@ -194,7 +194,7 @@ Les attaques et les compétences ordinaires sont utilisées automatiquement. Le 
 
 Le joueur peut ainsi intervenir de manière limitée ou laisser le combat se dérouler entièrement automatiquement. Cette intervention ne doit pas remplacer la préparation de l’équipe comme principal facteur de réussite.
 
-Par défaut, les dégâts sont physiques ou spéciaux. Chaque compétence offensive doit déclarer la catégorie de dégâts et la caractéristique offensive qu’elle utilise : Attaque, Attaque spéciale ou, exceptionnellement, aucune lorsqu’elle suit une formule particulière. Toute exception aux règles ordinaires de dégâts doit être explicite.
+Les dégâts utilisent des composantes physiques ou spéciales. Une même attaque peut réunir plusieurs composantes dans un hit hybride, résolu avec un seul jet d’Esquive et un seul jet de Critique, tandis que chaque composante conserve son calcul offensif et défensif propre. Chaque compétence offensive doit déclarer ses composantes et les caractéristiques qu’elle utilise : Attaque, Attaque spéciale ou, exceptionnellement, aucune lorsqu’elle suit une formule particulière.
 
 Les dégâts physiques et spéciaux peuvent produire des coups critiques par défaut. Le Crit est une caractéristique secondaire indépendante. L’Agilité contrôle l’intervalle des Basic Attacks et n’augmente pas le Crit.
 
@@ -269,16 +269,9 @@ L’objectif est de favoriser la créativité des joueurs et la diversité des b
 
 ## 14. Équipement
 
-Chaque créature peut équiper un unique équipement.
+Chaque instance possède un ensemble d’équipement actif composé de plusieurs objets répartis dans plusieurs emplacements.
 
-Les équipements possèdent notamment :
-
-* une qualité ;
-* des statistiques générées selon leur qualité ;
-* des valeurs aléatoires comprises dans une plage définie ;
-* éventuellement un pouvoir spécial.
-
-Le système est inspiré des jeux Hack’n Slash afin d’encourager la recherche d’équipements optimaux.
+Les objets d’équipement participent à la personnalisation de l’instance et possèdent notamment un iLvl visible soumis à un cap. Le nombre et les types d’emplacements, les statistiques, les affixes, les raretés, les améliorations, les sets, les caps d’iLvl et les règles de loot appartiennent au [draft consacré aux objets et équipements](../01-game-design/08-ITEMS.md).
 
 ## 15. Direction artistique
 
@@ -325,14 +318,15 @@ Les principes fondamentaux sont les suivants :
 
 La monétisation repose principalement sur une boutique exclusivement consacrée aux contenus cosmétiques.
 
-Deux services de confort limités sont validés en dehors de la boutique cosmétique :
+Les services de confort actuellement validés en dehors de la boutique cosmétique sont :
 
 * la redistribution payante des points de caractéristiques déjà gagnés par une créature, sans retour au niveau 1, avec une utilisation limitée et un objet rare obtenu en jouant fournissant le même résultat ;
-* l’accès aux vitesses de visualisation accélérées des combats, avec ×1 gratuit, ×2 comme premier palier payant et ×4 comme palier supérieur payant.
+* l’accès aux vitesses de visualisation accélérées des combats, avec ×1 gratuit, ×2 comme premier palier payant et ×4 comme palier supérieur payant ;
+* l’extension permanente de la capacité de créatures possédées.
 
 Les vitesses accélérées modifient uniquement la restitution du combat en temps réel. Elles ne changent ni la simulation, ni sa seed RNG, ni ses calculs, ses statistiques, ses événements, son résultat, ses récompenses ou son coût en énergie. Le joueur peut acheter directement ×4 ou payer seulement la différence après ×2 ; les prix restent à définir.
 
-Ces services n’autorisent pas la vente de créatures, d’invocations, d’expérience, de points de caractéristiques, d’équipements, d’énergie, de ressources de progression ni d’une augmentation du potentiel maximal d’une créature.
+Ces services n’autorisent pas la vente de créatures, d’invocations, d’expérience, de points de caractéristiques, d’équipements, d’énergie, de ressources de progression ni d’une augmentation du potentiel maximal d’une créature. Cette liste décrit les services actuellement validés sans fermer définitivement la possibilité d’en envisager d’autres, sous réserve d’une décision explicite et du respect des principes Free-to-Play, d’équité et d’absence de puissance payante.
 
 Les skins appartenant aux séries distribuées par paquets s’obtiennent principalement en ouvrant des **paquets de skins de carte**. Ces paquets peuvent être gagnés en jouant ou achetés directement contre de l’argent réel dans la boutique cosmétique.
 

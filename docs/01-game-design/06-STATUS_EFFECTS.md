@@ -22,6 +22,8 @@ Il peut modifier des caractéristiques, limiter ou empêcher des actions, produi
 
 L’association d’un effet à un élément est facultative et doit être déclarée explicitement. Aucun élément ne confère naturellement une immunité à un statut.
 
+Lorsqu’une évolution enrichit la version d’un même Skill, elle peut notamment ajouter ou modifier un effet de statut. Cette variation doit rester rattachée à l’identité conservée du Skill et être déclarée explicitement pour la forme ou la branche concernée.
+
 ## 3. Application d’un statut
 
 ### 3.1. Statut directement lié à un hit

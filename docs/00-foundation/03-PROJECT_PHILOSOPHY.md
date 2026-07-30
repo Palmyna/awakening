@@ -98,9 +98,9 @@ La répartition des points de caractéristiques constitue un choix important et 
 * un objet rare obtenu en jouant permet de redistribuer les points déjà gagnés sans revenir au niveau 1 ;
 * un service payant strictement limité peut fournir le même résultat immédiat que cet objet, sans accorder de point, d’expérience, de puissance ou de potentiel supplémentaire.
 
-Le service payant ne doit jamais fournir un résultat impossible à obtenir gratuitement. Les règles de conservation de l’évolution, du niveau d’étoiles et des autres éléments, la méthode d’obtention de l’objet ainsi que les limites exactes du service restent à définir dans les documents spécialisés.
+Le service payant ne doit jamais fournir un résultat impossible à obtenir gratuitement. La réinitialisation complète conserve notamment la forme, la branche, les étoiles, l’équipement, le surnom, les tags et les apparences déjà débloquées. La méthode d’obtention de l’objet ainsi que les limites exactes du service restent à définir dans les documents spécialisés.
 
-Les doublons de créature servent à augmenter progressivement le potentiel de la créature concernée sans obliger le joueur à recommencer son évolution. Ils doivent soutenir la continuité de la progression, non annuler l’investissement déjà réalisé.
+Une nouvelle obtention d’une famille déjà découverte crée une nouvelle instance individuelle. Les instances d’une même famille peuvent servir de matériaux pour augmenter le niveau d’étoiles d’une autre instance. Ce système doit soutenir la continuité de l’instance améliorée, non annuler l’investissement déjà réalisé dans celle-ci.
 
 ### 4.2. Favoriser l’attachement aux créatures
 
@@ -148,9 +148,9 @@ Les interactions, la présentation des informations et le rythme général doive
 
 Le système de collection doit réunir dans un même espace général deux parties clairement séparées : la collection de créatures et la collection de skins de carte. Ces deux catégories ne doivent pas être mélangées dans une liste unique.
 
-Le joueur doit pouvoir consulter ce qu’il possède, identifier ce qui lui manque, parcourir les séries de skins de carte et visualiser sa progression. Le système doit également permettre de rechercher et de filtrer les éléments, de consulter les skins disponibles pour une créature et d’appliquer un skin de carte débloqué.
+Le joueur doit pouvoir consulter et organiser les instances qu’il possède, parcourir les séries de skins de carte et visualiser sa progression. Le système doit également permettre de rechercher et de filtrer les éléments, de consulter les skins disponibles pour une créature et d’appliquer un skin de carte débloqué.
 
-Le catalogue des créatures doit présenter les créatures disponibles ou connues dans le jeu, même lorsqu’elles ne sont pas encore possédées. Les contenus qui doivent rester secrets pour des raisons narratives, événementielles ou de découverte peuvent cependant être masqués ou présentés sous forme de silhouette.
+L’encyclopédie des créatures doit rester distincte de la gestion des instances possédées. Elle présente uniquement les familles réellement obtenues, sans révéler leur nombre total, et enrichit progressivement les formes, branches et conditions d’évolution découvertes.
 
 Les skins de carte non débloqués doivent rester consultables avec leur série, leur statut de disponibilité et leur mode général d’obtention lorsque celui-ci peut être communiqué. Certains skins secrets, surprises ou non encore officiellement révélés peuvent rester masqués.
 
@@ -159,7 +159,7 @@ Le système de collection doit rester distinct de l’inventaire : la collection
 **Éléments à préciser ultérieurement :**
 
 * la navigation précise, les filtres et l’ergonomie de l’espace de collection ;
-* les règles détaillées de découverte et de présentation des créatures ou skins secrets ;
+* les règles détaillées de présentation des skins secrets ;
 * les règles exactes de calcul de la progression de collection et le traitement détaillé des contenus historiques ;
 * la nature des éventuelles reconnaissances non compétitives accordées pour la complétion d’une collection ;
 * le nom, la structure et les règles de complétion de la catégorie consacrée aux skins obtenus hors paquets.
@@ -196,14 +196,15 @@ Project Awakening adopte un modèle Free-to-Play. Les créatures doivent s’obt
 
 La boutique est exclusivement consacrée aux contenus cosmétiques. Elle ne vend aucune créature, aucune invocation, aucun avantage de combat et aucune progression de puissance.
 
-Deux services de confort strictement encadrés et distincts de la boutique cosmétique sont validés :
+Les services de confort actuellement validés, strictement encadrés et distincts de la boutique cosmétique, sont :
 
 * la redistribution payante des points de caractéristiques déjà gagnés par une créature sans la ramener au niveau 1 ; son utilisation doit être limitée et un objet rare obtenu en jouant doit permettre le même résultat ;
-* les vitesses de visualisation accélérées ×2 et ×4 des combats, tandis que ×1 reste gratuit.
+* les vitesses de visualisation accélérées ×2 et ×4 des combats, tandis que ×1 reste gratuit ;
+* les extensions permanentes de capacité de créatures possédées.
 
 La réinitialisation complète depuis le niveau 1 reste accessible gratuitement sans objet. Les vitesses accélérées changent uniquement la restitution en temps réel : elles ne modifient ni les 120 secondes de simulation, ni les calculs, la seed RNG, les statistiques, les événements, le résultat, les récompenses ou le coût en énergie.
 
-Ces services n’autorisent pas la vente de créatures, d’invocations, d’expérience, de points de caractéristiques, d’équipements, d’énergie, de ressources de progression ou de puissance.
+Ces services n’autorisent pas la vente de créatures, d’invocations, d’expérience, de points de caractéristiques, d’équipements, d’énergie, de ressources de progression ou de puissance. Leur liste n’est pas définitivement exhaustive : tout ajout futur exige une décision explicite et doit respecter les mêmes garde-fous.
 
 Les skins appartenant aux séries distribuées par paquets sont principalement obtenus grâce à des paquets de skins de carte. Ces paquets peuvent être gagnés en jouant ou achetés directement contre de l’argent réel dans la boutique cosmétique.
 
@@ -225,7 +226,7 @@ Une décision économique doit être évaluée non seulement selon sa capacité 
 
 Aucun achat effectué dans la boutique cosmétique ne doit produire directement ou indirectement un avantage de progression ou de combat.
 
-Le service payant de réinitialisation ne doit pas augmenter la puissance maximale accessible, accorder des points supplémentaires ni remplacer l’existence de méthodes gratuites. Les vitesses accélérées ne doivent jamais influencer la simulation, le résultat ou les récompenses d’un combat.
+Le service payant de réinitialisation ne doit pas augmenter la puissance maximale accessible, accorder des points supplémentaires ni remplacer l’existence de méthodes gratuites. Les vitesses accélérées ne doivent jamais influencer la simulation, le résultat ou les récompenses d’un combat. Une extension de capacité ne doit modifier ni la puissance d’une créature ni la capacité gratuite attribuée à tous les comptes.
 
 La présentation des séries de skins de carte doit permettre au joueur de comprendre et d’apprécier ce qu’il a obtenu sans transformer la complétion cosmétique en obligation de puissance. La complétion d’une série ne doit fournir aucun avantage automatique de puissance.
 
@@ -248,7 +249,7 @@ Le projet doit éviter :
 
 ### 6.3. Évolutions non validées
 
-À l’exception du service limité de réinitialisation des points de caractéristiques et des vitesses de visualisation accélérées ×2 et ×4, les autres services de confort, les publicités, les passes, les abonnements, la monnaie premium et l’achat direct d’invocations ne font pas partie du modèle initial.
+Les services de confort actuellement validés sont la redistribution limitée des points, les vitesses de visualisation ×2 et ×4 et les extensions permanentes de capacité de créatures. Les publicités, les passes, les abonnements, la monnaie premium, l’achat direct d’invocations et tout autre service non explicitement validé ne font pas partie du modèle initial.
 
 Leur éventuelle introduction après le lancement nécessitera une nouvelle décision explicite et une vérification de leur compatibilité avec les principes d’équité, de transparence et de respect des joueurs.
 

@@ -27,6 +27,10 @@ Les répartitions possibles comprennent notamment :
 
 Le joueur ne choisit pas et ne remplace pas ces Skills.
 
+La Basic Attack et les quatre Skills appartiennent à l’identité de la famille. Ils conservent cette identité à travers les évolutions.
+
+Une nouvelle forme peut améliorer ou enrichir la version d’une même capacité, notamment par ses coefficients, valeurs, durées, probabilités, nombres de hits, ciblages cohérents, effets supplémentaires ou statuts. Des branches différentes peuvent faire évoluer cette capacité de manières différentes sans la remplacer par une capacité sans rapport.
+
 ## 3. Basic Attack
 
 Chaque Basic Attack définit notamment :
@@ -126,10 +130,11 @@ Chaque cible et chaque hit sont résolus indépendamment pour l’Esquive, le Cr
 
 ## 9. Dégâts, soins et éléments
 
-Un Skill offensif déclare sa catégorie :
+Un Skill offensif déclare sa catégorie ou ses composantes :
 
 * dégâts Physiques ;
 * dégâts Spéciaux ;
+* composantes Physique et Spéciale pour un hit hybride ;
 * True Damage, lorsque cette exception est explicitement prévue.
 
 Il déclare également sa caractéristique offensive ou sa formule particulière.
@@ -137,6 +142,16 @@ Il déclare également sa caractéristique offensive ou sa formule particulière
 Chaque Basic Attack et chaque Skill possède son propre élément ou est explicitement sans élément. Cet élément peut être différent de celui ou de ceux de la créature.
 
 Les règles de calcul appartiennent à [`02-COMBAT.md`](./02-COMBAT.md) et les interactions élémentaires à [`05-ELEMENTS.md`](./05-ELEMENTS.md).
+
+### 9.1. Hit hybride
+
+Un hit hybride reste un seul hit même lorsqu’il comporte plusieurs composantes de dégâts :
+
+* un seul jet d’Esquive ;
+* un seul jet de Critique ;
+* un seul déclenchement des effets liés au hit.
+
+Ses composantes sont calculées séparément selon leurs caractéristiques offensives, défenses, résistances et modificateurs applicables. La fiche du Skill doit déclarer explicitement chaque composante.
 
 ## 10. Esquive, Crit et application des statuts
 
@@ -155,6 +170,4 @@ Une fiche de Skill peut déroger à une règle standard uniquement si l’except
 * Les coefficients, intervalles, gains d’énergie, compteurs et durées propres à chaque Basic Attack ou Skill.
 * Les listes et fiches de Skills.
 * Les règles d’interface de sélection manuelle des Ultimate.
-* Le maintien ou le remplacement prédéfini des Skills lors d’une évolution.
 * Les conventions détaillées de rédaction et de données des fiches de Skill.
-

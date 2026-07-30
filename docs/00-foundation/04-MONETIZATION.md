@@ -10,7 +10,7 @@ Il formalise les principes économiques, le modèle conceptuel prévu au lanceme
 
 Il ne fixe aucune valeur numérique. Les prix, quantités, probabilités, valeurs de conversion, limites et seuils d’évaluation devront être déterminés pendant les phases de conception détaillée, d’équilibrage et de test.
 
-Ce document complète la [vision du projet](./01-VISION.md), les [piliers fondamentaux](./02-PILLARS.md) et la [philosophie du projet](./03-PROJECT_PHILOSOPHY.md). Il ne remplace pas les futurs documents consacrés aux invocations, à la progression, aux événements, aux cartes ou à l’économie détaillée.
+Ce document complète la [vision du projet](./01-VISION.md), les [piliers fondamentaux](./02-PILLARS.md) et la [philosophie du projet](./03-PROJECT_PHILOSOPHY.md). Il ne remplace pas les documents spécialisés consacrés aux invocations, à la progression, aux événements, aux cartes ou à l’économie détaillée.
 
 ## 2. Objectif économique
 
@@ -43,7 +43,9 @@ Au lancement :
 
 La boutique est exclusivement cosmétique. Elle ne vend aucune créature, aucune invocation, aucune ressource de progression, aucun équipement, aucun avantage de combat et aucune autre forme de puissance.
 
-Deux services de confort limités, distincts de la boutique cosmétique, sont validés : la réinitialisation payante des points de caractéristiques déjà gagnés et les vitesses de visualisation accélérées des combats. Ils ne doivent accorder aucune puissance ni influencer le résultat ou les récompenses d’un combat.
+Trois services de confort, distincts de la boutique cosmétique, sont actuellement validés : la réinitialisation payante des points de caractéristiques déjà gagnés, les vitesses de visualisation accélérées des combats et les extensions permanentes de capacité de créatures possédées. Ils ne doivent accorder aucune puissance ni influencer le résultat ou les récompenses d’un combat.
+
+Les services de confort actuellement validés ne constituent pas une liste définitivement exhaustive. D’autres services de confort pourront être envisagés ultérieurement s’ils font l’objet d’une décision explicite et respectent les principes fondamentaux de Project Awakening : pas de puissance exclusive payante, pas d’avantage compétitif indispensable et pas d’obligation de payer pour progresser normalement.
 
 ### 3.2. Une monétisation principalement cosmétique
 
@@ -78,7 +80,8 @@ Sont interdits :
 Les services de confort validés dans le modèle initial sont strictement limités :
 
 * la réinitialisation payante redistribue des points déjà gagnés sans accorder de niveau, d’expérience, de ressource ou de potentiel supplémentaire ;
-* les vitesses ×2 et ×4 accélèrent uniquement la visualisation du combat en temps réel, sans modifier sa simulation.
+* les vitesses ×2 et ×4 accélèrent uniquement la visualisation du combat en temps réel, sans modifier sa simulation ;
+* une extension de capacité ajoute définitivement un nombre fixe de places de créatures possédées sans modifier la capacité gratuite ni la puissance des créatures.
 
 Une dépense effectuée dans la boutique cosmétique ne doit produire directement ou indirectement aucune créature, invocation, ressource de progression, équipement, avantage de combat ou autre forme de puissance.
 
@@ -97,7 +100,8 @@ Le modèle de lancement comprend uniquement :
 * une monnaie permanente issue de ces doublons, provisoirement nommée « monnaie de conversion des doublons » ;
 * un catalogue cosmétique permanent et limité utilisant cette monnaie ;
 * un service payant strictement limité permettant de redistribuer les points de caractéristiques déjà gagnés par une créature sans la ramener au niveau 1 ;
-* des paliers payants ×2 et ×4 de vitesse de visualisation des combats, en complément du palier ×1 gratuit.
+* des paliers payants ×2 et ×4 de vitesse de visualisation des combats, en complément du palier ×1 gratuit ;
+* des extensions payantes permanentes de la capacité de créatures possédées.
 
 Ce périmètre doit rester compatible avec les capacités humaines, techniques et financières du projet.
 
@@ -112,9 +116,9 @@ Ne sont pas prévus au lancement :
 * les abonnements ;
 * les passes ;
 * l’achat direct d’un skin précis appartenant à une série distribuée par paquets ;
-* tout autre système commercial supplémentaire en dehors des services limités de réinitialisation et de vitesse de visualisation validés.
+* tout autre système commercial supplémentaire non explicitement validé.
 
-Ces exclusions définissent le modèle initial. Elles ne constituent pas une autorisation implicite d’ajouter ces systèmes ultérieurement : toute évolution devra faire l’objet d’une nouvelle décision explicite et d’une vérification de sa cohérence avec la documentation de fondation.
+Ces exclusions définissent le modèle initial. Elles ne constituent pas une autorisation implicite d’ajouter ces systèmes ultérieurement : toute évolution devra faire l’objet d’une nouvelle décision explicite et d’une vérification de sa cohérence avec la documentation de fondation. La liste actuelle des services de confort reste évolutive dans ce cadre et ne doit pas être interprétée comme une fermeture définitive.
 
 Des produits cosmétiques directs distincts des séries distribuées par paquets pourront être envisagés ultérieurement. Leur introduction constituera une décision séparée et ne doit pas être considérée comme validée par le présent document.
 
@@ -147,7 +151,7 @@ Le service ne doit jamais devenir nécessaire pour progresser normalement, corri
 * La fréquence exacte de cette limite.
 * Le prix du service.
 * La méthode d’obtention, la rareté et le rythme de distribution de l’objet permettant une réinitialisation sans retour au niveau 1.
-* Les règles de conservation de l’évolution, du niveau d’étoiles, de l’équipement et des autres éléments lors d’une réinitialisation complète.
+* Les écrans de confirmation et les protections contre une utilisation accidentelle.
 
 ### 4.4. Exception limitée — vitesses de visualisation accélérées
 
@@ -177,6 +181,23 @@ Ce service accélère uniquement la restitution du combat dans le temps réel. I
 * Le prix de ×2.
 * Le prix de ×4.
 * La différence demandée lors du passage de ×2 à ×4.
+* La présentation commerciale et les confirmations d’achat.
+
+### 4.5. Exception limitée — extensions permanentes de capacité
+
+La capacité totale de créatures possédées comprend :
+
+* une capacité gratuite recalculée à partir du nombre de branches d’évolution disponibles ;
+* les extensions permanentes achetées par le joueur.
+
+Une extension payante ajoute définitivement un nombre fixe de places. Elle ne réduit ni ne remplace la capacité gratuite, ne débloque aucune créature exclusive et ne modifie aucune caractéristique, progression ou règle de combat.
+
+Lorsqu’un compte dépasse sa capacité, les nouvelles instances ne sont jamais perdues : elles sont conservées, comptent comme découvertes et rejoignent la file des créatures temporairement inutilisables prévue par le système de collection. L’achat d’une extension reste donc un confort de gestion et non une condition d’obtention.
+
+**Éléments à préciser ultérieurement :**
+
+* Les tailles exactes des extensions.
+* Le prix de chaque extension.
 * La présentation commerciale et les confirmations d’achat.
 
 ## 5. Acquisition des skins de carte
@@ -374,6 +395,7 @@ Les prix seront établis après :
 * Les éventuelles variations de prix entre les séries.
 * Le prix du service limité de réinitialisation des points de caractéristiques.
 * Les prix des vitesses de visualisation ×2 et ×4 ainsi que de leur upgrade.
+* Les prix et tailles des extensions permanentes de capacité.
 
 ## 9. Transparence et protection des joueurs
 
@@ -423,6 +445,14 @@ Avant l’achat d’une vitesse de visualisation accélérée, le joueur doit é
 * la possibilité d’acheter directement ×4 ou de payer seulement la différence après ×2 ;
 * le fait que la vitesse modifie uniquement la restitution en temps réel et n’influence pas la simulation, le résultat, les récompenses ou le coût en énergie.
 
+Avant l’achat d’une extension permanente de capacité, le joueur doit également connaître :
+
+* le nombre exact de places ajoutées ;
+* son prix réel ;
+* son caractère permanent ;
+* la distinction entre cette extension et la capacité gratuite recalculée pour tous les comptes ;
+* le fait qu’une créature obtenue au-delà de la capacité n’est jamais perdue.
+
 **Question ouverte :**
 
 * L’ajout éventuel de limites volontaires configurables par le joueur, selon les capacités techniques du projet.
@@ -437,7 +467,7 @@ L’achat direct d’invocations pourra uniquement être réévalué après la d
 
 Une éventuelle décision future en ce sens ne devra jamais intégrer les invocations à la boutique cosmétique ni confondre leur parcours avec celui des paquets de skins de carte.
 
-En dehors du service limité de réinitialisation et des vitesses de visualisation ×2 et ×4 déjà validés, d’autres services de confort pourront éventuellement être étudiés, mais ils ne devront :
+En dehors des services actuellement validés de réinitialisation, de vitesses de visualisation et d’extensions permanentes de capacité, d’autres services de confort pourront éventuellement être étudiés, mais ils ne devront :
 
 * conférer aucune puissance exclusive ;
 * supprimer aucune étape essentielle du jeu ;
@@ -514,7 +544,8 @@ La monétisation doit être évaluée à partir :
 * de leur perception de l’équité ;
 * de la vérification qu’aucun achat cosmétique n’influence directement ou indirectement la progression ;
 * de la vérification que le service de réinitialisation n’accorde aucun point, aucune expérience, aucun potentiel supplémentaire et aucun résultat inaccessible gratuitement ;
-* de la vérification que les vitesses de visualisation payantes n’influencent jamais la simulation, le résultat, les récompenses ou le coût en énergie.
+* de la vérification que les vitesses de visualisation payantes n’influencent jamais la simulation, le résultat, les récompenses ou le coût en énergie ;
+* de la vérification que les extensions de capacité n’accordent aucune puissance, ne remplacent pas la capacité gratuite et ne conditionnent jamais la conservation d’une créature obtenue.
 
 Une offre doit être refusée lorsqu’elle contrevient aux principes d’équité, de transparence ou de respect des joueurs, même si elle est rentable.
 

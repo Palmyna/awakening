@@ -38,28 +38,28 @@ Ces documents constituent les fondations de référence actuelles du projet. Ils
 ### 01-game-design
 
 * ✅ [`01-GAME_DESIGN_DOCUMENT.md`](./docs/01-game-design/01-GAME_DESIGN_DOCUMENT.md) — Rédigé — référence actuelle, à maintenir à jour
-* ✅ [`02-COMBAT.md`](./docs/01-game-design/02-COMBAT.md) — Rédigé — référence actuelle, à maintenir à jour
-* 🚧 [`03-CREATURES.md`](./docs/01-game-design/03-CREATURES.md) — Draft de conception — base initiale à compléter
+* 🚧 [`02-COMBAT.md`](./docs/01-game-design/02-COMBAT.md) — Draft de conception — base actuelle à compléter
+* ✅ [`03-CREATURES.md`](./docs/01-game-design/03-CREATURES.md) — Rédigé — référence actuelle, à maintenir à jour
 * 🚧 [`04-SKILLS.md`](./docs/01-game-design/04-SKILLS.md) — Draft de conception — base initiale à compléter
 * 🚧 [`05-ELEMENTS.md`](./docs/01-game-design/05-ELEMENTS.md) — Draft de conception — base initiale à compléter
 * 🚧 [`06-STATUS_EFFECTS.md`](./docs/01-game-design/06-STATUS_EFFECTS.md) — Draft de conception — base initiale à compléter
-* ⬜ `07-EVOLUTIONS.md`
-* ⬜ `08-ITEMS.md`
-* ⬜ `09-GACHA.md`
-* ⬜ `10-PROGRESSION.md`
-* ⬜ `11-COLLECTION.md`
+* 🚧 [`07-EVOLUTIONS.md`](./docs/01-game-design/07-EVOLUTIONS.md) — Draft de conception — base initiale à compléter
+* 🚧 [`08-ITEMS.md`](./docs/01-game-design/08-ITEMS.md) — Draft de conception — base initiale à compléter
+* 🚧 [`09-GACHA.md`](./docs/01-game-design/09-GACHA.md) — Draft de conception — base initiale à compléter
+* 🚧 [`10-PROGRESSION.md`](./docs/01-game-design/10-PROGRESSION.md) — Draft de conception — base initiale à compléter
+* 🚧 [`11-COLLECTION.md`](./docs/01-game-design/11-COLLECTION.md) — Draft de conception — base initiale à compléter
 * ⬜ `12-MODES.md`
 * ⬜ `13-PVP.md`
 * ⬜ `14-GUILDS.md`
 * ⬜ `15-EVENTS.md`
 * ⬜ `16-QUESTS.md`
 * ⬜ `17-ACHIEVEMENTS.md`
-* ⬜ `18-UI_FLOW.md`
+* 🚧 [`18-UI_FLOW.md`](./docs/01-game-design/18-UI_FLOW.md) — Draft de conception — base initiale à compléter
 
 ### 02-world
 
 * ✅ [`01-LORE.md`](./docs/02-world/01-LORE.md) — Rédigé — référence actuelle, à maintenir à jour
-* ⬜ `02-CREATURE_LORE.md`
+* 🚧 [`02-CREATURE_LORE.md`](./docs/02-world/02-CREATURE_LORE.md) — Draft de conception — base initiale à compléter
 * ⬜ `03-FORCES_AND_FACTIONS.md`
 * ⬜ `04-REGIONS.md`
 * ⬜ `05-TIMELINE.md`

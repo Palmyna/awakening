@@ -925,13 +925,14 @@ Le moteur de combat reçoit directement les caractéristiques finales de la cré
 
 Ces valeurs intègrent déjà notamment :
 
-* les valeurs de base ;
-* le niveau ;
-* les points distribués ;
-* l'évolution ;
-* les étoiles ;
+* les valeurs de base de la forme actuelle ;
+* le multiplicateur de son stade d’évolution, appliqué aux caractéristiques principales et secondaires de base ;
+* le multiplicateur de son niveau d’étoiles, appliqué uniquement aux six caractéristiques principales de base ;
+* les points distribués, appliqués après ces multiplicateurs ;
 * l'équipement ;
 * les autres bonus permanents.
+
+Le niveau n’augmente aucune caractéristique automatiquement. Les points de caractéristiques non attribués ne sont pas transmis comme puissance active au combat.
 
 Les effets de l'équipement sont visibles directement sur la fiche de la créature.
 
@@ -1092,6 +1093,23 @@ Exemples :
 * dégâts basés sur la Défense ;
 * dégâts utilisant plusieurs caractéristiques ;
 * etc.
+
+---
+
+### 8.1.1. Hit hybride
+
+Une même Basic Attack ou un même Skill peut comporter plusieurs composantes de dégâts, par exemple une composante Physique et une composante Spéciale.
+
+Un hit hybride reste **un seul hit** :
+
+* l’Esquive est résolue une seule fois ;
+* le Critique est résolu une seule fois ;
+* si le hit est esquivé, toutes ses composantes échouent ;
+* les effets liés au hit se déclenchent une seule fois.
+
+Les composantes de dégâts sont cependant calculées séparément. Chaque composante utilise sa caractéristique offensive, sa défense, ses résistances et ses modificateurs applicables, puis leurs résultats constituent ensemble les dégâts du hit.
+
+Cette structure n’autorise aucune formule numérique implicite : la fiche de l’action doit déclarer ses composantes et leurs coefficients.
 
 ---
 
@@ -1438,6 +1456,8 @@ Ordre conceptuel :
 12. mort éventuelle.
 
 Les valeurs intermédiaires sont conservées avec 3 décimales.
+
+Pour un hit hybride, les étapes offensives, défensives, élémentaires et les autres réductions ou protections applicables à chaque composante sont résolues séparément après l’unique jet d’Esquive et l’unique jet de Critique. Les résultats des composantes constituent ensuite les dégâts du hit.
 
 ---
 

@@ -23,7 +23,7 @@ Le joueur construit une relation durable avec ses créatures en les faisant prog
 * Les créatures doivent progresser individuellement en participant aux combats.
 * Une invocation doit donner accès à la forme de base d’une famille, jamais directement à sa forme finale.
 * La montée en niveau, les évolutions et l’amélioration des étoiles doivent renforcer progressivement une créature existante.
-* Les doublons de créature doivent augmenter le potentiel de la créature concernée sans obliger le joueur à recommencer son évolution.
+* Les nouvelles instances d’une famille déjà obtenue peuvent servir de matériaux d’étoiles sans obliger l’instance améliorée à recommencer son évolution.
 * Les systèmes de progression doivent valoriser le temps investi dans les créatures déjà possédées.
 
 ### Ce que le projet doit éviter
@@ -132,7 +132,7 @@ Le modèle économique doit financer le développement sans faire des achats la 
 
 Les joueurs doivent obtenir principalement les créatures et les invocations grâce au jeu. La boutique est exclusivement cosmétique, et la monétisation repose avant tout sur les skins de carte utilisant des illustrations alternatives, afin de préserver un environnement compétitif équitable.
 
-Deux services de confort strictement limités sont validés en dehors de la boutique cosmétique : la redistribution payante de points déjà gagnés sans recommencer la progression en niveaux, et les vitesses de visualisation accélérées ×2 et ×4 des combats. Aucun ne doit accorder de puissance inaccessible gratuitement ni modifier le résultat ou les récompenses d’un combat.
+Trois services de confort sont actuellement validés en dehors de la boutique cosmétique : la redistribution payante de points déjà gagnés sans recommencer la progression en niveaux, les vitesses de visualisation accélérées ×2 et ×4 des combats et les extensions permanentes de capacité de créatures possédées. Aucun ne doit accorder de puissance inaccessible gratuitement ni modifier le résultat ou les récompenses d’un combat.
 
 ### Conséquences sur la conception
 
@@ -154,6 +154,8 @@ Deux services de confort strictement limités sont validés en dehors de la bout
 * Un service payant distinct de la boutique cosmétique peut fournir le même résultat immédiat, à condition que son utilisation soit limitée et qu’il ne fournisse aucun avantage de potentiel par rapport aux méthodes gratuites.
 * La visualisation des combats doit rester disponible gratuitement en ×1 ; ×2 et ×4 peuvent être achetés comme services de confort, sans modifier le temps de simulation, les calculs, la seed RNG, les statistiques, les événements, le résultat, les récompenses ou le coût en énergie.
 * Le joueur doit pouvoir acheter directement ×4 ou payer seulement la différence après l’achat de ×2 ; les prix exacts restent à définir.
+* Des extensions payantes peuvent augmenter définitivement la capacité de créatures possédées sans modifier la capacité gratuite calculée pour tous les comptes ni accorder de puissance de combat.
+* Les services actuellement validés ne constituent pas une liste définitivement exhaustive ; tout nouveau service exige une décision explicite et le respect des garde-fous Free-to-Play et non-Pay-to-Win.
 * La vente d’expérience, de points de caractéristiques, d’énergie, d’équipements ou de ressources de progression doit rester interdite.
 * Les décisions économiques doivent préserver l’équité de l’environnement compétitif.
 
@@ -189,16 +191,16 @@ Les références issues de la culture populaire, des mythologies et des légende
 
 La représentation des créatures sous forme de cartes, la collection de créatures et la collection de skins de carte participent pleinement à cette identité.
 
-Le système de collection doit valoriser les éléments obtenus, rendre visible la progression du joueur et lui permettre d’identifier ce qui lui manque. Il constitue une expérience à part entière et ne doit pas être réduit à un simple inventaire technique.
+Le système de collection doit valoriser les éléments obtenus et rendre visible la progression du joueur. Il peut permettre d’identifier les éléments manquants lorsque les règles de découverte du sous-système concerné l’autorisent ; l’encyclopédie des créatures ne révèle pas les familles encore inconnues. Il constitue une expérience à part entière et ne doit pas être réduit à un simple inventaire technique.
 
 ### Conséquences sur la conception
 
 * Chaque famille de créatures doit être une création originale.
 * Les inspirations doivent être transformées et intégrées à l’identité propre du projet.
-* Les familles doivent généralement proposer une progression cohérente entre une forme de base, une forme intermédiaire et une forme finale.
+* Une famille peut proposer plusieurs branches cohérentes, tandis que chaque instance progresse toujours entre un stade de base, un stade intermédiaire et un stade final.
 * Les illustrations 2D de qualité doivent mettre en valeur les créatures sous forme de cartes.
 * Le système de collection doit distinguer clairement la collection de créatures de la collection de skins de carte.
-* Le catalogue des créatures doit permettre de consulter les créatures disponibles ou connues, sous réserve des contenus qui doivent rester secrets.
+* L’encyclopédie des créatures doit valoriser les familles réellement obtenues et enrichir progressivement les formes et branches découvertes sans révéler le contenu encore secret.
 * Les skins de carte doivent être organisés en séries cohérentes dont la progression peut être consultée.
 * Les joueurs doivent pouvoir appliquer librement les skins de carte qu’ils ont débloqués aux cartes de leurs créatures favorites.
 

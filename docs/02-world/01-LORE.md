@@ -151,9 +151,9 @@ Une évolution transforme la même créature : elle reste le même individu apr�
 
 Les formes successives expriment progressivement de manière plus complète l’écho et l’identité propre de leur famille. Cette règle générale s’applique à toutes les familles sans imposer que chaque évolution devienne plus littérale ou plus reconnaissable.
 
-Le lore ne définit pas les conditions mécaniques d’une évolution. Celles-ci seront établies dans `07-EVOLUTIONS.md`.
+Le lore ne définit pas les conditions mécaniques d’une évolution. Celles-ci sont organisées dans [`07-EVOLUTIONS.md`](../01-game-design/07-EVOLUTIONS.md).
 
-Aucune branche d’évolution, forme alternative ou sélection de forme n’est validée à ce stade.
+Une famille peut posséder plusieurs branches d’évolution. Chaque instance parcourt exactement trois stades et le choix de sa branche est définitif. Les branches expriment des développements différents d’un même écho familial sans transformer l’instance en un autre individu.
 
 **Éléments à préciser ultérieurement :**
 
@@ -236,9 +236,9 @@ Le lien entre un humain et une créature permet de stabiliser l’existence de c
 
 Le terme provisoire **Ancrage** désigne le principe de ce lien ou de cette stabilisation. Il ne constitue pas un titre donné à l’humain.
 
-Toutes les créatures possédées par le joueur sont considérées comme liées et stabilisées, qu’elles appartiennent ou non à une équipe active. Le lore n’impose aucune limite stricte au nombre de créatures qu’un joueur peut stabiliser.
+Toutes les créatures possédées par le joueur sont considérées comme liées et stabilisées, qu’elles appartiennent ou non à une équipe active. Le lore n’impose aucune limite stricte au nombre de créatures qu’un joueur peut stabiliser ; la capacité fonctionnelle détermine seulement lesquelles sont actuellement utilisables.
 
-Le lien peut être menacé, altéré ou rompu dans le récit. Aucun système de perte, de transfert ou de suppression définitive d’une créature possédée n’est cependant validé. La propriété fonctionnelle et la progression du joueur doivent rester protégées.
+Le lien peut être menacé, altéré ou rompu dans le récit. Aucun système de perte involontaire, de transfert forcé ou de suppression arbitraire d’une instance possédée n’est validé. La consommation volontaire d’une instance comme matériau d’étoiles constitue une règle fonctionnelle distincte et explicitement protégée par le verrouillage.
 
 ### 6.3. L’Éveilleur
 
@@ -278,19 +278,19 @@ Les règles fonctionnelles restent celles du GDD :
 
 La carte de créature reste uniquement la représentation visuelle et fonctionnelle de la créature dans l’interface. Elle n’est pas un objet matériel ou magique utilisé pour l’invocation.
 
-### 7.2. Nouvelles obtentions et doublons
+### 7.2. Nouvelles obtentions et instances d’une même famille
 
 Une nouvelle obtention d’une créature déjà possédée peut être interprétée comme une nouvelle manifestation ou une nouvelle résonance du même écho.
 
-Cette nouvelle résonance renforce la créature déjà liée au joueur. Fonctionnellement, elle reste un doublon de créature utilisé pour améliorer son niveau d’étoiles.
+Cette nouvelle manifestation devient fonctionnellement une instance individuelle liée au joueur. Elle peut être développée séparément, suivre une autre branche ou être volontairement consommée comme matériau d’étoiles pour une autre instance de la même famille.
 
 Cette interprétation :
 
-* conserve l’individualité de la créature possédée ;
-* ne crée pas une seconde créature à gérer séparément ;
-* ne modifie pas la mécanique actuelle du niveau d’étoiles.
+* conserve l’individualité de chaque instance ;
+* permet l’existence de plusieurs individus liés à une même famille ou à un même écho ;
+* ne modifie pas les règles fonctionnelles d’acquisition, de branches ou de niveau d’étoiles.
 
-Le vocabulaire narratif définitif de ce processus sera établi dans `02-CREATURE_LORE.md` et `09-GACHA.md`.
+Le vocabulaire narratif définitif de ce processus sera établi dans [`02-CREATURE_LORE.md`](./02-CREATURE_LORE.md) et [`09-GACHA.md`](../01-game-design/09-GACHA.md).
 
 ### 7.3. Éléments et Origines
 
@@ -325,7 +325,7 @@ Les Origines ne remplacent pas les éléments et ne confèrent actuellement :
 * aucune synergie ;
 * aucun autre effet de gameplay.
 
-Le nom définitif, la taxonomie et les règles narratives des Origines seront développés dans `02-CREATURE_LORE.md`.
+Le nom définitif, la taxonomie et les règles narratives des Origines seront développés dans [`02-CREATURE_LORE.md`](./02-CREATURE_LORE.md).
 
 ### 7.4. Mondes, régions et contenus
 
@@ -342,9 +342,9 @@ Une région événementielle peut rester dans le canon, devenir inaccessible, ê
 **Éléments à préciser ultérieurement :**
 
 * La présentation visuelle et le fonctionnement métaphysique détaillé de l’invocation.
-* Le vocabulaire narratif définitif des nouvelles manifestations utilisées comme doublons.
+* Le vocabulaire narratif définitif des nouvelles manifestations d’une famille déjà obtenue.
 * Le nom définitif, la liste et les critères d’attribution des Origines.
-* La future visibilité des Origines dans les informations ou le catalogue des créatures.
+* La future visibilité des Origines dans les informations ou l’encyclopédie des créatures.
 * La région initiale et l’événement déclencheur du mode Histoire.
 
 ## 8. Principes narratifs fondamentaux
@@ -356,7 +356,7 @@ Les principes suivants s’appliquent à l’ensemble du projet :
 3. La Matrice et l’IA humaine défendent des intentions compréhensibles, mais leurs deux extrêmes sont dangereux.
 4. Le joueur n’est ni un élu unique ni le serviteur absolu de la Matrice.
 5. Le maintien de l’équilibre constitue une direction narrative, pas une mécanique de choix déjà validée.
-6. Le lore ne doit introduire aucun système supprimant définitivement une créature possédée.
+6. Le lore ne doit introduire aucun système supprimant involontairement ou arbitrairement une créature possédée.
 7. Une explication narrative ne modifie pas automatiquement une mécanique existante.
 8. Les Origines restent distinctes des éléments et ne possèdent aucun effet de gameplay validé.
 9. Les ajouts majeurs doivent posséder une justification interne compatible avec les capacités de production du projet.
@@ -364,7 +364,7 @@ Les principes suivants s’appliquent à l’ensemble du projet :
 
 ## 9. Répartition documentaire
 
-Les informations spécialisées seront réparties de la manière suivante :
+Les informations spécialisées sont réparties de la manière suivante :
 
 ### `01-LORE.md`
 
@@ -375,13 +375,13 @@ Les informations spécialisées seront réparties de la manière suivante :
 * rôle général des humains et du joueur ;
 * principes narratifs fondamentaux.
 
-### `02-CREATURE_LORE.md`
+### [`02-CREATURE_LORE.md`](./02-CREATURE_LORE.md)
 
 * règles de création narrative des créatures ;
 * fonctionnement détaillé des échos et de leurs manifestations ;
 * émotions et influences ;
 * Ancrage et stabilisation ;
-* interprétation narrative des doublons ;
+* interprétation narrative des instances multiples d’une même famille et de leur utilisation comme matériaux ;
 * signification narrative détaillée des évolutions ;
 * taxonomie des Origines.
 

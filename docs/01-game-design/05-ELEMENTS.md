@@ -31,7 +31,7 @@ Chaque forme d’une créature possède un ou deux éléments au maximum :
 
 Les deux éléments d’une créature bi-élément sont mécaniquement égaux et ne sont pas hiérarchisés comme principal et secondaire.
 
-Toutes les combinaisons de deux éléments sont autorisées par défaut. Une évolution peut ajouter, perdre ou remplacer un élément lorsque l’évolution des pouvoirs, des capacités, des résistances ou du style de combat de la créature le justifie.
+Toutes les combinaisons de deux éléments sont autorisées par défaut. Une évolution peut ajouter, perdre ou remplacer un élément lorsque l’évolution des pouvoirs, des capacités, des résistances ou du style de combat de la créature le justifie. Deux branches d’une même famille peuvent donc porter des éléments différents.
 
 ## 4. Élément d’une attaque
 
@@ -96,4 +96,3 @@ Les règles complètes de résolution appartiennent à [`02-COMBAT.md`](./02-COM
 * Le résultat numérique exact de deux résistances successives.
 * Les conventions d’affichage des interactions élémentaires dans l’interface.
 * La répartition des éléments entre les créatures, les Basic Attacks et les Skills.
-
