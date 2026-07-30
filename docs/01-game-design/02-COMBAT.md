@@ -1,6 +1,6 @@
 # Project Awakening — Combat
 
-**Statut :** Draft de conception — base actuelle à compléter
+**Statut :** Rédigé — référence actuelle, à maintenir à jour
 
 ## 1. Rôle et périmètre du document
 
