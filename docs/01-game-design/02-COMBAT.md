@@ -179,6 +179,10 @@ Dans cet état :
 * elle ne peut pas agir ;
 * elle peut revenir après le délai prévu par sa Passive si le combat n'est pas déjà terminé.
 
+La mort et cet état non vivant n'agissent pas comme un Cleanse. Les statuts déjà présents restent attachés à la créature et leurs timers continuent à s'écouler normalement. Les effets nécessitant une cible vivante, notamment les dégâts d'un DoT, ne produisent toutefois pas leur effet normal pendant cet état.
+
+Cette règle est distincte de l'Exclusion, qui gèle les timers et effets personnels.
+
 Si toutes les créatures d'une équipe sont non vivantes, le combat se termine immédiatement.
 
 Ainsi, si le Phoenix est la dernière créature et passe en œuf, l'équipe perd avant sa prochaine résurrection.
@@ -193,22 +197,23 @@ Une auto-résurrection peut fonctionner plusieurs fois ou indéfiniment si la Pa
 
 Sauf indication contraire :
 
-* toutes les créatures commencent à **0 / 100 énergie** ;
-* aucun Basic Attack n'est exécuté immédiatement à `0,000 s`.
+* chaque créature utilise sa jauge structurelle standard `0 → 100` ;
+* son état initial est `0 / 100 énergie` ;
+* aucune Basic Attack n'est exécutée immédiatement à `0,000 s`.
+
+Une Passive peut définir une énergie initiale différente ou modifier la capacité maximale effective de la jauge. Ces modifications d'état initial sont appliquées avec les autres effets de début de combat.
 
 Les effets « au début du combat » sont résolus à `0,000 s`.
 
 Ils sont appliqués avant le démarrage normal des premières actions.
 
-Ordre déterministe en cas d'effets nécessitant réellement une résolution successive :
+Lorsque plusieurs effets de début de combat nécessitent une résolution successive, ils utilisent la priorité générale :
 
-1. équipe attaquante ;
-2. équipe défenseuse ;
-3. dans chaque équipe :
+1. Agilité effective actuelle ;
+2. équipe attaquante ;
+3. ordre des positions, de la ligne 1 à la ligne 3 puis de gauche à droite.
 
-   * ligne 1 gauche → droite ;
-   * ligne 2 gauche → droite ;
-   * ligne 3 gauche → droite.
+L'état est réévalué après chaque effet résolu.
 
 ---
 
@@ -307,15 +312,15 @@ Chaque créature possède :
 * 1 Basic Attack ;
 * exactement 4 Skills :
 
-  * 3 Skills parmi Active et Passive ;
+  * 3 Skills répartis en une ou deux Active et une ou deux Passive ;
   * exactement 1 Ultimate.
 
-Le nombre d'Active et de Passive peut varier.
-
-Exemples :
+Seules deux répartitions sont autorisées :
 
 * 1 Active + 2 Passive + 1 Ultimate ;
 * 2 Active + 1 Passive + 1 Ultimate.
+
+Une créature possède donc toujours au moins une Active et au moins une Passive.
 
 Le joueur ne choisit pas les Skills de la créature.
 
@@ -327,9 +332,9 @@ Ils font partie de son identité de gameplay.
 
 La Basic Attack est une action automatique propre à chaque créature.
 
-Il est représenté sur sa fiche de manière comparable à un Skill.
+Elle est représentée sur sa fiche de manière comparable à un Skill et inflige toujours des dégâts. Elle peut également produire des effets supplémentaires explicitement définis.
 
-Il définit notamment :
+Elle définit notamment :
 
 * son nom ;
 * son coefficient de dégâts ;
@@ -343,10 +348,7 @@ Il définit notamment :
 
 #### 5.2.1. Catégorie de dégâts
 
-Une Basic Attack peut être :
-
-* **Physique** ;
-* **Spécial**.
+Une Basic Attack peut utiliser des dégâts Physiques, Spéciaux, hybrides, True Damage ou une autre formule explicitement définie.
 
 Une Basic Attack Physique utilise :
 
@@ -358,7 +360,7 @@ Une Basic Attack Spéciale utilise :
 * Attaque spéciale ;
 * Défense spéciale de la cible.
 
-Une Basic Attack n'est donc pas obligatoirement Physique.
+Une Basic Attack n'est donc pas obligatoirement Physique et peut comporter plusieurs composantes lorsque sa fiche les déclare.
 
 #### 5.2.2. Première attaque
 
@@ -375,9 +377,11 @@ Exemple :
 
 Les Active Skills sont déclenchés automatiquement selon leur cycle.
 
-Une Active se déclenche après **X Basic Attacks réussies**.
+Chaque Active possède son propre compteur et devient prête après **X Basic Attacks réussies**. Lorsqu'une créature possède deux Active, une même Basic réussie fait progresser leurs compteurs indépendants en parallèle.
 
-La Basic correspondante est alors remplacée par l'Active.
+Un compteur ayant atteint son seuil reste bloqué à sa valeur maximale jusqu'au lancement de l'Active. Aucun dépassement n'est stocké.
+
+L'action qui aurait normalement eu lieu à l'opportunité concernée est alors remplacée par l'Active.
 
 Si plusieurs Active sont prêtes au même moment, elles sont résolues selon leur ordre défini sur la fiche de la créature.
 
@@ -389,6 +393,10 @@ Une Active :
 
 * ne compte pas elle-même comme Basic ;
 * ne fait pas progresser les autres compteurs de Basic, sauf règle explicitement contraire.
+
+Dès que l'Active commence son lancement, son compteur revient à zéro, même si le Skill rate, si sa cible esquive ou si aucun de ses hits ne touche.
+
+Une capacité peut explicitement modifier le seuil ou la progression d'un cycle d'Active. Elle ne retire pas rétroactivement, comme comportement standard, des Basic Attacks déjà accomplies dans un compteur adverse.
 
 Une Basic esquivée :
 
@@ -416,23 +424,27 @@ Exemples :
 
 Une Passive peut créer des exceptions aux règles générales si sa description les définit explicitement.
 
+Elle peut contenir plusieurs effets et conditions et se déclencher autant de fois que sa description le prévoit. Une Passive peut également réagir à la mort de son propre porteur ; la mort n'annule pas l'effet dont elle constitue précisément le déclencheur.
+
+Un effet conditionnel ou déclenché intégré à une Basic Attack, une Active ou une Ultimate ne transforme pas cette capacité en Passive supplémentaire.
+
 ---
 
 ### 5.5. Ultimate
 
 Chaque créature possède exactement **1 Ultimate**.
 
-La jauge d'Ultimate va de :
+Chaque créature possède une jauge structurelle standard allant de **0 à 100 énergie** et un seuil standard d'Ultimate fixé à 100.
 
-**0 à 100 énergie.**
+Une Passive ou un autre effet peut explicitement modifier :
 
-Lorsqu'une Ultimate est utilisée :
+* l'énergie initiale ;
+* la capacité maximale effective de la jauge ;
+* le seuil de disponibilité de l'Ultimate.
 
-* la jauge revient de 100 à 0.
+Une capacité maximale effective supérieure à 100 autorise l'accumulation au-delà de 100. Lorsque la capacité effective reste égale à 100, tout gain excédentaire est perdu.
 
-La jauge ne peut jamais dépasser 100.
-
-Toute énergie supplémentaire gagnée à 100 est perdue.
+Lorsqu'une Ultimate commence réellement son utilisation, toute l'énergie présente est consommée et la jauge revient à 0, même si son seuil était inférieur à l'énergie accumulée.
 
 #### 5.5.1. Priorité d’action
 
@@ -442,8 +454,8 @@ Elle ne constitue pas une action supplémentaire indépendante entre deux Basics
 
 Lorsqu'une créature est prête à agir, la priorité standard est :
 
-1. Ultimate prête ;
-2. Active prête ;
+1. Ultimate prête, autorisée et disposant d'une cible valide ;
+2. Active prête, autorisée et disposant d'une cible valide ;
 3. Basic Attack.
 
 Si l'Ultimate est disponible au moment où une Active devait être utilisée :
@@ -469,18 +481,21 @@ Une Basic esquivée :
 
 Sauf effet explicite, seule la créature qui effectue l'action gagne l'énergie liée à sa Basic.
 
-Des Skills ou Passives peuvent :
+Pendant le combat, les autres Skills ne constituent pas des sources autonomes de gain direct d'énergie. Ils peuvent en revanche :
 
-* ajouter de l'énergie ;
-* retirer de l'énergie ;
-* voler de l'énergie ;
-* modifier la quantité d'énergie générée.
+* modifier ou empêcher le gain produit par une Basic ;
+* retirer ou voler de l'énergie ;
+* modifier le seuil de l'Ultimate ;
+* modifier la capacité maximale effective ;
+* exploiter l'énergie accumulée.
+
+La disponibilité de l'Ultimate est recalculée en live après toute modification de l'énergie ou de son seuil.
 
 #### 5.5.3. Auto
 
 En mode Auto :
 
-> lorsqu'une Ultimate est à 100 énergie, elle est sélectionnée à la prochaine opportunité d'action valide.
+> lorsqu'une Ultimate atteint son seuil, elle est sélectionnée à la prochaine opportunité d'action valide.
 
 Elle reste prioritaire sur une Active prête et sur la Basic Attack.
 
@@ -488,10 +503,16 @@ Elle reste prioritaire sur une Active prête et sur la Basic Attack.
 
 En mode Manuel :
 
-* le joueur peut conserver son Ultimate à 100 ;
-* aucune énergie supplémentaire ne peut être stockée au-delà de 100 ;
+* le joueur peut conserver son Ultimate une fois son seuil atteint ;
+* l'énergie peut continuer à s'accumuler jusqu'à la capacité maximale effective ;
 * le joueur choisit de demander son déclenchement ;
 * l'Ultimate demandée est utilisée à la prochaine opportunité d'action valide.
+
+Le mode de contrôle est global au combat. Les Basic Attacks et Active restent automatiques dans les deux modes.
+
+Une demande manuelle d'Ultimate est irréversible. Le joueur contrôle son autorisation, mais ni sa cible ni son comportement interne.
+
+Lors du passage de Manuel à Auto, une Ultimate prête devient automatiquement autorisée à la prochaine opportunité valide. Lors du passage d'Auto à Manuel, une Ultimate prête dont le lancement n'a pas commencé reste disponible et attend une demande manuelle.
 
 La vitesse de visualisation peut être changée même en mode Manuel.
 
@@ -535,31 +556,33 @@ Pendant un CC total :
 
 Les DoT, HoT, buffs et debuffs continuent cependant à évoluer normalement pendant un CC classique.
 
-#### 5.6.2. Égalité temporelle avec un CC
+#### 5.6.2. Interaction temporelle avec un CC
 
-Si un CC empêchant une action et l'action elle-même sont programmés exactement au même timestamp :
+Lorsqu'un CC est appliqué avant le début réel de l'action d'une créature, il peut empêcher cette action selon ses règles.
 
-> le CC empêchant l'action est prioritaire.
+Si plusieurs créatures devaient agir au même timestamp, leur ordre est d'abord établi selon la priorité générale définie en section 5.7. Un CC produit par l'action prioritaire est entièrement résolu avant l'évaluation de l'action suivante.
+
+Une action dont le lancement a déjà commencé n'est pas annulée par un CC, sauf interruption explicitement prévue.
 
 ---
 
-### 5.7. Événements simultanés
+### 5.7. Actions au même timestamp et chaînes de résolution
 
-Tous les événements déclenchés au même timestamp forment un bloc temporel commun.
+Lorsque plusieurs créatures doivent agir exactement au même timestamp, leur ordre est déterminé par :
 
-Lorsque l'ordre est réellement nécessaire, l'ordre de position peut être utilisé :
+1. l'Agilité effective actuelle la plus élevée ;
+2. en cas d'égalité, l'équipe attaquante avant l'équipe défenseuse ;
+3. en cas de nouvelle égalité, l'ordre des positions : ligne 1 à ligne 3, puis gauche à droite.
 
-1. ligne 1 gauche → droite ;
-2. ligne 2 gauche → droite ;
-3. ligne 3 gauche → droite.
+L'Agilité est évaluée en live au moment où l'action doit réellement commencer.
 
-Cependant, des dégâts déjà déclenchés au même timestamp sont considérés comme simultanés.
+Une action et toute sa chaîne de conséquences sont entièrement résolues avant le passage à l'action normale suivante. Cette chaîne comprend les hits, dégâts, soins, statuts, réactions, Passive, morts, effets à la mort et réactions aux réactions.
 
-Deux créatures peuvent donc s'éliminer mutuellement au même timestamp.
+Une action dont le lancement a commencé continue jusqu'à sa fin même si son lanceur meurt pendant sa résolution. Une interruption n'existe que si une mécanique particulière la prévoit explicitement.
 
-Si les deux équipes remplissent simultanément leur condition de défaite :
+Si plusieurs effets à la mort attendent la même priorité temporelle, ils utilisent le même départage par Agilité effective, équipe attaquante puis position.
 
-> l'attaquant remporte le combat.
+Les boucles infinies de réactions doivent être empêchées par la conception des capacités et les garde-fous techniques appropriés.
 
 ---
 
@@ -621,6 +644,8 @@ Les tanks protègent principalement leur équipe via :
 * les lignes ;
 * les règles naturelles de ciblage ;
 * leurs propres Skills.
+
+Le terme **allié** inclut le lanceur lui-même. Une capacité qui doit l'exclure utilise la formulation **autre allié**.
 
 ---
 
@@ -732,6 +757,8 @@ Une même AoE peut donc :
 * Critiquer sur certaines ;
 * toucher normalement les autres.
 
+Un effet offensif visant une cible reste soumis à son Esquive même s'il n'inflige aucun dégât, sauf exception explicitement inesquivable.
+
 ---
 
 ### 6.7. Multi-hit
@@ -754,6 +781,20 @@ Si tous les hits sont esquivés par toutes les cibles :
 
 * aucune énergie n'est gagnée ;
 * les compteurs d'Active ne progressent pas.
+
+### 6.8. Détermination des cibles et état live
+
+L'action à utiliser et ses cibles sont évaluées à partir de l'état live du combat lorsque l'action commence réellement. Les décisions de toutes les créatures prévues au même timestamp ne sont pas figées à l'avance.
+
+Par défaut, les cibles d'un Skill sont déterminées à son lancement et restent les mêmes pendant sa résolution. Un Skill peut explicitement prévoir une nouvelle sélection pour chaque hit ou chaque étape.
+
+Si une cible fixe meurt pendant un multi-hit, les hits restants qui lui étaient destinés sont perdus. Ils ne cherchent une nouvelle cible que lorsque la capacité prévoit des sélections successives.
+
+Une capacité prête sans cible valide n'est pas lancée et conserve son compteur ou son énergie. Le moteur recherche l'action valide suivante selon les priorités.
+
+Les zones de ligne, de colonne ou d'équipe ne sont pas interrompues par les positions vides. Les règles d'adjacence et de proximité peuvent en revanche être rompues par ces positions.
+
+Un ciblage aléatoire utilise la seed RNG déterministe du combat.
 
 ---
 
@@ -983,6 +1024,8 @@ Une caractéristique ne peut jamais descendre sous 0 point.
 
 ### 7.9. Modifications jusqu’à la fin du combat
 
+Tous les effets produits pendant un combat sont limités à ce combat. Aucun ne modifie définitivement l'instance ou ne persiste dans le combat suivant.
+
 Certains effets peuvent modifier une caractéristique jusqu'à la fin du combat.
 
 Ces effets :
@@ -992,6 +1035,8 @@ Ces effets :
 * ne sont pas Dispellables ;
 * peuvent être cumulés indéfiniment si le Skill le permet ;
 * disparaissent après le combat.
+
+Dans le contexte d'un effet de combat, le terme « permanent » signifie au maximum « jusqu'à la fin du combat ».
 
 Exemple :
 
@@ -1790,6 +1835,23 @@ Résolution :
 
 Un Skill inesquivable peut toujours conserver une probabilité indépendante d'application du statut.
 
+#### 10.7.3. Nature d'une probabilité
+
+La description doit préciser si une probabilité est :
+
+* globale pour le déclenchement de la capacité ou d'un effet ;
+* testée pour chaque cible ;
+* liée à un hit réussi ;
+* attachée à une autre unité de résolution explicitement nommée.
+
+Une probabilité globale peut être testée avant les Esquives individuelles des cibles. Aucun jet d'application implicite ne doit être ajouté.
+
+#### 10.7.4. Ordre des effets
+
+Une capacité peut produire plusieurs effets possédant chacun leurs cibles, probabilités, durées et règles propres.
+
+Ils sont résolus dans l'ordre réellement décrit. Un debuff appliqué après le calcul des dégâts d'un hit ne modifie pas rétroactivement ces dégâts. Si la capacité applique explicitement le debuff avant de calculer les dégâts, le nouvel état de la cible peut être utilisé.
+
 ---
 
 ## 11. Contrôles et autres effets de statut
@@ -1868,7 +1930,7 @@ Une Active devenue prête pendant Silence reste prête.
 
 Elle est utilisée à la première occasion valide après la fin du Silence.
 
-Une Ultimate à 100 reste également disponible après la fin du Silence.
+Une Ultimate ayant atteint son seuil reste également disponible après la fin du Silence.
 
 ---
 
@@ -1933,7 +1995,7 @@ La valeur exacte du cap reste à équilibrer.
 
 ### 11.8. Cleanse
 
-Cleanse retire des effets négatifs d'un allié ou de soi-même.
+Cleanse retire des effets négatifs d'un allié. Selon la convention générale, le terme « allié » inclut le lanceur ; « autre allié » l'exclut.
 
 Sans précision supplémentaire :
 
@@ -1978,8 +2040,8 @@ Un Skill peut :
 
 * retirer de l'énergie à une cible ;
 * voler de l'énergie ;
-* augmenter la génération d'énergie ;
-* réduire la génération d'énergie.
+* augmenter ou réduire l'énergie générée par une Basic Attack ;
+* empêcher temporairement ce gain.
 
 Le Vol d'énergie transfère tout ou partie de l'énergie réellement retirée selon la définition du Skill.
 

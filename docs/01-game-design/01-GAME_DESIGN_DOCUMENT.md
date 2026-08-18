@@ -161,7 +161,7 @@ Le contrôle laissé au joueur pendant le combat offre une implication limitée.
 
 Chaque créature possède une identité fonctionnelle déterminée notamment par :
 
-* son ensemble fixe de quatre Skills, comprenant une Ultimate et trois autres Skills formant une combinaison d’Active et de Passive ;
+* son ensemble fixe de quatre Skills, répartis en une Active, deux Passive et une Ultimate ou en deux Active, une Passive et une Ultimate ;
 * son ou ses éléments ;
 * son profil de caractéristiques ;
 * son rôle et ses synergies potentielles.
@@ -497,12 +497,9 @@ Il n’existe aucun IV ni variation aléatoire cachée des valeurs intrinsèques
 L’ensemble de Skills comprend exactement :
 
 * une Ultimate ;
-* trois autres Skills formant une combinaison fixe d’Active et de Passive.
+* une Active et deux Passive, ou deux Active et une Passive.
 
-Les répartitions possibles comprennent notamment :
-
-* une Active, deux Passive et une Ultimate ;
-* deux Active, une Passive et une Ultimate.
+Ces deux répartitions sont les seules autorisées. Chaque créature possède toujours au moins une Active et au moins une Passive.
 
 Lorsqu’une créature est obtenue, cet ensemble est déjà déterminé.
 
@@ -513,7 +510,7 @@ Le joueur :
 * ne sélectionne pas un ensemble alternatif ;
 * ne construit pas le build à partir d’une liste de compétences.
 
-La Basic Attack et les quatre Skills définissent l’identité fonctionnelle de la famille et la conservent à travers ses évolutions. Une nouvelle forme peut améliorer ou enrichir les versions de ces mêmes capacités, et des branches différentes peuvent les faire évoluer différemment, sans les remplacer par des capacités sans rapport.
+La Basic Attack et les quatre Skills définissent l’identité fonctionnelle de la famille et conservent leur continuité conceptuelle à travers ses évolutions. La catégorie de chaque Skill reste inchangée. Une nouvelle forme peut enrichir une capacité ou transformer fortement sa fonction lorsque cette transformation reste cohérente avec l’évolution de la créature.
 
 ### 10.3. Build de créature
 
@@ -593,7 +590,7 @@ Le joueur peut :
 
 Une attaque peut comporter plusieurs composantes de dégâts dans un même hit hybride. Ce hit utilise un seul jet d’Esquive et un seul jet de Critique, tandis que ses composantes Physique et Spéciale sont calculées séparément selon leurs caractéristiques, défenses, résistances et modificateurs applicables.
 
-Le combat peut ainsi être semi-automatique ou entièrement automatique selon le choix du joueur. À chaque opportunité d’action valide, une Ultimate prête est prioritaire sur une Active prête, elle-même prioritaire sur la Basic Attack. Une Ultimate ou une Active remplace la Basic Attack qui aurait normalement eu lieu.
+Le combat peut ainsi être semi-automatique ou entièrement automatique selon le choix du joueur. À chaque opportunité d’action valide, une Ultimate prête et autorisée est prioritaire sur une Active prête, elle-même prioritaire sur la Basic Attack. Une Ultimate ou une Active remplace la Basic Attack qui aurait normalement eu lieu.
 
 Les contenus déjà maîtrisés doivent pouvoir être joués entièrement automatiquement.
 

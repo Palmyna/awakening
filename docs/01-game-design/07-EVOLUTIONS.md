@@ -39,7 +39,7 @@ Le multiplicateur de stade appliqué aux caractéristiques principales et second
 * stade 2 : ×2 ;
 * stade 3 : ×3.
 
-La Basic Attack et les quatre Skills conservent leur identité. Une évolution peut améliorer ou enrichir leurs versions et une branche peut les faire évoluer différemment, sans les remplacer par des capacités sans rapport.
+La Basic Attack et les quatre Skills conservent leur continuité conceptuelle, et la catégorie de chaque Skill reste inchangée. Une évolution peut enrichir leur version ou transformer fortement leur fonction lorsque cette transformation reste cohérente avec l’évolution de la créature. Une capacité ne doit pas être remplacée arbitrairement par une capacité sans relation conceptuelle.
 
 ## 4. Conditions d’évolution
 
@@ -114,4 +114,3 @@ Une instance peut afficher une ancienne forme réellement parcourue sur son prop
 * La présentation et les confirmations des choix de branche.
 * Les animations et l’enchaînement visuel de plusieurs évolutions.
 * Les valeurs de base et profils numériques des formes.
-

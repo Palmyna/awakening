@@ -48,7 +48,7 @@ Deux joueurs possédant exactement les mêmes créatures doivent pouvoir créer 
 ### Conséquences sur la conception
 
 * Le joueur doit pouvoir répartir sur chaque créature les points de caractéristiques qu’elle reçoit lors de ses montées de niveau.
-* Chaque créature doit posséder exactement quatre Skills prédéfinis : une Ultimate et trois autres Skills formant une combinaison fixe d’Active et de Passive.
+* Chaque créature doit posséder exactement quatre Skills prédéfinis selon l’une des deux répartitions autorisées : une Active, deux Passive et une Ultimate ; ou deux Active, une Passive et une Ultimate.
 * Le joueur ne doit ni choisir ni remplacer les compétences d’une créature. Il personnalise son fonctionnement à travers ses caractéristiques, son équipement, sa progression, son évolution, son niveau d’étoiles et son intégration dans une équipe.
 * Les synergies entre les membres d’une équipe doivent encourager plusieurs compositions.
 * La conception des créatures doit favoriser une diversité de builds et d’usages.

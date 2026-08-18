@@ -47,6 +47,8 @@ Pour chaque tâche, l’agent doit :
 
 Une tâche ne doit pas être considérée comme terminée si le code, les données, les décisions de conception et la documentation se contredisent.
 
+La documentation décrit les règles et décisions actuellement validées ; elle ne constitue pas une liste fermée de toutes les mécaniques futures. Une exception propre à un contenu particulier doit rester explicitement locale. Toute nouvelle règle système réutilisable, ou toute modification d’une règle commune, doit entraîner la mise à jour des documents de référence concernés.
+
 ## Documentation liée au développement
 
 Lorsqu’une modification concerne le code ou l’architecture technique, l’agent doit vérifier si elle nécessite une mise à jour de la documentation, notamment pour :

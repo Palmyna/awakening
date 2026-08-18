@@ -65,7 +65,7 @@ Le projet doit éviter :
 
 La personnalisation ne doit pas être un système périphérique. Elle constitue le cœur du gameplay et la principale source de diversité entre les joueurs.
 
-Chaque créature possède exactement quatre Skills prédéfinis : une Ultimate et trois autres Skills formant une combinaison fixe d’Active et de Passive. Le joueur ne choisit pas ces Skills, ne les remplace pas et ne construit pas son build en les sélectionnant dans une liste. Ils définissent l’identité fonctionnelle, le rôle et les synergies potentielles de la créature.
+Chaque créature possède exactement quatre Skills prédéfinis selon l’une des deux répartitions autorisées : une Active, deux Passive et une Ultimate ; ou deux Active, une Passive et une Ultimate. Le joueur ne choisit pas ces Skills, ne les remplace pas et ne construit pas son build en les sélectionnant dans une liste. Ils définissent l’identité fonctionnelle, le rôle et les synergies potentielles de la créature.
 
 Le joueur développe la créature autour de cet ensemble fixe à travers la répartition de ses caractéristiques, son équipement, sa progression, son évolution, son niveau d’étoiles, ses interactions avec les effets de statut et son rôle dans l’équipe. Les choix de composition et les synergies entre les membres d’une équipe participent également à cette différenciation.
 

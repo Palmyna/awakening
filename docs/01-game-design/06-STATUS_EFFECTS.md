@@ -20,9 +20,11 @@ Un effet peut être :
 
 Il peut modifier des caractéristiques, limiter ou empêcher des actions, produire un effet périodique, réagir à un événement ou modifier temporairement une règle.
 
+Tous les effets de statut prennent fin au plus tard avec le combat en cours. Le terme « permanent », lorsqu’il est utilisé pour un effet de combat, signifie « jusqu’à la fin du combat » et ne modifie jamais définitivement l’instance.
+
 L’association d’un effet à un élément est facultative et doit être déclarée explicitement. Aucun élément ne confère naturellement une immunité à un statut.
 
-Lorsqu’une évolution enrichit la version d’un même Skill, elle peut notamment ajouter ou modifier un effet de statut. Cette variation doit rester rattachée à l’identité conservée du Skill et être déclarée explicitement pour la forme ou la branche concernée.
+Lorsqu’une évolution enrichit ou transforme la version d’un même Skill, elle peut notamment ajouter, retirer ou modifier un effet de statut. Cette variation doit maintenir une continuité conceptuelle cohérente et être déclarée explicitement pour la forme ou la branche concernée.
 
 ## 3. Application d’un statut
 
@@ -34,14 +36,18 @@ Lorsqu’un statut est directement lié à un hit :
 * si le hit réussit, le statut s’applique ;
 * aucun second jet d’application caché n’est effectué.
 
+Un statut ou autre effet offensif ciblé reste soumis à l’Esquive de chaque cible même lorsqu’il n’inflige aucun dégât, sauf exception explicitement inesquivable.
+
 ### 3.2. Probabilité explicitement définie
 
-Lorsqu’un statut possède une probabilité d’application :
+Lorsqu’un statut possède une probabilité liée à un hit :
 
 1. l’Esquive du hit est résolue ;
 2. si le hit réussit, la probabilité déclarée est testée.
 
 Un Skill inesquivable peut conserver une probabilité d’application indépendante.
+
+Une probabilité peut également être globale, propre à chaque cible ou attachée à une autre unité de résolution explicitement nommée. Une probabilité globale peut être testée avant les Esquives individuelles. La fiche du Skill doit préciser cette nature ; aucun jet caché implicite n’est ajouté.
 
 ## 4. Réapplication, coexistence et cumul
 
@@ -66,6 +72,8 @@ Ils :
 * continuent normalement pendant un CC classique ;
 * voient leurs timers gelés pendant l’Exclusion de leur cible ;
 * utilisent un snapshot de leur source au moment de l’application.
+
+La mort de leur cible ou son passage dans un état non vivant lié à une auto-résurrection ne retire pas automatiquement ces statuts et ne gèle pas leurs timers. Un effet exigeant une cible vivante, comme les dégâts d’un DoT, ne produit toutefois pas son effet normal tant que la cible est non vivante.
 
 L’état de la cible reste dynamique et est recalculé à chaque tick. Cela comprend notamment ses défenses, ses résistances élémentaires, ses réductions, son Absorption, ses Boucliers et sa réduction des soins.
 
@@ -106,7 +114,7 @@ Les tags de CC total standards sont :
 
 Ils empêchent la créature d’agir et partagent les mêmes règles générales de diminishing returns, tout en restant des tags distincts pour les interactions de Skills.
 
-Si un CC empêchant une action et l’action elle-même surviennent exactement au même timestamp, le CC est résolu en premier.
+Si un CC est appliqué avant le début réel d’une action, il peut l’empêcher. Les actions prévues au même timestamp sont ordonnées selon l’Agilité effective, puis l’équipe attaquante, puis la position ; une action déjà lancée n’est pas annulée sans interruption explicite.
 
 ### 7.1. Diminishing returns
 
@@ -123,10 +131,10 @@ Une immunité explicitement accordée empêche l’application des CC ou statuts
 Pendant Silence :
 
 * la Basic Attack reste disponible ;
-* la créature continue à générer de l’énergie ;
+* ses Basic Attacks réussies continuent à générer de l’énergie ;
 * ses Basic Attacks réussies continuent à faire progresser les compteurs d’Active ;
 * ses Active et son Ultimate ne peuvent pas être utilisées ;
-* les Active prêtes et l’Ultimate à 100 restent prêtes.
+* les Active prêtes et l’Ultimate ayant atteint son seuil restent prêtes.
 
 Après la fin du Silence, les règles normales de priorité reprennent.
 
@@ -157,8 +165,10 @@ La réduction des soins peut exister comme debuff indépendant. Son cap reste à
 
 Par défaut :
 
-* Cleanse retire un effet négatif aléatoire d’un allié ou de soi-même ;
+* Cleanse retire un effet négatif aléatoire d’un allié, terme qui inclut le lanceur ;
 * Dispel retire un effet positif aléatoire d’un ennemi.
+
+La formulation « autre allié » exclut explicitement le lanceur.
 
 Un Skill peut définir une autre quantité ou une règle de sélection particulière.
 
@@ -176,7 +186,10 @@ Des Skills peuvent :
 
 * retirer de l’énergie ;
 * voler de l’énergie ;
-* modifier la quantité d’énergie générée.
+* modifier ou empêcher la quantité d’énergie générée par une Basic Attack ;
+* modifier le seuil de l’Ultimate ou la capacité maximale effective de la jauge.
+
+Pendant le combat, les autres Skills ne constituent pas des sources autonomes de gain direct d’énergie. Le gain normal provient des Basic Attacks réussies.
 
 Il n’existe pas de statut général empêchant toute génération d’énergie. Une exception doit être explicitement définie.
 

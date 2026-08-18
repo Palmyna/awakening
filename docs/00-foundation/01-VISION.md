@@ -123,7 +123,7 @@ Chaque créature possédée constitue une instance individuelle persistante au s
 * exactement quatre Skills :
 
   * exactement une Ultimate ;
-  * trois autres Skills formant une combinaison fixe d’Active et de Passive ;
+  * les trois autres utilisent l’une des deux répartitions autorisées : une Active et deux Passive, ou deux Active et une Passive ;
 * six caractéristiques principales :
 
   * les points de vie (PV) ;
@@ -139,7 +139,7 @@ Chaque créature possédée constitue une instance individuelle persistante au s
   * l’Esquive ;
 * une progression individuelle.
 
-La Basic Attack et les quatre Skills sont prédéfinis à l’échelle de la famille. Lorsqu’une créature est obtenue, le joueur ne les choisit pas, ne les remplace pas et ne construit pas son build en les sélectionnant dans une liste. Leur identité est conservée à travers les évolutions, qui peuvent améliorer ou enrichir leurs versions sans les remplacer par des capacités sans rapport.
+La Basic Attack et les quatre Skills sont prédéfinis à l’échelle de la famille. Lorsqu’une créature est obtenue, le joueur ne les choisit pas, ne les remplace pas et ne construit pas son build en les sélectionnant dans une liste. Leur identité et la catégorie de chaque Skill sont conservées à travers les évolutions. Une forme ou une branche peut enrichir ou transformer fortement leur fonctionnement lorsque cette évolution maintient une continuité conceptuelle cohérente.
 
 Le joueur constitue une équipe pouvant réunir jusqu’à six créatures afin d’affronter les différents contenus du jeu.
 

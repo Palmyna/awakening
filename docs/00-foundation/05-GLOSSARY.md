@@ -424,13 +424,13 @@ La forme et la branche des instances utilisées comme matériaux ne constituent 
 
 **Domaine :** Créatures, compétences
 
-**Définition :** Groupe prédéfini de quatre Skills appartenant à une créature : exactement une Ultimate et trois autres Skills formant une combinaison fixe d’Active et de Passive.
+**Définition :** Groupe prédéfini de quatre Skills appartenant à une créature selon l’une des deux répartitions autorisées : une Active, deux Passive et une Ultimate ; ou deux Active, une Passive et une Ultimate.
 
 Lorsqu’une créature est obtenue, son ensemble de Skills est déjà déterminé. Le joueur ne choisit pas ces Skills, ne les remplace pas et ne construit pas son build en sélectionnant des Skills dans une liste. Ils définissent l’identité fonctionnelle, le rôle et les synergies potentielles de la créature.
 
 **Variante autorisée :** « compétences fixes » lorsqu’il est utile d’insister sur l’absence de sélection ou de remplacement par le joueur.
 
-La Basic Attack et les quatre Skills conservent leur identité à travers les évolutions. Une nouvelle forme peut améliorer ou enrichir leurs versions et une branche peut les faire évoluer différemment, sans les remplacer par des capacités sans rapport.
+La Basic Attack et les quatre Skills conservent leur continuité conceptuelle à travers les évolutions. La catégorie d’un Skill ne change pas. Une nouvelle forme peut enrichir une capacité ou transformer fortement sa fonction lorsque cette transformation reste cohérente avec l’évolution de la créature.
 
 ### Skill
 
@@ -442,25 +442,37 @@ La Basic Attack et les quatre Skills conservent leur identité à travers les é
 
 **Domaine :** Créatures, combat
 
-**Définition :** Action offensive de base d’une créature. Elle est distincte de ses quatre Skills et possède notamment son propre intervalle, son propre élément, son gain d’énergie et ses règles de ciblage.
+**Définition :** Action offensive automatique de base d’une créature, distincte de ses quatre Skills. Elle inflige toujours des dégâts et possède notamment son propre intervalle, son élément ou son absence d’élément, son gain d’énergie et ses règles de ciblage. Une Basic Attack réussie constitue la source normale du gain d’énergie pendant le combat et fait progresser les compteurs d’Active.
 
 ### Active
 
 **Domaine :** Skills, combat
 
-**Définition :** Skill déclenché automatiquement lorsqu’il est prêt à une opportunité d’action valide, après un nombre défini de Basic Attacks réussies. Si plusieurs Active sont prêtes, leur ordre sur la fiche de la créature définit leur priorité.
+**Définition :** Skill déclenché automatiquement lorsqu’il est prêt à une opportunité d’action valide, après un nombre défini de Basic Attacks réussies. Chaque Active possède son compteur indépendant. Si plusieurs Active sont prêtes, leur ordre sur la fiche de la créature définit leur priorité.
+
+### Compteur d’Active
+
+**Domaine :** Skills, combat
+
+**Définition :** Progression propre à une Active, augmentée normalement par les Basic Attacks réussies de sa créature jusqu’au seuil de disponibilité du Skill. Le compteur reste bloqué à ce seuil lorsqu’il est prêt et revient à zéro dès que l’Active commence son lancement, même si sa résolution échoue.
 
 ### Passive
 
 **Domaine :** Skills, combat
 
-**Définition :** Skill produisant un effet permanent, conditionnel ou déclenché sans occuper une opportunité d’action comme une Active ou une Ultimate, sauf exception explicitement définie.
+**Définition :** Skill fonctionnant à partir d’un événement, d’une condition ou d’une combinaison des deux, sans occuper normalement une opportunité d’action comme une Active ou une Ultimate. Il peut contenir plusieurs effets et déclenchements. Un comportement comparable intégré à une Basic Attack, une Active ou une Ultimate ne constitue pas une Passive supplémentaire.
 
 ### Ultimate
 
 **Domaine :** Skills, combat
 
-**Définition :** Skill associé à une jauge d’énergie allant de 0 à 100. Lorsqu’elle est prête et autorisée à se déclencher, l’Ultimate a priorité sur une Active puis sur la Basic Attack à la prochaine opportunité d’action valide.
+**Définition :** Skill associé à la jauge d’énergie structurelle standard `0 → 100`. Une capacité peut modifier l’énergie initiale, le seuil de disponibilité ou la capacité maximale effective. Lorsqu’elle est prête, autorisée et dotée d’une cible valide, l’Ultimate a priorité sur une Active puis sur la Basic Attack à la prochaine opportunité d’action. Son lancement consomme toute l’énergie présente.
+
+### Jauge d’énergie
+
+**Domaine :** Skills, combat
+
+**Définition :** Jauge structurelle standard `0 → 100` déterminant normalement la disponibilité de l’Ultimate. Une Passive ou un autre effet explicite peut modifier son état initial, son seuil ou sa capacité maximale effective pendant le combat. La source normale de son remplissage est une Basic Attack réussie.
 
 ### Objet
 
@@ -783,7 +795,7 @@ Les actions spécialisées Cleanse et Dispel sont définies ci-dessous.
 
 **Domaine :** Effets de statut, Skills
 
-**Définition :** Action retirant par défaut un effet négatif aléatoire d’un allié ou de soi-même. Un Skill peut définir une sélection ou une quantité différente.
+**Définition :** Action retirant par défaut un effet négatif aléatoire d’un allié. Selon la convention générale, « allié » inclut le lanceur ; « autre allié » l’exclut. Un Skill peut définir une sélection ou une quantité différente.
 
 ### Dispel
 
@@ -1259,6 +1271,24 @@ Un catalogue désigne un ensemble de contenus disponibles ; la boutique désigne
 
 ## 10. Modes de jeu et combats
 
+### Allié
+
+**Domaine :** Combat, ciblage
+
+**Définition :** Créature appartenant à la même équipe que le lanceur, lanceur compris. La formulation « autre allié » exclut explicitement le lanceur.
+
+### Hit
+
+**Domaine :** Combat, Skills
+
+**Définition :** Unité individuelle d’impact et de résolution d’une capacité. Un Skill multi-hit contient plusieurs hits, tandis qu’un hit hybride reste un seul hit comportant plusieurs composantes de dégâts.
+
+### Opportunité d’action
+
+**Domaine :** Combat, Skills
+
+**Définition :** Instant de la timeline auquel une créature peut commencer une action. La priorité standard au sein de la créature est Ultimate prête et autorisée, puis Active prête, puis Basic Attack, sous réserve d’une cible valide et des exceptions explicites.
+
 ### Mode de jeu
 
 **Domaine :** Game design
@@ -1269,7 +1299,7 @@ Un catalogue désigne un ensemble de contenus disponibles ; la boutique désigne
 
 **Domaine :** Combat
 
-**Définition :** Manière dont les actions sont contrôlées pendant un combat, notamment le combat automatique ou semi-automatique.
+**Définition :** Manière globale dont les actions sont contrôlées pendant un combat. En Auto, Basic Attacks, Active et Ultimate sont automatiques. En Manuel, Basic Attacks et Active restent automatiques tandis que le joueur autorise les Ultimate. Le mode n’est pas configuré séparément pour chaque créature.
 
 **Terme à éviter :** « mode de jeu » pour désigner le degré d’automatisation d’un combat.
 

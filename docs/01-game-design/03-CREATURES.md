@@ -161,11 +161,11 @@ Chaque famille possède :
 * une Basic Attack ;
 * exactement quatre Skills prédéfinis ;
 * parmi ces quatre Skills, exactement une Ultimate ;
-* trois autres Skills formant une combinaison fixe d’Active et de Passive.
+* soit une Active et deux Passive, soit deux Active et une Passive.
 
 Le joueur ne choisit pas ces capacités dans une liste et ne les remplace pas.
 
-La Basic Attack et les quatre Skills conservent leur identité à travers les évolutions. Une forme ou une branche peut améliorer ou enrichir leur version sans les remplacer par des capacités sans rapport.
+La Basic Attack et les quatre Skills conservent leur continuité conceptuelle à travers les évolutions, et la catégorie de chaque Skill reste inchangée. Une forme ou une branche peut enrichir une capacité ou transformer fortement sa fonction lorsque cette transformation reste cohérente avec l’évolution de la créature.
 
 Les coefficients, valeurs, durées, probabilités, nombres de hits, ciblages, effets et statuts appartiennent aux [documents Skills](./04-SKILLS.md) et [Effets de statut](./06-STATUS_EFFECTS.md).
 
