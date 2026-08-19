@@ -229,6 +229,14 @@ Le jeu alterne :
 
 Le joueur ne doit pas être obligé d’ouvrir tous les systèmes de gestion entre deux niveaux.
 
+### 4.4. Représentation des créatures
+
+Project Awakening est un jeu 2D dans lequel les créatures sont principalement représentées sous forme de cartes.
+
+Une même base de représentation doit pouvoir servir dans le combat, la gestion des créatures, la composition d’équipe, la collection, l’encyclopédie, l’acquisition et les fiches d’instance. Les informations visibles peuvent varier selon le contexte sans modifier l’identité fonctionnelle de la créature.
+
+L’apparence d’une forme peut être principalement matérialisée par une illustration statique. Les règles artistiques et visuelles détaillées relèvent des documents du dossier [`03-art`](../03-art/).
+
 ## 5. Objectifs du joueur
 
 ### 5.1. Objectifs immédiats
@@ -612,6 +620,14 @@ Le combat doit rendre visibles :
 * les changements majeurs dans l’équilibre du combat.
 
 Les règles exactes d’ordre des actions, de ciblage, de dégâts, de Crit, d’Esquive et d’intelligence de combat sont définies dans [`02-COMBAT.md`](./02-COMBAT.md).
+
+### 11.4. Présentation visuelle
+
+La présentation générale prend pour référence conceptuelle un plateau d’auto-battler reposant sur des cartes, dans un esprit comparable à *Hearthstone Battlegrounds*, sans reprendre son identité visuelle, son interface, son layout, ses assets ou ses animations.
+
+Une position logique occupée par une créature peut être représentée par sa carte. La créature n’a pas besoin d’être affichée comme un personnage indépendant se déplaçant librement sur un terrain 2D ou 3D.
+
+Cette représentation ne modifie aucune règle de simulation. Les principes visuels des cartes et de leur mise en scène sont détaillés dans les drafts [Card Design](../03-art/03-CARD_DESIGN.md), [VFX](../03-art/05-VFX.md) et [Animations](../03-art/06-ANIMATIONS.md).
 
 ## 12. Résultats, victoire et défaite
 
@@ -1080,7 +1096,9 @@ Le GDD dépend des documents spécialisés suivants pour les détails :
 * [`10-PROGRESSION.md`](./10-PROGRESSION.md) — expérience, niveaux, étoiles, énergie, réinitialisations et progression du compte ;
 * [`11-COLLECTION.md`](./11-COLLECTION.md) — gestion des instances, encyclopédie et capacité ;
 * `12-MODES.md` à `17-ACHIEVEMENTS.md` — activités et objectifs spécialisés ;
-* [`18-UI_FLOW.md`](./18-UI_FLOW.md) — écrans, navigation, tutoriels et parcours.
+* [`18-UI_FLOW.md`](./18-UI_FLOW.md) — écrans, navigation, tutoriels et parcours ;
+* [`01-ART_DIRECTION.md`](../03-art/01-ART_DIRECTION.md) à [`06-ANIMATIONS.md`](../03-art/06-ANIMATIONS.md) — direction artistique, représentation des créatures, cartes, UI, VFX et animations ;
+* [`01-ARCHITECTURE.md`](../04-technical/01-ARCHITECTURE.md) — moteur retenu, séparation technique entre simulation et représentation et principes de reproductibilité.
 
 ### 20.2. Questions ouvertes conservées
 

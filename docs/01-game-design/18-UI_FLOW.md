@@ -12,12 +12,16 @@ Il ne fixe aucune mise en page, navigation finale, quantité d’onglets, gramma
 
 L’interface est conçue d’abord pour Android et iOS et doit rester adaptée au tactile.
 
+Elle doit favoriser des composants réutilisables. Une représentation de créature ou de carte doit pouvoir servir dans le combat, la composition d’équipe, la gestion des instances, la collection, l’encyclopédie, la sélection et l’acquisition. Les informations visibles peuvent varier selon le contexte sans modifier l’identité fonctionnelle de la créature.
+
 Elle doit :
 
 * distinguer clairement gestion des instances, encyclopédie, inventaire et collection de skins ;
 * rendre lisibles les conséquences des actions irréversibles ;
 * présenter les informations nécessaires sans révéler les branches et conditions encore secrètes ;
 * accompagner chaque fonctionnalité par un tutoriel court lors de son déblocage.
+
+Les principes visuels et de production de l’interface sont précisés dans les drafts [Card Design](../03-art/03-CARD_DESIGN.md) et [UI Guide](../03-art/04-UI_GUIDE.md).
 
 ## 3. Fiche d’une instance
 
@@ -115,7 +119,7 @@ L’obtention d’une instance doit permettre d’identifier sa famille, sa rare
 * La présentation des tris et filtres.
 * Les confirmations des actions irréversibles.
 * Les règles détaillées d’accessibilité.
+* Les informations visibles dans chaque variante contextuelle de carte.
 * Les tutoriels et leur ordre exact.
 * Les animations d’invocation, d’évolution et de montée d’étoile.
 * La présentation commerciale des extensions de capacité.
-

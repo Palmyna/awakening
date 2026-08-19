@@ -275,9 +275,11 @@ Les objets d’équipement participent à la personnalisation de l’instance et
 
 ## 15. Direction artistique
 
-Le style graphique principal repose sur des illustrations 2D de qualité représentant les créatures sous forme de cartes.
+Project Awakening est un jeu 2D dont l’expérience visuelle est principalement centrée sur des créatures représentées sous forme de cartes.
 
-À terme, plusieurs styles d’illustrations pourront être proposés, par exemple :
+L’apparence de référence d’une forme peut être matérialisée principalement par une illustration 2D statique. La créature n’a pas besoin d’être produite comme un modèle 3D, un personnage 3D animé ou un rig 2D. Le dynamisme peut provenir de la mise en scène des cartes, de l’interface, des animations et des VFX.
+
+Une même créature peut disposer de plusieurs illustrations grâce aux skins de carte. Ces illustrations peuvent employer des styles artistiques différents, par exemple :
 
 * style classique ;
 * style manga ;
@@ -285,11 +287,15 @@ Le style graphique principal repose sur des illustrations 2D de qualité représ
 * style semi-réaliste ;
 * style 3D illustrée.
 
-Ces différents styles pourront être organisés en séries de skins de carte.
+Ces différents styles peuvent être organisés en séries de skins de carte. Le jeu n’impose pas actuellement un style artistique unique à tous les skins.
+
+La direction 2D n’impose pas un pipeline entièrement vectoriel. Le vectoriel peut être pertinent pour l’UI, les icônes, les symboles, certains cadres et certains VFX, tandis que les illustrations peuvent employer des images 2D classiques.
 
 Les joueurs pourront appliquer librement les skins de carte qu’ils auront débloqués aux cartes de leurs créatures favorites.
 
 Certains skins de carte peuvent être accordés directement comme récompenses sans appartenir à une série distribuée par paquets. Ils doivent rester clairement distingués de ces séries et leur méthode d’obtention doit être indiquée dans le système de collection.
+
+Les principes détaillés sont répartis dans les drafts de [direction artistique](../03-art/01-ART_DIRECTION.md), de [style des créatures](../03-art/02-CREATURE_STYLE.md), de [Card Design](../03-art/03-CARD_DESIGN.md), d’[UI](../03-art/04-UI_GUIDE.md), de [VFX](../03-art/05-VFX.md) et d’[animations](../03-art/06-ANIMATIONS.md).
 
 ## 16. Modes de jeu envisagés
 
@@ -374,6 +380,14 @@ Elle sera utilisée afin de :
 * faciliter la recherche et la conception ;
 * maintenir une documentation cohérente ;
 * assister le développement et les tests.
+
+### Direction technique et reproductibilité
+
+Godot est le moteur actuellement retenu pour le projet. Sa version, le langage de programmation, l’architecture détaillée, les conventions de code et le pipeline de build restent à définir dans le [draft d’architecture technique](../04-technical/01-ARCHITECTURE.md).
+
+La production doit favoriser, autant que raisonnablement possible, des systèmes lisibles, versionnables, modifiables, testables et reproductibles depuis le repository par l’équipe et les agents IA. Ce principe concerne notamment le code, les données, les configurations, les composants UI et de cartes, les scènes, les shaders, les VFX, les animations et les logiques de gameplay et de présentation.
+
+Cette direction vise à maximiser l’autonomie et la reproductibilité sans interdire les assets externes, l’intervention humaine ou les opérations manuelles justifiées.
 
 ## 19. Ambition
 

@@ -49,6 +49,33 @@ Le RNG reste présent pour certaines mécaniques, notamment :
 * les Critiques ;
 * les probabilités explicitement définies par certains Skills ou effets.
 
+### 2.1. Indépendance de la représentation
+
+La simulation est indépendante de sa représentation visuelle.
+
+Les cartes, animations, VFX et composants UI restituent les événements calculés sans modifier :
+
+* la timeline ;
+* les positions logiques et la formation ;
+* les ciblages ;
+* les calculs et dégâts ;
+* les Skills et statuts ;
+* le RNG et les priorités ;
+* les conditions de victoire ;
+* les autres règles structurelles de ce document.
+
+Cette séparation doit rester compatible avec les replays, les différentes vitesses de visualisation, les simulations de balancing, les tests automatisés, la validation serveur et la reproduction déterministe d’un résultat.
+
+### 2.2. Représentation par cartes
+
+En combat, une carte représente visuellement une créature de la simulation. Elle ne constitue pas une entité mécanique distincte.
+
+La présentation générale prend pour référence conceptuelle un plateau d’auto-battler reposant sur des cartes, dans un esprit comparable à *Hearthstone Battlegrounds*. Cette référence n’autorise pas la copie de son identité visuelle, de ses cartes, de son interface, de son layout, de ses assets ou de ses animations.
+
+Une position logique occupée par une créature peut être matérialisée par sa carte. La créature n’a pas besoin d’être représentée comme un personnage indépendant se déplaçant librement sur un terrain 2D ou 3D.
+
+Les principes de présentation sont approfondis dans les drafts [Card Design](../03-art/03-CARD_DESIGN.md), [VFX](../03-art/05-VFX.md) et [Animations](../03-art/06-ANIMATIONS.md).
+
 ---
 
 ## 3. Équipes, formation et états de présence
@@ -108,6 +135,8 @@ Lorsqu'un centrage parfait est impossible, une convention déterministe est util
 
 Le joueur ne choisit pas directement les colonnes.
 
+La grille reste une structure logique de simulation et de ciblage. Sa représentation visuelle peut utiliser les cartes des créatures sans devoir reproduire littéralement une grille ou un terrain parcouru par des personnages indépendants.
+
 ---
 
 ### 3.3. Positions pendant le combat
@@ -115,6 +144,8 @@ Le joueur ne choisit pas directement les colonnes.
 Les positions restent fixes pendant tout le combat.
 
 Aucun déplacement automatique n'a lieu.
+
+Une animation ponctuelle de carte utilisée pour mettre en scène une action ne constitue pas un déplacement logique. La carte revient ou reste associée à la position déterminée par la simulation, sauf si un Skill modifie explicitement cette position.
 
 Lorsqu'une créature meurt :
 

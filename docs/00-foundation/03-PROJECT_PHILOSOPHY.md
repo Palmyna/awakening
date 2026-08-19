@@ -140,6 +140,8 @@ Le projet est exclusivement destiné à Android et iOS. L’ensemble de l’exp�
 
 Les interactions, la présentation des informations et le rythme général doivent rester cohérents avec les contraintes d’un appareil mobile. Le jeu ne doit pas être conçu comme une expérience pour ordinateur adaptée tardivement à un écran tactile.
 
+L’interface doit favoriser des composants réutilisables. Une représentation de créature ou de carte doit pouvoir servir dans plusieurs contextes — notamment le combat, la composition d’équipe, la collection, l’encyclopédie, l’acquisition et la fiche d’une instance — en adaptant les informations visibles sans modifier l’identité fonctionnelle de la créature.
+
 **Éléments à préciser ultérieurement :**
 
 * les règles détaillées d’interface, d’ergonomie, d’accompagnement du joueur et de parcours utilisateur devront être définies dans les documents spécialisés.
@@ -292,6 +294,10 @@ Le projet doit éviter :
 
 L’intelligence artificielle fait partie intégrante du processus de développement. Elle doit servir à accélérer la production, améliorer la qualité, faciliter la recherche et la conception, maintenir une documentation cohérente, et assister le développement et les tests.
 
+Le projet cherche à maximiser l’autonomie de développement avec Codex et les autres agents IA utilisés sur le repository. Autant que raisonnablement possible, le code, les données, les configurations, les interfaces, les composants de cartes, les scènes, les shaders, les VFX, les animations et les logiques de gameplay et de présentation doivent pouvoir être lus, créés, modifiés, maintenus, versionnés, testés et vérifiés directement depuis le repository.
+
+Les choix de production doivent éviter les dépendances inutiles à des workflows exigeant en permanence des compétences manuelles très spécialisées ou des opérations difficiles à reproduire depuis le repository. Cet objectif n’interdit ni les assets externes, ni l’intervention d’un artiste humain, ni une opération manuelle justifiée, et n’impose pas que tout soit produit par Codex.
+
 Son utilisation ne remplace pas les responsabilités humaines déjà définies dans le projet. Le développeur principal reste responsable du développement, de la technique, du graphisme et de l’intégration. Le gestionnaire de projet et directeur artistique conserve ses responsabilités de gestion et de direction artistique.
 
 Les résultats produits avec l’aide de l’IA doivent rester soumis à une vérification humaine et à la documentation du projet. Une suggestion générée par une IA ne constitue pas, à elle seule, une décision validée.
@@ -301,6 +307,7 @@ Le projet doit éviter :
 * d’intégrer une proposition de l’IA comme une décision définitive sans validation ;
 * d’utiliser l’IA pour contourner la vision, les piliers ou les contraintes documentées ;
 * de confondre accélération de la production et extension incontrôlée du périmètre ;
+* d’adopter sans nécessité un workflow dont les étapes essentielles ne peuvent pas être reproduites, testées ou vérifiées depuis le repository ;
 * de déléguer à l’IA la responsabilité finale des choix de conception, de direction artistique ou de production.
 
 **Éléments à préciser ultérieurement :**

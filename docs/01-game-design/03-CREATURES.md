@@ -30,6 +30,8 @@ Il ne remplace pas les documents spécialisés consacrés :
 * à la [progression](./10-PROGRESSION.md) ;
 * à la [collection et l’encyclopédie](./11-COLLECTION.md) ;
 * aux [parcours d’interface](./18-UI_FLOW.md) ;
+* au [style visuel des créatures](../03-art/02-CREATURE_STYLE.md) ;
+* à la [représentation sous forme de cartes](../03-art/03-CARD_DESIGN.md) ;
 * au [lore des créatures](../02-world/02-CREATURE_LORE.md).
 
 Ces documents possèdent les règles opérationnelles, valeurs, interfaces et contenus détaillés de leur domaine. Le présent document conserve les contrats structurels qu’ils doivent respecter.
@@ -68,6 +70,8 @@ La forme porte notamment :
 * les versions de la Basic Attack et des Skills utilisées sous cette forme.
 
 Une forme peut modifier significativement l’orientation fonctionnelle de la créature. Deux branches d’une même famille peuvent ainsi proposer des profils différents tout en conservant une identité familiale commune.
+
+Son apparence de référence peut être principalement matérialisée par une illustration 2D statique. Cette représentation n’impose ni modèle 3D, ni personnage 3D animé, ni rig 2D.
 
 ### 2.3. Instance possédée
 
@@ -189,6 +193,18 @@ Chaque forme possède également un profil offensif suggéré :
 Ce profil est lui aussi informatif. Une forme Hybride peut répartir ses capacités entre plusieurs catégories ou utiliser un hit comportant plusieurs composantes de dégâts.
 
 Les règles d’un hit hybride, dont son unique jet d’Esquive et son unique jet de Critique, appartiennent aux documents [Combat](./02-COMBAT.md) et [Skills](./04-SKILLS.md).
+
+### 3.6. Représentation visuelle
+
+Une créature est principalement représentée dans l’interface par une carte utilisant une illustration de sa forme.
+
+La carte, l’illustration et la créature restent des notions distinctes :
+
+* la créature est l’entité fonctionnelle et, lorsqu’elle est possédée, l’instance persistante ;
+* la carte est sa représentation visuelle et fonctionnelle dans l’interface ;
+* l’illustration est un asset artistique utilisé par cette représentation.
+
+Une même créature peut disposer de plusieurs illustrations grâce aux skins de carte. Des styles artistiques différents peuvent coexister entre ces skins sans modifier la structure fonctionnelle, les caractéristiques ou les capacités de la créature.
 
 ## 4. Caractéristiques
 
@@ -440,6 +456,8 @@ Les deux termes ne sont pas interchangeables.
 | [`10-PROGRESSION.md`](./10-PROGRESSION.md) | XP, niveaux, étoiles, réinitialisations et score de Puissance |
 | [`11-COLLECTION.md`](./11-COLLECTION.md) | Gestion des instances, encyclopédie, recherche, tris et capacité |
 | [`18-UI_FLOW.md`](./18-UI_FLOW.md) | Informations affichées, écrans, navigation et confirmations |
+| [`02-CREATURE_STYLE.md`](../03-art/02-CREATURE_STYLE.md) | Représentation artistique et illustrations des créatures |
+| [`03-CARD_DESIGN.md`](../03-art/03-CARD_DESIGN.md) | Structure visuelle et variantes contextuelles des cartes |
 | [`02-CREATURE_LORE.md`](../02-world/02-CREATURE_LORE.md) | Lore des familles, des formes, des manifestations et des évolutions |
 
 ## 13. Éléments à préciser ultérieurement et maintenance

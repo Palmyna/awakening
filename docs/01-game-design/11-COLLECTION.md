@@ -19,6 +19,8 @@ Ces catégories appartiennent au même espace général sans être mélangées d
 
 La gestion des instances possédées, l’encyclopédie des créatures et l’inventaire d’objets remplissent des fonctions distinctes.
 
+Dans ces espaces, les créatures sont principalement représentées sous forme de cartes. Une base de composant peut être réutilisée entre la gestion, la collection et l’encyclopédie en adaptant les informations visibles au contexte, conformément aux drafts [Card Design](../03-art/03-CARD_DESIGN.md) et [UI Guide](../03-art/04-UI_GUIDE.md).
+
 ## 3. Gestion des instances possédées
 
 Plusieurs instances d’une même famille peuvent être possédées.
@@ -182,6 +184,7 @@ Une forme du tronc commun reste incompatible avec toute autre instance de sa fam
 * La grammaire exacte de recherche.
 * Les filtres complémentaires.
 * La présentation finale de la liste d’instances et de l’encyclopédie.
+* Les informations affichées par chaque variante contextuelle de carte.
 * La présentation des arbres partiellement connus.
 * Les confirmations de verrouillage et d’actions irréversibles.
 * Les tailles et prix des extensions de capacité.

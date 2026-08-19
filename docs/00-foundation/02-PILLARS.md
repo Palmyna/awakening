@@ -189,7 +189,7 @@ Project Awakening doit construire une licence originale, fondée sur un multiver
 
 Les références issues de la culture populaire, des mythologies et des légendes servent de sources d’inspiration. Elles doivent être réinterprétées à travers des codes visuels, narratifs ou symboliques propres au projet, et non reproduites.
 
-La représentation des créatures sous forme de cartes, la collection de créatures et la collection de skins de carte participent pleinement à cette identité.
+La représentation 2D des créatures sous forme de cartes, la collection de créatures et la collection de skins de carte participent pleinement à cette identité.
 
 Le système de collection doit valoriser les éléments obtenus et rendre visible la progression du joueur. Il peut permettre d’identifier les éléments manquants lorsque les règles de découverte du sous-système concerné l’autorisent ; l’encyclopédie des créatures ne révèle pas les familles encore inconnues. Il constitue une expérience à part entière et ne doit pas être réduit à un simple inventaire technique.
 
@@ -199,6 +199,8 @@ Le système de collection doit valoriser les éléments obtenus et rendre visibl
 * Les inspirations doivent être transformées et intégrées à l’identité propre du projet.
 * Une famille peut proposer plusieurs branches cohérentes, tandis que chaque instance progresse toujours entre un stade de base, un stade intermédiaire et un stade final.
 * Les illustrations 2D de qualité doivent mettre en valeur les créatures sous forme de cartes.
+* Une illustration statique doit pouvoir être dynamisée par la mise en scène des cartes, l’interface, les animations et les VFX sans imposer de modèle 3D ou de rig 2D pour chaque créature.
+* Différents styles artistiques doivent pouvoir coexister entre les skins sans modifier l’identité fonctionnelle des créatures.
 * Le système de collection doit distinguer clairement la collection de créatures de la collection de skins de carte.
 * L’encyclopédie des créatures doit valoriser les familles réellement obtenues et enrichir progressivement les formes et branches découvertes sans révéler le contenu encore secret.
 * Les skins de carte doivent être organisés en séries cohérentes dont la progression peut être consultée.
@@ -228,11 +230,13 @@ Sa longévité repose sur un univers riche, une progression profonde, une forte 
 * Les décisions doivent tenir compte d’un budget très limité et d’une équipe humaine de deux personnes.
 * Les solutions open source, les services disposant d’un Free Tier et les architectures limitant les coûts doivent être privilégiés.
 * L’intelligence artificielle doit soutenir la production, la qualité, la recherche, la conception, la documentation, le développement et les tests.
+* Les systèmes doivent autant que raisonnablement possible rester lisibles, versionnables, modifiables, testables et reproductibles depuis le repository par l’équipe et les agents IA.
 
 ### Ce que le projet doit éviter
 
 * Concevoir une expérience dépendante d’un renouvellement constant qui ne pourrait pas être soutenu par l’équipe.
 * Choisir des solutions dont les coûts de développement ou d’exploitation sont incompatibles avec le budget.
+* Dépendre inutilement de workflows manuels spécialisés impossibles ou difficiles à reproduire depuis le repository.
 * Ajouter du contenu sans préserver la cohérence de l’univers et des systèmes existants.
 * Privilégier des gains à court terme qui compromettraient la capacité du projet à évoluer pendant plusieurs années.
 

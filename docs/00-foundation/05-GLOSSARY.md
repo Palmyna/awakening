@@ -207,7 +207,9 @@ Une entité peut conserver une appellation narrative plus précise tout en étan
 
 **Domaine :** Interface, représentation visuelle
 
-**Définition :** Représentation visuelle et fonctionnelle d’une créature dans l’interface. La carte et la créature ne sont pas deux objets de progression distincts : le joueur possède une créature, représentée sous la forme d’une carte.
+**Définition :** Représentation visuelle et fonctionnelle d’une créature dans l’interface, notamment en combat, en gestion, en composition d’équipe, dans la collection, l’encyclopédie, l’acquisition et la fiche d’une instance.
+
+La carte et la créature ne sont pas deux objets de progression ou deux entités mécaniques distincts : le joueur possède une créature, représentée sous la forme d’une carte. En combat, la carte restitue visuellement la créature présente dans la simulation sans en modifier les règles.
 
 **Variante autorisée :** « carte » lorsque le contexte ne laisse aucune ambiguïté.
 
@@ -1116,9 +1118,11 @@ La complétion d’une collection cosmétique ne confère aucun avantage automat
 
 **Domaine :** Direction artistique
 
-**Définition :** Œuvre visuelle produite pour représenter une créature.
+**Définition :** Œuvre visuelle 2D produite pour représenter une créature, notamment dans sa carte.
 
 Une illustration est un asset artistique. Elle n’est pas, à elle seule, le contenu cosmétique possédé par le joueur.
+
+Elle peut rester statique : le dynamisme de la présentation peut provenir de la carte, de l’UI, des animations et des VFX. Elle reste distincte de la structure fonctionnelle de la créature et de la carte.
 
 ### Skin de carte
 
@@ -1418,6 +1422,14 @@ Ce sens doit rester distinct de « build de créature » et de « build d’équ
 **Domaine :** Développement
 
 **Définition :** Cadre technique fournissant une structure, des conventions et des composants réutilisables pour développer une application ou une partie du jeu.
+
+### Godot
+
+**Domaine :** Développement, moteur de jeu
+
+**Définition :** Moteur de jeu actuellement retenu pour le développement de Project Awakening.
+
+Cette décision ne fixe pas encore sa version, le langage de programmation, l’architecture des scènes, la structure du projet ou les conventions de code.
 
 ### Free Tier
 

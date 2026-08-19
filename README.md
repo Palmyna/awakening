@@ -66,16 +66,16 @@ Ces documents constituent les fondations de référence actuelles du projet. Ils
 
 ### 03-art
 
-* ⬜ `01-ART_DIRECTION.md`
-* ⬜ `02-CREATURE_STYLE.md`
-* ⬜ `03-CARD_DESIGN.md`
-* ⬜ `04-UI_GUIDE.md`
-* ⬜ `05-VFX.md`
-* ⬜ `06-ANIMATIONS.md`
+* 🚧 [`01-ART_DIRECTION.md`](./docs/03-art/01-ART_DIRECTION.md) — Draft de conception — base initiale à compléter
+* 🚧 [`02-CREATURE_STYLE.md`](./docs/03-art/02-CREATURE_STYLE.md) — Draft de conception — base initiale à compléter
+* 🚧 [`03-CARD_DESIGN.md`](./docs/03-art/03-CARD_DESIGN.md) — Draft de conception — base initiale à compléter
+* 🚧 [`04-UI_GUIDE.md`](./docs/03-art/04-UI_GUIDE.md) — Draft de conception — base initiale à compléter
+* 🚧 [`05-VFX.md`](./docs/03-art/05-VFX.md) — Draft de conception — base initiale à compléter
+* 🚧 [`06-ANIMATIONS.md`](./docs/03-art/06-ANIMATIONS.md) — Draft de conception — base initiale à compléter
 
 ### 04-technical
 
-* ⬜ `01-ARCHITECTURE.md`
+* 🚧 [`01-ARCHITECTURE.md`](./docs/04-technical/01-ARCHITECTURE.md) — Draft de conception — base initiale à compléter
 * ⬜ `02-DATABASE.md`
 * ⬜ `03-SUPABASE.md`
 * ⬜ `04-API.md`
