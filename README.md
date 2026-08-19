@@ -76,22 +76,20 @@ Ces documents constituent les fondations de référence actuelles du projet. Ils
 ### 04-technical
 
 * ⬜ `01-ARCHITECTURE.md`
-* ⬜ `02-UNITY_STRUCTURE.md`
-* ⬜ `03-DATABASE.md`
-* ⬜ `04-SUPABASE.md`
-* ⬜ `05-API.md`
-* ⬜ `06-SAVE_SYSTEM.md`
-* ⬜ `07-SECURITY.md`
-* ⬜ `08-ANALYTICS.md`
+* ⬜ `02-DATABASE.md`
+* ⬜ `03-SUPABASE.md`
+* ⬜ `04-API.md`
+* ⬜ `05-SAVE_SYSTEM.md`
+* ⬜ `06-SECURITY.md`
+* ⬜ `07-ANALYTICS.md`
 
 ### 05-ai
 
 * ⬜ `01-AI_GUIDELINES.md`
-* ⬜ `02-CLAUDE.md`
-* ⬜ `03-CODEX.md`
-* ⬜ `04-CURSOR.md`
-* ⬜ `05-PROMPTING.md`
-* ⬜ `06-WORKFLOW.md`
+* ⬜ `02-CODEX.md`
+* ⬜ `03-CURSOR.md`
+* ⬜ `04-PROMPTING.md`
+* ⬜ `05-WORKFLOW.md`
 
 ### 06-production
 

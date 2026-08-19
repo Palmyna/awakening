@@ -54,7 +54,6 @@ La documentation décrit les règles et décisions actuellement validées ; elle
 Lorsqu’une modification concerne le code ou l’architecture technique, l’agent doit vérifier si elle nécessite une mise à jour de la documentation, notamment pour :
 
 * l’architecture générale ;
-* la structure du projet Unity ;
 * la base de données ;
 * le backend ;
 * les API ;
