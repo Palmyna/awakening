@@ -71,6 +71,8 @@ La forme porte notamment :
 
 Une forme peut modifier significativement l’orientation fonctionnelle de la créature. Deux branches d’une même famille peuvent ainsi proposer des profils différents tout en conservant une identité familiale commune.
 
+Le ou les éléments de la forme restent fixes pendant tout un combat. Ils sont distincts des éléments de sa Basic Attack et de ses quatre Skills, qui peuvent employer d’autres éléments.
+
 Son apparence de référence peut être principalement matérialisée par une illustration 2D statique. Cette représentation n’impose ni modèle 3D, ni personnage 3D animé, ni rig 2D.
 
 ### 2.3. Instance possédée
@@ -171,7 +173,9 @@ Le joueur ne choisit pas ces capacités dans une liste et ne les remplace pas.
 
 La Basic Attack et les quatre Skills conservent leur continuité conceptuelle à travers les évolutions, et la catégorie de chaque Skill reste inchangée. Une forme ou une branche peut enrichir une capacité ou transformer fortement sa fonction lorsque cette transformation reste cohérente avec l’évolution de la créature.
 
-Les coefficients, valeurs, durées, probabilités, nombres de hits, ciblages, effets et statuts appartiennent aux [documents Skills](./04-SKILLS.md) et [Effets de statut](./06-STATUS_EFFECTS.md).
+Chaque Basic Attack et chacun des quatre Skills possède exactement un élément. L’élément d’une capacité est indépendant du ou des éléments de la forme et peut évoluer séparément entre deux formes lorsque la continuité conceptuelle de la capacité est respectée.
+
+Les coefficients, valeurs, durées, probabilités, nombres de hits, ciblages, effets et statuts appartiennent aux [documents Skills](./04-SKILLS.md) et [Effets de statut](./06-STATUS_EFFECTS.md). Les règles élémentaires des formes et capacités appartiennent au [document Éléments](./05-ELEMENTS.md).
 
 ### 3.5. Rôles et profil offensif
 
@@ -342,6 +346,8 @@ Elle peut modifier :
 * les rôles suggérés ;
 * le profil offensif ;
 * les versions de la Basic Attack et des Skills.
+
+Le changement du ou des éléments de la forme et le changement de l’élément d’une capacité sont deux décisions indépendantes. Une évolution peut modifier l’un sans modifier l’autre.
 
 Elle conserve les investissements et choix déjà attachés à l’instance, notamment :
 

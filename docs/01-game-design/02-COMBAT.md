@@ -76,6 +76,14 @@ Une position logique occupée par une créature peut être matérialisée par sa
 
 Les principes de présentation sont approfondis dans les drafts [Card Design](../03-art/03-CARD_DESIGN.md), [VFX](../03-art/05-VFX.md) et [Animations](../03-art/06-ANIMATIONS.md).
 
+### 2.3. Lisibilité des résultats
+
+La représentation montre les résultats utiles de la simulation sans exposer constamment ses calculs internes.
+
+Une Esquive, une Immunité ou l’échec probabiliste d’un effet explicitement tenté produit un feedback court permettant au joueur d’en comprendre la cause. Le wording et le rendu graphique exacts restent à définir.
+
+Une résistance élémentaire ne produit pas de feedback particulier : seule la valeur finale des dégâts ou du tick est affichée. Les changements temporaires d’élément d’une capacité et les calculs intermédiaires n’ont pas à rester visibles en permanence.
+
 ---
 
 ## 3. Équipes, formation et états de présence
@@ -775,6 +783,7 @@ Chaque cible d'une attaque multi-cible ou AoE est résolue indépendamment.
 Pour chaque cible :
 
 * jet d'Esquive indépendant ;
+* vérification d’immunité indépendante ;
 * jet de Critique indépendant ;
 * calcul de Défense indépendant ;
 * résistance élémentaire indépendante ;
@@ -800,6 +809,8 @@ Pour une attaque comportant plusieurs hits :
 * chaque hit possède son propre jet de Critique.
 
 Pour une Basic Attack multi-hit ou multi-cible, la Basic est considérée comme réussie si au moins un de ses hits touche au moins une cible.
+
+Un hit est considéré comme ayant touché dès lors qu’il n’est pas esquivé. Une immunité élémentaire peut ensuite annuler ses effets sur la cible sans transformer rétroactivement ce hit en échec.
 
 Dans ce cas :
 
@@ -1377,8 +1388,9 @@ Un Skill peut être explicitement **inesquivable**.
 Pour un hit standard :
 
 1. jet d'Esquive ;
-2. si le hit touche, jet de Critique ;
-3. calcul des dégâts.
+2. si le hit touche, validation du hit puis vérification de l’immunité élémentaire ;
+3. si le résultat n’est pas bloqué, jet de Critique ;
+4. calcul des dégâts.
 
 Aucun jet de Critique n'est effectué sur une attaque esquivée.
 
@@ -1407,33 +1419,29 @@ Un Skill peut définir explicitement une exception.
 
 ---
 
-### 8.9. Éléments des attaques
+### 8.9. Éléments des capacités
 
-Chaque Basic possède un élément.
+Chaque Basic Attack et chacun des quatre Skills, y compris les Passive, possède exactement un des neuf éléments officiels.
 
-Chaque Skill possède également son propre élément.
+L'élément utilisé pour résoudre les interactions est toujours l’élément actuel de la capacité réellement utilisée. Il est indépendant du ou des éléments de sa créature.
 
-L'élément utilisé pour calculer une résistance est toujours :
+Une capacité possède un seul élément à un instant donné. Tous ses hits, composantes de dégâts et effets directement produits utilisent cet élément, même lorsqu’elle est multi-hit, multi-cible, hybride ou composée de plusieurs effets.
 
-> **l'élément de l'attaque réellement utilisée.**
+Un Skill peut modifier explicitement l’élément d’une capacité pendant le combat. Un effet déjà créé ou appliqué conserve cependant l’élément enregistré lors de sa création ou de son application.
 
-Il ne s'agit pas automatiquement de l'élément de la créature attaquante.
+Lorsqu’une capacité en déclenche une autre, la capacité déclenchée conserve son propre élément actuel, sauf modification explicite.
 
-Un Skill peut utiliser un élément différent des 1 ou 2 éléments naturels de sa créature si son design le justifie.
-
-Une attaque peut également être **Neutre / sans élément**.
-
-Une attaque Neutre ne déclenche aucune interaction élémentaire.
+Le ou les éléments de la forme mécanique d’une créature restent fixes pendant tout le combat.
 
 ---
 
 ### 8.10. Résistances élémentaires
 
-Le système élémentaire est principalement **défensif**.
+Le système élémentaire standard est exclusivement **défensif**.
 
-Un avantage élémentaire ne donne pas de bonus offensif automatique.
+Il n’existe ni faiblesse élémentaire augmentant les dégâts ni bonus offensif automatique.
 
-Lorsqu'un élément de la cible résiste à l'élément de l'attaque :
+Lorsqu'un élément de la cible résiste à l'élément de la capacité :
 
 > **DégâtsAprèsRésistance = DégâtsAvantRésistance × (1 − TauxRésistanceÉlémentaire)**
 
@@ -1443,12 +1451,12 @@ Avec :
 * `TauxRésistanceÉlémentaire` : proportion globale retirée par une résistance élémentaire standard ;
 * `DégâtsAprèsRésistance` : montant restant avant les autres réductions, l'Absorption et les Boucliers.
 
-Le `TauxRésistanceÉlémentaire` est identique pour toutes les relations standard. Sa valeur exacte reste un paramètre de balancing.
+Le `TauxRésistanceÉlémentaire` est identique pour toutes les relations standard. Sa valeur actuelle est fixée à `30 %`, tout en restant ajustable pendant le balancing.
 
 Cette formule permet :
 
 * de conserver une lecture uniforme de toutes les résistances standard ;
-* de séparer l'élément de l'attaque de sa catégorie Physique, Spéciale ou True Damage ;
+* de séparer l'élément de la capacité de sa catégorie Physique, Spéciale ou True Damage ;
 * d'appliquer la même règle avant les protections suivantes.
 
 Il n'existe pas de résistance automatique lorsqu'une attaque et la cible partagent simplement le même élément.
@@ -1457,7 +1465,11 @@ Un même élément contre lui-même est neutre.
 
 Il n'existe pas d'immunité élémentaire naturelle.
 
-Un Skill peut exceptionnellement créer une immunité spécifique.
+Un Skill peut accorder explicitement une immunité élémentaire. Cette immunité bloque tous les effets positifs et négatifs de l’élément concerné, quelle que soit leur source.
+
+Une résistance élémentaire réduit uniquement les dégâts directs, périodiques et retardés. Elle ne modifie ni les soins, HoT, buffs, debuffs, CC, Boucliers, probabilités d’application, durées de statut ou autres effets non dommageables.
+
+Les résistances découlent du ou des éléments fixes de la forme. Aucun Skill ne peut directement les gagner, les perdre, les supprimer, les inverser, modifier leur taux ou les ignorer pendant le combat.
 
 ---
 
@@ -1484,9 +1496,11 @@ Avec :
 * `DégâtsAprèsRésistanceSimple` : montant restant lorsqu'un seul élément de la cible résiste ;
 * `DégâtsAprèsDoubleRésistance` : montant restant lorsque les deux éléments de la cible résistent.
 
-Exemple avec une valeur théorique de 30 % :
+Avec la valeur actuelle de 30 % :
 
 > **DégâtsAprèsDoubleRésistance = DégâtsAvantRésistance × 0,70 × 0,70**
+
+La cible conserve alors 49 % des dégâts entrants, soit une réduction totale effective de 51 %.
 
 Les résistances ne sont jamais additionnées directement.
 
@@ -1494,7 +1508,7 @@ Les résistances ne sont jamais additionnées directement.
 
 ### 8.12. Table des résistances élémentaires
 
-Élément de la cible → éléments d'attaque auxquels il résiste :
+Élément de la cible → éléments de capacité auxquels il résiste :
 
 | Élément de la cible | Résiste à                    |
 | ------------------- | ---------------------------- |
@@ -1520,16 +1534,20 @@ Ordre conceptuel :
 
 1. action / hit ;
 2. Esquive si applicable ;
-3. jet de Critique si applicable ;
-4. calcul offensif brut et application éventuelle du multiplicateur Critique ;
-5. Défense ou Défense spéciale ;
-6. résistance élémentaire ;
-7. autres réductions de dégâts ;
-8. Absorption ;
-9. Bouclier ;
-10. PV ;
-11. événements déclenchés ;
-12. mort éventuelle.
+3. validation du hit et des événements liés à une cible touchée ;
+4. vérification de l’immunité élémentaire ;
+5. si les effets ne sont pas bloqués, jet de Critique si applicable ;
+6. calcul offensif brut et application éventuelle du multiplicateur Critique ;
+7. Défense ou Défense spéciale ;
+8. résistance élémentaire ;
+9. autres réductions de dégâts ;
+10. Absorption ;
+11. Bouclier ;
+12. PV ;
+13. événements dépendant du résultat réellement appliqué ;
+14. mort éventuelle.
+
+Une immunité ne déclenche pas les événements exigeant un résultat qu’elle a annulé, par exemple subir des dégâts, recevoir un soin ou recevoir un statut.
 
 Les valeurs intermédiaires sont conservées avec 3 décimales.
 
@@ -1747,7 +1765,9 @@ Une fois appliqué :
 
 Chaque DoT utilise un **snapshot** au moment de son application.
 
-Les modifications ultérieures des caractéristiques de la source ne modifient pas un DoT déjà appliqué.
+Ce snapshot comprend l’élément de la capacité source. Les modifications ultérieures des caractéristiques ou de l’élément de cette capacité ne modifient pas un DoT déjà appliqué.
+
+Chaque tick utilise l’élément enregistré et reste soumis aux résistances élémentaires actuelles de la cible. Une résistance réduit les dégâts du tick, sans modifier sa durée ou sa probabilité d’application.
 
 ---
 
@@ -1842,8 +1862,9 @@ Exemple :
 
 Si l'attaque touche :
 
-* les dégâts sont appliqués ;
-* le Stun est appliqué.
+* le hit est considéré comme ayant touché ;
+* l’immunité élémentaire est vérifiée ;
+* en l’absence d’immunité applicable, les dégâts et le Stun sont appliqués.
 
 Si l'attaque est esquivée :
 
@@ -1861,8 +1882,9 @@ Exemple :
 Résolution :
 
 1. jet d'Esquive ;
-2. si l'attaque touche, dégâts ;
-3. jet spécifique de 40 % pour le Stun.
+2. si l'attaque touche, vérification de l’immunité élémentaire ;
+3. en l’absence d’immunité applicable, dégâts ;
+4. jet spécifique de 40 % pour le Stun.
 
 Un Skill inesquivable peut toujours conserver une probabilité indépendante d'application du statut.
 
@@ -1876,6 +1898,8 @@ La description doit préciser si une probabilité est :
 * attachée à une autre unité de résolution explicitement nommée.
 
 Une probabilité globale peut être testée avant les Esquives individuelles des cibles. Aucun jet d'application implicite ne doit être ajouté.
+
+Lorsqu’un effet explicitement tenté échoue à cause de sa probabilité, la représentation du combat produit un feedback court. Le libellé exact dépend de l’effet et reste à définir avec l’interface.
 
 #### 10.7.4. Ordre des effets
 
@@ -1935,15 +1959,17 @@ La diminution porte prioritairement sur la **durée du CC** plutôt que sur sa c
 
 Un Skill peut donner temporairement une immunité à certains CC ou statuts.
 
-Une immunité bloque totalement l'application.
+Une immunité ciblée bloque totalement l'application du CC, statut ou DoT compris dans son périmètre.
 
 L'effet n'est pas appliqué avec une durée de 0.
 
-Le jeu peut afficher :
+Le jeu affiche un feedback court dont le wording exact reste à définir, par exemple :
 
 > `Immunisé`.
 
 Il n'existe pas d'immunité naturelle permanente basée uniquement sur l'élément.
+
+Une immunité élémentaire accordée par un Skill est plus large : elle bloque tous les effets positifs et négatifs de l’élément concerné. Ses règles détaillées appartiennent au [document Éléments](./05-ELEMENTS.md).
 
 ---
 
@@ -2140,7 +2166,7 @@ Notamment :
 * valeurs exactes de `CapEsquive` et `KEsquive` ;
 * valeur exacte de `CoefficientDégâtsCritiques` ;
 * valeur exacte de `MultiplicateurCritBase`, actuellement prévue autour de `×1,10` ;
-* valeur exacte de `TauxRésistanceÉlémentaire` ;
+* ajustements éventuels du taux actuel de `30 %` pour `TauxRésistanceÉlémentaire` ;
 * diminishing returns des CC ;
 * durée avant récupération des diminishing returns ;
 * durée standard des différents statuts ;

@@ -22,7 +22,7 @@ Il peut modifier des caractéristiques, limiter ou empêcher des actions, produi
 
 Tous les effets de statut prennent fin au plus tard avec le combat en cours. Le terme « permanent », lorsqu’il est utilisé pour un effet de combat, signifie « jusqu’à la fin du combat » et ne modifie jamais définitivement l’instance.
 
-L’association d’un effet à un élément est facultative et doit être déclarée explicitement. Aucun élément ne confère naturellement une immunité à un statut.
+Un effet directement produit par une Basic Attack ou un Skill hérite de l’élément de cette capacité au moment de sa création ou de son application. Il conserve ensuite cet élément pendant toute son existence. Aucun élément de créature ne confère naturellement une immunité à un statut.
 
 Lorsqu’une évolution enrichit ou transforme la version d’un même Skill, elle peut notamment ajouter, retirer ou modifier un effet de statut. Cette variation doit maintenir une continuité conceptuelle cohérente et être déclarée explicitement pour la forme ou la branche concernée.
 
@@ -33,7 +33,8 @@ Lorsqu’une évolution enrichit ou transforme la version d’un même Skill, el
 Lorsqu’un statut est directement lié à un hit :
 
 * le hit est d’abord soumis à l’Esquive ;
-* si le hit réussit, le statut s’applique ;
+* si le hit réussit, l’immunité élémentaire de la cible est vérifiée ;
+* si aucune immunité applicable ne le bloque, le statut s’applique ;
 * aucun second jet d’application caché n’est effectué.
 
 Un statut ou autre effet offensif ciblé reste soumis à l’Esquive de chaque cible même lorsqu’il n’inflige aucun dégât, sauf exception explicitement inesquivable.
@@ -43,11 +44,14 @@ Un statut ou autre effet offensif ciblé reste soumis à l’Esquive de chaque c
 Lorsqu’un statut possède une probabilité liée à un hit :
 
 1. l’Esquive du hit est résolue ;
-2. si le hit réussit, la probabilité déclarée est testée.
+2. si le hit réussit, l’immunité élémentaire est vérifiée ;
+3. si elle ne bloque pas l’effet, la probabilité déclarée est testée.
 
 Un Skill inesquivable peut conserver une probabilité d’application indépendante.
 
 Une probabilité peut également être globale, propre à chaque cible ou attachée à une autre unité de résolution explicitement nommée. Une probabilité globale peut être testée avant les Esquives individuelles. La fiche du Skill doit préciser cette nature ; aucun jet caché implicite n’est ajouté.
+
+Une Esquive, une Immunité ou l’échec d’une probabilité d’application explicitement tentée produit en combat un feedback court permettant d’identifier la cause de l’échec. Le wording exact reste à définir dans le document d’interface.
 
 ## 4. Réapplication, coexistence et cumul
 
@@ -71,7 +75,7 @@ Ils :
 * persistent après la mort de leur source ;
 * continuent normalement pendant un CC classique ;
 * voient leurs timers gelés pendant l’Exclusion de leur cible ;
-* utilisent un snapshot de leur source au moment de l’application.
+* utilisent un snapshot de leur source et de leur élément au moment de l’application.
 
 La mort de leur cible ou son passage dans un état non vivant lié à une auto-résurrection ne retire pas automatiquement ces statuts et ne gèle pas leurs timers. Un effet exigeant une cible vivante, comme les dégâts d’un DoT, ne produit toutefois pas son effet normal tant que la cible est non vivante.
 
@@ -79,7 +83,7 @@ L’état de la cible reste dynamique et est recalculé à chaque tick. Cela com
 
 ### 5.1. DoT
 
-L’application d’un DoT peut être esquivée lorsqu’elle dépend d’un hit. Ses ticks ne sont pas esquivables et chacun peut produire un Crit.
+L’application d’un DoT peut être esquivée lorsqu’elle dépend d’un hit. Le DoT hérite de l’élément actuel de sa capacité source et le conserve. Ses ticks ne sont pas esquivables, chacun peut produire un Crit et leurs dégâts restent soumis aux résistances élémentaires actuelles de la cible.
 
 ### 5.2. HoT
 
@@ -124,7 +128,13 @@ La durée de l’historique, les paliers et le temps de récupération restent �
 
 ### 7.2. Immunités
 
-Une immunité explicitement accordée empêche l’application des CC ou statuts compris dans son périmètre. Il n’existe pas d’immunité naturelle permanente fondée uniquement sur un élément.
+Une immunité ciblée explicitement accordée empêche l’application des CC, statuts ou DoT compris dans son périmètre.
+
+Une immunité élémentaire accordée par un Skill possède une portée différente : elle bloque tous les effets positifs et négatifs de l’élément concerné, quelle que soit leur source. Il n’existe pas d’immunité naturelle permanente fondée uniquement sur le ou les éléments d’une créature.
+
+Une résistance élémentaire reste distincte de ces immunités. Elle réduit uniquement les dégâts directs, périodiques et retardés ; elle ne modifie ni la probabilité d’application ni la durée d’un statut.
+
+Les règles détaillées des immunités élémentaires appartiennent au [document Éléments](./05-ELEMENTS.md).
 
 ## 8. Silence
 
@@ -206,5 +216,6 @@ Un Skill peut modifier le ciblage ou interdire une catégorie de cibles uniqueme
 * Les paramètres des diminishing returns des CC.
 * Les formules et caps de Brûlure, Poison et Saignement.
 * Le cap de réduction des soins.
+* Les immunités ciblées aux CC, statuts et DoT propres aux futurs Skills.
 * Les règles détaillées d’interface, d’icônes et de lisibilité.
 * La liste définitive des effets de statut.

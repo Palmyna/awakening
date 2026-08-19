@@ -103,7 +103,7 @@ Elle peut néanmoins produire des effets supplémentaires, par exemple :
 
 Une Basic Attack peut être mono-cible, multi-cible, multi-hit ou AoE. Elle peut infliger des dégâts Physiques, Spéciaux, hybrides, True Damage ou utiliser une autre formule explicitement déclarée.
 
-Elle possède notamment son propre intervalle, son élément ou son absence d’élément, son ciblage, ses composantes de dégâts, son éventuel nombre de hits et son gain d’énergie.
+Elle possède notamment son propre intervalle, exactement un des neuf éléments officiels, son ciblage, ses composantes de dégâts, son éventuel nombre de hits et son gain d’énergie.
 
 ### 3.2. Basic Attack réussie
 
@@ -115,7 +115,7 @@ Une Basic Attack réussie :
 
 Une Basic Attack multi-hit ou multi-cible est considérée comme réussie si au moins un hit touche au moins une cible.
 
-Son énergie et la progression de ses compteurs d’Active sont alors accordées une seule fois, quel que soit le nombre de hits ou de cibles touchés. Si tous les hits sont esquivés, elle n’accorde ni énergie, ni progression d’Active, ni effet exigeant une Basic Attack réussie.
+Son énergie et la progression de ses compteurs d’Active sont alors accordées une seule fois, quel que soit le nombre de hits ou de cibles touchés. Un hit non esquivé reste touché lorsque ses effets sont ensuite annulés par une immunité élémentaire. Si tous les hits sont esquivés, la Basic Attack n’accorde ni énergie, ni progression d’Active, ni effet exigeant une Basic Attack réussie.
 
 Les règles détaillées de l’intervalle, de l’Esquive et de la résolution des hits appartiennent au [document Combat](./02-COMBAT.md).
 
@@ -201,9 +201,35 @@ Une Basic Attack, une Active ou une Ultimate peut posséder un effet déclenché
 
 La catégorie de la capacité reste inchangée. La documentation doit parler d’**effet intégré**, d’**effet déclenché** ou d’**effet persistant**, plutôt que de présenter cet effet comme une Passive supplémentaire.
 
-## 6. Ultimate et énergie
+## 6. Élément des capacités et de leurs effets
 
-### 6.1. Jauge structurelle et état initial
+### 6.1. Élément obligatoire et indépendant
+
+La Basic Attack et chacun des quatre Skills, y compris les Passive, possèdent exactement un des neuf éléments officiels.
+
+L’élément d’une capacité est indépendant du ou des éléments de sa créature. Une capacité conserve un seul élément à un instant donné, y compris lorsqu’elle est multi-hit, multi-cible, AoE, hybride ou composée de plusieurs effets.
+
+### 6.2. Héritage et snapshot
+
+Tous les effets directement produits par une capacité héritent de son élément actuel au moment où ils sont créés ou appliqués. Cela comprend les dégâts, soins, statuts, buffs, debuffs, CC, DoT, HoT, Boucliers et effets retardés.
+
+Un effet déjà créé conserve cet élément pendant toute son existence. Un changement ultérieur de l’élément de la capacité source ne le modifie pas rétroactivement.
+
+### 6.3. Modification et déclenchement
+
+Un Skill peut modifier explicitement l’élément d’une capacité pendant le combat. Les effets produits après cette modification utilisent le nouvel élément.
+
+Lorsqu’une capacité en déclenche une autre, la capacité déclenchée conserve son propre élément actuel. Elle n’hérite de l’élément de la capacité déclencheuse que si une modification explicite le prévoit.
+
+### 6.4. Immunités accordées par des Skills
+
+Un Skill peut accorder explicitement une immunité élémentaire. Celle-ci bloque tous les effets positifs et négatifs de l’élément concerné sur la cible immunisée, quelle que soit leur source.
+
+La table, la portée détaillée des résistances et immunités ainsi que leur ordre de résolution appartiennent au [document Éléments](./05-ELEMENTS.md).
+
+## 7. Ultimate et énergie
+
+### 7.1. Jauge structurelle et état initial
 
 Chaque créature possède structurellement une jauge d’énergie standard :
 
@@ -213,13 +239,13 @@ Une créature n’est pas conçue intrinsèquement avec une autre capacité natu
 
 Sans effet contraire, son état initial est `0 / 100`. Une Passive peut définir directement une autre énergie initiale. Cette valeur constitue alors l’état initial du combat et non un gain d’énergie intervenu après le début du combat.
 
-### 6.2. Capacité maximale effective et overcharge
+### 7.2. Capacité maximale effective et overcharge
 
 Une Passive ou un autre effet peut modifier la capacité maximale effective de la jauge pendant le combat. La structure de base reste `0 → 100`, mais son état effectif peut, par exemple, devenir `0 → 200`.
 
 Une capacité maximale supérieure à 100 autorise l’accumulation correspondante et permet des mécaniques d’overcharge explicitement définies. L’énergie n’est perdue à 100 que lorsque la capacité maximale effective est elle-même égale à 100.
 
-### 6.3. Gain et manipulation de l’énergie
+### 7.3. Gain et manipulation de l’énergie
 
 Pendant le combat, la source normale du gain d’énergie est la Basic Attack réussie.
 
@@ -235,7 +261,7 @@ Les autres Skills ne constituent pas des sources autonomes de gain direct. Ils p
 
 L’état de la jauge et la disponibilité de l’Ultimate sont recalculés immédiatement après chaque modification.
 
-### 6.4. Seuil de disponibilité
+### 7.4. Seuil de disponibilité
 
 Le seuil standard de l’Ultimate est 100 énergie. Une capacité peut explicitement modifier ce seuil.
 
@@ -243,21 +269,21 @@ Si l’énergie actuelle atteint déjà un nouveau seuil abaissé, l’Ultimate 
 
 La disponibilité standard d’une Ultimate repose sur l’énergie. Des conditions supplémentaires sans rapport avec l’énergie ne constituent pas le modèle général.
 
-### 6.5. Consommation complète
+### 7.5. Consommation complète
 
 Lorsqu’une Ultimate commence réellement son utilisation, elle consomme toute l’énergie présente et la jauge revient à zéro.
 
 L’énergie fonctionne comme une jauge à remplir, non comme une monnaie dont seul un coût serait soustrait. Une Ultimate utilisée avec 95 énergie et un seuil de 80 ne conserve donc pas les 15 points excédentaires.
 
-## 7. Opportunités d’action et modes de contrôle
+## 8. Opportunités d’action et modes de contrôle
 
-### 7.1. Cycle temporel commun
+### 8.1. Cycle temporel commun
 
 La Basic Attack, les Active et l’Ultimate utilisent les mêmes opportunités d’action. Une Active ou une Ultimate remplace l’action qui aurait normalement eu lieu à cet instant et ne crée pas, par défaut, une action supplémentaire entre deux opportunités.
 
 L’intervalle jusqu’à l’opportunité suivante continue selon les règles du moteur de combat.
 
-### 7.2. Priorité au sein d’une créature
+### 8.2. Priorité au sein d’une créature
 
 À chaque opportunité d’action, le moteur sélectionne la première action prête, autorisée et disposant d’une cible valide selon cet ordre :
 
@@ -269,7 +295,7 @@ Une capacité prête mais temporairement interdite, par exemple par Silence, res
 
 Une capacité sans cible valide n’est pas lancée, ne consomme pas son compteur ou son énergie et reste prête. Le moteur poursuit la recherche d’une action valide.
 
-### 7.3. Modes Auto et Manuel
+### 8.3. Modes Auto et Manuel
 
 Le mode de contrôle est global au combat. Il n’est pas configuré séparément pour chaque créature.
 
@@ -287,7 +313,7 @@ En **Manuel** :
 
 Le joueur ne choisit ni la cible ni le comportement interne d’une Ultimate. Ces éléments restent déterminés par la capacité et les règles de combat.
 
-### 7.4. Demande manuelle et changement de mode
+### 8.4. Demande manuelle et changement de mode
 
 Une demande manuelle d’Ultimate prête est irréversible. Elle reste autorisée jusqu’à son lancement à la prochaine opportunité valide.
 
@@ -297,9 +323,9 @@ Lors du passage d’Auto à Manuel, une Ultimate prête dont le lancement n’a 
 
 Dès que la résolution d’une Ultimate a commencé, un changement de mode ne l’annule pas.
 
-## 8. Ordre des actions et chaînes de résolution
+## 9. Ordre des actions et chaînes de résolution
 
-### 8.1. Actions prévues au même timestamp
+### 9.1. Actions prévues au même timestamp
 
 Lorsque plusieurs créatures doivent agir au même timestamp, leur ordre est déterminé par :
 
@@ -309,7 +335,7 @@ Lorsque plusieurs créatures doivent agir au même timestamp, leur ordre est dé
 
 L’Agilité utilisée est la valeur active au moment de la résolution, après les buffs, debuffs et autres modifications applicables.
 
-### 8.2. Résolution complète
+### 9.2. Résolution complète
 
 Une action est entièrement résolue avant le passage à l’action normale suivante, même lorsque plusieurs actions étaient prévues au même timestamp.
 
@@ -324,7 +350,7 @@ Cette résolution comprend notamment :
 
 Une chaîne se poursuit jusqu’à sa fin, puis le moteur reprend la file normale. Les boucles infinies doivent être empêchées par la conception des capacités et par les garde-fous techniques appropriés.
 
-### 8.3. Effets à la mort
+### 9.3. Effets à la mort
 
 Lorsqu’une créature meurt :
 
@@ -336,15 +362,15 @@ Lorsqu’une créature meurt :
 
 Si plusieurs effets à la mort attendent la même priorité temporelle, ils utilisent l’Agilité effective, puis l’équipe attaquante, puis l’ordre de position.
 
-### 8.4. Action déjà lancée
+### 9.4. Action déjà lancée
 
 Une Basic Attack, une Active ou une Ultimate dont le lancement a commencé termine sa résolution même si son lanceur meurt pendant celle-ci.
 
 Les hits restants d’un multi-hit déjà lancé continuent donc selon la règle de ciblage de la capacité. Seule une interruption explicitement prévue peut déroger à ce principe.
 
-## 9. Ciblage, multi-hit et état live
+## 10. Ciblage, multi-hit et état live
 
-### 9.1. Règles de ciblage
+### 10.1. Règles de ciblage
 
 Une capacité peut définir sa propre règle de ciblage : cible unique, ligne, colonne, équipe entière, nombre limité de cibles, cible aléatoire, cible répondant à une condition ou autre règle explicite.
 
@@ -352,7 +378,7 @@ Lorsqu’elle ne définit aucune exception, elle utilise les conventions du [doc
 
 Le terme **allié** inclut le lanceur. La formulation **autre allié** l’exclut. Cette convention s’applique notamment aux soins, buffs, Boucliers, Cleanse et autres effets alliés.
 
-### 9.2. Détermination des cibles
+### 10.2. Détermination des cibles
 
 L’action à employer et ses cibles sont évaluées à partir de l’état live du combat au moment où son lancement commence réellement.
 
@@ -360,19 +386,19 @@ Par défaut, les cibles d’un Skill sont ensuite déterminées pour toute sa r�
 
 Une capacité peut explicitement prévoir des sélections successives, par exemple une nouvelle cible aléatoire pour chaque hit.
 
-### 9.3. Mort d’une cible pendant un multi-hit
+### 10.3. Mort d’une cible pendant un multi-hit
 
 Si un multi-hit vise une cible fixe et que cette cible meurt, les hits restants destinés à cette cible sont perdus. Ils ne cherchent pas automatiquement une nouvelle cible.
 
 Si la capacité prévoit une nouvelle sélection pour chaque hit, les hits restants continuent en sélectionnant des cibles valides selon cette règle.
 
-### 9.4. Zones, positions vides et hasard
+### 10.4. Zones, positions vides et hasard
 
 Une zone couvrant une ligne, une colonne ou une équipe n’est pas interrompue par des emplacements vides. Une règle de proximité ou d’adjacence peut en revanche être rompue par une position vide.
 
 Le ciblage aléatoire reste déterministe à partir de la seed RNG du combat et doit pouvoir être reproduit.
 
-## 10. Dégâts, soins et composition des effets
+## 11. Dégâts, soins et composition des effets
 
 Une Active ou une Ultimate peut être entièrement consacrée au soin, à la protection, au contrôle, à une transformation, à la manipulation d’énergie ou à une autre fonction. Contrairement à la Basic Attack, elle n’est pas obligée d’infliger des dégâts.
 
@@ -382,19 +408,20 @@ Le Crit est une mécanique générale pour les effets produisant une valeur crit
 
 Les calculs, protections et catégories de dégâts appartiennent au [document Combat](./02-COMBAT.md).
 
-## 11. Esquive, probabilités et ordre des effets
+## 12. Esquive, probabilités et ordre des effets
 
-### 11.1. Effets offensifs
+### 12.1. Effets offensifs
 
 Un effet offensif visant une cible est soumis à l’Esquive de cette cible même lorsqu’il n’inflige aucun dégât, sauf s’il est explicitement inesquivable.
 
 Pour un effet lié à un hit :
 
 1. l’Esquive du hit est résolue ;
-2. si le hit réussit, ses dégâts et effets certains sont résolus ;
-3. une probabilité explicitement liée à ce hit est ensuite testée selon l’ordre déclaré par la capacité.
+2. si le hit réussit, il est considéré comme ayant touché et l’immunité élémentaire est vérifiée ;
+3. si l’effet n’est pas bloqué, ses dégâts et effets certains sont résolus ;
+4. une probabilité explicitement liée à ce hit est testée selon l’ordre déclaré par la capacité.
 
-### 11.2. Nature des probabilités
+### 12.2. Nature des probabilités
 
 Une capacité doit préciser si une probabilité est :
 
@@ -405,7 +432,7 @@ Une capacité doit préciser si une probabilité est :
 
 Une probabilité globale peut être testée avant les résolutions individuelles d’Esquive des cibles. Aucun jet implicite ou caché ne doit être ajouté à une capacité.
 
-### 11.3. Effets multiples et ordre réel
+### 12.3. Effets multiples et ordre réel
 
 Chaque effet d’une capacité peut posséder ses propres cibles, durée, probabilité, règles de cumul et conditions.
 
@@ -415,9 +442,9 @@ Par défaut, les dégâts d’un hit utilisent l’état de la cible au moment d
 
 Les règles spécialisées de statut appartiennent au [document Effets de statut](./06-STATUS_EFFECTS.md).
 
-## 12. Mort, statuts et limite temporelle
+## 13. Mort, statuts et limite temporelle
 
-### 12.1. Mort et auto-résurrection
+### 13.1. Mort et auto-résurrection
 
 La mort n’agit pas comme un Cleanse. Les statuts présents ne sont pas automatiquement retirés lorsqu’une créature meurt ou passe dans un état non vivant lié à une auto-résurrection.
 
@@ -425,7 +452,7 @@ Leurs timers continuent normalement à s’écouler pendant cet état. Un statut
 
 Un effet nécessitant une cible vivante ne produit pas son effet normal tant que la créature est non vivante. Cette règle est distincte de l’Exclusion, qui gèle les timers selon ses propres règles.
 
-### 12.2. Limite au combat en cours
+### 13.2. Limite au combat en cours
 
 Tous les effets produits par les capacités sont limités au combat en cours. Aucun effet de combat ne modifie définitivement l’instance et aucun ne persiste d’un combat à l’autre.
 
@@ -433,30 +460,30 @@ Une durée peut être exprimée en secondes, en Basic Attacks, en déclenchement
 
 Dans le contexte du combat, un effet qualifié de **permanent** signifie au maximum **jusqu’à la fin du combat**.
 
-## 13. Fiches et données de capacités
+## 14. Fiches et données de capacités
 
-### 13.1. Fiche lisible
+### 14.1. Fiche lisible
 
 Une fiche de capacité peut présenter séparément les propriétés structurelles utiles, notamment :
 
 * le nom ;
 * la catégorie ;
-* l’élément ou l’absence d’élément ;
+* l’élément ;
 * le cycle d’une Active lorsqu’il est pertinent.
 
 La description mécanique rassemble ensuite les cibles, valeurs, effets, durées, probabilités et exceptions nécessaires. Elle ne doit pas être transformée en formulaire répétant chaque information déjà exprimée clairement.
 
 Les règles système communes, comme l’Esquive standard d’un hit offensif, n’ont pas à être répétées sur chaque fiche. La capacité décrit ce qui lui est propre et ses exceptions.
 
-### 13.2. Terminologie mécanique
+### 14.2. Terminologie mécanique
 
 La compréhension mécanique prime sur une formulation narrative ambiguë. Les termes officiels comme Brûlure, Agilité, énergie, Bouclier, Active ou Ultimate doivent être employés de manière cohérente.
 
 Un texte de lore séparé n’est pas obligatoire. L’identité peut être portée par le nom, les effets nommés et une formulation naturelle qui reste mécaniquement précise.
 
-### 13.3. Source de vérité data-driven
+### 14.3. Source de vérité data-driven
 
-Les capacités concrètes doivent être conçues à partir de données structurées : coefficients, durées, probabilités, hits, stacks, ticks, seuils et autres paramètres.
+Les capacités concrètes doivent être conçues à partir de données structurées : élément, coefficients, durées, probabilités, hits, stacks, ticks, seuils et autres paramètres.
 
 Le texte présenté au joueur reflète ces données. Une valeur ne doit pas être saisie indépendamment dans plusieurs sources susceptibles de diverger.
 
@@ -464,7 +491,7 @@ Le texte présenté au joueur reflète ces données. Une valeur ne doit pas êtr
 
 Les valeurs d’équilibrage peuvent évoluer sans remettre en cause une mécanique structurelle inchangée.
 
-## 14. Exceptions et extensibilité
+## 15. Exceptions et extensibilité
 
 Le système suit le principe :
 
@@ -478,7 +505,7 @@ Une mécanique atypique future, comme un coût en PV, un sacrifice, un soin d’
 
 Si une future capacité crée seulement une exception locale, sa fiche peut la documenter. Si elle introduit ou modifie une règle système réutilisable, les documents système concernés doivent être mis à jour.
 
-## 15. Répartition documentaire
+## 16. Répartition documentaire
 
 | Document | Responsabilité principale |
 |---|---|
@@ -489,7 +516,7 @@ Si une future capacité crée seulement une exception locale, sa fiche peut la d
 | [`07-EVOLUTIONS.md`](./07-EVOLUTIONS.md) | Transformations des versions de capacités entre les formes et branches |
 | [`18-UI_FLOW.md`](./18-UI_FLOW.md) | Présentation et parcours de consultation ou de contrôle |
 
-## 16. Éléments à préciser ultérieurement
+## 17. Éléments à préciser ultérieurement
 
 * Les coefficients, durées, probabilités, nombres de hits, cycles et gains d’énergie propres aux capacités concrètes.
 * Les seuils et modifications d’énergie propres aux capacités concrètes.

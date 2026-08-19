@@ -94,8 +94,8 @@ Les combats sont principalement automatisés afin que la profondeur du jeu repos
 
 **Éléments à préciser ultérieurement :**
 
-* Les coefficients exacts de réduction des résistances élémentaires simples et doubles.
-* Les valeurs, durées et probabilités des effets de statut, leurs règles individuelles de cumul et de renouvellement, les paramètres des diminishing returns des CC et le périmètre des immunités explicites.
+* Les ajustements éventuels du taux actuel de résistance élémentaire pendant le balancing.
+* Les valeurs, durées et probabilités des effets de statut, leurs règles individuelles de cumul et de renouvellement, les paramètres des diminishing returns des CC et les immunités propres aux futurs Skills.
 
 ## 5. Une expérience mobile accessible et profonde
 

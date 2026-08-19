@@ -41,6 +41,8 @@ Le multiplicateur de stade appliqué aux caractéristiques principales et second
 
 La Basic Attack et les quatre Skills conservent leur continuité conceptuelle, et la catégorie de chaque Skill reste inchangée. Une évolution peut enrichir leur version ou transformer fortement leur fonction lorsque cette transformation reste cohérente avec l’évolution de la créature. Une capacité ne doit pas être remplacée arbitrairement par une capacité sans relation conceptuelle.
 
+Une évolution peut également modifier le ou les éléments de la nouvelle forme et l’élément d’une ou plusieurs capacités. Ces changements sont indépendants : modifier les éléments de la forme n’impose pas de modifier ceux de ses capacités, et inversement. Chaque capacité conserve exactement un élément dans sa nouvelle version.
+
 ## 4. Conditions d’évolution
 
 Chaque transition possède ses propres conditions. Elles peuvent notamment dépendre :

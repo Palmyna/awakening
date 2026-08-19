@@ -221,19 +221,19 @@ La liste officielle comprend neuf éléments :
 
 L’élément d’une créature représente principalement la nature de ses pouvoirs, de ses capacités, de ses résistances et de son style de combat. Il n’est pas déterminé uniquement par son apparence, son espèce, son habitat ou son histoire.
 
-Chaque Basic Attack et chaque Skill offensif possède exactement un élément ou est explicitement sans élément. Une attaque ne possède pas deux éléments simultanément dans le système initial.
+Chaque Basic Attack et chacun des quatre Skills, y compris les Passive, possède exactement un des neuf éléments officiels. Il n’existe ni élément Neutre ni capacité sans élément. L’élément d’une capacité est indépendant de celui de sa créature, et tous les effets qu’elle produit directement en héritent. Une capacité conserve un seul élément à un instant donné, même lorsqu’elle est multi-hit, multi-cible ou hybride.
 
-Le système élémentaire standard est défensif. Il n’accorde aucun bonus offensif automatique : un élément de la cible peut résister à l’élément de l’attaque, tandis qu’une relation non déclarée et le même élément contre lui-même restent neutres. La table élémentaire de base ne produit aucune immunité naturelle.
+Le ou les éléments de la forme actuelle restent fixes pendant tout le combat. Une évolution peut les modifier entre deux formes, tandis que l’élément d’une capacité peut changer en combat uniquement lorsqu’un Skill le prévoit explicitement. Un effet déjà créé ou appliqué conserve l’élément qu’il possédait à cet instant.
 
-Pour une créature bi-élément, une résistance applicable sur un seul de ses éléments est appliquée une fois. Lorsque ses deux éléments résistent à l’attaque, les deux réductions sont appliquées successivement et de manière multiplicative. Les coefficients exacts restent à équilibrer.
+Le système élémentaire standard est exclusivement défensif. Il n’accorde aucun bonus offensif automatique et ne contient aucune faiblesse augmentant les dégâts : un élément de la cible peut résister à l’élément de la capacité, tandis qu’une relation non déclarée et le même élément contre lui-même restent neutres.
+
+Le taux actuel d’une résistance élémentaire est de 30 %, valeur ajustable pendant le balancing. Pour une créature bi-élément, une résistance applicable sur un seul de ses éléments est appliquée une fois. Lorsque ses deux éléments résistent à la capacité, les deux réductions sont appliquées successivement et de manière multiplicative, soit actuellement une réduction totale de 51 %.
+
+La table élémentaire ne produit aucune immunité naturelle. Un Skill peut accorder explicitement une immunité élémentaire, qui bloque tous les effets positifs et négatifs de l’élément concerné, quelle que soit leur source. Les résistances réduisent uniquement les dégâts directs, périodiques et retardés et ne peuvent pas être modifiées directement par des Skills pendant le combat.
 
 Toutes les combinaisons de deux éléments sont autorisées par défaut. Chaque forme déclare explicitement son ou ses éléments, qui peuvent changer lors d’une évolution lorsque les pouvoirs, les capacités, les résistances ou le style de combat de la créature le justifient.
 
 Une créature bi-élément ne reçoit aucun avantage ou désavantage global automatique, et une créature mono-élément aucune compensation systématique. Leur équilibre doit être évalué à partir de leur profil complet.
-
-**Éléments à préciser ultérieurement :**
-
-* Les coefficients de réduction applicables aux résistances élémentaires simples et doubles.
 
 ## 12. Effets de statut
 
@@ -241,7 +241,7 @@ Les effets de statut constituent un système central du combat. Ils contribuent 
 
 Un effet de statut peut être positif, négatif ou, plus rarement, neutre. Ses fonctions sont cumulables : il peut notamment modifier des caractéristiques, limiter des actions, produire un effet continu, réagir à un événement ou modifier temporairement une règle du combat.
 
-Les compétences constituent une source principale d’effets de statut sans être nécessairement leur seule source. L’association entre un effet et un élément est facultative et doit être déclarée explicitement lorsqu’elle existe.
+Les compétences constituent une source principale d’effets de statut sans être nécessairement leur seule source. Un effet directement produit par une capacité hérite de l’élément de cette capacité au moment de sa création ou de son application.
 
 Les applications répétées de CC totaux utilisent des diminishing returns centrés sur leur durée. Un Skill peut accorder explicitement une immunité à certains CC ou statuts. Ces mécanismes ne créent aucune caractéristique principale ou secondaire supplémentaire.
 

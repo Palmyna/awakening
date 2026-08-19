@@ -598,6 +598,8 @@ Le joueur peut :
 
 Une attaque peut comporter plusieurs composantes de dégâts dans un même hit hybride. Ce hit utilise un seul jet d’Esquive et un seul jet de Critique, tandis que ses composantes Physique et Spéciale sont calculées séparément selon leurs caractéristiques, défenses, résistances et modificateurs applicables.
 
+Chaque Basic Attack et chaque Skill possède exactement un élément, indépendant du ou des éléments de sa créature. Le système élémentaire standard est défensif : il repose sur les résistances et les immunités explicitement accordées par des Skills, sans faiblesse ni bonus offensif automatique.
+
 Le combat peut ainsi être semi-automatique ou entièrement automatique selon le choix du joueur. À chaque opportunité d’action valide, une Ultimate prête et autorisée est prioritaire sur une Active prête, elle-même prioritaire sur la Basic Attack. Une Ultimate ou une Active remplace la Basic Attack qui aurait normalement eu lieu.
 
 Les contenus déjà maîtrisés doivent pouvoir être joués entièrement automatiquement.
@@ -614,12 +616,12 @@ Le combat doit rendre visibles :
 
 * les actions importantes ;
 * les effets de statut ;
-* les résistances élémentaires déterminantes ;
+* les résultats utiles des interactions élémentaires, notamment les immunités ;
 * les compétences ultimes ;
 * les éliminations ;
 * les changements majeurs dans l’équilibre du combat.
 
-Les règles exactes d’ordre des actions, de ciblage, de dégâts, de Crit, d’Esquive et d’intelligence de combat sont définies dans [`02-COMBAT.md`](./02-COMBAT.md).
+Le combat présente les résultats utiles de la simulation sans exposer constamment ses calculs internes. Les règles exactes d’ordre des actions, de ciblage, de dégâts, de Crit, d’Esquive et d’intelligence de combat sont définies dans [`02-COMBAT.md`](./02-COMBAT.md).
 
 ### 11.4. Présentation visuelle
 
@@ -1088,7 +1090,7 @@ Le GDD dépend des documents spécialisés suivants pour les détails :
 * [`02-COMBAT.md`](./02-COMBAT.md) — déroulement, ordre des actions, ciblage, dégâts et contrôle ;
 * [`03-CREATURES.md`](./03-CREATURES.md) — structure des créatures, caractéristiques, rôles et règles de progression propres ;
 * [`04-SKILLS.md`](./04-SKILLS.md) — structure et règles des Skills fixes ;
-* [`05-ELEMENTS.md`](./05-ELEMENTS.md) — table des résistances et coefficients ;
+* [`05-ELEMENTS.md`](./05-ELEMENTS.md) — éléments des formes et capacités, résistances, immunités et lisibilité élémentaire ;
 * [`06-STATUS_EFFECTS.md`](./06-STATUS_EFFECTS.md) — liste, application, cumul, retrait, diminishing returns des CC et immunités ;
 * [`07-EVOLUTIONS.md`](./07-EVOLUTIONS.md) — conditions, branches et effets des évolutions ;
 * [`08-ITEMS.md`](./08-ITEMS.md) — équipements et objets, dont l’objet de réinitialisation ;
@@ -1105,7 +1107,6 @@ Le GDD dépend des documents spécialisés suivants pour les détails :
 Les questions suivantes ne bloquent pas le fonctionnement global décrit par le GDD :
 
 * le nom définitif du rôle provisoirement appelé « Éveilleur » ;
-* les coefficients exacts des résistances élémentaires ;
 * les paramètres exacts des courbes d’Agilité, de Crit et d’Esquive ;
 * les valeurs et règles individuelles encore ouvertes des effets de statut ;
 * la méthode d’obtention et le rythme de distribution de l’objet de réinitialisation ;

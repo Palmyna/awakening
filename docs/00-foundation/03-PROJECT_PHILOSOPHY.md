@@ -57,7 +57,7 @@ Le projet doit éviter :
 
 **Éléments à préciser ultérieurement :**
 
-* les coefficients exacts des résistances élémentaires ;
+* les ajustements éventuels du taux actuel de résistance élémentaire pendant le balancing ;
 * les paramètres exacts des courbes d’Agilité, de Crit et d’Esquive ainsi que les formules de dégâts ;
 * la liste des effets de statut et leurs règles détaillées d’application, de durée, de cumul, de renouvellement, de retrait, de résistance et d’immunité.
 

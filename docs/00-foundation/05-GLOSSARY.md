@@ -444,7 +444,7 @@ La Basic Attack et les quatre Skills conservent leur continuité conceptuelle à
 
 **Domaine :** Créatures, combat
 
-**Définition :** Action offensive automatique de base d’une créature, distincte de ses quatre Skills. Elle inflige toujours des dégâts et possède notamment son propre intervalle, son élément ou son absence d’élément, son gain d’énergie et ses règles de ciblage. Une Basic Attack réussie constitue la source normale du gain d’énergie pendant le combat et fait progresser les compteurs d’Active.
+**Définition :** Action offensive automatique de base d’une créature, distincte de ses quatre Skills. Elle inflige toujours des dégâts et possède notamment son propre intervalle, exactement un des neuf éléments officiels, son gain d’énergie et ses règles de ciblage. Une Basic Attack réussie constitue la source normale du gain d’énergie pendant le combat et fait progresser les compteurs d’Active.
 
 ### Active
 
@@ -665,7 +665,7 @@ La capacité totale additionne une capacité gratuite, recalculée selon le nomb
 
 **Définition :** Propriété représentant principalement la nature des pouvoirs, des capacités, des résistances et du style de combat d’une créature. Elle n’est pas déterminée uniquement par son apparence, son espèce, son habitat ou son histoire.
 
-Chaque forme d’une créature déclare explicitement un ou deux éléments au maximum. Une évolution peut ajouter, perdre ou remplacer un élément lorsque l’évolution des pouvoirs, des capacités, des résistances ou du style de combat le justifie.
+Chaque forme d’une créature déclare explicitement un ou deux éléments au maximum. Ces éléments restent fixes pendant le combat. Une évolution peut ajouter, retirer ou remplacer un élément lorsque l’évolution des pouvoirs, des capacités, des résistances ou du style de combat le justifie.
 
 Les neuf éléments officiels sont :
 
@@ -680,6 +680,16 @@ Les neuf éléments officiels sont :
 9. Ténèbres.
 
 **Terme à éviter :** « Lumière » comme nom de l’élément.
+
+Il n’existe ni élément Neutre ni capacité sans élément.
+
+### Élément d’une capacité
+
+**Domaine :** Compétences, éléments, combat
+
+**Définition :** Élément unique possédé par une Basic Attack ou un Skill à un instant donné. Chaque Basic Attack, Active, Passive et Ultimate possède exactement un des neuf éléments officiels, indépendamment du ou des éléments de sa créature.
+
+Tous les effets directement produits par une capacité héritent de son élément au moment de leur création ou application. Un Skill peut modifier explicitement l’élément d’une capacité pendant le combat ; les effets déjà créés conservent l’élément enregistré lors de leur création.
 
 ### Créature mono-élément
 
@@ -701,15 +711,15 @@ Toutes les combinaisons sont autorisées par défaut. Une interdiction éventuel
 
 **Domaine :** Éléments, combat
 
-**Définition :** Relation défensive entre l’élément d’une attaque et le ou les éléments de sa cible, déterminant une résistance ou une interaction neutre.
+**Définition :** Relation défensive entre l’élément d’une capacité et le ou les éléments de sa cible, déterminant une résistance ou une interaction neutre.
 
-Une relation standard n’accorde aucun bonus offensif automatique. Les relations ne sont pas obligatoirement réciproques et le même élément contre lui-même est neutre.
+Une relation standard n’accorde aucun bonus offensif automatique et ne crée aucune faiblesse augmentant les dégâts. Les relations ne sont pas obligatoirement réciproques et le même élément contre lui-même est neutre.
 
 ### Résistance élémentaire
 
 **Domaine :** Éléments, combat
 
-**Définition :** Interaction dans laquelle un élément de la cible réduit les dégâts d’une attaque possédant l’un des éléments auxquels il résiste.
+**Définition :** Interaction dans laquelle un élément de la cible réduit les dégâts directs, périodiques ou retardés d’une capacité possédant l’un des éléments auxquels il résiste. Le taux standard actuel est de 30 % et reste ajustable pendant le balancing. Une résistance ne modifie pas les effets non dommageables et ne peut pas être directement modifiée par un Skill pendant le combat.
 
 ### Interaction neutre
 
@@ -717,31 +727,26 @@ Une relation standard n’accorde aucun bonus offensif automatique. Les relation
 
 **Définition :** Résultat d’une confrontation entre deux éléments lorsqu’aucune résistance ne s’applique. Le même élément contre lui-même est neutre.
 
-Cette notion ne doit pas être confondue avec une compétence sans élément.
+Cette notion décrit une relation entre deux éléments et non une catégorie de capacité.
 
 ### Double résistance
 
 **Domaine :** Éléments, combat
 
-**Définition :** Interaction produite lorsque les deux éléments d’une créature bi-élément résistent à l’élément d’une attaque. Les deux réductions sont appliquées successivement et de manière multiplicative, jamais additionnées.
-
-### Compétence sans élément
-
-**Domaine :** Compétences, éléments
-
-**Définition :** Basic Attack ou Skill ne possédant aucun élément. Une attaque possède exactement un élément ou est explicitement déclarée sans élément ; elle ne possède pas deux éléments simultanément dans le système initial.
+**Définition :** Interaction produite lorsque les deux éléments d’une créature bi-élément résistent à l’élément d’une capacité. Les deux réductions sont appliquées successivement et de manière multiplicative, jamais additionnées. Avec le taux actuel de 30 %, la cible conserve 49 % des dégâts, soit une réduction totale de 51 %.
 
 ### Immunité élémentaire
 
 **Domaine :** Éléments, combat
 
-**Définition :** Propriété particulière empêchant explicitement une interaction ou ses effets. Elle ne provient jamais automatiquement de la table élémentaire, qui ne contient aucune immunité naturelle.
+**Définition :** Propriété accordée explicitement par un Skill et bloquant tous les effets positifs et négatifs d’un élément sur la créature immunisée, quelle que soit leur source.
 
-Une immunité élémentaire doit être créée explicitement par un Skill ou un autre effet documenté.
+Elle ne provient jamais automatiquement de la table élémentaire. Elle reste distincte d’une résistance, qui réduit uniquement les dégâts, et des immunités ciblées à certains CC, statuts ou DoT.
 
 **Éléments à préciser ultérieurement :**
 
-* Les coefficients de réduction applicables aux résistances simples et doubles.
+* Les ajustements éventuels du taux actuel de résistance pendant le balancing.
+* Les immunités concrètes propres aux futurs Skills.
 
 ## 7. Effets de statut
 
@@ -753,7 +758,7 @@ Une immunité élémentaire doit être créée explicitement par un Skill ou un 
 
 Un effet de statut peut cumuler plusieurs fonctions : modifier des caractéristiques, limiter ou empêcher des actions, produire un effet continu, réagir à un événement ou modifier temporairement une règle. Les compétences en constituent une source principale, mais d’autres systèmes explicitement documentés peuvent en appliquer, modifier ou retirer.
 
-L’association entre un effet de statut et un élément est facultative. Elle doit être déclarée explicitement et ne peut pas être déduite uniquement de son nom ou de son apparence.
+Un effet de statut directement produit par une capacité hérite de l’élément de cette capacité au moment de son application. Une autre source explicitement documentée doit définir l’élément qu’elle transmet. L’élément d’un effet ne se déduit pas uniquement de son nom ou de son apparence.
 
 ### Effet positif
 
