@@ -76,12 +76,13 @@ Ces documents constituent les fondations de référence actuelles du projet. Ils
 ### 04-technical
 
 * 🚧 [`01-ARCHITECTURE.md`](./docs/04-technical/01-ARCHITECTURE.md) — Draft de conception — base initiale à compléter
-* ⬜ `02-DATABASE.md`
-* ⬜ `03-SUPABASE.md`
-* ⬜ `04-API.md`
-* ⬜ `05-SAVE_SYSTEM.md`
-* ⬜ `06-SECURITY.md`
-* ⬜ `07-ANALYTICS.md`
+* 🚧 [`02-GODOT.md`](./docs/04-technical/02-GODOT.md) — Draft de conception — base initiale à compléter
+* ⬜ `03-DATABASE.md`
+* ⬜ `04-SUPABASE.md`
+* ⬜ `05-API.md`
+* ⬜ `06-SAVE_SYSTEM.md`
+* ⬜ `07-SECURITY.md`
+* ⬜ `08-ANALYTICS.md`
 
 ### 05-ai
 

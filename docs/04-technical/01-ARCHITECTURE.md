@@ -8,6 +8,10 @@ Ce document rassemble les décisions et principes techniques actuellement valid�
 
 Il constitue une première base d’architecture. Il ne fixe pas encore la version du moteur, le langage, l’arborescence du projet, l’architecture des scènes, le modèle de données ou les conventions d’implémentation.
 
+Il répond principalement à la question : **« Comment Project Awakening est-il architecturé ? »**
+
+La traduction progressive de ces principes dans le moteur appartient au [draft spécialisé Godot](./02-GODOT.md), qui répond principalement à la question : **« Comment cette architecture est-elle implémentée et organisée dans Godot ? »**
+
 ## 2. Moteur et représentation
 
 **Godot est le moteur actuellement retenu pour Project Awakening.**
@@ -21,6 +25,8 @@ Cette décision ne fixe pas encore :
 * l’organisation des scènes ;
 * la structure exacte du projet ;
 * les conventions de code.
+
+Les décisions et conventions propres à l’utilisation du moteur doivent être centralisées dans le [draft Godot](./02-GODOT.md) plutôt que détaillées dans le présent document d’architecture générale.
 
 ## 3. Séparation entre simulation et représentation
 
@@ -98,4 +104,3 @@ Les choix techniques doivent rester compatibles avec :
 * Les objectifs et budgets de performance.
 * Le pipeline d’assets.
 * Les autres choix d’implémentation.
-
