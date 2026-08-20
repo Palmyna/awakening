@@ -41,7 +41,7 @@ Le joueur doit pouvoir accéder aux informations pertinentes de l’instance, no
 * caractéristiques principales et secondaires ;
 * points disponibles ;
 * Basic Attack et quatre Skills, consultables directement avec leur description et leur élément propre ;
-* ensemble d’équipement ;
+* ensemble d'équipement, avec distinction entre Artefacts et Sources d'énergie ;
 * tags et verrouillage ;
 * apparences de formes débloquées ;
 * informations d’évolution déjà découvertes.
@@ -104,6 +104,8 @@ L’interface doit permettre d’accéder aux actions validées :
 
 Les actions irréversibles ou destructives doivent disposer d’une présentation et de confirmations adaptées. Le détail de ces protections reste à définir.
 
+La gestion des équipements s'effectue depuis la fiche de l'instance. La disposition des catégories et le nombre exact d'emplacements restent à définir.
+
 ## 6. Liste des instances
 
 La liste doit prendre en charge :
@@ -155,7 +157,13 @@ Le parcours d’invocation doit rester clairement distinct de l’ouverture d’
 
 L’obtention d’une instance doit permettre d’identifier sa famille, sa rareté et son ajout éventuel à la file de dépassement de capacité, sans révéler les branches encore secrètes.
 
-## 11. Éléments à préciser ultérieurement
+## 11. Fabrication et recettes
+
+Le système d'établi, ou équivalent, doit permettre de sélectionner des composants et de fabriquer des Artefacts. Une bibliothèque ou un registre de plans conserve les recettes découvertes et permet de reproduire le même type d'Artefact, dont les caractéristiques finales peuvent varier.
+
+La disposition, le nombre d'ingrédients, le traitement d'une combinaison invalide, les confirmations et la présentation des rolls restent à définir.
+
+## 12. Éléments à préciser ultérieurement
 
 * L’architecture de navigation.
 * La disposition et le nombre d’écrans ou d’onglets.

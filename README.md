@@ -60,9 +60,9 @@ Ces documents constituent les fondations de référence actuelles du projet. Ils
 
 * ✅ [`01-LORE.md`](./docs/02-world/01-LORE.md) — Rédigé — référence actuelle, à maintenir à jour
 * 🚧 [`02-CREATURE_LORE.md`](./docs/02-world/02-CREATURE_LORE.md) — Draft de conception — base initiale à compléter
-* ⬜ `03-FORCES_AND_FACTIONS.md`
-* ⬜ `04-REGIONS.md`
-* ⬜ `05-TIMELINE.md`
+* 🚧 [`03-FORCES_PEOPLES_AND_FACTIONS.md`](./docs/02-world/03-FORCES_PEOPLES_AND_FACTIONS.md) — Draft de conception — base initiale à compléter
+* ⬜ `04-WORLDS_AND_REGIONS.md`
+* 🚧 [`05-TIMELINE.md`](./docs/02-world/05-TIMELINE.md) — Draft de conception — repères relatifs à compléter
 
 ### 03-art
 

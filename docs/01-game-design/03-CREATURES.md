@@ -338,6 +338,8 @@ Sa formule appartient au [document Progression](./10-PROGRESSION.md).
 
 L’évolution transforme définitivement la même instance.
 
+Chaque famille possède une structure fondamentale contenant ses formes et branches possibles. Une instance ne peut pas évoluer en dehors de ce potentiel familial. Les conditions d'évolution déclenchent une possibilité existante et le joueur peut mécaniquement provoquer ces conditions sans que l'humain façonne directement l'évolution dans le lore.
+
 Elle peut modifier :
 
 * l’apparence ;
@@ -364,11 +366,15 @@ Une forme atteinte débloque définitivement son apparence pour cette instance. 
 
 Les conditions, objets éventuels, indices, découvertes, déclenchements, évolutions successives et choix de branches sont centralisés dans le [document Évolutions](./07-EVOLUTIONS.md).
 
+Des créatures déjà évoluées peuvent exister dans le monde. Toute nouvelle instance acquise commence néanmoins dans la forme de base de sa famille.
+
 ## 7. Équipement et gestion individuelle
 
 ### 7.1. Ensemble d’équipement
 
 Chaque instance possède son propre ensemble d’équipement actif, composé de plusieurs objets répartis dans plusieurs emplacements.
+
+La direction actuelle envisage environ trois Artefacts et deux Sources d'énergie, sans valider le nombre exact ni la nature définitive des emplacements. Les deux catégories utilisent des sets distincts.
 
 Cet ensemble appartient à l’instance, non à sa famille ou à sa forme. Il est conservé lors d’une évolution et n’est pas modifié par le choix d’une ancienne apparence cosmétique.
 
@@ -400,7 +406,7 @@ Une nouvelle instance obtenue normalement commence :
 * à 0 étoile ;
 * sans point de caractéristique attribué.
 
-Certaines acquisitions directes par le gameplay peuvent constituer des exceptions explicitement documentées.
+Certaines acquisitions directes par le gameplay peuvent constituer des exceptions à l'invocation comme voie principale. Elles créent elles aussi une nouvelle instance dans la forme de base de sa famille.
 
 Obtenir de nouveau une famille déjà connue crée toujours une nouvelle instance individuelle. Cette instance peut être développée, suivre une autre branche ou servir de matériau d’étoiles pour une autre instance de la même famille.
 
@@ -434,19 +440,21 @@ La capacité de créatures détermine combien d’instances possédées sont uti
 
 La formule de capacité, les extensions permanentes, la file de déblocage, la recherche, les tris et la présentation de l’encyclopédie appartiennent au [document Collection](./11-COLLECTION.md).
 
-## 11. Créatures jouables et monstres ennemis
+## 11. Créatures jouables et adversaires
 
 Une **créature** est une entité jouable, possédée, collectionnée et développée par le joueur.
 
-Un **monstre** est une entité ennemie rencontrée dans une activité.
+Un **adversaire** est une entité opposée à l'équipe du joueur dans une activité. Il peut être humain, Correcteur, créature hostile, création instable, monstre ou appartenir à une autre catégorie narrative.
 
-Un monstre :
+Un adversaire non possédé :
 
 * n’est pas ajouté à la collection de créatures ;
 * n’est pas développé comme une instance possédée ;
 * ne fait pas partie d’une équipe possédée par le joueur.
 
 Les deux termes ne sont pas interchangeables.
+
+Son identité narrative ne change pas lorsqu'il est affronté : un humain ennemi reste un humain adversaire et n'est pas classé comme monstre par sa seule fonction de combat. Le périmètre narratif précis du terme monstre reste ouvert.
 
 ## 12. Répartition documentaire
 

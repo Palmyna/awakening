@@ -12,7 +12,7 @@ Sa création est nécessaire parce que le [référentiel Créatures](./03-CREATU
 
 L’invocation constitue la voie principale d’obtention des créatures.
 
-Une invocation accorde normalement une nouvelle instance :
+Une invocation accorde une nouvelle instance :
 
 * au stade 1 ;
 * dans la forme de base de sa famille ;
@@ -21,6 +21,8 @@ Une invocation accorde normalement une nouvelle instance :
 * sans point de caractéristique attribué.
 
 Elle n’accorde jamais directement une forme évoluée.
+
+Cette règle s'applique également lorsqu'une forme évoluée a été rencontrée dans le monde : elle ne peut pas être acquise directement comme nouvelle instance. L'Ancrage initial n'est possible qu'au stade de base.
 
 La découverte antérieure de formes évoluées sur le compte ne modifie pas cet état initial.
 
@@ -71,7 +73,7 @@ Certaines créatures peuvent être accordées directement par le gameplay lorsqu
 
 Le choix de la première créature parmi trois constitue une exception validée. Après un premier jalon du mode Histoire, une invocation contrôlée ou garantie doit également soutenir la progression initiale ; ses paramètres restent à définir.
 
-Une acquisition directe crée elle aussi une instance individuelle selon les règles explicitement déclarées par sa source.
+Une acquisition directe crée elle aussi une nouvelle instance individuelle dans la forme de base de sa famille. Sa source déclare explicitement ses autres paramètres.
 
 ## 7. Capacité dépassée
 
@@ -106,7 +108,11 @@ Les invocations de créatures ne sont pas vendues directement dans le modèle ac
 
 ## 9. Articulation narrative
 
-Une invocation établit ou révèle le lien entre le joueur et une manifestation vivante d’un écho, puis la stabilise. Elle ne crée pas artificiellement une nouvelle forme de vie.
+Une invocation utilise un dispositif créé ou rendu possible par la Matrice après la découverte du lien entre humains et créatures. De tels dispositifs peuvent exister dans différents mondes. Ils entrent en résonance avec un écho, ou famille, déjà créé par la Matrice et ne fabriquent pas artificiellement une personne consciente à partir de rien : ils permettent l'émergence d'une nouvelle manifestation individuelle dans sa forme de base, dont l'Ancrage initial avec le joueur est alors établi.
+
+Le processus d'invocation ordinaire n'est pas totalement contrôlable. Cette incertitude peut justifier narrativement l'aléatoire des résultats, sans déterminer les taux, ensembles disponibles ou garanties. Les acquisitions contrôlées ou garanties explicitement prévues peuvent encadrer exceptionnellement ce résultat.
+
+Le dispositif utilise probablement une forme d'énergie. Sa nature exacte et son éventuelle identité fonctionnelle avec les Sources d'énergie équipables restent ouvertes.
 
 La carte de créature reste une représentation d’interface et n’est pas un objet matériel utilisé pour invoquer.
 
@@ -119,6 +125,7 @@ Le vocabulaire narratif détaillé appartient au [draft Lore des créatures](../
 * Les garanties et protections éventuelles.
 * Le coût d’une invocation.
 * Le nom, la représentation et le rythme d’obtention de la ressource générale.
+* La nature narrative de l'énergie utilisée par les dispositifs et son éventuel lien avec la ressource générale ou les Sources d'énergie équipables.
 * Le nombre et les jalons des invocations contrôlées ou garanties.
 * Les familles accessibles pendant l’onboarding.
 * La présentation artistique et l’animation de l’invocation.

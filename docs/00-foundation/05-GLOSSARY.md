@@ -123,15 +123,21 @@ Cette désignation fictionnelle doit rester distincte de l’intelligence artifi
 
 Un écho peut provenir d’un concept dominant ou de plusieurs influences. Il ne constitue jamais la copie directe d’une personne, d’un personnage, d’une œuvre ou d’un autre élément humain.
 
+### Manifestation
+
+**Domaine :** Univers narratif, créatures
+
+**Définition :** Individu concret issu de l'écho d'une famille de créatures. Plusieurs manifestations d'un même écho peuvent exister simultanément et conservent chacune leur conscience et leur identité propres.
+
 ### Correcteur
 
 **Statut :** Provisoire — nom de travail
 
-**Domaine :** Univers narratif, ennemis
+**Domaine :** Univers narratif, adversaires
 
 **Définition :** Agent produit ou contrôlé par l’IA humaine afin de restaurer, transformer, effacer ou remplacer les créations que celle-ci juge incompatibles avec ses archives.
 
-Un Correcteur peut prendre plusieurs formes. Lorsqu’il est affronté directement, il est fonctionnellement un monstre ennemi tout en restant narrativement un Correcteur.
+Un Correcteur peut prendre plusieurs formes. Lorsqu'il est affronté directement, il est fonctionnellement un adversaire tout en restant narrativement un Correcteur.
 
 ### Correction
 
@@ -181,7 +187,7 @@ Une créature possède une Origine principale tout en pouvant conserver plusieur
 
 La liste des Origines et leur éventuelle visibilité auprès des joueurs ne sont pas validées.
 
-## 4. Créatures, monstres et cartes
+## 4. Créatures, adversaires, monstres et cartes
 
 ### Créature
 
@@ -193,13 +199,21 @@ Dans l’univers, une créature est une manifestation originale et vivante d’u
 
 **Terme à éviter :** « monstre » pour désigner une entité jouable ou collectionnée.
 
-### Monstre
+### Adversaire
 
 **Domaine :** Game design, combats
 
-**Définition :** Ennemi affronté par le joueur au cours des activités et des combats. Un monstre n’est pas une créature possédée par le joueur.
+**Définition :** Entité opposée à l'équipe du joueur dans une activité ou un combat, quelle que soit son identité narrative. Un adversaire peut être un humain, un Correcteur, une créature hostile, une création instable, un monstre ou une autre entité.
 
-Une entité peut conserver une appellation narrative plus précise tout en étant fonctionnellement un monstre, par exemple un Correcteur affronté directement.
+Une entité conserve son identité narrative lorsqu'elle est affrontée. Le terme ne désigne donc ni une espèce, ni un peuple, ni une origine métaphysique.
+
+### Monstre
+
+**Statut :** Question ouverte — périmètre narratif à définir
+
+**Domaine :** Univers narratif
+
+**Définition :** Catégorie narrative possible pour certaines entités hostiles. Son périmètre précis n'est pas encore validé et le terme ne doit pas servir de synonyme générique d'adversaire.
 
 **Terme à éviter :** « monstre » pour désigner une créature jouable, y compris dans les expressions « carte de monstre », « famille de monstres » et « doublon de monstre ».
 
@@ -215,7 +229,7 @@ La carte et la créature ne sont pas deux objets de progression ou deux entités
 
 **Terme à éviter :** « carte de monstre » pour une créature du joueur.
 
-Une éventuelle représentation d’un monstre ennemi sous forme de carte devra être explicitement qualifiée.
+Une éventuelle représentation d'un adversaire sous forme de carte devra être explicitement qualifiée.
 
 ### Famille de créatures
 
@@ -503,6 +517,32 @@ L’inventaire reste distinct du système de collection. Il ne constitue pas l�
 * « équipement équipé » ;
 * « équipement actuel » pour l’équipement actuellement attribué à une créature.
 
+### Artefact
+
+**Domaine :** Équipements, fabrication
+
+**Définition :** L'une des deux catégories principales d'équipement actuellement envisagées. Un Artefact est principalement fabriqué à partir de composants selon une recette découverte ; plusieurs fabrications du même type peuvent produire des caractéristiques finales différentes.
+
+### Source d'énergie
+
+**Domaine :** Équipements, loot
+
+**Définition :** L'une des deux catégories principales d'équipement actuellement envisagées. Une Source d'énergie est obtenue directement comme loot ou récompense de combat et d'activité.
+
+Le terme doit être qualifié lorsque le contexte pourrait le confondre avec l'énergie probablement utilisée pour l'invocation ou avec la jauge d'énergie d'une Ultimate.
+
+### Recette
+
+**Domaine :** Fabrication
+
+**Définition :** Combinaison à découvrir permettant de reproduire un même type d'Artefact. Une recette découverte est mémorisée dans une bibliothèque ou un registre de plans du compte.
+
+### Composant
+
+**Domaine :** Fabrication, loot
+
+**Définition :** Objet obtenu en jeu pouvant être combiné avec d'autres composants pour fabriquer un Artefact selon une recette.
+
 ### Système d’équipement
 
 **Domaine :** Progression, personnalisation
@@ -637,7 +677,7 @@ Le terme doit rester qualifié. Une composition d’équipe ne doit pas être ap
 
 **Définition :** Ensemble concret pouvant réunir jusqu’à six créatures sélectionnées ou utilisées par le joueur.
 
-Les monstres ennemis ne font pas partie de l’équipe du joueur.
+Les adversaires ne font pas partie de l'équipe du joueur pendant l'affrontement concerné.
 
 ### Composition d’équipe
 

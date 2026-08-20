@@ -92,7 +92,11 @@ De la même manière, un chevalier associé au phénix pourrait inspirer une lig
 
 Une intelligence artificielle créée par l’ancienne civilisation humaine cherche à préserver ses archives et à corriger les interprétations de la Matrice. Le conflit oppose ainsi la création à la conservation sans présenter l’une de ces forces comme entièrement bonne ou mauvaise.
 
+La Matrice et l'IA humaine n'étaient pas initialement ennemies. Leur opposition actuelle reste liée à une interdépendance entre création et mémoire, tandis que leur disparition respective risquerait de déséquilibrer le multivers.
+
 Certains humains, dont le joueur, peuvent établir avec les créatures un lien qui stabilise leur existence. Cette relation fournit le fondement narratif de l’acquisition, de la collection et de l’attachement aux créatures sans modifier automatiquement les règles de gameplay correspondantes.
+
+Les créatures sont des individus conscients indépendamment de ce lien et peuvent choisir différents camps. Le joueur agit comme protecteur par choix personnel, sans appartenance obligatoire à une faction.
 
 Une famille peut contenir plusieurs formes et plusieurs branches d’évolution. Chaque instance possédée parcourt cependant exactement trois stades :
 

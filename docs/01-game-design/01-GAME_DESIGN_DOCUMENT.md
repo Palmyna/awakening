@@ -52,7 +52,7 @@ Le GDD définit notamment :
 Les futurs documents spécialisés définiront notamment :
 
 * le déroulement et les règles détaillées du combat ;
-* les modèles de créatures et de monstres ;
+* les modèles de créatures et d'adversaires ;
 * les compétences, éléments et Effets de combat ;
 * les évolutions et équipements ;
 * les invocations de créatures ;
@@ -97,11 +97,13 @@ La collection et les invocations apportent de nouvelles possibilités de composi
 
 ### 2.2. Rôle du joueur
 
-Le joueur possède un rôle fictionnel légèrement défini. Il fait partie des humains capables de créer un lien avec les créatures, de stabiliser leur existence, de révéler leur potentiel, de les accompagner et de diriger plusieurs équipes.
+Le joueur possède un rôle fictionnel légèrement défini. Il fait partie des humains capables de créer un lien avec les créatures et de stabiliser leur existence. Fonctionnellement, il les accompagne, provoque les conditions permettant à leurs potentiels d'évolution de s'exprimer et dirige plusieurs équipes ; l'humain ne façonne pas directement ces potentiels dans le lore.
 
 Le nom provisoire de ce rôle est **Éveilleur**. Ce nom ne constitue pas encore un terme définitif de l’univers.
 
 Le joueur n’est ni le seul humain possédant cette aptitude ni l’élu unique du multivers. Le maintien de l’équilibre entre les forces décrites par le lore constitue une direction narrative et ne valide aucun système de choix moraux, d’embranchements ou de fins multiples.
+
+Il choisit personnellement d'agir comme protecteur et de protéger les autres sans appartenir obligatoirement à une faction. Le titre provisoire d'Éveilleur décrit une aptitude, pas un camp ou une supériorité morale.
 
 Le rôle fonctionnel du joueur consiste à :
 
@@ -407,6 +409,7 @@ Le mode Histoire doit :
 * augmenter progressivement sa difficulté ;
 * rester rejouable ;
 * permettre de répéter certains niveaux pour leurs récompenses ;
+* soutenir le farming de Sources d'énergie, de composants et d'autres récompenses pertinentes ;
 * servir de principale source de déblocage des fonctionnalités ;
 * pouvoir recevoir de nouveaux mondes et niveaux au fil du développement ;
 * soutenir une progression très longue sans exiger une narration détaillée pour chaque ajout.
@@ -417,7 +420,7 @@ La puissance d’équipe peut servir d’indication de difficulté. Elle ne cons
 
 Pour un contenu ordinaire, le joueur doit connaître suffisamment d’informations pour sélectionner une équipe pertinente :
 
-* les éléments des monstres ;
+* les éléments des adversaires qui en possèdent ;
 * les principales menaces ;
 * les Effets de combat importants ;
 * les conditions particulières ;
@@ -785,11 +788,11 @@ Le système doit préserver :
 
 L’invocation de créature constitue la principale voie d’obtention des créatures.
 
-Une invocation accorde la forme de base d’une famille de créatures, jamais directement sa forme finale.
+Une invocation accorde toujours la forme de base d'une famille de créatures, jamais directement une forme évoluée. Cette règle reste valable lorsqu'une forme évoluée a déjà été rencontrée dans le monde.
 
-Certaines créatures peuvent être accordées directement par le gameplay lorsqu’elles constituent une exception explicitement documentée.
+Certaines créatures peuvent être accordées directement par le gameplay lorsqu'elles constituent une exception explicitement documentée à l'invocation comme voie principale. Une acquisition directe accorde elle aussi une nouvelle instance dans la forme de base de sa famille.
 
-Narrativement, une invocation établit ou révèle le lien entre le joueur et une manifestation vivante d’un écho, puis la stabilise. Elle ne crée pas artificiellement une nouvelle forme de vie. Une obtention directe établit également un lien sans devenir une invocation.
+Narrativement, un dispositif lié à la Matrice entre en résonance avec un écho existant. Une nouvelle manifestation individuelle émerge dans sa forme de base et son Ancrage initial avec le joueur est établi. Le processus ordinaire n'est pas totalement contrôlable, ce qui peut justifier son aléatoire sans en fixer les règles ; les acquisitions contrôlées ou garanties déjà prévues peuvent l'encadrer exceptionnellement. Une obtention directe établit également un lien sans devenir une invocation.
 
 Une nouvelle obtention d’une famille déjà possédée crée une nouvelle instance individuelle au stade 1, niveau 1, à 0 étoile et sans point attribué. Elle peut être développée séparément, suivre une autre branche ou servir ultérieurement de matériau d’étoiles pour une instance de la même famille.
 

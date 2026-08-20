@@ -12,6 +12,8 @@ Il approfondit le [référentiel Créatures](./03-CREATURES.md) sans le remplace
 
 Une famille peut contenir de nombreuses formes, branches et sous-branches.
 
+Chaque famille possède ses propres potentiels d'évolution. Sa structure fondamentale contient toutes les formes et branches qu'une instance de cette famille peut atteindre. Une instance ne peut jamais sortir de ces possibilités, et une condition remplie déclenche un potentiel existant au lieu de créer une nouvelle branche.
+
 Chaque instance parcourt cependant exactement trois stades :
 
 1. stade 1 — forme de base ;
@@ -21,6 +23,8 @@ Chaque instance parcourt cependant exactement trois stades :
 Une divergence peut commencer au stade 2 ou au stade 3. Une famille linéaire ne possède qu’un chemin ; une famille ramifiée en possède plusieurs.
 
 L’évolution transforme la même instance. Elle ne crée pas une nouvelle créature et ne remplace pas son identité individuelle.
+
+Des créatures déjà évoluées peuvent exister dans le monde indépendamment du joueur. Toute nouvelle instance acquise commence néanmoins dans la forme de base de sa famille et doit suivre son propre parcours d'évolution.
 
 ## 3. Effets d’une évolution
 
@@ -49,14 +53,21 @@ Chaque transition possède ses propres conditions. Elles peuvent notamment dépe
 
 * d’un niveau minimum ;
 * d’un niveau d’étoiles minimum ;
-* de la possession ou du port d’un objet ;
+* de la possession, de la tenue ou de l'équipement d'un objet ;
+* du moment, par exemple le jour ou la nuit ;
+* d'une saison ;
+* d'une région ou d'un environnement ;
 * d’une autre condition explicitement définie pour cette évolution.
+
+Ces exemples constituent des directions possibles, pas une liste définitive ni une obligation pour chaque famille.
 
 Une condition de niveau est toujours un minimum, jamais un niveau exact.
 
 Un objet simplement possédé, porté ou équipé pour satisfaire une condition n’est pas consommé. Une consommation doit être explicitement déclarée par l’évolution concernée.
 
 Le système ne doit pas imposer un modèle uniforme de conditions à toutes les familles.
+
+Dans le lore, ni le lien avec l'humain ni la personnalité du joueur ne déterminent directement la branche : l'humain n'est pas la source du potentiel d'évolution et ne remodèle pas volontairement la créature. Fonctionnellement, le joueur provoque les conditions requises par la branche recherchée grâce à ses choix de préparation, d'équipement ou d'activité.
 
 ## 5. Découverte et connaissance du compte
 
@@ -111,6 +122,7 @@ Une instance peut afficher une ancienne forme réellement parcourue sur son prop
 ## 10. Éléments à préciser ultérieurement
 
 * Les conditions propres à chaque évolution concrète.
+* La liste complète des types de conditions autorisés et leurs combinaisons.
 * Les conventions détaillées de conception des indices.
 * Les objets d’évolution éventuellement consommés.
 * La présentation et les confirmations des choix de branche.

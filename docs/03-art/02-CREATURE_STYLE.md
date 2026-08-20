@@ -22,6 +22,8 @@ L’illustration d’une forme peut rester statique. Le projet n’impose pas ac
 
 Une forme conserve une apparence de référence conformément aux règles fonctionnelles existantes. Cette apparence peut être principalement matérialisée par son illustration de carte.
 
+Les équipements attribués à une instance ne sont pas automatiquement visibles sur cette illustration. Une représentation exceptionnelle d'un équipement doit relever d'une décision artistique explicitement documentée et ne modifie pas l'objet fonctionnel équipé.
+
 ## 3. Variantes par les skins de carte
 
 Une même créature peut disposer de plusieurs illustrations grâce aux skins de carte.
@@ -46,4 +48,3 @@ Le personnage représenté dans l’illustration n’a pas besoin d’être anim
 ## 6. Question ouverte
 
 * La compatibilité d’un skin de carte avec une créature indépendamment de sa forme, avec une forme précise ou avec plusieurs formes compatibles.
-
