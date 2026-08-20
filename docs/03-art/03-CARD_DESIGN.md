@@ -45,7 +45,7 @@ Selon son contexte, une carte peut notamment présenter :
 * des caractéristiques utiles ;
 * ses PV ;
 * son énergie ;
-* ses effets de statut ;
+* ses Effets de combat ;
 * les informations contextuelles nécessaires à l’action du joueur.
 
 Cette liste décrit des possibilités. Elle ne valide pas la présence simultanée ou permanente de toutes ces informations dans chaque contexte.
@@ -75,4 +75,3 @@ Les éléments exacts de la carte affectés par un skin ne sont pas encore valid
 * Les informations obligatoirement visibles dans chaque contexte, notamment pendant un combat.
 * Les états, transitions et adaptations définitifs du composant.
 * Les éléments exacts modifiés par un skin, notamment le cadre, les VFX ou certains composants UI.
-

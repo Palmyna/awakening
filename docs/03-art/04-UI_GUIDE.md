@@ -28,7 +28,7 @@ L’interface doit notamment :
 
 * rendre lisibles les informations nécessaires à l’action en cours ;
 * distinguer clairement les différents espaces fonctionnels ;
-* signaler les états importants, les effets de statut et les actions irréversibles ;
+* signaler les états importants, les Effets de combat et les actions irréversibles ;
 * préserver une cohérence d’usage entre les variantes d’un même composant ;
 * éviter de surcharger chaque carte avec des informations sans utilité dans son contexte.
 
@@ -48,4 +48,3 @@ Ce principe vise l’autonomie et la reproductibilité. Il n’interdit pas une 
 * Les états et transitions détaillés des composants.
 * Les règles détaillées d’accessibilité.
 * Les informations affichées par chaque variante contextuelle de carte.
-

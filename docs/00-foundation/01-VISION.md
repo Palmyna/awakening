@@ -196,7 +196,7 @@ Le joueur peut ainsi intervenir de manière limitée ou laisser le combat se dé
 
 Les dégâts utilisent des composantes physiques ou spéciales. Une même attaque peut réunir plusieurs composantes dans un hit hybride, résolu avec un seul jet d’Esquive et un seul jet de Critique, tandis que chaque composante conserve son calcul offensif et défensif propre. Chaque compétence offensive doit déclarer ses composantes et les caractéristiques qu’elle utilise : Attaque, Attaque spéciale ou, exceptionnellement, aucune lorsqu’elle suit une formule particulière.
 
-Les dégâts physiques et spéciaux peuvent produire des coups critiques par défaut. Le Crit est une caractéristique secondaire indépendante. L’Agilité contrôle l’intervalle des Basic Attacks et n’augmente pas le Crit.
+Les dégâts physiques et spéciaux peuvent produire des coups critiques par défaut. Le Crit est une caractéristique secondaire indépendante. L’Agilité contrôle l’intervalle des Basic Attacks et accélère la cadence des Effets de combat périodiques selon des courbes propres ; elle n’augmente pas le Crit.
 
 Le jeu récompense avant tout la qualité de la préparation des équipes.
 
@@ -221,7 +221,7 @@ La liste officielle comprend neuf éléments :
 
 L’élément d’une créature représente principalement la nature de ses pouvoirs, de ses capacités, de ses résistances et de son style de combat. Il n’est pas déterminé uniquement par son apparence, son espèce, son habitat ou son histoire.
 
-Chaque Basic Attack et chacun des quatre Skills, y compris les Passive, possède exactement un des neuf éléments officiels. Il n’existe ni élément Neutre ni capacité sans élément. L’élément d’une capacité est indépendant de celui de sa créature, et tous les effets qu’elle produit directement en héritent. Une capacité conserve un seul élément à un instant donné, même lorsqu’elle est multi-hit, multi-cible ou hybride.
+Chaque Basic Attack et chacun des quatre Skills, y compris les Passive, possède exactement un des neuf éléments officiels. Il n’existe ni élément Neutre ni capacité sans élément. L’élément d’une capacité est indépendant de celui de sa créature, et les résultats directs ou Effets de combat qu’elle produit en héritent normalement. Une application de Bouclier possède cet élément, mais la réserve commune constituée n’en conserve ensuite aucun. Une capacité conserve un seul élément à un instant donné, même lorsqu’elle est multi-hit, multi-cible ou hybride.
 
 Le ou les éléments de la forme actuelle restent fixes pendant tout le combat. Une évolution peut les modifier entre deux formes, tandis que l’élément d’une capacité peut changer en combat uniquement lorsqu’un Skill le prévoit explicitement. Un effet déjà créé ou appliqué conserve l’élément qu’il possédait à cet instant.
 
@@ -235,19 +235,19 @@ Toutes les combinaisons de deux éléments sont autorisées par défaut. Chaque 
 
 Une créature bi-élément ne reçoit aucun avantage ou désavantage global automatique, et une créature mono-élément aucune compensation systématique. Leur équilibre doit être évalué à partir de leur profil complet.
 
-## 12. Effets de statut
+## 12. Effets de combat
 
-Les effets de statut constituent un système central du combat. Ils contribuent à la profondeur stratégique, à la personnalisation des créatures, à la diversité des builds et aux interactions entre créatures, compétences et éléments.
+Les Effets de combat constituent un système central du combat. Ils contribuent à la profondeur stratégique, à la personnalisation des créatures, à la diversité des builds et aux interactions entre créatures, compétences et éléments.
 
-Un effet de statut peut être positif, négatif ou, plus rarement, neutre. Ses fonctions sont cumulables : il peut notamment modifier des caractéristiques, limiter des actions, produire un effet continu, réagir à un événement ou modifier temporairement une règle du combat.
+Un résultat direct est entièrement résolu lorsqu’il se produit. Un Effet de combat continue au contraire d’exister avec son propre lifecycle : durée ou condition de fin, stacks, réapplication, ticks, déclenchement retardé, retrait, snapshot ou conséquences persistantes.
 
-Les compétences constituent une source principale d’effets de statut sans être nécessairement leur seule source. Un effet directement produit par une capacité hérite de l’élément de cette capacité au moment de sa création ou de son application.
+Les compétences constituent une source principale d’Effets de combat sans être nécessairement leur seule source. Un effet produit par une capacité hérite normalement de l’élément de cette capacité au moment de sa création ou de son application.
 
-Les applications répétées de CC totaux utilisent des diminishing returns centrés sur leur durée. Un Skill peut accorder explicitement une immunité à certains CC ou statuts. Ces mécanismes ne créent aucune caractéristique principale ou secondaire supplémentaire.
+Les contrôles répétés utilisent des diminishing returns centrés sur leur durée, avec des historiques distincts pour le CC total, Silence et Exclusion. Un Skill peut accorder explicitement une immunité à un principe, une famille ou un tag précis. Ces mécanismes ne créent aucune caractéristique principale ou secondaire supplémentaire.
 
-Des effets différents peuvent coexister sur une même créature. Le comportement de plusieurs applications d’un même effet doit être défini individuellement, sans imposer une règle universelle de cumul ou de renouvellement.
+Des effets différents peuvent coexister sur une même créature. Le comportement de plusieurs applications d’un même effet doit être défini individuellement, sans imposer une règle universelle de cumul ou de renouvellement. Leur éligibilité au Cleanse ou au Dispel repose sur des propriétés explicites et non sur leur seule polarité positive ou négative.
 
-La liste des effets, leurs valeurs, leurs conditions d’application, leurs durées et leurs interactions détaillées sont organisées dans le [draft consacré aux effets de statut](../01-game-design/06-STATUS_EFFECTS.md).
+Les règles de lifecycle, les valeurs, les conditions d’application, les durées et les interactions détaillées sont organisées dans la [référence consacrée aux Effets de combat](../01-game-design/06-COMBAT_EFFECTS.md).
 
 ## 13. Personnalisation
 

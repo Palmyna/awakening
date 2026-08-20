@@ -63,21 +63,21 @@ Deux joueurs possédant exactement les mêmes créatures doivent pouvoir créer 
 
 **Éléments à préciser ultérieurement :**
 
-* Les règles détaillées des caractéristiques, des compétences, des objets, des évolutions, des rôles, des effets de statut et de leur équilibrage.
+* Les règles détaillées des caractéristiques, des compétences, des objets, des évolutions, des rôles, des Effets de combat et de leur équilibrage.
 
 ## 4. La stratégie avant les réflexes
 
 ### Ce que ce pilier signifie
 
-La réussite doit récompenser en priorité la préparation de l’équipe, la compréhension des créatures, des éléments et des effets de statut, leurs synergies et les choix de composition.
+La réussite doit récompenser en priorité la préparation de l’équipe, la compréhension des créatures, des éléments et des Effets de combat, leurs synergies et les choix de composition.
 
 Les combats sont principalement automatisés afin que la profondeur du jeu repose davantage sur les décisions prises avant et autour du combat que sur l’exécution gestuelle.
 
 ### Conséquences sur la conception
 
 * Le joueur doit constituer et optimiser une équipe pouvant réunir jusqu’à six créatures.
-* Les rôles, compétences, éléments, effets de statut, objets et synergies doivent influencer la pertinence d’une composition.
-* Les effets de statut doivent soutenir des styles de jeu variés, renforcer certaines identités élémentaires et enrichir les interactions entre les créatures.
+* Les rôles, compétences, éléments, Effets de combat, objets et synergies doivent influencer la pertinence d’une composition.
+* Les Effets de combat doivent soutenir des styles de jeu variés, renforcer certaines identités élémentaires et enrichir les interactions entre les créatures.
 * Les combats doivent rester rapides et dynamiques, avec une durée moyenne visée de 30 à 60 secondes et un timeout standard de 120 secondes de simulation.
 * Les attaques et compétences ordinaires doivent être utilisées automatiquement.
 * Le joueur doit pouvoir déclencher manuellement les compétences ultimes ou activer leur déclenchement automatique.
@@ -90,12 +90,12 @@ Les combats sont principalement automatisés afin que la profondeur du jeu repos
 * Transformer les combats en séquences longues qui affaiblissent le rythme recherché.
 * Rendre la composition d’équipe secondaire face à la seule puissance brute.
 * Concevoir une automatisation qui efface l’impact des choix effectués par le joueur.
-* Réduire les effets de statut à des effets accessoires sans influence réelle sur la préparation ou le déroulement des combats.
+* Réduire les Effets de combat à des effets accessoires sans influence réelle sur la préparation ou le déroulement des combats.
 
 **Éléments à préciser ultérieurement :**
 
 * Les ajustements éventuels du taux actuel de résistance élémentaire pendant le balancing.
-* Les valeurs, durées et probabilités des effets de statut, leurs règles individuelles de cumul et de renouvellement, les paramètres des diminishing returns des CC et les immunités propres aux futurs Skills.
+* Les valeurs, durées et probabilités des Effets de combat, leurs règles individuelles de réapplication, les paramètres des diminishing returns des contrôles et les immunités propres aux futurs Skills.
 
 ## 5. Une expérience mobile accessible et profonde
 

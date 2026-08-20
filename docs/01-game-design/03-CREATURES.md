@@ -23,7 +23,7 @@ Il ne remplace pas les documents spécialisés consacrés :
 
 * aux [Skills](./04-SKILLS.md) ;
 * aux [éléments](./05-ELEMENTS.md) ;
-* aux [effets de statut](./06-STATUS_EFFECTS.md) ;
+* aux [Effets de combat](./06-COMBAT_EFFECTS.md) ;
 * aux [évolutions](./07-EVOLUTIONS.md) ;
 * aux [objets et équipements](./08-ITEMS.md) ;
 * à l’[invocation](./09-GACHA.md) ;
@@ -175,7 +175,7 @@ La Basic Attack et les quatre Skills conservent leur continuité conceptuelle à
 
 Chaque Basic Attack et chacun des quatre Skills possède exactement un élément. L’élément d’une capacité est indépendant du ou des éléments de la forme et peut évoluer séparément entre deux formes lorsque la continuité conceptuelle de la capacité est respectée.
 
-Les coefficients, valeurs, durées, probabilités, nombres de hits, ciblages, effets et statuts appartiennent aux [documents Skills](./04-SKILLS.md) et [Effets de statut](./06-STATUS_EFFECTS.md). Les règles élémentaires des formes et capacités appartiennent au [document Éléments](./05-ELEMENTS.md).
+Les coefficients, valeurs, durées, probabilités, nombres de hits, ciblages, résultats directs et Effets de combat appartiennent aux documents [Skills](./04-SKILLS.md) et [Effets de combat](./06-COMBAT_EFFECTS.md). Les règles élémentaires des formes et capacités appartiennent au [document Éléments](./05-ELEMENTS.md).
 
 ### 3.5. Rôles et profil offensif
 
@@ -231,9 +231,9 @@ Les trois caractéristiques secondaires système sont :
 2. Dégâts critiques ;
 3. Esquive.
 
-Elles ne reçoivent pas directement les points gagnés par niveau. Elles peuvent provenir des valeurs de base de la forme, de l’équipement, des Skills, des Passive, des effets de combat ou d’autres systèmes explicitement documentés.
+Elles ne reçoivent pas directement les points gagnés par niveau. Elles peuvent provenir des valeurs de base de la forme, de l’équipement, des Skills, des Passive, des Effets de combat ou d’autres systèmes explicitement documentés.
 
-L’Agilité contrôle l’intervalle des Basic Attacks et n’augmente pas le Crit.
+L’Agilité contrôle l’intervalle des Basic Attacks et accélère la cadence des Effets de combat périodiques selon une courbe propre. Elle n’augmente pas le Crit.
 
 Les formules, caps, conversions et modifications en combat appartiennent au [document Combat](./02-COMBAT.md).
 
@@ -455,7 +455,7 @@ Les deux termes ne sont pas interchangeables.
 | [`02-COMBAT.md`](./02-COMBAT.md) | Formules, caps, dégâts, timing, Esquive, Critique et résolution des hits |
 | [`04-SKILLS.md`](./04-SKILLS.md) | Basic Attack, Active, Passive, Ultimate et variations des capacités selon les formes |
 | [`05-ELEMENTS.md`](./05-ELEMENTS.md) | Éléments des formes et interactions élémentaires |
-| [`06-STATUS_EFFECTS.md`](./06-STATUS_EFFECTS.md) | Effets de statut et leurs règles communes |
+| [`06-COMBAT_EFFECTS.md`](./06-COMBAT_EFFECTS.md) | Effets de combat et leurs règles communes |
 | [`07-EVOLUTIONS.md`](./07-EVOLUTIONS.md) | Conditions, indices, découvertes, déclenchements et choix de branches |
 | [`08-ITEMS.md`](./08-ITEMS.md) | Objets, emplacements, équipement, iLvl et loot |
 | [`09-GACHA.md`](./09-GACHA.md) | Invocation, raretés d’acquisition, ensembles de familles disponibles et acquisitions directes |

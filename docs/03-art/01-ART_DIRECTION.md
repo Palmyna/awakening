@@ -34,7 +34,7 @@ Le projet n’impose pas actuellement un style artistique unique à l’ensemble
 
 La direction 2D n’impose pas un pipeline entièrement vectoriel.
 
-Le vectoriel peut être pertinent pour l’UI, les icônes, les symboles d’éléments et de statuts, certains cadres, composants graphiques et VFX. Les illustrations de créatures peuvent employer des images 2D classiques.
+Le vectoriel peut être pertinent pour l’UI, les icônes, les symboles d’éléments et d’Effets de combat, certains cadres, composants graphiques et VFX. Les illustrations de créatures peuvent employer des images 2D classiques.
 
 Chaque catégorie d’asset doit pouvoir utiliser le format le plus pertinent selon son besoin. Aucune règle générale n’impose que tous les graphismes soient produits en SVG ou sous une autre forme vectorielle.
 
@@ -59,4 +59,3 @@ Autant que raisonnablement possible, les composants artistiques intégrés au je
 * Les formats, résolutions et règles de compression des illustrations.
 * Le pipeline détaillé de création, de génération, de validation et d’intégration des assets.
 * Les règles de cohérence entre les différents styles de skins.
-

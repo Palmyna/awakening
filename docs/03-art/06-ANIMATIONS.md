@@ -19,7 +19,7 @@ Le dynamisme peut notamment utiliser :
 * de légères rotations ;
 * des impacts et secousses ;
 * des flashs et surbrillances ;
-* l’affichage de dégâts, de soins ou de statuts ;
+* l’affichage de dégâts, de soins ou d’Effets de combat ;
 * des transitions et animations d’interface ;
 * des VFX et projectiles associés.
 
@@ -33,7 +33,7 @@ Les Ultimates peuvent employer une mise en scène plus spectaculaire que les act
 
 ## 4. Indépendance de la simulation
 
-La restitution animée reste indépendante de la simulation de combat. Elle présente ses événements sans modifier la timeline, les positions logiques, les ciblages, les calculs, les dégâts, les Skills, les statuts, le RNG, les priorités ou les conditions de victoire.
+La restitution animée reste indépendante de la simulation de combat. Elle présente ses événements sans modifier la timeline, les positions logiques, les ciblages, les calculs, les dégâts, les Skills, les Effets de combat, le RNG, les priorités ou les conditions de victoire.
 
 Cette séparation doit rester compatible avec les replays et les différentes vitesses de visualisation.
 
@@ -50,4 +50,3 @@ Autant que raisonnablement possible, les animations de cartes, d’UI et de pré
 * Les animations d’invocation, d’évolution et de montée d’étoile.
 * Les règles d’adaptation aux vitesses de visualisation.
 * Les contraintes de performance mobile et le pipeline de production.
-

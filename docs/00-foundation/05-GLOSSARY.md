@@ -358,7 +358,7 @@ Le terme « spécial » ne désigne pas uniquement la magie. Il peut couvrir des
 
 **Domaine :** Combat, progression des créatures
 
-**Définition :** Caractéristique principale contrôlant l’intervalle des Basic Attacks selon une courbe de rendement décroissant.
+**Définition :** Caractéristique principale contrôlant l’intervalle des Basic Attacks et accélérant la cadence des effets périodiques selon des courbes de rendement décroissant propres à ces deux usages.
 
 L’Agilité n’augmente pas le Crit.
 
@@ -689,7 +689,7 @@ Il n’existe ni élément Neutre ni capacité sans élément.
 
 **Définition :** Élément unique possédé par une Basic Attack ou un Skill à un instant donné. Chaque Basic Attack, Active, Passive et Ultimate possède exactement un des neuf éléments officiels, indépendamment du ou des éléments de sa créature.
 
-Tous les effets directement produits par une capacité héritent de son élément au moment de leur création ou application. Un Skill peut modifier explicitement l’élément d’une capacité pendant le combat ; les effets déjà créés conservent l’élément enregistré lors de leur création.
+Tous les résultats directs et Effets de combat produits par une capacité héritent normalement de son élément au moment de leur création ou application. Un Skill peut modifier explicitement l’élément d’une capacité pendant le combat ; les effets déjà créés conservent l’élément enregistré lors de leur création. Une application de Bouclier possède cet élément, mais la réserve commune constituée n’en conserve ensuite aucun.
 
 ### Créature mono-élément
 
@@ -741,142 +741,170 @@ Cette notion décrit une relation entre deux éléments et non une catégorie de
 
 **Définition :** Propriété accordée explicitement par un Skill et bloquant tous les effets positifs et négatifs d’un élément sur la créature immunisée, quelle que soit leur source.
 
-Elle ne provient jamais automatiquement de la table élémentaire. Elle reste distincte d’une résistance, qui réduit uniquement les dégâts, et des immunités ciblées à certains CC, statuts ou DoT.
+Elle ne provient jamais automatiquement de la table élémentaire. Elle reste distincte d’une résistance, qui réduit uniquement les dégâts, et des immunités ciblées à certains principes, familles ou tags d’Effets de combat.
 
 **Éléments à préciser ultérieurement :**
 
 * Les ajustements éventuels du taux actuel de résistance pendant le balancing.
 * Les immunités concrètes propres aux futurs Skills.
 
-## 7. Effets de statut
+## 7. Effets de combat
+
+### Résultat direct
+
+**Domaine :** Combat, Skills
+
+**Définition :** Résultat entièrement résolu au moment où il se produit et ne laissant ensuite aucune entité possédant son propre lifecycle. Des dégâts ou soins immédiats, une modification immédiate d’énergie ou de compteur, la destruction du Bouclier, un Cleanse ou un Dispel sont des résultats directs.
+
+### Effet de combat
+
+**Terme anglais officiel :** Combat Effect
+
+**Domaine :** Combat, Skills, créatures
+
+**Définition :** Effet qui continue d’exister après sa création ou son application et possède son propre lifecycle, notamment une durée, une condition de fin, des stacks, une réapplication, des ticks, un déclenchement retardé, un retrait, un snapshot ou plusieurs conséquences persistantes.
+
+Un même Effet de combat réunit les conséquences qui commencent, expirent, se cumulent, se réappliquent et sont retirées ensemble. Des conséquences possédant des lifecycles différents appartiennent à des Effets de combat distincts.
+
+Un Effet de combat produit par une capacité hérite normalement de son élément au moment de l’application. Les règles détaillées sont définies dans le [document Effets de combat](../01-game-design/06-COMBAT_EFFECTS.md).
 
 ### Effet de statut
 
-**Domaine :** Combat, compétences, créatures
+**Domaine :** Combat, langage contextuel
 
-**Définition :** Modification temporaire appliquée dans le cadre du combat afin d’influencer une créature ou une règle de combat.
-
-Un effet de statut peut cumuler plusieurs fonctions : modifier des caractéristiques, limiter ou empêcher des actions, produire un effet continu, réagir à un événement ou modifier temporairement une règle. Les compétences en constituent une source principale, mais d’autres systèmes explicitement documentés peuvent en appliquer, modifier ou retirer.
-
-Un effet de statut directement produit par une capacité hérite de l’élément de cette capacité au moment de son application. Une autre source explicitement documentée doit définir l’élément qu’elle transmet. L’élément d’un effet ne se déduit pas uniquement de son nom ou de son apparence.
+**Définition :** Appellation contextuelle pouvant désigner un état ou un Effet de combat particulier lorsqu’elle reste naturelle, notamment un statut de contrôle ou un état nommé. Elle ne constitue plus la catégorie système supérieure, qui est **Effet de combat**.
 
 ### Effet positif
 
-**Domaine :** Effets de statut
+**Domaine :** Effets de combat
 
-**Définition :** Effet de statut constituant un avantage pour la créature concernée.
+**Définition :** Description d’un Effet de combat constituant un avantage pour la créature concernée. Cette polarité ne détermine pas son éligibilité au Cleanse ou au Dispel.
 
 ### Effet négatif
 
-**Domaine :** Effets de statut
+**Domaine :** Effets de combat
 
-**Définition :** Effet de statut constituant un désavantage pour la créature concernée.
+**Définition :** Description d’un Effet de combat constituant un désavantage pour la créature concernée. Cette polarité ne détermine pas son éligibilité au Cleanse ou au Dispel.
 
 ### Effet neutre
 
-**Domaine :** Effets de statut
+**Domaine :** Effets de combat
 
-**Définition :** Effet de statut ne constituant objectivement ni un avantage ni un désavantage. Cette polarité doit rester rare.
+**Définition :** Description d’un Effet de combat ne constituant objectivement ni un avantage ni un désavantage. Cette polarité ne détermine pas son éligibilité au Cleanse ou au Dispel.
 
-### Résistance à un effet de statut
+### Immunité ciblée
 
-**Domaine :** Effets de statut, combat
+**Domaine :** Effets de combat, combat
 
-**Définition :** Propriété explicitement définie pouvant limiter l’application, la durée ou l’intensité d’un effet de statut. Elle ne constitue ni une caractéristique principale ni une caractéristique secondaire système.
+**Définition :** Propriété explicitement accordée empêchant de nouvelles applications dans un périmètre défini, par exemple un principe, une famille, un contrôle ou un tag contextuel. Une immunité acquise après l’application ne retire pas rétroactivement l’effet existant.
 
-### Immunité à un effet de statut
+Elle ne constitue ni une caractéristique principale ni une caractéristique secondaire universelle.
 
-**Domaine :** Effets de statut, combat
+### Retirer un Effet de combat
 
-**Définition :** Propriété empêchant totalement l’application d’un effet de statut dans le périmètre explicitement déclaré.
+**Domaine :** Effets de combat, Skills
 
-### Retirer un effet de statut
-
-**Domaine :** Effets de statut, compétences
-
-**Définition :** Action générique mettant fin à un effet avant son expiration normale. Chaque effet doit préciser s’il peut être retiré et, le cas échéant, selon quelles conditions générales.
+**Définition :** Action mettant fin à un Effet de combat avant son expiration normale. Le retrait supprime l’intégralité de l’effet, dont ses conséquences internes, ses stacks, son timer et son état.
 
 Les actions spécialisées Cleanse et Dispel sont définies ci-dessous.
 
 ### Cleanse
 
-**Domaine :** Effets de statut, Skills
+**Domaine :** Effets de combat, Skills
 
-**Définition :** Action retirant par défaut un effet négatif aléatoire d’un allié. Selon la convention générale, « allié » inclut le lanceur ; « autre allié » l’exclut. Un Skill peut définir une sélection ou une quantité différente.
+**Définition :** Résultat direct retirant un Effet de combat explicitement éligible à Cleanse. Un Skill peut définir une quantité, une catégorie ou une sélection particulière ; sans sélection précisée parmi plusieurs effets éligibles, le choix est aléatoire.
 
 ### Dispel
 
-**Domaine :** Effets de statut, Skills
+**Domaine :** Effets de combat, Skills
 
-**Définition :** Action retirant par défaut un effet positif aléatoire d’un ennemi. Un Skill peut définir une sélection ou une quantité différente.
+**Définition :** Résultat direct retirant un Effet de combat explicitement éligible à Dispel. Un Skill peut définir une quantité, une catégorie ou une sélection particulière ; sans sélection précisée parmi plusieurs effets éligibles, le choix est aléatoire.
 
-### Coexistence et cumul des effets de statut
+Un effet peut être éligible à Cleanse, à Dispel, aux deux ou à aucun, indépendamment de sa polarité et de sa durée.
 
-**Domaine :** Effets de statut, combat
+### Réapplication et coexistence
 
-**Définition :** Des effets différents peuvent coexister sur une même créature. Chaque effet définit individuellement le comportement de plusieurs applications identiques, notamment leur absence d’accumulation, leur renouvellement, leur durée, leur intensité, leurs instances ou leur remplacement.
+**Domaine :** Effets de combat, combat
 
-Des incompatibilités entre certains effets peuvent être déclarées lorsqu’elles sont explicitement documentées.
-
-**Éléments à préciser ultérieurement :**
-
-* La liste des effets de statut, leurs conditions et chances d’application, leurs durées, leurs valeurs, leurs règles individuelles de cumul et de renouvellement, leurs interactions, leur retrait ainsi que les mécanismes détaillés de résistance et d’immunité.
+**Définition :** Chaque Effet de combat définit individuellement le comportement de ses applications répétées : refresh, ajout de durée, remplacement, stack, nouvelle instance, recalcul ou autre règle explicite. Le même applicateur ne crée pas par défaut une seconde instance indépendante ; des applicateurs différents peuvent conserver des instances indépendantes.
 
 ### DoT
 
-**Domaine :** Effets de statut, combat
+**Domaine :** Effets de combat, combat
 
-**Définition :** Effet infligeant des dégâts périodiques selon une fréquence de tick globale.
+**Définition :** Effet infligeant des dégâts périodiques selon un nombre fixe de ticks et une cadence accélérée par l’Agilité snapshotée de l’applicateur. L’Agilité ne modifie ni le nombre de ticks ni la valeur totale non critique de l’application.
 
 ### HoT
 
-**Domaine :** Effets de statut, combat
+**Domaine :** Effets de combat, combat
 
-**Définition :** Effet appliquant des soins périodiques selon une fréquence de tick globale.
+**Définition :** Effet appliquant des soins périodiques selon le même moteur général que les DoT : nombre fixe de ticks, valeur totale non critique fixe et cadence accélérée par l’Agilité snapshotée de l’applicateur.
 
 ### Snapshot
 
-**Domaine :** Effets périodiques, combat
+**Domaine :** Effets de combat, combat
 
-**Définition :** Conservation de l’état de la source au moment de l’application d’un effet périodique. L’état de la cible reste dynamique et est recalculé à chaque tick.
+**Définition :** Conservation, à l’application d’un Effet de combat, de toutes les informations nécessaires dépendant de l’applicateur. L’état défensif pertinent de la cible reste dynamique et est évalué lorsque chaque résultat ultérieur est résolu.
 
 ### Buff
 
-**Domaine :** Effets de statut, combat
+**Domaine :** Effets de combat, combat
 
-**Définition :** Effet positif temporaire. Un buff reste distinct d’une modification de caractéristique explicitement appliquée jusqu’à la fin du combat.
+**Définition :** Effet de combat persistant constituant généralement un avantage. Un Buff peut utiliser toute durée prévue par le système, y compris jusqu’à la fin du combat.
 
 ### Debuff
 
-**Domaine :** Effets de statut, combat
+**Domaine :** Effets de combat, combat
 
-**Définition :** Effet négatif temporaire. Un debuff reste distinct d’une modification de caractéristique explicitement appliquée jusqu’à la fin du combat.
+**Définition :** Effet de combat persistant constituant généralement un désavantage. Un Debuff peut utiliser toute durée prévue par le système, y compris jusqu’à la fin du combat.
 
 ### Crowd Control
 
-**Domaine :** Effets de statut, combat
+**Domaine :** Effets de combat, combat
 
-**Définition :** Effet limitant ou empêchant les actions d’une créature. Les tags de CC total standards sont Stun, Glacé et Peur ; ils partagent les mêmes règles générales de diminishing returns.
+**Définition :** Principe limitant ou empêchant les actions d’une créature. Plusieurs tags contextuels peuvent partager le principe de CC total tout en restant distincts pour les interactions de Skills.
 
 **Abréviation autorisée :** CC
 
+### Diminishing returns
+
+**Domaine :** Contrôles, combat
+
+**Définition :** Mécanisme réduisant la durée des contrôles répétés sans réduire leur probabilité d’application. CC total, Silence et Exclusion utilisent trois historiques distincts.
+
+**Abréviation autorisée :** DR
+
+### Silence
+
+**Domaine :** Effets de combat, contrôles
+
+**Définition :** Contrôle empêchant les Active et l’Ultimate sans bloquer la Basic Attack, son gain d’énergie ou la progression des compteurs d’Active. Les capacités prêtes le restent. Silence utilise son propre historique de diminishing returns.
+
 ### Exclusion
 
-**Domaine :** Effets de statut, combat
+**Domaine :** Effets de combat, contrôles
 
-**Définition :** Effet retirant temporairement une créature du combat sans la tuer. La créature ne peut ni agir ni être ciblée, et ses timers personnels ainsi que ses effets temporaires sont gelés jusqu’à son retour.
+**Définition :** Contrôle retirant temporairement une créature du combat sans la tuer. Elle ne peut ni agir, ni être ciblée, ni être incluse dans une AoE ; ses timers et Effets de combat sont gelés jusqu’à son retour. Exclusion utilise son propre historique de diminishing returns.
 
 ### Bouclier
 
-**Domaine :** Combat, protections
+**Domaine :** Effets de combat, protections
 
-**Définition :** Réserve universelle de dégâts flat consommée avant les PV. Les Boucliers peuvent coexister comme réserves séparées.
+**Définition :** Réserve commune unique de dégâts flat propre à chaque créature et consommée avant les PV. Chaque application ajoute sa valeur à la réserve et refresh sa durée. L’application possède l’élément de son Skill, mais la réserve constituée n’a ensuite plus d’élément propre.
+
+Le Bouclier n’est pas retiré par Cleanse ou Dispel ; un résultat direct spécifique peut détruire toute la réserve.
 
 ### Absorption
 
-**Domaine :** Combat, protections
+**Domaine :** Effets de combat, protections
 
-**Définition :** Réduction en pourcentage appliquée aux dégâts avant les Boucliers. Le même effet d’Absorption renouvelle sa durée sans se cumuler ; des effets différents peuvent coexister.
+**Définition :** Réduction en pourcentage appliquée aux dégâts avant le Bouclier. Elle possède son propre lifecycle et ses propres règles de réapplication ou de coexistence.
+
+### Effet retardé
+
+**Domaine :** Effets de combat, combat
+
+**Définition :** Effet qui continue d’exister pendant un délai avant de produire son résultat. Son applicateur est snapshoté à l’application et l’état pertinent de la cible est évalué lors du déclenchement.
 
 ### True Damage
 

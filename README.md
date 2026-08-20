@@ -42,7 +42,7 @@ Ces documents constituent les fondations de référence actuelles du projet. Ils
 * ✅ [`03-CREATURES.md`](./docs/01-game-design/03-CREATURES.md) — Rédigé — référence actuelle, à maintenir à jour
 * ✅ [`04-SKILLS.md`](./docs/01-game-design/04-SKILLS.md) — Rédigé — référence actuelle, à maintenir à jour
 * ✅ [`05-ELEMENTS.md`](./docs/01-game-design/05-ELEMENTS.md) — Rédigé — référence actuelle, à maintenir à jour
-* 🚧 [`06-STATUS_EFFECTS.md`](./docs/01-game-design/06-STATUS_EFFECTS.md) — Draft de conception — base initiale à compléter
+* ✅ [`06-COMBAT_EFFECTS.md`](./docs/01-game-design/06-COMBAT_EFFECTS.md) — Rédigé — référence actuelle, à maintenir à jour
 * 🚧 [`07-EVOLUTIONS.md`](./docs/01-game-design/07-EVOLUTIONS.md) — Draft de conception — base initiale à compléter
 * 🚧 [`08-ITEMS.md`](./docs/01-game-design/08-ITEMS.md) — Draft de conception — base initiale à compléter
 * 🚧 [`09-GACHA.md`](./docs/01-game-design/09-GACHA.md) — Draft de conception — base initiale à compléter

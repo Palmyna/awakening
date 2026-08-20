@@ -22,7 +22,7 @@ Elle doit :
 * privilégier des tooltips contextuels accessibles directement depuis les termes de gameplay affichés ;
 * accompagner chaque fonctionnalité par un tutoriel court lors de son déblocage.
 
-Lorsqu’un élément, une caractéristique, un statut ou un autre mot-clé nécessite une explication, le joueur doit pouvoir appuyer directement sur le terme concerné afin d’obtenir une définition concise. La présentation graphique et le contenu rédactionnel exact de ces tooltips restent à définir.
+Lorsqu’un élément, une caractéristique, un Effet de combat, un statut contextuel ou un autre mot-clé nécessite une explication, le joueur doit pouvoir appuyer directement sur le terme concerné afin d’obtenir une définition concise. La présentation graphique et le contenu rédactionnel exact de ces tooltips restent à définir.
 
 Les principes visuels et de production de l’interface sont précisés dans les drafts [Card Design](../03-art/03-CARD_DESIGN.md) et [UI Guide](../03-art/04-UI_GUIDE.md).
 
@@ -50,9 +50,21 @@ La disposition et les regroupements restent à définir.
 
 Une fiche de Skill indépendante de la fiche de la créature n’est pas obligatoire. La consultation principale des capacités s’effectue depuis la fiche de l’instance.
 
+Les descriptions de la Basic Attack, des Skills et des Effets de combat affichent autant que possible les valeurs concrètes déjà calculées pour l’instance possédée : dégâts, soins, durée effective d’un DoT ou HoT, Bouclier accordé et autres valeurs calculables.
+
+Ces valeurs suivent automatiquement le niveau, les caractéristiques, le build, l’équipement, la forme et les autres données permanentes de l’instance. Lorsqu’une valeur dépend d’une cible future et ne peut pas être calculée honnêtement, la formule relative reste visible. L’interface ne présente jamais un faux montant final obtenu sans les informations nécessaires.
+
 ## 4. Lisibilité pendant le combat
 
 Le combat affiche principalement les résultats utiles de la simulation, sans exposer constamment les calculs, compteurs internes ou modificateurs intermédiaires.
+
+Les Effets de combat importants actifs sur une cible sont représentés par des icônes :
+
+* un effet à stacks utilise une seule icône accompagnée de son compteur ;
+* deux instances indépendantes du même effet utilisent deux icônes distinctes afin de préserver leurs durées propres ;
+* la durée peut être représentée par un remplissage radial de l’icône, sans afficher constamment une valeur textuelle.
+
+Une application réussie normale ou l’ajout d’une stack n’affiche aucun texte supplémentaire : l’apparition ou la mise à jour de l’icône suffit. Le combat ne doit pas devenir un combat log visuel.
 
 Le joueur doit pouvoir distinguer, au moyen d’un feedback court :
 
@@ -60,7 +72,22 @@ Le joueur doit pouvoir distinguer, au moyen d’un feedback court :
 * une Immunité ;
 * l’échec probabiliste d’un effet explicitement tenté.
 
-Une résistance élémentaire ne produit pas de feedback spécifique : seule la valeur finale est affichée. Le wording exact, le rendu graphique de ces feedbacks et le traitement visuel des Critiques restent à définir.
+Une résistance élémentaire ne produit pas de feedback spécifique : seule la valeur finale est affichée. Ces feedbacks peuvent notamment communiquer `Esquivé`, `Immunisé` ou l’échec du contrôle contextuel concerné. Le wording exact, le rendu graphique de ces feedbacks, le timer radial et le traitement visuel des Critiques restent à définir.
+
+### 4.1. Résumé de fin de combat
+
+Un résumé statistique simple doit être accessible après le combat pour l’équipe du joueur comme pour l’équipe adverse.
+
+Les statistiques sont agrégées par créature, pas par Skill. Elles peuvent notamment couvrir :
+
+* les dégâts infligés et reçus ;
+* les soins effectués ;
+* le Bouclier accordé ;
+* les Cleanse et Dispel effectués ;
+* le nombre de contrôles appliqués ;
+* d’autres statistiques globales pertinentes à définir ultérieurement.
+
+Ce résumé doit notamment aider le joueur à analyser une défaite et à adapter son équipe. Il ne nécessite pas un rapport technique détaillé ni un combat log destiné au joueur.
 
 ## 5. Parcours de gestion d’une instance
 
@@ -138,7 +165,8 @@ L’obtention d’une instance doit permettre d’identifier sa famille, sa rare
 * Les règles détaillées d’accessibilité.
 * Les informations visibles dans chaque variante contextuelle de carte.
 * La présentation graphique et le contenu rédactionnel final des tooltips contextuels.
-* Le wording et le rendu graphique exacts des feedbacks de combat et des Critiques.
+* Le wording et le rendu graphique exacts des icônes, compteurs, timers, feedbacks de combat et Critiques.
+* La liste définitive des statistiques du résumé post-combat.
 * Les tutoriels et leur ordre exact.
 * Les animations d’invocation, d’évolution et de montée d’étoile.
 * La présentation commerciale des extensions de capacité.

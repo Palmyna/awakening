@@ -6,7 +6,7 @@
 
 Ce document rassemble les principes validés concernant les effets visuels de **Project Awakening**.
 
-Il ne définit pas encore les VFX précis de chaque élément, Skill, statut ou créature.
+Il ne définit pas encore les VFX précis de chaque élément, Skill, Effet de combat ou créature.
 
 ## 2. Fonction des VFX
 
@@ -17,7 +17,7 @@ Ils peuvent notamment matérialiser :
 * les impacts ;
 * les Skills ;
 * les éléments ;
-* les effets de statut ;
+* les Effets de combat ;
 * les projectiles ;
 * les dégâts et les soins ;
 * les surbrillances et flashs ;
@@ -28,7 +28,7 @@ Ces éléments constituent des possibilités de production et non une liste obli
 
 ## 3. Indépendance de la simulation
 
-Les VFX restituent les événements produits par la simulation. Ils ne doivent modifier ni le timing logique, ni le ciblage, ni les calculs, ni le RNG, ni les dégâts, ni les statuts, ni les conditions de victoire.
+Les VFX restituent les événements produits par la simulation. Ils ne doivent modifier ni le timing logique, ni le ciblage, ni les calculs, ni le RNG, ni les dégâts, ni les Effets de combat, ni les conditions de victoire.
 
 Une vitesse de visualisation différente peut accélérer leur restitution sans modifier la simulation ou son résultat.
 
@@ -40,10 +40,9 @@ Le vectoriel peut être pertinent pour certains VFX, mais n’est pas imposé co
 
 ## 5. Éléments à préciser ultérieurement
 
-* Le langage visuel exact de chaque élément et effet de statut.
+* Le langage visuel exact de chaque élément et Effet de combat.
 * Les VFX propres aux Basic Attacks, Skills et Ultimates.
 * Les niveaux d’intensité et priorités de lisibilité.
 * Les règles de performance sur les appareils mobiles ciblés.
 * Les formats, outils et pipelines de production.
 * Les éventuelles variations de VFX liées aux skins de carte.
-

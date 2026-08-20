@@ -38,7 +38,7 @@ Les cartes, animations, VFX et composants UI restituent les événements de la s
 * les positions logiques et la formation ;
 * les ciblages ;
 * les calculs et dégâts ;
-* les Skills et statuts ;
+* les Skills et Effets de combat ;
 * le RNG et ses priorités ;
 * les conditions de victoire ;
 * les autres règles définies dans le [document Combat](../01-game-design/02-COMBAT.md).

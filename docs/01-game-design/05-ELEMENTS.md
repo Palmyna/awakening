@@ -15,7 +15,7 @@ Il constitue la référence actuelle pour :
 * les résistances et immunités élémentaires ;
 * les conséquences élémentaires sur la résolution et la lisibilité du combat.
 
-Il complète les [règles de combat](./02-COMBAT.md), les [règles des créatures](./03-CREATURES.md), les [Skills](./04-SKILLS.md), les [effets de statut](./06-STATUS_EFFECTS.md) et les [évolutions](./07-EVOLUTIONS.md) sans les remplacer.
+Il complète les [règles de combat](./02-COMBAT.md), les [règles des créatures](./03-CREATURES.md), les [Skills](./04-SKILLS.md), les [Effets de combat](./06-COMBAT_EFFECTS.md) et les [évolutions](./07-EVOLUTIONS.md) sans les remplacer.
 
 Les valeurs et formules générales de dégâts appartiennent au document Combat. Les éléments concrets des futures créatures et capacités appartiendront à leurs données de production.
 
@@ -108,8 +108,8 @@ Cela comprend notamment :
 * les dégâts directs, périodiques et retardés ;
 * les soins et HoT ;
 * les buffs et debuffs ;
-* les CC et autres statuts ;
-* les Boucliers ;
+* les CC et autres Effets de combat ;
+* les applications de Bouclier ;
 * les autres effets appliqués à une cible.
 
 Il n’est donc pas nécessaire d’attribuer manuellement un autre élément à chaque effet interne d’une même capacité.
@@ -133,10 +133,12 @@ Un effet déjà créé ou appliqué conserve l’élément qu’il possédait à
 Cette règle s’applique notamment :
 
 * aux DoT et HoT déjà appliqués ;
-* aux buffs, debuffs, CC et Boucliers déjà appliqués ;
+* aux buffs, debuffs et CC déjà appliqués ;
 * aux effets retardés déjà créés.
 
 Chaque nouvelle création ou application utilise l’élément actuel de la capacité à ce nouveau moment.
+
+Le Bouclier constitue une exception après son application : la tentative d’ajout possède bien l’élément actuel du Skill et peut être bloquée par une immunité élémentaire, mais la valeur ajoutée rejoint ensuite une réserve commune qui ne possède plus d’élément propre.
 
 ### 5.3. Capacité déclenchée par une autre
 
@@ -212,7 +214,7 @@ Une résistance élémentaire réduit uniquement les dégâts de l’élément c
 * dégâts périodiques, dont les ticks de DoT ;
 * dégâts retardés.
 
-Elle ne réduit ni les soins, ni les HoT, buffs, debuffs, CC, Boucliers, probabilités d’application, durées de statut ou autres effets non dommageables.
+Elle ne réduit ni les soins, ni les HoT, buffs, debuffs, CC, Boucliers, probabilités d’application, durées d’Effets de combat ou autres résultats non dommageables.
 
 Un DoT conserve l’élément enregistré lors de son application. Chacun de ses ticks utilise cet élément et les résistances de la cible au moment du tick.
 
@@ -240,8 +242,8 @@ Elle peut donc bloquer notamment :
 
 * les dégâts directs, périodiques et retardés ;
 * les soins et HoT ;
-* les buffs, debuffs, CC et autres statuts ;
-* les Boucliers ;
+* les buffs, debuffs, CC et autres Effets de combat ;
+* les applications de Bouclier ;
 * tout autre effet correspondant à cet élément.
 
 Cette règle s’applique quelle que soit la source : ennemi, allié ou créature immunisée elle-même. Une immunité peut donc empêcher la créature de profiter d’un effet positif du même élément.
@@ -254,7 +256,7 @@ Une immunité peut être temporaire, conditionnelle ou active jusqu’à la fin 
 
 ### 7.4. Immunités ciblées
 
-Une immunité à un CC, à un statut ou à un DoT reste distincte d’une immunité élémentaire. Elle bloque uniquement le périmètre explicitement déclaré et ne modifie ni la table ni les résistances élémentaires.
+Une immunité ciblée à un principe, une famille ou un tag d’Effet de combat reste distincte d’une immunité élémentaire. Elle bloque uniquement le périmètre explicitement déclaré et ne modifie ni la table ni les résistances élémentaires.
 
 ## 8. Esquive, hit réussi et immunité
 
@@ -290,7 +292,7 @@ En revanche, un événement exigeant un résultat réellement produit ne se déc
 
 * « lorsqu’elle subit des dégâts » si aucun dégât n’est appliqué ;
 * « lorsqu’elle reçoit un soin » si aucun soin n’est appliqué ;
-* « lorsqu’un statut lui est appliqué » si le statut est bloqué.
+* « lorsqu’un Effet de combat lui est appliqué » si l’effet est bloqué.
 
 ## 9. Présentation et lisibilité
 
@@ -308,7 +310,7 @@ Les termes de gameplay affichés doivent pouvoir donner accès directement à un
 
 Le tooltip d’un élément peut notamment présenter son rôle et les éléments de capacité auxquels il résiste. Une matrice globale des résistances n’est pas obligatoire dans l’interface actuelle.
 
-Ce principe est transversal et s’applique également aux caractéristiques, statuts et autres mots-clés selon les règles du [document UI Flow](./18-UI_FLOW.md).
+Ce principe est transversal et s’applique également aux caractéristiques, Effets de combat, statuts contextuels et autres mots-clés selon les règles du [document UI Flow](./18-UI_FLOW.md).
 
 ### 9.3. Feedbacks de combat
 
@@ -327,7 +329,7 @@ Un changement temporaire d’élément d’une capacité n’a pas besoin d’ê
 | [`02-COMBAT.md`](./02-COMBAT.md) | Ordre de résolution, formules de dégâts et événements produits par la simulation |
 | [`03-CREATURES.md`](./03-CREATURES.md) | Propriétés des formes et identité familiale des capacités |
 | [`04-SKILLS.md`](./04-SKILLS.md) | Structure des capacités, effets produits et exceptions portées par les Skills |
-| [`06-STATUS_EFFECTS.md`](./06-STATUS_EFFECTS.md) | Application, durée, snapshot et immunités propres aux statuts |
+| [`06-COMBAT_EFFECTS.md`](./06-COMBAT_EFFECTS.md) | Application, durée, snapshot, retrait et immunités propres aux Effets de combat |
 | [`07-EVOLUTIONS.md`](./07-EVOLUTIONS.md) | Changements entre les formes et versions de capacités |
 | [`18-UI_FLOW.md`](./18-UI_FLOW.md) | Consultation, tooltips et feedbacks fonctionnels |
 

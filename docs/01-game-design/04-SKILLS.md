@@ -15,7 +15,7 @@ Il constitue la référence actuelle pour :
 * les conventions de rédaction et de données des fiches de capacités ;
 * la continuité des capacités entre les formes et les branches d’une famille.
 
-Il complète les [règles de combat](./02-COMBAT.md), les [règles des créatures](./03-CREATURES.md), les [éléments](./05-ELEMENTS.md) et les [effets de statut](./06-STATUS_EFFECTS.md) sans les remplacer.
+Il complète les [règles de combat](./02-COMBAT.md), les [règles des créatures](./03-CREATURES.md), les [éléments](./05-ELEMENTS.md) et les [Effets de combat](./06-COMBAT_EFFECTS.md) sans les remplacer.
 
 Il ne constitue :
 
@@ -64,8 +64,7 @@ La Basic Attack et les quatre Skills conservent une continuité conceptuelle à 
 Une nouvelle forme peut simplement enrichir une capacité existante, notamment par :
 
 * ses coefficients ;
-* ses effets ;
-* ses statuts ;
+* ses résultats directs et Effets de combat ;
 * ses cibles ;
 * son nombre de hits ;
 * sa durée ;
@@ -95,7 +94,7 @@ La Basic Attack est une action offensive automatique. Elle inflige toujours des 
 
 Elle peut néanmoins produire des effets supplémentaires, par exemple :
 
-* appliquer ou retirer un effet de statut ;
+* appliquer ou retirer un Effet de combat ;
 * soigner ;
 * accorder un buff ou un Bouclier ;
 * déclencher un effet intégré ;
@@ -211,9 +210,11 @@ L’élément d’une capacité est indépendant du ou des éléments de sa cré
 
 ### 6.2. Héritage et snapshot
 
-Tous les effets directement produits par une capacité héritent de son élément actuel au moment où ils sont créés ou appliqués. Cela comprend les dégâts, soins, statuts, buffs, debuffs, CC, DoT, HoT, Boucliers et effets retardés.
+Tous les résultats directs et Effets de combat produits par une capacité héritent de son élément actuel au moment où ils sont créés ou appliqués. Cela comprend les dégâts, soins, buffs, debuffs, CC, DoT, HoT, applications de Bouclier et effets retardés.
 
 Un effet déjà créé conserve cet élément pendant toute son existence. Un changement ultérieur de l’élément de la capacité source ne le modifie pas rétroactivement.
+
+Une application de Bouclier utilise cet élément pour sa résolution, notamment face à une immunité élémentaire. Une fois sa valeur ajoutée, la réserve commune de Bouclier de la cible ne possède plus d’élément propre.
 
 ### 6.3. Modification et déclenchement
 
@@ -342,7 +343,7 @@ Une action est entièrement résolue avant le passage à l’action normale suiv
 Cette résolution comprend notamment :
 
 * ses hits, dégâts et soins ;
-* ses effets et statuts ;
+* ses résultats directs et Effets de combat ;
 * les réactions déclenchées ;
 * les Passive ;
 * les morts et effets à la mort ;
@@ -398,11 +399,15 @@ Une zone couvrant une ligne, une colonne ou une équipe n’est pas interrompue 
 
 Le ciblage aléatoire reste déterministe à partir de la seed RNG du combat et doit pouvoir être reproduit.
 
-## 11. Dégâts, soins et composition des effets
+## 11. Résultats directs, Effets de combat et composition
 
 Une Active ou une Ultimate peut être entièrement consacrée au soin, à la protection, au contrôle, à une transformation, à la manipulation d’énergie ou à une autre fonction. Contrairement à la Basic Attack, elle n’est pas obligée d’infliger des dégâts.
 
-Une même capacité peut combiner dégâts, soins, buffs, debuffs, statuts et autres effets. Elle peut également utiliser plusieurs hits ou composantes de dégâts, dont des dégâts Physiques, Spéciaux, hybrides ou True Damage, à condition de les définir sans ambiguïté.
+Une même capacité peut combiner des **résultats directs** et des **Effets de combat** dans un ordre explicitement défini.
+
+Un résultat direct est entièrement résolu au moment où il se produit : dégâts ou soin immédiat, modification immédiate d’énergie ou de compteur, destruction du Bouclier, Cleanse ou Dispel. Un Effet de combat continue d’exister avec son propre lifecycle, par exemple un DoT, HoT, Buff, Debuff, CC, Silence, Exclusion, Bouclier, Absorption ou effet retardé.
+
+Une capacité peut ainsi enchaîner dégâts, soins, modifications immédiates, applications ou retraits d’Effets de combat. Elle peut également utiliser plusieurs hits ou composantes de dégâts, dont des dégâts Physiques, Spéciaux, hybrides ou True Damage, à condition de les définir sans ambiguïté.
 
 Le Crit est une mécanique générale pour les effets produisant une valeur critique compatible. Les dégâts directs, les soins directs, les DoT et les HoT peuvent Critiquer selon les règles communes. Les Boucliers, l’Absorption et les autres mécanismes particuliers conservent leurs règles propres.
 
@@ -434,31 +439,31 @@ Une probabilité globale peut être testée avant les résolutions individuelles
 
 ### 12.3. Effets multiples et ordre réel
 
-Chaque effet d’une capacité peut posséder ses propres cibles, durée, probabilité, règles de cumul et conditions.
+Chaque résultat ou Effet de combat d’une capacité peut posséder ses propres cibles, durée, probabilité, règles de réapplication et conditions.
 
 La description mécanique doit présenter les événements dans leur véritable ordre lorsque celui-ci influence le résultat. « Réduit la Défense, puis inflige des dégâts » ne produit pas le même résultat que l’ordre inverse.
 
 Par défaut, les dégâts d’un hit utilisent l’état de la cible au moment de leur calcul. Un debuff appliqué par ce même hit ne modifie pas rétroactivement des dégâts déjà calculés. Une capacité peut explicitement appliquer d’abord un effet, puis calculer les dégâts avec le nouvel état.
 
-Les règles spécialisées de statut appartiennent au [document Effets de statut](./06-STATUS_EFFECTS.md).
+Les règles de lifecycle spécialisées appartiennent au [document Effets de combat](./06-COMBAT_EFFECTS.md).
 
-## 13. Mort, statuts et limite temporelle
+## 13. Mort, Effets de combat et limite temporelle
 
 ### 13.1. Mort et auto-résurrection
 
-La mort n’agit pas comme un Cleanse. Les statuts présents ne sont pas automatiquement retirés lorsqu’une créature meurt ou passe dans un état non vivant lié à une auto-résurrection.
+La mort n’agit pas comme un Cleanse. Les Effets de combat présents ne sont pas automatiquement retirés lorsqu’une créature meurt ou passe dans un état non vivant lié à une auto-résurrection.
 
-Leurs timers continuent normalement à s’écouler pendant cet état. Un statut peut donc expirer avant le retour de la créature ou rester présent avec sa durée restante.
+Leurs timers continuent normalement à s’écouler pendant cet état. Un Effet de combat peut donc expirer avant le retour de la créature ou rester présent avec sa durée restante.
 
-Un effet nécessitant une cible vivante ne produit pas son effet normal tant que la créature est non vivante. Cette règle est distincte de l’Exclusion, qui gèle les timers selon ses propres règles.
+Un effet nécessitant une cible vivante ne produit pas son résultat normal tant que la créature est non vivante. Une opportunité de tick correspondante est consommée. Cette règle est distincte de l’Exclusion, qui gèle les timers et Effets de combat selon ses propres règles.
 
 ### 13.2. Limite au combat en cours
 
-Tous les effets produits par les capacités sont limités au combat en cours. Aucun effet de combat ne modifie définitivement l’instance et aucun ne persiste d’un combat à l’autre.
+Tous les résultats et Effets de combat produits par les capacités sont limités au combat en cours. Aucun ne modifie définitivement l’instance et aucun ne persiste d’un combat à l’autre.
 
-Une durée peut être exprimée en secondes, en Basic Attacks, en déclenchements, jusqu’à une condition ou jusqu’à la fin du combat.
+Une durée peut être exprimée en secondes, en Basic Attacks, en déclenchements, jusqu’à une condition ou jusqu’à la fin du combat. « Jusqu’à la fin du combat » est un type de durée normal, pas une catégorie séparée d’effet.
 
-Dans le contexte du combat, un effet qualifié de **permanent** signifie au maximum **jusqu’à la fin du combat**.
+Dans le contexte du combat, un effet qualifié de **permanent** signifie au maximum **jusqu’à la fin du combat**. Son éligibilité au Cleanse ou au Dispel dépend de ses propriétés explicites, pas de cette durée.
 
 ## 14. Fiches et données de capacités
 
@@ -473,6 +478,8 @@ Une fiche de capacité peut présenter séparément les propriétés structurell
 
 La description mécanique rassemble ensuite les cibles, valeurs, effets, durées, probabilités et exceptions nécessaires. Elle ne doit pas être transformée en formulaire répétant chaque information déjà exprimée clairement.
 
+Sur la fiche destinée au joueur, les valeurs finales calculables pour l’instance sont affichées autant que possible plutôt que leurs coefficients internes. Lorsqu’une valeur dépend d’une cible future, la formule relative reste visible et aucun montant artificiel n’est présenté. Les besoins fonctionnels détaillés appartiennent au [document UI Flow](./18-UI_FLOW.md).
+
 Les règles système communes, comme l’Esquive standard d’un hit offensif, n’ont pas à être répétées sur chaque fiche. La capacité décrit ce qui lui est propre et ses exceptions.
 
 ### 14.2. Terminologie mécanique
@@ -483,7 +490,7 @@ Un texte de lore séparé n’est pas obligatoire. L’identité peut être port
 
 ### 14.3. Source de vérité data-driven
 
-Les capacités concrètes doivent être conçues à partir de données structurées : élément, coefficients, durées, probabilités, hits, stacks, ticks, seuils et autres paramètres.
+Les capacités concrètes doivent être conçues à partir de données structurées : élément, coefficients, durées, probabilités, hits, stacks, ticks, seuils et autres paramètres. Cette structure reste extensible et ne remplace pas le texte mécanique précis de chaque capacité.
 
 Le texte présenté au joueur reflète ces données. Une valeur ne doit pas être saisie indépendamment dans plusieurs sources susceptibles de diverger.
 
@@ -512,7 +519,7 @@ Si une future capacité crée seulement une exception locale, sa fiche peut la d
 | [`02-COMBAT.md`](./02-COMBAT.md) | Timeline, opportunités d’action, ordre entre créatures, formules et résolution commune |
 | [`03-CREATURES.md`](./03-CREATURES.md) | Identité familiale des capacités et propriétés structurelles des créatures |
 | [`05-ELEMENTS.md`](./05-ELEMENTS.md) | Éléments des capacités et résistances élémentaires |
-| [`06-STATUS_EFFECTS.md`](./06-STATUS_EFFECTS.md) | Application, durée, cumul, retrait et comportement des effets de statut |
+| [`06-COMBAT_EFFECTS.md`](./06-COMBAT_EFFECTS.md) | Lifecycle, durée, réapplication, snapshot, retrait et comportement des Effets de combat |
 | [`07-EVOLUTIONS.md`](./07-EVOLUTIONS.md) | Transformations des versions de capacités entre les formes et branches |
 | [`18-UI_FLOW.md`](./18-UI_FLOW.md) | Présentation et parcours de consultation ou de contrôle |
 

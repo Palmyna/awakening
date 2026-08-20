@@ -53,7 +53,7 @@ Les futurs documents spécialisés définiront notamment :
 
 * le déroulement et les règles détaillées du combat ;
 * les modèles de créatures et de monstres ;
-* les compétences, éléments et effets de statut ;
+* les compétences, éléments et Effets de combat ;
 * les évolutions et équipements ;
 * les invocations de créatures ;
 * les courbes, coûts, ressources et règles détaillées de progression ;
@@ -75,7 +75,7 @@ Ce document ne définit pas :
 * les probabilités d’invocation ou d’ouverture ;
 * les quantités de récompenses ;
 * les limites numériques précises ;
-* les listes exhaustives de créatures, compétences, effets de statut, équipements ou quêtes ;
+* les listes exhaustives de créatures, compétences, Effets de combat, équipements ou quêtes ;
 * le détail des écrans ;
 * l’architecture technique ;
 * le calendrier de production.
@@ -152,7 +152,7 @@ La réussite doit provenir principalement :
 * des équipements ;
 * des compétences fixes ;
 * des éléments ;
-* des effets de statut ;
+* des Effets de combat ;
 * des synergies.
 
 Le contrôle laissé au joueur pendant le combat offre une implication limitée. Il ne doit pas transformer le timing ou la précision gestuelle en facteur principal de réussite.
@@ -419,7 +419,7 @@ Pour un contenu ordinaire, le joueur doit connaître suffisamment d’informatio
 
 * les éléments des monstres ;
 * les principales menaces ;
-* les effets de statut importants ;
+* les Effets de combat importants ;
 * les conditions particulières ;
 * les récompenses principales ;
 * les restrictions éventuelles.
@@ -584,7 +584,7 @@ Le combat met à l’épreuve :
 * leurs équipements ;
 * leurs compétences fixes ;
 * les résistances élémentaires ;
-* les effets de statut ;
+* les Effets de combat ;
 * les synergies de la composition.
 
 ### 11.2. Mode de contrôle
@@ -615,7 +615,7 @@ La visualisation est disponible gratuitement en ×1. Les paliers ×2 et ×4 sont
 Le combat doit rendre visibles :
 
 * les actions importantes ;
-* les effets de statut ;
+* les Effets de combat ;
 * les résultats utiles des interactions élémentaires, notamment les immunités ;
 * les compétences ultimes ;
 * les éliminations ;
@@ -671,14 +671,9 @@ Après une défaite, le joueur peut :
 * retourner à la gestion afin de modifier une composition ou un équipement ;
 * quitter l’activité.
 
-Le résultat doit fournir des informations utiles sur :
+Le résultat doit donner accès à un résumé statistique simple des deux équipes, agrégé par créature plutôt que par Skill. Il présente notamment les dégâts infligés et reçus, les soins et Boucliers accordés ainsi que d’autres indicateurs globaux pertinents, dont la liste exacte reste à préciser dans le [document UI Flow](./18-UI_FLOW.md).
 
-* les principales sources de dégâts ;
-* les éléments importants ;
-* les effets de statut subis ;
-* les créatures mises hors combat ;
-* les moments déterminants ;
-* la progression générale du combat.
+Ces informations doivent aider à comprendre les principales contributions, les Effets de combat importants et les créatures mises hors combat sans exposer un combat log technique détaillé.
 
 Le jeu ne doit pas imposer automatiquement une solution ou un build unique.
 
@@ -1021,7 +1016,7 @@ La vertical slice doit inclure au minimum :
 * une sélection limitée de créatures ;
 * quatre Skills fixes par créature ;
 * quelques éléments ;
-* quelques effets de statut ;
+* quelques Effets de combat ;
 * plusieurs niveaux du mode Histoire ;
 * un coût en énergie ;
 * une régénération réelle ou simulée de l’énergie ;
@@ -1091,7 +1086,7 @@ Le GDD dépend des documents spécialisés suivants pour les détails :
 * [`03-CREATURES.md`](./03-CREATURES.md) — structure des créatures, caractéristiques, rôles et règles de progression propres ;
 * [`04-SKILLS.md`](./04-SKILLS.md) — structure et règles des Skills fixes ;
 * [`05-ELEMENTS.md`](./05-ELEMENTS.md) — éléments des formes et capacités, résistances, immunités et lisibilité élémentaire ;
-* [`06-STATUS_EFFECTS.md`](./06-STATUS_EFFECTS.md) — liste, application, cumul, retrait, diminishing returns des CC et immunités ;
+* [`06-COMBAT_EFFECTS.md`](./06-COMBAT_EFFECTS.md) — lifecycle, application, réapplication, retrait, effets périodiques, contrôles et protections ;
 * [`07-EVOLUTIONS.md`](./07-EVOLUTIONS.md) — conditions, branches et effets des évolutions ;
 * [`08-ITEMS.md`](./08-ITEMS.md) — équipements et objets, dont l’objet de réinitialisation ;
 * [`09-GACHA.md`](./09-GACHA.md) — règles de l’invocation de créature ;
@@ -1108,7 +1103,7 @@ Les questions suivantes ne bloquent pas le fonctionnement global décrit par le 
 
 * le nom définitif du rôle provisoirement appelé « Éveilleur » ;
 * les paramètres exacts des courbes d’Agilité, de Crit et d’Esquive ;
-* les valeurs et règles individuelles encore ouvertes des effets de statut ;
+* les valeurs et règles individuelles encore ouvertes des Effets de combat ;
 * la méthode d’obtention et le rythme de distribution de l’objet de réinitialisation ;
 * la limite et le prix du service payant de réinitialisation ;
 * les prix et la présentation des vitesses de visualisation ×2 et ×4 ;

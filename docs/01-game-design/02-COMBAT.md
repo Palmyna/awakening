@@ -15,7 +15,7 @@ Il constitue la référence actuelle pour le moteur de combat, notamment pour :
 * les caractéristiques et autres statistiques ;
 * les dégâts, soins et protections ;
 * les éléments ;
-* les effets de statut ;
+* les Effets de combat ;
 * les états de vie, de présence et de contrôle ;
 * les conditions de fin d’un combat standard.
 
@@ -23,7 +23,7 @@ Il reste un document de game design. Il ne constitue pas une spécification tech
 
 Les formules, caps, coefficients, durées et valeurs numériques explicitement indiqués comme restant à équilibrer peuvent évoluer sans remettre en cause les décisions structurelles présentées ici.
 
-Les futurs documents consacrés aux créatures, aux Skills, aux éléments et aux effets de statut reprennent et approfondissent leurs domaines respectifs sans contredire les règles système nécessaires au combat.
+Les documents consacrés aux créatures, aux Skills, aux éléments et aux [Effets de combat](./06-COMBAT_EFFECTS.md) reprennent et approfondissent leurs domaines respectifs sans contredire les règles système nécessaires au combat.
 
 ## 2. Principes de simulation
 
@@ -59,7 +59,7 @@ Les cartes, animations, VFX et composants UI restituent les événements calcul�
 * les positions logiques et la formation ;
 * les ciblages ;
 * les calculs et dégâts ;
-* les Skills et statuts ;
+* les Skills et Effets de combat ;
 * le RNG et les priorités ;
 * les conditions de victoire ;
 * les autres règles structurelles de ce document.
@@ -201,10 +201,10 @@ Une créature sous un effet d'Exclusion :
 * est toujours vivante ;
 * est temporairement retirée du combat ;
 * ne peut ni agir ni être ciblée ;
-* ne peut recevoir ni dégâts, ni soins, ni buffs, ni debuffs ;
+* ne peut recevoir ni dégâts, ni soins, ni nouvel Effet de combat ;
 * ne compte pas comme une créature actuellement présente/ciblable.
 
-Ses effets et timers personnels sont gelés pendant l'Exclusion.
+Ses Effets de combat et timers personnels sont gelés pendant l'Exclusion.
 
 #### 3.4.3. Cas du Phoenix et auto-résurrection
 
@@ -218,9 +218,9 @@ Dans cet état :
 * elle ne peut pas agir ;
 * elle peut revenir après le délai prévu par sa Passive si le combat n'est pas déjà terminé.
 
-La mort et cet état non vivant n'agissent pas comme un Cleanse. Les statuts déjà présents restent attachés à la créature et leurs timers continuent à s'écouler normalement. Les effets nécessitant une cible vivante, notamment les dégâts d'un DoT, ne produisent toutefois pas leur effet normal pendant cet état.
+La mort et cet état non vivant n'agissent pas comme un Cleanse. Les Effets de combat déjà présents restent attachés à la créature et leurs timers continuent à s'écouler normalement. Les effets nécessitant une cible vivante, notamment les dégâts d'un DoT, ne produisent toutefois pas leur résultat normal pendant cet état. Une opportunité de tick survenant pendant cet état est consommée sans produire le résultat exigeant une cible vivante.
 
-Cette règle est distincte de l'Exclusion, qui gèle les timers et effets personnels.
+Cette règle est distincte de l'Exclusion, qui gèle les timers et Effets de combat personnels.
 
 Si toutes les créatures d'une équipe sont non vivantes, le combat se termine immédiatement.
 
@@ -456,7 +456,7 @@ Exemples :
 * kill ;
 * mort d'un allié ;
 * Critique ;
-* application d'un statut ;
+* application d'un Effet de combat ;
 * seuil de PV ;
 * utilisation d'une Ultimate ;
 * etc.
@@ -593,7 +593,7 @@ Pendant un CC total :
 
 > le timer reprend là où il avait été interrompu.
 
-Les DoT, HoT, buffs et debuffs continuent cependant à évoluer normalement pendant un CC classique.
+Les Effets de combat continuent cependant à évoluer normalement pendant un CC classique.
 
 #### 5.6.2. Interaction temporelle avec un CC
 
@@ -615,7 +615,7 @@ Lorsque plusieurs créatures doivent agir exactement au même timestamp, leur or
 
 L'Agilité est évaluée en live au moment où l'action doit réellement commencer.
 
-Une action et toute sa chaîne de conséquences sont entièrement résolues avant le passage à l'action normale suivante. Cette chaîne comprend les hits, dégâts, soins, statuts, réactions, Passive, morts, effets à la mort et réactions aux réactions.
+Une action et toute sa chaîne de conséquences sont entièrement résolues avant le passage à l'action normale suivante. Cette chaîne comprend les hits, dégâts, soins, résultats directs, Effets de combat, réactions, Passive, morts, effets à la mort et réactions aux réactions.
 
 Une action dont le lancement a commencé continue jusqu'à sa fin même si son lanceur meurt pendant sa résolution. Une interruption n'existe que si une mécanique particulière la prévoit explicitement.
 
@@ -671,11 +671,12 @@ Le ciblage est recalculé lorsqu'une cible meurt ou que la composition de la lig
 
 Ordre général :
 
-1. règle explicite du Skill ;
-2. effet ou statut modifiant le ciblage ;
-3. ciblage standard.
+1. règle explicite du Skill pour ses propres actions ;
+2. ciblage standard.
 
 Il n'existe pas de mécanique générale de Taunt / Provocation.
+
+Plus largement, aucun Effet de combat ennemi ne modifie ou ne force le ciblage des actions adverses. Une capacité peut uniquement définir ou modifier la règle de ciblage de ses propres actions.
 
 Les tanks protègent principalement leur équipe via :
 
@@ -788,8 +789,8 @@ Pour chaque cible :
 * calcul de Défense indépendant ;
 * résistance élémentaire indépendante ;
 * absorption indépendante ;
-* bouclier indépendant ;
-* application de statut indépendante lorsque nécessaire.
+* réserve de Bouclier indépendante ;
+* application d’Effet de combat indépendante lorsque nécessaire.
 
 Une même AoE peut donc :
 
@@ -1068,23 +1069,22 @@ Une caractéristique ne peut jamais descendre sous 0 point.
 
 Tous les effets produits pendant un combat sont limités à ce combat. Aucun ne modifie définitivement l'instance ou ne persiste dans le combat suivant.
 
-Certains effets peuvent modifier une caractéristique jusqu'à la fin du combat.
+Une modification de caractéristique « jusqu’à la fin du combat » reste un Effet de combat dont la durée utilise cette condition de fin normale. Il n’existe pas de catégorie séparée de modification « permanente de combat ».
 
-Ces effets :
+Cet Effet de combat :
 
-* ne sont pas des buffs temporaires ;
-* ne possèdent pas nécessairement de timer ;
-* ne sont pas Dispellables ;
-* peuvent être cumulés indéfiniment si le Skill le permet ;
-* disparaissent après le combat.
+* ne possède pas nécessairement un timer en secondes ;
+* peut ou non se cumuler selon sa règle propre ;
+* peut ou non être éligible au Cleanse ou au Dispel selon ses propriétés explicites ;
+* disparaît au plus tard à la fin du combat.
 
-Dans le contexte d'un effet de combat, le terme « permanent » signifie au maximum « jusqu'à la fin du combat ».
+Dans le contexte du combat, le terme « permanent » signifie au maximum « jusqu'à la fin du combat » et doit être évité lorsqu’une durée plus précise peut être indiquée.
 
 Exemple :
 
 > « Augmente les PV max de cette créature de 50 jusqu'à la fin du combat. »
 
-Si cette augmentation est répétée en boucle, elle peut continuer à se cumuler sans limite propre.
+Si cette augmentation est répétée, son cumul suit exclusivement la règle définie par l’Effet de combat ou le Skill concerné.
 
 Une augmentation de PV max :
 
@@ -1116,7 +1116,7 @@ Cela permet notamment des créatures de scaling dont la puissance augmente avec 
 
 ### 7.10. Buffs et debuffs
 
-Les buffs et debuffs sont des effets temporaires distincts des modifications permanentes de combat.
+Les buffs et debuffs sont des Effets de combat persistants. Leur durée peut notamment être exprimée en secondes, jusqu’à une condition ou jusqu’à la fin du combat.
 
 Ils peuvent modifier les points de :
 
@@ -1235,9 +1235,11 @@ La courbe doit :
 
 ### 8.3. Agilité
 
-L'Agilité contrôle la vitesse des Basic Attacks.
+L'Agilité contrôle la vitesse des Basic Attacks et accélère également la cadence des Effets de combat périodiques. Ces deux usages emploient des courbes et des intervalles minimums propres.
 
 Chaque Basic Attack possède son propre **intervalle de base**. Il n'existe donc pas d'intervalle universel commun à toutes les créatures.
+
+La formule ci-dessous concerne uniquement l’intervalle des Basic Attacks. La cadence périodique est définie dans le [document Effets de combat](./06-COMBAT_EFFECTS.md).
 
 L'Agilité réduit cet intervalle selon une courbe exponentielle à rendement décroissant.
 
@@ -1427,6 +1429,8 @@ L'élément utilisé pour résoudre les interactions est toujours l’élément 
 
 Une capacité possède un seul élément à un instant donné. Tous ses hits, composantes de dégâts et effets directement produits utilisent cet élément, même lorsqu’elle est multi-hit, multi-cible, hybride ou composée de plusieurs effets.
 
+Une application de Bouclier utilise cet élément, notamment face à une immunité élémentaire. Après l’ajout, la réserve commune de la cible ne possède plus d’élément propre.
+
 Un Skill peut modifier explicitement l’élément d’une capacité pendant le combat. Un effet déjà créé ou appliqué conserve cependant l’élément enregistré lors de sa création ou de son application.
 
 Lorsqu’une capacité en déclenche une autre, la capacité déclenchée conserve son propre élément actuel, sauf modification explicite.
@@ -1467,7 +1471,7 @@ Il n'existe pas d'immunité élémentaire naturelle.
 
 Un Skill peut accorder explicitement une immunité élémentaire. Cette immunité bloque tous les effets positifs et négatifs de l’élément concerné, quelle que soit leur source.
 
-Une résistance élémentaire réduit uniquement les dégâts directs, périodiques et retardés. Elle ne modifie ni les soins, HoT, buffs, debuffs, CC, Boucliers, probabilités d’application, durées de statut ou autres effets non dommageables.
+Une résistance élémentaire réduit uniquement les dégâts directs, périodiques et retardés. Elle ne modifie ni les soins, HoT, buffs, debuffs, CC, Boucliers, probabilités d’application, durées d’Effets de combat ou autres résultats non dommageables.
 
 Les résistances découlent du ou des éléments fixes de la forme. Aucun Skill ne peut directement les gagner, les perdre, les supprimer, les inverser, modifier leur taux ou les ignorer pendant le combat.
 
@@ -1547,7 +1551,7 @@ Ordre conceptuel :
 13. événements dépendant du résultat réellement appliqué ;
 14. mort éventuelle.
 
-Une immunité ne déclenche pas les événements exigeant un résultat qu’elle a annulé, par exemple subir des dégâts, recevoir un soin ou recevoir un statut.
+Une immunité ne déclenche pas les événements exigeant un résultat qu’elle a annulé, par exemple subir des dégâts, recevoir un soin ou recevoir un Effet de combat.
 
 Les valeurs intermédiaires sont conservées avec 3 décimales.
 
@@ -1615,16 +1619,17 @@ Un Skill peut explicitement créer une mécanique utilisant le surplus de soin.
 
 ### 9.2. HoT
 
-Les HoT fonctionnent selon les mêmes principes temporels généraux que les DoT.
+Les HoT utilisent le moteur périodique commun décrit dans le [document Effets de combat](./06-COMBAT_EFFECTS.md).
 
 Ils :
 
-* utilisent le tick global ;
-* peuvent avoir plusieurs sources indépendantes ;
-* persistent après la mort de leur source ;
+* possèdent un nombre fixe de ticks et une valeur totale non critique fixe pour chaque application ;
+* utilisent une cadence accélérée par l’Agilité snapshotée de l’applicateur, sans modifier leur nombre de ticks ni leur valeur totale de référence ;
+* peuvent avoir plusieurs applicateurs indépendants ;
+* persistent après la mort de leur applicateur ;
 * continuent pendant Stun / Glacé / Peur ;
 * sont gelés pendant une Exclusion ;
-* utilisent un snapshot lors de leur application ;
+* utilisent un snapshot complet de l’applicateur lors de leur application ;
 * peuvent Critiquer à chaque tick.
 
 ---
@@ -1657,31 +1662,23 @@ Un Skill peut également utiliser un Drain de vie avec sa propre formule explici
 
 ---
 
-### 9.4. Boucliers
+### 9.4. Bouclier
 
-Un Bouclier est une **réserve universelle de dégâts flat**.
+Chaque créature possède conceptuellement une seule **réserve commune de Bouclier**, universelle contre les dégâts flat.
 
 Exemple :
 
 > Bouclier de 100 PV.
 
-Il ne possède pas de type Physique ou Spécial.
+Elle ne possède pas de type Physique ou Spécial.
 
-Les Boucliers peuvent se stacker.
-
-Chaque application ajoute une nouvelle réserve.
-
-Les Boucliers possèdent une durée.
+Chaque nouvelle application ajoute sa valeur à la réserve restante et refresh la durée de la réserve avec la durée de cette application. Il n’existe pas plusieurs sous-Boucliers séparés.
 
 À expiration :
 
 > toute valeur restante est perdue.
 
-Lorsqu'un dégât doit être appliqué :
-
-> le Bouclier compatible le plus ancien est consommé en premier.
-
-Pour chaque Bouclier consommé, le calcul suit le principe suivant :
+Lorsqu'un dégât doit être appliqué, le calcul suit le principe suivant :
 
 > **DégâtsAprèsBouclier = max(0, DégâtsAvantBouclier − ValeurBouclierDisponible)**
 
@@ -1690,15 +1687,15 @@ Pour chaque Bouclier consommé, le calcul suit le principe suivant :
 Avec :
 
 * `DégâtsAvantBouclier` : montant restant après les étapes précédentes de la chaîne et arrondi au moment de son application au Bouclier ;
-* `ValeurBouclierDisponible` : réserve restante du Bouclier actuellement consommé ;
-* `DégâtsAprèsBouclier` : montant transmis au Bouclier suivant ou aux PV ;
+* `ValeurBouclierDisponible` : valeur restante dans la réserve commune ;
+* `DégâtsAprèsBouclier` : montant transmis aux PV ;
 * `BouclierRestant` : réserve conservée par le Bouclier après l'impact.
 
-Si plusieurs Boucliers sont nécessaires, le même calcul est répété dans leur ordre de consommation.
+La réserve de Bouclier est appliquée avant les PV. Une fois une valeur ajoutée, la réserve ne conserve ni l’élément ni l’identité de ses applications précédentes. L’immunité élémentaire est vérifiée au moment où chaque application tente d’ajouter sa valeur.
 
-Les Boucliers sont appliqués avant les PV.
+Le Bouclier n’est pas retiré par Cleanse ou Dispel. Un résultat direct spécifique peut détruire immédiatement toute la réserve actuelle.
 
-Les Boucliers ne Critiquent pas.
+Le Bouclier ne Critique pas.
 
 Leur valeur peut dépendre de différentes caractéristiques selon le Skill :
 
@@ -1739,8 +1736,7 @@ Une Absorption :
 
 * n'est pas une réserve de PV ;
 * n'est pas considérée comme un Bouclier ;
-* ne se stacke pas avec une nouvelle application du même effet ;
-* une nouvelle application identique réinitialise simplement son timer.
+* possède sa propre règle de réapplication et de coexistence.
 
 Plusieurs Absorptions différentes peuvent potentiellement coexister selon leurs règles.
 
@@ -1748,11 +1744,21 @@ Elles sont appliquées avant les Boucliers.
 
 ---
 
-## 10. Effets périodiques et application des statuts
+## 10. Effets périodiques et application des Effets de combat
 
 ### 10.1. DoT
 
-Les DoT utilisent une fréquence de tick globale.
+Les DoT utilisent le moteur périodique commun défini dans le [document Effets de combat](./06-COMBAT_EFFECTS.md).
+
+Chaque application possède :
+
+* une valeur totale non critique fixe ;
+* un nombre fixe de ticks ;
+* un intervalle de référence ;
+* une cadence accélérée par l’Agilité snapshotée de l’applicateur ;
+* une durée effective résultant du nombre de ticks et de cet intervalle.
+
+L’Agilité ne change ni le nombre de ticks ni la valeur totale de référence. Le premier tick survient après un intervalle complet ; il n’existe aucun tick immédiat par défaut.
 
 Une application initiale peut être esquivée si l'effet qui l'applique est esquivable.
 
@@ -1760,10 +1766,10 @@ Une fois appliqué :
 
 * les ticks ne peuvent plus être esquivés ;
 * chaque tick peut Critiquer ;
-* l'effet continue même si sa source meurt ;
-* plusieurs sources peuvent créer plusieurs effets indépendants.
+* l'effet continue même si son applicateur meurt ;
+* plusieurs applicateurs peuvent créer plusieurs instances indépendantes.
 
-Chaque DoT utilise un **snapshot** au moment de son application.
+Chaque DoT utilise un **snapshot complet de l’applicateur** au moment de son application.
 
 Ce snapshot comprend l’élément de la capacité source. Les modifications ultérieures des caractéristiques ou de l’élément de cette capacité ne modifient pas un DoT déjà appliqué.
 
@@ -1819,42 +1825,44 @@ Des Skills peuvent interagir avec le tag `Saignement`.
 
 ---
 
-### 10.5. Sources multiples de DoT et HoT
+### 10.5. Applicateurs multiples de DoT et HoT
 
 Deux créatures différentes appliquant le même type d'effet créent des effets indépendants.
 
 Chaque effet conserve notamment :
 
-* sa source ;
+* l’identité minimale de son applicateur ;
 * son snapshot ;
 * sa durée ;
 * ses stacks éventuels ;
 * ses dégâts ou soins propres.
 
-La mort de la source ne supprime pas l'effet.
+La mort de l’applicateur ne supprime pas l'effet. Cette identité ne constitue pas une mécanique générale de source librement exploitable par les Skills.
 
 ---
 
-### 10.6. Réapplication des statuts
+### 10.6. Réapplication des Effets de combat
 
-La règle de réapplication dépend du statut.
+La règle de réapplication dépend de l’effet.
 
-Un statut peut :
+Un Effet de combat peut :
 
 * refresh sa durée ;
 * ajouter de la durée ;
 * ajouter des stacks ;
 * utiliser une autre règle explicite.
 
-Les règles détaillées doivent être définies par type de statut.
+Les règles détaillées doivent être définies par principe ou effet. Une réapplication recalcule intégralement le snapshot, même lorsqu’elle ne fait que refresh la durée ou ajouter une stack.
+
+Lorsqu’un effet périodique est refresh, sa durée repart de zéro, sa progression partielle vers le prochain tick est perdue et le prochain tick survient après un nouvel intervalle complet.
 
 ---
 
-### 10.7. Application d’un statut
+### 10.7. Application d’un Effet de combat
 
 Deux comportements existent.
 
-#### 10.7.1. Statut lié directement au hit
+#### 10.7.1. Effet lié directement au hit
 
 Exemple :
 
@@ -1886,7 +1894,7 @@ Résolution :
 3. en l’absence d’immunité applicable, dégâts ;
 4. jet spécifique de 40 % pour le Stun.
 
-Un Skill inesquivable peut toujours conserver une probabilité indépendante d'application du statut.
+Un Skill inesquivable peut toujours conserver une probabilité indépendante d'application de l’effet.
 
 #### 10.7.3. Nature d'une probabilité
 
@@ -1909,11 +1917,11 @@ Ils sont résolus dans l'ordre réellement décrit. Un debuff appliqué après l
 
 ---
 
-## 11. Contrôles et autres effets de statut
+## 11. Contrôles et autres Effets de combat
 
 ### 11.1. CC total et tags
 
-Les statuts suivants partagent la même mécanique de CC total :
+Les tags contextuels suivants partagent la même mécanique de CC total :
 
 * Stun ;
 * Glacé ;
@@ -1929,45 +1937,55 @@ Un Skill peut donc interagir spécifiquement avec :
 
 Ils partagent néanmoins les mêmes règles générales de diminishing returns sur les CC.
 
+Plusieurs instances de CC total provenant de créatures différentes peuvent coexister avec leurs durées indépendantes. La cible reste sous CC total tant qu’au moins une instance est active.
+
+Une instance de CC total peut définir une faible chance d’être rompue par chaque instance de dégâts atteignant réellement les PV. Un dégât entièrement absorbé par le Bouclier ne provoque aucun jet ; si une partie atteint les PV, le jet prévu a lieu. La chance exacte reste à équilibrer.
+
 ---
 
 ### 11.2. Diminishing returns des CC
 
-Chaque créature possède son propre historique temporaire de CC.
+Chaque créature possède trois historiques temporaires distincts :
 
-Lorsqu'elle subit plusieurs CC rapprochés :
+1. CC total ;
+2. Silence ;
+3. Exclusion.
+
+Lorsqu'elle subit plusieurs contrôles rapprochés relevant du même historique :
 
 > leur durée effective diminue progressivement.
 
-Les CC partageant la même famille mécanique utilisent le même système de diminishing returns.
+Les tags partageant le principe de CC total utilisent le même historique. Silence et Exclusion n’alimentent pas cet historique ni celui l’un de l’autre.
 
 Cela empêche de contourner le système avec :
 
 > Stun → Glacé → Peur → Stun.
 
-Après X secondes sans nouveau CC :
+Après une durée à équilibrer sans nouveau contrôle relevant de cet historique :
 
 > la résistance temporaire commence à revenir progressivement à son état normal.
 
 Les valeurs exactes restent à équilibrer.
 
-La diminution porte prioritairement sur la **durée du CC** plutôt que sur sa chance d'application.
+La diminution porte sur la **durée du contrôle**, jamais sur sa chance d'application.
 
 ---
 
-### 11.3. Immunités aux CC
+### 11.3. Immunités ciblées
 
-Un Skill peut donner temporairement une immunité à certains CC ou statuts.
+Un Skill peut donner temporairement une immunité à certains principes, familles ou tags d’Effets de combat.
 
-Une immunité ciblée bloque totalement l'application du CC, statut ou DoT compris dans son périmètre.
+Une immunité ciblée bloque totalement les nouvelles applications comprises dans son périmètre.
 
-L'effet n'est pas appliqué avec une durée de 0.
+L'effet n'est pas appliqué avec une durée de 0. Une immunité obtenue après l’application ne retire pas rétroactivement l’effet existant, sauf si le Skill le prévoit explicitement.
 
 Le jeu affiche un feedback court dont le wording exact reste à définir, par exemple :
 
 > `Immunisé`.
 
 Il n'existe pas d'immunité naturelle permanente basée uniquement sur l'élément.
+
+Il n’existe aucune caractéristique secondaire universelle de résistance aux statuts ou aux CC. Une modification explicite de durée est évaluée à l’application, avant les diminishing returns ; la durée finale ne change plus rétroactivement.
 
 Une immunité élémentaire accordée par un Skill est plus large : elle bloque tous les effets positifs et négatifs de l’élément concerné. Ses règles détaillées appartiennent au [document Éléments](./05-ELEMENTS.md).
 
@@ -1988,6 +2006,8 @@ Une Active devenue prête pendant Silence reste prête.
 Elle est utilisée à la première occasion valide après la fin du Silence.
 
 Une Ultimate ayant atteint son seuil reste également disponible après la fin du Silence.
+
+Silence utilise son propre historique de diminishing returns.
 
 ---
 
@@ -2018,6 +2038,8 @@ La créature revient ensuite :
 L'Exclusion ne déclenche pas une mort.
 
 Elle ne compte pas comme créature actuellement présente/ciblable pour une AoE standard.
+
+Exclusion utilise son propre historique de diminishing returns.
 
 ---
 
@@ -2052,40 +2074,44 @@ La valeur exacte du cap reste à équilibrer.
 
 ### 11.8. Cleanse
 
-Cleanse retire des effets négatifs d'un allié. Selon la convention générale, le terme « allié » inclut le lanceur ; « autre allié » l'exclut.
+Cleanse retire des Effets de combat explicitement éligibles à Cleanse sur un allié. Selon la convention générale, le terme « allié » inclut le lanceur ; « autre allié » l'exclut.
 
 Sans précision supplémentaire :
 
-> un Cleanse retire 1 effet négatif aléatoire.
+> un Cleanse retire 1 effet éligible aléatoire.
 
 Un Skill peut définir une règle différente.
 
 Exemples :
 
-* retire tous les DoT ;
-* retire 2 debuffs ;
-* retire tous les effets négatifs ;
-* retire uniquement les CC.
+* retire tous les DoT éligibles ;
+* retire 2 debuffs éligibles ;
+* retire tous les effets éligibles ;
+* retire uniquement les CC éligibles.
+
+Le retrait supprime l’intégralité de l’Effet de combat, dont ses conséquences internes, stacks et timer.
 
 ---
 
 ### 11.9. Dispel
 
-Dispel retire des effets positifs d'un ennemi.
+Dispel retire des Effets de combat explicitement éligibles à Dispel sur un ennemi.
 
 Sans précision supplémentaire :
 
-> un Dispel retire 1 effet positif aléatoire.
+> un Dispel retire 1 effet éligible aléatoire.
 
 Un Skill peut définir une autre règle.
+
+La polarité positive, négative ou neutre ne détermine ni l’éligibilité à Cleanse, ni l’éligibilité à Dispel. Un effet peut être éligible à l’un, aux deux ou à aucun.
 
 ---
 
 ### 11.10. Buff identique réappliqué
 
-Plusieurs buffs provenant de sources différentes peuvent coexister et leurs modifications sont appliquées successivement.
+Plusieurs buffs provenant d’applicateurs différents peuvent coexister et leurs modifications sont appliquées successivement.
 
-Lorsqu'une même source réapplique exactement le même buff :
+Lorsqu'un même applicateur réapplique exactement le même buff :
 
 > la règle par défaut est de refresh sa durée, sauf si le Skill indique explicitement un stacking.
 
@@ -2102,7 +2128,9 @@ Un Skill peut :
 
 Le Vol d'énergie transfère tout ou partie de l'énergie réellement retirée selon la définition du Skill.
 
-Il n'existe pas de statut général empêchant totalement toute génération d'énergie.
+Il n'existe pas d’Effet de combat général empêchant totalement toute génération d'énergie.
+
+Une modification immédiate de la jauge ou d’un compteur est un résultat direct. Une règle qui continue d’exister pour modifier leurs futurs gains ou progressions est un Effet de combat.
 
 ---
 
@@ -2122,35 +2150,37 @@ Le ciblage défensif repose sur :
 * les règles de ciblage ;
 * les Skills spécifiques.
 
+Aucun Effet de combat ennemi ne modifie ou ne force le ciblage des actions adverses. Un Skill peut uniquement définir sa propre règle de ciblage pour ses propres actions.
+
 ---
 
 ### 11.13. Snapshot
 
-Les effets périodiques comme les DoT et HoT utilisent un snapshot de leur source.
+Tous les Effets de combat utilisent un snapshot complet des informations nécessaires dépendant de leur applicateur.
 
 Lorsqu'un effet est appliqué :
 
-> les paramètres offensifs, de soin et autres valeurs dépendant de la source sont enregistrés à cet instant.
+> les paramètres offensifs, de soin, l’élément, le Crit, la cadence et les autres valeurs nécessaires dépendant de l’applicateur sont enregistrés à cet instant.
 
-Les modifications ultérieures des caractéristiques de la source ne modifient pas l'effet déjà présent.
+Les modifications ultérieures des caractéristiques de l’applicateur ne modifient pas l'effet déjà présent.
 
-Une nouvelle application utilise un nouveau snapshot correspondant à l'état de la source au moment de cette nouvelle application.
+Une nouvelle application utilise un nouveau snapshot correspondant à l'état de l’applicateur au moment de cette nouvelle application, même lorsqu’elle ne fait que refresh ou ajouter une stack.
 
 En revanche, l'état de la cible reste dynamique.
 
-À chaque tick, le moteur utilise les valeurs et protections actuelles de la cible lorsque celles-ci sont pertinentes, notamment :
+À chaque résultat ultérieur, le moteur utilise les valeurs et protections actuelles de la cible lorsque celles-ci sont pertinentes, notamment :
 
 * Défense ou Défense spéciale ;
 * résistances élémentaires ;
 * réductions de dégâts ;
 * Absorption ;
-* Boucliers ;
+* Bouclier ;
 * réduction des soins reçus ;
 * autres effets défensifs applicables.
 
 Ainsi :
 
-> **la source est snapshotée à l'application, tandis que la cible est recalculée à chaque tick.**
+> **l’applicateur est snapshoté à l'application, tandis que la cible est évaluée au moment où chaque résultat est résolu.**
 
 ---
 
@@ -2167,9 +2197,11 @@ Notamment :
 * valeur exacte de `CoefficientDégâtsCritiques` ;
 * valeur exacte de `MultiplicateurCritBase`, actuellement prévue autour de `×1,10` ;
 * ajustements éventuels du taux actuel de `30 %` pour `TauxRésistanceÉlémentaire` ;
-* diminishing returns des CC ;
-* durée avant récupération des diminishing returns ;
-* durée standard des différents statuts ;
+* paliers, multiplicateurs, historiques, récupérations et minimums éventuels des diminishing returns du CC total, de Silence et de l’Exclusion ;
+* chance de rupture des CC lorsque des dégâts atteignent réellement les PV ;
+* durée standard des différents Effets de combat ;
+* courbe d’accélération des ticks par l’Agilité et intervalle minimum ;
+* nombres de ticks et coefficients des effets périodiques concrets ;
 * valeur/cap de réduction des soins ;
 * formules exactes de Brûlure ;
 * formules exactes de Poison ;
@@ -2203,7 +2235,7 @@ Les systèmes spécialisés devront être développés plus précisément dans l
 * [`03-CREATURES.md`](./03-CREATURES.md)
 * [`04-SKILLS.md`](./04-SKILLS.md)
 * [`05-ELEMENTS.md`](./05-ELEMENTS.md)
-* [`06-STATUS_EFFECTS.md`](./06-STATUS_EFFECTS.md)
+* [`06-COMBAT_EFFECTS.md`](./06-COMBAT_EFFECTS.md)
 * `07-EVOLUTIONS.md`
 * `08-ITEMS.md`
 * `10-PROGRESSION.md`
@@ -2216,7 +2248,7 @@ Ces documents doivent respecter les règles structurelles définies ici et peuve
 
 Les règles de ce document constituent le comportement standard du moteur.
 
-Un Skill, une Passive, un statut, un mode de jeu ou une autre mécanique peut créer une exception uniquement si cette exception est **explicitement définie**.
+Un Skill, une Passive, un Effet de combat, un mode de jeu ou une autre mécanique peut créer une exception uniquement si cette exception est **explicitement définie**.
 
 Principe général :
 

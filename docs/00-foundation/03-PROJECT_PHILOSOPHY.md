@@ -30,7 +30,7 @@ Chaque décision doit ainsi être examinée selon sa capacité à :
 
 ### 3.1. Privilégier la préparation plutôt que les réflexes
 
-Les combats doivent récompenser en priorité les décisions prises lors de la préparation : choix des créatures, composition de l’équipe, répartition des rôles, compétences, équipements, éléments, effets de statut et synergies.
+Les combats doivent récompenser en priorité les décisions prises lors de la préparation : choix des créatures, composition de l’équipe, répartition des rôles, compétences, équipements, éléments, Effets de combat et synergies.
 
 Le joueur doit gagner parce qu’il comprend ses créatures et construit une équipe pertinente, non parce qu’il exécute plus rapidement une série d’actions. L’automatisation principale des combats sert cette intention en déplaçant le centre de la stratégie vers la préparation et l’optimisation.
 
@@ -38,12 +38,12 @@ Les combats doivent néanmoins rester rapides et dynamiques. L’automatisation 
 
 Les attaques et les compétences ordinaires sont utilisées automatiquement. Le joueur peut déclencher manuellement les compétences ultimes ou activer leur déclenchement automatique. Cette possibilité d’intervention doit renforcer son implication sans déplacer le cœur de la réussite vers le timing ou les réflexes.
 
-Les effets de statut constituent un système central du combat. Ils doivent créer des styles de jeu variés, renforcer la profondeur des compétences et des éléments, et donner de l’importance à l’anticipation, aux résistances, aux immunités et aux possibilités de retrait. Ils contribuent ainsi aux piliers existants de stratégie et de personnalisation sans former un pilier fondamental indépendant.
+Les Effets de combat constituent un système central du combat. Ils doivent créer des styles de jeu variés, renforcer la profondeur des compétences et des éléments, et donner de l’importance à l’anticipation, aux résistances, aux immunités et aux possibilités de retrait. Ils contribuent ainsi aux piliers existants de stratégie et de personnalisation sans former un pilier fondamental indépendant.
 
 Les décisions de conception doivent donc :
 
 * donner une importance réelle à la composition d’une équipe pouvant réunir jusqu’à six créatures ;
-* encourager l’étude des rôles, des compétences, des éléments, des effets de statut et des synergies ;
+* encourager l’étude des rôles, des compétences, des éléments, des Effets de combat et des synergies ;
 * rendre perceptible l’effet des choix effectués avant le combat ;
 * maintenir la priorité de la stratégie d’équipe sur l’exécution gestuelle.
 
@@ -53,13 +53,13 @@ Le projet doit éviter :
 * de réduire les combats à une comparaison de puissance brute ;
 * de rendre la préparation secondaire ou artificielle ;
 * de proposer une automatisation qui efface l’influence des décisions du joueur ;
-* de traiter les effets de statut comme des effets accessoires sans rôle stratégique réel.
+* de traiter les Effets de combat comme des effets accessoires sans rôle stratégique réel.
 
 **Éléments à préciser ultérieurement :**
 
 * les ajustements éventuels du taux actuel de résistance élémentaire pendant le balancing ;
 * les paramètres exacts des courbes d’Agilité, de Crit et d’Esquive ainsi que les formules de dégâts ;
-* la liste des effets de statut et leurs règles détaillées d’application, de durée, de cumul, de renouvellement, de retrait, de résistance et d’immunité.
+* la liste des Effets de combat et leurs règles détaillées d’application, de durée, de réapplication, de retrait, de snapshot et d’immunité.
 
 ### 3.2. Faire de la personnalisation le cœur de l’expérience
 
@@ -67,7 +67,7 @@ La personnalisation ne doit pas être un système périphérique. Elle constitue
 
 Chaque créature possède exactement quatre Skills prédéfinis selon l’une des deux répartitions autorisées : une Active, deux Passive et une Ultimate ; ou deux Active, une Passive et une Ultimate. Le joueur ne choisit pas ces Skills, ne les remplace pas et ne construit pas son build en les sélectionnant dans une liste. Ils définissent l’identité fonctionnelle, le rôle et les synergies potentielles de la créature.
 
-Le joueur développe la créature autour de cet ensemble fixe à travers la répartition de ses caractéristiques, son équipement, sa progression, son évolution, son niveau d’étoiles, ses interactions avec les effets de statut et son rôle dans l’équipe. Les choix de composition et les synergies entre les membres d’une équipe participent également à cette différenciation.
+Le joueur développe la créature autour de cet ensemble fixe à travers la répartition de ses caractéristiques, son équipement, sa progression, son évolution, son niveau d’étoiles, ses interactions avec les Effets de combat et son rôle dans l’équipe. Les choix de composition et les synergies entre les membres d’une équipe participent également à cette différenciation.
 
 Deux joueurs possédant les mêmes créatures doivent pouvoir aboutir à des builds et à des équipes différents. Les choix du joueur doivent donc conserver une influence réelle sur la manière dont ses créatures sont utilisées.
 
@@ -80,7 +80,7 @@ Le projet doit éviter :
 
 **Éléments à préciser ultérieurement :**
 
-* les règles détaillées des caractéristiques, des compétences, des objets, des évolutions, des rôles, des effets de statut et de leur équilibrage devront être définies dans le GDD et les documents spécialisés.
+* les règles détaillées des caractéristiques, des compétences, des objets, des évolutions, des rôles, des Effets de combat et de leur équilibrage devront être définies dans le GDD et les documents spécialisés.
 
 ## 4. Philosophie de progression
 
@@ -127,7 +127,7 @@ Le projet doit éviter :
 
 Project Awakening s’adresse à un public large tout en visant une profondeur suffisante pour les joueurs les plus investis.
 
-L’accessibilité doit permettre de comprendre et d’utiliser les systèmes essentiels sans supprimer les possibilités d’expérimentation. La profondeur doit provenir des interactions entre la progression, les builds, les objets, les compétences, les éléments, les effets de statut et les compositions d’équipe, et non d’une complexité ajoutée sans bénéfice pour le joueur.
+L’accessibilité doit permettre de comprendre et d’utiliser les systèmes essentiels sans supprimer les possibilités d’expérimentation. La profondeur doit provenir des interactions entre la progression, les builds, les objets, les compétences, les éléments, les Effets de combat et les compositions d’équipe, et non d’une complexité ajoutée sans bénéfice pour le joueur.
 
 Le projet doit éviter deux extrêmes :
 
