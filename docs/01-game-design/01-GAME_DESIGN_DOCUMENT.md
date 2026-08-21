@@ -1096,7 +1096,12 @@ Le GDD dépend des documents spécialisés suivants pour les détails :
 * [`09-GACHA.md`](./09-GACHA.md) — règles de l’invocation de créature ;
 * [`10-PROGRESSION.md`](./10-PROGRESSION.md) — expérience, niveaux, étoiles, énergie, réinitialisations et progression du compte ;
 * [`11-COLLECTION.md`](./11-COLLECTION.md) — gestion des instances, encyclopédie et capacité ;
-* `12-MODES.md` à `17-ACHIEVEMENTS.md` — activités et objectifs spécialisés ;
+* [`12-MODES.md`](./12-MODES.md) — contrats communs et statuts des modes ;
+* [`13-PVP.md`](./13-PVP.md) — contraintes et décisions ouvertes du PvP ;
+* `14-GUILDS.md` — fonctions de guilde, lorsqu’un cadrage suffisant permettra sa création ;
+* [`15-EVENTS.md`](./15-EVENTS.md) — événements temporaires et contenus saisonniers ;
+* [`16-QUESTS.md`](./16-QUESTS.md) — quêtes journalières ;
+* `17-ACHIEVEMENTS.md` — hauts faits, lorsqu’un cadrage suffisant permettra sa création ;
 * [`18-UI_FLOW.md`](./18-UI_FLOW.md) — écrans, navigation, tutoriels et parcours ;
 * [`01-ART_DIRECTION.md`](../03-art/01-ART_DIRECTION.md) à [`06-ANIMATIONS.md`](../03-art/06-ANIMATIONS.md) — direction artistique, représentation des créatures, cartes, UI, VFX et animations ;
 * [`01-ARCHITECTURE.md`](../04-technical/01-ARCHITECTURE.md) — moteur retenu, séparation technique entre simulation et représentation et principes de reproductibilité.

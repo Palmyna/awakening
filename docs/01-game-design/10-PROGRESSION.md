@@ -1,18 +1,44 @@
 # Project Awakening — Progression
 
-**Statut :** Draft de conception — base initiale à compléter
+**Statut :** Draft de conception — à relire et valider
 
 ## 1. Rôle et périmètre du document
 
-Ce document rassemble les décisions validées concernant les niveaux, l’XP, les étoiles, les réinitialisations, le score de Puissance, l’énergie et la progression du compte.
+Ce document définit les systèmes validés qui transforment les activités accomplies en développement durable du compte et des créatures.
 
-Il ne fixe pas les courbes, coûts, multiplicateurs ou valeurs encore réservés au balancing.
+Il rassemble :
 
-## 2. Niveau et points de caractéristiques
+* l’expérience et les niveaux des instances ;
+* l’attribution des points de caractéristiques ;
+* l’interaction entre XP et évolutions ;
+* les quinze montées du niveau d’étoiles ;
+* les réinitialisations ;
+* le score de Puissance ;
+* la progression du compte et son influence sur les équipements ;
+* l’énergie du mode Histoire ;
+* les garde-fous empêchant une progression passive ou payante de puissance.
 
-Le niveau d’une instance ne possède pas de maximum.
+Il ne fixe pas les courbes, coûts, multiplicateurs, quantités de récompenses ou autres valeurs réservées au balancing.
 
-Il reste affiché directement. Aucun système de prestige ne le remplace ou ne réinitialise automatiquement les niveaux élevés.
+## 2. Couches de progression
+
+La progression repose sur plusieurs couches complémentaires :
+
+* la progression en niveaux de chaque instance ;
+* la répartition de ses points de caractéristiques ;
+* son évolution entre exactement trois stades ;
+* son niveau d’étoiles ;
+* son équipement ;
+* le niveau du compte ;
+* les déblocages principalement portés par le mode Histoire.
+
+Ces couches ne sont pas interchangeables. Le niveau ne remplace pas les étoiles, les étoiles ne remplacent pas l’évolution et le niveau du compte ne remplace pas le développement individuel des créatures.
+
+La progression doit valoriser le temps investi dans les instances déjà possédées et préserver la diversité des builds plutôt que produire une montée linéaire identique pour tous.
+
+## 3. Niveau et points de caractéristiques
+
+Le niveau d’une instance ne possède pas de maximum. Il reste affiché directement et aucun système de prestige ne le remplace ou ne le réinitialise automatiquement.
 
 La quantité d’XP nécessaire augmente fortement avec les niveaux afin que chaque nouvelle montée devienne progressivement plus difficile. La courbe exacte reste à définir.
 
@@ -20,21 +46,21 @@ Une montée de niveau :
 
 * n’augmente aucune caractéristique automatiquement ;
 * accorde actuellement cinq points de caractéristiques ;
-* permet de répartir ces points uniquement entre les six caractéristiques principales.
+* permet de répartir ces points uniquement entre les six caractéristiques principales de l’instance.
 
 La valeur de cinq points constitue la référence actuelle mais reste ajustable pendant le balancing.
 
 Dépenser un point augmente toujours de `+1` la caractéristique principale choisie. Les six caractéristiques utilisent la même unité de budget et aucun coût différent n’est appliqué selon la caractéristique. Leur formule ou leur courbe doit être recalibrée si leur valeur relative devient déséquilibrée.
 
-Les points non attribués peuvent être conservés indéfiniment. Ils n’augmentent pas le score de Puissance tant qu’ils ne sont pas attribués.
+Les points non attribués peuvent être conservés indéfiniment. Ils ne produisent aucun effet et n’augmentent pas le score de Puissance tant qu’ils ne sont pas attribués.
 
-## 3. Attribution de l’XP d’une activité
+## 4. Attribution de l’XP d’une activité
 
-L’XP est attribuée après le combat. Chaque créature participante reçoit son propre gain ; l’XP n’est jamais divisée entre les membres de l’équipe.
+L’XP des créatures est attribuée après un combat remporté. Une défaite standard n’accorde aucune XP aux créatures ou au compte.
 
-Toutes les participantes reçoivent leur gain, y compris si elles sont mortes, contrôlées ou temporairement exclues à la fin du combat.
+Chaque créature participante reçoit son propre gain ; l’XP n’est jamais divisée entre les membres de l’équipe.
 
-Utiliser une équipe réduite n’augmente jamais le gain individuel d’une participante.
+Toutes les participantes reçoivent leur gain, y compris si elles sont mortes, contrôlées ou temporairement exclues à la fin du combat. Utiliser une équipe réduite n’augmente jamais le gain individuel d’une participante.
 
 La ou les créatures du niveau le plus élevé parmi les participantes reçoivent 100 % de `XPActivité`.
 
@@ -49,26 +75,29 @@ Puis :
 Avec :
 
 * `RatioMinimum` : part minimale, actuellement fixée à 10 % mais ajustable pendant le balancing ;
-* `NiveauCréature` : niveau de la participante concernée avant la récompense ;
+* `NiveauCréature` : niveau de la participante avant la récompense ;
 * `NiveauMaxÉquipe` : niveau le plus élevé parmi les participantes avant la récompense ;
 * `XPActivité` : valeur d’XP de l’activité ;
 * `XPGagnée` : gain individuel calculé.
 
 Lorsque toutes les participantes sont niveau 1, elles reçoivent 100 % de l’XP.
 
-Les niveaux et ratios sont calculés avant l’attribution et restent fixes pour toute la récompense. Une récompense peut accorder plusieurs niveaux.
-
-Tous les niveaux ainsi obtenus sont appliqués et accordent chacun les points de caractéristiques correspondants. Il n’existe aucune limite artificielle d’un niveau gagné par combat.
+Les niveaux et ratios sont calculés avant l’attribution et restent fixes pour toute la récompense. Une récompense peut accorder plusieurs niveaux. Tous les niveaux obtenus sont appliqués et accordent chacun les points correspondants ; aucune limite artificielle d’un niveau gagné par combat n’existe.
 
 Ce ratio doit faciliter la remontée d’une créature récemment réinitialisée et permettre un power-leveling contrôlé, sans accorder immédiatement toute l’XP d’une activité avancée à une créature très peu développée.
 
-## 4. Interaction avec les évolutions
+## 5. Interaction avec les évolutions
 
-Après l’attribution de l’XP, chaque montée de niveau pertinente peut déclencher une évolution standard. Si exactement une évolution est valide, elle est automatique ; si plusieurs évolutions concurrentes le sont, aucune ne se produit. L’utilisation volontaire d’un objet consommable d’évolution constitue le seul déclenchement prévu hors montée de niveau.
+Après l’attribution de l’XP, chaque montée de niveau pertinente peut déclencher une évolution standard.
 
-Une même récompense peut provoquer plusieurs évolutions successives. Les règles détaillées appartiennent au [référentiel Évolutions](./07-EVOLUTIONS.md).
+* Si exactement une évolution est valide, elle est automatique.
+* Si plusieurs évolutions concurrentes sont valides, aucune ne se produit.
+* Une même récompense peut provoquer plusieurs évolutions successives.
+* L’utilisation volontaire d’un objet consommable d’évolution constitue le seul déclenchement prévu hors montée de niveau.
 
-## 5. Niveau d’étoiles
+Une évolution conserve le niveau, l’XP, les points, les étoiles, l’équipement et les autres propriétés persistantes de l’instance. Les règles de conditions, de branches et de résolution appartiennent au [référentiel Évolutions](./07-EVOLUTIONS.md).
+
+## 6. Niveau d’étoiles
 
 Une nouvelle instance commence à 0 étoile et peut obtenir quinze montées :
 
@@ -76,65 +105,146 @@ Une nouvelle instance commence à 0 étoile et peut obtenir quinze montées :
 * Argent ★1 à ★5 : étoiles globales 6 à 10 ;
 * Or ★1 à ★5 : étoiles globales 11 à 15.
 
-Les étoiles augmentent uniquement les six caractéristiques principales de base de la forme et du stade actuels. Elles ne multiplient ni les caractéristiques secondaires, ni les points distribués, ni l’équipement, ni les buffs, ni les autres bonus externes.
+Les étoiles augmentent uniquement les six caractéristiques principales de base de la forme et du stade actuels.
 
-Les multiplicateurs totaux doivent progresser de manière non linéaire. Les étoiles avancées doivent pouvoir produire un gain marginal supérieur, sans multiplication successive incontrôlée des paliers précédents.
+Elles ne multiplient pas :
 
-## 6. Matériaux d’étoiles
+* les trois caractéristiques secondaires ;
+* les points distribués ;
+* l’équipement ;
+* les buffs ;
+* les autres bonus externes.
 
-Une montée d’étoile consomme des instances de la même famille, quelle que soit leur forme ou leur branche.
+Les multiplicateurs totaux doivent progresser de manière non linéaire. Les étoiles avancées peuvent produire un gain marginal supérieur, sans multiplication successive incontrôlée des paliers précédents.
+
+Le niveau d’étoiles est permanent. Il ne diminue pas volontairement et n’est pas perdu lors d’une évolution ou d’une réinitialisation en niveaux.
+
+## 7. Matériaux d’étoiles
+
+Une montée d’étoile consomme une ou plusieurs instances de la même famille que l’instance cible, quelle que soit leur forme ou leur branche.
 
 Certains paliers peuvent exiger que les instances utilisées comme matériaux possèdent elles-mêmes un niveau d’étoiles minimum. Les seules conditions d’une montée d’étoile portent sur les étoiles de ces instances.
 
 Une montée d’étoile ne demande pas de niveau, de forme, de branche, d’équipement ou d’autre condition de progression à l’instance cible.
 
-L’opération est irréversible. Une instance consommée disparaît définitivement et sa progression individuelle est perdue. Ses équipements retournent automatiquement dans l’inventaire.
+L’opération est irréversible. Une instance consommée disparaît définitivement et sa progression individuelle est perdue. Tous ses équipements sont automatiquement replacés dans l’inventaire avant sa disparition.
 
-Une instance ne peut pas perdre volontairement des étoiles ou revenir à un palier inférieur. Les instances consommées ne peuvent pas être récupérées.
+Une instance verrouillée ne peut pas être utilisée comme matériau. Les instances consommées ne peuvent pas être récupérées.
 
-## 7. Réinitialisations
+## 8. Réinitialisations
 
-### 7.1. Réinitialisation complète gratuite
+### 8.1. Réinitialisation complète gratuite
 
-La réinitialisation complète :
+La réinitialisation complète gratuite :
 
 * remet l’instance au niveau 1 et à l’XP correspondante ;
 * retire les points gagnés grâce aux niveaux ;
-* impose de regagner ces points par la progression.
+* impose de regagner ces points en jouant.
 
-Elle conserve la forme actuelle, la branche, les étoiles, l’équipement, le surnom, les tags et les apparences déjà débloquées.
+Elle conserve :
 
-L’instance niveau 1 utilise donc les caractéristiques de base de sa forme évoluée actuelle.
+* la forme actuelle et la branche ;
+* le niveau d’étoiles ;
+* l’équipement ;
+* le surnom et les tags ;
+* les apparences déjà débloquées.
 
-Une évolution déjà obtenue n’est jamais perdue. Une évolution non encore obtenue devra toujours satisfaire ses conditions après la réinitialisation.
+L’instance niveau 1 utilise donc les caractéristiques de base de sa forme évoluée actuelle. Une évolution déjà obtenue n’est jamais perdue. Une évolution non encore obtenue devra toujours satisfaire ses conditions après la réinitialisation.
 
-### 7.2. Redistribution sans retour au niveau 1
+### 8.2. Redistribution sans retour au niveau 1
 
-Un objet rare obtenu en jouant et un service payant limité fournissent le même résultat :
+Un objet rare obtenu en jouant et un service payant strictement limité fournissent le même résultat fonctionnel :
 
 * le niveau et l’XP ne changent pas ;
 * les points déjà gagnés redeviennent disponibles ;
-* aucun point supplémentaire n’est accordé.
+* aucun point supplémentaire, aucune expérience et aucun potentiel supplémentaire ne sont accordés.
 
-## 8. Score de Puissance
+Le service payant reste distinct de la boutique cosmétique. Il ne doit jamais devenir nécessaire pour corriger un build ou rester compétitif, et une méthode gratuite permet d’atteindre le même résultat.
 
-Chaque instance possède un score de Puissance recalculé en temps réel lorsque sa puissance active change.
+### 8.3. Protection par verrouillage
 
-Il reflète notamment la forme, le stade, les étoiles, les points attribués, l’équipement et les autres sources permanentes actives. Il sert au tri et à la comparaison générale sans mesurer absolument l’efficacité stratégique.
+Une instance verrouillée ne peut subir ni réinitialisation complète ni redistribution de caractéristiques. Le joueur doit la déverrouiller volontairement avant l’une de ces actions.
 
-Les points de caractéristiques non attribués ne l’augmentent pas.
+## 9. Score de Puissance
 
-La formule exacte reste ouverte.
+Chaque instance possède un score de Puissance recalculé en temps réel lorsque sa puissance permanente active change.
 
-## 9. Progression du compte et énergie
+Il reflète notamment :
 
-Le compte possède un niveau numérique et gagne de l’expérience lorsqu’une activité est accomplie. Cette progression est plus lente que celle des créatures, représente l’avancement général du joueur, accorde une récompense par niveau et peut participer à certains déblocages secondaires.
+* sa forme et son stade ;
+* ses étoiles ;
+* ses points attribués ;
+* son équipement ;
+* les autres sources permanentes actives.
 
-Lorsqu’un équipement est généré ou fabriqué, son niveau d’objet correspond au niveau du compte à cet instant et reste ensuite fixe. Ce niveau détermine les plages de génération accessibles, sans garantir les rolls obtenus. Les règles détaillées appartiennent au [référentiel Objets et équipements](./08-ITEMS.md).
+Les points non attribués ne l’augmentent pas.
 
-Le mode Histoire utilise une énergie consommée à l’entrée d’un niveau. Hors ligne, seule cette énergie se régénère passivement ; les créatures et le compte ne gagnent aucune progression automatique.
+Le score facilite le tri, la comparaison générale et l’indication de difficulté. Il ne mesure pas absolument l’efficacité stratégique d’une créature ou d’une composition dans toutes les situations et ne doit pas devenir un verrou systématique d’accès aux contenus.
 
-## 10. Éléments à préciser ultérieurement
+## 10. Progression du compte
+
+Le compte possède un niveau numérique et gagne de l’expérience lorsqu’une activité est accomplie.
+
+Cette progression :
+
+* est beaucoup plus lente que celle des créatures ;
+* représente l’avancement général et l’ancienneté du joueur ;
+* accorde une récompense à chaque niveau ;
+* peut participer à certains déblocages secondaires ;
+* ne remplace pas le mode Histoire comme principale source de déblocage.
+
+Lorsqu’un équipement est généré ou fabriqué, son niveau d’objet correspond au niveau du compte à cet instant et reste ensuite fixe. Il détermine les plages de génération accessibles sans garantir les rolls obtenus.
+
+Le niveau du compte peut également débloquer progressivement des couches de complexité de l’équipement. Les seuils et la courbe concernés restent à définir dans le [référentiel Objets et équipements](./08-ITEMS.md).
+
+## 11. Énergie du mode Histoire
+
+Le mode Histoire utilise une énergie consommée à l’entrée d’un niveau.
+
+Cette énergie :
+
+* régule le nombre de niveaux joués et la vitesse générale de progression ;
+* se régénère avec le temps ;
+* continue à s’accumuler lorsque le joueur ne joue pas ;
+* ne doit pas être perdue simplement parce que le joueur ne s’est pas connecté pendant une journée ;
+* n’est pas vendue contre de l’argent réel.
+
+Lors d’une défaite standard, l’énergie utilisée pour entrer dans le niveau reste normalement consommée. Une activité particulière ou une étape d’onboarding peut définir une exception explicite.
+
+Les autres activités ne consomment pas automatiquement cette énergie. Chacune devra définir sa relation éventuelle avec une ressource d’entrée sans déduire celle du mode Histoire.
+
+## 12. Absence de progression passive et payante
+
+Hors ligne, seule la récupération d’énergie est validée.
+
+Les créatures ne gagnent automatiquement aucune XP, aucun niveau, aucun point de caractéristique, aucun équipement et aucune autre ressource générale. Le compte ne gagne pas non plus d’expérience automatiquement.
+
+Le modèle de lancement interdit la vente directe :
+
+* d’expérience ;
+* de points de caractéristiques ;
+* d’énergie ;
+* d’équipements ;
+* de ressources de progression ;
+* d’une puissance ou d’un potentiel maximal supplémentaire.
+
+Les services de confort validés ne modifient pas ce principe.
+
+## 13. Interactions et dépendances
+
+| Document | Responsabilité liée |
+| --- | --- |
+| [`01-GAME_DESIGN_DOCUMENT.md`](./01-GAME_DESIGN_DOCUMENT.md) | Boucle globale, victoire, défaite et déblocages |
+| [`03-CREATURES.md`](./03-CREATURES.md) | Construction des caractéristiques et propriétés persistantes |
+| [`07-EVOLUTIONS.md`](./07-EVOLUTIONS.md) | Conditions, déclenchements et conservation pendant l’évolution |
+| [`08-ITEMS.md`](./08-ITEMS.md) | Niveau d’objet, génération et restitution des équipements |
+| [`09-GACHA.md`](./09-GACHA.md) | État initial et nouvelles instances utilisées pour les étoiles |
+| [`11-COLLECTION.md`](./11-COLLECTION.md) | Verrouillage et gestion des instances |
+| [`12-MODES.md`](./12-MODES.md) | Résultats et règles propres aux activités |
+| [`16-QUESTS.md`](./16-QUESTS.md) | Objectifs journaliers et récompenses de progression |
+| [`18-UI_FLOW.md`](./18-UI_FLOW.md) | Présentation et confirmations des actions de progression |
+
+## 14. Éléments à préciser ultérieurement
 
 * La courbe exacte d’XP sans niveau maximal.
 * La validation finale des cinq points par niveau.
@@ -143,8 +253,14 @@ Le mode Histoire utilise une énergie consommée à l’entrée d’un niveau. H
 * Les quinze multiplicateurs d’étoiles.
 * Les quantités et niveaux d’étoiles exigés pour les matériaux.
 * La formule exacte du score de Puissance.
-* La méthode d’obtention et le rythme de l’objet de réinitialisation.
-* La limite et le prix du service payant de redistribution.
-* Les récompenses et usages secondaires du niveau de compte.
+* Les récompenses du niveau de compte.
 * La courbe reliant le niveau du compte aux plages de génération des équipements.
 * Les coûts, la régénération et l’accumulation exacte de l’énergie.
+
+## 15. Questions ouvertes
+
+* Quels déblocages secondaires doivent dépendre du niveau du compte plutôt que des jalons du mode Histoire ?
+* Quelle méthode d’obtention et quel rythme de distribution doit utiliser l’objet de redistribution des caractéristiques ?
+* Quelle limite d’utilisation payante doit s’appliquer au service de redistribution, notamment par compte ou par créature ?
+* Des objets de récupération d’énergie obtenus uniquement en jouant doivent-ils exister ?
+* D’autres activités doivent-elles utiliser l’énergie du mode Histoire ou une régulation distincte ?
