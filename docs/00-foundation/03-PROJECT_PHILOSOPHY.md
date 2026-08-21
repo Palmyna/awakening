@@ -202,7 +202,8 @@ Les services de confort actuellement validés, strictement encadrés et distinct
 
 * la redistribution payante des points de caractéristiques déjà gagnés par une créature sans la ramener au niveau 1 ; son utilisation doit être limitée et un objet rare obtenu en jouant doit permettre le même résultat ;
 * les vitesses de visualisation accélérées ×2 et ×4 des combats, tandis que ×1 reste gratuit ;
-* les extensions permanentes de capacité de créatures possédées.
+* les extensions permanentes de capacité de créatures possédées ;
+* la possibilité d’acheter des sacs augmentant uniquement la capacité de l’inventaire, également accessibles par le gameplay et sans puissance exclusive.
 
 La réinitialisation complète depuis le niveau 1 reste accessible gratuitement sans objet. Les vitesses accélérées changent uniquement la restitution en temps réel : elles ne modifient ni les 120 secondes de simulation, ni les calculs, la seed RNG, les statistiques, les événements, le résultat, les récompenses ou le coût en énergie.
 
@@ -251,7 +252,7 @@ Le projet doit éviter :
 
 ### 6.3. Évolutions non validées
 
-Les services de confort actuellement validés sont la redistribution limitée des points, les vitesses de visualisation ×2 et ×4 et les extensions permanentes de capacité de créatures. Les publicités, les passes, les abonnements, la monnaie premium, l’achat direct d’invocations et tout autre service non explicitement validé ne font pas partie du modèle initial.
+Les services de confort actuellement validés sont la redistribution limitée des points, les vitesses de visualisation ×2 et ×4, les extensions permanentes de capacité de créatures et la possibilité d’acheter des sacs d’inventaire également accessibles par le gameplay. Les publicités, les passes, les abonnements, la monnaie premium, l’achat direct d’invocations et tout autre service non explicitement validé ne font pas partie du modèle initial.
 
 Leur éventuelle introduction après le lancement nécessitera une nouvelle décision explicite et une vérification de leur compatibilité avec les principes d’équité, de transparence et de respect des joueurs.
 

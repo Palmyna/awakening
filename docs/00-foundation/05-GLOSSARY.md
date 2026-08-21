@@ -502,15 +502,17 @@ Un équipement est une catégorie d’objet. Tous les objets ne sont pas des éq
 
 **Domaine :** Objets, ressources, interface
 
-**Définition :** Espace consacré aux objets, aux ressources et aux autres éléments stockables du joueur.
+**Définition :** Espace consacré aux objets et autres éléments stockables du joueur. Son inventaire principal possède actuellement une capacité de référence de `40` emplacements, ajustable pendant le balancing.
 
-L’inventaire reste distinct du système de collection. Il ne constitue pas l’espace de consultation des créatures et des skins de carte collectionnés.
+L’inventaire reste distinct du système de collection. Les composants de fabrication utilisent un stockage séparé et illimité et ne consomment aucune place dans l’inventaire principal.
 
 ### Équipement
 
 **Domaine :** Progression, personnalisation
 
 **Définition :** Catégorie d’objet pouvant être placée dans un emplacement de l’ensemble d’équipement actif d’une instance afin de participer à sa personnalisation et à son fonctionnement.
+
+Chaque instance possède trois emplacements d’Artefacts et deux emplacements de Sources d’énergie. Tous les équipements peuvent être équipés par toutes les créatures ; un effet particulier peut néanmoins définir sa propre condition d’activation.
 
 **Variantes autorisées :**
 
@@ -521,13 +523,13 @@ L’inventaire reste distinct du système de collection. Il ne constitue pas l�
 
 **Domaine :** Équipements, fabrication
 
-**Définition :** L'une des deux catégories principales d'équipement actuellement envisagées. Un Artefact est principalement fabriqué à partir de composants selon une recette découverte ; plusieurs fabrications du même type peuvent produire des caractéristiques finales différentes.
+**Définition :** L’une des deux catégories d’équipement. Un Artefact est principalement fabriqué à partir de composants selon une recette découverte ; plusieurs fabrications du même type peuvent produire des propriétés finales différentes.
 
 ### Source d'énergie
 
 **Domaine :** Équipements, loot
 
-**Définition :** L'une des deux catégories principales d'équipement actuellement envisagées. Une Source d'énergie est obtenue directement comme loot ou récompense de combat et d'activité.
+**Définition :** L’une des deux catégories d’équipement. Une Source d’énergie est principalement obtenue comme loot ou récompense de combat et d’activité.
 
 Le terme doit être qualifié lorsque le contexte pourrait le confondre avec l'énergie probablement utilisée pour l'invocation ou avec la jauge d'énergie d'une Ultimate.
 
@@ -541,23 +543,53 @@ Le terme doit être qualifié lorsque le contexte pourrait le confondre avec l'�
 
 **Domaine :** Fabrication, loot
 
-**Définition :** Objet obtenu en jeu pouvant être combiné avec d'autres composants pour fabriquer un Artefact selon une recette.
+**Définition :** Élément obtenu en jeu pouvant être combiné avec d’autres composants pour fabriquer un Artefact selon une recette. Les composants utilisent un stockage séparé et illimité.
 
 ### Système d’équipement
 
 **Domaine :** Progression, personnalisation
 
-**Définition :** Système permettant de gérer, d’attribuer, de remplacer ou de retirer les équipements des créatures.
+**Définition :** Système permettant de gérer, d’attribuer, de remplacer, de transférer ou de retirer les équipements des créatures.
 
-Chaque instance possède un ensemble d’équipement actif composé de plusieurs objets répartis dans plusieurs emplacements.
+Chaque instance possède un ensemble actif de trois Artefacts et deux Sources d’énergie. Hors combat, les équipements sont transférables sans coût ni liaison permanente.
 
 ### iLvl
 
 **Domaine :** Équipements, progression
 
-**Définition :** Niveau de puissance propre, visible, d’un objet d’équipement.
+**Définition :** Estimation normalisée et visible de la puissance réelle d’un exemplaire précis d’équipement, calculée notamment à partir de ses caractéristiques, effets et rolls.
 
-L’iLvl possède un cap. Les valeurs, caps et règles détaillées appartiennent au document consacré aux objets.
+L’iLvl est distinct du niveau d’objet et de la rareté. Sa formule et ses pondérations restent à définir.
+
+### Niveau d’objet
+
+**Domaine :** Équipements, progression
+
+**Définition :** Niveau fixé lors de la génération ou de la fabrication d’un équipement à partir du niveau de compte actuel. Il détermine les plages de valeurs accessibles sans garantir les rolls obtenus.
+
+Le niveau d’objet reste ensuite définitif et ne progresse pas avec le compte.
+
+### Roll
+
+**Domaine :** Équipements, génération
+
+**Définition :** Valeur générée dans une plage autorisée pour une caractéristique ou un effet d’équipement.
+
+### Set d’équipement
+
+**Domaine :** Équipements, progression
+
+**Définition :** Ensemble avancé de pièces pouvant accorder des effets explicitement définis lorsque ses seuils sont atteints. Un set peut réunir des Artefacts, des Sources d’énergie ou les deux catégories.
+
+Une pièce précise de set possède une rareté fixe et ne peut pas être équipée plusieurs fois sur la même instance.
+
+### Sac
+
+**Domaine :** Inventaire, objets
+
+**Définition :** Objet augmentant la capacité de l’inventaire principal lorsqu’il occupe l’un des six emplacements de sacs du compte.
+
+Les sacs peuvent être obtenus par le gameplay et éventuellement proposés comme service de confort payant distinct de la boutique cosmétique, sans accorder de puissance de combat.
 
 ### Coffre
 
@@ -581,21 +613,23 @@ La présence d’un équipement dans un coffre reste une possibilité non valid�
 
 ### Rareté
 
-**Domaine :** Créatures et cosmétiques
+**Domaine :** Créatures, équipements et cosmétiques
 
-**Définition :** Notion qui doit toujours être qualifiée selon son domaine : **rareté d’une créature**, **rareté d’un skin de carte** ou **rareté d’un autre cosmétique**.
+**Définition :** Notion qui doit toujours être qualifiée selon son domaine : **rareté d’une créature**, **rareté d’un équipement**, **rareté d’un skin de carte** ou **rareté d’un autre cosmétique**.
 
 La rareté n’est pas automatiquement équivalente à la qualité.
 
 La rareté d’une créature appartient à sa famille et reste identique pour toutes ses formes et branches. Les raretés de créature validées sont **Rare**, **Épique**, **Légendaire** et **Mythique**. Elles représentent principalement l’obtention, la collection et le prestige, sans constituer une hiérarchie automatique de puissance.
 
+Pour un équipement standard, la rareté est générée par exemplaire et représente un potentiel, non une qualité absolue garantie. Une pièce précise de set possède au contraire une rareté fixe.
+
 ### Qualité
 
 **Domaine :** Équipements et objets
 
-**Définition :** Notion utilisée pour qualifier un équipement et, si cela est validé ultérieurement, d’autres catégories d’objets. Elle doit rester qualifiée tant que ses échelles et ses effets ne sont pas entièrement définis.
+**Définition :** Terme descriptif courant pouvant exprimer l’appréciation globale d’un exemplaire, sans constituer une propriété ou une échelle mécanique distincte.
 
-La qualité n’est pas automatiquement équivalente à la rareté.
+Le système d’équipement n’utilise aucun système séparé de qualité. La valeur réelle d’un exemplaire résulte de son niveau, de sa rareté, de ses propriétés, de ses effets, de ses rolls et de son iLvl.
 
 ### Build de créature
 
@@ -1061,7 +1095,7 @@ Le verbe « sélectionner » peut décrire le choix effectué dans un menu, mais
 
 **Définition :** Élément ou bénéfice remis au joueur à la suite d’une activité, d’un objectif, d’un événement ou d’un autre système prévu par le jeu.
 
-Certaines créatures et certains skins de carte peuvent être remis directement comme récompenses de gameplay lorsque cette méthode d’obtention est explicitement documentée. Cette possibilité ne confirme pas qu’un équipement ou un coffre puisse être remis directement comme récompense.
+Certaines créatures, certains skins de carte et certains équipements peuvent être remis directement comme récompenses de gameplay lorsque cette méthode d’obtention est explicitement documentée. La présence d’un coffre reste une possibilité non validée.
 
 ### Récompense ayant un effet sur la progression
 
@@ -1328,7 +1362,7 @@ Chaque rareté possède une valeur de conversion fixe différente. Cette monnaie
 
 Dans le modèle initial, la boutique permet notamment d’acheter directement contre de l’argent réel des paquets de skins de carte. Elle ne vend aucune créature, invocation, ressource de progression, équipement, avantage de combat ou autre forme de puissance.
 
-Les services payants de réinitialisation des points de caractéristiques et de vitesse de visualisation des combats restent distincts de la boutique cosmétique.
+Les services payants de réinitialisation des points de caractéristiques, de vitesse de visualisation des combats, d’extension de capacité de créatures et de sacs d’inventaire restent distincts de la boutique cosmétique.
 
 **Variante autorisée :** « boutique cosmétique » lorsqu’il est utile de rappeler explicitement son périmètre.
 

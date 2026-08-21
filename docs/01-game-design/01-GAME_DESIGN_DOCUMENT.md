@@ -892,7 +892,8 @@ Les services de confort actuellement validés en dehors de la boutique cosmétiq
 
 * la réinitialisation payante des points de caractéristiques déjà gagnés sans retour au niveau 1, sans avantage de potentiel par rapport aux méthodes gratuites ;
 * les vitesses de visualisation ×2 et ×4 des combats, qui accélèrent uniquement la restitution en temps réel et n’influencent ni la simulation, ni le résultat, ni les récompenses ;
-* les extensions permanentes de capacité de créatures possédées, qui n’accordent aucune puissance et ne remplacent pas la capacité gratuite.
+* les extensions permanentes de capacité de créatures possédées, qui n’accordent aucune puissance et ne remplacent pas la capacité gratuite ;
+* la possibilité d’acheter des sacs augmentant uniquement la capacité de l’inventaire, également accessibles par le gameplay et sans puissance exclusive.
 
 Cette liste décrit les services actuellement validés sans constituer une liste définitivement exhaustive. Tout nouveau service exige une décision explicite et doit respecter les garde-fous Free-to-Play et non-Pay-to-Win.
 
@@ -1091,7 +1092,7 @@ Le GDD dépend des documents spécialisés suivants pour les détails :
 * [`05-ELEMENTS.md`](./05-ELEMENTS.md) — éléments des formes et capacités, résistances, immunités et lisibilité élémentaire ;
 * [`06-COMBAT_EFFECTS.md`](./06-COMBAT_EFFECTS.md) — lifecycle, application, réapplication, retrait, effets périodiques, contrôles et protections ;
 * [`07-EVOLUTIONS.md`](./07-EVOLUTIONS.md) — conditions, branches et effets des évolutions ;
-* [`08-ITEMS.md`](./08-ITEMS.md) — équipements et objets, dont l’objet de réinitialisation ;
+* [`08-ITEMS.md`](./08-ITEMS.md) — objets, équipements, génération, fabrication, inventaire et sacs ;
 * [`09-GACHA.md`](./09-GACHA.md) — règles de l’invocation de créature ;
 * [`10-PROGRESSION.md`](./10-PROGRESSION.md) — expérience, niveaux, étoiles, énergie, réinitialisations et progression du compte ;
 * [`11-COLLECTION.md`](./11-COLLECTION.md) — gestion des instances, encyclopédie et capacité ;
@@ -1113,7 +1114,8 @@ Les questions suivantes ne bloquent pas le fonctionnement global décrit par le 
 * la courbe d’expérience sans niveau maximal, les règles d’arrondi et la validation finale des paramètres actuels d’XP et de points par niveau ;
 * les multiplicateurs et exigences exacts des quinze montées d’étoiles ;
 * la formule exacte du score de Puissance ;
-* les emplacements, règles et caps d’iLvl détaillés de l’équipement ;
+* les valeurs, pools, raretés, rolls, tables de loot, recettes, sets et formule d’iLvl des équipements ;
+* les tailles, sources, probabilités et prix éventuels des sacs ;
 * les prix et tailles des extensions permanentes de capacité ;
 * les récompenses et usages secondaires du niveau de compte ;
 * les coûts, la régénération et l’accumulation exacte de l’énergie ;

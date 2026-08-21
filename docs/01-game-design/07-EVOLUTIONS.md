@@ -143,7 +143,7 @@ Une transition peut exiger qu’un équipement précis soit réellement équipé
 * est évalué comme une condition standard ;
 * n’est pas consommé par l’évolution.
 
-Dans les catégories actuellement envisagées, cette règle peut concerner un Artefact ou une Source d’énergie. Les équipements concrets restent à définir dans les données des familles et des objets.
+Cette règle peut concerner un Artefact ou une Source d’énergie. Les équipements concrets restent à définir dans les données des familles et des objets.
 
 ### 6.2. Objet consommable comme déclencheur
 

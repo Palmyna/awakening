@@ -130,6 +130,8 @@ La formule exacte reste ouverte.
 
 Le compte possède un niveau numérique et gagne de l’expérience lorsqu’une activité est accomplie. Cette progression est plus lente que celle des créatures, représente l’avancement général du joueur, accorde une récompense par niveau et peut participer à certains déblocages secondaires.
 
+Lorsqu’un équipement est généré ou fabriqué, son niveau d’objet correspond au niveau du compte à cet instant et reste ensuite fixe. Ce niveau détermine les plages de génération accessibles, sans garantir les rolls obtenus. Les règles détaillées appartiennent au [référentiel Objets et équipements](./08-ITEMS.md).
+
 Le mode Histoire utilise une énergie consommée à l’entrée d’un niveau. Hors ligne, seule cette énergie se régénère passivement ; les créatures et le compte ne gagnent aucune progression automatique.
 
 ## 10. Éléments à préciser ultérieurement
@@ -144,4 +146,5 @@ Le mode Histoire utilise une énergie consommée à l’entrée d’un niveau. H
 * La méthode d’obtention et le rythme de l’objet de réinitialisation.
 * La limite et le prix du service payant de redistribution.
 * Les récompenses et usages secondaires du niveau de compte.
+* La courbe reliant le niveau du compte aux plages de génération des équipements.
 * Les coûts, la régénération et l’accumulation exacte de l’énergie.

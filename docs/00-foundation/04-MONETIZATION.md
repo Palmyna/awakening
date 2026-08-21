@@ -43,7 +43,7 @@ Au lancement :
 
 La boutique est exclusivement cosmétique. Elle ne vend aucune créature, aucune invocation, aucune ressource de progression, aucun équipement, aucun avantage de combat et aucune autre forme de puissance.
 
-Trois services de confort, distincts de la boutique cosmétique, sont actuellement validés : la réinitialisation payante des points de caractéristiques déjà gagnés, les vitesses de visualisation accélérées des combats et les extensions permanentes de capacité de créatures possédées. Ils ne doivent accorder aucune puissance ni influencer le résultat ou les récompenses d’un combat.
+Quatre services de confort, distincts de la boutique cosmétique, sont actuellement validés : la réinitialisation payante des points de caractéristiques déjà gagnés, les vitesses de visualisation accélérées des combats, les extensions permanentes de capacité de créatures possédées et la possibilité d’acheter des sacs augmentant la capacité de l’inventaire. Ils ne doivent accorder aucune puissance ni influencer le résultat ou les récompenses d’un combat.
 
 Les services de confort actuellement validés ne constituent pas une liste définitivement exhaustive. D’autres services de confort pourront être envisagés ultérieurement s’ils font l’objet d’une décision explicite et respectent les principes fondamentaux de Project Awakening : pas de puissance exclusive payante, pas d’avantage compétitif indispensable et pas d’obligation de payer pour progresser normalement.
 
@@ -81,7 +81,8 @@ Les services de confort validés dans le modèle initial sont strictement limit�
 
 * la réinitialisation payante redistribue des points déjà gagnés sans accorder de niveau, d’expérience, de ressource ou de potentiel supplémentaire ;
 * les vitesses ×2 et ×4 accélèrent uniquement la visualisation du combat en temps réel, sans modifier sa simulation ;
-* une extension de capacité ajoute définitivement un nombre fixe de places de créatures possédées sans modifier la capacité gratuite ni la puissance des créatures.
+* une extension de capacité ajoute définitivement un nombre fixe de places de créatures possédées sans modifier la capacité gratuite ni la puissance des créatures ;
+* un sac acheté augmente uniquement la capacité de l’inventaire, n’accorde aucune puissance ou équipement exclusif et reste également accessible par le gameplay.
 
 Une dépense effectuée dans la boutique cosmétique ne doit produire directement ou indirectement aucune créature, invocation, ressource de progression, équipement, avantage de combat ou autre forme de puissance.
 
@@ -101,7 +102,8 @@ Le modèle de lancement comprend uniquement :
 * un catalogue cosmétique permanent et limité utilisant cette monnaie ;
 * un service payant strictement limité permettant de redistribuer les points de caractéristiques déjà gagnés par une créature sans la ramener au niveau 1 ;
 * des paliers payants ×2 et ×4 de vitesse de visualisation des combats, en complément du palier ×1 gratuit ;
-* des extensions payantes permanentes de la capacité de créatures possédées.
+* des extensions payantes permanentes de la capacité de créatures possédées ;
+* la possibilité de proposer des sacs payants augmentant uniquement la capacité de l’inventaire, en complément des sacs obtenus par le gameplay.
 
 Ce périmètre doit rester compatible avec les capacités humaines, techniques et financières du projet.
 
@@ -198,6 +200,28 @@ Lorsqu’un compte dépasse sa capacité, les nouvelles instances ne sont jamais
 
 * Les tailles exactes des extensions.
 * Le prix de chaque extension.
+* La présentation commerciale et les confirmations d’achat.
+
+### 4.6. Exception limitée — sacs et capacité d’inventaire
+
+Le système d’inventaire prévoit six emplacements de sacs. Les sacs sont des objets réels dont la capacité augmente l’inventaire principal lorsqu’ils sont équipés.
+
+Des sacs peuvent être proposés comme service de confort payant en plus de leurs méthodes d’obtention par le gameplay. Cette possibilité reste distincte de la boutique cosmétique.
+
+Un sac payant doit respecter toutes les limites suivantes :
+
+* il n’augmente aucune caractéristique et ne modifie aucune règle de combat ;
+* il n’accorde aucun équipement de combat exclusif ;
+* il ne fournit aucune puissance inaccessible gratuitement ;
+* il sert uniquement au confort de gestion de l’inventaire ;
+* les sacs restent disponibles par le gameplay ;
+* un joueur Free-to-Play peut progresser normalement sans achat.
+
+**Éléments à préciser ultérieurement :**
+
+* Les tailles des sacs proposés par le gameplay ou par paiement.
+* Les méthodes et rythmes d’obtention gratuite.
+* Les prix éventuels.
 * La présentation commerciale et les confirmations d’achat.
 
 ## 5. Acquisition des skins de carte
@@ -396,6 +420,7 @@ Les prix seront établis après :
 * Le prix du service limité de réinitialisation des points de caractéristiques.
 * Les prix des vitesses de visualisation ×2 et ×4 ainsi que de leur upgrade.
 * Les prix et tailles des extensions permanentes de capacité.
+* Les prix éventuels des sacs proposés comme service de confort.
 
 ## 9. Transparence et protection des joueurs
 
@@ -453,6 +478,14 @@ Avant l’achat d’une extension permanente de capacité, le joueur doit égale
 * la distinction entre cette extension et la capacité gratuite recalculée pour tous les comptes ;
 * le fait qu’une créature obtenue au-delà de la capacité n’est jamais perdue.
 
+Avant l’achat d’un sac, le joueur doit également connaître :
+
+* la capacité exacte apportée par le sac ;
+* son prix réel ;
+* le fonctionnement des six emplacements de sacs ;
+* le fait que des sacs sont également obtenables par le gameplay ;
+* le fait que cette capacité n’accorde aucune puissance de combat.
+
 **Question ouverte :**
 
 * L’ajout éventuel de limites volontaires configurables par le joueur, selon les capacités techniques du projet.
@@ -467,7 +500,7 @@ L’achat direct d’invocations pourra uniquement être réévalué après la d
 
 Une éventuelle décision future en ce sens ne devra jamais intégrer les invocations à la boutique cosmétique ni confondre leur parcours avec celui des paquets de skins de carte.
 
-En dehors des services actuellement validés de réinitialisation, de vitesses de visualisation et d’extensions permanentes de capacité, d’autres services de confort pourront éventuellement être étudiés, mais ils ne devront :
+En dehors des services actuellement validés de réinitialisation, de vitesses de visualisation, d’extensions permanentes de capacité de créatures et de sacs d’inventaire, d’autres services de confort pourront éventuellement être étudiés, mais ils ne devront :
 
 * conférer aucune puissance exclusive ;
 * supprimer aucune étape essentielle du jeu ;
@@ -545,7 +578,8 @@ La monétisation doit être évaluée à partir :
 * de la vérification qu’aucun achat cosmétique n’influence directement ou indirectement la progression ;
 * de la vérification que le service de réinitialisation n’accorde aucun point, aucune expérience, aucun potentiel supplémentaire et aucun résultat inaccessible gratuitement ;
 * de la vérification que les vitesses de visualisation payantes n’influencent jamais la simulation, le résultat, les récompenses ou le coût en énergie ;
-* de la vérification que les extensions de capacité n’accordent aucune puissance, ne remplacent pas la capacité gratuite et ne conditionnent jamais la conservation d’une créature obtenue.
+* de la vérification que les extensions de capacité n’accordent aucune puissance, ne remplacent pas la capacité gratuite et ne conditionnent jamais la conservation d’une créature obtenue ;
+* de la vérification que les sacs payants restent également obtenables par le gameplay, servent uniquement à la gestion de l’inventaire et n’accordent aucune puissance ou équipement exclusif.
 
 Une offre doit être refusée lorsqu’elle contrevient aux principes d’équité, de transparence ou de respect des joueurs, même si elle est rentable.
 

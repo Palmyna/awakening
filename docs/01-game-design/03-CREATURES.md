@@ -376,13 +376,13 @@ Des créatures déjà évoluées peuvent exister dans le monde. Toute nouvelle i
 
 ### 7.1. Ensemble d’équipement
 
-Chaque instance possède son propre ensemble d’équipement actif, composé de plusieurs objets répartis dans plusieurs emplacements.
+Chaque instance possède son propre ensemble d’équipement actif, composé exactement de trois emplacements d’Artefacts et deux emplacements de Sources d’énergie.
 
-La direction actuelle envisage environ trois Artefacts et deux Sources d'énergie, sans valider le nombre exact ni la nature définitive des emplacements. Les deux catégories utilisent des sets distincts.
+Toutes les créatures peuvent équiper tous les objets correspondant à ces emplacements. Un effet peut définir sa propre condition d’activation sans empêcher l’équipement de l’objet. Hors combat, les équipements sont transférables entre instances sans coût ni liaison permanente.
 
 Cet ensemble appartient à l’instance, non à sa famille ou à sa forme. Il est conservé lors d’une évolution et n’est pas modifié par le choix d’une ancienne apparence cosmétique.
 
-Les emplacements, restrictions, statistiques, affixes, raretés, améliorations, sets, iLvl, caps et règles de loot appartiennent au [document Objets et équipements](./08-ITEMS.md).
+Les règles de génération, caractéristiques, effets, raretés, rolls, sets, niveau d’objet, iLvl, inventaire et loot appartiennent au [document Objets et équipements](./08-ITEMS.md).
 
 ### 7.2. Surnom, tags et verrouillage
 
@@ -486,7 +486,7 @@ Les paramètres et contenus encore ouverts sont maintenus dans leurs documents s
 * la validation finale des cinq points par niveau ;
 * les multiplicateurs et exigences des étoiles ;
 * la formule du score de Puissance ;
-* les propriétés détaillées des équipements et les caps d’iLvl ;
+* les propriétés concrètes des équipements, leurs règles de génération et la formule de l’iLvl ;
 * les probabilités et garanties d’invocation ;
 * les conditions propres aux évolutions concrètes ;
 * la grammaire de recherche et les parcours d’interface ;

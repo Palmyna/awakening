@@ -132,7 +132,7 @@ Le modèle économique doit financer le développement sans faire des achats la 
 
 Les joueurs doivent obtenir principalement les créatures et les invocations grâce au jeu. La boutique est exclusivement cosmétique, et la monétisation repose avant tout sur les skins de carte utilisant des illustrations alternatives, afin de préserver un environnement compétitif équitable.
 
-Trois services de confort sont actuellement validés en dehors de la boutique cosmétique : la redistribution payante de points déjà gagnés sans recommencer la progression en niveaux, les vitesses de visualisation accélérées ×2 et ×4 des combats et les extensions permanentes de capacité de créatures possédées. Aucun ne doit accorder de puissance inaccessible gratuitement ni modifier le résultat ou les récompenses d’un combat.
+Quatre services de confort sont actuellement validés en dehors de la boutique cosmétique : la redistribution payante de points déjà gagnés sans recommencer la progression en niveaux, les vitesses de visualisation accélérées ×2 et ×4 des combats, les extensions permanentes de capacité de créatures possédées et la possibilité d’acheter des sacs d’inventaire également accessibles par le gameplay. Aucun ne doit accorder de puissance inaccessible gratuitement ni modifier le résultat ou les récompenses d’un combat.
 
 ### Conséquences sur la conception
 

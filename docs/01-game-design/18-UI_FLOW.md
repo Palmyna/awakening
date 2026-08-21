@@ -106,7 +106,7 @@ L’interface doit permettre d’accéder aux actions validées :
 
 Les actions irréversibles ou destructives doivent disposer d’une présentation et de confirmations adaptées. Le détail de ces protections reste à définir.
 
-La gestion des équipements s'effectue depuis la fiche de l'instance. La disposition des catégories et le nombre exact d'emplacements restent à définir.
+La gestion des équipements s’effectue depuis la fiche de l’instance. Elle distingue les trois emplacements d’Artefacts et les deux emplacements de Sources d’énergie et permet, hors combat, d’équiper, déséquiper et transférer gratuitement les objets entre instances.
 
 ## 6. Liste des instances
 
@@ -163,11 +163,17 @@ L’obtention d’une instance doit permettre d’identifier sa famille, sa rare
 
 ## 11. Fabrication et recettes
 
-Le système d'établi, ou équivalent, doit permettre de sélectionner des composants et de fabriquer des Artefacts. Une bibliothèque ou un registre de plans conserve les recettes découvertes et permet de reproduire le même type d'Artefact, dont les caractéristiques finales peuvent varier.
+Le système d’établi, ou équivalent, doit permettre de sélectionner des composants et de fabriquer des Artefacts. Une bibliothèque ou un registre de plans conserve les recettes découvertes et permet de reproduire le même type d’Artefact, dont les propriétés finales peuvent varier.
 
-La disposition, le nombre d'ingrédients, le traitement d'une combinaison invalide, les confirmations et la présentation des rolls restent à définir.
+Une combinaison invalide ne crée aucun objet et ne consomme aucun composant ; un feedback l’indique au joueur. La disposition, le nombre d’ingrédients, le wording exact, les confirmations et la présentation des rolls restent à définir.
 
-## 12. Éléments à préciser ultérieurement
+## 12. Inventaire et sacs
+
+L’interface distingue l’inventaire principal limité du stockage illimité des composants. La capacité de base actuellement affichée est de `40` emplacements, valeur encore ajustable pendant les tests.
+
+La gestion des sacs présente les six emplacements dédiés, la capacité apportée par chacun et la capacité totale obtenue. Un sac reçu est automatiquement équipé lorsqu’un emplacement est libre ; sinon, il rejoint l’inventaire principal. Le remplacement et le déséquipement doivent signaler clairement leurs conséquences sur la capacité et les places disponibles.
+
+## 13. Éléments à préciser ultérieurement
 
 * L’architecture de navigation.
 * La disposition et le nombre d’écrans ou d’onglets.
@@ -178,6 +184,8 @@ La disposition, le nombre d'ingrédients, le traitement d'une combinaison invali
 * Les informations visibles dans chaque variante contextuelle de carte.
 * La présentation graphique et le contenu rédactionnel final des tooltips contextuels.
 * Le wording et le rendu graphique exacts des icônes, compteurs, timers, feedbacks de combat et Critiques.
+* La présentation détaillée de l’inventaire, du stockage des composants, de l’iLvl, du niveau d’objet et des comparaisons d’équipement.
+* Les protections exactes lorsqu’un sac ne peut pas être déséquipé faute de place disponible.
 * La liste définitive des statistiques du résumé post-combat.
 * Les tutoriels et leur ordre exact.
 * Les animations d’invocation, d’évolution et de montée d’étoile.

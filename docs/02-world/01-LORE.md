@@ -339,11 +339,11 @@ Le vocabulaire narratif définitif de ce processus sera établi dans [`02-CREATU
 
 Les objets du nouveau multivers peuvent provenir de multiples origines : humains actuels, peuples ou créatures, créations de la Matrice, matériaux et phénomènes naturels, technologies de l'IA, Correcteurs ou vestiges authentiques de l'ancienne humanité. Un vestige ancien n'est pas automatiquement plus puissant qu'un objet récent.
 
-Les deux catégories principales d'équipement actuellement envisagées sont les **Artefacts** et les **Sources d'énergie**. Les Artefacts sont principalement fabriqués à partir de composants. Les Sources d'énergie sont des concentrations stabilisées de différentes énergies du multivers ; elles peuvent être liées aux créatures, aux environnements, à des phénomènes, aux créations de la Matrice ou aux systèmes de l'IA, et être obtenues directement au cours des combats et activités.
+Les deux catégories d'équipement sont les **Artefacts** et les **Sources d'énergie**. Les Artefacts sont principalement fabriqués à partir de composants. Les Sources d'énergie sont des concentrations stabilisées de différentes énergies du multivers ; elles peuvent être liées aux créatures, aux environnements, à des phénomènes, aux créations de la Matrice ou aux systèmes de l'IA, et être obtenues directement au cours des combats et activités.
 
 Selon l'objet, l'équiper peut signifier le porter, l'utiliser, l'associer à la créature, entrer en résonance avec lui ou bénéficier de ses propriétés. Cette souplesse narrative n'impose jamais de le faire apparaître sur l'illustration de la créature.
 
-Ces bases narratives n'imposent ni emplacements, ni statistiques, ni affixes, ni raretés, ni règles de sets. Ces décisions fonctionnelles appartiennent au [draft Objets et équipements](../01-game-design/08-ITEMS.md).
+Ces bases narratives n'imposent ni emplacements, ni statistiques, ni affixes, ni raretés, ni règles de sets. Ces décisions fonctionnelles appartiennent au [référentiel Objets et équipements](../01-game-design/08-ITEMS.md).
 
 ### 7.4. Éléments et Origines
 

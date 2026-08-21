@@ -275,7 +275,7 @@ L’objectif est de favoriser la créativité des joueurs et la diversité des b
 
 Chaque instance possède un ensemble d’équipement actif composé de plusieurs objets répartis dans plusieurs emplacements.
 
-Les objets d’équipement participent à la personnalisation de l’instance et possèdent notamment un iLvl visible soumis à un cap. Le nombre et les types d’emplacements, les statistiques, les affixes, les raretés, les améliorations, les sets, les caps d’iLvl et les règles de loot appartiennent au [draft consacré aux objets et équipements](../01-game-design/08-ITEMS.md).
+Chaque instance possède trois emplacements d’Artefacts et deux emplacements de Sources d’énergie. Les objets d’équipement participent à sa personnalisation et possèdent notamment un niveau d’objet lié au niveau du compte lors de leur génération ainsi qu’un iLvl visible estimant la puissance réelle de l’exemplaire. Les règles détaillées appartiennent au [référentiel Objets et équipements](../01-game-design/08-ITEMS.md).
 
 ## 15. Direction artistique
 
@@ -332,7 +332,8 @@ Les services de confort actuellement validés en dehors de la boutique cosmétiq
 
 * la redistribution payante des points de caractéristiques déjà gagnés par une créature, sans retour au niveau 1, avec une utilisation limitée et un objet rare obtenu en jouant fournissant le même résultat ;
 * l’accès aux vitesses de visualisation accélérées des combats, avec ×1 gratuit, ×2 comme premier palier payant et ×4 comme palier supérieur payant ;
-* l’extension permanente de la capacité de créatures possédées.
+* l’extension permanente de la capacité de créatures possédées ;
+* la possibilité d’acheter des sacs augmentant uniquement la capacité de l’inventaire, également obtenables par le gameplay et sans puissance de combat exclusive.
 
 Les vitesses accélérées modifient uniquement la restitution du combat en temps réel. Elles ne changent ni la simulation, ni sa seed RNG, ni ses calculs, ses statistiques, ses événements, son résultat, ses récompenses ou son coût en énergie. Le joueur peut acheter directement ×4 ou payer seulement la différence après ×2 ; les prix restent à définir.
 

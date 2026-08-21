@@ -1,119 +1,353 @@
 # Project Awakening — Objets et équipements
 
-**Statut :** Draft de conception — base initiale à compléter
+**Statut :** Rédigé — référence actuelle, à maintenir à jour
 
 ## 1. Rôle et périmètre du document
 
-Ce document rassemble les décisions validées concernant les objets, l’inventaire et les équipements des créatures.
+Ce document constitue la référence fonctionnelle du système d’objets, d’équipements, de fabrication et d’inventaire.
 
-Il ne définit pas encore les tables de loot, les affixes, les valeurs, les raretés, les emplacements exacts ni les règles d'amélioration et de sets.
+Il définit les catégories d’équipement, les règles d’attribution et de génération, le rôle du niveau d’objet et de l’iLvl, les principes de loot et de recyclage, les sets, la capacité d’inventaire et les sacs.
 
-## 2. Objets et inventaire
+Il ne constitue ni une table de loot, ni un catalogue d’objets concrets, ni un document d’équilibrage. Les valeurs, probabilités, pools, recettes et contenus précis appartiendront aux données de production correspondantes.
 
-Un objet est un élément pouvant être obtenu et généralement stocké dans l’inventaire ou utilisé par un système du jeu.
+## 2. Terminologie et espaces de stockage
 
-Un objet d’équipement est un objet individuel. Lorsqu’il n’est pas équipé, il appartient à l’inventaire.
+Un **objet** est un élément pouvant être obtenu, stocké ou utilisé par un système du jeu.
 
-L’inventaire reste distinct du système de collection des créatures et des skins de carte.
+Un **équipement** est un objet pouvant être équipé sur une instance de créature. Lorsqu’il n’est pas équipé, il appartient au joueur et est stocké dans l’inventaire principal.
+
+L’inventaire d’objets reste distinct :
+
+* de la gestion des instances de créatures ;
+* de l’encyclopédie des créatures ;
+* de la collection des skins de carte.
+
+Les composants de fabrication utilisent un stockage séparé de l’inventaire principal, selon les règles de la section 12.
 
 ## 3. Ensemble d’équipement d’une instance
 
-Chaque instance possède son propre ensemble d’équipement actif.
+Chaque instance possède son propre ensemble d’équipement actif, composé exactement de :
 
-Cet ensemble :
+* **3 emplacements d’Artefacts** ;
+* **2 emplacements de Sources d’énergie**.
 
-* comporte plusieurs objets ;
-* utilise plusieurs emplacements ;
-* appartient à l’instance, non à sa famille ou à sa forme ;
-* est conservé lors d’une évolution ;
-* n’est pas modifié par le choix d’une ancienne apparence cosmétique.
+Il n’existe pas actuellement de sous-types d’emplacements supplémentaires.
 
-Deux instances d’une même famille peuvent utiliser des équipements entièrement différents.
+L’ensemble d’équipement appartient à l’instance, non à sa famille, à sa forme mécanique, à son skin ou à l’apparence affichée. Deux instances d’une même famille peuvent utiliser des équipements entièrement différents.
 
-Les équipements sont gérés depuis la fiche de la créature. Ils ne sont pas automatiquement représentés sur son illustration ou sa carte.
+Lors d’une évolution, les équipements restent équipés sur la même instance. Afficher ensuite une ancienne forme comme apparence cosmétique ne modifie pas cet ensemble.
 
-## 4. Catégories principales envisagées
+Les équipements ne sont pas automatiquement représentés sur l’illustration ou la carte de la créature.
 
-La direction actuelle envisage deux catégories principales d'équipement :
+## 4. Catégories d’équipement
+
+Les deux catégories d’équipement sont :
 
 * les **Artefacts** ;
-* les **Sources d'énergie**.
+* les **Sources d’énergie**.
 
-La répartition envisagée est d'environ trois Artefacts et deux Sources d'énergie par instance. Cette direction ne valide ni le nombre exact ni la nature définitive des emplacements.
+Les Sources d’énergie sont principalement orientées vers les caractéristiques principales et les effets directement liés au fonctionnement fondamental de la créature.
 
-Chaque catégorie utilise ses propres sets. Un set appartient à une seule catégorie et ne mélange pas Artefacts et Sources d'énergie. Les effets, seuils et règles exactes de ces sets restent à définir.
+Les Artefacts sont principalement orientés vers les caractéristiques secondaires et des effets plus spécialisés ou spécifiques.
 
-## 5. Sources d'énergie
+Cette répartition définit l’identité dominante des catégories. Un objet concret peut créer une exception locale lorsque son design le justifie explicitement, sans modifier la direction générale du système.
 
-Les Sources d'énergie sont obtenues directement comme loot ou récompenses de combat et d'activité. Leur acquisition soutient une boucle de farming et la recherche de meilleurs rolls.
+## 5. Règles d’équipement
 
-Leur lien fonctionnel éventuel avec l'énergie probablement utilisée pour l'invocation n'est pas décidé.
+### 5.1. Compatibilité universelle
 
-## 6. Artefacts et fabrication
+Toutes les créatures peuvent équiper tous les équipements correspondant à un emplacement disponible. Il n’existe aucune restriction générale fondée sur l’élément, la famille, la forme ou l’identité de la créature.
 
-Les Artefacts sont principalement fabriqués dans un établi ou un système équivalent en combinant des composants.
+Un effet d’équipement peut néanmoins posséder sa propre condition d’activation. Une créature ne satisfaisant pas cette condition peut équiper l’objet, mais ne bénéficie pas de l’effet concerné.
 
-Les recettes sont à découvrir en jeu. Une recette découverte est mémorisée dans une bibliothèque ou un registre de plans du compte. Réutiliser une même recette permet de produire le même type d'Artefact, tandis que ses caractéristiques finales peuvent varier entre plusieurs fabrications.
+La possibilité d’équiper un objet et l’éligibilité à chacun de ses effets sont donc deux vérifications distinctes.
 
-Le nombre exact d'ingrédients, le traitement d'une combinaison invalide et la consommation éventuelle de composants lors d'un échec restent ouverts.
+### 5.2. Gestion et transfert
 
-## 7. Philosophie de loot et farming
+Hors combat, un équipement peut être équipé, déséquipé ou transféré entre les instances du joueur sans coût ni pénalité.
 
-Le système vise une philosophie de loot inspirée des Hack'n Slash : rejouer des combats pour obtenir des composants et des Sources d'énergie, fabriquer des Artefacts et rechercher de meilleurs rolls.
+Il n’existe aucun système de liaison permanente de type *bind on equip*. Un exemplaire individuel ne peut toutefois être équipé que par une seule instance à la fois.
 
-Les combats du mode Histoire peuvent être rejoués et participent à cette boucle de farming avec les autres activités pertinentes. Les tables, quantités et rythmes de récompenses restent à définir.
+### 5.3. Exemplaires identiques
 
-## 8. iLvl
+Plusieurs exemplaires identiques d’un équipement standard peuvent être équipés simultanément sur une même instance si le joueur les possède réellement.
 
-Chaque objet d’équipement possède un iLvl visible représentant son niveau de puissance propre.
+Une pièce précise appartenant à un set constitue une exception : la même pièce ne peut pas être équipée plusieurs fois sur la même instance. Des pièces différentes d’un même set peuvent naturellement être réunies.
 
-L’iLvl possède un cap. Sa valeur exacte, ses caps et sa relation avec les autres propriétés d’un objet restent à définir.
+## 6. Sources d’énergie
 
-## 9. Objets et évolutions
+Les Sources d’énergie sont principalement obtenues comme :
+
+* loot de combat ;
+* récompenses d’activité ;
+* autres récompenses pertinentes du jeu.
+
+Elles participent à la boucle de farming et à la recherche de meilleurs exemplaires et rolls.
+
+Une Source d’énergie inutilisée peut notamment :
+
+* être équipée ;
+* être vendue contre une petite quantité de monnaie soft ;
+* servir de composant dans une recette d’Artefact lorsque cette recette le prévoit.
+
+Une recette peut demander une Source précise, un type de Source ou aucune Source. Toutes les recettes d’Artefacts n’en nécessitent donc pas.
+
+## 7. Artefacts et fabrication
+
+### 7.1. Recettes et bibliothèque de compte
+
+Les Artefacts sont principalement obtenus par fabrication dans un établi ou un système équivalent.
+
+Le joueur place plusieurs composants. Certaines combinaisons correspondent à une recette valide. Une recette découverte est mémorisée dans une bibliothèque commune au compte, consultable et réutilisable.
+
+Une même recette valide produit toujours le même **type d’Artefact**. Chaque fabrication crée néanmoins un nouvel exemplaire dont les propriétés variables sont générées immédiatement. La recette peut influencer ou limiter les raretés, caractéristiques, effets et rolls accessibles.
+
+### 7.2. Résolution d’une combinaison
+
+Si la combinaison ne correspond à aucune recette valide :
+
+* aucun objet n’est créé ;
+* aucun composant n’est consommé ;
+* un feedback signale l’absence de recette valide correspondante.
+
+Le wording et la présentation exacts de ce feedback appartiennent à l’UI.
+
+Si la combinaison correspond à une recette valide :
+
+1. les composants sont consommés ;
+2. l’Artefact est généré ;
+3. toutes ses propriétés variables sont fixées immédiatement.
+
+### 7.3. Dissolution
+
+Un Artefact inutile peut être dissous. Cette action :
+
+* détruit définitivement l’Artefact ;
+* fournit exactement **un composant** ;
+* ne fournit jamais une Source d’énergie ;
+* ne garantit jamais la récupération complète ou équivalente de ses matériaux de fabrication.
+
+Une Source d’énergie utilisée comme composant ne peut donc pas être récupérée par la dissolution de l’Artefact obtenu. Les règles déterminant le composant récupéré restent à définir.
+
+## 8. Génération et puissance d’un équipement
+
+### 8.1. Niveau d’objet
+
+Lorsqu’un équipement est généré ou fabriqué, son **niveau d’objet** correspond au niveau du compte à cet instant.
+
+Ce niveau est fixé définitivement. Il ne progresse pas lorsque le compte gagne ensuite des niveaux et ne peut pas être amélioré. Obtenir le potentiel des niveaux de compte plus élevés demande de looter ou fabriquer de nouveaux équipements.
+
+Le niveau d’objet ne fixe pas directement les valeurs obtenues. Il définit les plages de valeurs accessibles lors de la génération. Deux objets de même niveau peuvent donc obtenir des rolls différents.
+
+Les bornes minimales et maximales peuvent évoluer par paliers : plusieurs niveaux de compte peuvent partager les mêmes plages avant une nouvelle progression.
+
+### 8.2. Courbe de potentiel
+
+La progression du potentiel des futurs équipements doit rester :
+
+* très lente aux faibles niveaux, lorsque les niveaux de compte sont fréquents ;
+* progressivement plus perceptible aux niveaux élevés, lorsque chaque niveau demande davantage d’investissement.
+
+Cette direction ne valide aucune formule ni aucun palier numérique et ne doit pas provoquer une inflation incontrôlée de la puissance.
+
+### 8.3. Déblocage progressif de la complexité
+
+Le niveau de compte peut débloquer progressivement des couches de génération :
+
+* les premiers équipements peuvent principalement fournir des caractéristiques simples ;
+* des effets plus complexes peuvent devenir accessibles pendant la progression intermédiaire ;
+* les objets de set peuvent apparaître dans la progression avancée.
+
+Les niveaux parfois utilisés pour illustrer ces étapes, notamment `20` ou `50`, ne constituent pas des seuils validés.
+
+## 9. Rareté, propriétés et rolls
+
+### 9.1. Équipements standards
+
+Pour un équipement standard, la rareté est générée lors de la création de chaque exemplaire. Un même type d’Artefact ou de Source d’énergie peut donc exister sous plusieurs raretés.
+
+La rareté représente principalement :
+
+* la difficulté ou la fréquence d’obtention ;
+* le potentiel global de l’objet ;
+* l’accès possible à davantage de propriétés ou d’effets ;
+* des effets ou niveaux d’effets potentiellement plus intéressants.
+
+Une rareté élevée ne garantit pas une bonne adéquation au build ni de bons rolls. Un objet moins rare peut rester préférable pour un usage donné.
+
+Il n’existe aucune propriété distincte de **qualité d’objet**. La valeur réelle d’un exemplaire résulte déjà de son niveau, de sa rareté, de ses caractéristiques, de ses effets, de ses rolls et de son iLvl.
+
+### 9.2. Caractéristiques et effets
+
+Les caractéristiques d’un équipement peuvent être générées parmi un pool explicitement autorisé pour cet objet. La rareté peut notamment influencer le nombre de propriétés et les possibilités accessibles.
+
+Un équipement peut également fournir des effets plus complexes. Certains effets sont fixes ; d’autres contiennent une valeur variable, qui constitue alors un roll soumis aux règles de génération de l’objet.
+
+Les pools, incompatibilités éventuelles, valeurs et effets disponibles doivent être définis par le design de l’objet, de la recette ou du set concerné.
+
+### 9.3. Cumul des bonus
+
+Les bonus compatibles fournis par plusieurs équipements se cumulent de manière additive. Cette règle s’applique aux caractéristiques et aux effets numériques compatibles.
+
+Il n’existe pas de règle générique neutralisant silencieusement deux effets identiques. Les objets doivent être conçus et équilibrés en tenant compte de leur cumul possible. Une exception propre à un effet doit être explicitement définie.
+
+### 9.4. Propriétés définitives
+
+Une fois l’équipement généré, son niveau, sa rareté, ses caractéristiques, ses rolls, ses effets et les valeurs de ces effets sont définitifs.
+
+Le système de base ne comporte :
+
+* aucun reroll ;
+* aucun reforging ;
+* aucune montée de niveau d’un équipement ;
+* aucune transformation progressive d’un mauvais exemplaire en objet parfait.
+
+Obtenir un meilleur équipement demande d’en looter ou d’en fabriquer un nouveau. Aucun système supplémentaire de modification d’objet n’est actuellement validé.
+
+### 9.5. Absence de durabilité
+
+Les équipements n’ont aucune durabilité. Ils ne s’usent pas, ne cassent pas, ne demandent aucune réparation et n’imposent aucun coût d’entretien.
+
+## 10. iLvl
+
+Chaque équipement possède un **iLvl visible**, distinct de son niveau d’objet et de sa rareté.
+
+Le niveau d’objet décrit le contexte de génération et les plages accessibles. L’iLvl fournit une estimation normalisée de la puissance réelle de l’exemplaire précis afin de faciliter la comparaison rapide entre objets différents.
+
+Son calcul doit prendre en compte la contribution réelle de l’objet, notamment ses caractéristiques, leurs valeurs, ses effets et leurs rolls. La formule et les pondérations exactes restent à définir.
+
+L’iLvl est un indicateur comparatif. Il ne garantit pas qu’un équipement est adapté au build du joueur.
+
+## 11. Objets de set
+
+Tous les équipements n’appartiennent pas à un set. Les sets constituent une couche avancée et un objectif important de la recherche d’équipement à haut niveau.
+
+### 11.1. Structure libre
+
+Un set peut réunir :
+
+* deux ou trois Artefacts ;
+* deux Sources d’énergie ;
+* plusieurs Artefacts et Sources d’énergie dans un set mixte.
+
+Sa structure, son nombre de pièces et ses seuils sont définis par le set concret. La limite de deux Sources correspond aux deux emplacements disponibles sur une instance.
+
+Une pièce précise de set possède une rareté fixe liée à son identité. La même pièce n’existe pas sous plusieurs raretés aléatoires. Ses caractéristiques autorisées et leurs rolls peuvent néanmoins varier entre les exemplaires.
+
+### 11.2. Effets de set
+
+Les effets sont définis explicitement par chaque set. Ils peuvent être génériques, soutenir un style de jeu ou être associés à une famille, une créature, un Skill ou une autre condition de design cohérente.
+
+Les sets concrets, leurs pièces, leurs seuils et leurs effets appartiennent au contenu de production.
+
+## 12. Inventaire
+
+### 12.1. Inventaire principal limité
+
+L’inventaire principal possède actuellement une capacité de référence de :
+
+> **40 emplacements de base**
+
+Cette valeur reste ajustable pendant le balancing et les tests. La limitation soutient la gestion régulière du loot sans modifier les règles structurelles des objets.
+
+L’inventaire principal accueille notamment :
+
+* les Artefacts et Sources d’énergie non équipés ;
+* les objets consommables, dont les consommables d’évolution ;
+* certains objets ou monnaies d’événement lorsqu’ils existent comme objets stockables ;
+* les sacs non équipés ;
+* les autres objets individuels nécessitant une gestion d’inventaire.
+
+### 12.2. Stockage des composants
+
+Les composants de fabrication utilisent un stockage séparé et illimité. Ils ne consomment jamais de place dans l’inventaire principal et restent consultables depuis un espace ou onglet dédié.
+
+## 13. Sacs et capacité d’inventaire
+
+Le compte possède exactement **6 emplacements dédiés aux sacs**.
+
+Un sac est un objet réel dont la capacité propre augmente la capacité de l’inventaire principal lorsqu’il est équipé.
+
+Lorsqu’un sac est obtenu :
+
+* si un emplacement de sac est libre, il y est automatiquement équipé et n’occupe plus de case dans l’inventaire principal ;
+* si les six emplacements sont occupés, il rejoint l’inventaire principal et y occupe une case.
+
+Un sac non équipé peut être conservé, vendu ou utilisé pour remplacer un sac équipé. Un sac déséquipé retourne dans l’inventaire principal et nécessite donc une place disponible.
+
+Les sacs peuvent posséder différentes capacités et être obtenus par le loot, les récompenses, certaines progressions ou un service de confort payant. Les tailles, raretés éventuelles, sources, probabilités et prix restent à définir.
+
+L’achat possible de sacs reste distinct de la boutique cosmétique. Il n’accorde aucune caractéristique, aucun équipement de combat exclusif ni aucune puissance inaccessible gratuitement. Les sacs existent également par le gameplay et un joueur Free-to-Play doit pouvoir progresser normalement sans achat.
+
+## 14. Boucle de loot et de farming
+
+Le système suit une philosophie inspirée des Hack’n Slash :
+
+> obtenir → comparer → équiper → farmer → fabriquer → rechercher de meilleurs rolls → recycler les objets inutiles
+
+Le joueur peut rejouer des combats pour obtenir des Sources d’énergie et des composants, fabriquer plusieurs exemplaires d’un Artefact et rechercher de meilleures raretés, propriétés, combinaisons et rolls.
+
+Les combats du mode Histoire peuvent participer à cette boucle. Les activités plus avancées pourront utiliser leurs propres tables de loot, probabilités, récompenses et possibilités de farming ciblé lorsque leur contenu sera défini.
+
+Un équipement peu intéressant conserve une utilité potentielle : une Source peut être vendue ou servir de composant, tandis qu’un Artefact peut être dissous.
+
+## 15. Objets liés à d’autres systèmes
+
+### 15.1. Évolutions
 
 Un objet intervient dans une évolution uniquement de deux manières :
 
 1. un équipement précis réellement équipé sur l’instance constitue une condition standard évaluée lors d’une montée de niveau et n’est pas consommé ;
-2. un objet consommable d’évolution est utilisé volontairement sur une instance éligible et déclenche immédiatement l’évolution correspondante, sans attendre une nouvelle montée de niveau.
+2. un objet consommable d’évolution est utilisé volontairement sur une instance éligible et déclenche immédiatement l’évolution correspondante.
 
-Dans le second cas, l’instance doit déjà satisfaire son niveau minimum obligatoire et les autres conditions de la transition. L’objet utilisé correspond directement à cette évolution et ne disparaît jamais automatiquement à la suite d’un level up.
+Dans le second cas, les autres conditions doivent être satisfaites. L’objet est consommé volontairement et ne disparaît jamais automatiquement lors d’un level up. La simple possession dans l’inventaire ne constitue jamais une condition.
 
-Le simple fait de posséder un objet dans l’inventaire n’est jamais une condition. « Porter » et « équiper » ne désignent pas deux mécanismes distincts : seul un équipement présent dans l’ensemble actif de l’instance satisfait une condition d’équipement.
+Les règles complètes appartiennent au [référentiel Évolutions](./07-EVOLUTIONS.md).
 
-Les objets éventuellement liés aux évolutions doivent rester cohérents avec la progression et pouvoir être compris grâce aux informations disponibles en jeu.
-
-## 10. Objet de réinitialisation des points de caractéristiques
-
-Un objet rare obtenu en jouant permet de redistribuer les points de caractéristiques déjà gagnés sans modifier le niveau ni l’XP.
-
-Il n’accorde aucun point supplémentaire et fournit le même résultat fonctionnel que le service payant limité correspondant.
-
-## 11. Protection de l’équipement lors de la consommation d’une instance
+### 15.2. Consommation d’une instance comme matériau
 
 Lorsqu’une instance est consommée comme matériau d’étoiles :
 
-1. tous ses objets équipés sont automatiquement déséquipés ;
-2. ces objets sont replacés dans l’inventaire ;
+1. tous ses équipements sont automatiquement déséquipés ;
+2. ils sont replacés dans l’inventaire ;
 3. aucun équipement n’est détruit avec l’instance.
 
-## 12. Dépendances
+Cette protection est systématique.
 
-* Le [référentiel Créatures](./03-CREATURES.md) définit la propriété et la conservation de l’équipement par instance.
-* Le [référentiel Évolutions](./07-EVOLUTIONS.md) définit le rôle des objets dans les conditions et déclenchements d’évolution.
-* Le [draft Progression](./10-PROGRESSION.md) définit la redistribution de caractéristiques.
-* Le [draft UI Flow](./18-UI_FLOW.md) définira les parcours de gestion et de comparaison.
+### 15.3. Objet de réinitialisation des caractéristiques
 
-## 13. Éléments à préciser ultérieurement
+Un objet rare obtenu en jouant permet de redistribuer les points de caractéristiques déjà gagnés sans modifier le niveau ni l’XP.
 
-* Le nombre et les types définitifs d'emplacements.
-* Les restrictions d’équipement.
-* Les statistiques, affixes, raretés et qualités.
-* Les règles d'amélioration et les effets, seuils et combinaisons exacts des sets.
-* Les caps et valeurs exactes d’iLvl.
-* Les sources, tables et règles de loot.
-* Le nombre exact d'ingrédients d'une recette.
-* Le comportement d'une combinaison invalide et la consommation éventuelle des composants en cas d'échec.
-* Les règles de génération et de variation des rolls.
-* La relation éventuelle entre les Sources d'énergie équipables et l'énergie d'invocation.
-* La méthode d’obtention, la rareté et le rythme de distribution de l’objet de réinitialisation.
-* Les objets consommables et équipements concrets liés aux évolutions.
+Il n’accorde aucun niveau, aucune expérience, aucun point supplémentaire et fournit le même résultat fonctionnel que le service payant limité correspondant.
+
+## 16. Dépendances documentaires
+
+| Document | Responsabilité liée |
+| --- | --- |
+| [`03-CREATURES.md`](./03-CREATURES.md) | Propriété et conservation de l’équipement par instance |
+| [`07-EVOLUTIONS.md`](./07-EVOLUTIONS.md) | Conditions et déclenchements d’évolution liés aux objets |
+| [`10-PROGRESSION.md`](./10-PROGRESSION.md) | Niveau du compte, étoiles et redistribution des caractéristiques |
+| [`11-COLLECTION.md`](./11-COLLECTION.md) | Séparation entre collection et inventaire |
+| [`18-UI_FLOW.md`](./18-UI_FLOW.md) | Parcours de gestion, comparaison, fabrication et inventaire |
+| [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Service de confort payant lié aux sacs |
+
+## 17. Éléments à préciser ultérieurement
+
+Le cadrage fonctionnel du système est établi. Restent volontairement ouverts ou réservés au balancing, au contenu et à la production :
+
+* la validation finale par les tests des `40` emplacements de base ;
+* les tailles, raretés éventuelles, sources, probabilités, prix et valeurs de vente des sacs ;
+* les protections UI contre le déséquipement d’un sac lorsqu’aucune place n’est disponible ;
+* les noms, le nombre, la présentation et les probabilités des raretés d’équipement ;
+* les pools, incompatibilités, nombres de propriétés et plages exactes des rolls ;
+* les effets disponibles et leurs valeurs ;
+* la formule de progression des plages selon le niveau de compte et ses éventuels caps techniques ;
+* les seuils exacts de déblocage des effets complexes et des objets de set ;
+* la formule et les pondérations exactes de l’iLvl ;
+* les tables, taux, quantités et possibilités de farming ciblé du loot ;
+* les composants et recettes concrets, leurs coûts éventuels et leurs règles de découverte ;
+* les règles exactes de récupération d’un composant lors de la dissolution ;
+* les sets concrets, leurs pièces, seuils, propriétés et effets ;
+* les valeurs de vente des Sources d’énergie et les paramètres de monnaie soft ;
+* les objets consommables, équipements d’évolution et objets d’événement concrets ;
+* la méthode d’obtention, la rareté et le rythme de distribution de l’objet de réinitialisation.
