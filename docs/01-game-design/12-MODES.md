@@ -94,7 +94,17 @@ Pour un contenu ordinaire, le joueur doit connaître suffisamment d’informatio
 
 Un boss ou défi peut conserver une mécanique secrète. Le jeu doit alors signaler qu’une mécanique inconnue est présente. La première défaite ne doit pas devenir une étape systématiquement obligatoire pour comprendre un niveau.
 
-## 7. Résultats et récompenses
+## 7. Énergie des modes individuels
+
+Les modes joués individuellement utilisent par défaut la réserve générale d’énergie définie dans [`10-PROGRESSION.md`](./10-PROGRESSION.md).
+
+Cette règle s’applique notamment au mode Histoire, aux modes PvE individuels, au farming, aux défis individuels et au PvP. Le joueur choisit librement les activités dans lesquelles il investit sa réserve et peut consacrer toute l’énergie disponible à un même mode.
+
+Un mode individuel ne crée pas automatiquement une énergie distincte, un ticket, une clé ou une autre ressource d’entrée parallèle. Il peut déroger à la réserve commune uniquement lorsqu’une exception est explicitement justifiée et documentée dans son propre référentiel.
+
+Certains événements, contenus de guilde, activités communautaires ou systèmes saisonniers pourront définir une régulation particulière lors de leur cadrage. L’existence de cette possibilité ne valide encore aucune exception concrète.
+
+## 8. Résultats et récompenses
 
 Dans le fonctionnement standard, une victoire :
 
@@ -111,7 +121,7 @@ Un mode fondé sur un score, un objectif partiel ou une participation doit défi
 
 Après un combat, un résumé statistique simple des deux équipes doit être accessible. Il reste agrégé par créature plutôt que par Skill et aide le joueur à adapter sa préparation.
 
-## 8. Mode Histoire
+## 9. Mode Histoire
 
 Le mode Histoire constitue la principale chaîne de progression PvE et la colonne vertébrale initiale du jeu.
 
@@ -136,9 +146,9 @@ Le mode Histoire doit :
 
 La puissance d’équipe peut servir d’indication de difficulté, mais ne constitue pas un verrou systématique.
 
-Le mode Histoire utilise une énergie consommée à l’entrée du niveau. Lors d’une défaite, cette énergie reste normalement consommée, sauf exception explicite propre à une activité ou à l’onboarding.
+Le mode Histoire utilise la réserve générale d’énergie, consommée à l’entrée du niveau. Lors d’une défaite, cette énergie reste normalement consommée, sauf exception explicite propre à une activité ou à l’onboarding.
 
-## 9. Onboarding et vertical slice
+## 10. Onboarding et vertical slice
 
 La vertical slice comprend uniquement un début représentatif du mode Histoire : plusieurs niveaux courts et un boss ou défi final.
 
@@ -148,7 +158,7 @@ Elle doit permettre de tester la boucle suivante :
 
 Le PvP, les guildes, les boss de serveur, les événements temporaires, les saisons et les systèmes sociaux sont exclus de cette vertical slice.
 
-## 10. Modes et contenus de long terme
+## 11. Modes et contenus de long terme
 
 Les boss personnels, boss de serveur, tour infinie, PvP, événements temporaires, guildes et contenus saisonniers constituent des directions de long terme.
 
@@ -158,14 +168,14 @@ Les documents existants ne permettent pas encore de déduire :
 * leur format de combat ;
 * leurs conditions de victoire ou de score ;
 * leurs règles de répétition ;
-* leurs coûts d’entrée ;
+* leurs coûts exacts ou leurs éventuelles exceptions explicites à la réserve générale d’énergie ;
 * leurs récompenses ;
 * leur calendrier ;
 * leur dimension individuelle, compétitive ou coopérative détaillée.
 
 Ces choix doivent rester locaux aux documents spécialisés correspondants.
 
-## 11. Dépendances
+## 12. Dépendances
 
 | Document | Responsabilité liée |
 | --- | --- |
@@ -177,16 +187,16 @@ Ces choix doivent rester locaux aux documents spécialisés correspondants.
 | [`16-QUESTS.md`](./16-QUESTS.md) | Objectifs journaliers liés aux fonctionnalités débloquées |
 | [`18-UI_FLOW.md`](./18-UI_FLOW.md) | Sélection, préparation, combat et résultats |
 
-## 12. Éléments à préciser ultérieurement
+## 13. Éléments à préciser ultérieurement
 
 * Les récompenses, coûts d’entrée et paramètres numériques de chaque activité.
+* Les exceptions locales à la réserve générale d’énergie qui seront justifiées par le design d’un mode particulier.
 * Les niveaux, mondes, tables de loot et jalons concrets du mode Histoire.
 * Les quantités et données exactes de la vertical slice.
 
-## 13. Questions ouvertes
+## 14. Questions ouvertes
 
 * Quel ordre de conception et de production doit être retenu pour les modes de long terme ?
 * Quels modes utilisent le combat standard, un objectif de score, plusieurs combats successifs ou une autre structure ?
-* Quelles activités utilisent l’énergie du mode Histoire, une autre régulation ou aucun coût d’entrée ?
 * Quelles récompenses et règles de répétition distinguent chaque mode sans rendre un contenu unique obligatoire pour toute progression ?
 * Quels modes doivent être permanents, rotatifs, temporaires ou saisonniers ?

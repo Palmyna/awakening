@@ -62,7 +62,7 @@ Une session ne suit pas une liste d’actions obligatoire. Le joueur doit pouvoi
 * gérer ses objets ;
 * poursuivre un objectif personnel.
 
-L’interface doit rendre visibles les informations de session qui influencent immédiatement ces choix, notamment l’énergie disponible, les quêtes en cours, les déblocages récents et les récompenses prêtes à être récupérées selon les règles futures de chaque système.
+L’interface doit rendre visibles les informations de session qui influencent immédiatement ces choix, notamment la réserve générale d’énergie disponible, les quêtes en cours, les déblocages récents et les récompenses prêtes à être récupérées selon les règles futures de chaque système.
 
 Cette exigence ne valide ni un écran d’accueil précis ni des badges, onglets ou notifications particuliers.
 
@@ -105,6 +105,8 @@ Avant un contenu ordinaire, l’interface présente suffisamment d’information
 * restrictions éventuelles ;
 * coût d’entrée lorsqu’il existe.
 
+Pour une activité individuelle, l’interface utilise par défaut la réserve générale d’énergie et indique le coût correspondant ainsi que l’énergie qui restera après l’entrée. Une régulation différente n’est présentée que lorsqu’une exception propre au mode a été explicitement définie.
+
 Une mécanique secrète de boss ou de défi reste possible, mais sa présence doit être signalée.
 
 ## 7. Mode Histoire
@@ -117,7 +119,7 @@ Le parcours doit distinguer :
 * les niveaux terminés ;
 * les prochaines étapes ;
 * les récompenses de première réussite et de répétition lorsqu’elles diffèrent ;
-* le coût en énergie ;
+* le coût en énergie générale ;
 * les déblocages associés à un jalon ;
 * les informations nécessaires avant le combat.
 

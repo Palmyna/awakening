@@ -707,8 +707,10 @@ La progression du compte :
 * est beaucoup plus lente que celle des créatures ;
 * représente la progression générale et l’ancienneté du joueur ;
 * accorde une récompense à chaque niveau ;
-* peut participer à certains déblocages secondaires ;
-* ne remplace pas le mode Histoire comme principale source de déblocage.
+* détermine le niveau d’objet des équipements nouvellement générés ou fabriqués ;
+* participe à la progression du potentiel et de la complexité des équipements.
+
+Les fonctionnalités, systèmes, modes, activités et principales étapes d’onboarding sont principalement débloqués par les jalons du mode Histoire. Le niveau de compte ne constitue pas par défaut un second système parallèle de déblocage. Des usages secondaires pourront être ajoutés ultérieurement s’ils sont explicitement justifiés sans concurrencer cette structure principale.
 
 ### 13.3. Absence de progression passive
 
@@ -733,20 +735,22 @@ Les documents spécialisés devront définir :
 * les règles d’arrondi de l’XP et la validation finale des paramètres actuels ;
 * les multiplicateurs et exigences exacts des montées d’étoiles ;
 * les récompenses du niveau de compte ;
-* les éventuels déblocages secondaires.
+* les éventuels usages secondaires du niveau de compte.
 
 ## 14. Énergie et régulation
 
 ### 14.1. Fonction
 
-Le mode Histoire utilise une énergie nécessaire pour entrer dans ses niveaux.
+Le joueur possède une réserve générale d’énergie utilisée par défaut pour les activités individuelles, notamment le mode Histoire, les modes PvE individuels, le farming, les défis individuels et le PvP.
 
 Cette énergie régule :
 
-* le nombre de niveaux joués sur une période ;
+* le nombre d’activités jouées sur une période ;
 * le gain d’expérience des créatures ;
 * le gain d’expérience du compte ;
 * la vitesse générale de progression.
+
+Le joueur choisit librement les activités dans lesquelles il investit sa réserve disponible. Chaque activité définit son coût exact sans introduire automatiquement une énergie, un ticket, une clé ou une autre ressource d’entrée parallèle.
 
 ### 14.2. Régénération et accumulation
 
@@ -758,6 +762,8 @@ L’énergie :
 * doit permettre d’utiliser ultérieurement une partie du temps de régénération accumulé.
 
 La récupération d’énergie constitue la seule progression hors ligne validée.
+
+Le système ne comporte aucun objet consommable de récupération d’énergie stocké dans l’inventaire. Une récompense de gameplay qui accorde de l’énergie l’ajoute immédiatement à la réserve générale.
 
 ### 14.3. Garde-fous
 
@@ -771,15 +777,17 @@ Le système doit préserver :
 * les contraintes techniques ;
 * un rythme mobile qui ne bloque pas immédiatement un joueur absent.
 
+Une activité peut utiliser une autre régulation uniquement lorsqu’une exception est explicitement justifiée et documentée localement. Certains événements, contenus de guilde, activités communautaires ou systèmes saisonniers pourront notamment définir une telle exception lors de leur propre cadrage.
+
 ### 14.4. Éléments à préciser ultérieurement
 
 `10-PROGRESSION.md` devra définir :
 
-* le coût des niveaux ;
+* les coûts des activités ;
 * le rythme de régénération ;
 * la limite d’accumulation ou l’absence de limite stricte ;
-* les éventuels objets de récupération obtenus en jouant ;
-* les autres activités utilisant éventuellement cette énergie ;
+* les quantités et fréquences des récompenses ajoutant directement de l’énergie ;
+* les exceptions locales explicitement justifiées à la réserve commune ;
 * les exceptions de consommation pendant l’onboarding.
 
 ## 15. Acquisition et invocation de créature

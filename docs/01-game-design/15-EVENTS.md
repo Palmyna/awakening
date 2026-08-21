@@ -41,6 +41,8 @@ Chaque événement devra définir au minimum :
 * les informations conservées après sa fin ;
 * sa politique de retour lorsqu’elle existe.
 
+Une activité événementielle jouée individuellement utilise par défaut la réserve générale d’énergie. Un événement peut définir une régulation différente uniquement lorsqu’une exception est explicitement justifiée et documentée par son design. Cette possibilité ne valide actuellement aucune énergie, aucun ticket, aucune clé ou aucune ressource événementielle d’entrée particulière.
+
 Une fonctionnalité temporaire ne doit pas contredire les règles communes des créatures, du combat, des éléments, des Effets de combat, des évolutions, des objets ou de la collection.
 
 ## 5. Récompenses de gameplay

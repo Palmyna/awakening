@@ -70,7 +70,17 @@ Le PvP doit permettre au joueur d’exprimer ses choix de build et de compositio
 
 Les éventuelles restrictions supplémentaires, informations visibles sur l’adversaire, règles de défense enregistrée ou possibilités de modification avant le combat ne sont pas validées.
 
-## 7. Résultats, classements et récompenses
+## 7. Accès et énergie générale
+
+Le PvP utilise par défaut la même réserve générale d’énergie que les autres modes individuels.
+
+Le joueur peut choisir d’investir une grande partie ou la totalité de sa réserve disponible dans une session PvP. Le fait d’affronter un autre joueur ne crée pas automatiquement une énergie, un ticket, une clé ou une autre ressource d’entrée propre au PvP.
+
+Le coût exact d’une participation relève du balancing futur. Une régulation différente nécessiterait une exception explicitement justifiée et documentée dans le présent référentiel.
+
+Cette règle fixe uniquement la relation du PvP avec l’énergie. Elle ne détermine ni son format, ni son matchmaking, ni ses classements, ses saisons, ses récompenses ou son caractère synchrone ou asynchrone.
+
+## 8. Résultats, classements et récompenses
 
 Le système général prévoit qu’un mode peut définir sa propre condition de victoire, de défaite ou de score. Le futur PvP devra donc expliciter :
 
@@ -86,7 +96,7 @@ Aucun de ces systèmes n’est actuellement validé.
 
 Une éventuelle récompense PvP doit respecter la séparation entre gameplay et économie cosmétique. Une récompense cosmétique ne confère aucune puissance ; une récompense de progression doit rester accessible selon des règles équitables qui ne transforment pas le paiement en avantage compétitif.
 
-## 8. Présentation et analyse
+## 9. Présentation et analyse
 
 Le combat PvP doit conserver la lisibilité générale du moteur de combat : actions importantes, Effets de combat, immunités, Ultimate, éliminations et changements majeurs.
 
@@ -94,25 +104,26 @@ Un résumé post-combat agrégé par créature doit permettre d’analyser les c
 
 Les informations publiques, l’historique, les profils, les replays partageables et les règles de confidentialité ne sont pas validés.
 
-## 9. Dépendances
+## 10. Dépendances
 
 | Document | Responsabilité liée |
 | --- | --- |
 | [`02-COMBAT.md`](./02-COMBAT.md) | Simulation, formation, ciblage et départage standard |
 | [`03-CREATURES.md`](./03-CREATURES.md) | Identité, puissance et composition des équipes |
-| [`10-PROGRESSION.md`](./10-PROGRESSION.md) | Sources de puissance et score de Puissance |
+| [`10-PROGRESSION.md`](./10-PROGRESSION.md) | Sources de puissance, score de Puissance et réserve générale d’énergie |
 | [`12-MODES.md`](./12-MODES.md) | Statut de périmètre et contrat commun des modes |
 | [`18-UI_FLOW.md`](./18-UI_FLOW.md) | Préparation, combat, résultat et analyse |
 | [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Limites économiques et équité |
 
-## 10. Éléments à préciser ultérieurement
+## 11. Éléments à préciser ultérieurement
 
 * Les valeurs de classement et de matchmaking.
 * Les quantités, fréquences et paliers de récompenses.
 * La durée éventuelle des saisons et leurs paramètres.
 * Les seuils ou catégories numériques d’appariement.
+* Le coût exact en énergie générale d’une participation.
 
-## 11. Questions ouvertes
+## 12. Questions ouvertes
 
 * Le PvP doit-il être synchrone, asynchrone ou proposer plusieurs formats ?
 * Le contrôle Manuel des Ultimate est-il disponible dans chaque format ?

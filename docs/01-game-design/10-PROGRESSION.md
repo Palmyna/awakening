@@ -1,6 +1,6 @@
 # Project Awakening — Progression
 
-**Statut :** Draft de conception — à relire et valider
+**Statut :** Rédigé — référence actuelle, à maintenir à jour
 
 ## 1. Rôle et périmètre du document
 
@@ -15,7 +15,8 @@ Il rassemble :
 * les réinitialisations ;
 * le score de Puissance ;
 * la progression du compte et son influence sur les équipements ;
-* l’énergie du mode Histoire ;
+* les déblocages principalement portés par le mode Histoire ;
+* la réserve générale d’énergie des activités individuelles ;
 * les garde-fous empêchant une progression passive ou payante de puissance.
 
 Il ne fixe pas les courbes, coûts, multiplicateurs, quantités de récompenses ou autres valeurs réservées au balancing.
@@ -190,32 +191,50 @@ Cette progression :
 * est beaucoup plus lente que celle des créatures ;
 * représente l’avancement général et l’ancienneté du joueur ;
 * accorde une récompense à chaque niveau ;
-* peut participer à certains déblocages secondaires ;
-* ne remplace pas le mode Histoire comme principale source de déblocage.
+* détermine le niveau d’objet des équipements nouvellement générés ou fabriqués ;
+* peut débloquer progressivement des couches de potentiel et de complexité des équipements selon les règles du référentiel correspondant.
+
+Les fonctionnalités, systèmes, modes, activités et principales étapes d’onboarding sont débloqués principalement par les jalons du mode Histoire. Le niveau de compte ne constitue pas par défaut un second système parallèle imposant des seuils artificiels pour ces déblocages.
+
+Des usages secondaires du niveau de compte pourront être ajoutés ultérieurement s’ils sont explicitement justifiés et ne concurrencent pas le mode Histoire comme structure principale de déblocage.
 
 Lorsqu’un équipement est généré ou fabriqué, son niveau d’objet correspond au niveau du compte à cet instant et reste ensuite fixe. Il détermine les plages de génération accessibles sans garantir les rolls obtenus.
 
 Le niveau du compte peut également débloquer progressivement des couches de complexité de l’équipement. Les seuils et la courbe concernés restent à définir dans le [référentiel Objets et équipements](./08-ITEMS.md).
 
-## 11. Énergie du mode Histoire
+## 11. Énergie générale
 
-Le mode Histoire utilise une énergie consommée à l’entrée d’un niveau.
+Le joueur possède une réserve générale d’énergie qu’il peut investir librement dans les activités individuelles disponibles.
 
-Cette énergie :
+Par défaut, cette même réserve est utilisée notamment par :
 
-* régule le nombre de niveaux joués et la vitesse générale de progression ;
+* le mode Histoire ;
+* les modes PvE individuels ;
+* le farming ;
+* les défis individuels ;
+* le PvP.
+
+Le PvP appartient à cette règle parce qu’il constitue une activité individuelle du joueur, même lorsqu’il l’oppose à un autre joueur. Le joueur peut donc consacrer une grande partie ou la totalité de sa réserve disponible à une session PvP.
+
+La réserve générale :
+
+* régule le rythme de jeu et la vitesse générale de progression sans imposer l’activité choisie ;
 * se régénère avec le temps ;
 * continue à s’accumuler lorsque le joueur ne joue pas ;
 * ne doit pas être perdue simplement parce que le joueur ne s’est pas connecté pendant une journée ;
 * n’est pas vendue contre de l’argent réel.
 
-Lors d’une défaite standard, l’énergie utilisée pour entrer dans le niveau reste normalement consommée. Une activité particulière ou une étape d’onboarding peut définir une exception explicite.
+Chaque activité individuelle définit son coût exact, mais n’introduit pas automatiquement une énergie, un ticket, une clé ou une autre ressource d’entrée parallèle. Une régulation différente reste possible uniquement lorsqu’une exception est explicitement décidée et documentée localement, notamment pour certains événements, contenus de guilde, activités communautaires ou systèmes saisonniers.
 
-Les autres activités ne consomment pas automatiquement cette énergie. Chacune devra définir sa relation éventuelle avec une ressource d’entrée sans déduire celle du mode Histoire.
+Dans le mode Histoire, l’énergie est consommée à l’entrée d’un niveau. Lors d’une défaite standard, l’énergie utilisée reste normalement consommée. Une activité particulière ou une étape d’onboarding peut définir une exception explicite.
+
+Le système ne comporte aucun objet consommable de récupération d’énergie stocké dans l’inventaire. Lorsqu’une récompense de gameplay accorde de l’énergie, celle-ci est immédiatement ajoutée à la réserve générale du joueur. Les contenus concernés, les quantités et leur fréquence restent à définir et à équilibrer.
+
+Une récompense directe d’énergie provenant du gameplay ne peut pas devenir indirectement un mécanisme permettant d’acheter de l’énergie contre de l’argent réel.
 
 ## 12. Absence de progression passive et payante
 
-Hors ligne, seule la récupération d’énergie est validée.
+Hors ligne, seule la récupération de l’énergie générale est validée.
 
 Les créatures ne gagnent automatiquement aucune XP, aucun niveau, aucun point de caractéristique, aucun équipement et aucune autre ressource générale. Le compte ne gagne pas non plus d’expérience automatiquement.
 
@@ -240,7 +259,9 @@ Les services de confort validés ne modifient pas ce principe.
 | [`08-ITEMS.md`](./08-ITEMS.md) | Niveau d’objet, génération et restitution des équipements |
 | [`09-GACHA.md`](./09-GACHA.md) | État initial et nouvelles instances utilisées pour les étoiles |
 | [`11-COLLECTION.md`](./11-COLLECTION.md) | Verrouillage et gestion des instances |
-| [`12-MODES.md`](./12-MODES.md) | Résultats et règles propres aux activités |
+| [`12-MODES.md`](./12-MODES.md) | Résultats, énergie commune et règles propres aux activités |
+| [`13-PVP.md`](./13-PVP.md) | Utilisation de l’énergie générale par le PvP |
+| [`15-EVENTS.md`](./15-EVENTS.md) | Récompenses et éventuelles exceptions locales de régulation |
 | [`16-QUESTS.md`](./16-QUESTS.md) | Objectifs journaliers et récompenses de progression |
 | [`18-UI_FLOW.md`](./18-UI_FLOW.md) | Présentation et confirmations des actions de progression |
 
@@ -255,12 +276,9 @@ Les services de confort validés ne modifient pas ce principe.
 * La formule exacte du score de Puissance.
 * Les récompenses du niveau de compte.
 * La courbe reliant le niveau du compte aux plages de génération des équipements.
-* Les coûts, la régénération et l’accumulation exacte de l’énergie.
-
-## 15. Questions ouvertes
-
-* Quels déblocages secondaires doivent dépendre du niveau du compte plutôt que des jalons du mode Histoire ?
-* Quelle méthode d’obtention et quel rythme de distribution doit utiliser l’objet de redistribution des caractéristiques ?
-* Quelle limite d’utilisation payante doit s’appliquer au service de redistribution, notamment par compte ou par créature ?
-* Des objets de récupération d’énergie obtenus uniquement en jouant doivent-ils exister ?
-* D’autres activités doivent-elles utiliser l’énergie du mode Histoire ou une régulation distincte ?
+* Les éventuels usages secondaires explicitement justifiés du niveau de compte.
+* La méthode d’obtention, la rareté et le rythme de distribution de l’objet de redistribution des caractéristiques.
+* La limite d’utilisation et le prix du service payant de redistribution.
+* Les coûts des activités, la capacité éventuelle, la régénération et les règles exactes d’accumulation de l’énergie générale.
+* Les contenus accordant directement de l’énergie ainsi que les quantités et fréquences concernées.
+* Les exceptions locales à la réserve commune qui seront justifiées par le design d’un système particulier.
