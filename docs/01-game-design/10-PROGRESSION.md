@@ -24,6 +24,8 @@ Une montée de niveau :
 
 La valeur de cinq points constitue la référence actuelle mais reste ajustable pendant le balancing.
 
+Dépenser un point augmente toujours de `+1` la caractéristique principale choisie. Les six caractéristiques utilisent la même unité de budget et aucun coût différent n’est appliqué selon la caractéristique. Leur formule ou leur courbe doit être recalibrée si leur valeur relative devient déséquilibrée.
+
 Les points non attribués peuvent être conservés indéfiniment. Ils n’augmentent pas le score de Puissance tant qu’ils ne sont pas attribués.
 
 ## 3. Attribution de l’XP d’une activité
@@ -62,9 +64,9 @@ Ce ratio doit faciliter la remontée d’une créature récemment réinitialisé
 
 ## 4. Interaction avec les évolutions
 
-Après l’attribution de l’XP, le nouveau niveau est établi puis les évolutions dont toutes les conditions sont remplies peuvent se déclencher.
+Après l’attribution de l’XP, chaque montée de niveau pertinente peut déclencher une évolution standard. Si exactement une évolution est valide, elle est automatique ; si plusieurs évolutions concurrentes le sont, aucune ne se produit. L’utilisation volontaire d’un objet consommable d’évolution constitue le seul déclenchement prévu hors montée de niveau.
 
-Une même récompense peut provoquer plusieurs évolutions successives. Les règles détaillées appartiennent au [draft Évolutions](./07-EVOLUTIONS.md).
+Une même récompense peut provoquer plusieurs évolutions successives. Les règles détaillées appartiennent au [référentiel Évolutions](./07-EVOLUTIONS.md).
 
 ## 5. Niveau d’étoiles
 

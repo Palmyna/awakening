@@ -64,7 +64,7 @@ La forme porte notamment :
 * son apparence de référence ;
 * son lore propre ;
 * son ou ses éléments ;
-* son profil de caractéristiques de base ;
+* son profil de caractéristiques principales de base ;
 * un ou deux rôles suggérés ;
 * son profil offensif suggéré ;
 * les versions de la Basic Attack et des Skills utilisées sous cette forme.
@@ -231,17 +231,19 @@ Les trois caractéristiques secondaires système sont :
 2. Dégâts critiques ;
 3. Esquive.
 
-Elles ne reçoivent pas directement les points gagnés par niveau. Elles peuvent provenir des valeurs de base de la forme, de l’équipement, des Skills, des Passive, des Effets de combat ou d’autres systèmes explicitement documentés.
+Elles ne reçoivent pas directement les points gagnés par niveau. Leurs valeurs de base sont définies à l’échelle de la famille, restent identiques entre ses formes et branches et peuvent ensuite être modifiées par l’équipement, les Skills, les Passive, les Effets de combat ou d’autres systèmes explicitement documentés.
 
-L’Agilité contrôle l’intervalle des Basic Attacks et accélère la cadence des Effets de combat périodiques selon une courbe propre. Elle n’augmente pas le Crit.
+L’Agilité contrôle l’intervalle des Basic Attacks et intervient dans les priorités ou départages qui l’utilisent. Elle n’augmente pas le Crit et n’accélère pas automatiquement les Effets de combat périodiques.
 
 Les formules, caps, conversions et modifications en combat appartiennent au [document Combat](./02-COMBAT.md).
 
 ### 4.2. Valeurs intrinsèques
 
-Chaque forme possède son propre profil de caractéristiques de base.
+Toutes les familles utilisent le même budget total pour leurs six caractéristiques principales de base. Elles peuvent le répartir différemment, mais la rareté ou l’identité d’une famille ne lui accorde pas automatiquement un budget supérieur. Le montant numérique exact de ce budget reste à définir.
 
-Une évolution remplace les valeurs de base de l’ancienne forme par celles de la nouvelle. Les points distribués, l’équipement et les autres bonus ne deviennent jamais de nouvelles valeurs de base.
+Chaque forme possède un profil de caractéristiques principales de base issu de ce budget commun. Une évolution peut le redistribuer, à condition que toute augmentation soit compensée par une diminution totale équivalente ailleurs et que la somme des modificateurs reste égale à zéro.
+
+Le profil redistribué devient le profil de base de la nouvelle forme et de la suite de son chemin tant qu’une évolution ultérieure ne définit pas explicitement une nouvelle redistribution. Les points distribués, l’équipement et les autres bonus ne deviennent jamais de nouvelles valeurs de base.
 
 Il n’existe aucun système d’IV ni aucune variation aléatoire cachée des caractéristiques intrinsèques. Deux instances d’une même forme possèdent les mêmes valeurs de base avant les choix de progression du joueur.
 
@@ -253,7 +255,7 @@ Le stade applique aux caractéristiques principales et secondaires de base de la
 * stade 2 : ×2 ;
 * stade 3 : ×3.
 
-Le multiplicateur dépend uniquement du stade. Deux branches différentes situées au même stade utilisent le même multiplicateur.
+Le multiplicateur dépend uniquement du stade. Deux branches différentes situées au même stade utilisent le même multiplicateur. Il augmente la puissance globale sans créer une redistribution : en l’absence d’un nouveau profil explicitement défini, le profil de base hérité du chemin est conservé.
 
 ### 4.4. Ordre de construction
 
@@ -263,7 +265,7 @@ Pour les caractéristiques principales, l’ordre conceptuel est :
 
 Pour les caractéristiques secondaires :
 
-> valeurs de base de la forme → multiplicateur de stade → équipement et autres sources → modifications de combat
+> valeurs de base de la famille → multiplicateur de stade → équipement et autres sources → modifications de combat
 
 Le multiplicateur d’étoiles ne s’applique pas aux caractéristiques secondaires. Les points distribués ne sont pas multipliés rétroactivement par l’évolution ou les étoiles.
 
@@ -276,6 +278,8 @@ Le niveau d’une instance ne possède pas de maximum.
 Une montée de niveau n’augmente aucune caractéristique automatiquement. Elle accorde actuellement cinq points à répartir entre les six caractéristiques principales.
 
 Cette valeur constitue la référence actuelle mais reste ajustable pendant le balancing.
+
+Dépenser un point augmente toujours de `+1` la caractéristique principale choisie. Toutes les caractéristiques principales utilisent la même unité de budget et aucun coût différent n’est appliqué selon la caractéristique.
 
 Les points non attribués peuvent être conservés indéfiniment. Ils ne produisent aucun effet et n’augmentent pas le score de Puissance.
 
@@ -362,9 +366,9 @@ Elle conserve les investissements et choix déjà attachés à l’instance, not
 
 Les points attribués restent dans les caractéristiques choisies, même si la nouvelle forme possède un autre profil naturel.
 
-Une forme atteinte débloque définitivement son apparence pour cette instance. Les anciennes formes réellement parcourues sur son chemin peuvent être utilisées comme apparences cosmétiques, sans modifier sa forme mécanique actuelle. Une branche non empruntée ne débloque aucune apparence.
+Une forme atteinte débloque définitivement son apparence pour cette instance. Les anciennes formes réellement parcourues sur son chemin peuvent être utilisées librement hors combat comme apparences cosmétiques, sans modifier sa forme mécanique actuelle, ses caractéristiques, ses éléments, ses capacités, ses rôles ou son équipement. Une branche non empruntée ne débloque aucune apparence. Les skins déjà débloqués peuvent être appliqués lorsqu’ils sont compatibles avec la forme affichée.
 
-Les conditions, objets éventuels, indices, découvertes, déclenchements, évolutions successives et choix de branches sont centralisés dans le [document Évolutions](./07-EVOLUTIONS.md).
+Les conditions, objets éventuels, indices, découvertes, déclenchements, évolutions successives et règles de résolution des branches sont centralisés dans le [document Évolutions](./07-EVOLUTIONS.md).
 
 Des créatures déjà évoluées peuvent exister dans le monde. Toute nouvelle instance acquise commence néanmoins dans la forme de base de sa famille.
 
@@ -430,7 +434,7 @@ Les rôles et profils suggérés ne constituent pas des restrictions de composit
 
 La liste des instances possédées et l’encyclopédie remplissent des fonctions distinctes.
 
-Obtenir réellement une instance découvre sa famille pour le compte. Voir ou affronter une créature ne suffit pas.
+Obtenir réellement une instance découvre sa famille pour le compte. Voir ou affronter une forme évoluée peut néanmoins révéler son existence et son apparence, sans révéler automatiquement sa condition d’évolution ni compter comme l’obtention d’une instance.
 
 La découverte est permanente. L’encyclopédie conserve le numéro, le lore familial, les lores de formes et les informations intrinsèques déjà découvertes.
 
@@ -464,7 +468,7 @@ Son identité narrative ne change pas lorsqu'il est affronté : un humain ennemi
 | [`04-SKILLS.md`](./04-SKILLS.md) | Basic Attack, Active, Passive, Ultimate et variations des capacités selon les formes |
 | [`05-ELEMENTS.md`](./05-ELEMENTS.md) | Éléments des formes et interactions élémentaires |
 | [`06-COMBAT_EFFECTS.md`](./06-COMBAT_EFFECTS.md) | Effets de combat et leurs règles communes |
-| [`07-EVOLUTIONS.md`](./07-EVOLUTIONS.md) | Conditions, indices, découvertes, déclenchements et choix de branches |
+| [`07-EVOLUTIONS.md`](./07-EVOLUTIONS.md) | Conditions, indices, découvertes, déclenchements et résolution des branches |
 | [`08-ITEMS.md`](./08-ITEMS.md) | Objets, emplacements, équipement, iLvl et loot |
 | [`09-GACHA.md`](./09-GACHA.md) | Invocation, raretés d’acquisition, ensembles de familles disponibles et acquisitions directes |
 | [`10-PROGRESSION.md`](./10-PROGRESSION.md) | XP, niveaux, étoiles, réinitialisations et score de Puissance |
@@ -486,7 +490,7 @@ Les paramètres et contenus encore ouverts sont maintenus dans leurs documents s
 * les probabilités et garanties d’invocation ;
 * les conditions propres aux évolutions concrètes ;
 * la grammaire de recherche et les parcours d’interface ;
-* les valeurs de base et profils numériques des familles et formes.
+* le budget numérique total des caractéristiques principales, les valeurs de base des familles et les redistributions propres aux branches.
 
 Ce document demeure la référence structurelle des créatures jouables.
 

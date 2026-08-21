@@ -116,7 +116,7 @@ Le joueur collectionne des créatures représentées sous forme de cartes.
 
 Le système de collection doit permettre de consulter et de valoriser les éléments collectionnables du joueur. Il réunit un espace consacré aux créatures et un espace consacré aux skins de carte, sans mélanger ces deux catégories dans une liste unique.
 
-L’encyclopédie des créatures est distincte de la gestion des instances possédées. Elle présente uniquement les familles réellement obtenues par le joueur, enrichit progressivement les formes et branches découvertes et ne révèle jamais le nombre total de familles existantes.
+L’encyclopédie des créatures est distincte de la gestion des instances possédées. Elle présente uniquement les familles réellement obtenues par le joueur, enrichit progressivement les formes et branches découvertes et ne révèle jamais le nombre total de familles existantes. Rencontrer ou affronter une forme évoluée peut révéler son existence et son apparence sans révéler automatiquement sa condition d’évolution.
 
 La collection de skins de carte permet de consulter les skins débloqués et non débloqués, de les parcourir par série, de visualiser la progression de collection et d’appliquer les skins débloqués aux cartes des créatures concernées.
 
@@ -200,7 +200,7 @@ Le joueur peut ainsi intervenir de manière limitée ou laisser le combat se dé
 
 Les dégâts utilisent des composantes physiques ou spéciales. Une même attaque peut réunir plusieurs composantes dans un hit hybride, résolu avec un seul jet d’Esquive et un seul jet de Critique, tandis que chaque composante conserve son calcul offensif et défensif propre. Chaque compétence offensive doit déclarer ses composantes et les caractéristiques qu’elle utilise : Attaque, Attaque spéciale ou, exceptionnellement, aucune lorsqu’elle suit une formule particulière.
 
-Les dégâts physiques et spéciaux peuvent produire des coups critiques par défaut. Le Crit est une caractéristique secondaire indépendante. L’Agilité contrôle l’intervalle des Basic Attacks et accélère la cadence des Effets de combat périodiques selon des courbes propres ; elle n’augmente pas le Crit.
+Les dégâts physiques et spéciaux peuvent produire des coups critiques par défaut. Le Crit est une caractéristique secondaire indépendante. L’Agilité contrôle l’intervalle des Basic Attacks et intervient dans les priorités ou départages qui l’utilisent ; elle n’augmente pas le Crit et n’accélère pas automatiquement les Effets de combat périodiques.
 
 Le jeu récompense avant tout la qualité de la préparation des équipes.
 

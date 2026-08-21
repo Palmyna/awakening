@@ -492,7 +492,7 @@ Chaque créature est une entité jouable représentée dans l’interface par un
 Le système distingue :
 
 * la **famille**, qui porte notamment la rareté, le numéro d’encyclopédie, le lore général et l’identité de la Basic Attack et des quatre Skills ;
-* la **forme**, qui porte notamment l’apparence, les éléments, le profil de caractéristiques de base, les rôles suggérés, le profil offensif et les versions des capacités ;
+* la **forme**, qui porte notamment l’apparence, les éléments, le profil de caractéristiques principales de base, les rôles suggérés, le profil offensif et les versions des capacités ;
 * l’**instance possédée**, individu persistant développé par le joueur ;
 * le **stade d’évolution**, parmi les trois stades parcourus par chaque instance ;
 * la **branche d’évolution**, chemin définitif suivi par l’instance dans l’arbre de sa famille.

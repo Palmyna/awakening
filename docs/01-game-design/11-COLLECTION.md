@@ -36,6 +36,8 @@ Chaque instance conserve notamment :
 * son verrouillage ;
 * ses apparences de formes débloquées.
 
+Les apparences de formes sont débloquées par instance et uniquement pour les formes qu’elle a réellement parcourues. Une ancienne forme accessible peut être affichée librement hors combat sans modifier la forme mécanique, les caractéristiques, les éléments, les capacités, les rôles ou l’équipement de l’instance. Les skins déjà débloqués peuvent être utilisés lorsqu’ils sont compatibles avec la forme affichée.
+
 Le surnom est facultatif, modifiable et supprimable. Il ne remplace jamais le nom officiel de la forme et peut être utilisé par la recherche.
 
 Les tags peuvent être créés librement par le joueur et n’ont aucun effet de gameplay. Ils servent à l’organisation, à la recherche et au filtrage et restent distincts des rôles suggérés par le jeu.
@@ -65,9 +67,9 @@ Il ne bloque pas :
 
 L’encyclopédie est un répertoire de compte distinct de la liste des instances possédées.
 
-Une famille est découverte uniquement lorsque le joueur obtient réellement l’une de ses instances. Une forme est découverte lorsque le compte l’obtient ou l’atteint réellement pour la première fois.
+Une famille est découverte lorsque le joueur obtient réellement l’une de ses instances. Une forme devient découverte lorsque le compte l’obtient ou l’atteint, ainsi que lorsque le joueur la rencontre ou l’affronte et que son existence et son apparence sont révélées.
 
-Voir une créature chez un autre joueur ou l’affronter ne suffit pas. Cette observation peut néanmoins fournir des indices sur l’existence de formes encore inconnues.
+La rencontre d’une forme évoluée ne compte pas comme l’obtention d’une instance et ne révèle pas automatiquement sa condition d’évolution. La connaissance de l’existence d’une forme et celle de sa méthode d’évolution sont distinctes.
 
 La découverte est permanente pour le compte, même si l’instance concernée évolue ensuite, est consommée ou n’est plus possédée sous cette forme.
 
@@ -103,6 +105,8 @@ Une famille nouvellement obtenue peut apparaître ainsi :
 Les formes et branches découvertes enrichissent progressivement l’arbre connu. Le nombre de branches possibles reste caché avant leur découverte.
 
 Les conditions d’évolution découvertes deviennent des connaissances permanentes du compte et restent explicitement consultables. Elles ne doivent pas être redécouvertes pour chaque nouvelle instance de la même famille.
+
+Une forme révélée par une rencontre n’expose pas automatiquement les autres branches de sa famille. Plus généralement, aucune découverte ciblée ne révèle le catalogue ou le nombre total des familles encore inconnues.
 
 ## 7. Recherche et tri des instances
 

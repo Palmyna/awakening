@@ -48,6 +48,8 @@ Le joueur doit pouvoir accéder aux informations pertinentes de l’instance, no
 
 La disposition et les regroupements restent à définir.
 
+Le sélecteur d’apparence doit distinguer clairement la forme mécanique actuelle de l’apparence affichée. Il propose uniquement les formes réellement parcourues par l’instance et, pour chacune, les skins déjà débloqués qui lui sont compatibles. Ce changement est gratuit, limité au hors-combat et ne modifie aucune propriété mécanique.
+
 Une fiche de Skill indépendante de la fiche de la créature n’est pas obligatoire. La consultation principale des capacités s’effectue depuis la fiche de l’instance.
 
 Les descriptions de la Basic Attack, des Skills et des Effets de combat affichent autant que possible les valeurs concrètes déjà calculées pour l’instance possédée : dégâts, soins, durée effective d’un DoT ou HoT, Bouclier accordé et autres valeurs calculables.
@@ -134,7 +136,9 @@ Avant toute découverte complète, l’arbre peut afficher :
 
 > Forme de base → ??? → ???
 
-Les nouvelles branches et conditions connues enrichissent la vue du compte. Si plusieurs branches sont valides au même déclenchement, l’interface doit permettre le choix exceptionnel prévu par le système.
+Les nouvelles branches et conditions connues enrichissent la vue du compte. L’existence ou l’apparence d’une forme rencontrée peut être révélée sans afficher sa condition. Le nombre et l’identité des branches encore inconnues restent masqués.
+
+Lorsqu’exactement une évolution standard est valide, elle est automatique et ne demande ni choix ni confirmation. Lorsque plusieurs branches concurrentes sont valides, aucune évolution ne se produit et l’interface ne présente aucun écran de choix manuel. Un objet consommable d’évolution peut en revanche demander une confirmation avant sa consommation volontaire.
 
 Une suite de plusieurs évolutions obtenues après une même récompense d’XP doit être présentée dans l’ordre.
 

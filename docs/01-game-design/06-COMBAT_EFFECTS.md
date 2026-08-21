@@ -131,7 +131,7 @@ Le moteur conserve l’identité minimale nécessaire pour distinguer la réappl
 
 ### 5.1. Snapshot complet de l’applicateur
 
-À l’application, toutes les informations nécessaires dépendant de l’applicateur sont calculées et snapshotées, selon les besoins : puissance, caractéristiques offensives, élément, Crit, cadence et paramètres propres à l’effet.
+À l’application, toutes les informations nécessaires dépendant de l’applicateur sont calculées et snapshotées, selon les besoins : puissance, caractéristiques offensives, élément, Crit, cadence explicitement prévue et paramètres propres à l’effet. Une cadence n’est jamais dérivée automatiquement de l’Agilité.
 
 Une modification ultérieure de l’applicateur ne modifie pas rétroactivement un effet déjà appliqué. Toute réapplication recalcule entièrement le snapshot à partir de l’état actuel, même lorsqu’elle ne fait que refresh la durée ou ajouter une stack.
 
@@ -178,17 +178,15 @@ Les DoT et HoT utilisent un moteur périodique commun. Chaque application défin
 
 Le nombre de ticks et la valeur totale non critique sont fixes pour l’application. Chaque tick reçoit une part de cette valeur totale et peut effectuer indépendamment son propre jet de Crit lorsque la mécanique est compatible. Les Critiques peuvent donc porter la valeur réellement obtenue au-delà de la valeur totale non critique de référence.
 
-### 6.2. Agilité et cadence
+### 6.2. Cadence propre
 
-La configuration de référence d’un effet périodique est exprimée pour une Agilité de référence égale à `1`.
+Chaque effet périodique utilise sa propre cadence, définie par l’effet, le Skill ou une autre règle explicitement prévue. L’Agilité de l’applicateur ne modifie pas automatiquement cette cadence, ses ticks ou sa durée.
 
-L’Agilité de l’applicateur au moment de l’application accélère la cadence selon une courbe à rendement décroissant comparable conceptuellement à celle de la Basic Attack, avec ses propres paramètres d’équilibrage et son propre intervalle minimum.
+Un Skill ou un effet particulier peut explicitement modifier ou accélérer une cadence comme exception locale. Lorsqu’une cadence est déterminée à l’application, elle est snapshotée avec les autres paramètres nécessaires et une modification ultérieure de sa source ne la recalcule pas, sauf règle contraire explicite.
 
-L’Agilité ne change ni le nombre de ticks, ni la puissance totale non critique. Elle rapproche les ticks et réduit ainsi la durée effective :
+La durée effective suit :
 
 > **DuréeEffective = NombreDeTicks × IntervalleEffectif**
-
-La cadence calculée est snapshotée. Une modification ultérieure de l’Agilité n’affecte pas l’effet déjà présent.
 
 ### 6.3. Timing et refresh
 
@@ -455,7 +453,7 @@ Après le combat, un résumé agrégé par créature doit permettre d’examiner
 ## 15. Éléments à préciser ultérieurement
 
 * Les coefficients exacts des DoT et HoT.
-* La courbe exacte d’accélération des ticks par l’Agilité et leur intervalle minimum.
+* Les cadences, nombres de ticks et paramètres propres aux effets périodiques concrets.
 * Les caps éventuels propres à certains effets.
 * Le maximum de stacks et leur progression pour chaque effet concret.
 * La chance exacte de rupture d’un CC lorsque des dégâts atteignent les PV.

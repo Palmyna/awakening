@@ -897,6 +897,10 @@ L'objectif est d'éviter l'inflation permanente des caractéristiques et des dé
 
 Chaque point doit avoir une valeur perceptible.
 
+Pour les six caractéristiques principales, un point dépensé par le joueur augmente toujours de `+1` la caractéristique choisie et représente une même unité de budget de puissance. Le système doit être calibré pour qu’un investissement comparable conserve une valeur globale comparable entre les caractéristiques.
+
+Si une caractéristique se révèle trop forte ou trop faible, sa formule ou sa courbe doit être recalibrée. Son coût en points ne change pas.
+
 Les constantes mathématiques doivent être calibrées autour de cette philosophie.
 
 Les exemples utilisant de très grands nombres pendant la conception ne constituent pas des valeurs de production.
@@ -1009,7 +1013,8 @@ Le moteur de combat reçoit directement les caractéristiques finales de la cré
 
 Ces valeurs intègrent déjà notamment :
 
-* les valeurs de base de la forme actuelle ;
+* le profil de caractéristiques principales de base de la forme actuelle ;
+* les valeurs de base des caractéristiques secondaires de la famille ;
 * le multiplicateur de son stade d’évolution, appliqué aux caractéristiques principales et secondaires de base ;
 * le multiplicateur de son niveau d’étoiles, appliqué uniquement aux six caractéristiques principales de base ;
 * les points distribués, appliqués après ces multiplicateurs ;
@@ -1181,6 +1186,8 @@ Exemples :
 * dégâts utilisant plusieurs caractéristiques ;
 * etc.
 
+Lorsqu’un Skill exploite une caractéristique de manière atypique — par exemple des dégâts basés sur les PV, la Défense ou l’Agilité — cette utilité supplémentaire est équilibrée dans les coefficients de la capacité concernée. Elle ne modifie ni la valeur système globale de cette caractéristique, ni son coût en points pour toutes les autres créatures.
+
 ---
 
 ### 8.1.1. Hit hybride
@@ -1206,9 +1213,11 @@ La Défense réduit les dégâts Physiques.
 
 La Défense spéciale réduit les dégâts Spéciaux.
 
-Les deux utilisent une courbe à rendement décroissant selon le principe suivant :
+Chaque caractéristique défensive est comparée à la caractéristique offensive adverse utilisée par la composante de dégâts concernée : Défense face à l’Attaque pour une composante Physique, et Défense spéciale face à l’Attaque spéciale pour une composante Spéciale.
 
-> **RéductionDéfensive = CapDéfensif × CaractéristiqueDéfensive / (CaractéristiqueDéfensive + KDéfensif)**
+Les deux utilisent une courbe relative à cette puissance offensive selon le principe suivant :
+
+> **RéductionDéfensive = CapDéfensif × CaractéristiqueDéfensive / (CaractéristiqueDéfensive + CaractéristiqueOffensiveAdverse)**
 
 Puis :
 
@@ -1217,13 +1226,13 @@ Puis :
 Avec :
 
 * `CaractéristiqueDéfensive` : Défense contre des dégâts Physiques ou Défense spéciale contre des dégâts Spéciaux ;
+* `CaractéristiqueOffensiveAdverse` : Attaque ou Attaque spéciale utilisée pour calculer la composante de dégâts concernée ;
 * `CapDéfensif` : réduction maximale théorique applicable à la catégorie concernée ;
-* `KDéfensif` : constante contrôlant la vitesse à laquelle la courbe approche son cap ;
 * `RéductionDéfensive` : proportion de dégâts retirée par la caractéristique défensive ;
 * `DégâtsAvantDéfense` : montant obtenu après le calcul offensif et les éventuels effets précédant la Défense, dont le Critique lorsqu'il s'applique ;
 * `DégâtsAprèsDéfense` : montant restant avant la résistance élémentaire et les autres protections.
 
-Les valeurs exactes des caps et des constantes `K` de Défense et de Défense spéciale restent des paramètres de balancing.
+La valeur exacte du cap et les éventuels paramètres additionnels nécessaires au réglage de la courbe restent des paramètres de balancing.
 
 La courbe doit :
 
@@ -1235,11 +1244,11 @@ La courbe doit :
 
 ### 8.3. Agilité
 
-L'Agilité contrôle la vitesse des Basic Attacks et accélère également la cadence des Effets de combat périodiques. Ces deux usages emploient des courbes et des intervalles minimums propres.
+L’Agilité contrôle la vitesse des Basic Attacks. Elle intervient également dans les priorités et départages qui l’utilisent, selon les règles temporelles du combat.
+
+Elle n’accélère pas automatiquement les DoT, les HoT ou les autres Effets de combat périodiques. Ces effets utilisent leur propre cadence, sauf exception explicitement définie par un Skill ou un effet.
 
 Chaque Basic Attack possède son propre **intervalle de base**. Il n'existe donc pas d'intervalle universel commun à toutes les créatures.
-
-La formule ci-dessous concerne uniquement l’intervalle des Basic Attacks. La cadence périodique est définie dans le [document Effets de combat](./06-COMBAT_EFFECTS.md).
 
 L'Agilité réduit cet intervalle selon une courbe exponentielle à rendement décroissant.
 
@@ -1277,6 +1286,8 @@ Cette courbe permet :
 * de conserver des différences naturelles entre une Basic rapide et une Basic lente.
 
 L'Agilité n'augmente pas la chance de Critique.
+
+Une cadence de Basic Attack plus élevée produit naturellement davantage de Basic Attacks, d’opportunités de gain d’énergie et de progressions des compteurs d’Active lorsque leurs règles reposent sur les Basic Attacks. Ces conséquences font partie de la valeur de l’Agilité et doivent être prises en compte dans son équilibrage.
 
 ---
 
@@ -1624,7 +1635,7 @@ Les HoT utilisent le moteur périodique commun décrit dans le [document Effets 
 Ils :
 
 * possèdent un nombre fixe de ticks et une valeur totale non critique fixe pour chaque application ;
-* utilisent une cadence accélérée par l’Agilité snapshotée de l’applicateur, sans modifier leur nombre de ticks ni leur valeur totale de référence ;
+* utilisent leur propre cadence définie par l’effet, le Skill ou une autre règle explicite ;
 * peuvent avoir plusieurs applicateurs indépendants ;
 * persistent après la mort de leur applicateur ;
 * continuent pendant Stun / Glacé / Peur ;
@@ -1754,11 +1765,10 @@ Chaque application possède :
 
 * une valeur totale non critique fixe ;
 * un nombre fixe de ticks ;
-* un intervalle de référence ;
-* une cadence accélérée par l’Agilité snapshotée de l’applicateur ;
+* un intervalle défini par l’effet, le Skill ou une autre règle explicite ;
 * une durée effective résultant du nombre de ticks et de cet intervalle.
 
-L’Agilité ne change ni le nombre de ticks ni la valeur totale de référence. Le premier tick survient après un intervalle complet ; il n’existe aucun tick immédiat par défaut.
+L’Agilité de l’applicateur ne change automatiquement ni l’intervalle, ni le nombre de ticks, ni la valeur totale de référence. Un Skill ou un effet peut prévoir explicitement une exception locale modifiant sa cadence. Le premier tick survient après un intervalle complet ; il n’existe aucun tick immédiat par défaut.
 
 Une application initiale peut être esquivée si l'effet qui l'applique est esquivable.
 
@@ -2190,7 +2200,7 @@ Les décisions structurelles sont validées, mais de nombreux paramètres numér
 
 Notamment :
 
-* valeurs exactes de `CapDéfensif` et `KDéfensif` pour la Défense et la Défense spéciale ;
+* valeur exacte de `CapDéfensif` et éventuels paramètres additionnels nécessaires à la formule de Défense et de Défense spéciale ;
 * valeurs exactes de `K`, `RéductionMax` et `IntervalleMinimum` pour l'Agilité ;
 * valeurs exactes de `CapCrit` et `KCrit` ;
 * valeurs exactes de `CapEsquive` et `KEsquive` ;
@@ -2200,8 +2210,7 @@ Notamment :
 * paliers, multiplicateurs, historiques, récupérations et minimums éventuels des diminishing returns du CC total, de Silence et de l’Exclusion ;
 * chance de rupture des CC lorsque des dégâts atteignent réellement les PV ;
 * durée standard des différents Effets de combat ;
-* courbe d’accélération des ticks par l’Agilité et intervalle minimum ;
-* nombres de ticks et coefficients des effets périodiques concrets ;
+* cadences, nombres de ticks et coefficients des effets périodiques concrets ;
 * valeur/cap de réduction des soins ;
 * formules exactes de Brûlure ;
 * formules exactes de Poison ;

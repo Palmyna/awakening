@@ -71,9 +71,14 @@ L’iLvl possède un cap. Sa valeur exacte, ses caps et sa relation avec les aut
 
 ## 9. Objets et évolutions
 
-Une évolution peut demander qu’un objet soit possédé, porté ou équipé.
+Un objet intervient dans une évolution uniquement de deux manières :
 
-Dans ces cas, l’objet n’est pas consommé. Une évolution peut exceptionnellement déclarer explicitement la consommation d’un objet ; elle seule provoque alors sa disparition.
+1. un équipement précis réellement équipé sur l’instance constitue une condition standard évaluée lors d’une montée de niveau et n’est pas consommé ;
+2. un objet consommable d’évolution est utilisé volontairement sur une instance éligible et déclenche immédiatement l’évolution correspondante, sans attendre une nouvelle montée de niveau.
+
+Dans le second cas, l’instance doit déjà satisfaire son niveau minimum obligatoire et les autres conditions de la transition. L’objet utilisé correspond directement à cette évolution et ne disparaît jamais automatiquement à la suite d’un level up.
+
+Le simple fait de posséder un objet dans l’inventaire n’est jamais une condition. « Porter » et « équiper » ne désignent pas deux mécanismes distincts : seul un équipement présent dans l’ensemble actif de l’instance satisfait une condition d’équipement.
 
 Les objets éventuellement liés aux évolutions doivent rester cohérents avec la progression et pouvoir être compris grâce aux informations disponibles en jeu.
 
@@ -94,7 +99,7 @@ Lorsqu’une instance est consommée comme matériau d’étoiles :
 ## 12. Dépendances
 
 * Le [référentiel Créatures](./03-CREATURES.md) définit la propriété et la conservation de l’équipement par instance.
-* Le [draft Évolutions](./07-EVOLUTIONS.md) définit le rôle des objets dans les conditions d’évolution.
+* Le [référentiel Évolutions](./07-EVOLUTIONS.md) définit le rôle des objets dans les conditions et déclenchements d’évolution.
 * Le [draft Progression](./10-PROGRESSION.md) définit la redistribution de caractéristiques.
 * Le [draft UI Flow](./18-UI_FLOW.md) définira les parcours de gestion et de comparaison.
 
@@ -111,4 +116,4 @@ Lorsqu’une instance est consommée comme matériau d’étoiles :
 * Les règles de génération et de variation des rolls.
 * La relation éventuelle entre les Sources d'énergie équipables et l'énergie d'invocation.
 * La méthode d’obtention, la rareté et le rythme de distribution de l’objet de réinitialisation.
-* Les éventuels objets consommés par des évolutions concrètes.
+* Les objets consommables et équipements concrets liés aux évolutions.

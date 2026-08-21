@@ -254,7 +254,7 @@ Les variantes narratives n’introduisent pas un niveau de regroupement supplém
 
 **Définition :** État fonctionnel et visuel précis d’une créature à un endroit de son arbre d’évolution.
 
-Une forme porte notamment son nom, son apparence, son lore propre, son ou ses éléments, son profil de caractéristiques de base, ses rôles suggérés, son profil offensif et les versions de sa Basic Attack et de ses Skills.
+Une forme porte notamment son nom, son apparence, son lore propre, son ou ses éléments, son profil de caractéristiques principales de base, ses rôles suggérés, son profil offensif et les versions de sa Basic Attack et de ses Skills.
 
 ### Instance possédée
 
@@ -372,9 +372,9 @@ Le terme « spécial » ne désigne pas uniquement la magie. Il peut couvrir des
 
 **Domaine :** Combat, progression des créatures
 
-**Définition :** Caractéristique principale contrôlant l’intervalle des Basic Attacks et accélérant la cadence des effets périodiques selon des courbes de rendement décroissant propres à ces deux usages.
+**Définition :** Caractéristique principale contrôlant l’intervalle des Basic Attacks selon une courbe à rendement décroissant et servant aux priorités ou départages qui l’utilisent.
 
-L’Agilité n’augmente pas le Crit.
+L’Agilité n’augmente pas le Crit et n’accélère pas automatiquement les DoT, les HoT ou les autres effets périodiques.
 
 ### Dégâts physiques
 
@@ -872,13 +872,13 @@ Un effet peut être éligible à Cleanse, à Dispel, aux deux ou à aucun, indé
 
 **Domaine :** Effets de combat, combat
 
-**Définition :** Effet infligeant des dégâts périodiques selon un nombre fixe de ticks et une cadence accélérée par l’Agilité snapshotée de l’applicateur. L’Agilité ne modifie ni le nombre de ticks ni la valeur totale non critique de l’application.
+**Définition :** Effet infligeant des dégâts périodiques selon un nombre fixe de ticks et une cadence propre définie par l’effet, le Skill ou une autre règle explicite. L’Agilité de l’applicateur ne modifie pas automatiquement cette cadence.
 
 ### HoT
 
 **Domaine :** Effets de combat, combat
 
-**Définition :** Effet appliquant des soins périodiques selon le même moteur général que les DoT : nombre fixe de ticks, valeur totale non critique fixe et cadence accélérée par l’Agilité snapshotée de l’applicateur.
+**Définition :** Effet appliquant des soins périodiques selon le même moteur général que les DoT : nombre fixe de ticks, valeur totale non critique fixe et cadence propre définie par l’effet, le Skill ou une autre règle explicite.
 
 ### Snapshot
 
@@ -1125,7 +1125,7 @@ Ce terme n’inclut pas les objets, les ressources et les autres éléments stoc
 
 Chaque famille possède un numéro permanent affiché sans zéro superflu, un lore général et un lore propre à chacune de ses formes. L’encyclopédie ne révèle jamais le nombre total de familles existantes. Les formes, branches et conditions d’évolution encore inconnues restent masquées et enrichissent progressivement l’arbre connu après leur découverte.
 
-Voir ou affronter une créature ne suffit pas à la découvrir : le joueur doit obtenir réellement une instance de sa famille.
+Une famille est découverte par l’obtention réelle de l’une de ses instances. Rencontrer ou affronter une forme évoluée peut néanmoins révéler l’existence et l’apparence de cette forme, sans révéler automatiquement sa condition d’évolution. Cette connaissance reste distincte de l’obtention et ne dévoile pas le catalogue des familles encore inconnues.
 
 **Terme à éviter :** « catalogue des créatures » pour désigner l’encyclopédie.
 

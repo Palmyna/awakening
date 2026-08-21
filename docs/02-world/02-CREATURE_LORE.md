@@ -44,7 +44,7 @@ L'évolution n'est pas une simple croissance biologique : elle transforme la str
 
 Une créature peut évoluer sans humain. Des formes intermédiaires ou finales existent donc dans le monde, même si toute nouvelle instance acquise par le joueur commence dans la forme de base de sa famille.
 
-Les conditions, multiplicateurs et effets fonctionnels des évolutions appartiennent au [draft Évolutions](../01-game-design/07-EVOLUTIONS.md).
+Les conditions, multiplicateurs et effets fonctionnels des évolutions appartiennent au [référentiel Évolutions](../01-game-design/07-EVOLUTIONS.md).
 
 ## 5. Ancrage et stabilisation
 
