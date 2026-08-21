@@ -309,9 +309,17 @@ La compatibilité exacte des skins avec les formes reste à décider.
 
 Le parcours d’invocation reste distinct de l’ouverture d’un paquet de skins.
 
-Avant une invocation, le joueur doit pouvoir connaître la ressource et le coût utilisés ainsi que les informations publiques de l’ensemble concerné lorsque celui-ci sera défini.
+Avant une invocation, le joueur doit pouvoir connaître la ressource utilisée, le coût unitaire et les informations publiques du pool permanent.
 
-Le résultat doit permettre d’identifier :
+Le joueur choisit la quantité avec le sélecteur fonctionnel `MIN | - | nombre | + | MAX`. `MIN` sélectionne une invocation, `-` et `+` ajustent la quantité dans les limites permises et `MAX` sélectionne le nombre maximal finançable avec la ressource disponible. Une quantité dont le coût total ne peut pas être payé ne peut pas être sélectionnée ou confirmée.
+
+Le parcours affiche le coût total correspondant à la quantité sélectionnée. Une opération de plusieurs invocations reste strictement équivalente au même nombre d’invocations unitaires et ne présente aucune remise, invocation gratuite, amélioration des taux ou garantie particulière.
+
+Toute opération portant sur plus d’une invocation demande une confirmation avant la dépense. Cette confirmation affiche au minimum le nombre total d’invocations et leur coût total. Une invocation unitaire ne demande pas de confirmation supplémentaire du seul fait de sa quantité.
+
+Une invocation unitaire utilise une révélation individuelle et une mise en scène plus ample. Une invocation multiple utilise une séquence globale suivie d’un récapitulatif groupé, sans imposer une longue succession de révélations individuelles complètes.
+
+Chaque résultat doit permettre d’identifier :
 
 * la famille et la forme de base obtenues ;
 * la rareté de la famille ;
@@ -396,7 +404,10 @@ Il dépend également des règles de combat, créatures, Skills, éléments, Eff
 * La présentation détaillée de l’inventaire, de l’iLvl et des comparaisons d’équipement.
 * Les protections lorsqu’un sac ne peut pas être déséquipé.
 * Les tutoriels, leurs jalons et leur ordre exact.
-* Les animations d’invocation, d’évolution et de montée d’étoile.
+* La disposition et le rendu graphique du sélecteur de quantité d’invocation.
+* Le wording et la présentation détaillée de la confirmation d’une invocation multiple.
+* Les animations de révélation unitaire, la séquence globale et le récapitulatif groupé d’une invocation multiple.
+* Les animations d’évolution et de montée d’étoile.
 * La présentation commerciale des services de confort.
 
 ## 24. Questions ouvertes
