@@ -310,7 +310,7 @@ Les termes de gameplay affichés doivent pouvoir donner accès directement à un
 
 Le tooltip d’un élément peut notamment présenter son rôle et les éléments de capacité auxquels il résiste. Une matrice globale des résistances n’est pas obligatoire dans l’interface actuelle.
 
-Ce principe est transversal et s’applique également aux caractéristiques, Effets de combat, statuts contextuels et autres mots-clés selon les règles du [document UI Flow](./18-UI_FLOW.md).
+Ce principe est transversal et s’applique également aux caractéristiques, Effets de combat, statuts contextuels et autres mots-clés selon les règles du [document UI Flow](./19-UI_FLOW.md).
 
 ### 9.3. Feedbacks de combat
 
@@ -331,7 +331,7 @@ Un changement temporaire d’élément d’une capacité n’a pas besoin d’ê
 | [`04-SKILLS.md`](./04-SKILLS.md) | Structure des capacités, effets produits et exceptions portées par les Skills |
 | [`06-COMBAT_EFFECTS.md`](./06-COMBAT_EFFECTS.md) | Application, durée, snapshot, retrait et immunités propres aux Effets de combat |
 | [`07-EVOLUTIONS.md`](./07-EVOLUTIONS.md) | Changements entre les formes et versions de capacités |
-| [`18-UI_FLOW.md`](./18-UI_FLOW.md) | Consultation, tooltips et feedbacks fonctionnels |
+| [`19-UI_FLOW.md`](./19-UI_FLOW.md) | Consultation, tooltips et feedbacks fonctionnels |
 
 ## 11. Éléments à préciser ultérieurement
 

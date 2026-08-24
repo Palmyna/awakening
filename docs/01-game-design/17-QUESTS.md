@@ -110,8 +110,8 @@ Un futur système peut choisir de garder ces parcours séparés ou d’autoriser
 | [`09-GACHA.md`](./09-GACHA.md) | Ressource générale d’invocation |
 | [`10-PROGRESSION.md`](./10-PROGRESSION.md) | Récompenses ayant un effet sur la progression |
 | [`12-MODES.md`](./12-MODES.md) | Fonctionnalités et activités débloquées |
-| [`15-EVENTS.md`](./15-EVENTS.md) | Éventuels objectifs temporaires distincts |
-| [`18-UI_FLOW.md`](./18-UI_FLOW.md) | Présentation, suivi et récupération |
+| [`16-EVENTS.md`](./16-EVENTS.md) | Éventuels objectifs temporaires distincts |
+| [`19-UI_FLOW.md`](./19-UI_FLOW.md) | Présentation, suivi et récupération |
 | [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Paquets gratuits et séparation économique |
 
 ## 11. Éléments à préciser ultérieurement

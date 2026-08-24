@@ -260,10 +260,11 @@ Les services de confort validés ne modifient pas ce principe.
 | [`09-GACHA.md`](./09-GACHA.md) | État initial et nouvelles instances utilisées pour les étoiles |
 | [`11-COLLECTION.md`](./11-COLLECTION.md) | Verrouillage et gestion des instances |
 | [`12-MODES.md`](./12-MODES.md) | Résultats, énergie commune et règles propres aux activités |
-| [`13-PVP.md`](./13-PVP.md) | Utilisation de l’énergie générale par le PvP |
-| [`15-EVENTS.md`](./15-EVENTS.md) | Récompenses et éventuelles exceptions locales de régulation |
-| [`16-QUESTS.md`](./16-QUESTS.md) | Objectifs journaliers et récompenses de progression |
-| [`18-UI_FLOW.md`](./18-UI_FLOW.md) | Présentation et confirmations des actions de progression |
+| [`13-PVE.md`](./13-PVE.md) | Utilisation de l’énergie générale par les activités PvE individuelles |
+| [`14-PVP.md`](./14-PVP.md) | Utilisation de l’énergie générale par le PvP |
+| [`16-EVENTS.md`](./16-EVENTS.md) | Récompenses et éventuelles exceptions locales de régulation |
+| [`17-QUESTS.md`](./17-QUESTS.md) | Objectifs journaliers et récompenses de progression |
+| [`19-UI_FLOW.md`](./19-UI_FLOW.md) | Présentation et confirmations des actions de progression |
 
 ## 14. Éléments à préciser ultérieurement
 

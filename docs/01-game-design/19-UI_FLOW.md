@@ -386,13 +386,13 @@ Chaque service de confort doit présenter son effet exact, son prix, ses limites
 
 ## 21. Modes de long terme
 
-Les interfaces détaillées du PvP, des guildes, des événements, des boss de serveur, de la tour infinie et des contenus saisonniers ne peuvent pas être définies avant leurs règles de Game Design.
+Les interfaces détaillées du PvP, des guildes, des événements, des boss personnels, des boss de serveur, de la tour infinie et des contenus saisonniers ne peuvent pas être définies avant leurs règles de Game Design.
 
 Leurs futurs parcours devront réutiliser les contrats communs d’information, de préparation, de résultat, de lisibilité et de transparence sans imposer dès maintenant une architecture de navigation.
 
 ## 22. Dépendances
 
-Le présent document traduit les besoins fonctionnels des documents spécialisés, notamment [`09-GACHA.md`](./09-GACHA.md), [`10-PROGRESSION.md`](./10-PROGRESSION.md), [`11-COLLECTION.md`](./11-COLLECTION.md), [`12-MODES.md`](./12-MODES.md), [`13-PVP.md`](./13-PVP.md), [`15-EVENTS.md`](./15-EVENTS.md) et [`16-QUESTS.md`](./16-QUESTS.md).
+Le présent document traduit les besoins fonctionnels des documents spécialisés, notamment [`09-GACHA.md`](./09-GACHA.md), [`10-PROGRESSION.md`](./10-PROGRESSION.md), [`11-COLLECTION.md`](./11-COLLECTION.md), [`12-MODES.md`](./12-MODES.md), [`13-PVE.md`](./13-PVE.md), [`14-PVP.md`](./14-PVP.md), [`16-EVENTS.md`](./16-EVENTS.md) et [`17-QUESTS.md`](./17-QUESTS.md).
 
 Il dépend également des règles de combat, créatures, Skills, éléments, Effets de combat, évolutions, objets et monétisation. Une décision d’interface ne peut pas modifier leurs règles fonctionnelles.
 

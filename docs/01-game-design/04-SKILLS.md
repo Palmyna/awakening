@@ -478,7 +478,7 @@ Une fiche de capacité peut présenter séparément les propriétés structurell
 
 La description mécanique rassemble ensuite les cibles, valeurs, effets, durées, probabilités et exceptions nécessaires. Elle ne doit pas être transformée en formulaire répétant chaque information déjà exprimée clairement.
 
-Sur la fiche destinée au joueur, les valeurs finales calculables pour l’instance sont affichées autant que possible plutôt que leurs coefficients internes. Lorsqu’une valeur dépend d’une cible future, la formule relative reste visible et aucun montant artificiel n’est présenté. Les besoins fonctionnels détaillés appartiennent au [document UI Flow](./18-UI_FLOW.md).
+Sur la fiche destinée au joueur, les valeurs finales calculables pour l’instance sont affichées autant que possible plutôt que leurs coefficients internes. Lorsqu’une valeur dépend d’une cible future, la formule relative reste visible et aucun montant artificiel n’est présenté. Les besoins fonctionnels détaillés appartiennent au [document UI Flow](./19-UI_FLOW.md).
 
 Les règles système communes, comme l’Esquive standard d’un hit offensif, n’ont pas à être répétées sur chaque fiche. La capacité décrit ce qui lui est propre et ses exceptions.
 
@@ -521,7 +521,7 @@ Si une future capacité crée seulement une exception locale, sa fiche peut la d
 | [`05-ELEMENTS.md`](./05-ELEMENTS.md) | Éléments des capacités et résistances élémentaires |
 | [`06-COMBAT_EFFECTS.md`](./06-COMBAT_EFFECTS.md) | Lifecycle, durée, réapplication, snapshot, retrait et comportement des Effets de combat |
 | [`07-EVOLUTIONS.md`](./07-EVOLUTIONS.md) | Transformations des versions de capacités entre les formes et branches |
-| [`18-UI_FLOW.md`](./18-UI_FLOW.md) | Présentation et parcours de consultation ou de contrôle |
+| [`19-UI_FLOW.md`](./19-UI_FLOW.md) | Présentation et parcours de consultation ou de contrôle |
 
 ## 17. Éléments à préciser ultérieurement
 

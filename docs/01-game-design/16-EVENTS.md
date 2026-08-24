@@ -131,8 +131,9 @@ La navigation, le calendrier, les notifications et la présentation détaillée 
 | [`10-PROGRESSION.md`](./10-PROGRESSION.md) | Progression et paramètres de récompense |
 | [`11-COLLECTION.md`](./11-COLLECTION.md) | Disponibilité et skins obtenus hors paquets |
 | [`12-MODES.md`](./12-MODES.md) | Contrat des activités et statut long terme |
-| [`16-QUESTS.md`](./16-QUESTS.md) | Objectifs journaliers et éventuelles interactions futures |
-| [`18-UI_FLOW.md`](./18-UI_FLOW.md) | Accès, information, résultat et calendrier |
+| [`13-PVE.md`](./13-PVE.md) | Règles propres aux activités PvE utilisées par un événement |
+| [`17-QUESTS.md`](./17-QUESTS.md) | Objectifs journaliers et éventuelles interactions futures |
+| [`19-UI_FLOW.md`](./19-UI_FLOW.md) | Accès, information, résultat et calendrier |
 | [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Paquets, offres temporaires et protection des joueurs |
 | [`01-LORE.md`](../02-world/01-LORE.md) | Canon des événements, saisons et régions |
 

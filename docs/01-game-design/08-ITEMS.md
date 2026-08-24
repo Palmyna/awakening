@@ -328,7 +328,7 @@ Il n’accorde aucun niveau, aucune expérience, aucun point supplémentaire et 
 | [`07-EVOLUTIONS.md`](./07-EVOLUTIONS.md) | Conditions et déclenchements d’évolution liés aux objets |
 | [`10-PROGRESSION.md`](./10-PROGRESSION.md) | Niveau du compte, étoiles et redistribution des caractéristiques |
 | [`11-COLLECTION.md`](./11-COLLECTION.md) | Séparation entre collection et inventaire |
-| [`18-UI_FLOW.md`](./18-UI_FLOW.md) | Parcours de gestion, comparaison, fabrication et inventaire |
+| [`19-UI_FLOW.md`](./19-UI_FLOW.md) | Parcours de gestion, comparaison, fabrication et inventaire |
 | [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Service de confort payant lié aux sacs |
 
 ## 17. Éléments à préciser ultérieurement

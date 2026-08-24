@@ -674,7 +674,7 @@ Après une défaite, le joueur peut :
 * retourner à la gestion afin de modifier une composition ou un équipement ;
 * quitter l’activité.
 
-Le résultat doit donner accès à un résumé statistique simple des deux équipes, agrégé par créature plutôt que par Skill. Il présente notamment les dégâts infligés et reçus, les soins et Boucliers accordés ainsi que d’autres indicateurs globaux pertinents, dont la liste exacte reste à préciser dans le [document UI Flow](./18-UI_FLOW.md).
+Le résultat doit donner accès à un résumé statistique simple des deux équipes, agrégé par créature plutôt que par Skill. Il présente notamment les dégâts infligés et reçus, les soins et Boucliers accordés ainsi que d’autres indicateurs globaux pertinents, dont la liste exacte reste à préciser dans le [document UI Flow](./19-UI_FLOW.md).
 
 Ces informations doivent aider à comprendre les principales contributions, les Effets de combat importants et les créatures mises hors combat sans exposer un combat log technique détaillé.
 
@@ -1105,12 +1105,13 @@ Le GDD dépend des documents spécialisés suivants pour les détails :
 * [`10-PROGRESSION.md`](./10-PROGRESSION.md) — expérience, niveaux, étoiles, énergie, réinitialisations et progression du compte ;
 * [`11-COLLECTION.md`](./11-COLLECTION.md) — gestion des instances, encyclopédie et capacité ;
 * [`12-MODES.md`](./12-MODES.md) — contrats communs et statuts des modes ;
-* [`13-PVP.md`](./13-PVP.md) — contraintes et décisions ouvertes du PvP ;
-* `14-GUILDS.md` — fonctions de guilde, lorsqu’un cadrage suffisant permettra sa création ;
-* [`15-EVENTS.md`](./15-EVENTS.md) — événements temporaires et contenus saisonniers ;
-* [`16-QUESTS.md`](./16-QUESTS.md) — quêtes journalières ;
-* `17-ACHIEVEMENTS.md` — hauts faits, lorsqu’un cadrage suffisant permettra sa création ;
-* [`18-UI_FLOW.md`](./18-UI_FLOW.md) — écrans, navigation, tutoriels et parcours ;
+* [`13-PVE.md`](./13-PVE.md) — mode Histoire et autres modes PvE sans référentiel propre ;
+* [`14-PVP.md`](./14-PVP.md) — contraintes et décisions ouvertes du PvP ;
+* `15-GUILDS.md` — fonctions de guilde, lorsqu’un cadrage suffisant permettra sa création ;
+* [`16-EVENTS.md`](./16-EVENTS.md) — événements temporaires et contenus saisonniers ;
+* [`17-QUESTS.md`](./17-QUESTS.md) — quêtes journalières ;
+* `18-ACHIEVEMENTS.md` — hauts faits, lorsqu’un cadrage suffisant permettra sa création ;
+* [`19-UI_FLOW.md`](./19-UI_FLOW.md) — écrans, navigation, tutoriels et parcours ;
 * [`01-ART_DIRECTION.md`](../03-art/01-ART_DIRECTION.md) à [`06-ANIMATIONS.md`](../03-art/06-ANIMATIONS.md) — direction artistique, représentation des créatures, cartes, UI, VFX et animations ;
 * [`01-ARCHITECTURE.md`](../04-technical/01-ARCHITECTURE.md) — moteur retenu, séparation technique entre simulation et représentation et principes de reproductibilité.
 

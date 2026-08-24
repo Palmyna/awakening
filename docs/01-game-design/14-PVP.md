@@ -112,7 +112,7 @@ Les informations publiques, l’historique, les profils, les replays partageable
 | [`03-CREATURES.md`](./03-CREATURES.md) | Identité, puissance et composition des équipes |
 | [`10-PROGRESSION.md`](./10-PROGRESSION.md) | Sources de puissance, score de Puissance et réserve générale d’énergie |
 | [`12-MODES.md`](./12-MODES.md) | Statut de périmètre et contrat commun des modes |
-| [`18-UI_FLOW.md`](./18-UI_FLOW.md) | Préparation, combat, résultat et analyse |
+| [`19-UI_FLOW.md`](./19-UI_FLOW.md) | Préparation, combat, résultat et analyse |
 | [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Limites économiques et équité |
 
 ## 11. Éléments à préciser ultérieurement

@@ -258,9 +258,9 @@ La présentation artistique peut employer un œuf, une éclosion, un rituel, un 
 | [`03-CREATURES.md`](./03-CREATURES.md) | État structurel et cycle de vie d’une instance |
 | [`10-PROGRESSION.md`](./10-PROGRESSION.md) | Niveaux, étoiles et consommation volontaire d’instances |
 | [`11-COLLECTION.md`](./11-COLLECTION.md) | Découverte, capacité et gestion des instances obtenues |
-| [`15-EVENTS.md`](./15-EVENTS.md) | Récompenses événementielles et source d’invocations |
-| [`16-QUESTS.md`](./16-QUESTS.md) | Quêtes journalières comme source d’invocations |
-| [`18-UI_FLOW.md`](./18-UI_FLOW.md) | Parcours d’invocation, révélation et feedback de capacité |
+| [`16-EVENTS.md`](./16-EVENTS.md) | Récompenses événementielles et source d’invocations |
+| [`17-QUESTS.md`](./17-QUESTS.md) | Quêtes journalières comme source d’invocations |
+| [`19-UI_FLOW.md`](./19-UI_FLOW.md) | Parcours d’invocation, révélation et feedback de capacité |
 | [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Séparation économique et exclusions du modèle de lancement |
 | [`01-LORE.md`](../02-world/01-LORE.md) | Échos, manifestations, Ancrage et dispositifs d’invocation |
 

@@ -4,9 +4,11 @@
 
 ## 1. Rôle et périmètre du document
 
-Ce document organise les modes de jeu actuellement confirmés ou envisagés et définit les contrats communs qu’un futur mode doit respecter.
+Ce document organise les modes de jeu actuellement confirmés ou envisagés et définit les contrats transversaux qu’un mode ou une activité doit respecter par défaut.
 
 Il distingue le statut de périmètre d’un mode de ses règles détaillées. La présence d’un mode dans une liste de long terme ne valide ni son fonctionnement, ni son ordre de production, ni sa date de disponibilité.
+
+Les règles internes des modes PvE, du PvP, des événements et des futurs systèmes de guilde appartiennent à leurs référentiels spécialisés. Le présent document définit leur cadre commun sans les redécrire individuellement.
 
 ## 2. Fonction des modes dans l’expérience
 
@@ -121,82 +123,34 @@ Un mode fondé sur un score, un objectif partiel ou une participation doit défi
 
 Après un combat, un résumé statistique simple des deux équipes doit être accessible. Il reste agrégé par créature plutôt que par Skill et aide le joueur à adapter sa préparation.
 
-## 9. Mode Histoire
+## 9. Articulation avec les référentiels spécialisés
 
-Le mode Histoire constitue la principale chaîne de progression PvE et la colonne vertébrale initiale du jeu.
+Les règles propres à chaque domaine sont réparties ainsi :
 
-Il est organisé en :
+* [`13-PVE.md`](./13-PVE.md) rassemble le mode Histoire et les autres directions PvE ne disposant pas de leur propre référentiel ;
+* [`14-PVP.md`](./14-PVP.md) porte les contraintes et décisions propres au PvP ;
+* le futur `15-GUILDS.md` portera les fonctions de guilde lorsqu’un cadrage suffisant permettra sa création ;
+* [`16-EVENTS.md`](./16-EVENTS.md) porte la structure des événements et contenus saisonniers, qu’ils contiennent du PvE, du PvP, du communautaire ou une autre activité ;
+* [`17-QUESTS.md`](./17-QUESTS.md) porte les objectifs journaliers ;
+* le futur `18-ACHIEVEMENTS.md` portera les hauts faits lorsqu’un cadrage suffisant permettra sa création ;
+* [`19-UI_FLOW.md`](./19-UI_FLOW.md) traduit les besoins fonctionnels des modes dans les parcours et écrans.
 
-* mondes ;
-* niveaux ;
-* combats ;
-* boss ou jalons réguliers.
+Un référentiel spécialisé hérite des contrats du présent document. Il décrit uniquement ses règles propres et les exceptions explicitement justifiées.
 
-Un niveau ordinaire correspond généralement à un combat court. Les séries de combats successifs peuvent être réservées aux boss, défis spéciaux, activités avancées ou modes dont l’identité le nécessite.
-
-Le mode Histoire doit :
-
-* augmenter progressivement sa difficulté ;
-* rester rejouable ;
-* permettre de répéter certains niveaux pour leurs récompenses ;
-* soutenir le farming de Sources d’énergie, de composants et d’autres récompenses pertinentes ;
-* servir de principale source de déblocage des fonctionnalités ;
-* accueillir de nouveaux mondes et niveaux au fil du développement ;
-* soutenir une progression longue sans exiger une narration détaillée pour chaque niveau.
-
-La puissance d’équipe peut servir d’indication de difficulté, mais ne constitue pas un verrou systématique.
-
-Le mode Histoire utilise la réserve générale d’énergie, consommée à l’entrée du niveau. Lors d’une défaite, cette énergie reste normalement consommée, sauf exception explicite propre à une activité ou à l’onboarding.
-
-## 10. Onboarding et vertical slice
-
-La vertical slice comprend uniquement un début représentatif du mode Histoire : plusieurs niveaux courts et un boss ou défi final.
-
-Elle doit permettre de tester la boucle suivante :
-
-> sélectionner une équipe → combattre → recevoir expérience et récompenses → développer les créatures → améliorer la composition → franchir un nouveau défi.
-
-Le PvP, les guildes, les boss de serveur, les événements temporaires, les saisons et les systèmes sociaux sont exclus de cette vertical slice.
-
-## 11. Modes et contenus de long terme
-
-Les boss personnels, boss de serveur, tour infinie, PvP, événements temporaires, guildes et contenus saisonniers constituent des directions de long terme.
-
-Les documents existants ne permettent pas encore de déduire :
-
-* leur structure d’accès ;
-* leur format de combat ;
-* leurs conditions de victoire ou de score ;
-* leurs règles de répétition ;
-* leurs coûts exacts ou leurs éventuelles exceptions explicites à la réserve générale d’énergie ;
-* leurs récompenses ;
-* leur calendrier ;
-* leur dimension individuelle, compétitive ou coopérative détaillée.
-
-Ces choix doivent rester locaux aux documents spécialisés correspondants.
-
-## 12. Dépendances
+## 10. Dépendances
 
 | Document | Responsabilité liée |
 | --- | --- |
 | [`01-GAME_DESIGN_DOCUMENT.md`](./01-GAME_DESIGN_DOCUMENT.md) | Boucles globales et statuts de périmètre |
 | [`02-COMBAT.md`](./02-COMBAT.md) | Contrat du moteur et exceptions de mode |
 | [`10-PROGRESSION.md`](./10-PROGRESSION.md) | XP, compte, énergie et résultats |
-| [`13-PVP.md`](./13-PVP.md) | Contraintes et décisions propres au PvP |
-| [`15-EVENTS.md`](./15-EVENTS.md) | Contenus temporaires et saisonniers |
-| [`16-QUESTS.md`](./16-QUESTS.md) | Objectifs journaliers liés aux fonctionnalités débloquées |
-| [`18-UI_FLOW.md`](./18-UI_FLOW.md) | Sélection, préparation, combat et résultats |
+| [`13-PVE.md`](./13-PVE.md) | Modes PvE et règles propres au mode Histoire |
+| [`14-PVP.md`](./14-PVP.md) | Contraintes et décisions propres au PvP |
+| [`16-EVENTS.md`](./16-EVENTS.md) | Contenus temporaires et saisonniers |
+| [`17-QUESTS.md`](./17-QUESTS.md) | Objectifs journaliers liés aux fonctionnalités débloquées |
+| [`19-UI_FLOW.md`](./19-UI_FLOW.md) | Sélection, préparation, combat et résultats |
 
-## 13. Éléments à préciser ultérieurement
+## 11. Éléments à préciser ultérieurement
 
 * Les récompenses, coûts d’entrée et paramètres numériques de chaque activité.
 * Les exceptions locales à la réserve générale d’énergie qui seront justifiées par le design d’un mode particulier.
-* Les niveaux, mondes, tables de loot et jalons concrets du mode Histoire.
-* Les quantités et données exactes de la vertical slice.
-
-## 14. Questions ouvertes
-
-* Quel ordre de conception et de production doit être retenu pour les modes de long terme ?
-* Quels modes utilisent le combat standard, un objectif de score, plusieurs combats successifs ou une autre structure ?
-* Quelles récompenses et règles de répétition distinguent chaque mode sans rendre un contenu unique obligatoire pour toute progression ?
-* Quels modes doivent être permanents, rotatifs, temporaires ou saisonniers ?

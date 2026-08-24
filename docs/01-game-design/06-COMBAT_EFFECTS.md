@@ -8,7 +8,7 @@ Ce document définit les règles spécialisées des **Combat Effects**, ou **Eff
 
 Il constitue la référence actuelle pour les effets qui continuent d’exister après leur création ou leur application : effets persistants, périodiques, retardés, défensifs, de contrôle, utilitaires ou modificatifs.
 
-Il complète les [règles de combat](./02-COMBAT.md), les [Skills](./04-SKILLS.md), les [éléments](./05-ELEMENTS.md) et les besoins fonctionnels d’[interface](./18-UI_FLOW.md) sans les remplacer.
+Il complète les [règles de combat](./02-COMBAT.md), les [Skills](./04-SKILLS.md), les [éléments](./05-ELEMENTS.md) et les besoins fonctionnels d’[interface](./19-UI_FLOW.md) sans les remplacer.
 
 Les règles communes de timeline, de résolution numérique, de dégâts, de soins et de priorité appartiennent au document Combat. La composition des capacités et l’ordre de leurs résultats appartiennent au document Skills. Le présent document définit le lifecycle commun des Effets de combat.
 
@@ -440,7 +440,7 @@ Cette liste répond aux besoins actuels sans fermer l’ajout ultérieur de nouv
 
 ## 14. Présentation et information joueur
 
-Les besoins fonctionnels détaillés appartiennent au [document UI Flow](./18-UI_FLOW.md).
+Les besoins fonctionnels détaillés appartiennent au [document UI Flow](./19-UI_FLOW.md).
 
 En combat, les effets importants utilisent des icônes. Un effet à stacks emploie une seule icône avec compteur ; deux instances indépendantes du même effet utilisent deux icônes distinctes. Un timer radial peut représenter la durée sans afficher constamment un nombre.
 

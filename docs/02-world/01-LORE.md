@@ -462,4 +462,4 @@ Les informations spécialisées sont réparties de la manière suivante :
 * arrivée ou réveil des humains actuels ;
 * événements majeurs de la campagne.
 
-Les règles fonctionnelles détaillées restent dans les documents de game design, notamment `07-EVOLUTIONS.md`, `09-GACHA.md`, `11-COLLECTION.md`, `12-MODES.md` et `15-EVENTS.md`.
+Les règles fonctionnelles détaillées restent dans les documents de game design, notamment `07-EVOLUTIONS.md`, `09-GACHA.md`, `11-COLLECTION.md`, `12-MODES.md`, `13-PVE.md` et `16-EVENTS.md`.
