@@ -259,7 +259,7 @@ Les services de confort validés ne modifient pas ce principe.
 | [`08-ITEMS.md`](./08-ITEMS.md) | Niveau d’objet, génération et restitution des équipements |
 | [`09-GACHA.md`](./09-GACHA.md) | État initial et nouvelles instances utilisées pour les étoiles |
 | [`11-COLLECTION.md`](./11-COLLECTION.md) | Verrouillage et gestion des instances |
-| [`12-MODES.md`](./12-MODES.md) | Résultats, énergie commune et règles propres aux activités |
+| [`12-MODES.md`](./12-MODES.md) | Résultats et cadre transversal de l’énergie commune aux activités |
 | [`13-PVE.md`](./13-PVE.md) | Utilisation de l’énergie générale par les activités PvE individuelles |
 | [`14-PVP.md`](./14-PVP.md) | Utilisation de l’énergie générale par le PvP |
 | [`16-EVENTS.md`](./16-EVENTS.md) | Récompenses et éventuelles exceptions locales de régulation |

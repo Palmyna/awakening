@@ -989,7 +989,7 @@ Leur présence dans cette liste ne valide ni leurs règles, ni leur ordre de pro
 
 Tout autre mode ou variante non explicitement validé doit rester présenté comme une possibilité.
 
-Les règles détaillées et le statut futur de chaque mode seront définis dans `12-MODES.md` et les documents spécialisés associés.
+Les contrats transversaux et les statuts de périmètre sont définis dans [`12-MODES.md`](./12-MODES.md). Les règles détaillées et les éventuelles exceptions de chaque mode relèvent des documents spécialisés associés.
 
 ## 19. Vertical slice fonctionnelle
 

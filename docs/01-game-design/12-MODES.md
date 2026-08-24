@@ -1,14 +1,14 @@
 # Project Awakening — Modes de jeu
 
-**Statut :** Draft de conception — à relire et valider
+**Statut :** Rédigé — référence actuelle, à maintenir à jour
 
 ## 1. Rôle et périmètre du document
 
-Ce document organise les modes de jeu actuellement confirmés ou envisagés et définit les contrats transversaux qu’un mode ou une activité doit respecter par défaut.
+Ce document constitue le cadre transversal commun à l’ensemble des modes et activités de Project Awakening. Il définit les contrats qu’un mode ou une activité respecte par défaut lorsqu’aucune exception propre n’est explicitement documentée.
 
 Il distingue le statut de périmètre d’un mode de ses règles détaillées. La présence d’un mode dans une liste de long terme ne valide ni son fonctionnement, ni son ordre de production, ni sa date de disponibilité.
 
-Les règles internes des modes PvE, du PvP, des événements et des futurs systèmes de guilde appartiennent à leurs référentiels spécialisés. Le présent document définit leur cadre commun sans les redécrire individuellement.
+Les règles internes des modes PvE, du PvP, des événements et des futurs systèmes de guilde ou de hauts faits appartiennent à leurs référentiels spécialisés. Le présent document définit leur cadre commun sans les redécrire individuellement.
 
 ## 2. Fonction des modes dans l’expérience
 
@@ -74,7 +74,7 @@ Les modes utilisant le moteur de combat héritent des règles du [référentiel 
 * une représentation visuelle indépendante de la simulation ;
 * les vitesses de visualisation ×1, ×2 et ×4 sans effet sur les calculs, le résultat ou les récompenses.
 
-Un mode à objectif peut définir sa propre condition de victoire, de défaite ou de score. Il peut utiliser une durée différente uniquement si cette exception est explicitement documentée.
+Un mode peut définir une durée ou ses propres conditions de victoire, de défaite, de score ou d’objectif particulier uniquement lorsque ces exceptions sont explicitement documentées dans son référentiel.
 
 Sans exception de mode, le timeout départage un combat standard selon :
 
@@ -95,6 +95,8 @@ Pour un contenu ordinaire, le joueur doit connaître suffisamment d’informatio
 * le coût d’entrée lorsqu’il existe.
 
 Un boss ou défi peut conserver une mécanique secrète. Le jeu doit alors signaler qu’une mécanique inconnue est présente. La première défaite ne doit pas devenir une étape systématiquement obligatoire pour comprendre un niveau.
+
+Le détail de la présentation de ces informations appartient à [`19-UI_FLOW.md`](./19-UI_FLOW.md).
 
 ## 7. Énergie des modes individuels
 
