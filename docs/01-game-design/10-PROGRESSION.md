@@ -61,6 +61,8 @@ Par défaut, l’XP des créatures est attribuée après un combat remporté et 
 
 Un mode peut définir explicitement une exception locale. Le mode Histoire accorde une petite quantité d’XP aux créatures participantes après une défaite, tandis que la Tour infinie peut en accorder une. Ces exceptions, définies dans [`13-PVE.md`](./13-PVE.md), n’accordent aucune XP au compte et ne modifient pas la règle des autres modes.
 
+Un combat PvP initié par le joueur peut accorder de l’XP au compte selon les règles de [`14-PVP.md`](./14-PVP.md), mais n’accorde jamais d’XP aux créatures. Une défense PvP résolue hors ligne n’accorde aucune XP au compte ou aux créatures.
+
 Chaque créature participante reçoit son propre gain ; l’XP n’est jamais divisée entre les membres de l’équipe.
 
 Toutes les participantes reçoivent leur gain, y compris si elles sont mortes, contrôlées ou temporairement exclues à la fin du combat. Utiliser une équipe réduite n’augmente jamais le gain individuel d’une participante.
@@ -240,6 +242,8 @@ Hors ligne, seule la récupération de l’énergie générale est validée.
 
 Les créatures ne gagnent automatiquement aucune XP, aucun niveau, aucun point de caractéristique, aucun équipement et aucune autre ressource générale. Le compte ne gagne pas non plus d’expérience automatiquement.
 
+La résolution d’une défense PvP hors ligne ne constitue pas une progression passive : elle ne produit ni XP, ni loot, ni récompense directe, ni cote saisonnière. Elle peut uniquement ajuster le MMR compétitif interne selon le référentiel PvP ; ce MMR reste distinct de la progression du compte.
+
 Le modèle de lancement interdit la vente directe :
 
 * d’expérience ;
@@ -263,7 +267,7 @@ Les services de confort validés ne modifient pas ce principe.
 | [`11-COLLECTION.md`](./11-COLLECTION.md) | Verrouillage et gestion des instances |
 | [`12-MODES.md`](./12-MODES.md) | Résultats et cadre transversal de l’énergie commune aux activités |
 | [`13-PVE.md`](./13-PVE.md) | Énergie générale et exceptions locales d’XP des activités PvE |
-| [`14-PVP.md`](./14-PVP.md) | Utilisation de l’énergie générale par le PvP |
+| [`14-PVP.md`](./14-PVP.md) | Énergie générale, XP de compte en attaque, absence d’XP des créatures et progression compétitive distincte |
 | [`16-EVENTS.md`](./16-EVENTS.md) | Récompenses et éventuelles exceptions locales de régulation |
 | [`17-QUESTS.md`](./17-QUESTS.md) | Objectifs journaliers et récompenses de progression |
 | [`19-UI_FLOW.md`](./19-UI_FLOW.md) | Présentation et confirmations des actions de progression |

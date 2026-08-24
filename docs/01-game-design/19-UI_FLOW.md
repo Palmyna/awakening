@@ -365,6 +365,10 @@ La gestion des sacs présente les six emplacements dédiés, la capacité de cha
 
 Le remplacement et le déséquipement doivent signaler clairement leurs conséquences sur la capacité et les places disponibles.
 
+La gestion de l’équipement doit permettre de consulter et modifier plusieurs loadouts pour une même instance. Elle indique lorsqu’un équipement est réservé à une créature parce qu’il figure dans au moins un de ses loadouts, autorise sa réutilisation entre les loadouts de cette même instance et interdit son affectation à une autre instance.
+
+Avant un transfert, l’interface avertit clairement le joueur lorsque plusieurs loadouts de l’instance actuelle seront affectés et permet d’en comprendre la portée. Le nombre de loadouts, leurs noms et leur sélection automatique ou manuelle selon les modes restent à définir sans imposer ici le layout final.
+
 ## 20. Parcours cosmétique et achats
 
 La boutique est exclusivement cosmétique. Elle reste distincte des services payants de redistribution, de vitesse de visualisation, d’extension de capacité et de sacs.
@@ -429,6 +433,26 @@ Le parcours de la Tour infinie doit permettre de connaître :
 * le coût de la tentative en énergie générale.
 
 L’interface ne doit pas suggérer qu’un étage terminé peut être rejoué ou qu’un ancien étage constitue une boucle de farming.
+
+### 21.4. PvP
+
+Le parcours de préparation doit permettre de gérer l’équipe d’attaque, la défense enregistrée, les positions, les loadouts applicables ainsi que les règles et modificateurs de la saison.
+
+Le matchmaking recherche automatiquement une défense. Avant le lancement, la composition exacte de l’adversaire reste masquée et le parcours ne doit pas suggérer un choix libre de cible.
+
+Pendant la restitution du combat, l’interface expose le fonctionnement entièrement Auto, les vitesses disponibles et, lorsqu’il est débloqué avec `×4`, le bouton Skip menant directement au résumé. Quitter cette visualisation, fermer le jeu ou perdre la connexion ne doit pas être présenté comme un abandon puisque le résultat est déjà déterminé.
+
+Le résultat présente au minimum la victoire ou la défaite, le résumé fonctionnel, la variation de cote de l’attaquant et les informations utiles à l’analyse après révélation de la défense.
+
+L’espace saisonnier doit permettre de connaître :
+
+* la cote saisonnière et le classement ;
+* les jalons déjà obtenus et leurs récompenses ;
+* le temps restant ;
+* le thème, les modificateurs, malus et règles locales annoncées ;
+* l’éligibilité actuelle au classement et l’activité requise pour la conserver ou la retrouver.
+
+L’historique de la saison courante distingue les attaques lancées des défenses subies. Chaque entrée présente les informations compétitives requises et ouvre le même type de résumé fonctionnel que l’écran final du combat, sans exiger de replay complet.
 
 ## 22. Dépendances
 

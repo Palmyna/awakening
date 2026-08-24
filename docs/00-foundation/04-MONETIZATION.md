@@ -80,7 +80,7 @@ Sont interdits :
 Les services de confort validés dans le modèle initial sont strictement limités :
 
 * la réinitialisation payante redistribue des points déjà gagnés sans accorder de niveau, d’expérience, de ressource ou de potentiel supplémentaire ;
-* les vitesses ×2 et ×4 accélèrent uniquement la visualisation du combat en temps réel, sans modifier sa simulation ;
+* les vitesses ×2 et ×4 accélèrent uniquement la visualisation du combat en temps réel, sans modifier sa simulation ; le déblocage de ×4 peut aussi donner accès au Skip du PvP asynchrone, qui passe directement au résumé sans avantage mécanique ou économique ;
 * une extension de capacité ajoute définitivement un nombre fixe de places de créatures possédées sans modifier la capacité gratuite ni la puissance des créatures ;
 * un sac acheté augmente uniquement la capacité de l’inventaire, n’accorde aucune puissance ou équipement exclusif et reste également accessible par le gameplay.
 
@@ -177,6 +177,8 @@ Ce service accélère uniquement la restitution du combat dans le temps réel. I
 * le résultat ;
 * les récompenses ;
 * le coût en énergie.
+
+Dans le PvP asynchrone, le déblocage de `×4` peut également donner accès à un bouton `Skip`. Ce bouton interrompt uniquement la restitution visible et ouvre directement le résumé d’un combat dont la simulation complète est déjà déterminée. Il ne change ni la simulation, ni la seed RNG, ni le résultat, ni le MMR, ni la cote, ni les récompenses, ni le coût en énergie et ne procure aucun avantage compétitif.
 
 **Éléments à préciser ultérieurement :**
 
@@ -480,7 +482,8 @@ Avant l’achat d’une vitesse de visualisation accélérée, le joueur doit é
 * le palier acheté ;
 * son prix réel ;
 * la possibilité d’acheter directement ×4 ou de payer seulement la différence après ×2 ;
-* le fait que la vitesse modifie uniquement la restitution en temps réel et n’influence pas la simulation, le résultat, les récompenses ou le coût en énergie.
+* le fait que la vitesse modifie uniquement la restitution en temps réel et n’influence pas la simulation, le résultat, les récompenses ou le coût en énergie ;
+* le fait que l’éventuel Skip PvP lié à ×4 passe seulement au résumé et n’accorde aucun avantage mécanique, compétitif ou économique.
 
 Avant l’achat d’une extension permanente de capacité, le joueur doit également connaître :
 

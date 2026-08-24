@@ -81,7 +81,7 @@ Le niveau demandé est toujours un minimum, jamais un niveau exact. En plus de c
 * du moment de la journée ;
 * d’une saison ;
 * d’une région ou d’un environnement ;
-* d’un équipement précis réellement équipé sur l’instance ;
+* d’un équipement précis réellement équipé dans son loadout actif ;
 * d’un objet consommable d’évolution utilisé volontairement ;
 * d’une autre condition explicitement définie pour cette famille.
 
@@ -137,7 +137,7 @@ Un objet intervient dans une évolution uniquement selon l’un des deux mécani
 
 ### 6.1. Équipement comme condition
 
-Une transition peut exiger qu’un équipement précis soit réellement équipé sur l’instance. Cet équipement :
+Une transition peut exiger qu’un équipement précis soit réellement équipé dans le loadout actif de l’instance. Cet équipement :
 
 * doit occuper l’emplacement concerné au moment de la montée de niveau ;
 * est évalué comme une condition standard ;
@@ -158,7 +158,7 @@ L’objet utilisé correspond directement à l’évolution qu’il déclenche. 
 
 Un objet ne disparaît jamais automatiquement à la suite d’une montée de niveau. Son utilisation ne mène pas à un écran demandant au joueur de choisir arbitrairement une branche.
 
-Le simple fait de posséder un objet dans l’inventaire n’est jamais une condition d’évolution. « Porter » et « équiper » ne désignent pas deux mécanismes différents : seule la présence réelle d’un équipement dans l’ensemble actif de l’instance constitue la condition standard décrite ci-dessus.
+Le simple fait de posséder un objet dans l’inventaire ou de le réserver dans un loadout inactif n’est jamais une condition d’évolution. « Porter » et « équiper » ne désignent pas deux mécanismes différents : seule la présence réelle d’un équipement dans le loadout actif de l’instance constitue la condition standard décrite ci-dessus.
 
 ## 7. Conservation de l’instance et de sa progression
 

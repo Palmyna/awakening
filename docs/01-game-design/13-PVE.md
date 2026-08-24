@@ -37,6 +37,8 @@ Deux exceptions d’XP en cas de défaite sont actuellement validées :
 
 Ces exceptions ne rendent pas l’XP de défaite universelle. Elles n’accordent pas d’XP au compte, qui reste liée à la réussite de l’activité sauf future exception explicite.
 
+Les Artefacts et Sources d’énergie peuvent posséder des effets dont l’activation dépend d’un contexte PvE documenté, notamment d’un type d’adversaire ou d’un mode. Cette capacité structurelle ne crée aucune catégorie séparée d’équipement PvE et ne valide aucun effet concret, coefficient ou mode d’obtention particulier.
+
 ## 4. Mode Histoire
 
 ### 4.1. Rôle et structure
@@ -340,7 +342,9 @@ Certains hauts faits ou éléments de prestige pourront éventuellement accorder
 
 ### 7.8. Loot et énergie
 
-Une saison peut proposer une table de loot différente afin de renouveler l’intérêt du mode. Les récompenses précises restent à définir et la Tour ne doit pas devenir une source exclusive de puissance imposant sa participation à la progression normale.
+Une saison peut proposer une table de loot différente afin de renouveler l’intérêt du mode. Elle peut également inclure des paquets de skins ou d’autres récompenses cosmétiques ; lorsqu’un paquet appartient à une série également distribuée commercialement, il suit les mêmes règles que les autres paquets de cette série conformément au cadre de monétisation.
+
+Les récompenses précises restent à définir et la Tour ne doit pas devenir une source exclusive de puissance imposant sa participation à la progression normale.
 
 La Tour utilise la réserve générale d’énergie. Aucune ressource d’entrée spécifique n’est validée et le coût exact d’une tentative relève du balancing.
 

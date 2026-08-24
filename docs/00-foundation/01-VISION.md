@@ -273,9 +273,9 @@ L’objectif est de favoriser la créativité des joueurs et la diversité des b
 
 ## 14. Équipement
 
-Chaque instance possède un ensemble d’équipement actif composé de plusieurs objets répartis dans plusieurs emplacements.
+Chaque instance peut posséder plusieurs loadouts d’équipement enregistrés afin d’adapter ses builds aux activités disponibles. Chaque loadout conserve la même structure d’emplacements, et un même objet peut être réutilisé entre les loadouts d’une seule instance selon les règles du référentiel spécialisé.
 
-Chaque instance possède trois emplacements d’Artefacts et deux emplacements de Sources d’énergie. Les objets d’équipement participent à sa personnalisation et possèdent notamment un niveau d’objet lié au niveau du compte lors de leur génération ainsi qu’un iLvl visible estimant la puissance réelle de l’exemplaire. Les règles détaillées appartiennent au [référentiel Objets et équipements](../01-game-design/08-ITEMS.md).
+Chaque loadout d’une instance possède trois emplacements d’Artefacts et deux emplacements de Sources d’énergie. Les objets d’équipement participent à sa personnalisation et possèdent notamment un niveau d’objet lié au niveau du compte lors de leur génération ainsi qu’un iLvl visible estimant la puissance réelle de l’exemplaire. Les règles détaillées appartiennent au [référentiel Objets et équipements](../01-game-design/08-ITEMS.md).
 
 ## 15. Direction artistique
 
@@ -335,7 +335,7 @@ Les services de confort actuellement validés en dehors de la boutique cosmétiq
 * l’extension permanente de la capacité de créatures possédées ;
 * la possibilité d’acheter des sacs augmentant uniquement la capacité de l’inventaire, également obtenables par le gameplay et sans puissance de combat exclusive.
 
-Les vitesses accélérées modifient uniquement la restitution du combat en temps réel. Elles ne changent ni la simulation, ni sa seed RNG, ni ses calculs, ses statistiques, ses événements, son résultat, ses récompenses ou son coût en énergie. Le joueur peut acheter directement ×4 ou payer seulement la différence après ×2 ; les prix restent à définir.
+Les vitesses accélérées modifient uniquement la restitution du combat en temps réel. Elles ne changent ni la simulation, ni sa seed RNG, ni ses calculs, ses statistiques, ses événements, son résultat, ses récompenses ou son coût en énergie. Le joueur peut acheter directement ×4 ou payer seulement la différence après ×2 ; les prix restent à définir. Dans le PvP asynchrone, ×4 peut également débloquer un Skip qui passe directement au résumé sans avantage mécanique, compétitif ou économique.
 
 Ces services n’autorisent pas la vente de créatures, d’invocations, d’expérience, de points de caractéristiques, d’équipements, d’énergie, de ressources de progression ni d’une augmentation du potentiel maximal d’une créature. Cette liste décrit les services actuellement validés sans fermer définitivement la possibilité d’en envisager d’autres, sous réserve d’une décision explicite et du respect des principes Free-to-Play, d’équité et d’absence de puissance payante.
 

@@ -510,14 +510,22 @@ L’inventaire reste distinct du système de collection. Les composants de fabri
 
 **Domaine :** Progression, personnalisation
 
-**Définition :** Catégorie d’objet pouvant être placée dans un emplacement de l’ensemble d’équipement actif d’une instance afin de participer à sa personnalisation et à son fonctionnement.
+**Définition :** Catégorie d’objet pouvant être placée dans un emplacement d’un loadout d’une instance afin de participer à sa personnalisation et à son fonctionnement.
 
-Chaque instance possède trois emplacements d’Artefacts et deux emplacements de Sources d’énergie. Tous les équipements peuvent être équipés par toutes les créatures ; un effet particulier peut néanmoins définir sa propre condition d’activation.
+Chaque loadout possède trois emplacements d’Artefacts et deux emplacements de Sources d’énergie. Tous les équipements peuvent être équipés par toutes les créatures ; un effet particulier peut néanmoins définir sa propre condition d’activation, y compris selon un contexte documenté.
 
 **Variantes autorisées :**
 
 * « équipement équipé » ;
 * « équipement actuel » pour l’équipement actuellement attribué à une créature.
+
+### Loadout d’équipement
+
+**Domaine :** Progression, personnalisation
+
+**Définition :** Configuration d’équipement enregistrée pour une instance de créature. Une instance peut posséder plusieurs loadouts destinés à différents builds ou activités.
+
+Un même exemplaire d’équipement peut figurer dans plusieurs loadouts de cette instance. Tant qu’il apparaît dans au moins un de ses loadouts, il lui est réservé et ne peut pas être utilisé par une autre instance.
 
 ### Artefact
 
@@ -551,7 +559,7 @@ Le terme doit être qualifié lorsque le contexte pourrait le confondre avec l'�
 
 **Définition :** Système permettant de gérer, d’attribuer, de remplacer, de transférer ou de retirer les équipements des créatures.
 
-Chaque instance possède un ensemble actif de trois Artefacts et deux Sources d’énergie. Hors combat, les équipements sont transférables sans coût ni liaison permanente.
+Chaque loadout d’une instance possède trois Artefacts et deux Sources d’énergie. Hors combat, un équipement est transférable sans coût ni liaison permanente après son retrait de tous les loadouts de l’instance à laquelle il était réservé.
 
 ### iLvl
 
@@ -581,7 +589,7 @@ Le niveau d’objet reste ensuite définitif et ne progresse pas avec le compte.
 
 **Définition :** Ensemble avancé de pièces pouvant accorder des effets explicitement définis lorsque ses seuils sont atteints. Un set peut réunir des Artefacts, des Sources d’énergie ou les deux catégories.
 
-Une pièce précise de set possède une rareté fixe et ne peut pas être équipée plusieurs fois sur la même instance.
+Une pièce précise de set possède une rareté fixe et ne peut pas occuper plusieurs emplacements d’un même loadout. Le même exemplaire peut néanmoins figurer dans plusieurs loadouts de la même instance selon la règle commune de réservation.
 
 ### Sac
 
@@ -1341,7 +1349,7 @@ Cette obtention crée toujours une instance individuelle gérée séparément. E
 
 **Définition :** Instance de la même famille que l’instance cible, volontairement consommée lors d’une amélioration du niveau d’étoiles.
 
-Avant sa disparition, tous ses objets équipés sont automatiquement replacés dans l’inventaire. Une instance verrouillée ne peut pas être utilisée comme matériau.
+Avant sa disparition, tous ses loadouts sont vidés et les équipements qui lui étaient réservés redeviennent disponibles dans l’inventaire. Une instance verrouillée ne peut pas être utilisée comme matériau.
 
 **Terme à éviter :** « food » dans la documentation destinée à faire référence.
 

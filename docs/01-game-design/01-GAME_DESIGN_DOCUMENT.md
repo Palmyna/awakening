@@ -613,7 +613,7 @@ La durée moyenne visée d’un combat est de **30 à 60 secondes**. Le timeout 
 
 À ce timeout, un combat standard départage les équipes selon le nombre de créatures vivantes, puis selon le ratio entre les PV actuels et les PV maximum des survivants. Une égalité parfaite donne la victoire à l’attaquant. Une créature non vivante en attente d’une auto-résurrection ne compte pas comme survivante.
 
-La visualisation est disponible gratuitement en ×1. Les paliers ×2 et ×4 sont des services de confort payants et peuvent être changés à tout moment, en Auto comme en Manuel. Le dernier choix est conservé pour le combat suivant. La vitesse ne modifie jamais la simulation, la seed RNG, les calculs, les statistiques, les événements, le résultat, les récompenses ou le coût en énergie.
+La visualisation est disponible gratuitement en ×1. Les paliers ×2 et ×4 sont des services de confort payants et peuvent être changés à tout moment, en Auto comme en Manuel. Le dernier choix est conservé pour le combat suivant. La vitesse ne modifie jamais la simulation, la seed RNG, les calculs, les statistiques, les événements, le résultat, les récompenses ou le coût en énergie. Dans le PvP asynchrone, le déblocage de ×4 peut également donner accès à un Skip qui passe directement au résumé sans modifier aucun de ces éléments.
 
 Le combat doit rendre visibles :
 
@@ -899,7 +899,7 @@ Elle ne vend :
 Les services de confort actuellement validés en dehors de la boutique cosmétique sont :
 
 * la réinitialisation payante des points de caractéristiques déjà gagnés sans retour au niveau 1, sans avantage de potentiel par rapport aux méthodes gratuites ;
-* les vitesses de visualisation ×2 et ×4 des combats, qui accélèrent uniquement la restitution en temps réel et n’influencent ni la simulation, ni le résultat, ni les récompenses ;
+* les vitesses de visualisation ×2 et ×4 des combats, ainsi que l’éventuel Skip PvP lié à ×4, qui agissent uniquement sur la restitution et n’influencent ni la simulation, ni le résultat, ni les récompenses ;
 * les extensions permanentes de capacité de créatures possédées, qui n’accordent aucune puissance et ne remplacent pas la capacité gratuite ;
 * la possibilité d’acheter des sacs augmentant uniquement la capacité de l’inventaire, également accessibles par le gameplay et sans puissance exclusive.
 
@@ -1106,7 +1106,7 @@ Le GDD dépend des documents spécialisés suivants pour les détails :
 * [`11-COLLECTION.md`](./11-COLLECTION.md) — gestion des instances, encyclopédie et capacité ;
 * [`12-MODES.md`](./12-MODES.md) — contrats communs et statuts des modes ;
 * [`13-PVE.md`](./13-PVE.md) — mode Histoire, Boss personnels, World Boss, Tour infinie et autres modes PvE sans référentiel propre ;
-* [`14-PVP.md`](./14-PVP.md) — contraintes et décisions ouvertes du PvP ;
+* [`14-PVP.md`](./14-PVP.md) — format asynchrone, matchmaking, saisons et classement du PvP ;
 * `15-GUILDS.md` — fonctions de guilde, lorsqu’un cadrage suffisant permettra sa création ;
 * [`16-EVENTS.md`](./16-EVENTS.md) — événements temporaires et contenus saisonniers ;
 * [`17-QUESTS.md`](./17-QUESTS.md) — quêtes journalières ;

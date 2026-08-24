@@ -132,7 +132,7 @@ Les règles propres à chaque domaine sont réparties ainsi :
 * [`13-PVE.md`](./13-PVE.md) rassemble le mode Histoire et les autres directions PvE ne disposant pas de leur propre référentiel ;
 * [`14-PVP.md`](./14-PVP.md) porte les contraintes et décisions propres au PvP ;
 * le futur `15-GUILDS.md` portera les fonctions de guilde lorsqu’un cadrage suffisant permettra sa création ;
-* [`16-EVENTS.md`](./16-EVENTS.md) porte la structure des événements et contenus saisonniers, qu’ils contiennent du PvE, du PvP, du communautaire ou une autre activité ;
+* [`16-EVENTS.md`](./16-EVENTS.md) porte les règles événementielles et éditoriales transversales ; la temporalité d’un mode spécialisé ne lui transfère pas le fonctionnement de ce mode ;
 * [`17-QUESTS.md`](./17-QUESTS.md) porte les objectifs journaliers ;
 * le futur `18-ACHIEVEMENTS.md` portera les hauts faits lorsqu’un cadrage suffisant permettra sa création ;
 * [`19-UI_FLOW.md`](./19-UI_FLOW.md) traduit les besoins fonctionnels des modes dans les parcours et écrans.

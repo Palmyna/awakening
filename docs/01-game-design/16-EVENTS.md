@@ -24,7 +24,7 @@ Ils prolongent les motivations de développement des créatures, d’expériment
 
 Un événement peut s’appuyer sur un mode existant, proposer une variante explicitement documentée ou introduire un contenu temporaire particulier.
 
-Une rotation, une apparition temporaire ou une saison intégrée à un mode spécialisé ne transfère pas automatiquement la responsabilité fonctionnelle de ce mode au présent document. Les règles des Boss personnels, des World Boss et de la Tour infinie restent dans [`13-PVE.md`](./13-PVE.md) ; le présent référentiel porte uniquement l’éventuelle enveloppe événementielle ou éditoriale transversale.
+Une rotation, une apparition temporaire ou une saison intégrée à un mode spécialisé ne transfère pas automatiquement la responsabilité fonctionnelle de ce mode au présent document. Les règles des Boss personnels, des World Boss et de la Tour infinie restent dans [`13-PVE.md`](./13-PVE.md), tandis que les saisons compétitives du PvP restent dans [`14-PVP.md`](./14-PVP.md). Le présent référentiel porte uniquement l’éventuelle enveloppe événementielle ou éditoriale transversale.
 
 Lorsqu’il utilise le moteur de combat, il hérite des règles communes définies dans [`02-COMBAT.md`](./02-COMBAT.md) et [`12-MODES.md`](./12-MODES.md). Toute exception de durée, victoire, score, composition ou récompense doit être explicitement décrite.
 
@@ -134,6 +134,7 @@ La navigation, le calendrier, les notifications et la présentation détaillée 
 | [`11-COLLECTION.md`](./11-COLLECTION.md) | Disponibilité et skins obtenus hors paquets |
 | [`12-MODES.md`](./12-MODES.md) | Contrat des activités et statut long terme |
 | [`13-PVE.md`](./13-PVE.md) | Fonctionnement des modes PvE utilisant rotations, apparitions temporaires ou saisons |
+| [`14-PVP.md`](./14-PVP.md) | Fonctionnement des saisons compétitives du PvP |
 | [`17-QUESTS.md`](./17-QUESTS.md) | Objectifs journaliers et éventuelles interactions futures |
 | [`19-UI_FLOW.md`](./19-UI_FLOW.md) | Accès, information, résultat et calendrier |
 | [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Paquets, offres temporaires et protection des joueurs |

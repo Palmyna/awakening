@@ -6,7 +6,7 @@
 
 Ce document constitue la référence fonctionnelle du système d’objets, d’équipements, de fabrication et d’inventaire.
 
-Il définit les catégories d’équipement, les règles d’attribution et de génération, le rôle du niveau d’objet et de l’iLvl, les principes de loot et de recyclage, les sets, la capacité d’inventaire et les sacs.
+Il définit les catégories d’équipement, les règles d’attribution et de génération, les loadouts, le rôle du niveau d’objet et de l’iLvl, les principes de loot et de recyclage, les sets, la capacité d’inventaire et les sacs.
 
 Il ne constitue ni une table de loot, ni un catalogue d’objets concrets, ni un document d’équilibrage. Les valeurs, probabilités, pools, recettes et contenus précis appartiendront aux données de production correspondantes.
 
@@ -14,7 +14,7 @@ Il ne constitue ni une table de loot, ni un catalogue d’objets concrets, ni un
 
 Un **objet** est un élément pouvant être obtenu, stocké ou utilisé par un système du jeu.
 
-Un **équipement** est un objet pouvant être équipé sur une instance de créature. Lorsqu’il n’est pas équipé, il appartient au joueur et est stocké dans l’inventaire principal.
+Un **équipement** est un objet pouvant être équipé sur une instance de créature. Lorsqu’il ne figure dans aucun loadout, il est disponible dans l’inventaire principal.
 
 L’inventaire d’objets reste distinct :
 
@@ -24,18 +24,18 @@ L’inventaire d’objets reste distinct :
 
 Les composants de fabrication utilisent un stockage séparé de l’inventaire principal, selon les règles de la section 12.
 
-## 3. Ensemble d’équipement d’une instance
+## 3. Loadouts d’équipement d’une instance
 
-Chaque instance possède son propre ensemble d’équipement actif, composé exactement de :
+Chaque instance peut posséder plusieurs loadouts d’équipement enregistrés. Chaque loadout est composé exactement de :
 
 * **3 emplacements d’Artefacts** ;
 * **2 emplacements de Sources d’énergie**.
 
 Il n’existe pas actuellement de sous-types d’emplacements supplémentaires.
 
-L’ensemble d’équipement appartient à l’instance, non à sa famille, à sa forme mécanique, à son skin ou à l’apparence affichée. Deux instances d’une même famille peuvent utiliser des équipements entièrement différents.
+Les loadouts appartiennent à l’instance, non à sa famille, à sa forme mécanique, à son skin ou à l’apparence affichée. Deux instances d’une même famille peuvent utiliser des équipements entièrement différents.
 
-Lors d’une évolution, les équipements restent équipés sur la même instance. Afficher ensuite une ancienne forme comme apparence cosmétique ne modifie pas cet ensemble.
+Lors d’une évolution, les loadouts et leurs équipements restent associés à la même instance. Afficher ensuite une ancienne forme comme apparence cosmétique ne modifie pas ces configurations.
 
 Les équipements ne sont pas automatiquement représentés sur l’illustration ou la carte de la créature.
 
@@ -58,21 +58,25 @@ Cette répartition définit l’identité dominante des catégories. Un objet co
 
 Toutes les créatures peuvent équiper tous les équipements correspondant à un emplacement disponible. Il n’existe aucune restriction générale fondée sur l’élément, la famille, la forme ou l’identité de la créature.
 
-Un effet d’équipement peut néanmoins posséder sa propre condition d’activation. Une créature ne satisfaisant pas cette condition peut équiper l’objet, mais ne bénéficie pas de l’effet concerné.
+Un effet d’équipement peut néanmoins posséder sa propre condition d’activation. Cette condition peut notamment dépendre du mode, du type d’adversaire, du contexte de combat ou d’une autre propriété explicitement documentée. Une créature ou une situation ne satisfaisant pas cette condition peut utiliser l’objet, mais ne bénéficie pas de l’effet concerné.
 
 La possibilité d’équiper un objet et l’éligibilité à chacun de ses effets sont donc deux vérifications distinctes.
 
+Cette capacité ne crée aucune catégorie structurelle séparée d’équipement PvP ou PvE. Les objets restent des Artefacts et des Sources d’énergie, et leur contexte d’efficacité ne leur impose aucune source d’obtention particulière. Un effet contextuel concret, sa condition et sa valeur doivent être définis explicitement par le contenu concerné.
+
 ### 5.2. Gestion et transfert
 
-Hors combat, un équipement peut être équipé, déséquipé ou transféré entre les instances du joueur sans coût ni pénalité.
+Un même exemplaire d’équipement peut être utilisé dans plusieurs loadouts de la même instance.
 
-Il n’existe aucun système de liaison permanente de type *bind on equip*. Un exemplaire individuel ne peut toutefois être équipé que par une seule instance à la fois.
+Dès qu’un équipement figure dans au moins un loadout d’une instance, il lui est réservé et ne peut pas être utilisé dans le loadout d’une autre instance. Pour le transférer, le joueur doit le retirer de tous les loadouts de l’instance actuelle. Lorsqu’il n’apparaît plus dans aucun loadout, il redevient disponible.
+
+Hors combat, cette gestion et ce transfert n’appliquent aucun coût ni pénalité. La réservation n’est pas une liaison permanente de type *bind on equip*.
 
 ### 5.3. Exemplaires identiques
 
-Plusieurs exemplaires identiques d’un équipement standard peuvent être équipés simultanément sur une même instance si le joueur les possède réellement.
+Plusieurs exemplaires identiques d’un équipement standard peuvent occuper simultanément plusieurs emplacements d’un même loadout si le joueur les possède réellement.
 
-Une pièce précise appartenant à un set constitue une exception : la même pièce ne peut pas être équipée plusieurs fois sur la même instance. Des pièces différentes d’un même set peuvent naturellement être réunies.
+Une pièce précise appartenant à un set constitue une exception : la même pièce ne peut pas occuper plusieurs emplacements d’un même loadout. Le même exemplaire peut néanmoins figurer dans plusieurs loadouts de la même instance selon la règle de réservation. Des pièces différentes d’un même set peuvent naturellement être réunies.
 
 ## 6. Sources d’énergie
 
@@ -230,7 +234,7 @@ Un set peut réunir :
 * deux Sources d’énergie ;
 * plusieurs Artefacts et Sources d’énergie dans un set mixte.
 
-Sa structure, son nombre de pièces et ses seuils sont définis par le set concret. La limite de deux Sources correspond aux deux emplacements disponibles sur une instance.
+Sa structure, son nombre de pièces et ses seuils sont définis par le set concret. La limite de deux Sources correspond aux deux emplacements disponibles dans un loadout.
 
 Une pièce précise de set possède une rareté fixe liée à son identité. La même pièce n’existe pas sous plusieurs raretés aléatoires. Ses caractéristiques autorisées et leurs rolls peuvent néanmoins varier entre les exemplaires.
 
@@ -299,7 +303,7 @@ Un équipement peu intéressant conserve une utilité potentielle : une Source p
 
 Un objet intervient dans une évolution uniquement de deux manières :
 
-1. un équipement précis réellement équipé sur l’instance constitue une condition standard évaluée lors d’une montée de niveau et n’est pas consommé ;
+1. un équipement précis réellement équipé dans le loadout actif de l’instance constitue une condition standard évaluée lors d’une montée de niveau et n’est pas consommé ;
 2. un objet consommable d’évolution est utilisé volontairement sur une instance éligible et déclenche immédiatement l’évolution correspondante.
 
 Dans le second cas, les autres conditions doivent être satisfaites. L’objet est consommé volontairement et ne disparaît jamais automatiquement lors d’un level up. La simple possession dans l’inventaire ne constitue jamais une condition.
@@ -310,8 +314,8 @@ Les règles complètes appartiennent au [référentiel Évolutions](./07-EVOLUTI
 
 Lorsqu’une instance est consommée comme matériau d’étoiles :
 
-1. tous ses équipements sont automatiquement déséquipés ;
-2. ils sont replacés dans l’inventaire ;
+1. tous ses loadouts sont vidés ;
+2. tous les équipements qui lui étaient réservés redeviennent disponibles dans l’inventaire ;
 3. aucun équipement n’est détruit avec l’instance.
 
 Cette protection est systématique.
@@ -331,6 +335,7 @@ Il n’accorde aucun niveau, aucune expérience, aucun point supplémentaire et 
 | [`10-PROGRESSION.md`](./10-PROGRESSION.md) | Niveau du compte, étoiles et redistribution des caractéristiques |
 | [`11-COLLECTION.md`](./11-COLLECTION.md) | Séparation entre collection et inventaire |
 | [`13-PVE.md`](./13-PVE.md) | Sources de loot et de composants propres aux modes PvE |
+| [`14-PVP.md`](./14-PVP.md) | Effets contextuels, loadouts et contraintes d’équité du PvP |
 | [`19-UI_FLOW.md`](./19-UI_FLOW.md) | Parcours de gestion, comparaison, fabrication et inventaire |
 | [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Service de confort payant lié aux sacs |
 
@@ -344,6 +349,8 @@ Le cadrage fonctionnel du système est établi. Restent volontairement ouverts o
 * les noms, le nombre, la présentation et les probabilités des raretés d’équipement ;
 * les pools, incompatibilités, nombres de propriétés et plages exactes des rolls ;
 * les effets disponibles et leurs valeurs ;
+* les effets contextuels concrets, leurs conditions et leurs coefficients ;
+* le nombre, les noms, l’ergonomie et la méthode de sélection des loadouts ;
 * la formule de progression des plages selon le niveau de compte et ses éventuels caps techniques ;
 * les seuils exacts de déblocage des effets complexes et des objets de set ;
 * la formule et les pondérations exactes de l’iLvl ;

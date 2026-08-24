@@ -86,7 +86,7 @@ L’instance porte notamment :
 * son niveau et son XP ;
 * ses points de caractéristiques attribués et disponibles ;
 * son niveau d’étoiles ;
-* son ensemble d’équipement ;
+* ses loadouts d’équipement ;
 * son surnom éventuel ;
 * ses tags personnalisés ;
 * son état verrouillé ou déverrouillé ;
@@ -124,7 +124,7 @@ Une créature possède notamment :
 * six caractéristiques principales ;
 * trois caractéristiques secondaires système ;
 * une progression individuelle ;
-* un ensemble d’équipement ;
+* des loadouts d’équipement ;
 * un score de Puissance ;
 * un ou deux rôles suggérés ;
 * un profil offensif suggéré.
@@ -374,13 +374,15 @@ Des créatures déjà évoluées peuvent exister dans le monde. Toute nouvelle i
 
 ## 7. Équipement et gestion individuelle
 
-### 7.1. Ensemble d’équipement
+### 7.1. Équipement et loadouts
 
-Chaque instance possède son propre ensemble d’équipement actif, composé exactement de trois emplacements d’Artefacts et deux emplacements de Sources d’énergie.
+Chaque instance peut posséder plusieurs loadouts d’équipement enregistrés. Chaque loadout conserve la structure validée de trois emplacements d’Artefacts et deux emplacements de Sources d’énergie.
 
-Toutes les créatures peuvent équiper tous les objets correspondant à ces emplacements. Un effet peut définir sa propre condition d’activation sans empêcher l’équipement de l’objet. Hors combat, les équipements sont transférables entre instances sans coût ni liaison permanente.
+Toutes les créatures peuvent équiper tous les objets correspondant à ces emplacements. Un effet peut définir sa propre condition d’activation, notamment selon le mode, le type d’adversaire ou le contexte documenté, sans empêcher l’équipement de l’objet.
 
-Cet ensemble appartient à l’instance, non à sa famille ou à sa forme. Il est conservé lors d’une évolution et n’est pas modifié par le choix d’une ancienne apparence cosmétique.
+Un même exemplaire d’équipement peut être réutilisé dans plusieurs loadouts de la même instance. Dès qu’il figure dans au moins un de ses loadouts, il lui est réservé et ne peut pas être affecté à une autre instance. Pour le transférer, le joueur doit d’abord le retirer de tous les loadouts de l’instance actuelle ; il redevient alors disponible sans coût ni liaison permanente.
+
+Les loadouts appartiennent à l’instance, non à sa famille ou à sa forme. Ils sont conservés lors d’une évolution et ne sont pas modifiés par le choix d’une ancienne apparence cosmétique.
 
 Les règles de génération, caractéristiques, effets, raretés, rolls, sets, niveau d’objet, iLvl, inventaire et loot appartiennent au [document Objets et équipements](./08-ITEMS.md).
 
@@ -414,7 +416,7 @@ Certaines acquisitions directes par le gameplay peuvent constituer des exception
 
 Obtenir de nouveau une famille déjà connue crée toujours une nouvelle instance individuelle. Cette instance peut être développée, suivre une autre branche ou servir de matériau d’étoiles pour une autre instance de la même famille.
 
-Une instance utilisée comme matériau disparaît définitivement. Tous ses objets équipés sont automatiquement replacés dans l’inventaire avant sa disparition. Une instance verrouillée ne peut pas être consommée.
+Une instance utilisée comme matériau disparaît définitivement. Tous ses loadouts sont vidés et les équipements qui lui étaient réservés redeviennent disponibles dans l’inventaire avant sa disparition. Une instance verrouillée ne peut pas être consommée.
 
 Les ensembles de familles disponibles, probabilités, garanties, ressources et parcours d’acquisition appartiennent au [document Invocation](./09-GACHA.md). L’interprétation narrative des manifestations multiples appartient au [Lore des créatures](../02-world/02-CREATURE_LORE.md).
 
@@ -469,7 +471,7 @@ Son identité narrative ne change pas lorsqu'il est affronté : un humain ennemi
 | [`05-ELEMENTS.md`](./05-ELEMENTS.md) | Éléments des formes et interactions élémentaires |
 | [`06-COMBAT_EFFECTS.md`](./06-COMBAT_EFFECTS.md) | Effets de combat et leurs règles communes |
 | [`07-EVOLUTIONS.md`](./07-EVOLUTIONS.md) | Conditions, indices, découvertes, déclenchements et résolution des branches |
-| [`08-ITEMS.md`](./08-ITEMS.md) | Objets, emplacements, équipement, iLvl et loot |
+| [`08-ITEMS.md`](./08-ITEMS.md) | Objets, emplacements, loadouts, réservation, iLvl et loot |
 | [`09-GACHA.md`](./09-GACHA.md) | Invocation, raretés d’acquisition, ensembles de familles disponibles et acquisitions directes |
 | [`10-PROGRESSION.md`](./10-PROGRESSION.md) | XP, niveaux, étoiles, réinitialisations et score de Puissance |
 | [`11-COLLECTION.md`](./11-COLLECTION.md) | Gestion des instances, encyclopédie, recherche, tris et capacité |
