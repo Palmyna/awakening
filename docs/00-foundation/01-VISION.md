@@ -307,7 +307,7 @@ Le projet prévoit à long terme plusieurs modes de jeu, notamment :
 
 * une histoire principale ;
 * des boss personnels ;
-* des boss de serveur ;
+* des World Boss ;
 * une tour infinie ;
 * du PvP ;
 * des événements temporaires ;

@@ -57,7 +57,9 @@ Les points non attribués peuvent être conservés indéfiniment. Ils ne produis
 
 ## 4. Attribution de l’XP d’une activité
 
-L’XP des créatures est attribuée après un combat remporté. Une défaite standard n’accorde aucune XP aux créatures ou au compte.
+Par défaut, l’XP des créatures est attribuée après un combat remporté et une défaite standard n’accorde aucune XP aux créatures ou au compte.
+
+Un mode peut définir explicitement une exception locale. Le mode Histoire accorde une petite quantité d’XP aux créatures participantes après une défaite, tandis que la Tour infinie peut en accorder une. Ces exceptions, définies dans [`13-PVE.md`](./13-PVE.md), n’accordent aucune XP au compte et ne modifient pas la règle des autres modes.
 
 Chaque créature participante reçoit son propre gain ; l’XP n’est jamais divisée entre les membres de l’équipe.
 
@@ -260,7 +262,7 @@ Les services de confort validés ne modifient pas ce principe.
 | [`09-GACHA.md`](./09-GACHA.md) | État initial et nouvelles instances utilisées pour les étoiles |
 | [`11-COLLECTION.md`](./11-COLLECTION.md) | Verrouillage et gestion des instances |
 | [`12-MODES.md`](./12-MODES.md) | Résultats et cadre transversal de l’énergie commune aux activités |
-| [`13-PVE.md`](./13-PVE.md) | Utilisation de l’énergie générale par les activités PvE individuelles |
+| [`13-PVE.md`](./13-PVE.md) | Énergie générale et exceptions locales d’XP des activités PvE |
 | [`14-PVP.md`](./14-PVP.md) | Utilisation de l’énergie générale par le PvP |
 | [`16-EVENTS.md`](./16-EVENTS.md) | Récompenses et éventuelles exceptions locales de régulation |
 | [`17-QUESTS.md`](./17-QUESTS.md) | Objectifs journaliers et récompenses de progression |

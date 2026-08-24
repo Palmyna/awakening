@@ -49,7 +49,7 @@ Ces documents constituent les fondations de référence actuelles du projet. Ils
 * ✅ [`10-PROGRESSION.md`](./docs/01-game-design/10-PROGRESSION.md) — Rédigé — référence actuelle, à maintenir à jour
 * ✅ [`11-COLLECTION.md`](./docs/01-game-design/11-COLLECTION.md) — Rédigé — référence actuelle, à maintenir à jour
 * ✅ [`12-MODES.md`](./docs/01-game-design/12-MODES.md) — Rédigé — référence actuelle, à maintenir à jour
-* 🚧 [`13-PVE.md`](./docs/01-game-design/13-PVE.md) — Draft de conception — à relire et valider
+* ✅ [`13-PVE.md`](./docs/01-game-design/13-PVE.md) — Rédigé — référence actuelle, à maintenir à jour
 * 🚧 [`14-PVP.md`](./docs/01-game-design/14-PVP.md) — Draft de conception — à relire et valider
 * ⬜ `15-GUILDS.md`
 * 🚧 [`16-EVENTS.md`](./docs/01-game-design/16-EVENTS.md) — Draft de conception — à relire et valider

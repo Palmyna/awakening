@@ -289,6 +289,8 @@ Le joueur peut rejouer des combats pour obtenir des Sources d’énergie et des 
 
 Les combats du mode Histoire peuvent participer à cette boucle. Les activités plus avancées pourront utiliser leurs propres tables de loot, probabilités, récompenses et possibilités de farming ciblé lorsque leur contenu sera défini.
 
+Les Boss personnels peuvent notamment devenir une source importante d’éléments liés aux sets, de composants permettant de former ou fabriquer des sets, de composants de craft spécialisés et de ressources propres à certains boss. Leurs contenus, taux et tables de loot exacts restent définis par le mode et les données de production correspondantes.
+
 Un équipement peu intéressant conserve une utilité potentielle : une Source peut être vendue ou servir de composant, tandis qu’un Artefact peut être dissous.
 
 ## 15. Objets liés à d’autres systèmes
@@ -328,6 +330,7 @@ Il n’accorde aucun niveau, aucune expérience, aucun point supplémentaire et 
 | [`07-EVOLUTIONS.md`](./07-EVOLUTIONS.md) | Conditions et déclenchements d’évolution liés aux objets |
 | [`10-PROGRESSION.md`](./10-PROGRESSION.md) | Niveau du compte, étoiles et redistribution des caractéristiques |
 | [`11-COLLECTION.md`](./11-COLLECTION.md) | Séparation entre collection et inventaire |
+| [`13-PVE.md`](./13-PVE.md) | Sources de loot et de composants propres aux modes PvE |
 | [`19-UI_FLOW.md`](./19-UI_FLOW.md) | Parcours de gestion, comparaison, fabrication et inventaire |
 | [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Service de confort payant lié aux sacs |
 

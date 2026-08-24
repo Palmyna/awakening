@@ -40,7 +40,7 @@ Ces statuts décrivent un périmètre fonctionnel, pas une roadmap.
 | Début représentatif du mode Histoire | Inclus dans la vertical slice |
 | Mode Histoire | Seul mode confirmé comme colonne vertébrale d’une première version jouable |
 | Boss personnels | Envisagé à long terme |
-| Boss de serveur | Envisagé à long terme |
+| World Boss | Envisagé à long terme |
 | Tour infinie | Envisagé à long terme |
 | PvP | Envisagé à long terme |
 | Événements temporaires | Envisagé à long terme |
@@ -119,7 +119,7 @@ Dans le fonctionnement standard, une victoire :
 * applique les déblocages liés à un jalon ;
 * permet de poursuivre ou de retourner à la gestion.
 
-Une défaite standard n’accorde aucune XP aux créatures ou au compte, aucune récompense principale et aucune progression de niveau. Elle ne retire aucune progression déjà acquise et ne provoque aucune pénalité durable.
+Sauf exception locale explicitement définie par un mode, une défaite standard n’accorde aucune XP aux créatures ou au compte, aucune récompense principale et aucune progression de niveau. Elle ne retire aucune progression déjà acquise et ne provoque aucune pénalité durable.
 
 Un mode fondé sur un score, un objectif partiel ou une participation doit définir explicitement ses propres règles de résultat et de récompense.
 
@@ -146,7 +146,7 @@ Un référentiel spécialisé hérite des contrats du présent document. Il déc
 | [`01-GAME_DESIGN_DOCUMENT.md`](./01-GAME_DESIGN_DOCUMENT.md) | Boucles globales et statuts de périmètre |
 | [`02-COMBAT.md`](./02-COMBAT.md) | Contrat du moteur et exceptions de mode |
 | [`10-PROGRESSION.md`](./10-PROGRESSION.md) | XP, compte, énergie et résultats |
-| [`13-PVE.md`](./13-PVE.md) | Modes PvE et règles propres au mode Histoire |
+| [`13-PVE.md`](./13-PVE.md) | Modes PvE et exceptions locales au cadre transversal |
 | [`14-PVP.md`](./14-PVP.md) | Contraintes et décisions propres au PvP |
 | [`16-EVENTS.md`](./16-EVENTS.md) | Contenus temporaires et saisonniers |
 | [`17-QUESTS.md`](./17-QUESTS.md) | Objectifs journaliers liés aux fonctionnalités débloquées |

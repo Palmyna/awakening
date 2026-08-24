@@ -649,7 +649,7 @@ Une victoire :
 
 ### 12.2. Défaite
 
-Une défaite n’accorde :
+Une défaite standard, sauf exception explicitement définie par un mode, n’accorde :
 
 * aucune expérience aux créatures ;
 * aucune expérience au compte ;
@@ -976,7 +976,7 @@ Aucun autre mode n’est encore validé dans ce périmètre.
 Les fondations envisagent :
 
 * des boss personnels ;
-* des boss de serveur ;
+* des World Boss ;
 * une tour infinie ;
 * du PvP ;
 * des événements temporaires ;
@@ -1060,7 +1060,7 @@ La vertical slice exclut :
 
 * le PvP ;
 * les guildes ;
-* les boss de serveur ;
+* les World Boss ;
 * les événements temporaires ;
 * les saisons ;
 * la boutique ;
@@ -1105,7 +1105,7 @@ Le GDD dépend des documents spécialisés suivants pour les détails :
 * [`10-PROGRESSION.md`](./10-PROGRESSION.md) — expérience, niveaux, étoiles, énergie, réinitialisations et progression du compte ;
 * [`11-COLLECTION.md`](./11-COLLECTION.md) — gestion des instances, encyclopédie et capacité ;
 * [`12-MODES.md`](./12-MODES.md) — contrats communs et statuts des modes ;
-* [`13-PVE.md`](./13-PVE.md) — mode Histoire et autres modes PvE sans référentiel propre ;
+* [`13-PVE.md`](./13-PVE.md) — mode Histoire, Boss personnels, World Boss, Tour infinie et autres modes PvE sans référentiel propre ;
 * [`14-PVP.md`](./14-PVP.md) — contraintes et décisions ouvertes du PvP ;
 * `15-GUILDS.md` — fonctions de guilde, lorsqu’un cadrage suffisant permettra sa création ;
 * [`16-EVENTS.md`](./16-EVENTS.md) — événements temporaires et contenus saisonniers ;

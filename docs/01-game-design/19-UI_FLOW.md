@@ -187,6 +187,8 @@ Après une victoire, le joueur doit pouvoir identifier :
 
 Après une défaite, le joueur peut recommencer avec la même équipe, sélectionner une autre équipe, retourner à la gestion ou quitter l’activité. L’interface ne doit pas imposer automatiquement un build ou une solution unique.
 
+Lorsqu’un mode définit explicitement une XP de défaite, le résultat affiche le gain de chaque créature concernée sans présenter cette exception comme une victoire ni comme une récompense principale.
+
 Un résumé statistique simple est accessible pour les deux équipes. Il est agrégé par créature, pas par Skill, et peut couvrir :
 
 * dégâts infligés et reçus ;
@@ -386,9 +388,47 @@ Chaque service de confort doit présenter son effet exact, son prix, ses limites
 
 ## 21. Modes de long terme
 
-Les interfaces détaillées du PvP, des guildes, des événements, des boss personnels, des boss de serveur, de la tour infinie et des contenus saisonniers ne peuvent pas être définies avant leurs règles de Game Design.
+Les layouts détaillés du PvP, des guildes, des événements, des Boss personnels, des World Boss, de la Tour infinie et des contenus saisonniers restent à concevoir à partir de leurs règles de Game Design.
 
-Leurs futurs parcours devront réutiliser les contrats communs d’information, de préparation, de résultat, de lisibilité et de transparence sans imposer dès maintenant une architecture de navigation.
+Leurs parcours réutilisent les contrats communs d’information, de préparation, de résultat, de lisibilité et de transparence sans imposer dès maintenant une architecture de navigation.
+
+### 21.1. Boss personnels
+
+Le parcours d’un Boss personnel doit permettre de connaître :
+
+* le boss actuellement disponible et sa rotation ;
+* la progression persistante propre à ce boss ;
+* le palier actuel et le palier précédent farmable ;
+* les informations stratégiques nécessaires ;
+* la table de loot ou un aperçu pertinent de ses récompenses ;
+* le coût de la tentative en énergie générale.
+
+### 21.2. World Boss
+
+Le parcours d’un World Boss doit présenter :
+
+* le temps restant de l’apparition ;
+* les PV globaux restants et l’état vivant, vaincu ou expiré ;
+* le coût normal d’une tentative ou son coût tardif majoré ;
+* la contribution du joueur ;
+* son éligibilité à la récompense finale et l’état de cette récompense ;
+* les informations nécessaires à la préparation du combat.
+
+Le résumé d’une tentative distingue les dégâts personnels, leur contribution réelle aux PV globaux lorsque le boss est vivant, l’état restant du boss et les dégâts seulement simulés d’une participation tardive.
+
+### 21.3. Tour infinie
+
+Le parcours de la Tour infinie doit permettre de connaître :
+
+* la saison actuelle, son thème et ses modificateurs ;
+* l’étage actuel et la récompense unique associée ;
+* la progression saisonnière ;
+* le classement et les informations de prestige disponibles ;
+* les récompenses pertinentes ;
+* le temps restant avant la fin de la saison lorsqu’il s’applique ;
+* le coût de la tentative en énergie générale.
+
+L’interface ne doit pas suggérer qu’un étage terminé peut être rejoué ou qu’un ancien étage constitue une boucle de farming.
 
 ## 22. Dépendances
 
