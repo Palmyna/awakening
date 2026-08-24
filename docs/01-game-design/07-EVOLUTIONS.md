@@ -191,7 +191,7 @@ Une instance peut afficher une ancienne forme réellement parcourue tout en cons
 
 Chaque forme réellement parcourue débloque définitivement son apparence pour cette instance uniquement. Une forme appartenant à une branche non parcourue n’est pas débloquée pour elle.
 
-Le joueur peut changer gratuitement l’apparence affichée parmi celles de l’instance, hors combat et sans modifier sa forme mécanique. Pour chaque forme ainsi accessible, il peut employer les skins de carte déjà débloqués qui sont compatibles avec cette forme selon les règles de collection. La compatibilité concrète des futurs skins reste définie par leurs données propres.
+Le joueur peut changer gratuitement l’apparence affichée parmi celles de l’instance, hors combat et sans modifier sa forme mécanique. Chaque skin de carte est lié dans ses données à une forme précise et peut être employé uniquement lorsque cette forme est affichée. Un même style décliné sur plusieurs formes correspond à plusieurs skins distincts.
 
 ## 9. Découverte des formes et des conditions
 
@@ -233,4 +233,4 @@ Le cadrage fonctionnel du système est établi. Restent volontairement ouverts o
 * l’équilibrage relatif des caractéristiques ;
 * les animations finales et l’enchaînement visuel des évolutions successives ;
 * la présentation UI finale des conditions connues ou inconnues et des arbres partiellement découverts ;
-* la compatibilité concrète des futurs skins avec les différentes formes.
+* le rattachement concret de chaque futur skin à sa forme précise.

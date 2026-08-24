@@ -1185,7 +1185,9 @@ La collection de créatures ne doit pas être confondue avec l’encyclopédie, 
 
 Une série distribuée par paquets est associée à des paquets de skins de carte dont tous les contenus possibles appartiennent à cette même série.
 
-Une série de skins de carte n’est ni un produit ni une offre commerciale, même si les paquets permettant d’obtenir ses skins peuvent être achetés dans la boutique cosmétique.
+Une série de skins de carte n’est ni un produit, ni une offre commerciale, ni un synonyme de pool de paquets. Son appartenance reste distincte de la méthode d’acquisition de ses skins, qui peut être définie par paquets, directement, par le gameplay, par une opération spéciale ou par une autre règle explicitement documentée.
+
+Le modèle actuel repose principalement sur les séries distribuées par paquets. Les autres méthodes possibles ne sont pas automatiquement validées comme offres commerciales au lancement.
 
 **Terme à éviter :** « collection d’illustrations » pour désigner une série de skins de carte ou une offre commerciale.
 
@@ -1198,6 +1200,8 @@ Une série de skins de carte n’est ni un produit ni une offre commerciale, mê
 **Définition :** Regroupement prévu pour les skins de carte accordés directement par des récompenses de gameplay et n’appartenant à aucune série distribuée par paquets.
 
 Cette catégorie peut notamment réunir des récompenses événementielles, de haut fait, narratives, de progression, commémoratives ou liées à une opération spéciale.
+
+Ces skins peuvent également être regroupés dans une série artistique non distribuée par paquets lorsque leur cohérence le justifie.
 
 **Éléments à préciser ultérieurement :**
 
@@ -1219,7 +1223,7 @@ L’encyclopédie des créatures ne présente aucun taux de complétion global p
 
 **Définition :** État atteint lorsque les conditions de progression définies pour une collection ou une série au périmètre connu sont remplies.
 
-La complétion d’une collection cosmétique ne confère aucun avantage automatique de puissance.
+La complétion d’une collection cosmétique ne confère aucune récompense automatique de gameplay ni aucun avantage de puissance. Une reconnaissance future strictement cosmétique ou honorifique reste possible si elle est explicitement définie.
 
 ### Illustration
 
@@ -1235,7 +1239,9 @@ Elle peut rester statique : le dynamisme de la présentation peut provenir de la
 
 **Domaine :** Cosmétique, interface
 
-**Définition :** Contenu cosmétique possédé par le joueur et utilisant une illustration spécifique pour modifier la représentation visuelle de la carte d’une créature.
+**Définition :** Contenu cosmétique possédé par le joueur et utilisant une illustration spécifique pour modifier la représentation visuelle de la carte d’une forme précise.
+
+Un skin de carte est lié dans ses données à une seule forme et ne peut pas être appliqué aux autres formes de la même famille. Un même style décliné pour plusieurs formes correspond à plusieurs skins distincts.
 
 Un skin de carte ne modifie ni la créature, ni ses caractéristiques, ni ses capacités. Le joueur **applique** un skin de carte ; il ne l’équipe pas.
 
@@ -1244,10 +1250,6 @@ Un skin de carte ne modifie ni la créature, ni ses caractéristiques, ni ses ca
 **Élément à préciser ultérieurement :**
 
 * un éventuel nom destiné au joueur, davantage lié à l’univers, pourra être défini lors de la conception de l’interface.
-
-**Question ouverte :**
-
-* La compatibilité d’un skin de carte avec une créature indépendamment de sa forme, avec une forme précise ou avec plusieurs formes compatibles.
 
 ### Rareté d’un skin de carte
 
@@ -1259,9 +1261,19 @@ Les différentes raretés possèdent des probabilités d’obtention et des vale
 
 **Éléments à préciser ultérieurement :**
 
-* les noms et le nombre des raretés ;
+* les autres noms et le nombre total des raretés ;
 * leurs probabilités exactes ;
 * les valeurs de conversion associées.
+
+### Skin Secret
+
+**Domaine :** Cosmétique, acquisition, collection
+
+**Définition :** Skin de carte possédant la rareté cosmétique identifiable `Secret` et intégré exceptionnellement à un pool de skins.
+
+Avant toute ouverture, son existence, le nombre de skins Secrets présents et leur probabilité exacte doivent être déclarés. La créature concernée peut être indiquée, tandis que l’illustration, le nom précis et les détails esthétiques peuvent rester masqués jusqu’à l’obtention personnelle du skin.
+
+Un skin Secret suit les mêmes règles générales de RNG et de doublons que les autres skins du pool. Il ne bénéficie d’aucune *pity*, garantie ou protection particulière sans décision explicite.
 
 ### Visuel
 

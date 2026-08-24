@@ -64,6 +64,10 @@ Les règles de simulation, de formation et de ciblage restent définies par le [
 
 Un skin de carte utilise une illustration spécifique pour modifier la représentation visuelle de la carte sans modifier la créature ni ses capacités.
 
+Chaque skin est conçu pour une forme précise et ne s’applique pas automatiquement aux autres formes de la même famille. Un même style artistique décliné sur plusieurs formes produit des skins distincts, qui peuvent appartenir à une même série ou à un même thème visuel.
+
+Avant son obtention personnelle, l’illustration réelle d’un skin Secret peut être remplacée par une représentation neutre qui ne permet pas de la déduire précisément. Le choix entre `???`, silhouette générique ou autre traitement appartient à la production UI et Art.
+
 Les éléments exacts de la carte affectés par un skin ne sont pas encore validés.
 
 ## 7. Éléments à préciser ultérieurement

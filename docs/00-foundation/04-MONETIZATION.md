@@ -226,6 +226,10 @@ Un sac payant doit respecter toutes les limites suivantes :
 
 ## 5. Acquisition des skins de carte
 
+Une série de skins de carte constitue un regroupement artistique, thématique ou conceptuel. Elle ne constitue pas en elle-même un produit ou un pool de paquets, et son appartenance reste distincte de la méthode d’acquisition de ses skins.
+
+Le modèle de lancement repose principalement sur les séries distribuées par paquets. D’autres méthodes d’acquisition restent structurellement possibles, mais aucune nouvelle méthode commerciale n’est validée sans décision économique explicite.
+
 ### 5.1. Paquets achetés
 
 La boutique cosmétique peut vendre directement contre de l’argent réel des paquets de skins de carte appartenant à une série déterminée.
@@ -276,10 +280,14 @@ Les skins d’une même série appartiennent à plusieurs niveaux de rareté vis
 
 La rareté d’un skin concerne uniquement sa fréquence d’obtention, sa valeur de collection, sa présentation visuelle et sa valeur perçue. Elle ne confère aucun avantage de jeu.
 
+`Secret` constitue une rareté cosmétique identifiable pouvant apparaître exceptionnellement dans certains pools. Lorsqu’un pool contient un ou plusieurs skins Secrets, leur existence, leur nombre, leur rareté et leur probabilité exacte doivent être déclarés avant toute ouverture.
+
+L’illustration, le nom précis et les détails esthétiques d’un skin Secret peuvent rester masqués jusqu’à son obtention personnelle. La créature concernée peut être indiquée. Cette révélation partielle ne permet jamais de dissimuler l’existence du skin ou sa probabilité.
+
 **Éléments à préciser ultérieurement :**
 
 * Le nombre exact de skins contenus dans un paquet.
-* Les noms et le nombre des niveaux de rareté.
+* Les noms des autres niveaux de rareté et leur nombre total.
 * La répartition des skins entre les raretés.
 * Les probabilités exactes.
 
@@ -296,7 +304,7 @@ Certaines activités ou récompenses peuvent accorder directement un skin préci
 
 Ces skins ne doivent appartenir à aucune série distribuée par paquets et ne doivent pas pouvoir être obtenus aléatoirement dans ces séries. Leur méthode d’obtention doit être indiquée dans le système de collection.
 
-Ils pourront être regroupés dans une catégorie dédiée dont le nom, la structure et les règles de complétion ne sont pas encore validés.
+Ils pourront être regroupés dans une série artistique non distribuée par paquets, une collection ou une catégorie dédiée dont le nom, la structure et les règles de complétion ne sont pas encore validés.
 
 **Éléments à préciser ultérieurement :**
 
@@ -308,6 +316,8 @@ Ils pourront être regroupés dans une catégorie dédiée dont le nom, la struc
 ### 6.1. Absence de protection contre les doublons
 
 Les ouvertures de paquets de skins de carte ne comportent aucune protection contre les doublons ou la malchance, qu’ils aient été obtenus gratuitement ou achetés.
+
+Cette règle s’applique également aux skins Secrets, qui ne bénéficient d’aucune protection particulière liée à leur rareté.
 
 Elles ne prévoient :
 
@@ -375,7 +385,7 @@ Une série temporaire doit normalement suivre l’un des modèles suivants :
 * revenir selon une rotation annoncée ;
 * être intégrée ultérieurement au catalogue permanent.
 
-Un skin de carte temporairement indisponible doit rester visible dans sa série avec une indication claire de son indisponibilité actuelle. Certains skins secrets, surprises ou non encore officiellement révélés peuvent cependant rester masqués.
+Un skin de carte temporairement indisponible doit rester visible dans sa série avec une indication claire de son indisponibilité actuelle. Pour un skin Secret appartenant à un pool, seule son illustration ou son identité esthétique détaillée peut rester masquée : son existence et sa probabilité restent déclarées.
 
 Les exclusivités définitives reposant uniquement sur la peur de manquer doivent être évitées.
 
@@ -443,6 +453,8 @@ Avant l’achat d’un paquet de skins de carte, le joueur doit pouvoir connaît
 * les éventuelles limitations.
 
 Le résultat précis de l’ouverture reste inconnu avant l’achat.
+
+Pour un skin Secret, la liste peut utiliser une entrée masquée à condition d’indiquer clairement son existence, le nombre d’entrées concernées, la rareté `Secret` et la probabilité exacte. La créature concernée peut être communiquée, tandis que l’illustration, le nom précis et les détails esthétiques peuvent rester masqués jusqu’à l’obtention personnelle.
 
 ### 9.2. Garde-fous de dépense
 

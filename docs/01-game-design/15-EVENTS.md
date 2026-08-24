@@ -83,7 +83,7 @@ Pour une même série, les paquets gagnés en jouant et les paquets achetés uti
 
 Les règles de disponibilité et de retour doivent être annoncées clairement. Une série temporaire doit normalement revenir selon une rotation annoncée ou être intégrée ultérieurement au catalogue permanent.
 
-Un skin temporairement indisponible reste visible dans sa série avec son statut, sauf contenu secret ou non encore officiellement révélé.
+Un skin temporairement indisponible reste visible dans sa série avec son statut. Pour un skin Secret appartenant à un pool, seule son illustration ou son identité esthétique détaillée peut rester masquée : son existence et sa probabilité restent déclarées.
 
 Les événements et offres doivent éviter les comptes à rebours artificiels, les rotations excessivement fréquentes, les informations ambiguës et les exclusivités non annoncées.
 

@@ -150,25 +150,25 @@ L’interface doit favoriser des composants réutilisables. Une représentation 
 
 Le système de collection doit réunir dans un même espace général deux parties clairement séparées : la collection de créatures et la collection de skins de carte. Ces deux catégories ne doivent pas être mélangées dans une liste unique.
 
-Le joueur doit pouvoir consulter et organiser les instances qu’il possède, parcourir les séries de skins de carte et visualiser sa progression. Le système doit également permettre de rechercher et de filtrer les éléments, de consulter les skins disponibles pour une créature et d’appliquer un skin de carte débloqué.
+Le joueur doit pouvoir consulter et organiser les instances qu’il possède, parcourir les séries de skins de carte et visualiser sa progression. Le système doit également permettre de rechercher et de filtrer les éléments, de consulter les skins disponibles pour une forme et d’appliquer un skin de carte débloqué.
+
+Une série constitue un regroupement artistique, thématique ou conceptuel. Son identité reste distincte de sa méthode d’acquisition : une série distribuée par paquets représente le modèle principal actuel, sans imposer que toute future série utilise nécessairement cette méthode.
 
 L’encyclopédie des créatures doit rester distincte de la gestion des instances possédées. Elle présente uniquement les familles réellement obtenues, sans révéler leur nombre total, et enrichit progressivement les formes, branches et conditions d’évolution découvertes.
 
-Les skins de carte non débloqués doivent rester consultables avec leur série, leur statut de disponibilité et leur mode général d’obtention lorsque celui-ci peut être communiqué. Certains skins secrets, surprises ou non encore officiellement révélés peuvent rester masqués.
+Chaque skin de carte est lié à une forme précise et ne peut pas être appliqué automatiquement aux autres formes de sa famille. Un même thème décliné sur plusieurs formes produit autant de skins distincts.
+
+Les skins de carte non débloqués doivent rester consultables avec leur série, leur statut de disponibilité et leur mode général d’obtention lorsque celui-ci peut être communiqué. Pour un skin de rareté `Secret`, l’existence, le nombre, la rareté et la probabilité exacte restent transparents, tandis que l’illustration et l’identité esthétique détaillée peuvent rester masquées jusqu’à l’obtention personnelle du skin.
 
 Le système de collection doit rester distinct de l’inventaire : la collection sert à consulter, organiser et valoriser les éléments collectionnables, tandis que l’inventaire est consacré aux objets, aux ressources et aux autres éléments stockables.
 
 **Éléments à préciser ultérieurement :**
 
 * la navigation précise, les filtres et l’ergonomie de l’espace de collection ;
-* les règles détaillées de présentation des skins secrets ;
+* les règles détaillées de présentation des skins Secrets ;
 * les règles exactes de calcul de la progression de collection et le traitement détaillé des contenus historiques ;
-* la nature des éventuelles reconnaissances non compétitives accordées pour la complétion d’une collection ;
+* la forme d’une éventuelle reconnaissance strictement cosmétique ou honorifique accordée pour la complétion d’une collection ;
 * le nom, la structure et les règles de complétion de la catégorie consacrée aux skins obtenus hors paquets.
-
-**Question ouverte :**
-
-* la compatibilité des skins de carte avec une créature, une forme précise ou plusieurs formes compatibles.
 
 ### 5.4. Distinguer les parcours cosmétiques et l’obtention des créatures
 

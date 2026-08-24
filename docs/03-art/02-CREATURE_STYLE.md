@@ -26,9 +26,11 @@ Les équipements attribués à une instance ne sont pas automatiquement visibles
 
 ## 3. Variantes par les skins de carte
 
-Une même créature peut disposer de plusieurs illustrations grâce aux skins de carte.
+Une même forme peut disposer de plusieurs illustrations grâce aux skins de carte.
 
 Ces illustrations peuvent adopter des styles très différents, notamment manga, peinture, semi-réaliste ou 3D illustrée. Un skin reste cosmétique : l’illustration employée ne modifie ni la structure fonctionnelle de la créature, ni ses caractéristiques, ni ses capacités.
+
+Chaque skin est conçu pour une forme précise. Un style artistique peut être décliné sur plusieurs formes d’une famille, mais chaque déclinaison constitue un skin et une illustration distincts.
 
 L’illustration constitue un asset artistique distinct du skin de carte possédé par le joueur et de la structure fonctionnelle de la carte.
 
@@ -44,7 +46,3 @@ Le personnage représenté dans l’illustration n’a pas besoin d’être anim
 * Le pipeline de création ou de génération des illustrations.
 * Les règles détaillées de cohérence entre les formes d’une famille.
 * Les éléments exacts d’une carte affectés par un skin.
-
-## 6. Question ouverte
-
-* La compatibilité d’un skin de carte avec une créature indépendamment de sa forme, avec une forme précise ou avec plusieurs formes compatibles.

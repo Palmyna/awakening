@@ -296,16 +296,18 @@ La collection de skins permet de :
 
 * parcourir séparément les séries de skins de carte ;
 * consulter les skins débloqués et non débloqués ;
-* visualiser la progression d’une série ;
+* visualiser la progression `X / X` d’une série et identifier clairement sa complétion ;
 * connaître la disponibilité et le mode général d’obtention lorsque communicables ;
-* consulter les skins disponibles pour une créature ;
+* consulter les skins disponibles pour une forme précise ;
 * appliquer un skin débloqué à une forme compatible.
 
-Les skins secrets, surprises ou non encore révélés peuvent rester masqués.
+L’appartenance à une série et la méthode d’acquisition sont présentées comme deux informations distinctes. L’interface doit pouvoir organiser des séries distribuées par paquets ou par d’autres méthodes explicitement définies sans les confondre avec les offres commerciales correspondantes.
 
-Le sélecteur d’apparence d’une instance distingue clairement sa forme mécanique actuelle, ses anciennes formes réellement parcourues et les skins compatibles. Le changement est gratuit, hors-combat et sans effet mécanique.
+Chaque skin est lié à une forme précise. Le sélecteur d’apparence d’une instance distingue clairement sa forme mécanique actuelle, ses anciennes formes réellement parcourues et les skins débloqués propres à la forme affichée. Le changement est gratuit, hors-combat et sans effet mécanique.
 
-La compatibilité exacte des skins avec les formes reste à décider.
+Un skin Secret non obtenu apparaît comme une entrée connue mais masquée. L’interface indique son existence, sa rareté, la probabilité exacte lorsqu’il appartient à un pool et, lorsqu’elle est communiquée, la créature concernée. Son illustration et son nom précis restent masqués jusqu’à son obtention personnelle.
+
+Le placeholder peut utiliser `???`, une silhouette générique non identifiable ou une autre représentation neutre. Le choix visuel final reste réservé à l’UI et à l’Art.
 
 ## 17. Invocation et acquisitions directes
 
@@ -376,6 +378,8 @@ Avant l’achat d’un paquet de skins, l’interface présente notamment :
 * la durée de disponibilité et la politique de retour ;
 * l’absence de protection contre les doublons ou la malchance.
 
+Lorsqu’un pool contient des skins Secrets, la liste indique leur existence, leur nombre, leur rareté `Secret` et leur probabilité exacte. Elle peut masquer leur illustration, leur nom précis et leurs détails esthétiques ; la créature concernée peut être affichée.
+
 L’ouverture révèle uniquement des skins de carte. Elle n’utilise ni le vocabulaire, ni les ressources, ni la présentation fonctionnelle de l’invocation de créatures.
 
 Chaque service de confort doit présenter son effet exact, son prix, ses limites, les alternatives gratuites concernées et le fait qu’il n’accorde aucune puissance inaccessible gratuitement.
@@ -410,6 +414,10 @@ Il dépend également des règles de combat, créatures, Skills, éléments, Eff
 * Le wording et la présentation détaillée de la confirmation d’une invocation multiple.
 * Les animations de révélation unitaire, la séquence globale et le récapitulatif groupé d’une invocation multiple.
 * Les animations d’évolution et de montée d’étoile.
+* La présentation d’une série complétée et d’une éventuelle reconnaissance strictement cosmétique ou honorifique.
+* L’organisation des séries utilisant des méthodes d’acquisition différentes.
+* Le wording, le placeholder, la présentation de la rareté et l’affichage éventuel de la créature concernée pour un skin Secret.
+* L’animation de révélation personnelle d’un skin Secret.
 * La présentation commerciale des services de confort.
 
 ## 24. Questions ouvertes
@@ -419,5 +427,4 @@ Il dépend également des règles de combat, créatures, Skills, éléments, Eff
 * Quelles règles d’accessibilité doivent être obligatoires dès la première version ?
 * Comment présenter les choix et filtres avancés de recherche sur écran tactile ?
 * Comment organiser le résultat d’un combat lorsque plusieurs niveaux, évolutions, déblocages et récompenses se produisent ensemble ?
-* Quelle règle de compatibilité des skins doit être reflétée dans le sélecteur d’apparence ?
 * Les récompenses de quêtes sont-elles récupérées automatiquement ou manuellement ?

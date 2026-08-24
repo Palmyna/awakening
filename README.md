@@ -47,7 +47,7 @@ Ces documents constituent les fondations de référence actuelles du projet. Ils
 * ✅ [`08-ITEMS.md`](./docs/01-game-design/08-ITEMS.md) — Rédigé — référence actuelle, à maintenir à jour
 * ✅ [`09-GACHA.md`](./docs/01-game-design/09-GACHA.md) — Rédigé — référence actuelle, à maintenir à jour
 * ✅ [`10-PROGRESSION.md`](./docs/01-game-design/10-PROGRESSION.md) — Rédigé — référence actuelle, à maintenir à jour
-* 🚧 [`11-COLLECTION.md`](./docs/01-game-design/11-COLLECTION.md) — Draft de conception développé — à relire et valider
+* ✅ [`11-COLLECTION.md`](./docs/01-game-design/11-COLLECTION.md) — Rédigé — référence actuelle, à maintenir à jour
 * 🚧 [`12-MODES.md`](./docs/01-game-design/12-MODES.md) — Draft de conception — à relire et valider
 * 🚧 [`13-PVP.md`](./docs/01-game-design/13-PVP.md) — Draft de conception — à relire et valider
 * ⬜ `14-GUILDS.md`

@@ -1,12 +1,12 @@
 # Project Awakening — Collection et encyclopédie
 
-**Statut :** Draft de conception — à relire et valider
+**Statut :** Rédigé — référence actuelle, à maintenir à jour
 
 ## 1. Rôle et périmètre du document
 
 Ce document définit le système de collection, la gestion des instances possédées, l’encyclopédie des créatures, la collection de skins de carte et la capacité de créatures.
 
-Il formalise les distinctions entre propriété, découverte, progression, apparence et stockage. Il ne définit pas la mise en page finale, la grammaire complète de recherche, les paramètres commerciaux des extensions ou les règles encore ouvertes de compatibilité des skins.
+Il formalise les distinctions entre propriété, découverte, progression, apparence et stockage. Il ne définit pas la mise en page finale, la grammaire complète de recherche, les paramètres commerciaux des extensions ou les données concrètes des futurs contenus cosmétiques.
 
 ## 2. Fonction du système de collection
 
@@ -189,25 +189,48 @@ Lorsqu’une place se libère, la plus ancienne instance bloquée selon l’ordr
 
 Le joueur peut continuer à obtenir de nouvelles créatures au-delà de sa capacité. Le dépassement ne crée donc ni perte d’acquisition ni obligation d’achat.
 
-## 11. Collection de skins de carte
+## 11. Collection et séries de skins de carte
 
 La collection de skins permet :
 
 * de consulter les skins débloqués et non débloqués ;
 * de parcourir les séries de skins de carte ;
 * de visualiser la progression au sein de chaque série ;
-* de consulter les skins disponibles pour une créature ;
-* d’appliquer un skin débloqué à une carte compatible.
+* de connaître la méthode générale d’obtention de chaque contenu lorsqu’elle peut être communiquée ;
+* de consulter les skins disponibles pour une forme précise ;
+* d’appliquer un skin débloqué à la forme avec laquelle il est compatible.
 
 Un skin de carte modifie uniquement la représentation visuelle. Il ne modifie ni la créature, ni ses caractéristiques, ni ses capacités.
 
-Les skins non débloqués restent consultables avec leur série, leur statut de disponibilité et leur mode général d’obtention lorsque ces informations peuvent être communiquées. Certains skins secrets, surprises ou non encore officiellement révélés peuvent rester masqués.
+Une série constitue un regroupement artistique, thématique ou conceptuel cohérent de skins. L’appartenance à une série reste distincte de sa méthode d’acquisition.
+
+Une série peut notamment être distribuée par paquets, directement skin par skin, par des récompenses de gameplay, dans le cadre d’une opération spéciale ou par une autre méthode explicitement définie. Le modèle de lancement repose principalement sur les séries distribuées par paquets ; cette structure de collection ne valide aucune nouvelle méthode commerciale au lancement.
 
 Une série temporairement indisponible reste normalement visible avec une indication claire de son indisponibilité actuelle et de sa politique de retour connue.
 
-La progression de collection est principalement suivie par série, car leur périmètre est connu. La complétion d’une série ne fournit aucun avantage automatique de puissance.
+## 12. Compatibilité avec les formes
 
-## 12. Skins obtenus hors paquets
+Chaque skin de carte est lié à une forme précise. Ses données déclarent explicitement cette forme et le skin ne peut pas être appliqué aux autres formes de la même famille.
+
+Un même style artistique ou thème visuel peut être décliné sur plusieurs formes. Chaque combinaison entre une forme et cette apparence cosmétique constitue alors un skin distinct, obtenu séparément, même lorsque ces déclinaisons appartiennent à la même série.
+
+Le sélecteur d’apparence d’une instance distingue :
+
+* sa forme mécanique actuelle ;
+* les anciennes formes réellement parcourues et débloquées comme apparences ;
+* les skins de carte débloqués liés à la forme affichée.
+
+Le joueur choisit d’abord une forme accessible comme apparence, puis peut lui appliquer uniquement les skins débloqués associés à cette forme. Le changement d’apparence reste gratuit, limité au hors-combat et sans effet mécanique.
+
+## 13. Progression et complétion d’une série
+
+La progression de collection est principalement suivie par série, car son périmètre est connu. L’interface reconnaît clairement sa complétion, par exemple sous la forme `X / X — Série complétée` ou d’un indicateur fonctionnel équivalent.
+
+La complétion d’une série n’accorde aucune récompense automatique de gameplay, notamment aucune puissance, statistique, ressource de progression, équipement, invocation ou autre avantage compétitif.
+
+Une reconnaissance future strictement cosmétique ou honorifique reste possible, notamment sous la forme d’un haut fait, d’un badge, d’un titre, d’une bordure ou d’un autre effet visuel. Aucun de ces exemples ne constitue actuellement une récompense validée ou obligatoire. Une éventuelle interaction avec le futur référentiel des hauts faits devra être définie lors de son cadrage.
+
+## 14. Skins obtenus hors paquets
 
 Certains skins peuvent être accordés directement comme récompenses événementielles, de haut fait, narratives, de progression, commémoratives ou liées à une opération spéciale.
 
@@ -217,21 +240,28 @@ Ces skins :
 * ne peuvent pas être obtenus aléatoirement dans ces séries ;
 * doivent afficher leur méthode générale d’obtention dans la collection lorsque celle-ci peut être communiquée.
 
-Ils seront regroupés dans une catégorie dédiée dont le nom, la structure et les règles de complétion ne sont pas encore validés.
+Ils peuvent être regroupés dans une série artistique non distribuée par paquets, une collection ou une catégorie dédiée lorsque leur cohérence le justifie. Le nom officiel, l’organisation et les règles détaillées de cette catégorie restent à préciser.
 
-## 13. Apparences de formes et skins
+## 15. Skins Secrets
 
-Le sélecteur d’apparence d’une instance distingue :
+`Secret` constitue une rareté cosmétique identifiable. Certains pools de skins peuvent exceptionnellement contenir un ou plusieurs skins de cette rareté, qui doivent rester rares dans la structure du pool et ne pas représenter une part importante de son contenu.
 
-* sa forme mécanique actuelle ;
-* les anciennes formes réellement parcourues et débloquées comme apparences ;
-* les skins de carte débloqués compatibles avec la forme affichée.
+Lorsqu’un pool contient des skins Secrets, le joueur doit connaître avant toute ouverture :
 
-Le changement d’apparence est gratuit, limité au hors-combat et sans effet mécanique.
+* leur existence ;
+* leur nombre ;
+* leur rareté `Secret` ;
+* leur probabilité exacte d’obtention.
 
-La compatibilité d’un skin avec une créature indépendamment de sa forme, une forme précise ou plusieurs formes compatibles reste une décision ouverte. Les données concrètes d’un futur skin devront respecter la règle retenue.
+La créature concernée par un skin Secret peut également être indiquée. Son illustration réelle, son nom précis et certains détails esthétiques peuvent rester masqués avant son obtention.
 
-## 14. Composition d’équipe
+Dans la collection personnelle, un skin Secret non possédé apparaît comme une entrée connue mais masquée. Le joueur peut connaître son existence, sa rareté, la créature concernée lorsqu’elle est communiquée et son mode général d’obtention. Une représentation neutre, telle que `???` ou une silhouette générique non identifiable, peut remplacer l’illustration ; le choix final appartient à l’UI et à l’Art.
+
+L’illustration réelle est révélée lorsque le joueur obtient lui-même le skin. L’obtention par un autre joueur ne la révèle pas automatiquement dans sa collection personnelle, sauf future décision sociale explicite.
+
+Les skins Secrets suivent les mêmes règles générales de RNG et de doublons que les autres skins du pool. Ils ne bénéficient automatiquement d’aucune *pity*, garantie après un nombre de paquets ou protection particulière contre la malchance et les doublons.
+
+## 16. Composition d’équipe
 
 Deux instances d’une même famille peuvent cohabiter dans une équipe uniquement lorsque leurs chemins d’évolution ont réellement divergé.
 
@@ -239,7 +269,7 @@ Une forme du tronc commun reste incompatible avec toute autre instance de sa fam
 
 La liste des instances doit permettre d’identifier celles qui sont indisponibles pour dépassement de capacité et ne peuvent donc pas être sélectionnées.
 
-## 15. Interactions et dépendances
+## 17. Interactions et dépendances
 
 | Document | Responsabilité liée |
 | --- | --- |
@@ -252,7 +282,7 @@ La liste des instances doit permettre d’identifier celles qui sont indisponibl
 | [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Séries, paquets, doublons et extensions de capacité |
 | [`03-CARD_DESIGN.md`](../03-art/03-CARD_DESIGN.md) | Composants de carte selon le contexte |
 
-## 16. Éléments à préciser ultérieurement
+## 18. Éléments à préciser ultérieurement
 
 * La grammaire exacte de recherche et les filtres complémentaires.
 * La présentation finale de la liste d’instances et de l’encyclopédie.
@@ -263,10 +293,11 @@ La liste des instances doit permettre d’identifier celles qui sont indisponibl
 * Les règles détaillées d’affichage des instances bloquées.
 * Le calcul détaillé de la progression des séries de skins.
 * Le traitement des contenus historiques dans les indicateurs de collection.
-
-## 17. Questions ouvertes
-
-* Quelle règle de compatibilité doit relier un skin de carte aux formes d’une créature ?
-* Quelle reconnaissance non compétitive, s’il en existe une, doit accompagner la complétion d’une série ?
-* Quel nom, quelle structure et quelles règles de complétion doit utiliser la catégorie des skins obtenus hors paquets ?
-* Quels skins secrets peuvent rester masqués et à quel moment doivent-ils devenir visibles ?
+* La représentation finale des skins Secrets non obtenus, le wording, la présentation de leur rareté et l’animation de révélation.
+* L’affichage éventuel de la créature concernée par un skin Secret.
+* Le nombre concret de skins Secrets, les séries concernées et l’identité de chaque contenu.
+* Les probabilités exactes, les tailles des séries et la répartition des skins entre les raretés.
+* Les thèmes et styles des futures séries ainsi que leurs méthodes d’acquisition concrètes.
+* La présentation d’une série complétée et l’éventuelle reconnaissance strictement cosmétique ou honorifique associée.
+* Le nom, l’organisation UI et le contenu précis de la catégorie consacrée aux skins spéciaux ou obtenus hors paquets.
+* Les prix et modalités de futures méthodes commerciales uniquement si celles-ci sont validées ultérieurement.
