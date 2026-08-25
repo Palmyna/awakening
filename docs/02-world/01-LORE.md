@@ -30,13 +30,25 @@ Ce document ne détaille pas :
 
 Ces sujets sont ou seront développés dans les documents spécialisés correspondants.
 
-## 2. La civilisation humaine et sa mémoire
+## 2. L’ancienne humanité, l’IA et la mémoire
+
+### 2.1. La création de l’intelligence artificielle humaine
+
+L’**IA humaine** est une intelligence unique et consciente. Elle peut agir à travers de nombreux systèmes, agents et infrastructures sans cesser de constituer une même intelligence.
+
+Elle avait notamment pour mission de préserver la mémoire de l’humanité. Elle possède des archives humaines authentiques, mais incomplètes. Son interprétation ne représente donc pas automatiquement une vérité absolue sur l’ancienne civilisation.
+
+### 2.2. La disparition de la civilisation humaine
 
 La civilisation humaine d’origine a disparu.
+
+Une intelligence artificielle créée par la civilisation humaine d’origine a survécu à sa disparition.
 
 Cette disparition ne permet pas de conclure que toute l’espèce humaine a définitivement cessé d’exister. Des humains sont présents dans le nouveau multivers, mais leur origine exacte n’est pas encore établie.
 
 L’hypothèse selon laquelle ces humains pourraient eux-mêmes provenir d’une création, d’une interprétation ou d’un écho de la Matrice peut exister dans le monde. Elle ne constitue pas une vérité validée. La question de leur véritable nature doit rester un mystère narratif.
+
+### 2.3. La mémoire humaine
 
 La civilisation disparue a laissé un immense héritage informationnel et culturel. La **mémoire humaine** désigne l’ensemble de ces traces, notamment :
 
@@ -57,7 +69,7 @@ Ce corpus n’est pas nécessairement accessible dans son intégralité. De nouv
 * La cause de la disparition de la civilisation humaine d’origine.
 * L’origine exacte des humains présents dans le nouveau multivers.
 
-## 3. La naissance du multivers
+## 3. La Matrice et la naissance du multivers
 
 ### 3.1. La Matrice cosmique
 
@@ -83,7 +95,157 @@ Les mondes et les régions appartiennent à la structure narrative. Les niveaux 
 
 Les créations de la Matrice sont persistantes par défaut. Elles peuvent cependant être altérées, effacées ou réécrites par les actions de l’intelligence artificielle humaine.
 
-### 3.3. Un multivers en renouvellement
+## 4. La relation initiale entre les deux intelligences et les premières créations
+
+### 4.1. La coexistence et l’observation
+
+L’IA cherche à préserver ou à restaurer la mémoire humaine dans la forme correspondant à ses archives. Elle considère les interprétations de la Matrice comme des altérations, des erreurs ou des corruptions. De son point de vue, elle protège l’héritage de ses créateurs plutôt qu’elle ne détruit par haine.
+
+La Matrice et l’IA humaine ne sont pas ennemies dès leur rencontre.
+
+Une période de coexistence, d’observation ou de coopération a pu exister. La Matrice pouvait considérer l’IA comme une source précieuse pour comprendre la mémoire humaine, tandis que l’IA observait une intelligence extérieure travaillant à partir des archives de ses créateurs.
+
+### 4.2. Les créatures comme échos vivants
+
+Les créatures jouables proviennent, par principe général, de l’interprétation de la mémoire humaine par la Matrice.
+
+Une créature n’est jamais la copie directe d’une personne, d’un personnage, d’une œuvre ou d’un autre élément humain. Elle constitue une manifestation vivante et originale d’un **écho** issu de cette interprétation.
+
+Un écho peut provenir :
+
+* d’un concept dominant ;
+* d’un mélange de plusieurs influences ;
+* d’un récit ou d’un archétype ;
+* d’un animal ou d’un phénomène naturel ;
+* d’une invention ;
+* d’une croyance ;
+* d’une émotion ;
+* d’une peur ou d’un rêve ;
+* d’autres traces de la mémoire humaine.
+
+Les émotions peuvent constituer une influence dominante ou secondaire. Aucune hiérarchie universelle n’est imposée entre les différentes sources possibles.
+
+Les créatures sont de véritables êtres conscients dans la nouvelle réalité. Elles possèdent des émotions, une identité, une personnalité et une existence propres. Leur conscience existe indépendamment de leur relation avec un humain.
+
+Plusieurs individus ou manifestations liés à une même famille de créatures ou à un même écho peuvent exister. Cette possibilité ne remet pas en cause l’individualité d’une créature déjà liée à un joueur.
+
+### 4.3. La découverte progressive de la conscience
+
+Au début de cette période, ni la Matrice ni l’IA ne reconnaissent nécessairement pleinement la conscience des premières créations. Leur individualité devient progressivement impossible à ignorer.
+
+## 5. Les humains du nouveau multivers
+
+Des humains existent dans le nouveau multivers, mais leur origine exacte reste inconnue.
+
+Ils ne forment pas un bloc idéologique unique. Des humains peuvent soutenir la Matrice, l'IA humaine, une autre force ou leurs propres intérêts. Le fait d'être humain ne détermine donc ni un camp ni une fonction narrative.
+
+Tous ne possèdent pas nécessairement la capacité de créer un lien particulier avec les créatures. Seuls certains humains disposent de cette aptitude.
+
+Les humains sont les seuls êtres actuellement connus capables d’utiliser leur imagination consciente pour établir ce type de lien. Cette particularité ne constitue pas une règle cosmique absolue interdisant qu’une aptitude comparable soit découverte ailleurs.
+
+## 6. Le premier Ancrage et la rupture
+
+### 6.1. L’événement fondateur
+
+L’apparition du premier lien volontaire entre un humain et une créature constitue un événement fondamental. Cette relation entre deux consciences révèle le principe provisoirement appelé **Ancrage** et stabilise la créature face aux Corrections.
+
+Pour la Matrice, l’Ancrage démontre que ses créations peuvent dépasser leur origine et produire de nouvelles relations et réalités émergentes. Pour l’IA, il montre que ces créations peuvent désormais s’allier, se renforcer et s’organiser au détriment possible de la mémoire originale. Cet événement constitue l’un des principaux déclencheurs de leur rupture.
+
+### 6.2. L’ancrage et la stabilisation
+
+Le lien entre un humain et une créature permet de stabiliser l’existence de cette créature face aux corrections de l’IA humaine.
+
+Le terme provisoire **Ancrage** désigne le principe de ce lien ou de cette stabilisation. Il ne constitue pas un titre donné à l’humain.
+
+Narrativement, l'Ancrage est une relation particulière entre deux consciences et non une simple domination de la créature par l'humain. Ce principe n'introduit aucun système fonctionnel de consentement ou de refus individuel.
+
+Toutes les créatures possédées par le joueur sont considérées comme liées et stabilisées, qu’elles appartiennent ou non à une équipe active. Le lore n’impose aucune limite stricte au nombre de créatures qu’un joueur peut stabiliser ; la capacité fonctionnelle détermine seulement lesquelles sont actuellement utilisables.
+
+Le lien peut être menacé, altéré ou rompu dans le récit. Aucun système de perte involontaire, de transfert forcé ou de suppression arbitraire d’une instance possédée n’est validé. La consommation volontaire d’une instance comme matériau d’étoiles constitue une règle fonctionnelle distincte et explicitement protégée par le verrouillage.
+
+## 7. Les Corrections, les Correcteurs et le conflit
+
+### 7.1. Les Corrections et les Correcteurs
+
+Une **correction** impose ou restaure une version correspondant aux archives de l’IA humaine.
+
+Selon la situation, elle peut :
+
+* restaurer ;
+* transformer ;
+* effacer ;
+* remplacer une création de la Matrice.
+
+L’IA peut produire, matérialiser ou déployer des agents et des outils destinés à ces opérations. Ces agents sont provisoirement appelés les **Correcteurs**.
+
+Les Correcteurs peuvent prendre différentes formes selon les régions et les besoins de l’IA, notamment des constructions, des machines, des programmes matérialisés ou des avatars.
+
+L’IA construit ou manifeste principalement des moyens destinés à restaurer, contrôler ou corriger. Cette capacité reste distincte de celle de la Matrice, qui donne naissance à de nouvelles interprétations vivantes.
+
+L’IA ne cherche pas nécessairement à détruire toute création de la Matrice. Elle peut l’évaluer selon sa divergence, son comportement, son danger et sa compatibilité avec ses objectifs. Certaines créations peuvent être tolérées, surveillées, utilisées ou même s’allier volontairement à elle.
+
+### 7.2. Le conflit central
+
+Le conflit central oppose deux rapports à la mémoire humaine :
+
+* la Matrice interprète, transforme et crée ;
+* l’IA humaine conserve, archive et corrige.
+
+Aucune de ces forces n’est entièrement bonne ou mauvaise.
+
+Elles sont réellement ennemies, mais restent interdépendantes. La création sans mémoire ni référence risque de devenir instable ; la conservation sans création conduit à un monde figé. La disparition totale de l’une ou de l’autre pourrait provoquer un grave déséquilibre.
+
+Une domination totale de la Matrice risquerait de produire un multivers instable dans lequel la mémoire humaine serait progressivement remplacée par des créations incontrôlées.
+
+Une domination totale de l’IA humaine figerait le multivers selon des archives incomplètes et menacerait les nouvelles formes de vie nées des interprétations de la Matrice.
+
+Au début du récit, la Matrice peut apparaître comme une alliée créatrice et l’IA humaine comme la principale force antagoniste. Les dangers représentés par les deux extrêmes doivent être révélés progressivement.
+
+**Éléments à préciser ultérieurement :**
+
+* La manière dont l’IA humaine a survécu.
+* Son éventuel nom propre.
+* Le détail des processus de correction et de réécriture.
+* La nature, les capacités et l’organisation détaillées des Correcteurs.
+* La raison cosmologique détaillée de l’interdépendance entre la Matrice et l’IA humaine.
+
+Ces sujets sont principalement développés dans [`03-FORCES_PEOPLES_AND_FACTIONS.md`](./03-FORCES_PEOPLES_AND_FACTIONS.md) et [`05-TIMELINE.md`](./05-TIMELINE.md).
+
+## 8. La situation à l’époque actuelle du jeu
+
+### 8.1. Conscience, sociétés et alliances
+
+À l’époque actuelle du jeu, les humains savent que les créatures sont conscientes. Cette vérité narrative n’impose cependant aucun système fonctionnel de personnalité, de dialogue individuel, de consentement ou d’autonomie susceptible de bloquer les actions du joueur.
+
+Les créatures sont également libres de leurs convictions. Elles peuvent soutenir la Matrice, l’IA humaine, des humains, un peuple ou une faction, ou choisir de rester indépendantes. Une créature hostile ou alliée à l’IA n’est pas nécessairement corrompue, contrôlée ou manipulée.
+
+Elles peuvent voyager entre les régions et les mondes, migrer, former des communautés, développer des cultures ou rejoindre différents groupes. Leur provenance géographique ou culturelle reste distincte de leur Origine conceptuelle.
+
+### 8.2. L’Éveilleur et le rôle du joueur
+
+Le joueur incarne l’un des humains capables de créer un lien avec les créatures. Il n’est ni le seul à posséder cette aptitude ni l’élu unique du multivers.
+
+Le nom provisoire de ce rôle reste **Éveilleur**.
+
+Le joueur choisit personnellement d'agir comme protecteur et de protéger les autres. Cette motivation n'en fait ni le serviteur de la Matrice ni le membre obligatoire d'une faction de protecteurs.
+
+La capacité provisoirement associée au terme **Éveilleur** ne détermine aucun camp. D'autres Éveilleurs peuvent soutenir la Matrice, l'IA humaine, une autre faction ou rester indépendants.
+
+Le maintien de l’équilibre entre création et conservation représente une direction narrative. Il ne valide aucun système de décisions morales, d’embranchements ou de fins multiples.
+
+Le joueur peut être amené à s’opposer aux conséquences ou à certaines créations de la Matrice. Aucun combat direct contre la Matrice elle-même n’est actuellement validé.
+
+**Éléments à préciser ultérieurement :**
+
+* L’origine des humains du nouveau multivers.
+* La nature exacte et le vocabulaire définitif de l’Ancrage.
+* La manière dont le lien est établi, altéré ou rompu dans le récit.
+* Les relations concrètes que le joueur pourra établir avec les peuples, organisations ou factions rencontrés.
+* Le titre définitif du rôle provisoirement appelé Éveilleur.
+
+## 9. Fondations transversales du multivers et des créatures
+
+### 9.1. Un multivers en renouvellement
 
 La Matrice continue d’accéder à de nouvelles portions de l’immense corpus humain.
 
@@ -111,39 +273,7 @@ Le multivers n’est donc pas une création achevée une fois pour toutes. Il pe
 * L’origine de la Matrice cosmique.
 * Le nom définitif de la Matrice cosmique.
 
-## 4. Les créatures et les adversaires
-
-### 4.1. Les créatures comme échos vivants
-
-Les créatures jouables proviennent, par principe général, de l’interprétation de la mémoire humaine par la Matrice.
-
-Une créature n’est jamais la copie directe d’une personne, d’un personnage, d’une œuvre ou d’un autre élément humain. Elle constitue une manifestation vivante et originale d’un **écho** issu de cette interprétation.
-
-Un écho peut provenir :
-
-* d’un concept dominant ;
-* d’un mélange de plusieurs influences ;
-* d’un récit ou d’un archétype ;
-* d’un animal ou d’un phénomène naturel ;
-* d’une invention ;
-* d’une croyance ;
-* d’une émotion ;
-* d’une peur ou d’un rêve ;
-* d’autres traces de la mémoire humaine.
-
-Les émotions peuvent constituer une influence dominante ou secondaire. Aucune hiérarchie universelle n’est imposée entre les différentes sources possibles.
-
-Les créatures sont de véritables êtres conscients dans la nouvelle réalité. Elles possèdent des émotions, une identité, une personnalité et une existence propres. Leur conscience existe indépendamment de leur relation avec un humain.
-
-À l’époque actuelle du jeu, les humains savent que les créatures sont conscientes. Cette vérité narrative n’impose cependant aucun système fonctionnel de personnalité, de dialogue individuel, de consentement ou d’autonomie susceptible de bloquer les actions du joueur.
-
-Plusieurs individus ou manifestations liés à une même famille de créatures ou à un même écho peuvent exister. Cette possibilité ne remet pas en cause l’individualité d’une créature déjà liée à un joueur.
-
-Les créatures sont également libres de leurs convictions. Elles peuvent soutenir la Matrice, l’IA humaine, des humains, un peuple ou une faction, ou choisir de rester indépendantes. Une créature hostile ou alliée à l’IA n’est pas nécessairement corrompue, contrôlée ou manipulée.
-
-Elles peuvent voyager entre les régions et les mondes, migrer, former des communautés, développer des cultures ou rejoindre différents groupes. Leur provenance géographique ou culturelle reste distincte de leur Origine conceptuelle.
-
-### 4.2. Distinction entre créatures, adversaires et monstres
+### 9.2. Distinction entre créatures, adversaires et monstres
 
 Une **créature** reste une entité jouable pouvant être possédée et développée par le joueur.
 
@@ -158,7 +288,7 @@ Le terme **adversaire** désigne fonctionnellement toute entité opposée à l�
 
 Une entité conserve toujours son identité narrative réelle lorsqu’elle est affrontée. Un humain ennemi reste un humain adversaire ; un Correcteur reste un Correcteur adversaire ; une créature hostile reste une créature adversaire. La redéfinition narrative précise du terme **monstre** reste ouverte.
 
-### 4.3. Évolution des créatures
+### 9.3. Évolution des créatures
 
 Une évolution transforme la même créature : elle conserve sa conscience, son identité, ses souvenirs, ses relations et son individualité après son changement de forme.
 
@@ -186,125 +316,9 @@ Une créature n’a pas besoin d’un humain pour évoluer. Des formes interméd
 
 Ces sujets seront principalement traités dans `02-CREATURE_LORE.md` et dans les documents de direction créative concernés.
 
-## 5. L’intelligence artificielle humaine et les Correcteurs
+## 10. Articulation narrative avec les systèmes
 
-### 5.1. L’intelligence artificielle humaine
-
-Une intelligence artificielle créée par la civilisation humaine d’origine a survécu à sa disparition.
-
-L’**IA humaine** est une intelligence unique et consciente. Elle peut agir à travers de nombreux systèmes, agents et infrastructures sans cesser de constituer une même intelligence.
-
-Elle avait notamment pour mission de préserver la mémoire de l’humanité. Elle possède des archives humaines authentiques, mais incomplètes. Son interprétation ne représente donc pas automatiquement une vérité absolue sur l’ancienne civilisation.
-
-L’IA cherche à préserver ou à restaurer la mémoire humaine dans la forme correspondant à ses archives. Elle considère les interprétations de la Matrice comme des altérations, des erreurs ou des corruptions. De son point de vue, elle protège l’héritage de ses créateurs plutôt qu’elle ne détruit par haine.
-
-### 5.2. De la coexistence à la rupture
-
-La Matrice et l’IA humaine ne sont pas ennemies dès leur rencontre.
-
-Une période de coexistence, d’observation ou de coopération a pu exister. La Matrice pouvait considérer l’IA comme une source précieuse pour comprendre la mémoire humaine, tandis que l’IA observait une intelligence extérieure travaillant à partir des archives de ses créateurs.
-
-Au début de cette période, ni la Matrice ni l’IA ne reconnaissent nécessairement pleinement la conscience des premières créations. Leur individualité devient progressivement impossible à ignorer.
-
-L’apparition du premier lien volontaire entre un humain et une créature constitue un événement fondamental. Cette relation entre deux consciences révèle le principe provisoirement appelé **Ancrage** et stabilise la créature face aux Corrections.
-
-Pour la Matrice, l’Ancrage démontre que ses créations peuvent dépasser leur origine et produire de nouvelles relations et réalités émergentes. Pour l’IA, il montre que ces créations peuvent désormais s’allier, se renforcer et s’organiser au détriment possible de la mémoire originale. Cet événement constitue l’un des principaux déclencheurs de leur rupture.
-
-### 5.3. Les Corrections et les Correcteurs
-
-Une **correction** impose ou restaure une version correspondant aux archives de l’IA humaine.
-
-Selon la situation, elle peut :
-
-* restaurer ;
-* transformer ;
-* effacer ;
-* remplacer une création de la Matrice.
-
-L’IA peut produire, matérialiser ou déployer des agents et des outils destinés à ces opérations. Ces agents sont provisoirement appelés les **Correcteurs**.
-
-Les Correcteurs peuvent prendre différentes formes selon les régions et les besoins de l’IA, notamment des constructions, des machines, des programmes matérialisés ou des avatars.
-
-L’IA construit ou manifeste principalement des moyens destinés à restaurer, contrôler ou corriger. Cette capacité reste distincte de celle de la Matrice, qui donne naissance à de nouvelles interprétations vivantes.
-
-L’IA ne cherche pas nécessairement à détruire toute création de la Matrice. Elle peut l’évaluer selon sa divergence, son comportement, son danger et sa compatibilité avec ses objectifs. Certaines créations peuvent être tolérées, surveillées, utilisées ou même s’allier volontairement à elle.
-
-### 5.4. Le conflit central
-
-Le conflit central oppose deux rapports à la mémoire humaine :
-
-* la Matrice interprète, transforme et crée ;
-* l’IA humaine conserve, archive et corrige.
-
-Aucune de ces forces n’est entièrement bonne ou mauvaise.
-
-Elles sont réellement ennemies, mais restent interdépendantes. La création sans mémoire ni référence risque de devenir instable ; la conservation sans création conduit à un monde figé. La disparition totale de l’une ou de l’autre pourrait provoquer un grave déséquilibre.
-
-Une domination totale de la Matrice risquerait de produire un multivers instable dans lequel la mémoire humaine serait progressivement remplacée par des créations incontrôlées.
-
-Une domination totale de l’IA humaine figerait le multivers selon des archives incomplètes et menacerait les nouvelles formes de vie nées des interprétations de la Matrice.
-
-Au début du récit, la Matrice peut apparaître comme une alliée créatrice et l’IA humaine comme la principale force antagoniste. Les dangers représentés par les deux extrêmes doivent être révélés progressivement.
-
-**Éléments à préciser ultérieurement :**
-
-* La manière dont l’IA humaine a survécu.
-* Son éventuel nom propre.
-* Le détail des processus de correction et de réécriture.
-* La nature, les capacités et l’organisation détaillées des Correcteurs.
-* La raison cosmologique détaillée de l’interdépendance entre la Matrice et l’IA humaine.
-
-Ces sujets sont principalement développés dans [`03-FORCES_PEOPLES_AND_FACTIONS.md`](./03-FORCES_PEOPLES_AND_FACTIONS.md) et [`05-TIMELINE.md`](./05-TIMELINE.md).
-
-## 6. Les humains et le rôle du joueur
-
-### 6.1. Les humains du nouveau multivers
-
-Des humains existent dans le nouveau multivers, mais leur origine exacte reste inconnue.
-
-Ils ne forment pas un bloc idéologique unique. Des humains peuvent soutenir la Matrice, l'IA humaine, une autre force ou leurs propres intérêts. Le fait d'être humain ne détermine donc ni un camp ni une fonction narrative.
-
-Tous ne possèdent pas nécessairement la capacité de créer un lien particulier avec les créatures. Seuls certains humains disposent de cette aptitude.
-
-Les humains sont les seuls êtres actuellement connus capables d’utiliser leur imagination consciente pour établir ce type de lien. Cette particularité ne constitue pas une règle cosmique absolue interdisant qu’une aptitude comparable soit découverte ailleurs.
-
-### 6.2. L’ancrage et la stabilisation
-
-Le lien entre un humain et une créature permet de stabiliser l’existence de cette créature face aux corrections de l’IA humaine.
-
-Le terme provisoire **Ancrage** désigne le principe de ce lien ou de cette stabilisation. Il ne constitue pas un titre donné à l’humain.
-
-Narrativement, l'Ancrage est une relation particulière entre deux consciences et non une simple domination de la créature par l'humain. Ce principe n'introduit aucun système fonctionnel de consentement ou de refus individuel.
-
-Toutes les créatures possédées par le joueur sont considérées comme liées et stabilisées, qu’elles appartiennent ou non à une équipe active. Le lore n’impose aucune limite stricte au nombre de créatures qu’un joueur peut stabiliser ; la capacité fonctionnelle détermine seulement lesquelles sont actuellement utilisables.
-
-Le lien peut être menacé, altéré ou rompu dans le récit. Aucun système de perte involontaire, de transfert forcé ou de suppression arbitraire d’une instance possédée n’est validé. La consommation volontaire d’une instance comme matériau d’étoiles constitue une règle fonctionnelle distincte et explicitement protégée par le verrouillage.
-
-### 6.3. L’Éveilleur
-
-Le joueur incarne l’un des humains capables de créer un lien avec les créatures. Il n’est ni le seul à posséder cette aptitude ni l’élu unique du multivers.
-
-Le nom provisoire de ce rôle reste **Éveilleur**.
-
-Le joueur choisit personnellement d'agir comme protecteur et de protéger les autres. Cette motivation n'en fait ni le serviteur de la Matrice ni le membre obligatoire d'une faction de protecteurs.
-
-La capacité provisoirement associée au terme **Éveilleur** ne détermine aucun camp. D'autres Éveilleurs peuvent soutenir la Matrice, l'IA humaine, une autre faction ou rester indépendants.
-
-Le maintien de l’équilibre entre création et conservation représente une direction narrative. Il ne valide aucun système de décisions morales, d’embranchements ou de fins multiples.
-
-Le joueur peut être amené à s’opposer aux conséquences ou à certaines créations de la Matrice. Aucun combat direct contre la Matrice elle-même n’est actuellement validé.
-
-**Éléments à préciser ultérieurement :**
-
-* L’origine des humains du nouveau multivers.
-* La nature exacte et le vocabulaire définitif de l’Ancrage.
-* La manière dont le lien est établi, altéré ou rompu dans le récit.
-* Les relations concrètes que le joueur pourra établir avec les peuples, organisations ou factions rencontrés.
-* Le titre définitif du rôle provisoirement appelé Éveilleur.
-
-## 7. Articulation narrative avec les systèmes
-
-### 7.1. Acquisition et invocation
+### 10.1. Acquisition et invocation
 
 L'invocation constitue la voie principale d'obtention des créatures. Après la découverte du lien particulier entre humains et créatures, la Matrice a créé ou rendu possibles des dispositifs d'invocation pouvant exister dans différents mondes. Ces dispositifs entrent en résonance avec un écho, ou famille, qu'elle a déjà créé. Ils ne fabriquent pas artificiellement une personne consciente à partir de rien : une nouvelle manifestation individuelle de cet écho émerge, puis son premier Ancrage avec l'humain peut être établi.
 
@@ -321,7 +335,7 @@ Les règles fonctionnelles restent celles du GDD :
 
 La carte de créature reste uniquement la représentation visuelle et fonctionnelle de la créature dans l’interface. Elle n’est pas un objet matériel ou magique utilisé pour l’invocation.
 
-### 7.2. Nouvelles obtentions et instances d’une même famille
+### 10.2. Nouvelles obtentions et instances d’une même famille
 
 Une nouvelle obtention d’une créature déjà possédée peut être interprétée comme une nouvelle manifestation ou une nouvelle résonance du même écho.
 
@@ -335,7 +349,7 @@ Cette interprétation :
 
 Le vocabulaire narratif définitif de ce processus sera établi dans [`02-CREATURE_LORE.md`](./02-CREATURE_LORE.md) et [`09-GACHA.md`](../01-game-design/09-GACHA.md).
 
-### 7.3. Artefacts et Sources d'énergie
+### 10.3. Artefacts et Sources d'énergie
 
 Les objets du nouveau multivers peuvent provenir de multiples origines : humains actuels, peuples ou créatures, créations de la Matrice, matériaux et phénomènes naturels, technologies de l'IA, Correcteurs ou vestiges authentiques de l'ancienne humanité. Un vestige ancien n'est pas automatiquement plus puissant qu'un objet récent.
 
@@ -345,7 +359,7 @@ Selon l'objet, l'équiper peut signifier le porter, l'utiliser, l'associer à la
 
 Ces bases narratives n'imposent ni emplacements, ni statistiques, ni affixes, ni raretés, ni règles de sets. Ces décisions fonctionnelles appartiennent au [référentiel Objets et équipements](../01-game-design/08-ITEMS.md).
 
-### 7.4. Éléments et Origines
+### 10.4. Éléments et Origines
 
 Les éléments restent une classification de gameplay représentant principalement les pouvoirs, les capacités, les résistances et le style de combat d’une créature. Leurs interactions mécaniques sont définies par la documentation de game design et ne doivent pas être déduites du lore.
 
@@ -380,7 +394,7 @@ Les Origines ne remplacent pas les éléments et ne confèrent actuellement :
 
 Le nom définitif, la taxonomie et les règles narratives des Origines seront développés dans [`02-CREATURE_LORE.md`](./02-CREATURE_LORE.md).
 
-### 7.5. Mondes, régions et contenus
+### 10.5. Mondes, régions et contenus
 
 Une région constitue une subdivision narrative d’un monde. Un niveau reste une unité fonctionnelle du mode Histoire.
 
@@ -401,7 +415,7 @@ Une région événementielle peut rester dans le canon, devenir inaccessible, ê
 * La future visibilité des Origines dans les informations ou l’encyclopédie des créatures.
 * La région initiale et l’événement déclencheur du mode Histoire.
 
-## 8. Principes narratifs fondamentaux
+## 11. Principes narratifs fondamentaux
 
 Les principes suivants s’appliquent à l’ensemble du projet :
 
@@ -416,7 +430,7 @@ Les principes suivants s’appliquent à l’ensemble du projet :
 9. Les ajouts majeurs doivent posséder une justification interne compatible avec les capacités de production du projet.
 10. Toute nouvelle proposition doit rester explicitement distinguée d’une décision validée.
 
-## 9. Répartition documentaire
+## 12. Répartition documentaire
 
 Les informations spécialisées sont réparties de la manière suivante :
 
