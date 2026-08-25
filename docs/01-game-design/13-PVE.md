@@ -211,7 +211,7 @@ La tentative se termine :
 
 Tant que le World Boss est vivant, les dégâts infligés pendant chaque tentative sont réellement soustraits à sa réserve globale de PV.
 
-Le résumé expose les informations utiles à la compréhension du résultat personnel et collectif, notamment la contribution du joueur et l’état restant du World Boss. Le layout final appartient à [`19-UI_FLOW.md`](./19-UI_FLOW.md).
+Le résumé expose les informations utiles à la compréhension du résultat personnel et collectif, notamment la contribution du joueur et l’état restant du World Boss. Le layout final appartient à [`20-UI_FLOW.md`](./20-UI_FLOW.md).
 
 ### 6.4. Fréquence et coût de participation
 
@@ -336,7 +336,7 @@ La Tour peut posséder un classement saisonnier principalement consacré à la c
 
 Le classement ne doit pas produire directement une puissance obligatoire.
 
-Malgré un reset de la progression jouable, des performances importantes peuvent rester enregistrées sur le compte, notamment un rang final ou un étage remarquable. Elles pourront alimenter le futur `18-ACHIEVEMENTS.md`, sans définir ici le fonctionnement complet des hauts faits.
+Malgré un reset de la progression jouable, des performances importantes peuvent rester enregistrées sur le compte, notamment un rang final ou un étage remarquable. Elles pourront alimenter le futur `19-ACHIEVEMENTS.md`, sans définir ici le fonctionnement complet des hauts faits.
 
 Certains hauts faits ou éléments de prestige pourront éventuellement accorder des récompenses strictement cosmétiques ou honorifiques. Les contours ou bordures de carte constituent une piste privilégiée ; des titres, badges ou autres éléments visuels restent également possibles. Aucune récompense précise n’est obligatoire ou validée à ce stade et aucun bonus de puissance ne peut en résulter.
 
@@ -356,11 +356,11 @@ Chaque ajout doit indiquer son statut de périmètre, son identité, sa progress
 
 ## 9. Frontières documentaires
 
-Le fonctionnement d’un mode PvE reste défini ici même lorsqu’il utilise une rotation, une fenêtre temporaire ou une saison. [`16-EVENTS.md`](./16-EVENTS.md) porte uniquement les règles événementielles ou éditoriales transversales qui s’appliquent lorsqu’un événement s’appuie sur ce mode.
+Le fonctionnement d’un mode PvE reste défini ici même lorsqu’il utilise une rotation, une fenêtre temporaire ou une saison. [`16-SEASONS.md`](./16-SEASONS.md) porte uniquement le cadre transversal des Saisons, sans remplacer les règles de la Tour infinie. [`17-EVENTS.md`](./17-EVENTS.md) s’applique seulement lorsqu’une animation temporaire légère utilise un mode PvE existant.
 
-Les parcours et informations nécessaires sont définis fonctionnellement dans [`19-UI_FLOW.md`](./19-UI_FLOW.md), sans imposer ici leur layout final.
+Les parcours et informations nécessaires sont définis fonctionnellement dans [`20-UI_FLOW.md`](./20-UI_FLOW.md), sans imposer ici leur layout final.
 
-Le futur `18-ACHIEVEMENTS.md` devra définir les hauts faits, leur structure et leurs récompenses éventuelles. Le présent document se limite aux performances PvE susceptibles de les alimenter.
+Le futur `19-ACHIEVEMENTS.md` devra définir les hauts faits, leur structure et leurs récompenses éventuelles. Le présent document se limite aux performances PvE susceptibles de les alimenter.
 
 ## 10. Dépendances
 
@@ -371,9 +371,10 @@ Le futur `18-ACHIEVEMENTS.md` devra définir les hauts faits, leur structure et 
 | [`08-ITEMS.md`](./08-ITEMS.md) | Sets, composants, fabrication et principes des tables de loot |
 | [`10-PROGRESSION.md`](./10-PROGRESSION.md) | XP, déblocages, énergie générale et exceptions locales de défaite |
 | [`12-MODES.md`](./12-MODES.md) | Contrats transversaux et statuts de périmètre |
-| [`16-EVENTS.md`](./16-EVENTS.md) | Enveloppes événementielles et éditoriales pouvant utiliser un mode PvE |
-| [`17-QUESTS.md`](./17-QUESTS.md) | Objectifs pouvant utiliser les activités débloquées |
-| [`19-UI_FLOW.md`](./19-UI_FLOW.md) | Sélection, préparation, progression, contribution et résultats |
+| [`16-SEASONS.md`](./16-SEASONS.md) | Cadre transversal commun aux Saisons sans transfert des règles PvE |
+| [`17-EVENTS.md`](./17-EVENTS.md) | Events légers pouvant utiliser un mode PvE existant |
+| [`18-QUESTS.md`](./18-QUESTS.md) | Objectifs pouvant utiliser les activités débloquées |
+| [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Sélection, préparation, progression, contribution et résultats |
 | [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Absence de puissance obligatoire liée au paiement ou aux cosmétiques |
 
 ## 11. Éléments à préciser ultérieurement

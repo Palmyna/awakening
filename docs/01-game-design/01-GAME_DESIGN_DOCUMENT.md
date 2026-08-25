@@ -674,7 +674,7 @@ Après une défaite, le joueur peut :
 * retourner à la gestion afin de modifier une composition ou un équipement ;
 * quitter l’activité.
 
-Le résultat doit donner accès à un résumé statistique simple des deux équipes, agrégé par créature plutôt que par Skill. Il présente notamment les dégâts infligés et reçus, les soins et Boucliers accordés ainsi que d’autres indicateurs globaux pertinents, dont la liste exacte reste à préciser dans le [document UI Flow](./19-UI_FLOW.md).
+Le résultat doit donner accès à un résumé statistique simple des deux équipes, agrégé par créature plutôt que par Skill. Il présente notamment les dégâts infligés et reçus, les soins et Boucliers accordés ainsi que d’autres indicateurs globaux pertinents, dont la liste exacte reste à préciser dans le [document UI Flow](./20-UI_FLOW.md).
 
 Ces informations doivent aider à comprendre les principales contributions, les Effets de combat importants et les créatures mises hors combat sans exposer un combat log technique détaillé.
 
@@ -934,17 +934,13 @@ La progression très longue est maîtrisée par :
 
 Le niveau des créatures ne possède pas de maximum. La formule exacte de la courbe d’XP reste cependant à définir.
 
-### 17.3. Événements et rotations
+### 17.3. Saisons et Events
 
-Les événements pourront :
+Après le lancement, les Saisons pourront fournir une trame périodique transversale, renouveler certaines compétitions et influencer plusieurs systèmes spécialisés. Une nouvelle Saison peut réinitialiser uniquement les progressions, classements ou scores explicitement saisonniers ; elle ne remet jamais à zéro la progression durable générale du joueur.
 
-* proposer de nouveaux défis ;
-* mettre en valeur certaines équipes ou certains éléments ;
-* offrir des récompenses particulières ;
-* renouveler les objectifs ;
-* introduire temporairement de nouveaux contenus.
+Les Events restent distincts. Ils constituent de petites animations temporaires utilisant principalement les systèmes et modes existants pour proposer quelques objectifs thématiques et des récompenses adaptées. Ils ne doivent normalement pas nécessiter un nouveau mode, une progression complexe ou une production lourde spécifique.
 
-Leur calendrier, leur cadence et leurs règles détaillées ne sont pas définis dans le GDD.
+La durée, la cadence, la structure détaillée, les objectifs et les récompenses exactes des Saisons et des Events ne sont pas définis dans le GDD.
 
 ## 18. Modes de jeu et statuts de périmètre
 
@@ -973,15 +969,15 @@ Aucun autre mode n’est encore validé dans ce périmètre.
 
 ### 18.4. Envisagé à long terme
 
-Les fondations envisagent :
+Les fondations envisagent les modes et structures suivants :
 
 * des boss personnels ;
 * des World Boss ;
 * une tour infinie ;
 * du PvP ;
-* des événements temporaires ;
 * des guildes ;
-* des contenus saisonniers.
+* des Saisons transversales ;
+* des Events temporaires légers.
 
 Leur présence dans cette liste ne valide ni leurs règles, ni leur ordre de production, ni leur date de disponibilité.
 
@@ -1108,10 +1104,11 @@ Le GDD dépend des documents spécialisés suivants pour les détails :
 * [`13-PVE.md`](./13-PVE.md) — mode Histoire, Boss personnels, World Boss, Tour infinie et autres modes PvE sans référentiel propre ;
 * [`14-PVP.md`](./14-PVP.md) — format asynchrone, matchmaking, saisons et classement du PvP ;
 * `15-GUILDS.md` — fonctions de guilde, lorsqu’un cadrage suffisant permettra sa création ;
-* [`16-EVENTS.md`](./16-EVENTS.md) — événements temporaires et contenus saisonniers ;
-* [`17-QUESTS.md`](./17-QUESTS.md) — quêtes journalières ;
-* `18-ACHIEVEMENTS.md` — hauts faits, lorsqu’un cadrage suffisant permettra sa création ;
-* [`19-UI_FLOW.md`](./19-UI_FLOW.md) — écrans, navigation, tutoriels et parcours ;
+* [`16-SEASONS.md`](./16-SEASONS.md) — trame transversale, progression durable et systèmes saisonniers ;
+* [`17-EVENTS.md`](./17-EVENTS.md) — animations temporaires légères utilisant les systèmes existants ;
+* [`18-QUESTS.md`](./18-QUESTS.md) — quêtes journalières ;
+* `19-ACHIEVEMENTS.md` — hauts faits, lorsqu’un cadrage suffisant permettra sa création ;
+* [`20-UI_FLOW.md`](./20-UI_FLOW.md) — écrans, navigation, tutoriels et parcours ;
 * [`01-ART_DIRECTION.md`](../03-art/01-ART_DIRECTION.md) à [`06-ANIMATIONS.md`](../03-art/06-ANIMATIONS.md) — direction artistique, représentation des créatures, cartes, UI, VFX et animations ;
 * [`01-ARCHITECTURE.md`](../04-technical/01-ARCHITECTURE.md) — moteur retenu, séparation technique entre simulation et représentation et principes de reproductibilité.
 
@@ -1138,7 +1135,7 @@ Les questions suivantes ne bloquent pas le fonctionnement global décrit par le 
 * le nombre d’équipes enregistrables et leurs règles de partage des créatures ;
 * les listes et récompenses des quêtes journalières ;
 * les règles détaillées des modes envisagés ;
-* la cadence des événements et mises à jour ;
+* la cadence des Saisons, des Events et des mises à jour ;
 * les quantités et données exactes de la vertical slice.
 
 ### 20.3. Principe de maintien

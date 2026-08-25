@@ -178,7 +178,7 @@ Chaque invocation permet d’obtenir la forme de base d’une famille de créatu
 
 Le joueur fait ensuite évoluer cette créature au fil de sa progression jusqu’à sa forme finale.
 
-L’invocation constitue la voie principale d’obtention des créatures. Certaines créatures peuvent néanmoins être accordées directement par le gameplay, notamment comme créature de départ ou comme récompense narrative, événementielle, de progression ou d’activité. Ces exceptions doivent être explicitement documentées et ne remettent pas en cause le rôle central de l’invocation.
+L’invocation constitue la voie principale d’obtention des créatures. Certaines créatures peuvent néanmoins être accordées directement par le gameplay, notamment comme créature de départ ou comme récompense narrative, liée à un Event, de progression ou d’activité. Ces exceptions doivent être explicitement documentées et ne remettent pas en cause le rôle central de l’invocation.
 
 Les créatures gagnent de l’expérience en participant aux combats.
 
@@ -303,20 +303,24 @@ Certains skins de carte peuvent être accordés directement comme récompenses s
 
 Les principes détaillés sont répartis dans les drafts de [direction artistique](../03-art/01-ART_DIRECTION.md), de [style des créatures](../03-art/02-CREATURE_STYLE.md), de [Card Design](../03-art/03-CARD_DESIGN.md), d’[UI](../03-art/04-UI_GUIDE.md), de [VFX](../03-art/05-VFX.md) et d’[animations](../03-art/06-ANIMATIONS.md).
 
-## 16. Modes de jeu envisagés
+## 16. Modes et structures de jeu envisagés
 
-Le projet prévoit à long terme plusieurs modes de jeu, notamment :
+Le projet prévoit à long terme plusieurs modes et structures de jeu, notamment :
 
 * une histoire principale ;
 * des boss personnels ;
 * des World Boss ;
 * une tour infinie ;
 * du PvP ;
-* des événements temporaires ;
 * des guildes ;
-* des contenus saisonniers.
+* des Saisons transversales après le lancement ;
+* des Events temporaires légers.
 
 Le contenu sera progressivement enrichi au fil du développement.
+
+Une Saison peut donner une trame périodique commune à plusieurs systèmes et réinitialiser uniquement les progressions explicitement saisonnières. Elle ne remet jamais à zéro la progression durable générale du compte, des créatures ou de la collection.
+
+Un Event utilise principalement les modes et systèmes existants pour proposer une petite animation temporaire, quelques objectifs thématiques et des récompenses adaptées. Il ne doit normalement pas nécessiter un nouveau mode ou une production lourde spécifique.
 
 ## 17. Modèle économique
 
@@ -325,7 +329,7 @@ Le projet adopte un modèle **Free-to-Play**.
 Les principes fondamentaux sont les suivants :
 
 * les créatures s’obtiennent principalement en jouant ;
-* les invocations sont obtenues grâce aux quêtes quotidiennes, aux événements, aux récompenses de jeu et aux différentes activités ;
+* les invocations sont obtenues grâce aux quêtes quotidiennes, aux Events, aux récompenses de jeu et aux différentes activités ;
 * aucun achat effectué dans la boutique cosmétique ne doit permettre directement ou indirectement d’obtenir une créature, une invocation ou de la puissance.
 
 La monétisation repose principalement sur une boutique exclusivement consacrée aux contenus cosmétiques.
@@ -349,7 +353,7 @@ Un paquet contient un nombre fixe de plusieurs skins appartenant à une même s�
 
 Avant un achat, le joueur connaît la série concernée, le nombre de skins contenus, la liste des skins pouvant être obtenus, leurs probabilités, les règles concernant les doublons et, le cas échéant, la durée de disponibilité. Il ne connaît pas les skins précis qu’il recevra avant l’ouverture.
 
-Les séries et leurs paquets peuvent être proposés de manière permanente ou temporaire à l’occasion d’événements. L’achat direct d’un skin précis appartenant à une série distribuée par paquets ne fait pas partie du modèle principal.
+Les séries et leurs paquets peuvent être proposés de manière permanente ou temporaire à l’occasion d’Events. L’achat direct d’un skin précis appartenant à une série distribuée par paquets ne fait pas partie du modèle principal.
 
 La complétion d’une série de skins de carte ne fournira aucun avantage automatique de puissance.
 

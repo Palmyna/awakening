@@ -10,7 +10,7 @@ Il formalise les principes économiques, le modèle conceptuel prévu au lanceme
 
 Il ne fixe aucune valeur numérique. Les prix, quantités, probabilités, valeurs de conversion, limites et seuils d’évaluation devront être déterminés pendant les phases de conception détaillée, d’équilibrage et de test.
 
-Ce document complète la [vision du projet](./01-VISION.md), les [piliers fondamentaux](./02-PILLARS.md) et la [philosophie du projet](./03-PROJECT_PHILOSOPHY.md). Il ne remplace pas les documents spécialisés consacrés aux invocations, à la progression, aux événements, aux cartes ou à l’économie détaillée.
+Ce document complète la [vision du projet](./01-VISION.md), les [piliers fondamentaux](./02-PILLARS.md) et la [philosophie du projet](./03-PROJECT_PHILOSOPHY.md). Il ne remplace pas les documents spécialisés consacrés aux invocations, à la progression, aux Saisons, aux Events, aux cartes ou à l’économie détaillée.
 
 ## 2. Objectif économique
 
@@ -28,7 +28,7 @@ La recherche de revenus ne doit jamais prendre le pas sur l’équité, la trans
 
 ### 3.1. Un modèle Free-to-Play centré sur le jeu
 
-Les créatures et les invocations doivent être obtenues principalement en jouant, notamment grâce aux quêtes quotidiennes, aux événements, aux récompenses et aux différentes activités.
+Les créatures et les invocations doivent être obtenues principalement en jouant, notamment grâce aux quêtes quotidiennes, aux Events, aux récompenses et aux différentes activités.
 
 Une dépense ne doit pas être nécessaire pour progresser normalement, développer ses créatures ou rester compétitif.
 
@@ -252,7 +252,7 @@ Le modèle initial n’utilise pas de monnaie premium. Les paquets payants affic
 
 ### 5.2. Paquets obtenus en jouant
 
-Des paquets de skins de carte peuvent être obtenus gratuitement en jouant, notamment grâce aux quêtes, aux événements, aux activités et à la progression.
+Des paquets de skins de carte peuvent être obtenus gratuitement en jouant, notamment grâce aux quêtes, aux Events, aux activités et à la progression.
 
 Pour une même série, un paquet obtenu en jouant et un paquet acheté utilisent :
 
@@ -391,7 +391,7 @@ Un skin de carte temporairement indisponible doit rester visible dans sa série 
 
 Les exclusivités définitives reposant uniquement sur la peur de manquer doivent être évitées.
 
-Certaines récompenses commémoratives ou événementielles peuvent exceptionnellement rester exclusives, à condition que cette exclusivité soit annoncée explicitement dès le départ.
+Certaines récompenses commémoratives ou liées à un Event peuvent exceptionnellement rester exclusives, à condition que cette exclusivité soit annoncée explicitement dès le départ.
 
 ### 7.2. Absence de pression artificielle
 
@@ -408,7 +408,7 @@ Le projet doit notamment éviter :
 
 ### 8.1. Structure commerciale
 
-Le projet propose un catalogue stable complété par des offres événementielles occasionnelles.
+Le projet propose un catalogue stable complété par des offres occasionnelles liées à des Events.
 
 Il doit éviter :
 
@@ -538,7 +538,7 @@ Une éventuelle réévaluation après le lancement ne devra pas conduire à int�
 
 ### 10.3. Passes et abonnements
 
-La décision concernant les passes et abonnements est reportée jusqu’à la définition des saisons, des événements et des capacités réelles de production.
+La décision concernant les passes et abonnements est reportée jusqu’à la définition des Saisons, des Events et des capacités réelles de production.
 
 Un éventuel passe ou abonnement devra être principalement ou exclusivement cosmétique et ne devra pas devenir nécessaire pour progresser normalement.
 

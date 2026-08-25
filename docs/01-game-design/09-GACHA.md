@@ -39,7 +39,7 @@ Les invocations doivent être accessibles principalement grâce :
 * aux quêtes journalières ;
 * aux activités ;
 * aux récompenses de progression ;
-* aux événements.
+* aux Events.
 
 Les invocations de créatures ne sont pas vendues directement dans le modèle de lancement actuellement validé.
 
@@ -107,7 +107,7 @@ La composition concrète du pool reste une donnée de contenu à établir, mais 
 
 ### 6.2. Évolution future du pool
 
-La manière d’intégrer de nouvelles créatures après le lancement reste à définir. Elle pourra dépendre de la cadence d’ajout, de leur intégration individuelle ou par groupes, de la structure des futures mises à jour ou des événements.
+La manière d’intégrer de nouvelles créatures après le lancement reste à définir. Elle pourra dépendre de la cadence d’ajout, de leur intégration individuelle ou par groupes, de la structure des futures mises à jour ou des Events.
 
 Des pools supplémentaires, thématiques ou temporaires, ainsi que des rotations, pourront être étudiés ultérieurement. Ils ne font pas partie du modèle de lancement validé et nécessiteront une décision explicite avant leur intégration.
 
@@ -115,7 +115,7 @@ Des pools supplémentaires, thématiques ou temporaires, ainsi que des rotations
 
 Le modèle initial utilise une ressource générale principale pour effectuer les invocations de créatures.
 
-Cette ressource est obtenue principalement grâce au mode Histoire, aux trois quêtes journalières, aux autres activités, aux récompenses de progression et aux événements.
+Cette ressource est obtenue principalement grâce au mode Histoire, aux trois quêtes journalières, aux autres activités, aux récompenses de progression et aux Events.
 
 Elle reste entièrement séparée :
 
@@ -124,7 +124,7 @@ Elle reste entièrement séparée :
 * de la boutique cosmétique ;
 * de tout paiement en argent réel dans le modèle de lancement.
 
-L’ajout de ressources événementielles ou de catégories particulières d’invocation n’est pas validé.
+L’ajout de ressources propres aux Events ou de catégories particulières d’invocation n’est pas validé.
 
 ## 7. Aléatoire ordinaire et garanties explicites
 
@@ -154,7 +154,7 @@ L’interface d’onboarding doit introduire l’invocation au moment où le jou
 
 ## 9. Acquisitions directes exceptionnelles
 
-Certaines créatures peuvent être accordées directement par le gameplay lorsqu’une exception est explicitement documentée, notamment comme créature de départ ou comme récompense narrative, événementielle, de progression ou d’activité.
+Certaines créatures peuvent être accordées directement par le gameplay lorsqu’une exception est explicitement documentée, notamment comme créature de départ ou comme récompense narrative, liée à un Event, de progression ou d’activité.
 
 Une acquisition directe :
 
@@ -258,9 +258,9 @@ La présentation artistique peut employer un œuf, une éclosion, un rituel, un 
 | [`03-CREATURES.md`](./03-CREATURES.md) | État structurel et cycle de vie d’une instance |
 | [`10-PROGRESSION.md`](./10-PROGRESSION.md) | Niveaux, étoiles et consommation volontaire d’instances |
 | [`11-COLLECTION.md`](./11-COLLECTION.md) | Découverte, capacité et gestion des instances obtenues |
-| [`16-EVENTS.md`](./16-EVENTS.md) | Récompenses événementielles et source d’invocations |
-| [`17-QUESTS.md`](./17-QUESTS.md) | Quêtes journalières comme source d’invocations |
-| [`19-UI_FLOW.md`](./19-UI_FLOW.md) | Parcours d’invocation, révélation et feedback de capacité |
+| [`17-EVENTS.md`](./17-EVENTS.md) | Récompenses événementielles et source d’invocations |
+| [`18-QUESTS.md`](./18-QUESTS.md) | Quêtes journalières comme source d’invocations |
+| [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Parcours d’invocation, révélation et feedback de capacité |
 | [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Séparation économique et exclusions du modèle de lancement |
 | [`01-LORE.md`](../02-world/01-LORE.md) | Échos, manifestations, Ancrage et dispositifs d’invocation |
 

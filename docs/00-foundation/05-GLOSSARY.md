@@ -1028,7 +1028,7 @@ Narrativement, elle établit ou révèle le lien avec une manifestation vivante 
 
 **Définition :** Ressource générale principale utilisée pour effectuer les invocations de créatures dans le modèle initial.
 
-Cette ressource doit être obtenue principalement grâce au mode Histoire, aux quêtes journalières, aux activités, aux récompenses de progression et aux événements. Elle reste entièrement séparée de l’économie cosmétique.
+Cette ressource doit être obtenue principalement grâce au mode Histoire, aux quêtes journalières, aux activités, aux récompenses de progression et aux Events. Elle reste entièrement séparée de l’économie cosmétique.
 
 L’ajout de ressources événementielles ou de catégories particulières d’invocation n’est pas validé.
 
@@ -1429,6 +1429,24 @@ Un catalogue désigne un ensemble de contenus disponibles ; la boutique désigne
 **Domaine :** Game design
 
 **Définition :** Activité ou type de contenu proposé au joueur, par exemple l’histoire, un boss, une tour ou le PvP.
+
+### Saison
+
+**Domaine :** Game design, contenu, compétition
+
+**Définition :** Grande trame périodique transversale pouvant donner un thème commun à plusieurs systèmes et coordonner des progressions, objectifs, classements ou contenus explicitement saisonniers.
+
+Une nouvelle Saison peut réinitialiser uniquement les progressions définies comme saisonnières. Elle ne remet jamais à zéro la progression durable générale du compte, des créatures ou de la collection.
+
+### Event
+
+**Domaine :** Game design, contenu temporaire
+
+**Définition :** Petite animation temporaire, généralement thématique, utilisant principalement les modes et systèmes existants pour proposer quelques objectifs et récompenses adaptés.
+
+Un Event ne constitue normalement ni un nouveau mode de jeu, ni une progression complexe. Un événement narratif ou un événement produit par la simulation ne désigne pas automatiquement ce système.
+
+**Variante autorisée :** « événement temporaire » lorsque le contexte évite toute confusion avec un événement narratif ou technique.
 
 ### Mode de contrôle du combat
 

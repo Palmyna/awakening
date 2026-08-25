@@ -29,7 +29,7 @@ Il ne remplace pas les documents spécialisés consacrés :
 * à l’[invocation](./09-GACHA.md) ;
 * à la [progression](./10-PROGRESSION.md) ;
 * à la [collection et l’encyclopédie](./11-COLLECTION.md) ;
-* aux [parcours d’interface](./19-UI_FLOW.md) ;
+* aux [parcours d’interface](./20-UI_FLOW.md) ;
 * au [style visuel des créatures](../03-art/02-CREATURE_STYLE.md) ;
 * à la [représentation sous forme de cartes](../03-art/03-CARD_DESIGN.md) ;
 * au [lore des créatures](../02-world/02-CREATURE_LORE.md).
@@ -399,7 +399,7 @@ Le verrouillage protège l’instance contre les actions destructives ou irréve
 
 Il ne bloque pas sa progression normale, son évolution, ses étoiles, son équipement ou son utilisation dans une activité.
 
-Les règles de gestion, de recherche et de présentation appartiennent au [document Collection](./11-COLLECTION.md) et au [document UI Flow](./19-UI_FLOW.md).
+Les règles de gestion, de recherche et de présentation appartiennent au [document Collection](./11-COLLECTION.md) et au [document UI Flow](./20-UI_FLOW.md).
 
 ## 8. Acquisition et cycle de vie d’une instance
 
@@ -475,7 +475,7 @@ Son identité narrative ne change pas lorsqu'il est affronté : un humain ennemi
 | [`09-GACHA.md`](./09-GACHA.md) | Invocation, raretés d’acquisition, ensembles de familles disponibles et acquisitions directes |
 | [`10-PROGRESSION.md`](./10-PROGRESSION.md) | XP, niveaux, étoiles, réinitialisations et score de Puissance |
 | [`11-COLLECTION.md`](./11-COLLECTION.md) | Gestion des instances, encyclopédie, recherche, tris et capacité |
-| [`19-UI_FLOW.md`](./19-UI_FLOW.md) | Informations affichées, écrans, navigation et confirmations |
+| [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Informations affichées, écrans, navigation et confirmations |
 | [`02-CREATURE_STYLE.md`](../03-art/02-CREATURE_STYLE.md) | Représentation artistique et illustrations des créatures |
 | [`03-CARD_DESIGN.md`](../03-art/03-CARD_DESIGN.md) | Structure visuelle et variantes contextuelles des cartes |
 | [`02-CREATURE_LORE.md`](../02-world/02-CREATURE_LORE.md) | Lore des familles, des formes, des manifestations et des évolutions |

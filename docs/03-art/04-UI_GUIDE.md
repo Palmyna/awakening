@@ -6,7 +6,7 @@
 
 Ce document rassemble les principes visuels et de production actuellement validés pour l’interface.
 
-Les besoins fonctionnels et parcours déjà établis restent définis dans le [draft UI Flow](../01-game-design/19-UI_FLOW.md). Le présent document ne fixe pas encore la navigation finale, la palette, les typographies ou un layout précis.
+Les besoins fonctionnels et parcours déjà établis restent définis dans le [draft UI Flow](../01-game-design/20-UI_FLOW.md). Le présent document ne fixe pas encore la navigation finale, la palette, les typographies ou un layout précis.
 
 ## 2. Mobile-first et tactile
 

@@ -336,7 +336,8 @@ Il n’accorde aucun niveau, aucune expérience, aucun point supplémentaire et 
 | [`11-COLLECTION.md`](./11-COLLECTION.md) | Séparation entre collection et inventaire |
 | [`13-PVE.md`](./13-PVE.md) | Sources de loot et de composants propres aux modes PvE |
 | [`14-PVP.md`](./14-PVP.md) | Effets contextuels, loadouts et contraintes d’équité du PvP |
-| [`19-UI_FLOW.md`](./19-UI_FLOW.md) | Parcours de gestion, comparaison, fabrication et inventaire |
+| [`16-SEASONS.md`](./16-SEASONS.md) | Associations saisonnières possibles sans modification automatique des règles d’objet |
+| [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Parcours de gestion, comparaison, fabrication et inventaire |
 | [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Service de confort payant lié aux sacs |
 
 ## 17. Éléments à préciser ultérieurement

@@ -129,7 +129,7 @@ Un équipement peut posséder un effet dont l’activation dépend d’un mode, 
 
 Cette capacité ne valide aucun effet concret et ne crée aucune catégorie structurelle d’équipement PvP ou PvE. Les objets restent les mêmes Artefacts et Sources d’énergie ; ils peuvent simplement convenir davantage à certains contextes.
 
-La fonction contextuelle d’un objet ne détermine pas automatiquement son origine. Il peut provenir des sources générales de loot, de craft, de boss, d’événements ou d’autres activités prévues sans imposer une boucle fermée où le PvP serait nécessaire pour obtenir l’équipement permettant d’y être compétitif.
+La fonction contextuelle d’un objet ne détermine pas automatiquement son origine. Il peut provenir des sources générales de loot, de craft, de boss, d’Events ou d’autres activités prévues sans imposer une boucle fermée où le PvP serait nécessaire pour obtenir l’équipement permettant d’y être compétitif.
 
 ### 6.3. Loadouts
 
@@ -139,7 +139,7 @@ Le même objet réel peut apparaître dans plusieurs loadouts de la même instan
 
 Pour transférer l’objet vers une autre instance, le joueur doit d’abord le retirer de tous les loadouts de sa créature actuelle. Il redevient alors disponible.
 
-Le nombre, les noms, l’ergonomie et la méthode de sélection des loadouts restent à définir dans [`08-ITEMS.md`](./08-ITEMS.md) et [`19-UI_FLOW.md`](./19-UI_FLOW.md).
+Le nombre, les noms, l’ergonomie et la méthode de sélection des loadouts restent à définir dans [`08-ITEMS.md`](./08-ITEMS.md) et [`20-UI_FLOW.md`](./20-UI_FLOW.md).
 
 ## 7. Énergie, XP et absence de progression passive
 
@@ -319,7 +319,7 @@ Le classement final peut alimenter de futurs hauts faits, titres, badges, contou
 
 Les récompenses les plus prestigieuses doivent rester principalement honorifiques ou cosmétiques et ne conférer aucune puissance exclusive indispensable.
 
-Le futur `18-ACHIEVEMENTS.md` devra définir les critères et récompenses propres aux hauts faits sans être créé artificiellement pendant la présente intervention.
+Le futur `19-ACHIEVEMENTS.md` devra définir les critères et récompenses propres aux hauts faits sans être créé artificiellement pendant la présente intervention.
 
 ## 13. Historique et analyse
 
@@ -356,9 +356,9 @@ Les règles d’équipement contextuel, de loadouts et de réservation appartien
 
 La progression générale du compte et l’énergie restent définies dans [`10-PROGRESSION.md`](./10-PROGRESSION.md). Le MMR, la cote, les jalons et le classement sont des progressions compétitives propres au présent mode.
 
-Une saison PvP conserve son fonctionnement ici même lorsqu’elle possède un thème ou une durée limitée. [`16-EVENTS.md`](./16-EVENTS.md) porte uniquement une éventuelle enveloppe événementielle ou éditoriale transversale.
+Une saison PvP conserve son fonctionnement ici même lorsqu’elle possède un thème ou une durée limitée. [`16-SEASONS.md`](./16-SEASONS.md) porte uniquement le cadre saisonnier transversal et ne remplace ni le MMR, ni la cote, ni le matchmaking, ni le classement définis ici.
 
-Les besoins fonctionnels des écrans et parcours appartiennent à [`19-UI_FLOW.md`](./19-UI_FLOW.md), sans imposer leur layout final.
+Les besoins fonctionnels des écrans et parcours appartiennent à [`20-UI_FLOW.md`](./20-UI_FLOW.md), sans imposer leur layout final.
 
 ## 15. Dépendances
 
@@ -371,8 +371,8 @@ Les besoins fonctionnels des écrans et parcours appartiennent à [`19-UI_FLOW.m
 | [`10-PROGRESSION.md`](./10-PROGRESSION.md) | Énergie générale, XP du compte et absence de progression passive |
 | [`12-MODES.md`](./12-MODES.md) | Statut de périmètre et contrats transversaux |
 | [`13-PVE.md`](./13-PVE.md) | Philosophie saisonnière commune et usages PvE des effets contextuels |
-| [`16-EVENTS.md`](./16-EVENTS.md) | Éventuelle enveloppe événementielle des saisons compétitives |
-| [`19-UI_FLOW.md`](./19-UI_FLOW.md) | Préparation, matchmaking, combat, saison, classement et historique |
+| [`16-SEASONS.md`](./16-SEASONS.md) | Cadre transversal des Saisons et protection de la progression durable |
+| [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Préparation, matchmaking, combat, saison, classement et historique |
 | [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Skip lié à `×4`, paquets cosmétiques et équité compétitive |
 
 ## 16. Éléments à préciser ultérieurement

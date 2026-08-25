@@ -392,9 +392,13 @@ Chaque service de confort doit présenter son effet exact, son prix, ses limites
 
 ## 21. Modes de long terme
 
-Les layouts détaillés du PvP, des guildes, des événements, des Boss personnels, des World Boss, de la Tour infinie et des contenus saisonniers restent à concevoir à partir de leurs règles de Game Design.
+Les layouts détaillés du PvP, des guildes, des Saisons, des Events, des Boss personnels, des World Boss et de la Tour infinie restent à concevoir à partir de leurs règles de Game Design.
 
 Leurs parcours réutilisent les contrats communs d’information, de préparation, de résultat, de lisibilité et de transparence sans imposer dès maintenant une architecture de navigation.
+
+La présentation d’une Saison doit distinguer clairement les progressions saisonnières de la progression durable du compte. La structure, les écrans et les informations transversales exactes restent à cadrer dans [`16-SEASONS.md`](./16-SEASONS.md).
+
+Un Event doit pouvoir afficher sa période, ses quelques objectifs, leur progression et leurs récompenses en réutilisant autant que possible les parcours existants. Cette exigence fonctionnelle n’implique aucun écran ou mode de jeu entièrement nouveau.
 
 ### 21.1. Boss personnels
 
@@ -456,7 +460,7 @@ L’historique de la saison courante distingue les attaques lancées des défens
 
 ## 22. Dépendances
 
-Le présent document traduit les besoins fonctionnels des documents spécialisés, notamment [`09-GACHA.md`](./09-GACHA.md), [`10-PROGRESSION.md`](./10-PROGRESSION.md), [`11-COLLECTION.md`](./11-COLLECTION.md), [`12-MODES.md`](./12-MODES.md), [`13-PVE.md`](./13-PVE.md), [`14-PVP.md`](./14-PVP.md), [`16-EVENTS.md`](./16-EVENTS.md) et [`17-QUESTS.md`](./17-QUESTS.md).
+Le présent document traduit les besoins fonctionnels des documents spécialisés, notamment [`09-GACHA.md`](./09-GACHA.md), [`10-PROGRESSION.md`](./10-PROGRESSION.md), [`11-COLLECTION.md`](./11-COLLECTION.md), [`12-MODES.md`](./12-MODES.md), [`13-PVE.md`](./13-PVE.md), [`14-PVP.md`](./14-PVP.md), [`16-SEASONS.md`](./16-SEASONS.md), [`17-EVENTS.md`](./17-EVENTS.md) et [`18-QUESTS.md`](./18-QUESTS.md).
 
 Il dépend également des règles de combat, créatures, Skills, éléments, Effets de combat, évolutions, objets et monétisation. Une décision d’interface ne peut pas modifier leurs règles fonctionnelles.
 

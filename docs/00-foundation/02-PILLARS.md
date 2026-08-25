@@ -137,7 +137,7 @@ Quatre services de confort sont actuellement validés en dehors de la boutique c
 ### Conséquences sur la conception
 
 * Les créatures doivent s’obtenir principalement en jouant.
-* Les quêtes quotidiennes, les événements, les récompenses et les différentes activités doivent permettre d’obtenir des invocations.
+* Les quêtes quotidiennes, les Events, les récompenses et les différentes activités doivent permettre d’obtenir des invocations.
 * Les achats ne doivent jamais devenir la principale source de puissance.
 * Les skins de carte et les illustrations alternatives qu’ils utilisent doivent constituer le cœur de la monétisation.
 * Les séries de skins de carte doivent être distribuées principalement au moyen de paquets de skins de carte pouvant être gagnés en jouant ou achetés contre de l’argent réel.
@@ -228,6 +228,8 @@ Sa longévité repose sur un univers riche, une progression profonde, une forte 
 * Les systèmes doivent permettre l’ajout progressif de créatures, de contenus, de builds et d’illustrations.
 * Les nouveaux contenus doivent renforcer la progression, la personnalisation et l’expérimentation.
 * Les décisions doivent tenir compte d’un budget très limité et d’une équipe humaine de deux personnes.
+* Les Saisons peuvent renouveler les progressions et classements explicitement saisonniers sans réinitialiser la progression durable du compte, des créatures ou de la collection.
+* Les Events doivent rester de petites animations temporaires réutilisant principalement les systèmes existants, sans exiger normalement un nouveau mode ou une production lourde spécifique.
 * Les solutions open source, les services disposant d’un Free Tier et les architectures limitant les coûts doivent être privilégiés.
 * L’intelligence artificielle doit soutenir la production, la qualité, la recherche, la conception, la documentation, le développement et les tests.
 * Les systèmes doivent autant que raisonnablement possible rester lisibles, versionnables, modifiables, testables et reproductibles depuis le repository par l’équipe et les agents IA.

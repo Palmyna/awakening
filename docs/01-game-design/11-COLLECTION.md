@@ -277,8 +277,9 @@ La liste des instances doit permettre d’identifier celles qui sont indisponibl
 | [`07-EVOLUTIONS.md`](./07-EVOLUTIONS.md) | Branches, apparences parcourues et conditions découvertes |
 | [`09-GACHA.md`](./09-GACHA.md) | Nouvelles instances et acquisition au-delà de la capacité |
 | [`10-PROGRESSION.md`](./10-PROGRESSION.md) | Étoiles, réinitialisations et score de Puissance |
-| [`16-EVENTS.md`](./16-EVENTS.md) | Disponibilité et récompenses cosmétiques événementielles |
-| [`19-UI_FLOW.md`](./19-UI_FLOW.md) | Parcours de consultation, recherche et actions protégées |
+| [`16-SEASONS.md`](./16-SEASONS.md) | Associations saisonnières éventuelles sans perte de collection durable |
+| [`17-EVENTS.md`](./17-EVENTS.md) | Disponibilité et récompenses cosmétiques événementielles |
+| [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Parcours de consultation, recherche et actions protégées |
 | [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Séries, paquets, doublons et extensions de capacité |
 | [`03-CARD_DESIGN.md`](../03-art/03-CARD_DESIGN.md) | Composants de carte selon le contexte |
 

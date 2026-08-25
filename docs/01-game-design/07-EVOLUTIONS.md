@@ -216,7 +216,9 @@ Cette découverte ciblée ne doit jamais révéler le catalogue complet des fami
 | [`08-ITEMS.md`](./08-ITEMS.md) | Équipements et objets consommables liés aux évolutions |
 | [`10-PROGRESSION.md`](./10-PROGRESSION.md) | Attribution d’XP, montées de niveau, points et étoiles |
 | [`11-COLLECTION.md`](./11-COLLECTION.md) | Découverte, encyclopédie, apparences de formes et skins |
-| [`19-UI_FLOW.md`](./19-UI_FLOW.md) | Présentation des conditions, séquences et actions du joueur |
+| [`16-SEASONS.md`](./16-SEASONS.md) | Cadre des conditions saisonnières et protection de la progression durable |
+| [`17-EVENTS.md`](./17-EVENTS.md) | Absence de condition rendue définitivement impossible par un Event unique |
+| [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Présentation des conditions, séquences et actions du joueur |
 
 ## 11. Éléments à préciser ultérieurement
 

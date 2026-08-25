@@ -88,7 +88,7 @@ Le projet doit éviter :
 
 Le joueur ne doit jamais obtenir directement la forme finale d’une créature. Une invocation donne accès à la forme de base d’une famille de créatures, que le joueur accompagne ensuite jusqu’à sa forme finale.
 
-L’invocation constitue la voie principale d’obtention des créatures. Certaines créatures peuvent néanmoins être accordées directement par le gameplay, comme créature de départ ou comme récompense narrative, événementielle, de progression ou d’activité. Ces exceptions doivent être explicites et ne doivent pas remettre en cause le rôle central de l’invocation.
+L’invocation constitue la voie principale d’obtention des créatures. Certaines créatures peuvent néanmoins être accordées directement par le gameplay, comme créature de départ ou comme récompense narrative, liée à un Event, de progression ou d’activité. Ces exceptions doivent être explicites et ne doivent pas remettre en cause le rôle central de l’invocation.
 
 La progression individuelle, l’expérience gagnée en combat, les points de caractéristiques reçus par chaque créature lors de ses montées de niveau, leur répartition par le joueur et l’amélioration des étoiles doivent donner de la valeur au temps consacré à chaque créature.
 
@@ -182,7 +182,7 @@ Certaines créatures peuvent être obtenues directement par le gameplay comme ex
 
 Ces parcours doivent employer des terminologies, des ressources, des interfaces, des animations et des règles économiques distinctes. Une ouverture cosmétique ne doit jamais donner de créature, et une invocation de créature ne doit pas être présentée comme l’ouverture d’un paquet cosmétique.
 
-Une ressource générale principale d’invocation est utilisée dans le modèle initial. Elle doit être obtenue principalement grâce au mode Histoire, aux quêtes journalières, aux activités, aux récompenses de progression et aux événements. Elle reste entièrement séparée de l’économie cosmétique.
+Une ressource générale principale d’invocation est utilisée dans le modèle initial. Elle doit être obtenue principalement grâce au mode Histoire, aux quêtes journalières, aux activités, aux récompenses de progression et aux Events. Elle reste entièrement séparée de l’économie cosmétique.
 
 **Éléments à préciser ultérieurement :**
 
@@ -194,7 +194,7 @@ Une ressource générale principale d’invocation est utilisée dans le modèle
 
 ### 6.1. Financer le projet sans faire de l’achat la principale source de puissance
 
-Project Awakening adopte un modèle Free-to-Play. Les créatures doivent s’obtenir principalement en jouant, et les invocations doivent être accessibles grâce aux quêtes quotidiennes, aux événements, aux récompenses et aux différentes activités.
+Project Awakening adopte un modèle Free-to-Play. Les créatures doivent s’obtenir principalement en jouant, et les invocations doivent être accessibles grâce aux quêtes quotidiennes, aux Events, aux récompenses et aux différentes activités.
 
 La boutique est exclusivement consacrée aux contenus cosmétiques. Elle ne vend aucune créature, aucune invocation, aucun avantage de combat et aucune progression de puissance.
 
@@ -261,7 +261,7 @@ Une éventuelle décision future autorisant l’achat direct d’invocations dev
 **Questions ouvertes :**
 
 * l’introduction éventuelle de publicités après le lancement ;
-* la création éventuelle d’un passe ou d’un abonnement après la définition des saisons et des capacités de production ;
+* la création éventuelle d’un passe ou d’un abonnement après la définition des Saisons et des capacités de production ;
 * l’introduction éventuelle d’une monnaie premium répondant à un besoin réel sans masquer le coût des produits ;
 * l’autorisation future d’autres services de confort ou d’achats directs d’invocations après définition et équilibrage des systèmes concernés.
 

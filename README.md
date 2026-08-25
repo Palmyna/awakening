@@ -52,10 +52,11 @@ Ces documents constituent les fondations de référence actuelles du projet. Ils
 * ✅ [`13-PVE.md`](./docs/01-game-design/13-PVE.md) — Rédigé — référence actuelle, à maintenir à jour
 * ✅ [`14-PVP.md`](./docs/01-game-design/14-PVP.md) — Rédigé — référence actuelle, à maintenir à jour
 * ⬜ `15-GUILDS.md`
-* 🚧 [`16-EVENTS.md`](./docs/01-game-design/16-EVENTS.md) — Draft de conception — à relire et valider
-* 🚧 [`17-QUESTS.md`](./docs/01-game-design/17-QUESTS.md) — Draft de conception — à relire et valider
-* ⬜ `18-ACHIEVEMENTS.md`
-* 🚧 [`19-UI_FLOW.md`](./docs/01-game-design/19-UI_FLOW.md) — Draft de conception développé — à relire et valider
+* 🚧 [`16-SEASONS.md`](./docs/01-game-design/16-SEASONS.md) — Draft de conception — à relire et valider
+* 🚧 [`17-EVENTS.md`](./docs/01-game-design/17-EVENTS.md) — Draft de conception — à relire et valider
+* 🚧 [`18-QUESTS.md`](./docs/01-game-design/18-QUESTS.md) — Draft de conception — à relire et valider
+* ⬜ `19-ACHIEVEMENTS.md`
+* 🚧 [`20-UI_FLOW.md`](./docs/01-game-design/20-UI_FLOW.md) — Draft de conception développé — à relire et valider
 
 ### 02-world
 

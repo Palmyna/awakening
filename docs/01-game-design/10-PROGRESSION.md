@@ -228,7 +228,7 @@ La réserve générale :
 * ne doit pas être perdue simplement parce que le joueur ne s’est pas connecté pendant une journée ;
 * n’est pas vendue contre de l’argent réel.
 
-Chaque activité individuelle définit son coût exact, mais n’introduit pas automatiquement une énergie, un ticket, une clé ou une autre ressource d’entrée parallèle. Une régulation différente reste possible uniquement lorsqu’une exception est explicitement décidée et documentée localement, notamment pour certains événements, contenus de guilde, activités communautaires ou systèmes saisonniers.
+Chaque activité individuelle définit son coût exact, mais n’introduit pas automatiquement une énergie, un ticket, une clé ou une autre ressource d’entrée parallèle. Une régulation différente reste possible uniquement lorsqu’une exception est explicitement décidée et documentée localement, notamment pour certains contenus de guilde, activités communautaires ou systèmes saisonniers. Un Event léger réutilise par défaut les règles de l’activité existante sur laquelle il s’appuie.
 
 Dans le mode Histoire, l’énergie est consommée à l’entrée d’un niveau. Lors d’une défaite standard, l’énergie utilisée reste normalement consommée. Une activité particulière ou une étape d’onboarding peut définir une exception explicite.
 
@@ -268,9 +268,10 @@ Les services de confort validés ne modifient pas ce principe.
 | [`12-MODES.md`](./12-MODES.md) | Résultats et cadre transversal de l’énergie commune aux activités |
 | [`13-PVE.md`](./13-PVE.md) | Énergie générale et exceptions locales d’XP des activités PvE |
 | [`14-PVP.md`](./14-PVP.md) | Énergie générale, XP de compte en attaque, absence d’XP des créatures et progression compétitive distincte |
-| [`16-EVENTS.md`](./16-EVENTS.md) | Récompenses et éventuelles exceptions locales de régulation |
-| [`17-QUESTS.md`](./17-QUESTS.md) | Objectifs journaliers et récompenses de progression |
-| [`19-UI_FLOW.md`](./19-UI_FLOW.md) | Présentation et confirmations des actions de progression |
+| [`16-SEASONS.md`](./16-SEASONS.md) | Distinction entre progression durable et progressions explicitement saisonnières |
+| [`17-EVENTS.md`](./17-EVENTS.md) | Petites récompenses temporaires utilisant les systèmes existants |
+| [`18-QUESTS.md`](./18-QUESTS.md) | Objectifs journaliers et récompenses de progression |
+| [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Présentation et confirmations des actions de progression |
 
 ## 14. Éléments à préciser ultérieurement
 

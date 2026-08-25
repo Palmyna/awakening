@@ -400,11 +400,11 @@ Une région constitue une subdivision narrative d’un monde. Un niveau reste un
 
 Chaque famille de créatures doit respecter les règles du lore et posséder une justification conceptuelle. Elle ne nécessite pas automatiquement une quête, un événement, une région ou une explication scénaristique dédiée.
 
-Les nouveaux mondes, les nouvelles régions et les événements importants doivent recevoir une justification narrative explicite.
+Les nouveaux mondes, les nouvelles régions et les événements narratifs importants doivent recevoir une justification narrative explicite.
 
 Les saisons constituent avant tout une structure éditoriale et de contenu. Elles peuvent correspondre à des événements canoniques sans devoir être perçues comme des « saisons » par les habitants de l’univers.
 
-Une région événementielle peut rester dans le canon, devenir inaccessible, être transformée ou exceptionnellement disparaître lorsque le récit le justifie. Aucune règle universelle ne lui impose de disparaître.
+Un Event de gameplay constitue normalement une animation temporaire légère et son thème n’est pas automatiquement canonique. Réciproquement, un événement narratif important n’est pas automatiquement un Event au sens du système de jeu.
 
 **Éléments à préciser ultérieurement :**
 
@@ -476,4 +476,4 @@ Les informations spécialisées sont réparties de la manière suivante :
 * arrivée ou réveil des humains actuels ;
 * événements majeurs de la campagne.
 
-Les règles fonctionnelles détaillées restent dans les documents de game design, notamment `07-EVOLUTIONS.md`, `09-GACHA.md`, `11-COLLECTION.md`, `12-MODES.md`, `13-PVE.md` et `16-EVENTS.md`.
+Les règles fonctionnelles détaillées restent dans les documents de game design, notamment `07-EVOLUTIONS.md`, `09-GACHA.md`, `11-COLLECTION.md`, `12-MODES.md`, `13-PVE.md`, `16-SEASONS.md` et `17-EVENTS.md`.

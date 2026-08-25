@@ -91,14 +91,16 @@ La liste de quêtes disponible pour un compte doit évoluer avec ces déblocages
 
 Le moment exact du déblocage des quêtes journalières et leur tutoriel ne sont pas encore définis.
 
-## 9. Relation avec les événements et autres objectifs
+## 9. Relation avec les Saisons, les Events et les autres objectifs
 
-Les événements peuvent proposer leurs propres objectifs, mais aucune relation structurelle entre ces objectifs et les trois quêtes journalières n’est validée.
+Les Events peuvent proposer leurs propres objectifs, mais aucune relation structurelle entre ces objectifs et les trois quêtes journalières n’est validée.
+
+Les futurs objectifs saisonniers individuels relèvent du cadre de [`16-SEASONS.md`](./16-SEASONS.md). Leur possibilité ne les transforme pas automatiquement en quêtes journalières et ne modifie ni le nombre ni le cycle des trois quêtes du jour.
 
 Un futur système peut choisir de garder ces parcours séparés ou d’autoriser certaines interactions. Une telle décision devra préserver :
 
 * l’accessibilité des trois quêtes quotidiennes ;
-* l’absence de dépendance à un événement temporaire ;
+* l’absence de dépendance à un Event temporaire ;
 * la lisibilité des récompenses et des périodes ;
 * la règle selon laquelle seules les fonctionnalités débloquées sont utilisées.
 
@@ -110,8 +112,9 @@ Un futur système peut choisir de garder ces parcours séparés ou d’autoriser
 | [`09-GACHA.md`](./09-GACHA.md) | Ressource générale d’invocation |
 | [`10-PROGRESSION.md`](./10-PROGRESSION.md) | Récompenses ayant un effet sur la progression |
 | [`12-MODES.md`](./12-MODES.md) | Cadre commun des activités pouvant servir d’objectif |
-| [`16-EVENTS.md`](./16-EVENTS.md) | Éventuels objectifs temporaires distincts |
-| [`19-UI_FLOW.md`](./19-UI_FLOW.md) | Présentation, suivi et récupération |
+| [`16-SEASONS.md`](./16-SEASONS.md) | Futurs objectifs saisonniers distincts des quêtes journalières |
+| [`17-EVENTS.md`](./17-EVENTS.md) | Éventuels objectifs temporaires distincts |
+| [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Présentation, suivi et récupération |
 | [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Paquets gratuits et séparation économique |
 
 ## 11. Éléments à préciser ultérieurement
@@ -131,4 +134,4 @@ Un futur système peut choisir de garder ces parcours séparés ou d’autoriser
 * Le joueur peut-il remplacer une quête et, si oui, selon quelles limites sans paiement obligatoire ?
 * Les récompenses sont-elles remises automatiquement ou réclamées manuellement ?
 * Que devient une quête terminée mais non réclamée au renouvellement ?
-* Les événements peuvent-ils modifier la liste journalière ou doivent-ils conserver des objectifs entièrement séparés ?
+* Les Events peuvent-ils modifier la liste journalière ou doivent-ils conserver des objectifs entièrement séparés ?
