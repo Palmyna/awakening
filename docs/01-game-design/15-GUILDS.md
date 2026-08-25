@@ -1,21 +1,21 @@
 # Project Awakening — Guildes
 
-**Statut :** Draft de conception — cadrage en cours
+**Statut :** Rédigé — référence fonctionnelle actuelle, à maintenir à jour
 
 ## 1. Rôle et périmètre du document
 
-Ce document constitue le référentiel spécialisé du système de Guildes de Project Awakening.
-
-Cette première partie définit les décisions validées concernant :
+Ce document constitue le référentiel spécialisé du système de Guildes de Project Awakening et réunit les décisions validées des deux parties du cadrage fonctionnel concernant :
 
 * la philosophie, la structure et l’identité des Guildes ;
 * leur création, leur recrutement et leurs rangs ;
 * les départs, exclusions, transferts et dissolutions ;
 * l’architecture générale de leurs activités ;
-* le fonctionnement actuellement cadré du Boss de Guilde ;
-* les premières dépendances avec les Saisons, les Hauts Faits, l’interface et le futur système Social / Communication.
+* le fonctionnement du Boss de Guilde ;
+* les Expéditions de Guilde ;
+* les demandes et dons de composants ;
+* les dépendances avec les Saisons, les Hauts Faits, l’interface et le futur système Social / Communication.
 
-Le cadrage des Guildes n’est pas terminé. L’Expédition de Guilde, le système Social / Communication, certaines protections anti-abus et les paramètres de balancing restent notamment à définir. Le présent document ne doit donc pas être considéré comme un référentiel finalisé.
+Le système de Guildes est fonctionnellement cadré à son niveau actuel. Les valeurs de balancing, le contenu concret des Expéditions, les Hauts Faits, le système Social / Communication et certaines protections transversales restent à définir dans leurs cadres respectifs. Cette clôture fonctionnelle ne signifie donc pas que ces contenus ou paramètres sont finalisés.
 
 ## 2. Philosophie générale
 
@@ -28,7 +28,9 @@ Une Guilde sert principalement à créer :
 * du prestige collectif ;
 * une identité et un historique communs.
 
-La participation à une Guilde ne doit pas devenir obligatoire pour progresser normalement. Les récompenses propres aux Guildes doivent principalement soutenir le prestige, les Hauts Faits, les cosmétiques, la personnalisation et l’identité de la Guilde, sans fournir de puissance exclusive indispensable.
+La participation à une Guilde ne doit pas devenir obligatoire pour progresser normalement. Les activités de Guilde peuvent fournir de la monnaie générale, des ressources, des composants ou d’autres récompenses utiles, mais jamais une puissance exclusive indispensable. Toute ressource importante pour la progression ou les builds doit rester accessible par d’autres moyens lorsque l’équilibre général le nécessite.
+
+Le prestige, les Hauts Faits, les cosmétiques, la personnalisation, l’identité et l’historique de la Guilde restent des orientations majeures, particulièrement pour les accomplissements compétitifs ou de complétion.
 
 Un joueur ne peut appartenir qu’à une seule Guilde à la fois.
 
@@ -219,11 +221,13 @@ Le Boss de Guilde constitue le mode compétitif saisonnier principal des Guildes
 
 ### 10.4. Expédition de Guilde
 
-L’Expédition est envisagée comme une activité ou un mini-jeu coopératif de Guilde, distinct du Boss de Guilde compétitif.
+L’Expédition est une activité coopérative, asynchrone, permanente et non compétitive, distincte du Boss de Guilde. Son fonctionnement est défini à partir de la section 18.
 
-Son gameplay, ses règles, sa progression, ses récompenses, son calendrier, ses ressources et son scoring ne sont pas encore cadrés et ne sont pas définis dans cette première partie.
+### 10.5. Demandes et dons de composants
 
-### 10.5. Absence de quêtes hebdomadaires dédiées
+Les Guildes proposent un mécanisme simple d’entraide permettant aux membres éligibles de demander et donner certains composants de fabrication. Il ne constitue ni un marché, ni un commerce, ni un troc. Son fonctionnement est défini à la section 24.
+
+### 10.6. Absence de quêtes hebdomadaires dédiées
 
 Un système distinct de quêtes hebdomadaires de Guilde n’est pas retenu actuellement. Les Hauts Faits, objectifs saisonniers et véritables activités de Guilde doivent structurer l’activité collective sans ajouter artificiellement une nouvelle checklist régulière.
 
@@ -341,36 +345,239 @@ Une performance saisonnière importante peut rester visible dans l’historique 
 
 ### 17.3. Récupération manuelle
 
-Lorsqu’une récompense de palier, de classement ou de fin de Saison est configurée pour une récupération manuelle, elle suit la règle transversale de [`10-PROGRESSION.md`](./10-PROGRESSION.md) : elle apparaît dans le centre de récompenses, doit être réclamée avant son expiration et est définitivement perdue après ce délai.
+Lorsqu’une récompense du Boss de Guilde est configurée pour une récupération manuelle, elle est actuellement temporelle et suit les règles transversales de [`10-PROGRESSION.md`](./10-PROGRESSION.md). La référence de récupération est d’environ sept jours, tandis que sa durée exacte reste ajustable. Cette règle locale ne rend pas toutes les autres récompenses du jeu temporelles.
 
-## 18. Frontières documentaires
+## 18. Expéditions — identité et régulation
 
-Le Boss de Guilde reste un mode compétitif saisonnier dont les règles internes appartiennent au présent document. [`16-SEASONS.md`](./16-SEASONS.md) porte uniquement le cadre transversal des Saisons et les règles communes des futurs objectifs saisonniers.
+Une Expédition représente l’exploration collective progressive d’un lieu. Elle repose principalement sur :
 
-Le futur `19-ACHIEVEMENTS.md` définira le système commun des Hauts Faits, tandis que le présent document conserve leur application à l’histoire et au prestige de la Guilde.
+* l’exploration et la découverte ;
+* des missions, tâches, puzzles et choix ;
+* l’observation, la logique et l’utilisation d’indices ;
+* le lore du lieu et ses secrets ;
+* l’utilisation éventuelle de la collection de créatures.
 
-[`20-UI_FLOW.md`](./20-UI_FLOW.md) traduit les besoins fonctionnels des Guildes et du centre de récompenses sans fixer leur layout final.
+L’Expédition est :
 
-Le futur `21-SOCIAL_AND_COMMUNICATION.md`, prévu mais non créé, portera les règles sociales et de communication communes.
+* coopérative et asynchrone ;
+* permanente et sans durée globale ;
+* non compétitive et sans classement entre Guildes ;
+* indépendante des Saisons, sans reset saisonnier ;
+* non répétable et non conçue pour le farming ;
+* jouable sans combat obligatoire.
 
-## 19. Dépendances documentaires
+Elle reste distincte du Boss de Guilde, du World Boss, de la Tour infinie et des modes PvE classiques. Un contenu peut exceptionnellement employer un combat si son design le justifie, mais le combat n’est pas la mécanique centrale de l’Expédition.
+
+L’Expédition n’utilise ni énergie générale, ni énergie propre, ni ticket, ni clé, ni monnaie spéciale d’entrée. Sa régulation repose sur la contribution quotidienne des membres.
+
+## 19. Contribution quotidienne et tâche active
+
+Chaque membre éligible peut commencer au maximum **une nouvelle tâche d’Expédition par jour**. Cette possibilité n’est ni une monnaie ni une ressource stockable : une contribution inutilisée ne s’accumule jamais.
+
+Un joueur ne peut posséder qu’une seule tâche d’Expédition active à la fois. Une tâche peut durer plusieurs jours et ne possède aucune limite de durée individuelle par défaut. Tant qu’elle reste active :
+
+* le joueur ne peut pas en sélectionner une autre ;
+* aucune nouvelle contribution quotidienne ne lui est accordée ;
+* les jours écoulés ne créent aucune contribution en réserve.
+
+Après une réussite, un abandon ou un échec définitif, le joueur ne peut commencer une nouvelle tâche qu’à partir du lendemain.
+
+### 19.1. Résolution et libération
+
+En cas de réussite :
+
+* la contribution est validée ;
+* la progression, les découvertes et les déblocages correspondants sont appliqués ;
+* la réservation est levée et la tâche est marquée comme terminée.
+
+En cas d’abandon :
+
+* aucune contribution n’est validée ;
+* la tâche est libérée pour les autres membres ;
+* le joueur attend le lendemain avant une nouvelle sélection.
+
+Si le détenteur d’une tâche devient inactif selon la future définition transversale de compte ou membre actif, sa tâche est automatiquement libérée sans valider de contribution. Le délai exact d’inactivité n’est pas défini ici.
+
+La contribution quotidienne est unique à l’échelle de toutes les Expéditions accessibles : elle peut être utilisée dans l’Expédition principale ou dans le contenu facultatif restant d’une ancienne Expédition terminée, mais pas dans les deux le même jour.
+
+## 20. Zones, missions et découvertes
+
+Une Expédition comporte plusieurs zones, chacune pouvant réunir des missions principales, facultatives ou secrètes et leurs tâches.
+
+Les zones ne forment pas une suite linéaire obligatoire. Dès le lancement, un grand nombre de missions doit être disponible simultanément dans plusieurs zones afin que les membres puissent contribuer en parallèle et choisir librement où agir.
+
+Une zone organise notamment une partie du lieu, son identité visuelle, ses missions, ses découvertes, son lore, ses énigmes et ses secrets. Elle n’est pas automatiquement plus difficile ou plus avancée qu’une autre.
+
+### 20.1. Dépendances entre missions
+
+Une mission peut :
+
+* en débloquer une autre ;
+* révéler une nouvelle zone ;
+* fournir un indice utile ailleurs ;
+* dépendre de plusieurs missions ;
+* rester accessible avant que tous les indices utiles aient été trouvés.
+
+Toutes les dépendances ne sont donc pas des verrous techniques. Une mission peut être disponible tout en étant plus difficile à résoudre sans les informations découvertes ailleurs.
+
+### 20.2. Lore et informations découvertes
+
+Il n’existe aucun Journal d’Expédition séparé. Le lore, les découvertes, les indices validés et les informations débloquées restent consultables directement dans les zones, missions et contenus de l’Expédition.
+
+Les informations importantes nécessaires à la résolution doivent pouvoir être découvertes dans l’Expédition elle-même. Le système ne doit pas réduire son identité à des questionnaires exigeant des connaissances extérieures au contenu exploré.
+
+Les informations apprises uniquement par essais et erreurs ne sont pas nécessairement enregistrées automatiquement comme découvertes officielles. Les membres pourront les partager naturellement grâce au futur chat de Guilde, sans que le présent document définisse ce système de communication.
+
+## 21. Missions, tâches et tentatives
+
+Une mission peut comporter une seule tâche, plusieurs tâches parallèles ou successives, ainsi que des tâches dépendantes les unes des autres.
+
+Lorsqu’un joueur sélectionne une tâche :
+
+* cette instance lui est réservée ;
+* aucun autre membre ne peut l’accomplir en parallèle ;
+* les autres tâches disponibles restent accessibles.
+
+La réservation prend fin après une réussite, un abandon, un échec définitif ou l’inactivité du détenteur. Une réussite termine la tâche ; dans les trois autres cas, elle redevient disponible pour les autres membres.
+
+### 21.1. Mécaniques réutilisables
+
+Le système doit proposer un catalogue de mécaniques génériques réutilisables, ensuite habillées selon le lieu et le contexte de chaque Expédition. Il peut notamment prendre en charge l’observation, la recherche dans une illustration, la logique, les puzzles, les séquences, les symboles, les questionnaires, les choix, l’enquête, la déduction, l’utilisation d’indices ou la sélection de créatures.
+
+Ces familles sont des exemples de capacités du système, pas une liste obligatoire de tâches à produire pour chaque Expédition. Les mécaniques et contenus concrets relèvent du content design.
+
+Certaines tâches peuvent exploiter la collection sans combat, par exemple en demandant une créature satisfaisant une condition d’élément, de caractéristique ou de Skill. Les conditions doivent généralement accepter plusieurs solutions et éviter d’exiger une créature ultra-spécifique ou rare précise qui bloquerait artificiellement les joueurs.
+
+### 21.2. Tentatives
+
+Chaque tâche définit individuellement son nombre de tentatives, qui peut être limité ou illimité. Cette information doit être clairement affichée avant que le joueur sélectionne la tâche.
+
+Lorsqu’une tentative échoue :
+
+* elle est consommée ;
+* la tâche reste active s’il reste des tentatives ;
+* le joueur peut réessayer ultérieurement.
+
+Lorsque toutes les tentatives sont consommées :
+
+* la tâche échoue pour ce joueur ;
+* elle est automatiquement libérée pour les autres membres ;
+* aucune contribution n’est validée ;
+* le joueur attend le lendemain avant de sélectionner une nouvelle tâche.
+
+Une tâche à tentatives illimitées reste active jusqu’à sa réussite, son abandon ou sa libération pour inactivité.
+
+## 22. Progression, complétion et catalogue
+
+Une Expédition est officiellement terminée lorsque toutes les missions principales de toutes ses zones sont terminées. Elle ne nécessite ni zone finale, ni mission finale unique, ni Boss final.
+
+Les missions facultatives, secrets, zones secrètes, énigmes secondaires et autres contenus supplémentaires ne sont pas requis pour cette fin principale. Ils peuvent alimenter le lore, les Hauts Faits, le prestige, des récompenses adaptées et la complétion totale.
+
+Une Expédition atteint 100 % lorsque tout le contenu comptabilisé est accompli. Elle peut donc être terminée sans être complétée à 100 %.
+
+Une fois les missions principales terminées :
+
+* la Guilde conserve cette Expédition comme terminée ;
+* le Chef peut lancer une nouvelle Expédition principale ;
+* les contenus facultatifs restants demeurent accessibles ;
+* les membres peuvent continuer à y consacrer leur contribution quotidienne unique.
+
+### 22.1. Catalogue et choix du Chef
+
+Toutes les Expéditions publiées et disponibles apparaissent dans un catalogue sans ordre imposé, arbre de progression, prérequis entre Expéditions, coût, clé, monnaie d’entrée ou niveau de Guilde requis.
+
+Le Chef choisit librement quelle Expédition non terminée devient l’unique Expédition principale active. Une fois lancée, elle le reste jusqu’à la fin de toutes ses missions principales et ne peut pas être remplacée librement en cours de route.
+
+Une Expédition terminée à 100 % reste consultable avec son lore, ses découvertes et son historique, mais ne peut être recommencée ni farmée. Si la Guilde termine toutes les Expéditions disponibles à 100 %, elle attend simplement l’ajout futur de nouveaux contenus, sans reset, mode infini ou répétition artificielle.
+
+## 23. Récompenses et états des Expéditions
+
+Une petite tâche n’accorde pas nécessairement de récompense matérielle personnelle. Sa contribution peut uniquement produire une progression, un indice, une découverte, du lore, une nouvelle mission ou une nouvelle zone.
+
+La fin principale peut générer une récompense personnelle unique contenant notamment de la monnaie générale, des composants généraux, des ressources de progression déjà disponibles ailleurs, des éléments thématiques, des cosmétiques ou des éléments de collection. Les contenus, quantités et valeurs exacts restent à définir.
+
+La complétion à 100 % soutient principalement les Hauts Faits, le prestige, l’historique, les titres, la personnalisation de Guilde et les récompenses cosmétiques ou symboliques. Une récompense personnelle supplémentaire reste possible mais n’est pas obligatoire.
+
+### 23.1. État de Guilde et état personnel
+
+La Guilde conserve durablement :
+
+* les Expéditions terminées ;
+* leur pourcentage de complétion ;
+* leurs découvertes, secrets et accomplissements.
+
+Chaque compte conserve séparément l’information indiquant si la récompense personnelle de chaque Expédition a déjà été récupérée. Changer de Guilde ne remet jamais cet historique personnel à zéro.
+
+La récompense principale d’une Expédition ne peut être obtenue qu’une seule fois par compte. Une autre Guilde ne peut pas la générer une deuxième fois pour un joueur qui l’a déjà récupérée.
+
+### 23.2. Récompense permanente mais conditionnelle
+
+La récompense personnelle principale d’une Expédition est permanente mais conditionnelle. Pour la récupérer, le joueur doit :
+
+* ne jamais l’avoir récupérée auparavant ;
+* appartenir actuellement à une Guilde ;
+* être devenu membre éligible dans cette Guilde ;
+* appartenir à une Guilde ayant terminé l’Expédition concernée.
+
+La référence actuelle d’ancienneté reste d’environ sept jours, valeur ajustable. Lorsqu’un joueur devient éligible dans une Guilde avancée, les récompenses des Expéditions qu’elle a déjà terminées peuvent donc devenir récupérables s’il ne les a jamais obtenues.
+
+Si le joueur quitte sa Guilde avant de récupérer une récompense d’Expédition, il perd immédiatement son éligibilité actuelle. La récompense disparaît du centre de récompenses sans apparaître grisée, verrouillée ou inactive, mais elle n’est pas considérée comme obtenue.
+
+Elle peut réapparaître si le joueur rejoint plus tard une autre Guilde ayant terminé cette Expédition et y redevient éligible. Les catégories de disponibilité et les conditions générales d’éligibilité appartiennent à [`10-PROGRESSION.md`](./10-PROGRESSION.md).
+
+## 24. Demandes et dons de composants
+
+Le système d’entraide permet aux membres éligibles de demander et donner volontairement certains composants de fabrication. Il ne constitue ni un marché, ni un commerce, ni un échange avec contrepartie, ni un troc.
+
+Les demandes utilisent une interface dédiée plutôt que le chat de Guilde. Celui-ci peut servir à en discuter, mais ne porte pas leur fonctionnement.
+
+Un membre éligible peut publier **une demande par jour**, portant sur un seul type de composant. Chaque composant autorisé possède son propre paramètre interne de quantité maximale demandable quotidiennement ; aucune limite globale identique n’est imposée à tous les composants.
+
+Seuls les composants de fabrication explicitement autorisés sont demandables. Sont notamment exclus :
+
+* les Sources d’énergie ;
+* les équipements complets ;
+* les monnaies générales ou premium ;
+* toute autre catégorie non explicitement autorisée.
+
+Plusieurs membres peuvent compléter une même demande. Le donateur ne reçoit aucune contrepartie, monnaie, XP, point de Guilde, progression dédiée ou récompense spécifique.
+
+Une demande reste active jusqu’à sa complétion ou jusqu’au reset quotidien suivant. Lorsqu’elle disparaît au reset, les composants déjà reçus restent définitivement acquis au demandeur et ne sont pas remboursés aux donateurs.
+
+Aucune limite supplémentaire propre au donateur n’est actuellement validée. Les protections reposent sur l’éligibilité, la demande quotidienne, la quantité maximale définie par composant et les quantités réellement possédées. Un garde-fou supplémentaire ne devra être ajouté que si les tests révèlent un besoin réel.
+
+## 25. Frontières documentaires
+
+Le Boss de Guilde reste le mode compétitif saisonnier principal des Guildes. Ses règles internes appartiennent au présent document, tandis que [`16-SEASONS.md`](./16-SEASONS.md) porte uniquement le cadre transversal des Saisons et les règles communes des futurs objectifs saisonniers.
+
+Les Expéditions sont permanentes : elles ne reset pas, n’expirent pas, ne dépendent d’aucun classement saisonnier et ne possèdent aucun chrono global.
+
+Le futur `19-ACHIEVEMENTS.md` définira le système commun des Hauts Faits, notamment ceux pouvant exploiter les Expéditions terminées, leur complétion à 100 % et leurs secrets. Le présent document conserve uniquement les accomplissements de Guilde susceptibles de les alimenter.
+
+Le futur `21-SOCIAL_AND_COMMUNICATION.md`, prévu mais non créé, portera le chat de Guilde et les autres règles sociales ou de communication. Les Expéditions peuvent utiliser ce futur chat pour partager indices, pistes, erreurs et découvertes sans définir ici son fonctionnement.
+
+[`08-ITEMS.md`](./08-ITEMS.md) porte les catégories d’objets et composants pouvant entrer dans le système d’entraide. [`10-PROGRESSION.md`](./10-PROGRESSION.md) porte les règles transversales de disponibilité et d’éligibilité des récompenses. [`20-UI_FLOW.md`](./20-UI_FLOW.md) traduit les besoins fonctionnels des Guildes, Expéditions, demandes et récompenses sans fixer leur layout final.
+
+## 26. Dépendances documentaires
 
 | Document | Responsabilité liée |
 | --- | --- |
 | [`01-GAME_DESIGN_DOCUMENT.md`](./01-GAME_DESIGN_DOCUMENT.md) | Place des Guildes dans l’expérience de long terme |
 | [`02-COMBAT.md`](./02-COMBAT.md) | Moteur standard utilisé par le Boss de Guilde |
-| [`10-PROGRESSION.md`](./10-PROGRESSION.md) | Énergie générale et récupération manuelle de certaines récompenses |
+| [`08-ITEMS.md`](./08-ITEMS.md) | Composants de fabrication demandables et catégories explicitement exclues |
+| [`10-PROGRESSION.md`](./10-PROGRESSION.md) | Énergie générale, disponibilité et éligibilité des récompenses |
+| [`11-COLLECTION.md`](./11-COLLECTION.md) | Collection de créatures éventuellement sollicitée par certaines tâches |
 | [`12-MODES.md`](./12-MODES.md) | Contrats transversaux des modes et résultats |
-| [`13-PVE.md`](./13-PVE.md) | Philosophie des Boss personnels, distinction avec le World Boss et classement de la Tour infinie |
+| [`13-PVE.md`](./13-PVE.md) | Distinction avec les Boss personnels, le World Boss et la Tour infinie |
 | [`16-SEASONS.md`](./16-SEASONS.md) | Cadre transversal des Saisons et objectifs saisonniers |
-| [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Parcours de Guilde, invitations, Boss et centre de récompenses |
+| [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Parcours de Guilde, Boss, Expéditions, demandes et centre de récompenses |
 | [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Garde-fous économiques et récompenses cosmétiques |
-| [`01-LORE.md`](../02-world/01-LORE.md) | Frontière entre Guildes fonctionnelles et factions narratives |
+| [`01-LORE.md`](../02-world/01-LORE.md) | Frontière entre Guildes fonctionnelles, contenu d’Expédition et canon narratif |
 | [`03-FORCES_PEOPLES_AND_FACTIONS.md`](../02-world/03-FORCES_PEOPLES_AND_FACTIONS.md) | Absence de faction obligatoire pour le joueur |
 
-Le futur `19-ACHIEVEMENTS.md` devra prendre en charge les Hauts Faits de Guilde. Le futur `21-SOCIAL_AND_COMMUNICATION.md` devra prendre en charge les fonctions sociales et de communication communes.
+Le futur `19-ACHIEVEMENTS.md` devra prendre en charge les Hauts Faits de Guilde et d’Expédition. Le futur `21-SOCIAL_AND_COMMUNICATION.md` devra prendre en charge les fonctions sociales et de communication communes.
 
-## 20. Éléments à préciser ultérieurement
+## 27. Éléments à préciser ultérieurement
 
 * Le jalon exact de déblocage du système de Guildes.
 * Le coût exact de création.
@@ -378,16 +585,22 @@ Le futur `19-ACHIEVEMENTS.md` devra prendre en charge les Hauts Faits de Guilde.
 * La durée d’expiration des invitations.
 * La définition transversale exacte de compte actif ou membre actif.
 * La durée définitive avant transfert automatique du Chef.
-* La durée définitive avant éligibilité d’un nouveau membre au Boss de Guilde.
-* Le coût exact en énergie des tentatives.
+* La durée définitive avant éligibilité d’un nouveau membre aux systèmes de Guilde.
+* Le coût exact en énergie des tentatives du Boss de Guilde.
 * Les courbes, coefficients et paliers mécaniques de difficulté du Boss.
-* Les paliers de récompense, leur fréquence, leur contenu et leur équilibrage.
+* Les paliers de récompense du Boss, leur fréquence, leur contenu et leur équilibrage.
 * Les récompenses exactes du classement final.
-* La durée exacte de récupération manuelle des récompenses concernées.
+* La durée exacte des récompenses temporelles concernées.
 * Les protections anti-abus détaillées.
-* Le cadrage détaillé des Hauts Faits de Guilde.
+* Le cadrage détaillé des Hauts Faits de Guilde et d’Expédition.
 * Le fonctionnement du système Social / Communication.
-* Le gameplay, la progression, les récompenses, le calendrier, les ressources et le scoring de l’Expédition de Guilde.
+* Le nombre moyen de zones, missions et tâches des Expéditions.
+* Le catalogue concret des mini-mécaniques et le contenu de chaque Expédition.
+* Le nombre de tentatives défini par chaque tâche concrète.
+* Les récompenses exactes des Expéditions et de leur complétion à 100 %.
+* La liste définitive des composants demandables et la limite propre à chacun.
+* Les éventuels garde-fous économiques supplémentaires révélés par les tests.
+* Les détails finaux d’interface et de présentation.
 * Les autres activités de Guilde éventuelles.
 
-Ces paramètres et cadrages incomplets ne doivent pas être interprétés comme des décisions validées. Une deuxième partie de cadrage doit notamment compléter l’Expédition de Guilde et les autres éléments encore ouverts.
+Ces éléments relèvent du balancing, du content design, des futurs référentiels spécialisés ou de la passe globale finale des Game Design Documents. Ils ne remettent pas en cause la clôture fonctionnelle actuelle du système de Guildes.

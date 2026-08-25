@@ -52,6 +52,7 @@ Les responsabilités restent réparties ainsi :
 * le fonctionnement saisonnier de la Tour infinie reste dans [`13-PVE.md`](./13-PVE.md) ;
 * le fonctionnement des saisons compétitives du PvP reste dans [`14-PVP.md`](./14-PVP.md) ;
 * le fonctionnement saisonnier du Boss de Guilde reste dans [`15-GUILDS.md`](./15-GUILDS.md) ;
+* les Expéditions de Guilde restent une progression permanente, sans reset ni chrono saisonnier, selon [`15-GUILDS.md`](./15-GUILDS.md) ;
 * le cadre transversal des objectifs saisonniers de Guilde reste ici, tandis que leur application au contexte des Guildes reste dans [`15-GUILDS.md`](./15-GUILDS.md) ;
 * les futurs Hauts Faits saisonniers resteront dans le futur `19-ACHIEVEMENTS.md`.
 

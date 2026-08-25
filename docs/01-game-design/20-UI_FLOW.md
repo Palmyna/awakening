@@ -16,7 +16,7 @@ Il couvre :
 * l’invocation de créatures ;
 * les quêtes journalières ;
 * les objets, la fabrication et l’inventaire ;
-* les Guildes et le centre de récompenses ;
+* les Guildes, leurs Expéditions, l’entraide entre membres et le centre de récompenses ;
 * les parcours cosmétiques et les services de confort déjà validés.
 
 Il ne fixe aucune architecture finale de navigation, mise en page, quantité d’onglets, grammaire de recherche, palette, typographie ou direction visuelle détaillée.
@@ -69,16 +69,19 @@ Cette exigence ne valide ni un écran d’accueil précis ni une architecture fi
 
 ### 4.1. Centre de récompenses
 
-Un centre de récompenses centralisé regroupe les récompenses soumises à une récupération manuelle selon [`10-PROGRESSION.md`](./10-PROGRESSION.md).
+Un centre de récompenses centralisé regroupe uniquement les récompenses actuellement récupérables selon les règles de disponibilité et d’éligibilité de [`10-PROGRESSION.md`](./10-PROGRESSION.md).
 
 Il doit permettre :
 
 * d’identifier chaque récompense disponible et sa provenance ;
-* d’afficher son délai restant avant expiration ;
+* d’indiquer sa nature temporelle ou permanente ;
+* d’afficher le délai restant lorsqu’elle est temporelle ;
 * de la récupérer simplement ;
 * de récupérer plusieurs récompenses ensemble lorsque cette action est pertinente.
 
 Un badge ou point rouge dans l’interface signale la présence d’au moins une récompense en attente. Le centre peut s’ouvrir automatiquement au lancement d’une session lorsque des récompenses sont disponibles.
+
+Une récompense actuellement non éligible n’apparaît ni en grisé, ni verrouillée, ni inactive. Elle peut réapparaître si ses conditions redeviennent valides. Cette absence reste distincte de l’expiration définitive d’une récompense temporelle.
 
 Ces signaux restent internes au jeu. Aucune notification push ou notification téléphone n’est prévue pour ce système.
 
@@ -480,6 +483,8 @@ Le parcours de Guilde doit permettre de consulter son identité affichée, sa ba
 
 La création et l’administration doivent prendre en charge le nom, le TAG, les invitations, les nominations, les exclusions, le transfert du Chef et les confirmations renforcées de dissolution. Les invitations courantes doivent pouvoir être envoyées depuis une interaction avec un pseudo ou un profil, sans exiger la recopie manuelle du pseudo.
 
+#### 21.5.1. Boss de Guilde
+
 Le parcours du Boss de Guilde doit notamment présenter :
 
 * la Saison et le Boss actuels ;
@@ -492,6 +497,36 @@ Le parcours du Boss de Guilde doit notamment présenter :
 * l’éventuelle action de recalibrage réservée au Chef, avec ses conséquences réelles avant confirmation.
 
 L’interface ne doit jamais représenter ce Boss comme une réserve de PV partagée. Elle n’a pas à afficher toute la précision technique du timestamp serveur utilisé pour départager les Guildes.
+
+#### 21.5.2. Expéditions de Guilde
+
+Le parcours des Expéditions doit permettre :
+
+* de consulter le catalogue complet sans suggérer d’ordre ou de prérequis entre Expéditions ;
+* d’identifier l’Expédition principale active et les anciennes Expéditions encore explorables ;
+* de parcourir plusieurs zones et leurs missions disponibles en parallèle ;
+* de consulter directement le lore, les découvertes et les indices validés dans les zones et missions ;
+* de distinguer missions principales, contenus facultatifs et secrets lorsqu’ils sont révélés ;
+* de connaître la progression vers la fin principale et le pourcentage de complétion totale ;
+* d’identifier les tâches disponibles, réservées ou terminées ;
+* de connaître le nombre de tentatives d’une tâche avant de la sélectionner ;
+* d’identifier sa tâche active et la prochaine possibilité de commencer une nouvelle tâche ;
+* de consulter l’historique durable de la Guilde et l’état personnel des récompenses déjà récupérées ;
+* de permettre au Chef de sélectionner une nouvelle Expédition principale uniquement lorsque la précédente est terminée.
+
+L’interface ne doit pas présenter la contribution quotidienne comme une monnaie stockable, imposer une progression linéaire entre les zones ou suggérer qu’une Expédition terminée peut être réinitialisée pour être farmée.
+
+#### 21.5.3. Demandes de composants
+
+Les demandes de composants utilisent une interface dédiée, distincte du chat de Guilde. Chaque demande doit permettre d’identifier :
+
+* le demandeur ;
+* le composant concerné ;
+* la quantité demandée et la quantité déjà reçue ;
+* son état actif ou complété ;
+* l’action permettant de donner une quantité réellement possédée.
+
+Le parcours doit également indiquer si le membre peut encore publier sa demande quotidienne et la quantité maximale autorisée pour le composant sélectionné, sans présenter le don comme un échange ou une source de récompense.
 
 ## 22. Dépendances
 
@@ -523,6 +558,8 @@ Il dépend également des règles de combat, créatures, Skills, éléments, Eff
 * L’animation de révélation personnelle d’un skin Secret.
 * La présentation commerciale des services de confort.
 * Le layout final du centre de récompenses et les règles exactes de récupération groupée.
+* Le layout final du catalogue, des zones, missions et tâches d’Expédition.
+* L’ergonomie détaillée des demandes et dons de composants.
 
 ## 24. Questions ouvertes
 

@@ -106,7 +106,9 @@ Cette règle s’applique notamment au mode Histoire, aux modes PvE individuels,
 
 Un mode individuel ne crée pas automatiquement une énergie distincte, un ticket, une clé ou une autre ressource d’entrée parallèle. Il peut déroger à la réserve commune uniquement lorsqu’une exception est explicitement justifiée et documentée dans son propre référentiel.
 
-Le Boss de Guilde utilise la réserve générale selon [`15-GUILDS.md`](./15-GUILDS.md). D’autres contenus de guilde, activités communautaires ou systèmes saisonniers pourront définir une régulation particulière lors de leur cadrage. L’existence de cette possibilité ne valide aucune autre exception concrète. Un Event léger réutilise par défaut la régulation du système existant sur lequel il s’appuie.
+Le Boss de Guilde utilise la réserve générale selon [`15-GUILDS.md`](./15-GUILDS.md). Les Expéditions de Guilde constituent une exception locale : elles n’utilisent ni cette énergie, ni une énergie propre, un ticket, une clé ou une monnaie d’entrée ; leur régulation repose sur la contribution quotidienne des membres.
+
+D’autres contenus de guilde, activités communautaires ou systèmes saisonniers pourront définir une régulation particulière lors de leur cadrage. L’existence de cette possibilité ne valide aucune autre exception concrète. Un Event léger réutilise par défaut la régulation du système existant sur lequel il s’appuie.
 
 ## 8. Résultats et récompenses
 
@@ -123,7 +125,7 @@ Sauf exception locale explicitement définie par un mode, une défaite standard 
 
 Un mode fondé sur un score, un objectif partiel ou une participation doit définir explicitement ses propres règles de résultat et de récompense.
 
-Certaines récompenses générées par un palier, un classement, une fin de Saison ou un accomplissement collectif peuvent exiger une récupération manuelle selon la règle transversale de [`10-PROGRESSION.md`](./10-PROGRESSION.md). Cette modalité ne change pas les conditions qui ont généré la récompense.
+Certaines récompenses générées par un palier, un classement, une fin de Saison ou un accomplissement collectif peuvent exiger une récupération manuelle selon [`10-PROGRESSION.md`](./10-PROGRESSION.md). Leur disponibilité temporelle ou permanente et leur éligibilité restent définies indépendamment par le système propriétaire.
 
 Après un combat, un résumé statistique simple des deux équipes doit être accessible. Il reste agrégé par créature plutôt que par Skill et aide le joueur à adapter sa préparation.
 

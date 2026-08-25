@@ -266,6 +266,19 @@ L’inventaire principal accueille notamment :
 
 Les composants de fabrication utilisent un stockage séparé et illimité. Ils ne consomment jamais de place dans l’inventaire principal et restent consultables depuis un espace ou onglet dédié.
 
+### 12.3. Composants demandables en Guilde
+
+Certains composants de fabrication explicitement autorisés peuvent être demandés et donnés entre membres d’une Guilde selon [`15-GUILDS.md`](./15-GUILDS.md).
+
+Cette possibilité ne s’étend pas automatiquement aux autres catégories d’objets. Sont notamment exclus du système :
+
+* les Sources d’énergie, même lorsqu’une recette peut les utiliser comme composant ;
+* les Artefacts et autres équipements complets ;
+* les monnaies générales ou premium ;
+* toute catégorie non explicitement autorisée.
+
+Chaque composant autorisé pour l’entraide possède son propre paramètre de quantité maximale demandable quotidiennement. La liste des composants autorisés et leurs valeurs relèvent du balancing et des données de production.
+
 ## 13. Sacs et capacité d’inventaire
 
 Le compte possède exactement **6 emplacements dédiés aux sacs**.
@@ -336,6 +349,7 @@ Il n’accorde aucun niveau, aucune expérience, aucun point supplémentaire et 
 | [`11-COLLECTION.md`](./11-COLLECTION.md) | Séparation entre collection et inventaire |
 | [`13-PVE.md`](./13-PVE.md) | Sources de loot et de composants propres aux modes PvE |
 | [`14-PVP.md`](./14-PVP.md) | Effets contextuels, loadouts et contraintes d’équité du PvP |
+| [`15-GUILDS.md`](./15-GUILDS.md) | Demandes et dons volontaires de certains composants de fabrication |
 | [`16-SEASONS.md`](./16-SEASONS.md) | Associations saisonnières possibles sans modification automatique des règles d’objet |
 | [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Parcours de gestion, comparaison, fabrication et inventaire |
 | [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Service de confort payant lié aux sacs |
@@ -357,6 +371,7 @@ Le cadrage fonctionnel du système est établi. Restent volontairement ouverts o
 * la formule et les pondérations exactes de l’iLvl ;
 * les tables, taux, quantités et possibilités de farming ciblé du loot ;
 * les composants et recettes concrets, leurs coûts éventuels et leurs règles de découverte ;
+* la liste des composants demandables en Guilde et la limite quotidienne propre à chacun ;
 * les règles exactes de récupération d’un composant lors de la dissolution ;
 * les sets concrets, leurs pièces, seuils, propriétés et effets ;
 * les valeurs de vente des Sources d’énergie et les paramètres de monnaie soft ;

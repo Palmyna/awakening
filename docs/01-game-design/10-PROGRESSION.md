@@ -17,7 +17,7 @@ Il rassemble :
 * la progression du compte et son influence sur les équipements ;
 * les déblocages principalement portés par le mode Histoire ;
 * la réserve générale d’énergie des activités individuelles ;
-* la récupération manuelle de certaines récompenses générées par les systèmes de jeu ;
+* la disponibilité, l’éligibilité et la récupération manuelle de certaines récompenses ;
 * les garde-fous empêchant une progression passive ou payante de puissance.
 
 Il ne fixe pas les courbes, coûts, multiplicateurs, quantités de récompenses ou autres valeurs réservées au balancing.
@@ -232,6 +232,8 @@ La réserve générale :
 
 Chaque activité individuelle définit son coût exact, mais n’introduit pas automatiquement une énergie, un ticket, une clé ou une autre ressource d’entrée parallèle. Une régulation différente reste possible uniquement lorsqu’une exception est explicitement décidée et documentée localement, notamment pour certains contenus de guilde, activités communautaires ou systèmes saisonniers. Un Event léger réutilise par défaut les règles de l’activité existante sur laquelle il s’appuie.
 
+Les Expéditions de Guilde constituent une exception locale documentée dans [`15-GUILDS.md`](./15-GUILDS.md) : elles n’utilisent ni énergie générale, ni énergie propre, ticket, clé ou monnaie d’entrée. Leur rythme repose sur la contribution quotidienne non stockable de chaque membre éligible.
+
 Dans le mode Histoire, l’énergie est consommée à l’entrée d’un niveau. Lors d’une défaite standard, l’énergie utilisée reste normalement consommée. Une activité particulière ou une étape d’onboarding peut définir une exception explicite.
 
 Le système ne comporte aucun objet consommable de récupération d’énergie stocké dans l’inventaire. Lorsqu’une récompense de gameplay accorde de l’énergie, celle-ci est immédiatement ajoutée à la réserve générale du joueur. Les contenus concernés, les quantités et leur fréquence restent à définir et à équilibrer.
@@ -246,7 +248,7 @@ Les créatures ne gagnent automatiquement aucune XP, aucun niveau, aucun point d
 
 La résolution d’une défense PvP hors ligne ne constitue pas une progression passive : elle ne produit ni XP, ni loot, ni récompense directe, ni cote saisonnière. Elle peut uniquement ajuster le MMR compétitif interne selon le référentiel PvP ; ce MMR reste distinct de la progression du compte.
 
-Une récompense générée mais soumise à une récupération manuelle ne constitue pas une progression acquise tant qu’elle n’a pas été réclamée. Son expiration ne crédite rien automatiquement au compte.
+Une récompense générée mais soumise à une récupération manuelle ne constitue pas une progression acquise tant qu’elle n’a pas été réclamée. Si elle est temporelle, son expiration ne crédite rien automatiquement au compte.
 
 Le modèle de lancement interdit la vente directe :
 
@@ -259,7 +261,7 @@ Le modèle de lancement interdit la vente directe :
 
 Les services de confort validés ne modifient pas ce principe.
 
-## 13. Récupération manuelle de certaines récompenses
+## 13. Disponibilité, éligibilité et récupération des récompenses
 
 Certaines récompenses générées par un palier, un classement, une fin de Saison, un accomplissement collectif ou un système comparable peuvent nécessiter une récupération manuelle.
 
@@ -267,13 +269,45 @@ Lorsqu’une récompense utilise cette modalité :
 
 * elle apparaît dans un centre de récompenses centralisé ;
 * elle n’est pas automatiquement créditée au compte ;
-* elle reste disponible pendant une fenêtre limitée ;
-* elle est définitivement perdue si le joueur ne la réclame pas avant l’expiration ;
-* elle ne peut faire l’objet d’aucune récupération rétroactive ou automatique après l’expiration.
+* elle doit être encore disponible ;
+* toutes ses conditions actuelles d’éligibilité doivent être remplies.
 
-La référence actuelle de disponibilité est d’environ **sept jours**. Sa durée exacte reste ajustable pendant le balancing et peut être définie par le système propriétaire lorsque nécessaire.
+### 13.1. Récompense temporelle ou permanente
 
-Cette règle définit une modalité possible de remise des récompenses, pas une obligation universelle. Chaque système doit préciser quelles récompenses sont concernées et quelles conditions les génèrent. Les besoins fonctionnels du centre de récompenses appartiennent à [`20-UI_FLOW.md`](./20-UI_FLOW.md).
+Une récompense **temporelle** possède une fenêtre de récupération. Si elle n’est pas réclamée avant l’expiration :
+
+* elle est définitivement perdue ;
+* elle ne peut faire l’objet d’aucune récupération rétroactive ou automatique.
+
+La référence actuelle d’une fenêtre temporelle, lorsqu’aucune autre durée n’est définie, est d’environ **sept jours**. Sa durée exacte reste ajustable pendant le balancing.
+
+Une récompense **permanente** ne possède aucun délai d’expiration intrinsèque. Elle reste potentiellement récupérable tant que ses autres conditions sont remplies.
+
+La catégorie dépend de la définition de la récompense elle-même, pas automatiquement du mode, d’une Saison, d’un Event, d’un classement ou d’un autre type de source. Un même système peut contenir des récompenses temporelles et permanentes si leurs définitions respectives le prévoient.
+
+### 13.2. Disponibilité et éligibilité
+
+La disponibilité et l’éligibilité constituent deux dimensions distinctes. Une récompense est récupérable uniquement si :
+
+> elle est encore disponible **et** toutes ses conditions actuelles d’éligibilité sont remplies.
+
+Ces conditions peuvent notamment dépendre de l’appartenance actuelle, de l’ancienneté, du statut actif, d’une participation, d’un accomplissement, d’un classement, d’une progression ou d’autres critères définis localement.
+
+Une récompense non éligible n’est pas nécessairement perdue. Elle peut redevenir récupérable si ses conditions sont de nouveau satisfaites, tant qu’elle reste disponible et que le système propriétaire le permet. Cette situation reste distincte de l’expiration définitive d’une récompense temporelle.
+
+Le centre de récompenses affiche uniquement les récompenses actuellement récupérables. Les récompenses non éligibles n’y apparaissent pas comme des entrées grisées, verrouillées ou inactives. Les besoins fonctionnels de ce centre appartiennent à [`20-UI_FLOW.md`](./20-UI_FLOW.md).
+
+### 13.3. Responsabilité du système propriétaire
+
+Chaque système doit préciser :
+
+* quelles récompenses nécessitent une récupération manuelle ;
+* si chacune est temporelle ou permanente ;
+* les conditions qui la génèrent ;
+* ses conditions actuelles d’éligibilité ;
+* sa durée exacte lorsqu’elle est temporelle.
+
+Cette architecture définit une modalité réutilisable de remise des récompenses, pas une obligation universelle de récupération manuelle ou d’expiration.
 
 ## 14. Interactions et dépendances
 
@@ -288,7 +322,7 @@ Cette règle définit une modalité possible de remise des récompenses, pas une
 | [`12-MODES.md`](./12-MODES.md) | Résultats et cadre transversal de l’énergie commune aux activités |
 | [`13-PVE.md`](./13-PVE.md) | Énergie générale et exceptions locales d’XP des activités PvE |
 | [`14-PVP.md`](./14-PVP.md) | Énergie générale, XP de compte en attaque, absence d’XP des créatures et progression compétitive distincte |
-| [`15-GUILDS.md`](./15-GUILDS.md) | Boss de Guilde, énergie générale et récompenses collectives ou saisonnières |
+| [`15-GUILDS.md`](./15-GUILDS.md) | Boss et Expéditions de Guilde, énergie, récompenses collectives et éligibilité locale |
 | [`16-SEASONS.md`](./16-SEASONS.md) | Distinction entre progression durable et progressions explicitement saisonnières |
 | [`17-EVENTS.md`](./17-EVENTS.md) | Petites récompenses temporaires utilisant les systèmes existants |
 | [`18-QUESTS.md`](./18-QUESTS.md) | Objectifs journaliers et récompenses de progression |
@@ -311,4 +345,5 @@ Cette règle définit une modalité possible de remise des récompenses, pas une
 * Les coûts des activités, la capacité éventuelle, la régénération et les règles exactes d’accumulation de l’énergie générale.
 * Les contenus accordant directement de l’énergie ainsi que les quantités et fréquences concernées.
 * Les exceptions locales à la réserve commune qui seront justifiées par le design d’un système particulier.
-* La durée exacte de disponibilité des récompenses soumises à une récupération manuelle.
+* La durée exacte des récompenses temporelles lorsqu’elle n’est pas définie par leur système propriétaire.
+* La définition transversale exacte de compte actif ou membre actif lorsqu’elle devient nécessaire aux conditions d’éligibilité.

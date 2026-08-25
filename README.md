@@ -51,7 +51,7 @@ Ces documents constituent les fondations de référence actuelles du projet. Ils
 * ✅ [`12-MODES.md`](./docs/01-game-design/12-MODES.md) — Rédigé — référence actuelle, à maintenir à jour
 * ✅ [`13-PVE.md`](./docs/01-game-design/13-PVE.md) — Rédigé — référence actuelle, à maintenir à jour
 * ✅ [`14-PVP.md`](./docs/01-game-design/14-PVP.md) — Rédigé — référence actuelle, à maintenir à jour
-* 🚧 [`15-GUILDS.md`](./docs/01-game-design/15-GUILDS.md) — Draft de conception — cadrage en cours
+* ✅ [`15-GUILDS.md`](./docs/01-game-design/15-GUILDS.md) — Rédigé — référence fonctionnelle actuelle, à maintenir à jour
 * 🚧 [`16-SEASONS.md`](./docs/01-game-design/16-SEASONS.md) — Draft de conception — à relire et valider
 * 🚧 [`17-EVENTS.md`](./docs/01-game-design/17-EVENTS.md) — Draft de conception — à relire et valider
 * 🚧 [`18-QUESTS.md`](./docs/01-game-design/18-QUESTS.md) — Draft de conception — à relire et valider
