@@ -16,6 +16,7 @@ Il couvre :
 * l’invocation de créatures ;
 * les quêtes journalières ;
 * les objets, la fabrication et l’inventaire ;
+* les Guildes et le centre de récompenses ;
 * les parcours cosmétiques et les services de confort déjà validés.
 
 Il ne fixe aucune architecture finale de navigation, mise en page, quantité d’onglets, grammaire de recherche, palette, typographie ou direction visuelle détaillée.
@@ -62,9 +63,24 @@ Une session ne suit pas une liste d’actions obligatoire. Le joueur doit pouvoi
 * gérer ses objets ;
 * poursuivre un objectif personnel.
 
-L’interface doit rendre visibles les informations de session qui influencent immédiatement ces choix, notamment la réserve générale d’énergie disponible, les quêtes en cours, les déblocages récents et les récompenses prêtes à être récupérées selon les règles futures de chaque système.
+L’interface doit rendre visibles les informations de session qui influencent immédiatement ces choix, notamment la réserve générale d’énergie disponible, les quêtes en cours, les déblocages récents et les récompenses prêtes à être récupérées.
 
-Cette exigence ne valide ni un écran d’accueil précis ni des badges, onglets ou notifications particuliers.
+Cette exigence ne valide ni un écran d’accueil précis ni une architecture finale de navigation.
+
+### 4.1. Centre de récompenses
+
+Un centre de récompenses centralisé regroupe les récompenses soumises à une récupération manuelle selon [`10-PROGRESSION.md`](./10-PROGRESSION.md).
+
+Il doit permettre :
+
+* d’identifier chaque récompense disponible et sa provenance ;
+* d’afficher son délai restant avant expiration ;
+* de la récupérer simplement ;
+* de récupérer plusieurs récompenses ensemble lorsque cette action est pertinente.
+
+Un badge ou point rouge dans l’interface signale la présence d’au moins une récompense en attente. Le centre peut s’ouvrir automatiquement au lancement d’une session lorsque des récompenses sont disponibles.
+
+Ces signaux restent internes au jeu. Aucune notification push ou notification téléphone n’est prévue pour ce système.
 
 ## 5. Onboarding et déblocages
 
@@ -458,9 +474,28 @@ L’espace saisonnier doit permettre de connaître :
 
 L’historique de la saison courante distingue les attaques lancées des défenses subies. Chaque entrée présente les informations compétitives requises et ouvre le même type de résumé fonctionnel que l’écran final du combat, sans exiger de replay complet.
 
+### 21.5. Guildes
+
+Le parcours de Guilde doit permettre de consulter son identité affichée, sa bannière, sa présentation, ses Hauts Faits, son historique, ses membres, leurs rangs et les permissions pertinentes.
+
+La création et l’administration doivent prendre en charge le nom, le TAG, les invitations, les nominations, les exclusions, le transfert du Chef et les confirmations renforcées de dissolution. Les invitations courantes doivent pouvoir être envoyées depuis une interaction avec un pseudo ou un profil, sans exiger la recopie manuelle du pseudo.
+
+Le parcours du Boss de Guilde doit notamment présenter :
+
+* la Saison et le Boss actuels ;
+* le niveau actuel de la Guilde ;
+* le seuil snapshoté de réussites et la progression collective vers ce seuil ;
+* l’éligibilité du joueur et son statut de réussite pour ce niveau ;
+* le coût d’une tentative en énergie générale ;
+* le classement, le niveau classé et les informations de départage utiles ;
+* les paliers et récompenses pertinentes ;
+* l’éventuelle action de recalibrage réservée au Chef, avec ses conséquences réelles avant confirmation.
+
+L’interface ne doit jamais représenter ce Boss comme une réserve de PV partagée. Elle n’a pas à afficher toute la précision technique du timestamp serveur utilisé pour départager les Guildes.
+
 ## 22. Dépendances
 
-Le présent document traduit les besoins fonctionnels des documents spécialisés, notamment [`09-GACHA.md`](./09-GACHA.md), [`10-PROGRESSION.md`](./10-PROGRESSION.md), [`11-COLLECTION.md`](./11-COLLECTION.md), [`12-MODES.md`](./12-MODES.md), [`13-PVE.md`](./13-PVE.md), [`14-PVP.md`](./14-PVP.md), [`16-SEASONS.md`](./16-SEASONS.md), [`17-EVENTS.md`](./17-EVENTS.md) et [`18-QUESTS.md`](./18-QUESTS.md).
+Le présent document traduit les besoins fonctionnels des documents spécialisés, notamment [`09-GACHA.md`](./09-GACHA.md), [`10-PROGRESSION.md`](./10-PROGRESSION.md), [`11-COLLECTION.md`](./11-COLLECTION.md), [`12-MODES.md`](./12-MODES.md), [`13-PVE.md`](./13-PVE.md), [`14-PVP.md`](./14-PVP.md), [`15-GUILDS.md`](./15-GUILDS.md), [`16-SEASONS.md`](./16-SEASONS.md), [`17-EVENTS.md`](./17-EVENTS.md) et [`18-QUESTS.md`](./18-QUESTS.md).
 
 Il dépend également des règles de combat, créatures, Skills, éléments, Effets de combat, évolutions, objets et monétisation. Une décision d’interface ne peut pas modifier leurs règles fonctionnelles.
 
@@ -487,6 +522,7 @@ Il dépend également des règles de combat, créatures, Skills, éléments, Eff
 * Le wording, le placeholder, la présentation de la rareté et l’affichage éventuel de la créature concernée pour un skin Secret.
 * L’animation de révélation personnelle d’un skin Secret.
 * La présentation commerciale des services de confort.
+* Le layout final du centre de récompenses et les règles exactes de récupération groupée.
 
 ## 24. Questions ouvertes
 

@@ -332,7 +332,14 @@ Le renouvellement doit encourager :
 
 ### 7.7. Classement, historique et prestige
 
-La Tour peut posséder un classement saisonnier principalement consacré à la comparaison, au prestige et à la reconnaissance. L’étage atteint peut constituer son critère principal ; les règles précises de départage restent à cadrer.
+La Tour peut posséder un classement saisonnier principalement consacré à la comparaison, au prestige et à la reconnaissance.
+
+Le classement applique :
+
+1. comme critère principal, l’étage maximal atteint ;
+2. à étage maximal égal, l’instant serveur exact auquel cet étage a été validé.
+
+Le joueur ayant validé cet étage en premier est mieux classé. Le timestamp peut être enregistré avec une précision allant jusqu’à la milliseconde si nécessaire, sans obligation d’afficher cette précision technique complète dans l’interface.
 
 Le classement ne doit pas produire directement une puissance obligatoire.
 

@@ -8,7 +8,7 @@ Ce document constitue le cadre transversal commun à l’ensemble des modes et a
 
 Il distingue le statut de périmètre d’un mode de ses règles détaillées. La présence d’un mode dans une liste de long terme ne valide ni son fonctionnement, ni son ordre de production, ni sa date de disponibilité.
 
-Les règles internes des modes PvE, du PvP, des Saisons, des Events et des futurs systèmes de guilde ou de hauts faits appartiennent à leurs référentiels spécialisés. Le présent document définit leur cadre commun sans les redécrire individuellement.
+Les règles internes des modes PvE, du PvP, des Guildes, des Saisons, des Events et des futurs systèmes de hauts faits appartiennent à leurs référentiels spécialisés. Le présent document définit leur cadre commun sans les redécrire individuellement.
 
 ## 2. Fonction des modes dans l’expérience
 
@@ -106,7 +106,7 @@ Cette règle s’applique notamment au mode Histoire, aux modes PvE individuels,
 
 Un mode individuel ne crée pas automatiquement une énergie distincte, un ticket, une clé ou une autre ressource d’entrée parallèle. Il peut déroger à la réserve commune uniquement lorsqu’une exception est explicitement justifiée et documentée dans son propre référentiel.
 
-Certains contenus de guilde, activités communautaires ou systèmes saisonniers pourront définir une régulation particulière lors de leur cadrage. L’existence de cette possibilité ne valide encore aucune exception concrète. Un Event léger réutilise par défaut la régulation du système existant sur lequel il s’appuie.
+Le Boss de Guilde utilise la réserve générale selon [`15-GUILDS.md`](./15-GUILDS.md). D’autres contenus de guilde, activités communautaires ou systèmes saisonniers pourront définir une régulation particulière lors de leur cadrage. L’existence de cette possibilité ne valide aucune autre exception concrète. Un Event léger réutilise par défaut la régulation du système existant sur lequel il s’appuie.
 
 ## 8. Résultats et récompenses
 
@@ -123,6 +123,8 @@ Sauf exception locale explicitement définie par un mode, une défaite standard 
 
 Un mode fondé sur un score, un objectif partiel ou une participation doit définir explicitement ses propres règles de résultat et de récompense.
 
+Certaines récompenses générées par un palier, un classement, une fin de Saison ou un accomplissement collectif peuvent exiger une récupération manuelle selon la règle transversale de [`10-PROGRESSION.md`](./10-PROGRESSION.md). Cette modalité ne change pas les conditions qui ont généré la récompense.
+
 Après un combat, un résumé statistique simple des deux équipes doit être accessible. Il reste agrégé par créature plutôt que par Skill et aide le joueur à adapter sa préparation.
 
 ## 9. Articulation avec les référentiels spécialisés
@@ -131,7 +133,7 @@ Les règles propres à chaque domaine sont réparties ainsi :
 
 * [`13-PVE.md`](./13-PVE.md) rassemble le mode Histoire et les autres directions PvE ne disposant pas de leur propre référentiel ;
 * [`14-PVP.md`](./14-PVP.md) porte les contraintes et décisions propres au PvP ;
-* le futur `15-GUILDS.md` portera les fonctions de guilde lorsqu’un cadrage suffisant permettra sa création ;
+* [`15-GUILDS.md`](./15-GUILDS.md) porte la structure, les fonctions et les activités de guilde ;
 * [`16-SEASONS.md`](./16-SEASONS.md) porte le cadre transversal des Saisons sans récupérer les règles internes des modes saisonniers ;
 * [`17-EVENTS.md`](./17-EVENTS.md) porte les petites animations temporaires utilisant principalement les systèmes existants ;
 * [`18-QUESTS.md`](./18-QUESTS.md) porte les objectifs journaliers ;
@@ -149,6 +151,7 @@ Un référentiel spécialisé hérite des contrats du présent document. Il déc
 | [`10-PROGRESSION.md`](./10-PROGRESSION.md) | XP, compte, énergie et résultats |
 | [`13-PVE.md`](./13-PVE.md) | Modes PvE et exceptions locales au cadre transversal |
 | [`14-PVP.md`](./14-PVP.md) | Contraintes et décisions propres au PvP |
+| [`15-GUILDS.md`](./15-GUILDS.md) | Structure, fonctions et activités de guilde |
 | [`16-SEASONS.md`](./16-SEASONS.md) | Cadre transversal et progression saisonnière |
 | [`17-EVENTS.md`](./17-EVENTS.md) | Animations temporaires légères utilisant les activités existantes |
 | [`18-QUESTS.md`](./18-QUESTS.md) | Objectifs journaliers liés aux fonctionnalités débloquées |

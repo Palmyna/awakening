@@ -18,9 +18,9 @@ Une Saison peut notamment :
 * renouveler des compétitions saisonnières ;
 * influencer le PvP ;
 * influencer des modes PvE compétitifs ;
-* influencer de futures activités compétitives de guilde ;
+* influencer des activités compétitives de guilde ;
 * proposer des objectifs saisonniers individuels ;
-* proposer de futurs objectifs saisonniers de guilde ;
+* proposer des objectifs saisonniers de guilde ;
 * proposer de futurs Hauts Faits saisonniers ;
 * être associée à certains contenus, équipements, sets, objets, skins ou autres récompenses ;
 * porter éventuellement une dimension narrative ou visuelle commune.
@@ -38,7 +38,8 @@ Une nouvelle Saison peut en revanche réinitialiser une progression, un classeme
 Les réinitialisations déjà validées restent locales aux modes concernés :
 
 * la Tour infinie peut réinitialiser sa progression active et son classement selon [`13-PVE.md`](./13-PVE.md) ;
-* le PvP conserve son MMR mais réinitialise sa cote saisonnière selon [`14-PVP.md`](./14-PVP.md).
+* le PvP conserve son MMR mais réinitialise sa cote saisonnière selon [`14-PVP.md`](./14-PVP.md) ;
+* le Boss de Guilde réinitialise sa progression compétitive selon [`15-GUILDS.md`](./15-GUILDS.md).
 
 Ces exemples n’établissent aucune règle universelle de reset pour les futurs systèmes saisonniers.
 
@@ -50,14 +51,15 @@ Les responsabilités restent réparties ainsi :
 
 * le fonctionnement saisonnier de la Tour infinie reste dans [`13-PVE.md`](./13-PVE.md) ;
 * le fonctionnement des saisons compétitives du PvP reste dans [`14-PVP.md`](./14-PVP.md) ;
-* les futures règles saisonnières de guilde resteront dans le futur `15-GUILDS.md` ;
+* le fonctionnement saisonnier du Boss de Guilde reste dans [`15-GUILDS.md`](./15-GUILDS.md) ;
+* le cadre transversal des objectifs saisonniers de Guilde reste ici, tandis que leur application au contexte des Guildes reste dans [`15-GUILDS.md`](./15-GUILDS.md) ;
 * les futurs Hauts Faits saisonniers resteront dans le futur `19-ACHIEVEMENTS.md`.
 
 Le présent document devra définir uniquement les règles réellement transversales lorsque celles-ci seront cadrées.
 
 ## 5. Objectifs, contenus et récompenses associés
 
-Une Saison peut servir de cadre à des objectifs individuels, à de futurs objectifs de guilde ou à de futurs Hauts Faits. Leur structure, leurs conditions, leur progression et leurs récompenses ne sont pas encore définies.
+Une Saison peut servir de cadre à des objectifs individuels, à des objectifs de guilde ou à de futurs Hauts Faits. Leur structure, leurs conditions, leur progression et leurs récompenses ne sont pas encore définies.
 
 Une association saisonnière avec un équipement, un set, un objet, un skin, un contenu ou une récompense ne modifie pas automatiquement :
 
@@ -102,6 +104,7 @@ La présence d’une trame saisonnière ne valide aucune cadence de production, 
 | [`12-MODES.md`](./12-MODES.md) | Frontière entre cadre transversal et règles des modes |
 | [`13-PVE.md`](./13-PVE.md) | Saisons et progression propres à la Tour infinie |
 | [`14-PVP.md`](./14-PVP.md) | Saisons compétitives, cote et classement du PvP |
+| [`15-GUILDS.md`](./15-GUILDS.md) | Boss de Guilde saisonnier et application des objectifs au contexte des Guildes |
 | [`17-EVENTS.md`](./17-EVENTS.md) | Animations temporaires légères distinctes des Saisons |
 | [`18-QUESTS.md`](./18-QUESTS.md) | Quêtes journalières distinctes des futurs objectifs saisonniers |
 | [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Besoins fonctionnels de présentation et de navigation |

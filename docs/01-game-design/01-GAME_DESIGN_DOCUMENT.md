@@ -1103,12 +1103,13 @@ Le GDD dépend des documents spécialisés suivants pour les détails :
 * [`12-MODES.md`](./12-MODES.md) — contrats communs et statuts des modes ;
 * [`13-PVE.md`](./13-PVE.md) — mode Histoire, Boss personnels, World Boss, Tour infinie et autres modes PvE sans référentiel propre ;
 * [`14-PVP.md`](./14-PVP.md) — format asynchrone, matchmaking, saisons et classement du PvP ;
-* `15-GUILDS.md` — fonctions de guilde, lorsqu’un cadrage suffisant permettra sa création ;
+* [`15-GUILDS.md`](./15-GUILDS.md) — structure, fonctions et activités de guilde ;
 * [`16-SEASONS.md`](./16-SEASONS.md) — trame transversale, progression durable et systèmes saisonniers ;
 * [`17-EVENTS.md`](./17-EVENTS.md) — animations temporaires légères utilisant les systèmes existants ;
 * [`18-QUESTS.md`](./18-QUESTS.md) — quêtes journalières ;
 * `19-ACHIEVEMENTS.md` — hauts faits, lorsqu’un cadrage suffisant permettra sa création ;
 * [`20-UI_FLOW.md`](./20-UI_FLOW.md) — écrans, navigation, tutoriels et parcours ;
+* `21-SOCIAL_AND_COMMUNICATION.md` — fonctions sociales et de communication, document prévu mais non cadré et non créé ;
 * [`01-ART_DIRECTION.md`](../03-art/01-ART_DIRECTION.md) à [`06-ANIMATIONS.md`](../03-art/06-ANIMATIONS.md) — direction artistique, représentation des créatures, cartes, UI, VFX et animations ;
 * [`01-ARCHITECTURE.md`](../04-technical/01-ARCHITECTURE.md) — moteur retenu, séparation technique entre simulation et représentation et principes de reproductibilité.
 

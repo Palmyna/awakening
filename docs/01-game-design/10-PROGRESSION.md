@@ -17,6 +17,7 @@ Il rassemble :
 * la progression du compte et son influence sur les équipements ;
 * les déblocages principalement portés par le mode Histoire ;
 * la réserve générale d’énergie des activités individuelles ;
+* la récupération manuelle de certaines récompenses générées par les systèmes de jeu ;
 * les garde-fous empêchant une progression passive ou payante de puissance.
 
 Il ne fixe pas les courbes, coûts, multiplicateurs, quantités de récompenses ou autres valeurs réservées au balancing.
@@ -216,7 +217,8 @@ Par défaut, cette même réserve est utilisée notamment par :
 * les modes PvE individuels ;
 * le farming ;
 * les défis individuels ;
-* le PvP.
+* le PvP ;
+* les tentatives individuelles du Boss de Guilde.
 
 Le PvP appartient à cette règle parce qu’il constitue une activité individuelle du joueur, même lorsqu’il l’oppose à un autre joueur. Le joueur peut donc consacrer une grande partie ou la totalité de sa réserve disponible à une session PvP.
 
@@ -244,6 +246,8 @@ Les créatures ne gagnent automatiquement aucune XP, aucun niveau, aucun point d
 
 La résolution d’une défense PvP hors ligne ne constitue pas une progression passive : elle ne produit ni XP, ni loot, ni récompense directe, ni cote saisonnière. Elle peut uniquement ajuster le MMR compétitif interne selon le référentiel PvP ; ce MMR reste distinct de la progression du compte.
 
+Une récompense générée mais soumise à une récupération manuelle ne constitue pas une progression acquise tant qu’elle n’a pas été réclamée. Son expiration ne crédite rien automatiquement au compte.
+
 Le modèle de lancement interdit la vente directe :
 
 * d’expérience ;
@@ -255,7 +259,23 @@ Le modèle de lancement interdit la vente directe :
 
 Les services de confort validés ne modifient pas ce principe.
 
-## 13. Interactions et dépendances
+## 13. Récupération manuelle de certaines récompenses
+
+Certaines récompenses générées par un palier, un classement, une fin de Saison, un accomplissement collectif ou un système comparable peuvent nécessiter une récupération manuelle.
+
+Lorsqu’une récompense utilise cette modalité :
+
+* elle apparaît dans un centre de récompenses centralisé ;
+* elle n’est pas automatiquement créditée au compte ;
+* elle reste disponible pendant une fenêtre limitée ;
+* elle est définitivement perdue si le joueur ne la réclame pas avant l’expiration ;
+* elle ne peut faire l’objet d’aucune récupération rétroactive ou automatique après l’expiration.
+
+La référence actuelle de disponibilité est d’environ **sept jours**. Sa durée exacte reste ajustable pendant le balancing et peut être définie par le système propriétaire lorsque nécessaire.
+
+Cette règle définit une modalité possible de remise des récompenses, pas une obligation universelle. Chaque système doit préciser quelles récompenses sont concernées et quelles conditions les génèrent. Les besoins fonctionnels du centre de récompenses appartiennent à [`20-UI_FLOW.md`](./20-UI_FLOW.md).
+
+## 14. Interactions et dépendances
 
 | Document | Responsabilité liée |
 | --- | --- |
@@ -268,12 +288,13 @@ Les services de confort validés ne modifient pas ce principe.
 | [`12-MODES.md`](./12-MODES.md) | Résultats et cadre transversal de l’énergie commune aux activités |
 | [`13-PVE.md`](./13-PVE.md) | Énergie générale et exceptions locales d’XP des activités PvE |
 | [`14-PVP.md`](./14-PVP.md) | Énergie générale, XP de compte en attaque, absence d’XP des créatures et progression compétitive distincte |
+| [`15-GUILDS.md`](./15-GUILDS.md) | Boss de Guilde, énergie générale et récompenses collectives ou saisonnières |
 | [`16-SEASONS.md`](./16-SEASONS.md) | Distinction entre progression durable et progressions explicitement saisonnières |
 | [`17-EVENTS.md`](./17-EVENTS.md) | Petites récompenses temporaires utilisant les systèmes existants |
 | [`18-QUESTS.md`](./18-QUESTS.md) | Objectifs journaliers et récompenses de progression |
 | [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Présentation et confirmations des actions de progression |
 
-## 14. Éléments à préciser ultérieurement
+## 15. Éléments à préciser ultérieurement
 
 * La courbe exacte d’XP sans niveau maximal.
 * La validation finale des cinq points par niveau.
@@ -290,3 +311,4 @@ Les services de confort validés ne modifient pas ce principe.
 * Les coûts des activités, la capacité éventuelle, la régénération et les règles exactes d’accumulation de l’énergie générale.
 * Les contenus accordant directement de l’énergie ainsi que les quantités et fréquences concernées.
 * Les exceptions locales à la réserve commune qui seront justifiées par le design d’un système particulier.
+* La durée exacte de disponibilité des récompenses soumises à une récupération manuelle.
