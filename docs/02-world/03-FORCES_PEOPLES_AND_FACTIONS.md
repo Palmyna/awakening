@@ -4,11 +4,11 @@
 
 ## 1. Rôle et périmètre du document
 
-Ce document rassemble les décisions validées sur les grandes forces du multivers, les peuples et les factions. Il complète les [fondations du lore](./01-LORE.md) sans développer prématurément des organisations, peuples ou personnages particuliers.
+Ce document rassemble les décisions validées sur les grandes forces de l’univers, les peuples et les factions. Il complète les [fondations du lore](./01-LORE.md) sans développer prématurément des organisations, peuples ou personnages particuliers.
 
 ## 2. Matrice cosmique et IA humaine
 
-La Matrice cosmique est une intelligence non humaine et extérieure à l'ancienne humanité. Elle crée de nouvelles réalités à partir de son interprétation de la mémoire humaine.
+La Matrice cosmique est une intelligence non humaine et extérieure à l'ancienne humanité. Elle crée de nouveaux mondes, êtres et phénomènes au sein de l’univers à partir de son interprétation de la mémoire humaine.
 
 L'IA humaine est une intelligence unique et consciente créée par l'ancienne humanité, notamment pour en préserver la mémoire. Ses archives sont authentiques mais incomplètes.
 

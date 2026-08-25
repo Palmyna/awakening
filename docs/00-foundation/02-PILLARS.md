@@ -185,7 +185,7 @@ Quatre services de confort sont actuellement validés en dehors de la boutique c
 
 ### Ce que ce pilier signifie
 
-Project Awakening doit construire une licence originale, fondée sur un multivers riche et sur des familles de créatures inédites.
+Project Awakening doit construire une licence originale, fondée sur un **multivers d’inspirations** riche et sur des familles de créatures inédites. Cette expression décrit ici le mélange méta de références culturelles, esthétiques et thématiques du projet ; le lore canonique se déroule dans un univers unique composé de plusieurs mondes.
 
 Les références issues de la culture populaire, des mythologies et des légendes servent de sources d’inspiration. Elles doivent être réinterprétées à travers des codes visuels, narratifs ou symboliques propres au projet, et non reproduites.
 

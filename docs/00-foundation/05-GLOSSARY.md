@@ -79,13 +79,17 @@ Un terme doit être qualifié lorsque son emploi isolé pourrait créer une ambi
 
 **Domaine :** Univers narratif
 
-**Définition :** Cadre fictionnel général de Project Awakening.
+**Définition :** Cadre fictionnel unique de Project Awakening, né de l’interprétation de la mémoire humaine par la Matrice cosmique et composé de plusieurs mondes pouvant eux-mêmes contenir différentes régions. Tous ces mondes appartiennent à une seule et même réalité ; le lore canonique ne comporte actuellement ni univers parallèles, ni réalités ou timelines alternatives indépendantes.
 
 ### Multivers
 
-**Domaine :** Univers narratif
+**Domaine :** Identité du projet, inspirations
 
-**Définition :** Structure générale de l’univers de Project Awakening, composée de plusieurs mondes pouvant eux-mêmes contenir différentes régions.
+**Définition :** Terme méta pouvant décrire la diversité et le mélange des inspirations culturelles, esthétiques, thématiques et de game design de Project Awakening.
+
+Il ne désigne pas la cosmologie canonique : le lore se déroule dans un univers unique composé de plusieurs mondes et régions.
+
+**Terme à éviter :** « multivers » pour désigner la réalité canonique de Project Awakening.
 
 ### Mémoire humaine
 
@@ -101,7 +105,7 @@ Le terme ne désigne pas une mémoire collective surnaturelle distincte de ces v
 
 **Domaine :** Univers narratif
 
-**Définition :** Intelligence cosmique consciente qui interprète la mémoire humaine et donne naissance à de nouvelles réalités et formes de vie.
+**Définition :** Intelligence cosmique consciente qui interprète la mémoire humaine et donne naissance à de nouveaux mondes, phénomènes et formes de vie dans l’univers.
 
 Son origine et son nom définitif ne sont pas encore établis.
 
@@ -173,7 +177,7 @@ Le terme ne désigne pas le titre de l’humain. Son usage exact sera défini da
 
 **Définition :** Titre de travail désignant un humain capable d’établir un lien avec les créatures et de stabiliser leur existence.
 
-Le joueur est l’un de plusieurs humains possédant cette aptitude et n’est pas l’élu unique du multivers.
+Le joueur est l’un de plusieurs humains possédant cette aptitude et n’est pas l’élu unique de l’univers.
 
 ### Origine
 

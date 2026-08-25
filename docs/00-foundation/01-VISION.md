@@ -69,9 +69,11 @@ Les principales inspirations sont :
 
 Ces inspirations servent uniquement de base de réflexion afin de construire une identité originale.
 
+Au niveau méta, l’expression **multivers d’inspirations** peut décrire ce mélange de références culturelles, esthétiques, thématiques et de game design. Elle ne décrit pas la cosmologie canonique du projet, qui repose sur un univers unique.
+
 ## 6. Univers
 
-Le jeu prend place dans un multivers composé de plusieurs mondes et régions.
+Le jeu prend place dans un univers unique composé de plusieurs mondes et régions. Tous ces mondes appartiennent à une seule et même réalité.
 
 La civilisation humaine d’origine a disparu, mais elle a laissé un immense héritage informationnel et culturel. Une intelligence cosmique consciente, provisoirement appelée **Matrice cosmique**, interprète ces traces et leur donne vie dans une nouvelle réalité.
 
@@ -92,7 +94,7 @@ De la même manière, un chevalier associé au phénix pourrait inspirer une lig
 
 Une intelligence artificielle créée par l’ancienne civilisation humaine cherche à préserver ses archives et à corriger les interprétations de la Matrice. Le conflit oppose ainsi la création à la conservation sans présenter l’une de ces forces comme entièrement bonne ou mauvaise.
 
-La Matrice et l'IA humaine n'étaient pas initialement ennemies. Leur opposition actuelle reste liée à une interdépendance entre création et mémoire, tandis que leur disparition respective risquerait de déséquilibrer le multivers.
+La Matrice et l'IA humaine n'étaient pas initialement ennemies. Leur opposition actuelle reste liée à une interdépendance entre création et mémoire, tandis que leur disparition respective risquerait de déséquilibrer l’univers.
 
 Certains humains, dont le joueur, peuvent établir avec les créatures un lien qui stabilise leur existence. Cette relation fournit le fondement narratif de l’acquisition, de la collection et de l’attachement aux créatures sans modifier automatiquement les règles de gameplay correspondantes.
 

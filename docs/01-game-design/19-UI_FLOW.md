@@ -125,7 +125,7 @@ Le parcours doit distinguer :
 
 La puissance d’équipe peut être présentée comme indication de difficulté sans constituer un verrou systématique.
 
-La hiérarchie exacte entre multivers, mondes, régions et niveaux dans la navigation reste à définir. Les régions appartiennent au cadre narratif et ne doivent pas être inventées comme couche d’interface obligatoire lorsque le contenu ne les utilise pas.
+La hiérarchie narrative est `Univers → Mondes → Régions → Niveaux / activités`. Sa représentation exacte dans la navigation reste à définir. Les régions appartiennent au cadre narratif et ne doivent pas être inventées comme couche d’interface obligatoire lorsque le contenu ne les utilise pas.
 
 ## 8. Équipes enregistrées et préparation
 

@@ -101,7 +101,7 @@ Le joueur possède un rôle fictionnel légèrement défini. Il fait partie des 
 
 Le nom provisoire de ce rôle est **Éveilleur**. Ce nom ne constitue pas encore un terme définitif de l’univers.
 
-Le joueur n’est ni le seul humain possédant cette aptitude ni l’élu unique du multivers. Le maintien de l’équilibre entre les forces décrites par le lore constitue une direction narrative et ne valide aucun système de choix moraux, d’embranchements ou de fins multiples.
+Le joueur n’est ni le seul humain possédant cette aptitude ni l’élu unique de l’univers. Le maintien de l’équilibre entre les forces décrites par le lore constitue une direction narrative et ne valide aucun système de choix moraux, d’embranchements ou de fins multiples.
 
 Il choisit personnellement d'agir comme protecteur et de protéger les autres sans appartenir obligatoirement à une faction. Le titre provisoire d'Éveilleur décrit une aptitude, pas un camp ou une supériorité morale.
 

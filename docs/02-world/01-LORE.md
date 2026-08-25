@@ -9,7 +9,7 @@ Ce document définit les fondations narratives de **Project Awakening**.
 Il précise :
 
 * l’héritage laissé par la civilisation humaine d’origine ;
-* la naissance et la structure générale du multivers ;
+* la naissance et la structure générale de l’univers ;
 * l’origine générale des créatures ;
 * les principales forces du conflit ;
 * la place des humains et le rôle narratif du joueur ;
@@ -44,7 +44,7 @@ La civilisation humaine d’origine a disparu.
 
 Une intelligence artificielle créée par la civilisation humaine d’origine a survécu à sa disparition.
 
-Cette disparition ne permet pas de conclure que toute l’espèce humaine a définitivement cessé d’exister. Des humains sont présents dans le nouveau multivers, mais leur origine exacte n’est pas encore établie.
+Cette disparition ne permet pas de conclure que toute l’espèce humaine a définitivement cessé d’exister. Des humains sont présents dans le nouvel univers, mais leur origine exacte n’est pas encore établie.
 
 L’hypothèse selon laquelle ces humains pourraient eux-mêmes provenir d’une création, d’une interprétation ou d’un écho de la Matrice peut exister dans le monde. Elle ne constitue pas une vérité validée. La question de leur véritable nature doit rester un mystère narratif.
 
@@ -67,9 +67,9 @@ Ce corpus n’est pas nécessairement accessible dans son intégralité. De nouv
 **Questions ouvertes :**
 
 * La cause de la disparition de la civilisation humaine d’origine.
-* L’origine exacte des humains présents dans le nouveau multivers.
+* L’origine exacte des humains présents dans le nouvel univers.
 
-## 3. La Matrice et la naissance du multivers
+## 3. La Matrice et la naissance de l’univers
 
 ### 3.1. La Matrice cosmique
 
@@ -85,11 +85,11 @@ Elle interprète, mélange et transforme cet héritage. Ses premières transform
 
 Les interprétations de la Matrice donnent naissance à une véritable nouvelle réalité, et non à une simple simulation informatique.
 
-Le cadre général de Project Awakening est un **multivers** composé de plusieurs mondes. Chaque monde peut contenir différentes régions.
+Le cadre général de Project Awakening est un **univers unique** composé de plusieurs mondes. Chaque monde peut contenir différentes régions, et tous appartiennent à une seule et même réalité. Il n’existe actuellement aucune notion canonique d’univers parallèles, de réalités ou timelines alternatives indépendantes, de variantes parallèles d’un même monde ou de voyage entre plusieurs univers distincts.
 
 La hiérarchie générale est :
 
-> Multivers → Mondes → Régions → Niveaux / activités
+> Univers → Mondes → Régions → Niveaux / activités
 
 Les mondes et les régions appartiennent à la structure narrative. Les niveaux et activités sont des unités fonctionnelles du jeu qui se déroulent dans ces espaces sans devoir être représentés comme une couche narrative supplémentaire dans l’interface.
 
@@ -133,9 +133,9 @@ Plusieurs individus ou manifestations liés à une même famille de créatures o
 
 Au début de cette période, ni la Matrice ni l’IA ne reconnaissent nécessairement pleinement la conscience des premières créations. Leur individualité devient progressivement impossible à ignorer.
 
-## 5. Les humains du nouveau multivers
+## 5. Les humains du nouvel univers
 
-Des humains existent dans le nouveau multivers, mais leur origine exacte reste inconnue.
+Des humains existent dans le nouvel univers, mais leur origine exacte reste inconnue.
 
 Ils ne forment pas un bloc idéologique unique. Des humains peuvent soutenir la Matrice, l'IA humaine, une autre force ou leurs propres intérêts. Le fait d'être humain ne détermine donc ni un camp ni une fonction narrative.
 
@@ -195,9 +195,9 @@ Aucune de ces forces n’est entièrement bonne ou mauvaise.
 
 Elles sont réellement ennemies, mais restent interdépendantes. La création sans mémoire ni référence risque de devenir instable ; la conservation sans création conduit à un monde figé. La disparition totale de l’une ou de l’autre pourrait provoquer un grave déséquilibre.
 
-Une domination totale de la Matrice risquerait de produire un multivers instable dans lequel la mémoire humaine serait progressivement remplacée par des créations incontrôlées.
+Une domination totale de la Matrice risquerait de produire un univers instable dans lequel la mémoire humaine serait progressivement remplacée par des créations incontrôlées.
 
-Une domination totale de l’IA humaine figerait le multivers selon des archives incomplètes et menacerait les nouvelles formes de vie nées des interprétations de la Matrice.
+Une domination totale de l’IA humaine figerait l’univers selon des archives incomplètes et menacerait les nouvelles formes de vie nées des interprétations de la Matrice.
 
 Au début du récit, la Matrice peut apparaître comme une alliée créatrice et l’IA humaine comme la principale force antagoniste. Les dangers représentés par les deux extrêmes doivent être révélés progressivement.
 
@@ -223,7 +223,7 @@ Elles peuvent voyager entre les régions et les mondes, migrer, former des commu
 
 ### 8.2. L’Éveilleur et le rôle du joueur
 
-Le joueur incarne l’un des humains capables de créer un lien avec les créatures. Il n’est ni le seul à posséder cette aptitude ni l’élu unique du multivers.
+Le joueur incarne l’un des humains capables de créer un lien avec les créatures. Il n’est ni le seul à posséder cette aptitude ni l’élu unique de l’univers.
 
 Le nom provisoire de ce rôle reste **Éveilleur**.
 
@@ -237,15 +237,15 @@ Le joueur peut être amené à s’opposer aux conséquences ou à certaines cr�
 
 **Éléments à préciser ultérieurement :**
 
-* L’origine des humains du nouveau multivers.
+* L’origine des humains du nouvel univers.
 * La nature exacte et le vocabulaire définitif de l’Ancrage.
 * La manière dont le lien est établi, altéré ou rompu dans le récit.
 * Les relations concrètes que le joueur pourra établir avec les peuples, organisations ou factions rencontrés.
 * Le titre définitif du rôle provisoirement appelé Éveilleur.
 
-## 9. Fondations transversales du multivers et des créatures
+## 9. Fondations transversales de l’univers et des créatures
 
-### 9.1. Un multivers en renouvellement
+### 9.1. Un univers en renouvellement
 
 La Matrice continue d’accéder à de nouvelles portions de l’immense corpus humain.
 
@@ -260,7 +260,7 @@ Ses nouvelles interprétations peuvent notamment produire :
 * des anomalies ;
 * des objets et des matériaux.
 
-Le multivers n’est donc pas une création achevée une fois pour toutes. Il peut continuer à évoluer tant que les nouveaux contenus respectent ses fondations narratives.
+L’univers n’est donc pas une création achevée une fois pour toutes. Il peut continuer à évoluer tant que les nouveaux contenus respectent ses fondations narratives.
 
 **Éléments à préciser ultérieurement :**
 
@@ -351,9 +351,9 @@ Le vocabulaire narratif définitif de ce processus sera établi dans [`02-CREATU
 
 ### 10.3. Artefacts et Sources d'énergie
 
-Les objets du nouveau multivers peuvent provenir de multiples origines : humains actuels, peuples ou créatures, créations de la Matrice, matériaux et phénomènes naturels, technologies de l'IA, Correcteurs ou vestiges authentiques de l'ancienne humanité. Un vestige ancien n'est pas automatiquement plus puissant qu'un objet récent.
+Les objets du nouvel univers peuvent provenir de multiples origines : humains actuels, peuples ou créatures, créations de la Matrice, matériaux et phénomènes naturels, technologies de l'IA, Correcteurs ou vestiges authentiques de l'ancienne humanité. Un vestige ancien n'est pas automatiquement plus puissant qu'un objet récent.
 
-Les deux catégories d'équipement sont les **Artefacts** et les **Sources d'énergie**. Les Artefacts sont principalement fabriqués à partir de composants. Les Sources d'énergie sont des concentrations stabilisées de différentes énergies du multivers ; elles peuvent être liées aux créatures, aux environnements, à des phénomènes, aux créations de la Matrice ou aux systèmes de l'IA, et être obtenues directement au cours des combats et activités.
+Les deux catégories d'équipement sont les **Artefacts** et les **Sources d'énergie**. Les Artefacts sont principalement fabriqués à partir de composants. Les Sources d'énergie sont des concentrations stabilisées de différentes énergies de l’univers ; elles peuvent être liées aux créatures, aux environnements, à des phénomènes, aux créations de la Matrice ou aux systèmes de l'IA, et être obtenues directement au cours des combats et activités.
 
 Selon l'objet, l'équiper peut signifier le porter, l'utiliser, l'associer à la créature, entrer en résonance avec lui ou bénéficier de ses propriétés. Cette souplesse narrative n'impose jamais de le faire apparaître sur l'illustration de la créature.
 
@@ -402,7 +402,7 @@ Chaque famille de créatures doit respecter les règles du lore et posséder une
 
 Les nouveaux mondes, les nouvelles régions et les événements importants doivent recevoir une justification narrative explicite.
 
-Les saisons constituent avant tout une structure éditoriale et de contenu. Elles peuvent correspondre à des événements canoniques sans devoir être perçues comme des « saisons » par les habitants du multivers.
+Les saisons constituent avant tout une structure éditoriale et de contenu. Elles peuvent correspondre à des événements canoniques sans devoir être perçues comme des « saisons » par les habitants de l’univers.
 
 Une région événementielle peut rester dans le canon, devenir inaccessible, être transformée ou exceptionnellement disparaître lorsque le récit le justifie. Aucune règle universelle ne lui impose de disparaître.
 
@@ -436,7 +436,7 @@ Les informations spécialisées sont réparties de la manière suivante :
 
 ### `01-LORE.md`
 
-* fondations du multivers ;
+* fondations de l’univers ;
 * mémoire humaine ;
 * origine générale des créatures ;
 * conflit central ;
@@ -471,7 +471,7 @@ Les informations spécialisées sont réparties de la manière suivante :
 
 * disparition de la civilisation humaine d’origine ;
 * découverte progressive des archives ;
-* naissance du multivers ;
+* naissance de l’univers ;
 * survie de l’IA humaine ;
 * arrivée ou réveil des humains actuels ;
 * événements majeurs de la campagne.

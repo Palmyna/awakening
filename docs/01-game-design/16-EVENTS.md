@@ -93,7 +93,7 @@ Certaines récompenses commémoratives ou événementielles peuvent exceptionnel
 
 ## 8. Saisons et canon narratif
 
-Les saisons constituent avant tout une structure éditoriale et de contenu. Elles peuvent correspondre à des événements canoniques sans devoir être perçues comme des « saisons » par les habitants du multivers.
+Les saisons constituent avant tout une structure éditoriale et de contenu. Elles peuvent correspondre à des événements canoniques sans devoir être perçues comme des « saisons » par les habitants de l’univers.
 
 Les nouveaux mondes, régions et événements importants doivent recevoir une justification narrative explicite.
 
