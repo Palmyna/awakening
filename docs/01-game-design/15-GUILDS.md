@@ -211,9 +211,16 @@ Les Hauts Faits de Guilde représentent l’histoire permanente et le prestige d
 
 Leur structure détaillée et leurs récompenses éventuelles appartiendront au futur `19-ACHIEVEMENTS.md`. Le présent document ne valide aucune liste exhaustive ni aucune récompense précise.
 
-### 10.2. Objectifs saisonniers de Guilde
+### 10.2. Quêtes saisonnières de Guilde
 
-Une Saison peut proposer des objectifs propres aux Guildes. Le cadre transversal, la structure et les règles communes de ces objectifs appartiennent à [`16-SEASONS.md`](./16-SEASONS.md). Le présent document devra seulement définir leur application au contexte des Guildes lorsque celle-ci sera cadrée.
+Une Saison peut proposer des quêtes saisonnières collectives propres aux Guildes. Elles :
+
+* restent disponibles pendant la Saison concernée ;
+* sont légères, accessibles et non contraignantes ;
+* ne constituent ni une rotation hebdomadaire, ni une checklist permanente ;
+* ne recréent pas un système général de quêtes quotidiennes ou hebdomadaires de Guilde.
+
+Leur cadre saisonnier commun appartient à [`16-SEASONS.md`](./16-SEASONS.md) et leur fonctionnement comme quêtes à [`18-QUESTS.md`](./18-QUESTS.md). Les objectifs et récompenses concrets relèvent du content design.
 
 ### 10.3. Boss de Guilde
 
@@ -229,7 +236,7 @@ Les Guildes proposent un mécanisme simple d’entraide permettant aux membres �
 
 ### 10.6. Absence de quêtes hebdomadaires dédiées
 
-Un système distinct de quêtes hebdomadaires de Guilde n’est pas retenu actuellement. Les Hauts Faits, objectifs saisonniers et véritables activités de Guilde doivent structurer l’activité collective sans ajouter artificiellement une nouvelle checklist régulière.
+Un système distinct de quêtes hebdomadaires de Guilde n’est pas retenu actuellement. Les Hauts Faits, quêtes saisonnières et véritables activités de Guilde doivent structurer l’activité collective sans ajouter artificiellement une nouvelle checklist régulière.
 
 ## 11. Boss de Guilde — identité et combat
 
@@ -248,9 +255,13 @@ Aucune normalisation spécifique n’est actuellement appliquée. Le joueur util
 
 ## 12. Saison, progression et équité entre Guildes
 
-Chaque Saison possède un Boss de Guilde saisonnier. Pendant cette Saison, son identité générale, ses éléments, ses Skills, ses mécaniques et ses éventuels modificateurs saisonniers restent stables. Une Saison ultérieure peut proposer un autre Boss ou une autre version selon le content design.
+Le Boss de Guilde utilise la Saison globale commune définie dans [`16-SEASONS.md`](./16-SEASONS.md). Pendant cette Saison, son identité générale, ses éléments, ses Skills, ses mécaniques et ses éventuels modificateurs restent stables.
+
+Une Saison ultérieure peut renouveler fortement ce contenu avec un autre Boss ou une nouvelle version : Skills, phases, mécaniques, comportements et identité visuelle ou narrative peuvent différer. Un ancien Boss peut revenir en conservant une partie de son identité ou de ses mécaniques tout en recevant des modifications, voire une légère évolution de son lore local. Cette règle ne s’étend pas automatiquement aux autres catégories de Boss.
 
 Toutes les Guildes commencent la Saison au Boss niveau 1. Lorsqu’un niveau est validé, le niveau suivant devient le niveau actuel de la Guilde. Cette progression ne possède aucune limite théorique prédéfinie et est réinitialisée à la nouvelle Saison selon le cadre de [`16-SEASONS.md`](./16-SEASONS.md).
+
+Le Boss de Guilde est fermé pendant l’inter-saison. Son classement final est figé à la clôture et aucune nouvelle tentative n’est lancée avant la Saison suivante.
 
 Pour un niveau donné, le Boss est strictement identique pour toutes les Guildes : mêmes caractéristiques, mécaniques, Skills, règles et modificateurs saisonniers éventuels. Il n’existe aucun scaling selon la taille de la Guilde, aucun scaling selon la puissance du joueur et aucune adaptation cachée individuelle.
 
@@ -341,11 +352,13 @@ Le contenu, la fréquence et les quantités exactes restent à définir. Les exe
 
 Les récompenses principales du classement final appartiennent de préférence à la Guilde et soutiennent son prestige collectif. Elles peuvent notamment prendre la forme de personnalisations de bannière, couleurs, effets, décorations, éléments visuels prestigieux, Hauts Faits de Guilde ou titres de Guilde.
 
-Une performance saisonnière importante peut rester visible dans l’historique de la Guilde. Aucune récompense de classement ne doit fournir de puissance exclusive ou obligatoire.
+Une performance saisonnière importante peut valider un futur Haut Fait de Guilde, acquis définitivement et intégré à l’histoire permanente de la Guilde. Ces Hauts Faits portent la mémoire durable des résultats saisonniers pertinents sans exiger un historique séparé de toutes les anciennes Saisons.
+
+Aucune récompense de classement ne doit fournir de puissance exclusive ou obligatoire.
 
 ### 17.3. Récupération manuelle
 
-Lorsqu’une récompense du Boss de Guilde est configurée pour une récupération manuelle, elle est actuellement temporelle et suit les règles transversales de [`10-PROGRESSION.md`](./10-PROGRESSION.md). La référence de récupération est d’environ sept jours, tandis que sa durée exacte reste ajustable. Cette règle locale ne rend pas toutes les autres récompenses du jeu temporelles.
+Lorsqu’une récompense du Boss de Guilde est configurée pour une récupération manuelle, elle est actuellement temporelle et suit les règles transversales de [`10-PROGRESSION.md`](./10-PROGRESSION.md). Sa fenêtre normale correspond à l’inter-saison, soit environ sept jours, tandis que sa durée exacte reste ajustable. Cette règle locale ne rend pas toutes les autres récompenses du jeu temporelles.
 
 ## 18. Expéditions — identité et régulation
 
@@ -548,7 +561,7 @@ Aucune limite supplémentaire propre au donateur n’est actuellement validée. 
 
 ## 25. Frontières documentaires
 
-Le Boss de Guilde reste le mode compétitif saisonnier principal des Guildes. Ses règles internes appartiennent au présent document, tandis que [`16-SEASONS.md`](./16-SEASONS.md) porte uniquement le cadre transversal des Saisons et les règles communes des futurs objectifs saisonniers.
+Le Boss de Guilde reste le mode compétitif saisonnier principal des Guildes. Ses règles internes appartiennent au présent document, tandis que [`16-SEASONS.md`](./16-SEASONS.md) porte la Saison globale, l’inter-saison et les règles communes. Les quêtes saisonnières de Guilde sont cadrées transversalement avec [`18-QUESTS.md`](./18-QUESTS.md).
 
 Les Expéditions sont permanentes : elles ne reset pas, n’expirent pas, ne dépendent d’aucun classement saisonnier et ne possèdent aucun chrono global.
 
@@ -570,6 +583,7 @@ Le futur `21-SOCIAL_AND_COMMUNICATION.md`, prévu mais non créé, portera le ch
 | [`12-MODES.md`](./12-MODES.md) | Contrats transversaux des modes et résultats |
 | [`13-PVE.md`](./13-PVE.md) | Distinction avec les Boss personnels, le World Boss et la Tour infinie |
 | [`16-SEASONS.md`](./16-SEASONS.md) | Cadre transversal des Saisons et objectifs saisonniers |
+| [`18-QUESTS.md`](./18-QUESTS.md) | Quêtes saisonnières collectives distinctes des activités permanentes |
 | [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Parcours de Guilde, Boss, Expéditions, demandes et centre de récompenses |
 | [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Garde-fous économiques et récompenses cosmétiques |
 | [`01-LORE.md`](../02-world/01-LORE.md) | Frontière entre Guildes fonctionnelles, contenu d’Expédition et canon narratif |

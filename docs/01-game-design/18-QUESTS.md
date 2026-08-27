@@ -4,9 +4,13 @@
 
 ## 1. Rôle et périmètre du document
 
-Ce document définit le fonctionnement général actuellement validé des quêtes journalières.
+Ce document définit le fonctionnement général actuellement validé :
 
-Les autres catégories éventuelles de quêtes — narratives, hebdomadaires, événementielles ou propres à un mode — ne sont pas validées. Elles ne doivent pas être déduites du seul emploi générique du mot « quête ».
+* des trois quêtes journalières ;
+* des quêtes saisonnières individuelles ;
+* des quêtes saisonnières de Guilde.
+
+Les autres catégories éventuelles de quêtes — narratives, hebdomadaires, événementielles ou propres à un autre mode — ne sont pas validées. Elles ne doivent pas être déduites du seul emploi générique du mot « quête ».
 
 ## 2. Fonction des quêtes journalières
 
@@ -91,20 +95,59 @@ La liste de quêtes disponible pour un compte doit évoluer avec ces déblocages
 
 Le moment exact du déblocage des quêtes journalières et leur tutoriel ne sont pas encore définis.
 
-## 9. Relation avec les Saisons, les Events et les autres objectifs
+## 9. Quêtes saisonnières
+
+Une Saison peut proposer des quêtes saisonnières individuelles et des quêtes saisonnières de Guilde. Elles restent totalement distinctes des trois quêtes journalières et ne modifient ni leur nombre, ni leur attribution aléatoire, ni leur renouvellement quotidien.
+
+Les quêtes saisonnières :
+
+* restent disponibles pendant la Saison concernée ;
+* ne disparaissent pas selon une rotation hebdomadaire artificielle ;
+* restent relativement légères ;
+* ne doivent pas devenir nécessaires à la progression normale ;
+* ne constituent ni un niveau de Saison, ni un parcours global de récompenses.
+
+Une quête déjà disponible ne doit pas être retirée après quelques jours uniquement afin de créer de la pression.
+
+### 9.1. Quêtes saisonnières de Guilde
+
+Les quêtes saisonnières de Guilde apportent des objectifs collectifs supplémentaires. Elles restent légères, accessibles et non contraignantes.
+
+Elles ne recréent aucun système général de quêtes quotidiennes ou hebdomadaires de Guilde. Leur application au contexte des Guildes reste cohérente avec [`15-GUILDS.md`](./15-GUILDS.md).
+
+### 9.2. Récompenses
+
+Les quêtes saisonnières donnent principalement de petites récompenses issues des systèmes normaux du jeu, par exemple de la monnaie générale, des ressources d’invocation, des composants ou de petites ressources de progression.
+
+Ces familles illustrent l’échelle attendue sans imposer la liste de chaque Saison. Une simple quête saisonnière ne doit pas accorder directement un cosmétique exclusif important.
+
+La complétion de l’ensemble des quêtes d’une Saison peut éventuellement accorder une récompense plus intéressante, notamment un paquet cosmétique. Cette possibilité n’est pas obligatoire et son contenu exact relève du content design et du balancing.
+
+### 9.3. Clôture
+
+À la clôture exacte de la Saison :
+
+* une quête non terminée devient immédiatement indisponible ;
+* elle ne peut plus progresser ;
+* une quête terminée reste accomplie ;
+* sa récompense déjà gagnée peut encore être récupérée pendant l’inter-saison selon les règles de disponibilité de [`10-PROGRESSION.md`](./10-PROGRESSION.md).
+
+La même règle peut s’appliquer à une récompense globale déjà gagnée grâce à la complétion de toutes les quêtes de la Saison.
+
+## 10. Relation avec les Saisons, les Events et les autres objectifs
 
 Les Events peuvent proposer leurs propres objectifs, mais aucune relation structurelle entre ces objectifs et les trois quêtes journalières n’est validée.
 
-Les futurs objectifs saisonniers individuels relèvent du cadre de [`16-SEASONS.md`](./16-SEASONS.md). Leur possibilité ne les transforme pas automatiquement en quêtes journalières et ne modifie ni le nombre ni le cycle des trois quêtes du jour.
+Les quêtes saisonnières utilisent le calendrier global de [`16-SEASONS.md`](./16-SEASONS.md). Elles constituent un parcours distinct des quêtes journalières et des objectifs temporaires d’Event.
 
-Un futur système peut choisir de garder ces parcours séparés ou d’autoriser certaines interactions. Une telle décision devra préserver :
+Toute interaction future entre ces catégories devra préserver :
 
 * l’accessibilité des trois quêtes quotidiennes ;
 * l’absence de dépendance à un Event temporaire ;
 * la lisibilité des récompenses et des périodes ;
 * la règle selon laquelle seules les fonctionnalités débloquées sont utilisées.
 
-## 10. Dépendances
+## 11. Dépendances
 
 | Document | Responsabilité liée |
 | --- | --- |
@@ -112,12 +155,13 @@ Un futur système peut choisir de garder ces parcours séparés ou d’autoriser
 | [`09-GACHA.md`](./09-GACHA.md) | Ressource générale d’invocation |
 | [`10-PROGRESSION.md`](./10-PROGRESSION.md) | Récompenses ayant un effet sur la progression |
 | [`12-MODES.md`](./12-MODES.md) | Cadre commun des activités pouvant servir d’objectif |
-| [`16-SEASONS.md`](./16-SEASONS.md) | Futurs objectifs saisonniers distincts des quêtes journalières |
+| [`15-GUILDS.md`](./15-GUILDS.md) | Application des quêtes saisonnières au contexte des Guildes |
+| [`16-SEASONS.md`](./16-SEASONS.md) | Calendrier, inter-saison et cadre des quêtes saisonnières |
 | [`17-EVENTS.md`](./17-EVENTS.md) | Éventuels objectifs temporaires distincts |
 | [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Présentation, suivi et récupération |
 | [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Paquets gratuits et séparation économique |
 
-## 11. Éléments à préciser ultérieurement
+## 12. Éléments à préciser ultérieurement
 
 * La liste concrète des quêtes.
 * Leurs catégories, conditions et récompenses.
@@ -126,8 +170,11 @@ Un futur système peut choisir de garder ces parcours séparés ou d’autoriser
 * L’heure de renouvellement.
 * Le wording, les icônes et la présentation finale.
 * Le moment exact de déblocage et le contenu du tutoriel.
+* Les listes et conditions concrètes des quêtes saisonnières individuelles et de Guilde.
+* Les petites récompenses saisonnières et leurs quantités.
+* La présence et le contenu exacts d’une éventuelle récompense de complétion globale.
 
-## 12. Questions ouvertes
+## 13. Questions ouvertes
 
 * Quelles catégories d’objectifs doivent composer la liste prédéfinie ?
 * Comment empêcher les répétitions indésirables ou les combinaisons de quêtes trop proches ?

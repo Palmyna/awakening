@@ -18,7 +18,7 @@ Le joueur enregistre une équipe de défense qui peut être affrontée lorsqu’
 
 Le PvP synchrone ou live n’appartient pas au périmètre actuel. Il reste une possibilité hypothétique de très long terme et ne doit pas complexifier l’implémentation du format asynchrone.
 
-Le PvP valorise la préparation, la compréhension des systèmes, les synergies et l’adaptation à la saison plutôt que les réflexes ou la rapidité d’exécution.
+Le PvP valorise la préparation, la compréhension des systèmes, les synergies et l’adaptation à la Saison plutôt que les réflexes ou la rapidité d’exécution.
 
 ## 3. Équipes d’attaque et de défense
 
@@ -169,9 +169,11 @@ Elle peut uniquement influencer le MMR. Elle ne constitue donc aucune progressio
 
 ## 8. Saisons et méta
 
-Le PvP fonctionne avec des saisons. Une saison peut comporter :
+Le PvP utilise la Saison globale commune définie dans [`16-SEASONS.md`](./16-SEASONS.md). Il ne possède aucun calendrier saisonnier indépendant.
 
-* une cote propre à la saison ;
+Une Saison peut comporter :
+
+* une cote propre à la Saison ;
 * un classement ;
 * des jalons ;
 * des récompenses ;
@@ -181,9 +183,11 @@ Le PvP fonctionne avec des saisons. Une saison peut comporter :
 
 Le système ne repose pas sur des divisions obligatoires Bronze, Argent, Or ou équivalentes. La progression compétitive visible utilise directement la cote saisonnière et ses jalons.
 
-Une saison ne doit pas se réduire à une rotation élémentaire imposant automatiquement un seul élément ou une seule équipe optimale. Les variations saisonnières doivent renouveler la méta, les compositions, les builds, les équipements, les synergies et les stratégies.
+Une Saison ne doit pas se réduire à une rotation élémentaire imposant automatiquement un seul élément ou une seule équipe optimale. Les variations saisonnières doivent renouveler la méta, les compositions, les builds, les équipements, les synergies et les stratégies.
 
-Une équipe optimale pendant une saison ne doit pas nécessairement rester optimale pendant la suivante. Les thèmes concrets et modificateurs précis relèvent du content design ; les exemples étudiés pendant le cadrage restent illustratifs.
+Une équipe optimale pendant une Saison ne doit pas nécessairement rester optimale pendant la suivante. Les thèmes concrets et modificateurs précis relèvent du content design ; les exemples étudiés pendant le cadrage restent illustratifs. Les concepts retenus restent stables pendant la Saison selon le cadre transversal.
+
+Le PvP saisonnier est temporairement fermé pendant l’inter-saison. Le MMR reste conservé, mais aucun nouveau combat classé n’est lancé avant le début de la Saison suivante.
 
 ## 9. MMR et cote saisonnière
 
@@ -222,14 +226,15 @@ Ses premiers combats utilisent une volatilité plus importante afin de converger
 
 Après cette phase, les variations deviennent progressivement plus normales.
 
-### 9.4. Nouvelle saison
+### 9.4. Nouvelle Saison
 
-Lorsqu’une nouvelle saison commence :
+Lorsqu’une nouvelle Saison globale commence :
 
 * le MMR est conservé ;
-* la cote saisonnière est réinitialisée.
+* la cote saisonnière est réinitialisée ;
+* le classement saisonnier est renouvelé.
 
-Les joueurs déjà connus du système ne doivent pas refaire obligatoirement une phase complète de placement. Leur MMR continue de permettre un matchmaking pertinent, tandis que la nouvelle cote crée une progression visible propre à la saison.
+Les joueurs déjà connus du système ne doivent pas refaire obligatoirement une phase complète de placement. Leur MMR continue de permettre un matchmaking pertinent, tandis que la nouvelle cote crée une progression visible propre à la Saison.
 
 ## 10. Matchmaking
 
@@ -257,7 +262,7 @@ Après le combat, la composition adverse et les informations utiles à l’analy
 
 Une saison peut comporter des jalons numériques de cote.
 
-Lorsqu’un joueur atteint un jalon pour la première fois pendant la saison :
+Lorsqu’un joueur atteint un jalon pour la première fois pendant la Saison :
 
 * il obtient sa récompense une seule fois ;
 * cette récompense reste acquise si sa cote redescend ensuite ;
@@ -281,7 +286,7 @@ Aucun decay agressif ou perte quotidienne automatique de cote n’est validé.
 
 ### 11.3. Classement final
 
-À la clôture d’une saison, seuls les joueurs éligibles participent au classement final officiel.
+À la clôture d’une Saison, seuls les joueurs éligibles participent au classement final officiel.
 
 Le classement applique successivement :
 
@@ -292,6 +297,8 @@ Le classement applique successivement :
 Les victoires de défense ne servent pas à ces départages. Le ratio intervient uniquement après le nombre brut de victoires.
 
 En cas d’égalité sur les trois critères, les joueurs partagent le même rang. Le classement utilise des rangs de compétition avec saut des positions suivantes correspondantes. Aucun quatrième critère arbitraire n’est appliqué.
+
+La clôture fige le classement avant l’inter-saison. Les récompenses finales nécessitant une récupération manuelle suivent leur fenêtre temporelle, normalement alignée sur l’inter-saison, selon [`10-PROGRESSION.md`](./10-PROGRESSION.md) et [`16-SEASONS.md`](./16-SEASONS.md).
 
 ## 12. Récompenses et prestige
 
@@ -323,9 +330,9 @@ Le futur `19-ACHIEVEMENTS.md` devra définir les critères et récompenses propr
 
 ## 13. Historique et analyse
 
-### 13.1. Historique de la saison en cours
+### 13.1. Historique de la Saison en cours
 
-Le joueur peut consulter l’historique de ses matchs de la saison en cours, comprenant :
+Le joueur peut consulter l’historique de ses matchs de la Saison en cours, comprenant :
 
 * les attaques lancées ;
 * les défenses subies.
@@ -342,7 +349,7 @@ Chaque entrée doit permettre d’identifier au minimum :
 
 Ouvrir une entrée donne accès au même type de résumé fonctionnel que l’écran final du combat concerné. Il présente l’équipe, le résultat, les performances agrégées par créature et les informations utiles à l’analyse sans créer un second système analytique.
 
-L’historique détaillé n’a pas besoin d’être conservé indéfiniment après la fin de la saison. Les performances importantes peuvent persister par le classement final, les hauts faits, le prestige ou des statistiques globales.
+L’historique détaillé n’a pas besoin d’être conservé indéfiniment après la fin de la Saison. Les performances importantes persistent principalement par les futurs Hauts Faits, qui constituent l’historique saisonnier durable du compte ; aucun historique séparé des anciennes Saisons n’est nécessaire.
 
 ### 13.3. Replays
 
@@ -356,7 +363,7 @@ Les règles d’équipement contextuel, de loadouts et de réservation appartien
 
 La progression générale du compte et l’énergie restent définies dans [`10-PROGRESSION.md`](./10-PROGRESSION.md). Le MMR, la cote, les jalons et le classement sont des progressions compétitives propres au présent mode.
 
-Une saison PvP conserve son fonctionnement ici même lorsqu’elle possède un thème ou une durée limitée. [`16-SEASONS.md`](./16-SEASONS.md) porte uniquement le cadre saisonnier transversal et ne remplace ni le MMR, ni la cote, ni le matchmaking, ni le classement définis ici.
+Le PvP conserve son fonctionnement ici tout en utilisant la Saison globale. [`16-SEASONS.md`](./16-SEASONS.md) porte le calendrier commun, l’inter-saison et les règles transversales sans remplacer le MMR, la cote, le matchmaking ou le classement définis ici.
 
 Les besoins fonctionnels des écrans et parcours appartiennent à [`20-UI_FLOW.md`](./20-UI_FLOW.md), sans imposer leur layout final.
 
@@ -394,7 +401,7 @@ Les besoins fonctionnels des écrans et parcours appartiennent à [`20-UI_FLOW.m
 
 ### 16.3. Saisons et récompenses
 
-* La durée, le calendrier, les thèmes et modificateurs concrets des saisons.
+* Les thèmes et modificateurs concrets des Saisons.
 * Les tables, quantités, seuils et séries de paquets cosmétiques.
 * Les récompenses de jalons, de classement et de rangs prestigieux.
 * Les hauts faits, titres, badges et contours ou bordures exacts.

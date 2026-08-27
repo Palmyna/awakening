@@ -15,6 +15,7 @@ Il couvre :
 * la collection, l’encyclopédie et les skins de carte ;
 * l’invocation de créatures ;
 * les quêtes journalières ;
+* les Saisons et les quêtes saisonnières ;
 * les objets, la fabrication et l’inventaire ;
 * les Guildes, leurs Expéditions, l’entraide entre membres et le centre de récompenses ;
 * les parcours cosmétiques et les services de confort déjà validés.
@@ -63,7 +64,7 @@ Une session ne suit pas une liste d’actions obligatoire. Le joueur doit pouvoi
 * gérer ses objets ;
 * poursuivre un objectif personnel.
 
-L’interface doit rendre visibles les informations de session qui influencent immédiatement ces choix, notamment la réserve générale d’énergie disponible, les quêtes en cours, les déblocages récents et les récompenses prêtes à être récupérées.
+L’interface doit rendre visibles les informations de session qui influencent immédiatement ces choix, notamment la réserve générale d’énergie disponible, les quêtes en cours, la Saison active ou l’inter-saison, les déblocages récents et les récompenses prêtes à être récupérées.
 
 Cette exigence ne valide ni un écran d’accueil précis ni une architecture finale de navigation.
 
@@ -372,6 +373,18 @@ Une journée manquée ne retire aucune progression générale et ne supprime pas
 
 Le renouvellement, la récupération automatique ou manuelle et le traitement d’une récompense non réclamée restent à définir.
 
+### 18.1. Quêtes saisonnières
+
+Les quêtes saisonnières individuelles et de Guilde utilisent un espace clairement distinct des trois quêtes journalières. Le parcours doit permettre de connaître :
+
+* leurs objectifs et leur progression ;
+* leurs récompenses ;
+* leur disponibilité pendant la Saison ;
+* la conséquence de la clôture pour une quête non terminée ;
+* l’état d’une éventuelle récompense globale de complétion.
+
+L’interface ne doit pas suggérer une rotation hebdomadaire, un niveau global de Saison ou une obligation de les accomplir pour progresser normalement. Une récompense déjà gagnée et encore récupérable pendant l’inter-saison rejoint le centre de récompenses selon ses règles temporelles.
+
 ## 19. Fabrication, inventaire et sacs
 
 Le système d’établi, ou équivalent, permet de sélectionner des composants et de fabriquer des Artefacts. Une bibliothèque conserve les recettes découvertes et permet de reproduire le même type d’Artefact, dont les propriétés finales peuvent varier.
@@ -415,11 +428,30 @@ Les layouts détaillés du PvP, des guildes, des Saisons, des Events, des Boss p
 
 Leurs parcours réutilisent les contrats communs d’information, de préparation, de résultat, de lisibilité et de transparence sans imposer dès maintenant une architecture de navigation.
 
-La présentation d’une Saison doit distinguer clairement les progressions saisonnières de la progression durable du compte. La structure, les écrans et les informations transversales exactes restent à cadrer dans [`16-SEASONS.md`](./16-SEASONS.md).
+La présentation d’une Saison doit distinguer clairement les progressions locales des modes de la progression durable du compte. Elle ne doit afficher aucun niveau, XP ou parcours de récompenses global de Saison.
 
 Un Event doit pouvoir afficher sa période, ses quelques objectifs, leur progression et leurs récompenses en réutilisant autant que possible les parcours existants. Cette exigence fonctionnelle n’implique aucun écran ou mode de jeu entièrement nouveau.
 
-### 21.1. Boss personnels
+### 21.1. Saison globale et inter-saison
+
+L’interface transversale des Saisons doit permettre :
+
+* d’identifier le numéro et le nom de la Saison active ;
+* de présenter son thème et les informations globales utiles ;
+* d’afficher sa date de fin uniquement lorsqu’elle a été annoncée ;
+* d’identifier clairement l’inter-saison ;
+* d’afficher le décompte avant la Saison suivante lorsqu’il est connu ;
+* d’indiquer les modes saisonniers temporairement fermés ;
+* d’accéder aux quêtes saisonnières et aux récompenses encore récupérables ;
+* de présenter la clôture et les résultats finaux pertinents.
+
+Dans un mode fermé pendant l’inter-saison, l’action permettant normalement de jouer est remplacée par son état d’indisponibilité et le décompte disponible. Les activités permanentes ne doivent pas paraître fermées du seul fait de l’inter-saison.
+
+Le futur espace des Hauts Faits devra proposer des filtres pour les éléments réalisés, disponibles, devenus indisponibles ou tous les éléments. Par défaut, il affichera les Hauts Faits réalisés et ceux encore disponibles, sans faire remonter les anciens Hauts Faits saisonniers devenus impossibles.
+
+Le layout, la navigation, l’habillage et les formulations exactes restent à définir.
+
+### 21.2. Boss personnels
 
 Le parcours d’un Boss personnel doit permettre de connaître :
 
@@ -430,7 +462,7 @@ Le parcours d’un Boss personnel doit permettre de connaître :
 * la table de loot ou un aperçu pertinent de ses récompenses ;
 * le coût de la tentative en énergie générale.
 
-### 21.2. World Boss
+### 21.3. World Boss
 
 Le parcours d’un World Boss doit présenter :
 
@@ -443,23 +475,25 @@ Le parcours d’un World Boss doit présenter :
 
 Le résumé d’une tentative distingue les dégâts personnels, leur contribution réelle aux PV globaux lorsque le boss est vivant, l’état restant du boss et les dégâts seulement simulés d’une participation tardive.
 
-### 21.3. Tour infinie
+### 21.4. Tour infinie
 
 Le parcours de la Tour infinie doit permettre de connaître :
 
-* la saison actuelle, son thème et ses modificateurs ;
+* la Saison actuelle, son thème et ses modificateurs ;
 * l’étage actuel et la récompense unique associée ;
 * la progression saisonnière ;
 * le classement et les informations de prestige disponibles ;
 * les récompenses pertinentes ;
-* le temps restant avant la fin de la saison lorsqu’il s’applique ;
+* le temps restant avant la fin de la Saison lorsqu’il s’applique ;
 * le coût de la tentative en énergie générale.
 
 L’interface ne doit pas suggérer qu’un étage terminé peut être rejoué ou qu’un ancien étage constitue une boucle de farming.
 
-### 21.4. PvP
+Pendant l’inter-saison, la Tour est présentée comme temporairement fermée et son action de jeu est remplacée par l’indication de la prochaine Saison.
 
-Le parcours de préparation doit permettre de gérer l’équipe d’attaque, la défense enregistrée, les positions, les loadouts applicables ainsi que les règles et modificateurs de la saison.
+### 21.5. PvP
+
+Le parcours de préparation doit permettre de gérer l’équipe d’attaque, la défense enregistrée, les positions, les loadouts applicables ainsi que les règles et modificateurs de la Saison.
 
 Le matchmaking recherche automatiquement une défense. Avant le lancement, la composition exacte de l’adversaire reste masquée et le parcours ne doit pas suggérer un choix libre de cible.
 
@@ -475,15 +509,17 @@ L’espace saisonnier doit permettre de connaître :
 * le thème, les modificateurs, malus et règles locales annoncées ;
 * l’éligibilité actuelle au classement et l’activité requise pour la conserver ou la retrouver.
 
-L’historique de la saison courante distingue les attaques lancées des défenses subies. Chaque entrée présente les informations compétitives requises et ouvre le même type de résumé fonctionnel que l’écran final du combat, sans exiger de replay complet.
+L’historique de la Saison courante distingue les attaques lancées des défenses subies. Chaque entrée présente les informations compétitives requises et ouvre le même type de résumé fonctionnel que l’écran final du combat, sans exiger de replay complet.
 
-### 21.5. Guildes
+Pendant l’inter-saison, le PvP classé est présenté comme temporairement fermé. Le MMR conservé ne doit pas être confondu avec une cote ou un classement de la nouvelle Saison avant son lancement.
+
+### 21.6. Guildes
 
 Le parcours de Guilde doit permettre de consulter son identité affichée, sa bannière, sa présentation, ses Hauts Faits, son historique, ses membres, leurs rangs et les permissions pertinentes.
 
 La création et l’administration doivent prendre en charge le nom, le TAG, les invitations, les nominations, les exclusions, le transfert du Chef et les confirmations renforcées de dissolution. Les invitations courantes doivent pouvoir être envoyées depuis une interaction avec un pseudo ou un profil, sans exiger la recopie manuelle du pseudo.
 
-#### 21.5.1. Boss de Guilde
+#### 21.6.1. Boss de Guilde
 
 Le parcours du Boss de Guilde doit notamment présenter :
 
@@ -498,7 +534,9 @@ Le parcours du Boss de Guilde doit notamment présenter :
 
 L’interface ne doit jamais représenter ce Boss comme une réserve de PV partagée. Elle n’a pas à afficher toute la précision technique du timestamp serveur utilisé pour départager les Guildes.
 
-#### 21.5.2. Expéditions de Guilde
+Pendant l’inter-saison, le Boss de Guilde est présenté comme temporairement fermé tandis que les Expéditions et autres fonctions permanentes de Guilde restent accessibles.
+
+#### 21.6.2. Expéditions de Guilde
 
 Le parcours des Expéditions doit permettre :
 
@@ -516,7 +554,7 @@ Le parcours des Expéditions doit permettre :
 
 L’interface ne doit pas présenter la contribution quotidienne comme une monnaie stockable, imposer une progression linéaire entre les zones ou suggérer qu’une Expédition terminée peut être réinitialisée pour être farmée.
 
-#### 21.5.3. Demandes de composants
+#### 21.6.3. Demandes de composants
 
 Les demandes de composants utilisent une interface dédiée, distincte du chat de Guilde. Chaque demande doit permettre d’identifier :
 
@@ -558,6 +596,8 @@ Il dépend également des règles de combat, créatures, Skills, éléments, Eff
 * L’animation de révélation personnelle d’un skin Secret.
 * La présentation commerciale des services de confort.
 * Le layout final du centre de récompenses et les règles exactes de récupération groupée.
+* Le layout final de la Saison active, de l’inter-saison, des clôtures et des décomptes.
+* La présentation finale des quêtes saisonnières et des futurs filtres de Hauts Faits.
 * Le layout final du catalogue, des zones, missions et tâches d’Expédition.
 * L’ergonomie détaillée des demandes et dons de composants.
 

@@ -1,133 +1,282 @@
 # Project Awakening — Saisons
 
-**Statut :** Draft de conception — à relire et valider
+**Statut :** Rédigé — référence actuelle, à maintenir à jour
 
 ## 1. Rôle et périmètre du document
 
-Ce document constitue la base du système transversal des Saisons de Project Awakening.
+Ce document constitue le référentiel transversal du système de Saisons de Project Awakening.
 
-Les Saisons sont envisagées comme une structure importante après le lancement. Elles peuvent donner une trame périodique commune à plusieurs systèmes, modes, objectifs et contenus sans devenir elles-mêmes un mode de jeu.
+Une Saison donne une identité temporaire à une période du jeu, coordonne les systèmes explicitement saisonniers et peut renouveler certains modes, objectifs ou contenus. Elle ne constitue ni un mode de jeu, ni une progression autonome.
 
-Leur fonctionnement détaillé n’est pas encore cadré. Le présent draft rassemble uniquement les décisions déjà validées, définit les frontières documentaires et conserve explicitement les éléments restant à préciser.
+Les règles internes de la Tour infinie, du PvP, du Boss de Guilde, des quêtes et des récompenses restent définies dans leurs référentiels propriétaires. Le présent document porte leur calendrier commun, les transitions entre Saisons et les règles réellement transversales.
 
-## 2. Fonction transversale
+## 2. Saison globale unique
 
-Une Saison peut notamment :
+Project Awakening utilise une seule Saison globale active à la fois. Elle constitue la période commune de référence pour tous les systèmes explicitement saisonniers, notamment :
 
-* donner un thème général à une période du jeu ;
-* renouveler des compétitions saisonnières ;
-* influencer le PvP ;
-* influencer des modes PvE compétitifs ;
-* influencer des activités compétitives de guilde ;
-* proposer des objectifs saisonniers individuels ;
-* proposer des objectifs saisonniers de guilde ;
-* proposer de futurs Hauts Faits saisonniers ;
-* être associée à certains contenus, équipements, sets, objets, skins ou autres récompenses ;
-* porter éventuellement une dimension narrative ou visuelle commune.
+* le PvP saisonnier ;
+* la Tour infinie ;
+* le Boss de Guilde ;
+* les quêtes saisonnières individuelles et de Guilde ;
+* les futurs Hauts Faits saisonniers ;
+* certains contenus cosmétiques ;
+* l’habillage général du jeu.
 
-Cette liste décrit des possibilités transversales validées. Elle n’impose pas que chaque Saison utilise tous ces domaines et ne définit encore aucune mécanique, récompense, source d’obtention ou règle de progression précise.
+Ces systèmes ne possèdent pas de calendriers saisonniers indépendants. Ils peuvent néanmoins traduire la Saison de manière différente selon leurs propres règles.
 
-## 3. Progression durable et progression saisonnière
+### 2.1. Numéro et nom
 
-Une nouvelle Saison ne remet jamais à zéro la progression durable générale du joueur.
+Chaque Saison possède :
 
-Cette protection concerne notamment la progression permanente du compte, des créatures et de la collection. Une Saison ne retire pas les niveaux, l’XP, les points de caractéristiques, les évolutions, les étoiles, les équipements, les objets, les créatures ou les éléments de collection durablement acquis selon leurs règles normales.
+* un numéro unique et chronologique ;
+* un nom thématique.
 
-Une nouvelle Saison peut en revanche réinitialiser une progression, un classement, un score ou un compteur explicitement défini comme saisonnier par son référentiel propriétaire.
+Le numéro identifie définitivement une période précise de l’histoire du jeu. Une Saison passée ne revient jamais sous le même numéro, même si une future Saison réutilise une partie de son thème, de ses idées ou de ses contenus.
 
-Les réinitialisations déjà validées restent locales aux modes concernés :
+### 2.2. Lancement sans Saison
 
-* la Tour infinie peut réinitialiser sa progression active et son classement selon [`13-PVE.md`](./13-PVE.md) ;
-* le PvP conserve son MMR mais réinitialise sa cote saisonnière selon [`14-PVP.md`](./14-PVP.md) ;
-* le Boss de Guilde réinitialise sa progression compétitive selon [`15-GUILDS.md`](./15-GUILDS.md).
+Le jeu peut être lancé sans Saison active afin de déployer progressivement les fonctionnalités concernées. Aucune « Saison 0 » n’est nécessaire.
 
-Ces exemples n’établissent aucune règle universelle de reset pour les futurs systèmes saisonniers.
+La Saison 1 commence lorsque le jeu et les systèmes nécessaires sont suffisamment prêts. Elle peut rester relativement neutre et servir principalement à établir la structure saisonnière.
 
-## 4. Relation avec les modes spécialisés
+## 3. Durée, annonce et inter-saison
 
-Une Saison peut coordonner une période, un thème ou plusieurs cycles saisonniers, mais elle ne récupère pas les règles internes des modes qu’elle influence.
+### 3.1. Durée flexible
 
-Les responsabilités restent réparties ainsi :
+Une Saison ne possède aucune durée fixe imposée. Environ trois mois peut servir d’ordre de grandeur interne de production, sans constituer :
 
-* le fonctionnement saisonnier de la Tour infinie reste dans [`13-PVE.md`](./13-PVE.md) ;
-* le fonctionnement des saisons compétitives du PvP reste dans [`14-PVP.md`](./14-PVP.md) ;
-* le fonctionnement saisonnier du Boss de Guilde reste dans [`15-GUILDS.md`](./15-GUILDS.md) ;
-* les Expéditions de Guilde restent une progression permanente, sans reset ni chrono saisonnier, selon [`15-GUILDS.md`](./15-GUILDS.md) ;
-* le cadre transversal des objectifs saisonniers de Guilde reste ici, tandis que leur application au contexte des Guildes reste dans [`15-GUILDS.md`](./15-GUILDS.md) ;
-* les futurs Hauts Faits saisonniers resteront dans le futur `19-ACHIEVEMENTS.md`.
+* une règle absolue ;
+* une promesse faite aux joueurs ;
+* un ordre de grandeur présenté dans le jeu comme une promesse.
 
-Le présent document devra définir uniquement les règles réellement transversales lorsque celles-ci seront cadrées.
+Les dates réelles doivent rester adaptées aux capacités et aux besoins de production.
 
-## 5. Objectifs, contenus et récompenses associés
+### 3.2. Annonce de la fin
 
-Une Saison peut servir de cadre à des objectifs individuels, à des objectifs de guilde ou à de futurs Hauts Faits. Leur structure, leurs conditions, leur progression et leurs récompenses ne sont pas encore définies.
+La date réelle de fin est annoncée suffisamment à l’avance. La référence actuelle est d’environ **trois à quatre semaines** avant la clôture.
 
-Une association saisonnière avec un équipement, un set, un objet, un skin, un contenu ou une récompense ne modifie pas automatiquement :
+Une fois annoncée, cette date devient l’information temporelle importante présentée aux joueurs. Le système ne repose pas sur une promesse initiale rigide de durée.
 
-* sa nature permanente ou temporaire ;
-* sa source d’obtention ;
-* ses règles fonctionnelles ;
-* sa disponibilité après la Saison ;
-* son appartenance aux systèmes de progression ou de collection.
+### 3.3. Inter-saison
 
-Ces propriétés doivent rester définies par les référentiels spécialisés concernés et par le contenu concret.
+Une période sans Saison active sépare deux Saisons. Sa durée de référence est d’environ **une semaine**, sans imposer exactement sept jours dans tous les cas.
 
-## 6. Dimension thématique, visuelle et narrative
+L’inter-saison sert notamment à :
 
-Une Saison peut porter un thème visuel, éditorial ou narratif commun à plusieurs systèmes. Cette possibilité reste facultative et ne valide encore aucun thème, calendrier ou format narratif.
+* clôturer les compétitions et figer leurs classements ;
+* appliquer les resets locaux explicitement saisonniers ;
+* générer et laisser récupérer les récompenses finales ;
+* préparer techniquement et visuellement la Saison suivante ;
+* créer une courte respiration entre deux périodes compétitives.
 
-Une Saison peut correspondre à des événements canoniques sans devoir être perçue comme une « saison » par les habitants de l’univers. Toute affirmation narrative concrète reste soumise au [référentiel Lore](../02-world/01-LORE.md).
+Le cycle général est donc :
 
-## 7. Distinction entre Saison et Event
+> éventuelle période initiale sans Saison → Saison active → annonce de sa fin → clôture → inter-saison → Saison suivante
 
-Une **Saison** constitue une grande trame périodique transversale susceptible de coordonner plusieurs systèmes et progressions explicitement saisonnières.
+## 4. Disponibilité pendant l’inter-saison
 
-Un **Event** constitue une animation temporaire plus légère, généralement thématique, utilisant principalement les systèmes et modes existants selon [`17-EVENTS.md`](./17-EVENTS.md).
+Les modes saisonniers sont temporairement fermés pendant l’inter-saison, notamment :
 
-Un Event peut se dérouler pendant une Saison sans devenir la Saison elle-même. Réciproquement, une Saison n’a pas besoin de reposer sur une succession d’Events.
+* le PvP saisonnier ;
+* la Tour infinie ;
+* le Boss de Guilde.
 
-La temporalité commune ne fusionne donc pas ces deux concepts.
+Les autres activités non saisonnières restent normalement accessibles. Les Expéditions de Guilde demeurent notamment permanentes et hors de ce cycle.
 
-## 8. Contraintes de production
+L’interface d’un mode fermé doit remplacer l’action permettant normalement de jouer par une indication claire de son indisponibilité et, lorsqu’elle est connue, du temps restant avant la Saison suivante.
 
-Le système de Saisons devra rester compatible avec le budget limité et l’équipe humaine de deux personnes.
+## 5. Absence de progression globale
 
-La présence d’une trame saisonnière ne valide aucune cadence de production, aucun volume de contenu, aucune infrastructure supplémentaire, aucun passe et aucun abonnement.
+Une Saison ne possède aucune progression transversale propre. Il n’existe donc pas de :
 
-## 9. Dépendances documentaires
+* niveau ou XP de Saison ;
+* barre de progression globale ;
+* parcours global de récompenses ;
+* Battle Pass ou Season Pass implicite ;
+* progression commerciale saisonnière déduite de son existence.
+
+La Saison coordonne, renouvelle et habille des systèmes existants. Les progressions saisonnières restent locales aux modes qui les définissent.
+
+L’existence du système ne valide aucun passe, abonnement ou autre produit commercial saisonnier.
+
+## 6. Protection de la progression durable
+
+Une nouvelle Saison ne réinitialise jamais la progression durable générale du joueur, notamment :
+
+* le niveau et l’XP du compte ;
+* les niveaux, points, évolutions et étoiles des créatures ;
+* les équipements, objets et créatures possédés ;
+* la collection et les autres acquisitions permanentes.
+
+Seuls les systèmes explicitement saisonniers réinitialisent leur progression locale selon leur référentiel propriétaire :
+
+* le PvP conserve le MMR, mais réinitialise la cote et renouvelle le classement ;
+* la Tour réinitialise sa progression active et son classement ;
+* le Boss de Guilde réinitialise sa progression compétitive et toutes les Guildes recommencent au niveau prévu par ses règles.
+
+Ces resets n’affectent aucune puissance durable. Les Expéditions de Guilde ne sont pas réinitialisées.
+
+## 7. Thème, déclinaisons et production
+
+Une Saison possède une identité globale temporaire pouvant influencer l’ambiance, l’habillage, les écrans de chargement, certains cosmétiques et les mécaniques saisonnières des modes.
+
+Chaque mode peut décliner cette identité différemment. Un thème commun ne doit pas imposer artificiellement la même mécanique, le même élément favorisé ou la même stratégie dans tous les systèmes.
+
+Tous les modes n’ont pas besoin d’une nouveauté majeure à chaque Saison. Une Saison peut concentrer l’effort sur certains contenus et appliquer seulement des ajustements plus légers ailleurs.
+
+Cette souplesse protège une équipe humaine réduite contre :
+
+* une durée fixe impossible à tenir ;
+* une quantité obligatoire de nouveau contenu ;
+* une mécanique majeure à produire pour chaque mode ;
+* une infrastructure ou un rythme de production disproportionnés.
+
+## 8. Stabilité pendant une Saison
+
+Une fois la Saison commencée, le concept de ses mécaniques, malus, modificateurs et règles locales reste stable jusqu’à sa fin.
+
+Les ajustements numériques doivent eux-mêmes être évités autant que possible. Ils restent un dernier recours en cas de déséquilibre majeur, exploitation abusive, comportement imprévu ou problème technique ou compétitif sérieux.
+
+Une correction nécessaire peut ajuster une valeur. Elle ne doit pas remplacer en cours de Saison le principe d’une mécanique par une règle fondamentalement différente.
+
+## 9. Application aux modes saisonniers
+
+### 9.1. Tour infinie
+
+La Tour utilise la Saison globale commune. Ses adversaires, courbes, modificateurs, règles locales, tables de loot ou thèmes peuvent être renouvelés d’une Saison à l’autre.
+
+Sa progression active et son classement sont réinitialisés au début de chaque nouvelle Saison. Elle est fermée pendant l’inter-saison. Ses règles internes restent dans [`13-PVE.md`](./13-PVE.md).
+
+### 9.2. PvP
+
+Le PvP utilise la Saison globale commune. Le MMR est conservé entre les Saisons, tandis que la cote et le classement saisonniers sont renouvelés.
+
+Le PvP saisonnier est fermé pendant l’inter-saison. Ses règles de combat, matchmaking, cote, activité, classement et départage restent dans [`14-PVP.md`](./14-PVP.md).
+
+### 9.3. Boss de Guilde
+
+Le Boss de Guilde utilise la Saison globale commune et peut être fortement renouvelé d’une Saison à l’autre : Boss différent, nouvelle version, Skills, phases, mécaniques, comportements ou identité visuelle et narrative propres.
+
+Un ancien Boss peut revenir dans une nouvelle Saison en conservant une partie de son identité ou de ses mécaniques tout en recevant des modifications. Cette possibilité est locale au Boss de Guilde et ne s’étend pas automatiquement aux autres Boss.
+
+Sa progression compétitive est réinitialisée au début de la nouvelle Saison et le mode est fermé pendant l’inter-saison. Ses règles internes restent dans [`15-GUILDS.md`](./15-GUILDS.md).
+
+## 10. Quêtes saisonnières
+
+Une Saison peut proposer :
+
+* des quêtes saisonnières individuelles ;
+* des quêtes saisonnières de Guilde.
+
+Elles restent distinctes des trois quêtes journalières. Elles sont disponibles pendant la Saison concernée, sans rotation hebdomadaire artificielle, et doivent rester légères, accessibles et non obligatoires pour la progression normale.
+
+Les quêtes de Guilde apportent des objectifs collectifs supplémentaires sans recréer une checklist générale quotidienne ou hebdomadaire de Guilde.
+
+Une quête saisonnière accorde principalement de petites récompenses issues des systèmes normaux du jeu. Une petite quête ne doit pas suffire à accorder directement un cosmétique exclusif important.
+
+Une récompense plus intéressante, par exemple un paquet cosmétique, peut éventuellement récompenser la complétion de l’ensemble des quêtes de la Saison. Cette possibilité n’est pas obligatoire pour chaque Saison.
+
+À la clôture :
+
+* une quête non terminée devient immédiatement indisponible et ne peut plus progresser ;
+* une quête terminée reste accomplie ;
+* une récompense déjà gagnée peut encore être récupérée pendant l’inter-saison selon ses règles.
+
+Le fonctionnement détaillé des quêtes appartient à [`18-QUESTS.md`](./18-QUESTS.md).
+
+## 11. Hauts Faits et historique durable
+
+Les Saisons peuvent proposer des Hauts Faits liés à la participation ou à des performances individuelles, PvP, PvE ou de Guilde.
+
+Un Haut Fait saisonnier obtenu reste validé définitivement. Les Hauts Faits constituent l’historique saisonnier durable du joueur : aucun système séparé de rejeu ou de journal des anciennes Saisons n’est nécessaire.
+
+Un Haut Fait saisonnier expiré et non obtenu reste consultable comme contenu historique devenu indisponible. Le futur système doit permettre de filtrer les Hauts Faits réalisés, disponibles, devenus indisponibles ou tous les Hauts Faits. La vue par défaut n’affiche pas les anciens Hauts Faits devenus impossibles.
+
+Le détail fonctionnel appartient au futur `19-ACHIEVEMENTS.md`, qui reste prévu mais non créé, et les besoins d’affichage à [`20-UI_FLOW.md`](./20-UI_FLOW.md).
+
+## 12. Clôture et récompenses finales
+
+À la clôture d’une Saison :
+
+* les classements finaux sont figés ;
+* les résultats définitifs sont enregistrés ;
+* les Hauts Faits correspondants peuvent être validés ;
+* les récompenses finales sont générées ;
+* les récompenses récupérables manuellement restent accessibles pendant l’inter-saison selon leurs règles.
+
+La référence normale d’une récompense temporelle de fin de Saison correspond à l’inter-saison, soit environ une semaine. Une récompense non récupérée avant son expiration est perdue sans crédit automatique ni récupération rétroactive.
+
+Les catégories de récompenses, leur disponibilité, leur éligibilité et leur récupération manuelle restent régies transversalement par [`10-PROGRESSION.md`](./10-PROGRESSION.md).
+
+## 13. Cosmétiques saisonniers
+
+Une Saison peut proposer des skins ou d’autres cosmétiques propres à sa période. À sa fin, ils quittent leur disponibilité saisonnière normale et ne sont pas automatiquement intégrés à un catalogue permanent.
+
+Un ancien cosmétique saisonnier peut éventuellement revenir, mais uniquement :
+
+* dans la boutique ;
+* au moyen d’une offre temporaire ;
+* de manière ponctuelle ;
+* sans garantie de retour.
+
+Il ne revient jamais par une nouvelle Saison, un Event, une quête, un Haut Fait, une récompense de gameplay, une autre activité, une redistribution gratuite ou la réédition permanente de son ancienne Saison.
+
+Une offre de retour peut notamment prendre la forme d’une offre ciblée ou d’une bannière temporaire « Anciennes Saisons » utilisant un pool spécifique annoncé. Ces formes restent des possibilités commerciales, pas des formats obligatoires.
+
+Les prix, probabilités éventuelles, durées, fréquences, sélections et compositions des pools restent à définir. Toutes les offres conservent les garde-fous de transparence de [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md).
+
+## 14. Anciennes Saisons, Events et lore
+
+Une ancienne Saison n’est jamais rejouée ou réactivée comme Saison active. Ses quêtes et Hauts Faits expirés ne sont pas rouverts. Une nouvelle Saison peut réutiliser des idées, thèmes ou contenus, mais constitue toujours une période distincte avec un nouveau numéro.
+
+Une Saison reste distincte d’un Event. Un Event peut se dérouler pendant une Saison ou reprendre son thème sans devenir la Saison elle-même. Une Saison n’a pas besoin d’être composée d’une succession d’Events.
+
+Les Saisons sont majoritairement thématiques, visuelles, mécaniques et éditoriales plutôt que narratives. Elles ne sont pas automatiquement des événements canoniques perçus par les habitants de l’univers.
+
+Le Boss de Guilde peut porter un lore local expliquant son contexte, son origine, sa mutation ou son retour. Ce lore ne transforme pas toute la Saison en événement canonique majeur.
+
+## 15. Distinction avec les saisons calendaires
+
+Les Saisons du jeu décrites ici sont numérotées, uniques et non récurrentes.
+
+Les saisons calendaires ou naturelles — printemps, été, automne et hiver — sont des périodes récurrentes distinctes. Elles seules peuvent être utilisées comme conditions temporelles d’évolution selon [`07-EVOLUTIONS.md`](./07-EVOLUTIONS.md).
+
+Une Saison du jeu ne constitue jamais une condition d’évolution, car sa fin rendrait cette condition définitivement impossible.
+
+## 16. Dépendances documentaires
 
 | Document | Responsabilité liée |
 | --- | --- |
 | [`01-GAME_DESIGN_DOCUMENT.md`](./01-GAME_DESIGN_DOCUMENT.md) | Place des Saisons dans l’expérience de long terme |
-| [`07-EVOLUTIONS.md`](./07-EVOLUTIONS.md) | Conditions saisonnières éventuelles et protection contre les blocages définitifs |
-| [`08-ITEMS.md`](./08-ITEMS.md) | Équipements, sets et objets éventuellement associés à une Saison |
-| [`10-PROGRESSION.md`](./10-PROGRESSION.md) | Progression durable du compte et des créatures |
-| [`12-MODES.md`](./12-MODES.md) | Frontière entre cadre transversal et règles des modes |
-| [`13-PVE.md`](./13-PVE.md) | Saisons et progression propres à la Tour infinie |
-| [`14-PVP.md`](./14-PVP.md) | Saisons compétitives, cote et classement du PvP |
-| [`15-GUILDS.md`](./15-GUILDS.md) | Boss de Guilde saisonnier et application des objectifs au contexte des Guildes |
-| [`17-EVENTS.md`](./17-EVENTS.md) | Animations temporaires légères distinctes des Saisons |
-| [`18-QUESTS.md`](./18-QUESTS.md) | Quêtes journalières distinctes des futurs objectifs saisonniers |
-| [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Besoins fonctionnels de présentation et de navigation |
-| [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Garde-fous économiques et futurs passes ou abonnements non validés |
-| [`01-LORE.md`](../02-world/01-LORE.md) | Canon et éventuelle dimension narrative des Saisons |
+| [`07-EVOLUTIONS.md`](./07-EVOLUTIONS.md) | Exclusion des Saisons du jeu et conditions calendaires récurrentes |
+| [`10-PROGRESSION.md`](./10-PROGRESSION.md) | Disponibilité, éligibilité et récupération des récompenses |
+| [`11-COLLECTION.md`](./11-COLLECTION.md) | Visibilité durable des anciens cosmétiques saisonniers |
+| [`12-MODES.md`](./12-MODES.md) | Frontière entre cadre transversal et règles locales des modes |
+| [`13-PVE.md`](./13-PVE.md) | Progression, classement et renouvellement de la Tour infinie |
+| [`14-PVP.md`](./14-PVP.md) | MMR, cote, matchmaking et classement du PvP |
+| [`15-GUILDS.md`](./15-GUILDS.md) | Boss, quêtes saisonnières et activités permanentes de Guilde |
+| [`17-EVENTS.md`](./17-EVENTS.md) | Animations temporaires distinctes des Saisons |
+| [`18-QUESTS.md`](./18-QUESTS.md) | Quêtes saisonnières individuelles et de Guilde |
+| [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Saison active, inter-saison, décomptes, quêtes et récompenses |
+| [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Retours temporaires en boutique et transparence commerciale |
+| [`01-LORE.md`](../02-world/01-LORE.md) | Canon et frontière entre thème éditorial et narration |
 
-## 10. Éléments à préciser ultérieurement
+Le futur `19-ACHIEVEMENTS.md` devra définir les Hauts Faits saisonniers et leur consultation historique.
 
-* La durée, la cadence et le calendrier des Saisons.
-* Leur structure exacte et leurs règles de transition.
-* Les systèmes de progression saisonnière transversaux éventuels.
-* La structure des objectifs saisonniers individuels ou de guilde.
-* Les interactions entre les cycles saisonniers des différents modes.
-* Les contenus, équipements, sets, objets, skins et récompenses associés à une Saison.
-* Les règles de disponibilité ou de conservation de ces contenus après une Saison.
-* La conservation des historiques, résultats et distinctions saisonniers.
-* La portée des thèmes visuels, éditoriaux ou narratifs.
-* Les besoins précis d’interface, de calendrier et de notification.
+## 17. Éléments à préciser ultérieurement
 
-## 11. Questions ouvertes
+Le cadre fonctionnel transversal est établi. Restent volontairement ouverts au balancing, au content design, à l’UI ou à la production :
 
-* Une Saison possède-t-elle une progression transversale propre ou coordonne-t-elle uniquement les progressions de ses systèmes spécialisés ?
-* Quels systèmes doivent obligatoirement partager le même calendrier saisonnier, s’il en existe ?
-* Comment les objectifs saisonniers individuels, de guilde et les Hauts Faits doivent-ils rester distincts ?
-* Quelles informations et distinctions saisonnières doivent rester visibles durablement sur le compte ?
+* les thèmes, dates et durées réelles des futures Saisons ;
+* les exceptions éventuelles à la durée de référence d’une inter-saison ;
+* les modificateurs concrets du PvP et les variations de la Tour ;
+* les Boss de Guilde, Skills, phases et mécaniques de chaque Saison ;
+* les listes et récompenses concrètes des quêtes saisonnières ;
+* le contenu éventuel de la récompense de complétion globale ;
+* les Hauts Faits précis de chaque Saison ;
+* les cosmétiques saisonniers concrets ;
+* les formats, prix, probabilités, pools, durées et fréquences exacts des offres de retour ;
+* l’habillage UI, les écrans de chargement et autres assets saisonniers ;
+* les communications et notifications exactes de fin de Saison.
+
+Ces paramètres n’empêchent pas le présent document de servir de référence fonctionnelle actuelle.

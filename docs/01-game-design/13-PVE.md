@@ -264,15 +264,15 @@ La Tour infinie constitue un challenge PvE de long terme volontairement plus dif
 Elle sert à :
 
 * mesurer la progression et la maîtrise stratégique du joueur ;
-* proposer une difficulté croissante sans limite théorique prédéfinie à l’intérieur d’une saison ;
+* proposer une difficulté croissante sans limite théorique prédéfinie à l’intérieur d’une Saison ;
 * soutenir un classement saisonnier et le prestige ;
 * encourager l’adaptation des équipes et des builds.
 
 Elle n’est pas conçue comme une boucle de farming des anciens étages.
 
-### 7.2. Progression dans une saison
+### 7.2. Progression dans une Saison
 
-Pendant une saison, le joueur possède un étage actuel.
+Pendant une Saison, le joueur possède un étage actuel.
 
 Lorsqu’il remporte cet étage :
 
@@ -296,17 +296,21 @@ Cette XP constitue une exception locale à la règle standard. Elle n’accorde 
 
 ### 7.4. Saisons et réinitialisation
 
-La Tour infinie peut fonctionner avec de véritables saisons. Une nouvelle saison peut :
+La Tour infinie utilise la Saison globale commune définie dans [`16-SEASONS.md`](./16-SEASONS.md). Elle ne possède aucun calendrier saisonnier indépendant.
 
-* réinitialiser la progression active ;
-* placer les joueurs sur une nouvelle progression ;
-* renouveler le classement.
+Au début d’une nouvelle Saison :
 
-Ce reset évite un avantage permanent des joueurs historiquement les plus avancés, demande aux joueurs souhaitant être classés de rejouer le mode et permet de renouveler régulièrement le challenge. La Tour n’est donc pas documentée comme une progression obligatoirement permanente entre toutes les saisons.
+* la progression active est réinitialisée ;
+* les joueurs commencent la nouvelle progression de la Tour ;
+* le classement saisonnier est renouvelé.
+
+Ce reset évite un avantage permanent des joueurs historiquement les plus avancés, demande aux joueurs souhaitant être classés de rejouer le mode et permet de renouveler régulièrement le challenge.
+
+La Tour est temporairement fermée pendant l’inter-saison. Ses performances significatives déjà accomplies peuvent rester conservées par les futurs Hauts Faits, sans maintenir une progression jouable permanente entre les Saisons.
 
 ### 7.5. Renouvellement saisonnier
 
-Une saison peut renouveler :
+Chaque nouvelle Saison peut renouveler :
 
 * les adversaires et compositions ennemies ;
 * la courbe et la vitesse de montée en difficulté ;
@@ -315,20 +319,20 @@ Une saison peut renouveler :
 * la table de loot ;
 * le thème artistique ou narratif.
 
-Le thème visuel ou narratif reste distinct des règles de gameplay. Une saison thématique ne doit pas se réduire à imposer automatiquement l’équipe d’un élément correspondant.
+Le thème visuel ou narratif reste distinct des règles de gameplay. Une Saison thématique ne doit pas se réduire à imposer automatiquement l’équipe d’un élément correspondant.
 
-Les saisons peuvent utiliser des malus, contraintes, comportements ennemis particuliers, modificateurs ou autres variations stratégiques. Les exemples envisagés pendant le cadrage restent purement illustratifs et ne valident aucune mécanique permanente.
+Les Saisons peuvent utiliser des malus, contraintes, comportements ennemis particuliers, modificateurs ou autres variations stratégiques. Les exemples envisagés pendant le cadrage restent purement illustratifs et ne valident aucune mécanique permanente. Les concepts retenus pour une Saison restent stables pendant celle-ci selon le cadre transversal.
 
 ### 7.6. Diversité stratégique
 
-Une équipe optimale pendant une saison ne doit pas nécessairement rester optimale la saison suivante.
+Une équipe optimale pendant une Saison ne doit pas nécessairement rester optimale pendant la suivante.
 
 Le renouvellement doit encourager :
 
 * l’entretien de plusieurs équipes ;
 * la diversité des builds et des créatures utilisées ;
-* l’adaptation aux règles et adversaires de la saison ;
-* l’absence d’une composition universelle reproduite à chaque saison.
+* l’adaptation aux règles et adversaires de la Saison ;
+* l’absence d’une composition universelle reproduite à chaque Saison.
 
 ### 7.7. Classement, historique et prestige
 
@@ -343,13 +347,13 @@ Le joueur ayant validé cet étage en premier est mieux classé. Le timestamp pe
 
 Le classement ne doit pas produire directement une puissance obligatoire.
 
-Malgré un reset de la progression jouable, des performances importantes peuvent rester enregistrées sur le compte, notamment un rang final ou un étage remarquable. Elles pourront alimenter le futur `19-ACHIEVEMENTS.md`, sans définir ici le fonctionnement complet des hauts faits.
+Malgré le reset de la progression jouable, les performances importantes, notamment un rang final ou un étage remarquable, peuvent alimenter le futur `19-ACHIEVEMENTS.md`. Les Hauts Faits obtenus constitueront leur conservation durable ; aucun historique saisonnier séparé de la Tour n’est nécessaire.
 
 Certains hauts faits ou éléments de prestige pourront éventuellement accorder des récompenses strictement cosmétiques ou honorifiques. Les contours ou bordures de carte constituent une piste privilégiée ; des titres, badges ou autres éléments visuels restent également possibles. Aucune récompense précise n’est obligatoire ou validée à ce stade et aucun bonus de puissance ne peut en résulter.
 
 ### 7.8. Loot et énergie
 
-Une saison peut proposer une table de loot différente afin de renouveler l’intérêt du mode. Elle peut également inclure des paquets de skins ou d’autres récompenses cosmétiques ; lorsqu’un paquet appartient à une série également distribuée commercialement, il suit les mêmes règles que les autres paquets de cette série conformément au cadre de monétisation.
+Une Saison peut proposer une table de loot différente afin de renouveler l’intérêt du mode. Elle peut également inclure des paquets de skins ou d’autres récompenses cosmétiques ; lorsqu’un paquet appartient à une série également distribuée commercialement, il suit les mêmes règles que les autres paquets de cette série conformément au cadre de monétisation.
 
 Les récompenses précises restent à définir et la Tour ne doit pas devenir une source exclusive de puissance imposant sa participation à la progression normale.
 
@@ -363,7 +367,7 @@ Chaque ajout doit indiquer son statut de périmètre, son identité, sa progress
 
 ## 9. Frontières documentaires
 
-Le fonctionnement d’un mode PvE reste défini ici même lorsqu’il utilise une rotation, une fenêtre temporaire ou une saison. [`16-SEASONS.md`](./16-SEASONS.md) porte uniquement le cadre transversal des Saisons, sans remplacer les règles de la Tour infinie. [`17-EVENTS.md`](./17-EVENTS.md) s’applique seulement lorsqu’une animation temporaire légère utilise un mode PvE existant.
+Le fonctionnement d’un mode PvE reste défini ici même lorsqu’il utilise une rotation, une fenêtre temporaire ou la Saison globale. [`16-SEASONS.md`](./16-SEASONS.md) porte le calendrier commun, l’inter-saison et les règles transversales sans remplacer les règles internes de la Tour infinie. [`17-EVENTS.md`](./17-EVENTS.md) s’applique seulement lorsqu’une animation temporaire légère utilise un mode PvE existant.
 
 Les parcours et informations nécessaires sont définis fonctionnellement dans [`20-UI_FLOW.md`](./20-UI_FLOW.md), sans imposer ici leur layout final.
 
@@ -411,11 +415,10 @@ Le futur `19-ACHIEVEMENTS.md` devra définir les hauts faits, leur structure et 
 
 ### 11.4. Tour infinie
 
-* La durée des saisons et la courbe de difficulté.
+* La courbe de difficulté et ses variations concrètes entre les Saisons.
 * Le coût d’une tentative et la valeur de l’XP de défaite.
 * Les adversaires, compositions, thèmes et modificateurs concrets.
 * Les tables de loot saisonnières.
-* Les critères de départage du classement.
 * Les hauts faits, récompenses cosmétiques et contours ou bordures de carte éventuels.
 
 Ces éléments relèvent du balancing, du content design, de la production saisonnière, de l’UI, de l’Art ou de futurs référentiels. Ils ne constituent pas des questions structurelles bloquant le statut actuel du document.

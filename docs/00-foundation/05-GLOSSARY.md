@@ -1434,9 +1434,11 @@ Un catalogue désigne un ensemble de contenus disponibles ; la boutique désigne
 
 **Domaine :** Game design, contenu, compétition
 
-**Définition :** Grande trame périodique transversale pouvant donner un thème commun à plusieurs systèmes et coordonner des progressions, objectifs, classements ou contenus explicitement saisonniers.
+**Définition :** Période globale unique, numérotée et nommée, donnant une identité temporaire au jeu et coordonnant les progressions, objectifs, classements ou contenus explicitement saisonniers.
 
 Une nouvelle Saison peut réinitialiser uniquement les progressions définies comme saisonnières. Elle ne remet jamais à zéro la progression durable générale du compte, des créatures ou de la collection.
+
+Les saisons calendaires récurrentes — printemps, été, automne et hiver — sont distinctes des Saisons du jeu. Seules ces périodes calendaires peuvent servir de conditions temporelles d’évolution.
 
 ### Event
 

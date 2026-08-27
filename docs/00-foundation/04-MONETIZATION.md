@@ -382,10 +382,7 @@ Cette interdiction s’applique également à la monnaie de conversion des doubl
 
 Les règles de disponibilité et de retour d’une série de skins de carte et de ses paquets doivent être annoncées clairement avant toute acquisition.
 
-Une série temporaire doit normalement suivre l’un des modèles suivants :
-
-* revenir selon une rotation annoncée ;
-* être intégrée ultérieurement au catalogue permanent.
+Une série ou une offre temporaire doit indiquer sa période de disponibilité et sa politique de retour connue sans promettre une rotation ou une intégration au catalogue permanent lorsqu’aucune décision de ce type n’existe.
 
 Un skin de carte temporairement indisponible doit rester visible dans sa série avec une indication claire de son indisponibilité actuelle. Pour un skin Secret appartenant à un pool, seule son illustration ou son identité esthétique détaillée peut rester masquée : son existence et sa probabilité restent déclarées.
 
@@ -393,7 +390,27 @@ Les exclusivités définitives reposant uniquement sur la peur de manquer doiven
 
 Certaines récompenses commémoratives ou liées à un Event peuvent exceptionnellement rester exclusives, à condition que cette exclusivité soit annoncée explicitement dès le départ.
 
-### 7.2. Absence de pression artificielle
+### 7.2. Retour des anciens cosmétiques saisonniers
+
+Après la fin de sa Saison d’origine, un ancien cosmétique saisonnier peut revenir uniquement dans une offre temporaire de la boutique.
+
+Ce retour :
+
+* reste ponctuel et non garanti ;
+* ne transforme pas le contenu en élément du catalogue permanent ;
+* ne peut jamais être effectué par une nouvelle Saison, un Event, une quête, un Haut Fait, une récompense de gameplay, une autre activité ou une redistribution gratuite.
+
+L’offre peut notamment prendre la forme :
+
+* d’une offre temporaire ciblée portant sur un ou plusieurs anciens cosmétiques ;
+* d’une bannière temporaire « Anciennes Saisons » utilisant un pool spécifique annoncé ;
+* d’un autre format temporaire respectant les mêmes garde-fous.
+
+Ces formats sont des possibilités et non des obligations. Les prix, probabilités éventuelles, pools, fréquences, durées et sélections exactes restent à définir.
+
+Avant tout achat, l’offre doit annoncer clairement son contenu ou son pool, ses probabilités lorsqu’elle est aléatoire, son prix réel, sa durée et l’absence de garantie qu’un cosmétique précis revienne ultérieurement.
+
+### 7.3. Absence de pression artificielle
 
 Les séries et paquets temporairement disponibles ne doivent pas reposer sur une présentation artificielle ou ambiguë de l’urgence.
 
@@ -408,7 +425,7 @@ Le projet doit notamment éviter :
 
 ### 8.1. Structure commerciale
 
-Le projet propose un catalogue stable complété par des offres occasionnelles liées à des Events.
+Le projet propose un catalogue stable complété par des offres occasionnelles, notamment certaines offres liées à des Events ou au retour temporaire d’anciens cosmétiques saisonniers.
 
 Il doit éviter :
 
@@ -453,6 +470,8 @@ Avant l’achat d’un paquet de skins de carte, le joueur doit pouvoir connaît
 * sa durée de disponibilité ;
 * la politique de retour de la série ;
 * les éventuelles limitations.
+
+Une offre aléatoire temporaire consacrée aux anciennes Saisons doit également identifier son pool spécifique et ne doit jamais présenter le retour futur d’un cosmétique comme garanti.
 
 Le résultat précis de l’ouverture reste inconnu avant l’achat.
 
@@ -538,13 +557,9 @@ Une éventuelle réévaluation après le lancement ne devra pas conduire à int�
 
 ### 10.3. Passes et abonnements
 
-La décision concernant les passes et abonnements est reportée jusqu’à la définition des Saisons, des Events et des capacités réelles de production.
+Le système de Saisons ne valide aucun Season Pass, Battle Pass, abonnement ou parcours commercial saisonnier. Aucun de ces produits ne doit être déduit de l’existence des Saisons ou intégré comme composant nécessaire à leur fonctionnement.
 
-Un éventuel passe ou abonnement devra être principalement ou exclusivement cosmétique et ne devra pas devenir nécessaire pour progresser normalement.
-
-**Question ouverte :**
-
-* L’introduction future d’un passe ou d’un abonnement et son périmètre exact.
+Une éventuelle proposition commerciale future constituerait une décision économique distincte. Elle devrait être réévaluée depuis les fondations et ne pourrait pas devenir nécessaire pour progresser normalement.
 
 ### 10.4. Monnaie premium
 

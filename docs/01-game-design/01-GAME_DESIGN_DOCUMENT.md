@@ -936,11 +936,13 @@ Le niveau des créatures ne possède pas de maximum. La formule exacte de la cou
 
 ### 17.3. Saisons et Events
 
-Après le lancement, les Saisons pourront fournir une trame périodique transversale, renouveler certaines compétitions et influencer plusieurs systèmes spécialisés. Une nouvelle Saison peut réinitialiser uniquement les progressions, classements ou scores explicitement saisonniers ; elle ne remet jamais à zéro la progression durable générale du joueur.
+Le jeu peut commencer sans Saison active. Lorsqu’elles sont lancées, les Saisons utilisent une période globale unique commune aux systèmes saisonniers, suivie d’une courte inter-saison pendant laquelle les modes concernés sont fermés et leurs résultats finalisés. Elles renouvellent certaines compétitions et influencent plusieurs systèmes spécialisés sans créer de niveau, d’XP ou de parcours de récompenses global.
+
+Une nouvelle Saison peut réinitialiser uniquement les progressions, classements ou scores explicitement saisonniers ; elle ne remet jamais à zéro la progression durable générale du joueur.
 
 Les Events restent distincts. Ils constituent de petites animations temporaires utilisant principalement les systèmes et modes existants pour proposer quelques objectifs thématiques et des récompenses adaptées. Ils ne doivent normalement pas nécessiter un nouveau mode, une progression complexe ou une production lourde spécifique.
 
-La durée, la cadence, la structure détaillée, les objectifs et les récompenses exactes des Saisons et des Events ne sont pas définis dans le GDD.
+Les dates, durées réelles, thèmes, contenus et récompenses exactes des Saisons et des Events ne sont pas définis dans le GDD.
 
 ## 18. Modes de jeu et statuts de périmètre
 
@@ -1106,7 +1108,7 @@ Le GDD dépend des documents spécialisés suivants pour les détails :
 * [`15-GUILDS.md`](./15-GUILDS.md) — structure, fonctions et activités de guilde ;
 * [`16-SEASONS.md`](./16-SEASONS.md) — trame transversale, progression durable et systèmes saisonniers ;
 * [`17-EVENTS.md`](./17-EVENTS.md) — animations temporaires légères utilisant les systèmes existants ;
-* [`18-QUESTS.md`](./18-QUESTS.md) — quêtes journalières ;
+* [`18-QUESTS.md`](./18-QUESTS.md) — quêtes journalières et saisonnières ;
 * `19-ACHIEVEMENTS.md` — hauts faits, lorsqu’un cadrage suffisant permettra sa création ;
 * [`20-UI_FLOW.md`](./20-UI_FLOW.md) — écrans, navigation, tutoriels et parcours ;
 * `21-SOCIAL_AND_COMMUNICATION.md` — fonctions sociales et de communication, document prévu mais non cadré et non créé ;
@@ -1136,7 +1138,7 @@ Les questions suivantes ne bloquent pas le fonctionnement global décrit par le 
 * le nombre d’équipes enregistrables et leurs règles de partage des créatures ;
 * les listes et récompenses des quêtes journalières ;
 * les règles détaillées des modes envisagés ;
-* la cadence des Saisons, des Events et des mises à jour ;
+* les dates, durées réelles et contenus des Saisons, des Events et des mises à jour ;
 * les quantités et données exactes de la vertical slice.
 
 ### 20.3. Principe de maintien

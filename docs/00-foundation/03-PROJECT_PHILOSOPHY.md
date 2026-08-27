@@ -261,7 +261,7 @@ Une éventuelle décision future autorisant l’achat direct d’invocations dev
 **Questions ouvertes :**
 
 * l’introduction éventuelle de publicités après le lancement ;
-* la création éventuelle d’un passe ou d’un abonnement après la définition des Saisons et des capacités de production ;
+* la création éventuelle d’un passe ou d’un abonnement par une future décision économique distincte ;
 * l’introduction éventuelle d’une monnaie premium répondant à un besoin réel sans masquer le coût des produits ;
 * l’autorisation future d’autres services de confort ou d’achats directs d’invocations après définition et équilibrage des systèmes concernés.
 

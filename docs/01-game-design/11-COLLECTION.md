@@ -208,6 +208,8 @@ Une série peut notamment être distribuée par paquets, directement skin par sk
 
 Une série temporairement indisponible reste normalement visible avec une indication claire de son indisponibilité actuelle et de sa politique de retour connue.
 
+Un cosmétique saisonnier reste visible dans la collection après la fin de sa Saison, même lorsqu’il n’est plus disponible. Son seul retour possible est une offre temporaire et ponctuelle de la boutique, sans garantie qu’il revienne. Il ne peut pas être réintroduit par une nouvelle Saison, un Event, une quête, un Haut Fait, une récompense de gameplay ou une autre activité.
+
 ## 12. Compatibilité avec les formes
 
 Chaque skin de carte est lié à une forme précise. Ses données déclarent explicitement cette forme et le skin ne peut pas être appliqué aux autres formes de la même famille.
@@ -277,7 +279,7 @@ La liste des instances doit permettre d’identifier celles qui sont indisponibl
 | [`07-EVOLUTIONS.md`](./07-EVOLUTIONS.md) | Branches, apparences parcourues et conditions découvertes |
 | [`09-GACHA.md`](./09-GACHA.md) | Nouvelles instances et acquisition au-delà de la capacité |
 | [`10-PROGRESSION.md`](./10-PROGRESSION.md) | Étoiles, réinitialisations et score de Puissance |
-| [`16-SEASONS.md`](./16-SEASONS.md) | Associations saisonnières éventuelles sans perte de collection durable |
+| [`16-SEASONS.md`](./16-SEASONS.md) | Visibilité durable et politique de retour des cosmétiques saisonniers |
 | [`17-EVENTS.md`](./17-EVENTS.md) | Disponibilité et récompenses cosmétiques événementielles |
 | [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Parcours de consultation, recherche et actions protégées |
 | [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Séries, paquets, doublons et extensions de capacité |

@@ -281,6 +281,8 @@ Une récompense **temporelle** possède une fenêtre de récupération. Si elle 
 
 La référence actuelle d’une fenêtre temporelle, lorsqu’aucune autre durée n’est définie, est d’environ **sept jours**. Sa durée exacte reste ajustable pendant le balancing.
 
+Pour une récompense temporelle de fin de Saison, la référence normale correspond à l’inter-saison, elle-même d’environ une semaine selon [`16-SEASONS.md`](./16-SEASONS.md). Cette cohérence de durée ne rend pas toutes les récompenses saisonnières temporelles : le système propriétaire conserve la responsabilité de définir leur catégorie et leur fenêtre exacte.
+
 Une récompense **permanente** ne possède aucun délai d’expiration intrinsèque. Elle reste potentiellement récupérable tant que ses autres conditions sont remplies.
 
 La catégorie dépend de la définition de la récompense elle-même, pas automatiquement du mode, d’une Saison, d’un Event, d’un classement ou d’un autre type de source. Un même système peut contenir des récompenses temporelles et permanentes si leurs définitions respectives le prévoient.
@@ -323,7 +325,7 @@ Cette architecture définit une modalité réutilisable de remise des récompens
 | [`13-PVE.md`](./13-PVE.md) | Énergie générale et exceptions locales d’XP des activités PvE |
 | [`14-PVP.md`](./14-PVP.md) | Énergie générale, XP de compte en attaque, absence d’XP des créatures et progression compétitive distincte |
 | [`15-GUILDS.md`](./15-GUILDS.md) | Boss et Expéditions de Guilde, énergie, récompenses collectives et éligibilité locale |
-| [`16-SEASONS.md`](./16-SEASONS.md) | Distinction entre progression durable et progressions explicitement saisonnières |
+| [`16-SEASONS.md`](./16-SEASONS.md) | Progression durable, inter-saison et récompenses de fin de Saison |
 | [`17-EVENTS.md`](./17-EVENTS.md) | Petites récompenses temporaires utilisant les systèmes existants |
 | [`18-QUESTS.md`](./18-QUESTS.md) | Objectifs journaliers et récompenses de progression |
 | [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Présentation et confirmations des actions de progression |

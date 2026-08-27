@@ -79,7 +79,7 @@ Chaque transition possède ses propres conditions. Toute évolution exige obliga
 Le niveau demandé est toujours un minimum, jamais un niveau exact. En plus de ce niveau, une transition peut notamment dépendre :
 
 * du moment de la journée ;
-* d’une saison ;
+* d’une saison calendaire récurrente ;
 * d’une région ou d’un environnement ;
 * d’un équipement précis réellement équipé dans son loadout actif ;
 * d’un objet consommable d’évolution utilisé volontairement ;
@@ -100,6 +100,10 @@ Les évolutions n’utilisent pas non plus de compteurs historiques propres à l
 ### 4.3. Conditions contextuelles et temporelles
 
 Une condition de contexte — horaire, saison, région, environnement ou équipement — doit être valide au moment du déclenchement. Un contexte rencontré précédemment n’est pas mémorisé comme un historique.
+
+Dans ce document, une **saison** désigne exclusivement une saison calendaire ou naturelle récurrente : printemps, été, automne ou hiver. Elle reste totalement distincte d’une **Saison du jeu** numérotée définie dans [`16-SEASONS.md`](./16-SEASONS.md).
+
+Une Saison du jeu ne peut jamais constituer une condition d’évolution. Sa fin rendrait cette condition définitivement impossible, contrairement à une saison calendaire qui revient régulièrement.
 
 Une condition temporelle ne doit jamais provoquer un blocage prolongé ou déraisonnable. Une fenêtre courte et régulièrement récurrente est acceptable. Plus les occasions sont espacées, plus la famille doit proposer des possibilités cohérentes pendant les autres périodes pertinentes.
 
@@ -216,7 +220,7 @@ Cette découverte ciblée ne doit jamais révéler le catalogue complet des fami
 | [`08-ITEMS.md`](./08-ITEMS.md) | Équipements et objets consommables liés aux évolutions |
 | [`10-PROGRESSION.md`](./10-PROGRESSION.md) | Attribution d’XP, montées de niveau, points et étoiles |
 | [`11-COLLECTION.md`](./11-COLLECTION.md) | Découverte, encyclopédie, apparences de formes et skins |
-| [`16-SEASONS.md`](./16-SEASONS.md) | Cadre des conditions saisonnières et protection de la progression durable |
+| [`16-SEASONS.md`](./16-SEASONS.md) | Définition des Saisons du jeu, explicitement exclues des conditions d’évolution |
 | [`17-EVENTS.md`](./17-EVENTS.md) | Absence de condition rendue définitivement impossible par un Event unique |
 | [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Présentation des conditions, séquences et actions du joueur |
 

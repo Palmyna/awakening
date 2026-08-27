@@ -95,6 +95,8 @@ La présentation doit éviter les comptes à rebours artificiels, les informatio
 
 Lorsqu’une série de skins ou une offre cosmétique est temporairement associée à un Event, les règles de disponibilité, de retour, de prix, de probabilités et de doublons restent celles du cadre de monétisation.
 
+Un Event ne peut pas servir à réintroduire un ancien cosmétique saisonnier. Après sa Saison d’origine, ce contenu peut revenir uniquement au moyen d’une offre temporaire de la boutique selon [`16-SEASONS.md`](./16-SEASONS.md) et le cadre de monétisation.
+
 ## 8. Relation avec les Saisons
 
 Un Event peut se dérouler pendant une Saison ou reprendre son thème, mais il reste une animation temporaire distincte.
