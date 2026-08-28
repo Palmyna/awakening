@@ -763,7 +763,7 @@ L’énergie :
 
 La récupération d’énergie constitue la seule progression hors ligne validée.
 
-Le système ne comporte aucun objet consommable de récupération d’énergie stocké dans l’inventaire. Une récompense de gameplay qui accorde de l’énergie l’ajoute immédiatement à la réserve générale.
+Le système ne comporte aucun objet consommable de récupération d’énergie stocké dans l’inventaire. Une récompense ponctuelle de gameplay qui accorde de l’énergie l’ajoute immédiatement à la réserve générale, sans ticket ni ressource parallèle. Une activité répétable ne doit pas former une boucle remboursant structurellement autant ou davantage d’énergie que son coût d’entrée.
 
 ### 14.3. Garde-fous
 
@@ -944,9 +944,9 @@ Le jeu peut commencer sans Saison active. Lorsqu’elles sont lancées, les Sais
 
 Une nouvelle Saison peut réinitialiser uniquement les progressions, classements ou scores explicitement saisonniers ; elle ne remet jamais à zéro la progression durable générale du joueur.
 
-Les Events restent distincts. Ils constituent de petites animations temporaires utilisant principalement les systèmes et modes existants pour proposer quelques objectifs thématiques et des récompenses adaptées. Ils ne doivent normalement pas nécessiter un nouveau mode, une progression complexe ou une production lourde spécifique.
+Les Events restent totalement indépendants des Saisons et de l’inter-saison. Ils constituent de petites animations temporaires utilisant principalement les systèmes et modes existants pour proposer des missions thématiques et des récompenses adaptées. Plusieurs occurrences peuvent coexister ; elles ne possèdent aucune progression globale d’Event et ne doivent pas nécessiter un nouveau mode, une progression complexe ou une production lourde spécifique.
 
-Les classements finaux compétitifs saisonniers privilégient le prestige, les Hauts Faits, les titres, badges, personnalisations et cosmétiques. Ils ne distribuent ni ressource générale d’invocation ni invocations de créatures, contrairement aux jalons personnels de progression qui peuvent en proposer selon leur référentiel propriétaire.
+Les classements finaux compétitifs saisonniers privilégient le prestige, les Hauts Faits, les titres, badges, personnalisations et cosmétiques. Ils ne distribuent ni ressource générale d’invocation, ni invocations de créatures, ni énergie générale, contrairement aux jalons personnels de progression qui peuvent proposer ponctuellement ces ressources selon leur référentiel propriétaire.
 
 Les dates, durées réelles, thèmes, contenus et récompenses exactes des Saisons et des Events ne sont pas définis dans le GDD.
 

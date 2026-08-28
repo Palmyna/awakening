@@ -268,7 +268,7 @@ Lorsqu’un joueur atteint un jalon pour la première fois pendant la Saison :
 * cette récompense reste acquise si sa cote redescend ensuite ;
 * le jalon ne peut pas être farmé en oscillant autour de son seuil.
 
-Certains jalons personnels de cote peuvent inclure une petite quantité de ressource générale d’invocation. Cette possibilité n’impose pas cette ressource à chaque jalon.
+Certains jalons personnels de cote peuvent inclure une petite quantité de ressource générale d’invocation ou d’énergie générale. Ces possibilités n’imposent aucune de ces ressources à chaque jalon.
 
 Les seuils, les récompenses exactes, les quantités et leur fréquence restent à définir.
 
@@ -328,7 +328,7 @@ Le classement final peut alimenter de futurs hauts faits, titres, badges, contou
 
 Les récompenses les plus prestigieuses doivent rester principalement honorifiques ou cosmétiques et ne conférer aucune puissance exclusive indispensable.
 
-Le classement final PvP de la Saison ne distribue jamais de ressource générale d’invocation ni d’invocations de créatures. Cette interdiction prévient une boucle dans laquelle les joueurs déjà les plus performants recevraient davantage de puissance leur permettant d’accroître encore leur avantage ; elle ne concerne pas les jalons personnels de cote.
+Le classement final PvP de la Saison ne distribue jamais de ressource générale d’invocation, d’invocations de créatures ni d’énergie générale. Cette interdiction prévient une boucle dans laquelle les joueurs déjà les plus performants recevraient davantage de puissance leur permettant d’accroître encore leur avantage ; elle ne concerne pas les jalons personnels de cote.
 
 Le futur `19-ACHIEVEMENTS.md` devra définir les critères et récompenses propres aux hauts faits sans être créé artificiellement pendant la présente intervention.
 
@@ -380,7 +380,7 @@ Les besoins fonctionnels des écrans et parcours appartiennent à [`20-UI_FLOW.m
 | [`03-CREATURES.md`](./03-CREATURES.md) | Identité, puissance réelle et composition des équipes |
 | [`08-ITEMS.md`](./08-ITEMS.md) | Effets contextuels, loadouts et réservation des équipements |
 | [`09-GACHA.md`](./09-GACHA.md) | Ressource générale d’invocation des jalons personnels et exclusion du classement final |
-| [`10-PROGRESSION.md`](./10-PROGRESSION.md) | Énergie générale, XP du compte et absence de progression passive |
+| [`10-PROGRESSION.md`](./10-PROGRESSION.md) | Énergie générale, récompenses ponctuelles, exclusion du classement final, XP du compte et absence de progression passive |
 | [`12-MODES.md`](./12-MODES.md) | Statut de périmètre et contrats transversaux |
 | [`13-PVE.md`](./13-PVE.md) | Philosophie saisonnière commune et usages PvE des effets contextuels |
 | [`16-SEASONS.md`](./16-SEASONS.md) | Cadre transversal des Saisons et protection de la progression durable |

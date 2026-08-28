@@ -1444,9 +1444,9 @@ Les saisons calendaires récurrentes — printemps, été, automne et hiver — 
 
 **Domaine :** Game design, contenu temporaire
 
-**Définition :** Petite animation temporaire, généralement thématique, utilisant principalement les modes et systèmes existants pour proposer quelques objectifs et récompenses adaptés.
+**Définition :** Petit contenu temporaire et ponctuel, organisé autour d’une occasion identifiable et utilisant principalement les modes et systèmes existants pour proposer quelques missions thématiques et récompenses adaptées.
 
-Un Event ne constitue normalement ni un nouveau mode de jeu, ni une progression complexe. Un événement narratif ou un événement produit par la simulation ne désigne pas automatiquement ce système.
+Un Event ne constitue ni un nouveau mode de jeu, ni une progression complexe, ni une composante d’une Saison. Un événement narratif ou un événement produit par la simulation ne désigne pas automatiquement ce système.
 
 **Variante autorisée :** « événement temporaire » lorsque le contexte évite toute confusion avec un événement narratif ou technique.
 

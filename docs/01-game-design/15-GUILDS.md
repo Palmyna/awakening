@@ -358,7 +358,7 @@ Une performance saisonnière importante peut valider un futur Haut Fait de Guild
 
 Aucune récompense de classement ne doit fournir de puissance exclusive ou obligatoire.
 
-Le classement final saisonnier du Boss de Guilde ne distribue jamais de ressource générale d’invocation ni d’invocations de créatures. Ses récompenses privilégient le prestige collectif de la Guilde, les Hauts Faits, les titres, les personnalisations et les éléments cosmétiques.
+Le classement final saisonnier du Boss de Guilde ne distribue jamais de ressource générale d’invocation, d’invocations de créatures ni d’énergie générale. Ses récompenses privilégient le prestige collectif de la Guilde, les Hauts Faits, les titres, les personnalisations et les éléments cosmétiques.
 
 ### 17.3. Récupération manuelle
 
@@ -511,7 +511,7 @@ Une Expédition terminée à 100 % reste consultable avec son lore, ses découve
 
 Une petite tâche n’accorde pas nécessairement de récompense matérielle personnelle. Sa contribution peut uniquement produire une progression, un indice, une découverte, du lore, une nouvelle mission ou une nouvelle zone.
 
-La fin principale peut générer une récompense personnelle unique contenant notamment de la monnaie générale, des composants généraux, une petite quantité de ressource générale d’invocation, d’autres ressources de progression déjà disponibles ailleurs, des éléments thématiques, des cosmétiques ou des éléments de collection. La ressource générale d’invocation constitue une récompense possible et non un contenu obligatoire de chaque Expédition. Les contenus, quantités et valeurs exacts restent à définir.
+La fin principale peut générer une récompense personnelle unique contenant notamment de la monnaie générale, des composants généraux, une petite quantité de ressource générale d’invocation ou d’énergie générale, d’autres ressources de progression déjà disponibles ailleurs, des éléments thématiques, des cosmétiques ou des éléments de collection. Ces ressources constituent des récompenses possibles et non un contenu obligatoire de chaque Expédition. Les contenus, quantités et valeurs exacts restent à définir.
 
 La complétion à 100 % soutient principalement les Hauts Faits, le prestige, l’historique, les titres, la personnalisation de Guilde et les récompenses cosmétiques ou symboliques. Une récompense personnelle supplémentaire reste possible mais n’est pas obligatoire.
 

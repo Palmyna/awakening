@@ -171,6 +171,8 @@ Une acquisition directe :
 
 La source concernée doit définir explicitement les paramètres qui ne découlent pas des règles communes, notamment l’identité de la famille accordée et, si nécessaire, l’état initial particulier de l’instance.
 
+Lorsqu’une famille précise est indispensable à une mission d’Event, [`17-EVENTS.md`](./17-EVENTS.md) peut prévoir une acquisition directe réservée au joueur qui ne possède pas encore cette famille afin de garantir l’accessibilité. Le joueur qui la possède déjà utilise normalement son instance existante et ne reçoit pas automatiquement un doublon.
+
 Ces exceptions ne doivent pas déplacer le rôle central de l’invocation comme voie principale d’obtention.
 
 ## 10. Invocations unitaires et multiples

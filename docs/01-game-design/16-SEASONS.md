@@ -174,7 +174,7 @@ Les quêtes de Guilde apportent des objectifs collectifs supplémentaires sans r
 
 Une quête saisonnière accorde principalement de petites récompenses issues des systèmes normaux du jeu. Une petite quête ne doit pas suffire à accorder directement un cosmétique exclusif important.
 
-Les quêtes saisonnières individuelles et les quêtes saisonnières de Guilde peuvent notamment accorder de petites quantités de ressource générale d’invocation, sans que cette récompense soit obligatoire sur chaque quête.
+Les quêtes saisonnières individuelles et les quêtes saisonnières de Guilde peuvent notamment accorder de petites quantités de ressource générale d’invocation ou, ponctuellement, d’énergie générale, sans que ces récompenses soient obligatoires sur chaque quête.
 
 Une récompense plus intéressante, par exemple un paquet cosmétique, peut éventuellement récompenser la complétion de l’ensemble des quêtes de la Saison. Cette possibilité n’est pas obligatoire pour chaque Saison.
 
@@ -212,7 +212,7 @@ Les catégories de récompenses, leur disponibilité, leur éligibilité et leur
 
 ### 12.1. Classements finaux compétitifs
 
-Les classements finaux compétitifs saisonniers ne distribuent jamais de ressource générale d’invocation ni d’invocations de créatures.
+Les classements finaux compétitifs saisonniers ne distribuent jamais de ressource générale d’invocation, d’invocations de créatures ni d’énergie générale.
 
 Cette règle s’applique notamment au PvP, à la Tour infinie, au Boss de Guilde et à tout futur mode utilisant un classement final compétitif saisonnier comparable. Leurs récompenses privilégient le prestige, les Hauts Faits, les titres, badges, personnalisations et cosmétiques afin d’éviter une boucle dans laquelle les joueurs déjà les plus performants obtiendraient davantage de puissance leur permettant d’accroître encore leur avantage.
 
@@ -239,7 +239,7 @@ Les prix, probabilités éventuelles, durées, fréquences, sélections et compo
 
 Une ancienne Saison n’est jamais rejouée ou réactivée comme Saison active. Ses quêtes et Hauts Faits expirés ne sont pas rouverts. Une nouvelle Saison peut réutiliser des idées, thèmes ou contenus, mais constitue toujours une période distincte avec un nouveau numéro.
 
-Une Saison reste distincte d’un Event. Un Event peut se dérouler pendant une Saison ou reprendre son thème sans devenir la Saison elle-même. Une Saison n’a pas besoin d’être composée d’une succession d’Events.
+Une Saison reste totalement indépendante d’un Event. Le calendrier d’un Event ne dépend ni de la Saison active, ni de l’inter-saison : il peut commencer, continuer ou finir pendant l’une ou l’autre période. Une proximité thématique éventuelle ne crée aucune relation fonctionnelle, et une Saison n’a pas besoin d’être composée d’une succession d’Events.
 
 Les Saisons sont majoritairement thématiques, visuelles, mécaniques et éditoriales plutôt que narratives. Elles ne sont pas automatiquement des événements canoniques perçus par les habitants de l’univers.
 

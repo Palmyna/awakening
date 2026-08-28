@@ -108,6 +108,8 @@ Une première réussite peut accorder :
 
 Ces récompenses uniques peuvent notamment comprendre une petite quantité de ressource générale d’invocation lors de premières réussites, de Boss, de jalons importants ou d’autres étapes de progression pertinentes.
 
+L’énergie générale peut exceptionnellement faire partie d’une récompense ponctuelle pertinente, mais elle n’est pas ajoutée systématiquement à chaque première réussite d’un niveau d’Histoire.
+
 Une réussite ultérieure du même niveau :
 
 * conserve l’XP normale de l’activité ;
@@ -183,6 +185,8 @@ Chaque première victoire d’un niveau de Boss personnel peut accorder une réc
 
 Cette récompense n’est obtenue qu’une fois pour le niveau concerné. Le farming répétable du niveau précédent conserve sa fonction principale de loot spécialisé — sets, composants, ressources propres au Boss et autres récompenses définies par sa table — et n’accorde pas de ressource générale d’invocation répétable.
 
+L’énergie générale n’est pas une composante systématique des first clears de Boss personnels.
+
 ### 5.6. Énergie
 
 Les Boss personnels utilisent la réserve générale d’énergie. Leur coût exact reste à équilibrer et aucune énergie spécifique n’est validée.
@@ -202,7 +206,7 @@ Si les PV globaux atteignent zéro avant l’expiration de la fenêtre :
 * le World Boss est vaincu ;
 * chaque joueur éligible obtient la récompense finale une seule fois pour cette apparition.
 
-Cette récompense finale unique peut inclure une petite quantité de ressource générale d’invocation pour chaque joueur éligible. Les participations supplémentaires ne permettent jamais de multiplier cette attribution.
+Cette récompense finale unique peut inclure une petite quantité de ressource générale d’invocation ou d’énergie générale pour chaque joueur éligible. Les participations supplémentaires ne permettent jamais de multiplier cette attribution.
 
 Si le World Boss possède encore des PV à l’expiration :
 
@@ -295,6 +299,8 @@ Lorsqu’il remporte cet étage :
 
 La récompense unique de certains étages ou d’autres jalons personnels de progression peut inclure une petite quantité de ressource générale d’invocation. Cette possibilité n’impose pas cette ressource à chaque étage ou jalon.
 
+De l’énergie générale peut également être associée ponctuellement à certains jalons personnels, mais pas systématiquement à la récompense unique de chaque étage.
+
 Le joueur ne peut pas revenir librement aux anciens étages. Contrairement aux Boss personnels, aucun niveau précédent n’est farmable.
 
 ### 7.3. Défaite
@@ -362,7 +368,7 @@ Le joueur ayant validé cet étage en premier est mieux classé. Le timestamp pe
 
 Le classement ne doit pas produire directement une puissance obligatoire.
 
-Le classement final compétitif de la Saison ne distribue jamais de ressource générale d’invocation ni d’invocations de créatures. Cette interdiction ne concerne pas les récompenses uniques d’étages ni les autres jalons personnels de progression.
+Le classement final compétitif de la Saison ne distribue jamais de ressource générale d’invocation, d’invocations de créatures ni d’énergie générale. Cette interdiction ne concerne pas les récompenses uniques d’étages ni les autres jalons personnels de progression.
 
 Malgré le reset de la progression jouable, les performances importantes, notamment un rang final ou un étage remarquable, peuvent alimenter le futur `19-ACHIEVEMENTS.md`. Les Hauts Faits obtenus constitueront leur conservation durable ; aucun historique saisonnier séparé de la Tour n’est nécessaire.
 

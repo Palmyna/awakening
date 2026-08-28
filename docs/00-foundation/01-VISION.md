@@ -320,7 +320,7 @@ Le contenu sera progressivement enrichi au fil du développement.
 
 Une Saison peut donner une trame périodique commune à plusieurs systèmes et réinitialiser uniquement les progressions explicitement saisonnières. Elle ne remet jamais à zéro la progression durable générale du compte, des créatures ou de la collection.
 
-Un Event utilise principalement les modes et systèmes existants pour proposer une petite animation temporaire, quelques objectifs thématiques et des récompenses adaptées. Il ne doit normalement pas nécessiter un nouveau mode ou une production lourde spécifique.
+Un Event utilise principalement les modes et systèmes existants pour proposer un petit contenu temporaire, quelques missions thématiques et des récompenses adaptées. Il reste indépendant des Saisons et ne constitue pas le cadre de contenus majeurs nécessitant un nouveau mode ou une production lourde spécifique.
 
 ## 17. Modèle économique
 

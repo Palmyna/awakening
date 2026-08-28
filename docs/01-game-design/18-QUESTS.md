@@ -10,7 +10,9 @@ Ce document définit le fonctionnement général actuellement validé :
 * des quêtes saisonnières individuelles ;
 * des quêtes saisonnières de Guilde.
 
-Les autres catégories éventuelles de quêtes — narratives, hebdomadaires, événementielles ou propres à un autre mode — ne sont pas validées. Elles ne doivent pas être déduites du seul emploi générique du mot « quête ».
+Les autres catégories éventuelles de quêtes — narratives, hebdomadaires ou propres à un autre mode — ne sont pas validées. Elles ne doivent pas être déduites du seul emploi générique du mot « quête ».
+
+Les missions temporaires des Events constituent un système distinct défini dans [`17-EVENTS.md`](./17-EVENTS.md). Le présent document porte néanmoins le principe transversal de non-rétroactivité commun aux missions, quêtes et objectifs comparables.
 
 ## 2. Fonction des quêtes journalières
 
@@ -75,6 +77,12 @@ Les règles de validation automatique ou de récupération manuelle d’une réc
 
 Une quête ne doit jamais demander au joueur d’effectuer un achat réel. Les ouvertures ou acquisitions cosmétiques payantes ne constituent pas un prérequis nécessaire à une progression journalière normale.
 
+### 6.1. Non-rétroactivité des missions et objectifs
+
+Une mission, quête ou objectif comparable ne comptabilise pas rétroactivement les actions réalisées avant son activation ou avant qu’il devienne accessible au joueur, sauf exception explicitement documentée.
+
+La progression commence seulement lorsque l’objectif est à la fois actif et accessible au joueur. Cette règle s’applique notamment aux quêtes journalières, aux quêtes saisonnières et aux missions d’Event ; elle ne transforme pas ces catégories en un système commun.
+
 ## 7. Récompenses
 
 Les quêtes journalières accordent des récompenses ayant un effet sur la progression.
@@ -88,6 +96,8 @@ Des paquets de skins de carte peuvent également être obtenus gratuitement grâ
 La présence possible d’une récompense cosmétique ne transforme pas une quête en offre commerciale et ne permet aucune conversion de la boutique cosmétique vers la puissance.
 
 Les types exacts de récompenses, leurs quantités et leur répartition entre les trois quêtes restent à définir et à équilibrer.
+
+Certaines quêtes peuvent également accorder ponctuellement de l’énergie générale. Celle-ci est ajoutée directement à la réserve commune, sans consommable, ticket ou ressource parallèle, selon [`10-PROGRESSION.md`](./10-PROGRESSION.md). Cette possibilité ne rend pas l’énergie obligatoire dans les trois récompenses quotidiennes.
 
 ## 8. Déblocages et onboarding
 
@@ -119,7 +129,7 @@ Elles ne recréent aucun système général de quêtes quotidiennes ou hebdomada
 
 ### 9.2. Récompenses
 
-Les quêtes saisonnières donnent principalement de petites récompenses issues des systèmes normaux du jeu, par exemple de la monnaie générale, de la ressource générale d’invocation, des composants ou de petites ressources de progression.
+Les quêtes saisonnières donnent principalement de petites récompenses issues des systèmes normaux du jeu, par exemple de la monnaie générale, de la ressource générale d’invocation, de l’énergie générale, des composants ou de petites ressources de progression.
 
 Les quêtes saisonnières individuelles comme les quêtes saisonnières de Guilde peuvent accorder de petites quantités de ressource générale d’invocation. Cette récompense reste optionnelle pour chaque quête et sa répartition relève du content design et du balancing.
 
@@ -140,9 +150,9 @@ La même règle peut s’appliquer à une récompense globale déjà gagnée gr�
 
 ## 10. Relation avec les Saisons, les Events et les autres objectifs
 
-Les Events peuvent proposer leurs propres objectifs, mais aucune relation structurelle entre ces objectifs et les trois quêtes journalières n’est validée.
+Les Events proposent leurs propres missions temporaires, totalement distinctes des trois quêtes journalières et des quêtes saisonnières. Elles ne remplacent, ne réduisent et ne modifient ni la liste, ni la sélection, ni le renouvellement des quêtes journalières.
 
-Les quêtes saisonnières utilisent le calendrier global de [`16-SEASONS.md`](./16-SEASONS.md). Elles constituent un parcours distinct des quêtes journalières et des objectifs temporaires d’Event.
+Les quêtes saisonnières utilisent le calendrier global de [`16-SEASONS.md`](./16-SEASONS.md). Elles constituent un parcours distinct des quêtes journalières et des missions temporaires d’Event.
 
 Toute interaction future entre ces catégories devra préserver :
 
@@ -161,7 +171,7 @@ Toute interaction future entre ces catégories devra préserver :
 | [`12-MODES.md`](./12-MODES.md) | Cadre commun des activités pouvant servir d’objectif |
 | [`15-GUILDS.md`](./15-GUILDS.md) | Application des quêtes saisonnières au contexte des Guildes |
 | [`16-SEASONS.md`](./16-SEASONS.md) | Calendrier, inter-saison et cadre des quêtes saisonnières |
-| [`17-EVENTS.md`](./17-EVENTS.md) | Éventuels objectifs temporaires distincts |
+| [`17-EVENTS.md`](./17-EVENTS.md) | Missions temporaires distinctes et application locale de la non-rétroactivité |
 | [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Présentation, suivi et récupération |
 | [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Paquets gratuits et séparation économique |
 
@@ -185,4 +195,3 @@ Toute interaction future entre ces catégories devra préserver :
 * Le joueur peut-il remplacer une quête et, si oui, selon quelles limites sans paiement obligatoire ?
 * Les récompenses sont-elles remises automatiquement ou réclamées manuellement ?
 * Que devient une quête terminée mais non réclamée au renouvellement ?
-* Les Events peuvent-ils modifier la liste journalière ou doivent-ils conserver des objectifs entièrement séparés ?

@@ -404,7 +404,7 @@ Les nouveaux mondes, les nouvelles régions et les événements narratifs import
 
 Les saisons constituent avant tout une structure éditoriale et de contenu. Elles peuvent correspondre à des événements canoniques sans devoir être perçues comme des « saisons » par les habitants de l’univers.
 
-Un Event de gameplay constitue normalement une animation temporaire légère et son thème n’est pas automatiquement canonique. Réciproquement, un événement narratif important n’est pas automatiquement un Event au sens du système de jeu.
+Un Event de gameplay constitue un petit contenu temporaire léger et son thème n’est pas automatiquement canonique. Réciproquement, un événement narratif important n’est pas automatiquement un Event au sens du système de jeu.
 
 **Éléments à préciser ultérieurement :**
 

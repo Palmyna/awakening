@@ -238,9 +238,19 @@ Les Expéditions de Guilde constituent une exception locale documentée dans [`1
 
 Dans le mode Histoire, l’énergie est consommée à l’entrée d’un niveau. Lors d’une défaite standard, l’énergie utilisée reste normalement consommée. Une activité particulière ou une étape d’onboarding peut définir une exception explicite.
 
-Le système ne comporte aucun objet consommable de récupération d’énergie stocké dans l’inventaire. Lorsqu’une récompense de gameplay accorde de l’énergie, celle-ci est immédiatement ajoutée à la réserve générale du joueur. Les contenus concernés, les quantités et leur fréquence restent à définir et à équilibrer.
+L’énergie générale peut constituer une récompense ponctuelle de gameplay. Lorsqu’elle est accordée :
 
-Une récompense directe d’énergie provenant du gameplay ne peut pas devenir indirectement un mécanisme permettant d’acheter de l’énergie contre de l’argent réel.
+* elle est immédiatement ajoutée à la réserve générale du joueur ;
+* elle ne devient ni un objet d’inventaire, ni un consommable ;
+* elle ne crée aucun ticket ni aucune ressource parallèle.
+
+Elle peut notamment apparaître dans certaines quêtes, récompenses saisonnières, Events, récompenses ponctuelles importantes, jalons personnels, récompenses finales de World Boss ou récompenses d’Expédition. Ces sources sont des possibilités de répartition, pas une obligation de l’accorder dans chacune de ces activités.
+
+Cette récompense doit rester espacée. Elle n’est pas distribuée à chaque petite étape et n’est pas systématiquement ajoutée aux premières réussites du mode Histoire, aux first clears de Boss personnels ou à chaque récompense unique d’étage de la Tour infinie.
+
+Une activité répétable ne doit pas former une boucle remboursant structurellement autant ou davantage d’énergie que son coût d’entrée. Une récompense directe d’énergie provenant du gameplay ne peut pas non plus devenir indirectement un mécanisme permettant d’acheter de l’énergie contre de l’argent réel.
+
+Les classements finaux compétitifs saisonniers ne distribuent jamais d’énergie générale. Cette exclusion ne concerne pas nécessairement les jalons personnels de progression, qui peuvent en proposer lorsque leur accessibilité et leur équilibrage le permettent.
 
 ## 12. Absence de progression passive et payante
 
@@ -328,7 +338,7 @@ Cette architecture définit une modalité réutilisable de remise des récompens
 | [`14-PVP.md`](./14-PVP.md) | Énergie générale, XP de compte en attaque, absence d’XP des créatures et progression compétitive distincte |
 | [`15-GUILDS.md`](./15-GUILDS.md) | Boss et Expéditions de Guilde, énergie, récompenses collectives et éligibilité locale |
 | [`16-SEASONS.md`](./16-SEASONS.md) | Progression durable, inter-saison et récompenses de fin de Saison |
-| [`17-EVENTS.md`](./17-EVENTS.md) | Petites récompenses temporaires utilisant les systèmes existants |
+| [`17-EVENTS.md`](./17-EVENTS.md) | Récompenses ponctuelles, dont l’énergie générale, et fermeture des occurrences |
 | [`18-QUESTS.md`](./18-QUESTS.md) | Objectifs journaliers et récompenses de progression |
 | [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Présentation et confirmations des actions de progression |
 

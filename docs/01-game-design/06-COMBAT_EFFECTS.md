@@ -416,6 +416,8 @@ Le système suit le principe :
 
 Un comportement atypique reste local tant qu’il n’est pas partagé par plusieurs effets. Un nouveau principe générique n’est ajouté que lorsqu’un besoin réutilisable réel apparaît.
 
+Un marqueur, feedback ou gimmick propre à un Event, purement contextuel, cosmétique ou humoristique et sans interaction mécanique générale, ne devient donc pas automatiquement un Effet de combat standard. Le référentiel Events peut le conserver localement et suivre son utilisation pour une mission sans étendre le catalogue commun. S’il acquiert un véritable lifecycle ou modifie les règles du combat, il doit en revanche respecter les contrats du présent document.
+
 ### 13.4. Principes actuellement identifiés
 
 La base de conception comprend actuellement :

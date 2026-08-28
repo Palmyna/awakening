@@ -64,6 +64,8 @@ La possibilité d’équiper un objet et l’éligibilité à chacun de ses effe
 
 Cette capacité ne crée aucune catégorie structurelle séparée d’équipement PvP ou PvE. Les objets restent des Artefacts et des Sources d’énergie, et leur contexte d’efficacité ne leur impose aucune source d’obtention particulière. Un effet contextuel concret, sa condition et sa valeur doivent être définis explicitement par le contenu concerné.
 
+Un Event peut ainsi fournir un Artefact thématique dont un effet est actif seulement pendant une période explicitement définie. L’objet reste définitivement possédé après cette période et ne forme pas une catégorie structurelle d’équipement d’Event ; son éventuel intérêt permanent doit rester conforme à l’équilibrage général.
+
 ### 5.2. Gestion et transfert
 
 Un même exemplaire d’équipement peut être utilisé dans plusieurs loadouts de la même instance.
@@ -351,6 +353,7 @@ Il n’accorde aucun niveau, aucune expérience, aucun point supplémentaire et 
 | [`14-PVP.md`](./14-PVP.md) | Effets contextuels, loadouts et contraintes d’équité du PvP |
 | [`15-GUILDS.md`](./15-GUILDS.md) | Demandes et dons volontaires de certains composants de fabrication |
 | [`16-SEASONS.md`](./16-SEASONS.md) | Associations saisonnières possibles sans modification automatique des règles d’objet |
+| [`17-EVENTS.md`](./17-EVENTS.md) | Objets thématiques, effets limités à une période et possession durable |
 | [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Parcours de gestion, comparaison, fabrication et inventaire |
 | [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Service de confort payant lié aux sacs |
 

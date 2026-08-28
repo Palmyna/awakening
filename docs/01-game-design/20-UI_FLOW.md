@@ -430,7 +430,7 @@ Leurs parcours réutilisent les contrats communs d’information, de préparatio
 
 La présentation d’une Saison doit distinguer clairement les progressions locales des modes de la progression durable du compte. Elle ne doit afficher aucun niveau, XP ou parcours de récompenses global de Saison.
 
-Un Event doit pouvoir afficher sa période, ses quelques objectifs, leur progression et leurs récompenses en réutilisant autant que possible les parcours existants. Cette exigence fonctionnelle n’implique aucun écran ou mode de jeu entièrement nouveau.
+Les Events utilisent une rubrique dédiée tout en réutilisant autant que possible les composants et parcours existants. Leurs besoins détaillés sont définis à la section 21.7 sans créer de nouveau mode de jeu.
 
 ### 21.1. Saison globale et inter-saison
 
@@ -566,6 +566,25 @@ Les demandes de composants utilisent une interface dédiée, distincte du chat d
 
 Le parcours doit également indiquer si le membre peut encore publier sa demande quotidienne et la quantité maximale autorisée pour le composant sélectionné, sans présenter le don comme un échange ou une source de récompense.
 
+### 21.7. Events
+
+Une rubrique Events dédiée présente les occurrences actuellement actives ou en phase de fermeture. Elle affiche une liste consultable lorsqu’elles sont plusieurs et peut simplement indiquer qu’aucun Event n’est disponible lorsqu’elle est vide.
+
+Pour chaque Event, le parcours doit permettre :
+
+* d’identifier son nom ou son thème, sa période et le temps restant pertinent ;
+* de distinguer clairement la phase active de la phase de fermeture ;
+* de consulter ses missions, leurs éventuelles dépendances visibles et leur progression directe ;
+* d’identifier les récompenses disponibles, déjà récupérées ou encore récupérables ;
+* d’afficher une étape de chaîne lorsque cette information est utile, sans niveau, XP ou barre globale d’Event ;
+* de comprendre qu’aucune progression ni nouvelle récompense ne peut être débloquée pendant la fermeture.
+
+Une mission terminée met en évidence sa récompense récupérable puis passe en état `Récupéré` ou équivalent après la remise. La phase de fermeture conserve uniquement l’accès aux récompenses déjà débloquées avant la fin active.
+
+Une récompense disponible dès le lancement apparaît directement comme récupérable pendant la phase active. Elle ne crée aucune nouvelle éligibilité pour un joueur qui découvre l’Event seulement pendant sa fermeture.
+
+L’annonce d’une nouvelle occurrence peut utiliser un badge, un marqueur sur la rubrique ou une petite présentation à la première connexion concernée. Elle ne nécessite aucune notification téléphone spécifique. Le système réutilise autant que possible les composants UI existants ; son layout et son habillage final restent ouverts.
+
 ## 22. Dépendances
 
 Le présent document traduit les besoins fonctionnels des documents spécialisés, notamment [`09-GACHA.md`](./09-GACHA.md), [`10-PROGRESSION.md`](./10-PROGRESSION.md), [`11-COLLECTION.md`](./11-COLLECTION.md), [`12-MODES.md`](./12-MODES.md), [`13-PVE.md`](./13-PVE.md), [`14-PVP.md`](./14-PVP.md), [`15-GUILDS.md`](./15-GUILDS.md), [`16-SEASONS.md`](./16-SEASONS.md), [`17-EVENTS.md`](./17-EVENTS.md) et [`18-QUESTS.md`](./18-QUESTS.md).
@@ -597,6 +616,7 @@ Il dépend également des règles de combat, créatures, Skills, éléments, Eff
 * La présentation commerciale des services de confort.
 * Le layout final du centre de récompenses et les règles exactes de récupération groupée.
 * Le layout final de la Saison active, de l’inter-saison, des clôtures et des décomptes.
+* Le layout final de la rubrique Events, de sa liste, de ses missions et de sa phase de fermeture.
 * La présentation finale des quêtes saisonnières et des futurs filtres de Hauts Faits.
 * Le layout final du catalogue, des zones, missions et tâches d’Expédition.
 * L’ergonomie détaillée des demandes et dons de composants.
