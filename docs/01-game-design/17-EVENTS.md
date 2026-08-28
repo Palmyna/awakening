@@ -63,7 +63,10 @@ Un Event peut accorder de petites récompenses adaptées à son ampleur, notamme
 * un skin thématique ;
 * un paquet de skins de carte ;
 * un autre cosmétique ;
+* une petite quantité de ressource générale d’invocation ;
 * une petite quantité d’une récompense ou ressource déjà utilisée par les systèmes existants.
+
+La ressource générale d’invocation reste celle des invocations ordinaires définies dans [`09-GACHA.md`](./09-GACHA.md). Un Event ne crée pour cela ni ressource propre, ni ticket supplémentaire, ni nouvelle catégorie d’invocation, et cette récompense n’est pas obligatoire dans chaque Event.
 
 Les récompenses précises, leurs quantités et leurs conditions restent à définir.
 
@@ -135,7 +138,7 @@ Le système doit privilégier la réutilisation des modes, règles, objectifs me
 * La durée et la cadence des Events.
 * Les premières occasions retenues.
 * Les catégories, conditions et quantités d’objectifs temporaires.
-* Les petites récompenses et quantités associées.
+* Les petites récompenses et quantités associées, dont la quantité éventuelle de ressource générale d’invocation.
 * Les règles de récurrence ou de retour d’un Event.
 * Les interactions éventuelles avec les quêtes journalières.
 * Les besoins précis d’interface, de calendrier et de notification.

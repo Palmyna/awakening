@@ -115,7 +115,11 @@ Des pools supplémentaires, thématiques ou temporaires, ainsi que des rotations
 
 Le modèle initial utilise une ressource générale principale pour effectuer les invocations de créatures.
 
-Cette ressource est obtenue principalement grâce au mode Histoire, aux trois quêtes journalières, aux autres activités, aux récompenses de progression et aux Events.
+Cette ressource constitue une récompense de progression obtenue par le gameplay. Elle peut être distribuée en petites quantités maîtrisées par certaines activités, quêtes, récompenses uniques, jalons de progression et Events, sans être obligatoire dans chaque récompense concernée.
+
+Elle est obtenue principalement grâce au mode Histoire, aux trois quêtes journalières, aux autres activités, aux récompenses de progression et aux Events. Elle n’est exclusive à aucun mode et sa distribution doit rester suffisamment limitée pour qu’aucune activité particulière ne devienne obligatoire afin de progresser normalement.
+
+La ressource générale finance les invocations ordinaires selon les règles du présent document. Son attribution ne constitue ni une invocation directe, ni une acquisition directe exceptionnelle de créature.
 
 Elle reste entièrement séparée :
 
@@ -124,7 +128,9 @@ Elle reste entièrement séparée :
 * de la boutique cosmétique ;
 * de tout paiement en argent réel dans le modèle de lancement.
 
-L’ajout de ressources propres aux Events ou de catégories particulières d’invocation n’est pas validé.
+Le système ne crée aucun ticket d’invocation supplémentaire, aucune nouvelle monnaie, aucune ressource propre à un mode et aucune nouvelle catégorie d’invocation. L’ajout de ressources propres aux Events ou de catégories particulières d’invocation n’est pas validé.
+
+Les classements finaux compétitifs saisonniers ne distribuent jamais de ressource générale d’invocation ni d’invocations de créatures. Cette exclusion ne concerne pas les jalons personnels de progression définis par les modes concernés.
 
 ## 7. Aléatoire ordinaire et garanties explicites
 
@@ -258,6 +264,10 @@ La présentation artistique peut employer un œuf, une éclosion, un rituel, un 
 | [`03-CREATURES.md`](./03-CREATURES.md) | État structurel et cycle de vie d’une instance |
 | [`10-PROGRESSION.md`](./10-PROGRESSION.md) | Niveaux, étoiles et consommation volontaire d’instances |
 | [`11-COLLECTION.md`](./11-COLLECTION.md) | Découverte, capacité et gestion des instances obtenues |
+| [`13-PVE.md`](./13-PVE.md) | Récompenses uniques du mode Histoire et des modes PvE |
+| [`14-PVP.md`](./14-PVP.md) | Jalons personnels et exclusion du classement final PvP |
+| [`15-GUILDS.md`](./15-GUILDS.md) | Récompenses du Boss et des Expéditions de Guilde |
+| [`16-SEASONS.md`](./16-SEASONS.md) | Exclusion transversale des classements finaux compétitifs saisonniers |
 | [`17-EVENTS.md`](./17-EVENTS.md) | Récompenses événementielles et source d’invocations |
 | [`18-QUESTS.md`](./18-QUESTS.md) | Quêtes journalières comme source d’invocations |
 | [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Parcours d’invocation, révélation et feedback de capacité |

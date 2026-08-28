@@ -106,13 +106,15 @@ Une première réussite peut accorder :
 * des éléments de progression ;
 * d’autres récompenses de première complétion.
 
+Ces récompenses uniques peuvent notamment comprendre une petite quantité de ressource générale d’invocation lors de premières réussites, de Boss, de jalons importants ou d’autres étapes de progression pertinentes.
+
 Une réussite ultérieure du même niveau :
 
 * conserve l’XP normale de l’activité ;
 * accorde les récompenses répétables prévues par sa table de loot ;
 * ne redonne aucune récompense unique déjà obtenue.
 
-Le mode Histoire reste ainsi rejouable et utilisable pour le farming sans multiplier les récompenses de première réussite.
+Le mode Histoire reste ainsi rejouable et utilisable pour le farming sans multiplier les récompenses de première réussite. La ressource générale d’invocation n’appartient pas au loot répétable courant des niveaux d’Histoire et ne peut pas être farmée indéfiniment de cette manière.
 
 ### 4.6. Énergie et résultat
 
@@ -143,20 +145,20 @@ Les Boss personnels peuvent apparaître selon une rotation. Le rythme exact de c
 
 La progression est indépendante pour chaque boss et persiste à l’échelle du compte. Lorsqu’un boss quitte la rotation puis revient, le joueur retrouve la progression précédemment atteinte contre ce boss.
 
-### 5.3. Progression et paliers jouables
+### 5.3. Progression et niveaux jouables
 
-Chaque Boss personnel possède une progression sans limite théorique prédéfinie. Battre le palier actuel :
+Chaque Boss personnel possède une progression sans limite théorique prédéfinie. Battre le niveau actuel :
 
-* valide ce palier ;
-* débloque le palier suivant ;
+* valide ce niveau ;
+* débloque le niveau suivant ;
 * augmente progressivement la difficulté accessible.
 
 Le joueur peut uniquement jouer :
 
-* son palier actuel afin de progresser ;
-* le palier immédiatement précédent déjà réussi afin de farmer un niveau maîtrisé.
+* son niveau actuel afin de progresser ;
+* le niveau immédiatement précédent déjà réussi afin de farmer un niveau maîtrisé.
 
-Il ne peut pas redescendre librement vers tous les anciens paliers. Les numéros de paliers utilisés pendant le cadrage servent uniquement à illustrer ce contrat et ne constituent aucun seuil de contenu validé.
+Il ne peut pas redescendre librement vers tous les anciens niveaux. Les numéros de niveaux utilisés pendant le cadrage servent uniquement à illustrer ce contrat et ne constituent aucun seuil de contenu validé.
 
 ### 5.4. Loot spécialisé
 
@@ -168,11 +170,20 @@ Les Boss personnels peuvent devenir une source importante de loot spécialisé, 
 * de ressources ou composants propres à certains boss ;
 * d’autres récompenses spécialisées.
 
-Chaque boss peut posséder sa propre table de loot. La qualité, la richesse ou le potentiel de cette table doit progresser avec les paliers.
+Chaque boss peut posséder sa propre table de loot. La qualité, la richesse ou le potentiel de cette table doit progresser avec les niveaux.
 
-Les taux, recettes, courbes, paliers exacts, composants précis et règles de farming du palier précédent restent réservés au balancing et au content design.
+Les taux, recettes, courbes, niveaux exacts, composants précis et règles de farming du niveau précédent restent réservés au balancing et au content design.
 
-### 5.5. Énergie
+### 5.5. Récompense de first clear
+
+Chaque première victoire d’un niveau de Boss personnel peut accorder une récompense de **first clear** unique. Celle-ci peut comprendre :
+
+* une petite quantité de ressource générale d’invocation ;
+* d’autres récompenses uniques adaptées au Boss.
+
+Cette récompense n’est obtenue qu’une fois pour le niveau concerné. Le farming répétable du niveau précédent conserve sa fonction principale de loot spécialisé — sets, composants, ressources propres au Boss et autres récompenses définies par sa table — et n’accorde pas de ressource générale d’invocation répétable.
+
+### 5.6. Énergie
 
 Les Boss personnels utilisent la réserve générale d’énergie. Leur coût exact reste à équilibrer et aucune énergie spécifique n’est validée.
 
@@ -190,6 +201,8 @@ Si les PV globaux atteignent zéro avant l’expiration de la fenêtre :
 
 * le World Boss est vaincu ;
 * chaque joueur éligible obtient la récompense finale une seule fois pour cette apparition.
+
+Cette récompense finale unique peut inclure une petite quantité de ressource générale d’invocation pour chaque joueur éligible. Les participations supplémentaires ne permettent jamais de multiplier cette attribution.
 
 Si le World Boss possède encore des PV à l’expiration :
 
@@ -280,7 +293,9 @@ Lorsqu’il remporte cet étage :
 * l’étage suivant devient son nouvel étage actuel ;
 * l’étage terminé ne peut plus être rejoué pendant cette progression.
 
-Le joueur ne peut pas revenir librement aux anciens étages. Contrairement aux Boss personnels, aucun palier précédent n’est farmable.
+La récompense unique de certains étages ou d’autres jalons personnels de progression peut inclure une petite quantité de ressource générale d’invocation. Cette possibilité n’impose pas cette ressource à chaque étage ou jalon.
+
+Le joueur ne peut pas revenir librement aux anciens étages. Contrairement aux Boss personnels, aucun niveau précédent n’est farmable.
 
 ### 7.3. Défaite
 
@@ -347,6 +362,8 @@ Le joueur ayant validé cet étage en premier est mieux classé. Le timestamp pe
 
 Le classement ne doit pas produire directement une puissance obligatoire.
 
+Le classement final compétitif de la Saison ne distribue jamais de ressource générale d’invocation ni d’invocations de créatures. Cette interdiction ne concerne pas les récompenses uniques d’étages ni les autres jalons personnels de progression.
+
 Malgré le reset de la progression jouable, les performances importantes, notamment un rang final ou un étage remarquable, peuvent alimenter le futur `19-ACHIEVEMENTS.md`. Les Hauts Faits obtenus constitueront leur conservation durable ; aucun historique saisonnier séparé de la Tour n’est nécessaire.
 
 Certains hauts faits ou éléments de prestige pourront éventuellement accorder des récompenses strictement cosmétiques ou honorifiques. Les contours ou bordures de carte constituent une piste privilégiée ; des titres, badges ou autres éléments visuels restent également possibles. Aucune récompense précise n’est obligatoire ou validée à ce stade et aucun bonus de puissance ne peut en résulter.
@@ -380,6 +397,7 @@ Le futur `19-ACHIEVEMENTS.md` devra définir les hauts faits, leur structure et 
 | [`01-GAME_DESIGN_DOCUMENT.md`](./01-GAME_DESIGN_DOCUMENT.md) | Boucles globales, mode Histoire, onboarding et vertical slice |
 | [`02-COMBAT.md`](./02-COMBAT.md) | Moteur de combat, timeout standard et objectifs propres aux modes |
 | [`08-ITEMS.md`](./08-ITEMS.md) | Sets, composants, fabrication et principes des tables de loot |
+| [`09-GACHA.md`](./09-GACHA.md) | Ressource générale d’invocation utilisée dans certaines récompenses uniques |
 | [`10-PROGRESSION.md`](./10-PROGRESSION.md) | XP, déblocages, énergie générale et exceptions locales de défaite |
 | [`12-MODES.md`](./12-MODES.md) | Contrats transversaux et statuts de périmètre |
 | [`16-SEASONS.md`](./16-SEASONS.md) | Cadre transversal commun aux Saisons sans transfert des règles PvE |
@@ -402,14 +420,14 @@ Le futur `19-ACHIEVEMENTS.md` devra définir les hauts faits, leur structure et 
 
 * La liste des boss, leurs contenus concrets, leurs rotations et leurs durées de disponibilité.
 * Leur courbe de difficulté et leurs coûts en énergie.
-* Leurs tables de loot, taux, composants, recettes et récompenses de palier.
-* La progression précise du loot et les règles chiffrées du farming du palier précédent.
+* Leurs tables de loot, taux, composants, recettes et récompenses de first clear de niveau.
+* La progression précise du loot et les règles chiffrées du farming du niveau précédent.
 
 ### 11.3. World Boss
 
 * La fréquence, la durée et les paramètres exacts de chaque apparition.
 * Le coût normal en énergie et l’ajustement éventuel du multiplicateur tardif `×1,5`.
-* La formule de scaling, les PV, la puissance et les tables de récompenses.
+* La formule de scaling, les PV, la puissance et les tables de récompenses, dont la quantité éventuelle de ressource générale d’invocation.
 * Les éventuelles conditions d’éligibilité supplémentaires à la participation minimale.
 * La présentation exacte du résumé et les indicateurs communautaires supplémentaires.
 
@@ -418,7 +436,7 @@ Le futur `19-ACHIEVEMENTS.md` devra définir les hauts faits, leur structure et 
 * La courbe de difficulté et ses variations concrètes entre les Saisons.
 * Le coût d’une tentative et la valeur de l’XP de défaite.
 * Les adversaires, compositions, thèmes et modificateurs concrets.
-* Les tables de loot saisonnières.
+* Les tables de loot saisonnières et la répartition des récompenses uniques de progression, dont les quantités éventuelles de ressource générale d’invocation.
 * Les hauts faits, récompenses cosmétiques et contours ou bordures de carte éventuels.
 
 Ces éléments relèvent du balancing, du content design, de la production saisonnière, de l’UI, de l’Art ou de futurs référentiels. Ils ne constituent pas des questions structurelles bloquant le statut actuel du document.

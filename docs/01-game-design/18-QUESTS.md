@@ -81,6 +81,8 @@ Les quêtes journalières accordent des récompenses ayant un effet sur la progr
 
 Elles constituent notamment une source validée de la ressource générale d’invocation.
 
+Cette ressource peut apparaître en petite quantité sur certaines quêtes journalières sans être obligatoire sur chacune des trois quêtes.
+
 Des paquets de skins de carte peuvent également être obtenus gratuitement grâce aux quêtes. Pour une même série, un paquet obtenu en jouant utilise les mêmes skins, probabilités, quantité de contenu, règles de doublons et règles d’ouverture que le paquet acheté correspondant.
 
 La présence possible d’une récompense cosmétique ne transforme pas une quête en offre commerciale et ne permet aucune conversion de la boutique cosmétique vers la puissance.
@@ -117,7 +119,9 @@ Elles ne recréent aucun système général de quêtes quotidiennes ou hebdomada
 
 ### 9.2. Récompenses
 
-Les quêtes saisonnières donnent principalement de petites récompenses issues des systèmes normaux du jeu, par exemple de la monnaie générale, des ressources d’invocation, des composants ou de petites ressources de progression.
+Les quêtes saisonnières donnent principalement de petites récompenses issues des systèmes normaux du jeu, par exemple de la monnaie générale, de la ressource générale d’invocation, des composants ou de petites ressources de progression.
+
+Les quêtes saisonnières individuelles comme les quêtes saisonnières de Guilde peuvent accorder de petites quantités de ressource générale d’invocation. Cette récompense reste optionnelle pour chaque quête et sa répartition relève du content design et du balancing.
 
 Ces familles illustrent l’échelle attendue sans imposer la liste de chaque Saison. Une simple quête saisonnière ne doit pas accorder directement un cosmétique exclusif important.
 
@@ -171,7 +175,7 @@ Toute interaction future entre ces catégories devra préserver :
 * Le wording, les icônes et la présentation finale.
 * Le moment exact de déblocage et le contenu du tutoriel.
 * Les listes et conditions concrètes des quêtes saisonnières individuelles et de Guilde.
-* Les petites récompenses saisonnières et leurs quantités.
+* Les petites récompenses saisonnières, la répartition de la ressource générale d’invocation et leurs quantités.
 * La présence et le contenu exacts d’une éventuelle récompense de complétion globale.
 
 ## 13. Questions ouvertes

@@ -174,6 +174,8 @@ Les quêtes de Guilde apportent des objectifs collectifs supplémentaires sans r
 
 Une quête saisonnière accorde principalement de petites récompenses issues des systèmes normaux du jeu. Une petite quête ne doit pas suffire à accorder directement un cosmétique exclusif important.
 
+Les quêtes saisonnières individuelles et les quêtes saisonnières de Guilde peuvent notamment accorder de petites quantités de ressource générale d’invocation, sans que cette récompense soit obligatoire sur chaque quête.
+
 Une récompense plus intéressante, par exemple un paquet cosmétique, peut éventuellement récompenser la complétion de l’ensemble des quêtes de la Saison. Cette possibilité n’est pas obligatoire pour chaque Saison.
 
 À la clôture :
@@ -207,6 +209,14 @@ Le détail fonctionnel appartient au futur `19-ACHIEVEMENTS.md`, qui reste prév
 La référence normale d’une récompense temporelle de fin de Saison correspond à l’inter-saison, soit environ une semaine. Une récompense non récupérée avant son expiration est perdue sans crédit automatique ni récupération rétroactive.
 
 Les catégories de récompenses, leur disponibilité, leur éligibilité et leur récupération manuelle restent régies transversalement par [`10-PROGRESSION.md`](./10-PROGRESSION.md).
+
+### 12.1. Classements finaux compétitifs
+
+Les classements finaux compétitifs saisonniers ne distribuent jamais de ressource générale d’invocation ni d’invocations de créatures.
+
+Cette règle s’applique notamment au PvP, à la Tour infinie, au Boss de Guilde et à tout futur mode utilisant un classement final compétitif saisonnier comparable. Leurs récompenses privilégient le prestige, les Hauts Faits, les titres, badges, personnalisations et cosmétiques afin d’éviter une boucle dans laquelle les joueurs déjà les plus performants obtiendraient davantage de puissance leur permettant d’accroître encore leur avantage.
+
+Cette interdiction ne concerne pas les jalons personnels de progression accessibles au sein de ces modes, dont les récompenses restent définies par leurs référentiels propriétaires.
 
 ## 13. Cosmétiques saisonniers
 
@@ -249,6 +259,7 @@ Une Saison du jeu ne constitue jamais une condition d’évolution, car sa fin r
 | --- | --- |
 | [`01-GAME_DESIGN_DOCUMENT.md`](./01-GAME_DESIGN_DOCUMENT.md) | Place des Saisons dans l’expérience de long terme |
 | [`07-EVOLUTIONS.md`](./07-EVOLUTIONS.md) | Exclusion des Saisons du jeu et conditions calendaires récurrentes |
+| [`09-GACHA.md`](./09-GACHA.md) | Ressource générale d’invocation et séparation avec les acquisitions directes |
 | [`10-PROGRESSION.md`](./10-PROGRESSION.md) | Disponibilité, éligibilité et récupération des récompenses |
 | [`11-COLLECTION.md`](./11-COLLECTION.md) | Visibilité durable des anciens cosmétiques saisonniers |
 | [`12-MODES.md`](./12-MODES.md) | Frontière entre cadre transversal et règles locales des modes |
@@ -271,7 +282,7 @@ Le cadre fonctionnel transversal est établi. Restent volontairement ouverts au 
 * les exceptions éventuelles à la durée de référence d’une inter-saison ;
 * les modificateurs concrets du PvP et les variations de la Tour ;
 * les Boss de Guilde, Skills, phases et mécaniques de chaque Saison ;
-* les listes et récompenses concrètes des quêtes saisonnières ;
+* les listes et récompenses concrètes des quêtes saisonnières, dont la répartition et les quantités éventuelles de ressource générale d’invocation ;
 * le contenu éventuel de la récompense de complétion globale ;
 * les Hauts Faits précis de chaque Saison ;
 * les cosmétiques saisonniers concrets ;

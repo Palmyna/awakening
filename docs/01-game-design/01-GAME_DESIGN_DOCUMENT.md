@@ -816,6 +816,8 @@ Un lien avec cette créature est établi lors de son obtention.
 
 Une ressource générale principale permet d’effectuer les invocations de créatures.
 
+Elle constitue une récompense de progression obtenue par le gameplay. Certaines activités, quêtes, récompenses uniques, jalons de progression et Events peuvent en distribuer de petites quantités maîtrisées, sans rendre sa présence obligatoire dans chaque récompense ni réserver son obtention à un mode particulier.
+
 Elle est obtenue principalement grâce :
 
 * au mode Histoire ;
@@ -825,6 +827,8 @@ Elle est obtenue principalement grâce :
 * aux événements.
 
 Elle reste entièrement séparée de l’économie cosmétique.
+
+Sa distribution doit rester suffisamment limitée pour qu’aucune activité particulière ne devienne obligatoire afin de progresser normalement. Les classements finaux compétitifs saisonniers n’en distribuent jamais et n’accordent pas non plus d’invocations de créatures ; cette interdiction ne concerne pas les jalons personnels de progression des modes concernés.
 
 ### 15.4. Premières acquisitions
 
@@ -941,6 +945,8 @@ Le jeu peut commencer sans Saison active. Lorsqu’elles sont lancées, les Sais
 Une nouvelle Saison peut réinitialiser uniquement les progressions, classements ou scores explicitement saisonniers ; elle ne remet jamais à zéro la progression durable générale du joueur.
 
 Les Events restent distincts. Ils constituent de petites animations temporaires utilisant principalement les systèmes et modes existants pour proposer quelques objectifs thématiques et des récompenses adaptées. Ils ne doivent normalement pas nécessiter un nouveau mode, une progression complexe ou une production lourde spécifique.
+
+Les classements finaux compétitifs saisonniers privilégient le prestige, les Hauts Faits, les titres, badges, personnalisations et cosmétiques. Ils ne distribuent ni ressource générale d’invocation ni invocations de créatures, contrairement aux jalons personnels de progression qui peuvent en proposer selon leur référentiel propriétaire.
 
 Les dates, durées réelles, thèmes, contenus et récompenses exactes des Saisons et des Events ne sont pas définis dans le GDD.
 

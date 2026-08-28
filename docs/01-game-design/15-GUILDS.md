@@ -346,6 +346,8 @@ Certains paliers peuvent générer des récompenses personnelles pour tous les m
 
 Ces récompenses ne sont pas rétroactives. Un membre qui devient éligible après le franchissement d’un palier ne génère aucune ancienne récompense de ce palier.
 
+Lorsque cela est pertinent, certaines de ces récompenses personnelles de progression peuvent inclure une petite quantité de ressource générale d’invocation. Cette possibilité n’impose pas cette ressource à chaque palier.
+
 Le contenu, la fréquence et les quantités exactes restent à définir. Les exemples de récompenses ou de fréquences envisagés pendant le cadrage restent illustratifs et ne constituent aucune règle obligatoire.
 
 ### 17.2. Récompenses de classement final
@@ -355,6 +357,8 @@ Les récompenses principales du classement final appartiennent de préférence �
 Une performance saisonnière importante peut valider un futur Haut Fait de Guilde, acquis définitivement et intégré à l’histoire permanente de la Guilde. Ces Hauts Faits portent la mémoire durable des résultats saisonniers pertinents sans exiger un historique séparé de toutes les anciennes Saisons.
 
 Aucune récompense de classement ne doit fournir de puissance exclusive ou obligatoire.
+
+Le classement final saisonnier du Boss de Guilde ne distribue jamais de ressource générale d’invocation ni d’invocations de créatures. Ses récompenses privilégient le prestige collectif de la Guilde, les Hauts Faits, les titres, les personnalisations et les éléments cosmétiques.
 
 ### 17.3. Récupération manuelle
 
@@ -507,7 +511,7 @@ Une Expédition terminée à 100 % reste consultable avec son lore, ses découve
 
 Une petite tâche n’accorde pas nécessairement de récompense matérielle personnelle. Sa contribution peut uniquement produire une progression, un indice, une découverte, du lore, une nouvelle mission ou une nouvelle zone.
 
-La fin principale peut générer une récompense personnelle unique contenant notamment de la monnaie générale, des composants généraux, des ressources de progression déjà disponibles ailleurs, des éléments thématiques, des cosmétiques ou des éléments de collection. Les contenus, quantités et valeurs exacts restent à définir.
+La fin principale peut générer une récompense personnelle unique contenant notamment de la monnaie générale, des composants généraux, une petite quantité de ressource générale d’invocation, d’autres ressources de progression déjà disponibles ailleurs, des éléments thématiques, des cosmétiques ou des éléments de collection. La ressource générale d’invocation constitue une récompense possible et non un contenu obligatoire de chaque Expédition. Les contenus, quantités et valeurs exacts restent à définir.
 
 La complétion à 100 % soutient principalement les Hauts Faits, le prestige, l’historique, les titres, la personnalisation de Guilde et les récompenses cosmétiques ou symboliques. Une récompense personnelle supplémentaire reste possible mais n’est pas obligatoire.
 
@@ -578,6 +582,7 @@ Le futur `21-SOCIAL_AND_COMMUNICATION.md`, prévu mais non créé, portera le ch
 | [`01-GAME_DESIGN_DOCUMENT.md`](./01-GAME_DESIGN_DOCUMENT.md) | Place des Guildes dans l’expérience de long terme |
 | [`02-COMBAT.md`](./02-COMBAT.md) | Moteur standard utilisé par le Boss de Guilde |
 | [`08-ITEMS.md`](./08-ITEMS.md) | Composants de fabrication demandables et catégories explicitement exclues |
+| [`09-GACHA.md`](./09-GACHA.md) | Ressource générale d’invocation utilisée dans certaines récompenses personnelles |
 | [`10-PROGRESSION.md`](./10-PROGRESSION.md) | Énergie générale, disponibilité et éligibilité des récompenses |
 | [`11-COLLECTION.md`](./11-COLLECTION.md) | Collection de créatures éventuellement sollicitée par certaines tâches |
 | [`12-MODES.md`](./12-MODES.md) | Contrats transversaux des modes et résultats |
@@ -602,8 +607,8 @@ Le futur `19-ACHIEVEMENTS.md` devra prendre en charge les Hauts Faits de Guilde 
 * La durée définitive avant éligibilité d’un nouveau membre aux systèmes de Guilde.
 * Le coût exact en énergie des tentatives du Boss de Guilde.
 * Les courbes, coefficients et paliers mécaniques de difficulté du Boss.
-* Les paliers de récompense du Boss, leur fréquence, leur contenu et leur équilibrage.
-* Les récompenses exactes du classement final.
+* Les paliers de récompense du Boss, leur fréquence, leur contenu, les quantités éventuelles de ressource générale d’invocation et leur équilibrage.
+* Les récompenses honorifiques ou cosmétiques exactes du classement final.
 * La durée exacte des récompenses temporelles concernées.
 * Les protections anti-abus détaillées.
 * Le cadrage détaillé des Hauts Faits de Guilde et d’Expédition.
@@ -611,7 +616,7 @@ Le futur `19-ACHIEVEMENTS.md` devra prendre en charge les Hauts Faits de Guilde 
 * Le nombre moyen de zones, missions et tâches des Expéditions.
 * Le catalogue concret des mini-mécaniques et le contenu de chaque Expédition.
 * Le nombre de tentatives défini par chaque tâche concrète.
-* Les récompenses exactes des Expéditions et de leur complétion à 100 %.
+* Les récompenses exactes des Expéditions, dont les quantités éventuelles de ressource générale d’invocation, et de leur complétion à 100 %.
 * La liste définitive des composants demandables et la limite propre à chacun.
 * Les éventuels garde-fous économiques supplémentaires révélés par les tests.
 * Les détails finaux d’interface et de présentation.

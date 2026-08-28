@@ -199,6 +199,8 @@ Cette progression :
 * détermine le niveau d’objet des équipements nouvellement générés ou fabriqués ;
 * peut débloquer progressivement des couches de potentiel et de complexité des équipements selon les règles du référentiel correspondant.
 
+La récompense de certains niveaux ou jalons du compte peut inclure une petite quantité de ressource générale d’invocation. Cette possibilité n’impose pas cette ressource à chaque niveau ; les niveaux concernés, les quantités et la fréquence relèvent du balancing et du content design.
+
 Les fonctionnalités, systèmes, modes, activités et principales étapes d’onboarding sont débloqués principalement par les jalons du mode Histoire. Le niveau de compte ne constitue pas par défaut un second système parallèle imposant des seuils artificiels pour ces déblocages.
 
 Des usages secondaires du niveau de compte pourront être ajoutés ultérieurement s’ils sont explicitement justifiés et ne concurrencent pas le mode Histoire comme structure principale de déblocage.
@@ -339,7 +341,7 @@ Cette architecture définit une modalité réutilisable de remise des récompens
 * Les quinze multiplicateurs d’étoiles.
 * Les quantités et niveaux d’étoiles exigés pour les matériaux.
 * La formule exacte du score de Puissance.
-* Les récompenses du niveau de compte.
+* Le contenu détaillé des récompenses du niveau de compte, notamment les niveaux ou jalons accordant de la ressource générale d’invocation, leurs quantités et leur fréquence.
 * La courbe reliant le niveau du compte aux plages de génération des équipements.
 * Les éventuels usages secondaires explicitement justifiés du niveau de compte.
 * La méthode d’obtention, la rareté et le rythme de distribution de l’objet de redistribution des caractéristiques.
