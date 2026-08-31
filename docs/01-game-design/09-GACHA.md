@@ -36,7 +36,7 @@ L’acquisition sert donc le développement à long terme des créatures et la d
 Les invocations doivent être accessibles principalement grâce :
 
 * au mode Histoire ;
-* aux quêtes journalières ;
+* aux quêtes ;
 * aux activités ;
 * aux récompenses de progression ;
 * aux Events.
@@ -117,7 +117,7 @@ Le modèle initial utilise une ressource générale principale pour effectuer le
 
 Cette ressource constitue une récompense de progression obtenue par le gameplay. Elle peut être distribuée en petites quantités maîtrisées par certaines activités, quêtes, récompenses uniques, jalons de progression et Events, sans être obligatoire dans chaque récompense concernée.
 
-Elle est obtenue principalement grâce au mode Histoire, aux trois quêtes journalières, aux autres activités, aux récompenses de progression et aux Events. Elle n’est exclusive à aucun mode et sa distribution doit rester suffisamment limitée pour qu’aucune activité particulière ne devienne obligatoire afin de progresser normalement.
+Elle est obtenue principalement grâce au mode Histoire, aux quêtes, aux autres activités, aux récompenses de progression et aux Events. Elle n’est exclusive à aucun mode et sa distribution doit rester suffisamment limitée pour qu’aucune activité particulière ne devienne obligatoire afin de progresser normalement.
 
 La ressource générale finance les invocations ordinaires selon les règles du présent document. Son attribution ne constitue ni une invocation directe, ni une acquisition directe exceptionnelle de créature.
 
@@ -271,7 +271,7 @@ La présentation artistique peut employer un œuf, une éclosion, un rituel, un 
 | [`15-GUILDS.md`](./15-GUILDS.md) | Récompenses du Boss et des Expéditions de Guilde |
 | [`16-SEASONS.md`](./16-SEASONS.md) | Exclusion transversale des classements finaux compétitifs saisonniers |
 | [`17-EVENTS.md`](./17-EVENTS.md) | Récompenses événementielles et source d’invocations |
-| [`18-QUESTS.md`](./18-QUESTS.md) | Quêtes journalières comme source d’invocations |
+| [`18-QUESTS.md`](./18-QUESTS.md) | Quêtes périodiques et saisonnières comme sources possibles de ressource générale |
 | [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Parcours d’invocation, révélation et feedback de capacité |
 | [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Séparation économique et exclusions du modèle de lancement |
 | [`01-LORE.md`](../02-world/01-LORE.md) | Échos, manifestations, Ancrage et dispositifs d’invocation |

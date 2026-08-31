@@ -1,197 +1,298 @@
 # Project Awakening — Quêtes
 
-**Statut :** Draft de conception — à relire et valider
+**Statut :** Rédigé — référence actuelle, à maintenir à jour
 
 ## 1. Rôle et périmètre du document
 
-Ce document définit le fonctionnement général actuellement validé :
+Ce document définit le fonctionnement commun actuellement validé :
 
-* des trois quêtes journalières ;
+* des quêtes journalières ;
+* des quêtes hebdomadaires ;
+* des quêtes mensuelles ;
 * des quêtes saisonnières individuelles ;
 * des quêtes saisonnières de Guilde.
 
-Les autres catégories éventuelles de quêtes — narratives, hebdomadaires ou propres à un autre mode — ne sont pas validées. Elles ne doivent pas être déduites du seul emploi générique du mot « quête ».
+Les journalières, hebdomadaires et mensuelles forment les **quêtes périodiques**. Elles partagent un même socle fonctionnel tout en utilisant des durées, des pools, des objectifs et des récompenses adaptés à leur horizon.
 
-Les missions temporaires des Events constituent un système distinct défini dans [`17-EVENTS.md`](./17-EVENTS.md). Le présent document porte néanmoins le principe transversal de non-rétroactivité commun aux missions, quêtes et objectifs comparables.
+Les quêtes saisonnières utilisent le calendrier de la Saison globale et restent distinctes des quêtes périodiques. Les missions temporaires des Events constituent un autre système, défini dans [`17-EVENTS.md`](./17-EVENTS.md).
 
-## 2. Fonction des quêtes journalières
+Les listes concrètes, valeurs d’objectifs, pondérations, quantités de récompenses et détails graphiques relèvent du content design, du balancing, de l’implémentation et de l’UI.
 
-Les quêtes journalières encouragent le retour au jeu et la variation des activités sans devenir obligatoires pour progresser normalement.
+## 2. Fonction des quêtes
 
-Elles s’intègrent à une session mobile libre : le joueur peut les accomplir, progresser dans le mode Histoire, gérer ses créatures, préparer ses équipes ou poursuivre un autre objectif personnel sans suivre une liste d’actions obligatoire.
+Les quêtes périodiques servent à :
 
-Les quêtes doivent rester compatibles avec des actions et activités réellement utiles à la boucle générale. Elles ne doivent pas pousser le joueur vers une fonctionnalité inaccessible ou une dépense.
+* encourager le retour régulier au jeu ;
+* proposer de petits objectifs complémentaires ;
+* favoriser la variété sans imposer une façon unique de jouer ;
+* distribuer régulièrement de petites récompenses ;
+* accompagner les activités que le joueur réalise déjà.
 
-## 3. Attribution quotidienne
+Elles ne doivent pas transformer une session en checklist obligatoire. Le joueur doit pouvoir progresser normalement sans optimiser constamment ses actions autour des quêtes.
 
-Chaque jour, le joueur reçoit exactement trois quêtes journalières aléatoires tirées dans une liste prédéfinie.
+Les quêtes saisonnières ajoutent des objectifs liés à la Saison globale sans constituer une progression générale de Saison ni devenir nécessaires à la progression normale.
 
-Les trois quêtes proposées doivent :
+## 3. Quantités de référence
 
-* utiliser uniquement des fonctionnalités déjà débloquées ;
-* rester réalisables sans durée excessive ;
-* encourager une certaine variété d’activités ;
-* accorder des récompenses ayant un effet sur la progression ;
-* rester facultatives pour la progression normale.
+Les références initiales de balancing sont :
 
-Le système de sélection doit empêcher de proposer une quête inaccessible en raison de l’état réel du compte.
+* **3 quêtes journalières** ;
+* **4 quêtes hebdomadaires** ;
+* **5 quêtes mensuelles**.
 
-La liste concrète, les catégories, les pondérations et les protections contre des combinaisons inadaptées restent à définir.
+Ces trois valeurs sont indépendantes, ajustables séparément et non structurelles. Une modification du nombre d’une catégorie n’entraîne pas automatiquement celle des deux autres et ne nécessite aucun changement d’architecture.
 
-## 4. Cycle journalier et absence de punition
+## 4. Calendrier des quêtes périodiques
 
-Une journée manquée fait perdre l’occasion de réaliser les quêtes de cette journée.
+Les quêtes périodiques utilisent les périodes calendaires suivantes.
 
-Elle ne provoque :
+| Catégorie | Début de la période | Fin de la période |
+| --- | --- | --- |
+| Journalière | `23:00` | `22:59` le lendemain |
+| Hebdomadaire | dimanche à `23:00` | dimanche suivant à `22:59` |
+| Mensuelle | dernier jour du mois précédent à `23:00` | dernier jour du mois concerné à `22:59` |
 
-* aucune perte de progression générale ;
-* aucune suppression d’une récompense déjà obtenue ;
-* aucune perte d’énergie accumulée ;
-* aucune rupture d’une série de connexion punitive.
+Au début de chaque nouvelle période, la sélection correspondante est renouvelée.
 
-Aucune série de connexion punitive n’est prévue.
+Au lancement, l’heure de référence est celle de **Bruxelles**. Si plusieurs régions ou serveurs existent ultérieurement, le principe reste un reset à `23:00` dans l’heure de référence de l’environnement concerné. Le choix initial de Bruxelles ne constitue donc pas une dépendance technique universelle ou définitive.
 
-L’heure de renouvellement, le traitement d’une quête en cours au moment du renouvellement et les règles éventuelles de récupération d’une récompense non réclamée restent à définir.
+## 5. Génération et pools
 
-## 5. Conditions de quête
+Au début de chaque période, le joueur reçoit une nouvelle sélection tirée dans un pool adapté. Les pools journaliers, hebdomadaires et mensuels peuvent être différents.
 
-Une condition doit être formulée de manière mesurable et compréhensible à partir d’un état ou d’une action réellement suivi par le jeu.
+La sélection doit vérifier :
 
-Elle doit préciser ce qui fait progresser la quête et ne doit pas dépendre d’une fonctionnalité non débloquée.
+* les fonctionnalités réellement débloquées ;
+* les actions et activités réellement disponibles ;
+* l’état actuel du compte ;
+* l’absence de condition impossible ;
+* l’absence de doublon exact ;
+* l’absence de combinaison manifestement redondante.
 
-Les types concrets de conditions ne sont pas encore validés. La documentation existante ne permet donc pas d’imposer, par exemple, des objectifs de victoire, d’invocation, de fabrication, de progression ou de collection comme catégories obligatoires.
+Les pondérations, protections techniques et algorithmes de sélection restent à définir. Deux formulations techniquement différentes ne doivent pas être réunies lorsqu’elles demandent en pratique presque la même action.
 
-Les quêtes journalières ne constituent pas des conditions d’évolution. Le système d’évolution n’utilise pas de compteurs historiques comme un nombre de combats, de victoires ou d’actions déjà accomplies.
+## 6. Accessibilité et conditions
 
-## 6. Progression et validation
+Une quête périodique utilise uniquement une fonctionnalité déjà débloquée et une action que le joueur peut raisonnablement réaliser dans l’état réel de son compte.
 
-L’interface doit permettre au joueur de connaître :
+Elle ne doit jamais imposer :
 
-* l’objectif de chaque quête ;
-* sa progression actuelle ;
-* sa condition d’achèvement ;
-* sa récompense ;
-* le temps restant avant le renouvellement.
+* une créature ou une famille précise ;
+* un Skill précis ;
+* un skin précis ;
+* un Artefact ou un équipement précis ;
+* un autre contenu que le joueur pourrait ne pas posséder.
 
-Les règles de validation automatique ou de récupération manuelle d’une récompense ne sont pas encore définies.
+Les objectifs restent génériques, mesurables et compréhensibles. Ils peuvent, à titre illustratif, porter sur des combats, dégâts, soins, activités, invocations lorsque le système est débloqué, fabrication accessible ou évolutions réalisables sur une période adaptée. Ces exemples ne constituent aucune taxonomie fermée.
 
-Une quête ne doit jamais demander au joueur d’effectuer un achat réel. Les ouvertures ou acquisitions cosmétiques payantes ne constituent pas un prérequis nécessaire à une progression journalière normale.
+Chaque quête indique clairement ce qui la fait progresser, sa condition d’achèvement et la progression suivie par le jeu.
 
-### 6.1. Non-rétroactivité des missions et objectifs
+Les quêtes périodiques ne constituent pas des conditions d’évolution et n’introduisent aucun compteur historique dans le système d’évolution.
+
+## 7. Adaptation à la périodicité
+
+Les trois catégories périodiques ne sont pas les mêmes objectifs avec de simples multiplicateurs différents.
+
+Les journalières restent légères, rapides et réalisables dans une ou quelques sessions raisonnables. Les hebdomadaires peuvent demander plusieurs sessions, davantage d’actions ou une variété d’activités sur plusieurs jours. Les mensuelles peuvent utiliser des objectifs plus conséquents ou des actions naturellement plus rares, réalisables sur l’ensemble du mois.
+
+La conception de chaque objectif tient compte :
+
+* de sa quantité ;
+* du type et de la fréquence naturelle de l’action ;
+* du temps disponible ;
+* de l’effort attendu ;
+* de l’état réel du compte.
+
+Un objectif comme faire évoluer plusieurs créatures illustre une direction potentiellement adaptée à une mensuelle sans devenir une catégorie obligatoire ni une quête journalière validée.
+
+## 8. Absence de streak punitive
+
+Les quêtes hebdomadaires et mensuelles ne doivent pas recréer indirectement une obligation quotidienne parfaite.
+
+Elles ne demandent pas de se connecter chaque jour, de maintenir une série de connexion ou d’accomplir une quête journalière pendant un nombre imposé de jours distincts. Le joueur répartit librement son effort pendant la période.
+
+Une période manquée ne retire aucune progression durable générale, aucune énergie accumulée et aucune récompense déjà générée avant son expiration propre.
+
+## 9. Non-rétroactivité et progression simultanée
 
 Une mission, quête ou objectif comparable ne comptabilise pas rétroactivement les actions réalisées avant son activation ou avant qu’il devienne accessible au joueur, sauf exception explicitement documentée.
 
-La progression commence seulement lorsque l’objectif est à la fois actif et accessible au joueur. Cette règle s’applique notamment aux quêtes journalières, aux quêtes saisonnières et aux missions d’Event ; elle ne transforme pas ces catégories en un système commun.
+Cette règle s’applique aux quêtes journalières, hebdomadaires, mensuelles, saisonnières et aux missions d’Event selon leur référentiel propriétaire.
 
-## 7. Récompenses
+Une même action peut en revanche faire progresser simultanément tous les objectifs actifs dont elle remplit les conditions. Un même combat peut ainsi progresser une journalière, une hebdomadaire, une mensuelle, une quête saisonnière et une mission d’Event sans exiger des actions séparées artificiellement.
 
-Les quêtes journalières accordent des récompenses ayant un effet sur la progression.
+## 10. Reroll des quêtes périodiques
 
-Elles constituent notamment une source validée de la ressource générale d’invocation.
+Chaque catégorie périodique possède un reroll gratuit par période :
 
-Cette ressource peut apparaître en petite quantité sur certaines quêtes journalières sans être obligatoire sur chacune des trois quêtes.
+* un reroll journalier ;
+* un reroll hebdomadaire ;
+* un reroll mensuel.
 
-Des paquets de skins de carte peuvent également être obtenus gratuitement grâce aux quêtes. Pour une même série, un paquet obtenu en jouant utilise les mêmes skins, probabilités, quantité de contenu, règles de doublons et règles d’ouverture que le paquet acheté correspondant.
+Le reroll s’applique uniquement à une quête non terminée. Il :
 
-La présence possible d’une récompense cosmétique ne transforme pas une quête en offre commerciale et ne permet aucune conversion de la boutique cosmétique vers la puissance.
+* remplace définitivement la quête choisie ;
+* supprime toute sa progression ;
+* génère une nouvelle quête valide et accessible ;
+* recommence sa progression à zéro ;
+* évite les doublons et redondances manifestes avec les autres quêtes présentes.
 
-Les types exacts de récompenses, leurs quantités et leur répartition entre les trois quêtes restent à définir et à équilibrer.
+Une quête terminée ne peut pas être rerollée. Le reroll gratuit n’a aucun coût, ne se cumule pas, n’est pas stocké et n’est jamais reporté à la période suivante.
 
-Certaines quêtes peuvent également accorder ponctuellement de l’énergie générale. Celle-ci est ajoutée directement à la réserve commune, sans consommable, ticket ou ressource parallèle, selon [`10-PROGRESSION.md`](./10-PROGRESSION.md). Cette possibilité ne rend pas l’énergie obligatoire dans les trois récompenses quotidiennes.
+Les quêtes saisonnières individuelles et de Guilde ne possèdent aucun reroll.
 
-## 8. Déblocages et onboarding
+## 11. Suivi, achèvement et récupération
 
-Les fonctionnalités sont principalement débloquées par des jalons du mode Histoire et accompagnées d’un tutoriel court.
+L’interface affiche directement la progression utile de chaque quête, par exemple une valeur courante rapportée à son objectif, plutôt qu’un simple statut générique `En cours` lorsque le compteur est plus informatif.
 
-La liste de quêtes disponible pour un compte doit évoluer avec ces déblocages. Une quête utilisant une fonctionnalité nouvellement accessible peut apparaître uniquement lorsque le joueur est en mesure de comprendre et d’utiliser cette fonctionnalité.
+Lorsqu’une condition est remplie :
 
-Le moment exact du déblocage des quêtes journalières et leur tutoriel ne sont pas encore définis.
+* la quête est terminée ;
+* sa récompense devient récupérable ;
+* elle est mise en évidence ;
+* le joueur doit la récupérer manuellement.
 
-## 9. Quêtes saisonnières
+La récompense n’est pas créditée automatiquement. Après récupération, la quête passe en état `Récupéré` ou équivalent et peut être visuellement atténuée.
 
-Une Saison peut proposer des quêtes saisonnières individuelles et des quêtes saisonnières de Guilde. Elles restent totalement distinctes des trois quêtes journalières et ne modifient ni leur nombre, ni leur attribution aléatoire, ni leur renouvellement quotidien.
+## 12. Fin de période et récompenses non réclamées
 
-Les quêtes saisonnières :
+À la fin d’une période périodique :
 
-* restent disponibles pendant la Saison concernée ;
-* ne disparaissent pas selon une rotation hebdomadaire artificielle ;
-* restent relativement légères ;
-* ne doivent pas devenir nécessaires à la progression normale ;
-* ne constituent ni un niveau de Saison, ni un parcours global de récompenses.
-
-Une quête déjà disponible ne doit pas être retirée après quelques jours uniquement afin de créer de la pression.
-
-### 9.1. Quêtes saisonnières de Guilde
-
-Les quêtes saisonnières de Guilde apportent des objectifs collectifs supplémentaires. Elles restent légères, accessibles et non contraignantes.
-
-Elles ne recréent aucun système général de quêtes quotidiennes ou hebdomadaires de Guilde. Leur application au contexte des Guildes reste cohérente avec [`15-GUILDS.md`](./15-GUILDS.md).
-
-### 9.2. Récompenses
-
-Les quêtes saisonnières donnent principalement de petites récompenses issues des systèmes normaux du jeu, par exemple de la monnaie générale, de la ressource générale d’invocation, de l’énergie générale, des composants ou de petites ressources de progression.
-
-Les quêtes saisonnières individuelles comme les quêtes saisonnières de Guilde peuvent accorder de petites quantités de ressource générale d’invocation. Cette récompense reste optionnelle pour chaque quête et sa répartition relève du content design et du balancing.
-
-Ces familles illustrent l’échelle attendue sans imposer la liste de chaque Saison. Une simple quête saisonnière ne doit pas accorder directement un cosmétique exclusif important.
-
-La complétion de l’ensemble des quêtes d’une Saison peut éventuellement accorder une récompense plus intéressante, notamment un paquet cosmétique. Cette possibilité n’est pas obligatoire et son contenu exact relève du content design et du balancing.
-
-### 9.3. Clôture
-
-À la clôture exacte de la Saison :
-
-* une quête non terminée devient immédiatement indisponible ;
+* une quête non terminée disparaît ;
+* sa progression est perdue ;
 * elle ne peut plus progresser ;
+* aucune progression n’est transférée à une future quête similaire ;
+* la nouvelle sélection de la catégorie devient active.
+
+Une quête terminée avant le reset a déjà généré sa récompense. Si celle-ci n’a pas été réclamée :
+
+* elle quitte la liste active des quêtes ;
+* elle reste récupérable dans le centre de récompenses ;
+* elle suit la fenêtre temporelle générale d’environ **sept jours** définie dans [`10-PROGRESSION.md`](./10-PROGRESSION.md) ;
+* elle expire définitivement si elle n’est pas réclamée à temps.
+
+La même logique s’applique aux journalières, hebdomadaires, mensuelles et quêtes saisonnières terminées. Le centre de récompenses affiche leur provenance et leur délai restant sans conserver artificiellement les anciennes quêtes dans les listes actives.
+
+## 13. Récompenses des quêtes
+
+Les quêtes utilisent les systèmes ordinaires de récompenses et ne constituent jamais la seule source indispensable d’une puissance durable nécessaire à la progression normale ou à la compétition.
+
+### 13.1. Journalières
+
+Les journalières peuvent notamment accorder :
+
+* de la monnaie générale ;
+* des composants ;
+* de petites ressources de progression ;
+* une petite quantité de ressource générale d’invocation ;
+* de l’énergie générale ;
+* d’autres petites récompenses adaptées.
+
+Les paquets cosmétiques ne font pas partie des récompenses ordinaires des journalières.
+
+### 13.2. Hebdomadaires et mensuelles
+
+Les hebdomadaires et mensuelles peuvent utiliser les mêmes familles de récompenses avec une importance adaptée à leur durée. Elles peuvent également proposer des paquets cosmétiques.
+
+Les récompenses mensuelles peuvent être plus importantes que les hebdomadaires lorsque l’investissement demandé le justifie, sans devenir une source exclusive de puissance indispensable.
+
+### 13.3. Règles communes
+
+L’énergie générale accordée par une quête est immédiatement ajoutée à la réserve commune, sans consommable, ticket ou ressource parallèle, selon [`10-PROGRESSION.md`](./10-PROGRESSION.md). Sa présence n’est obligatoire dans aucune catégorie.
+
+La ressource d’invocation reste la ressource générale définie dans [`09-GACHA.md`](./09-GACHA.md). Les quêtes ne créent aucun ticket spécifique, aucune monnaie parallèle ni aucun nouveau type d’invocation.
+
+Un paquet obtenu gratuitement utilise exactement le même pool, les mêmes probabilités, le même nombre de skins, les mêmes règles de doublons et les mêmes règles d’ouverture que le paquet commercial correspondant.
+
+Aucune quête ne peut exiger un achat réel, une dépense obligatoire dans la boutique, l’achat d’un skin, l’ouverture d’un contenu acheté ou l’utilisation d’un service payant.
+
+Les catégories concrètes, quantités, fréquences et répartitions restent du balancing et du content design.
+
+## 14. Quêtes saisonnières
+
+Une Saison peut proposer des quêtes saisonnières individuelles et des quêtes saisonnières de Guilde. Elles :
+
+* utilisent le calendrier de la Saison globale défini dans [`16-SEASONS.md`](./16-SEASONS.md) ;
+* restent distinctes des journalières, hebdomadaires, mensuelles et missions d’Event ;
+* sont légères, accessibles et non obligatoires pour la progression normale ;
+* ne possèdent aucun reroll ;
+* ne créent ni niveau, ni XP, ni barre globale, ni Battle Pass, ni parcours général de récompenses.
+
+Les quêtes saisonnières de Guilde constituent des objectifs collectifs supplémentaires cohérents avec [`15-GUILDS.md`](./15-GUILDS.md). Elles ne créent aucun système permanent de quêtes quotidiennes ou hebdomadaires de Guilde.
+
+### 14.1. Disponibilité progressive
+
+De nouvelles quêtes saisonnières peuvent être ajoutées progressivement pendant une Saison. Une fois disponible, une quête reste normalement accessible jusqu’à la clôture.
+
+Le content design doit éviter les ajouts trop tardifs laissant un temps irréaliste au regard de la difficulté, de la quantité demandée et de la fréquence naturelle de l’action. Les anciennes quêtes ne sont pas supprimées après quelques jours par une rotation punitive.
+
+### 14.2. Récompenses saisonnières
+
+Une quête saisonnière peut accorder de petites récompenses issues des systèmes normaux du jeu, notamment monnaie générale, composants, ressources de progression, ressource générale d’invocation ou énergie générale.
+
+Une simple quête saisonnière ne doit pas automatiquement accorder un cosmétique exclusif important. La complétion d’un ensemble de quêtes peut éventuellement débloquer une récompense globale plus intéressante, notamment un paquet cosmétique, sans que cette structure soit obligatoire pour chaque Saison.
+
+### 14.3. Clôture
+
+À la clôture de la Saison :
+
+* une quête non terminée devient indisponible et ne peut plus progresser ;
 * une quête terminée reste accomplie ;
-* sa récompense déjà gagnée peut encore être récupérée pendant l’inter-saison selon les règles de disponibilité de [`10-PROGRESSION.md`](./10-PROGRESSION.md).
+* une récompense déjà gagnée, y compris une éventuelle récompense globale, reste récupérable selon la fenêtre temporelle commune de la section 12.
 
-La même règle peut s’appliquer à une récompense globale déjà gagnée grâce à la complétion de toutes les quêtes de la Saison.
+## 15. Relation avec les Events
 
-## 10. Relation avec les Saisons, les Events et les autres objectifs
+Les missions d’Event restent totalement distinctes des quêtes. Elles ne remplacent aucune quête périodique, ne modifient ni leurs sélections ni leur calendrier et ne deviennent pas des quêtes saisonnières.
 
-Les Events proposent leurs propres missions temporaires, totalement distinctes des trois quêtes journalières et des quêtes saisonnières. Elles ne remplacent, ne réduisent et ne modifient ni la liste, ni la sélection, ni le renouvellement des quêtes journalières.
+Le joueur peut avoir simultanément des journalières, hebdomadaires, mensuelles, quêtes saisonnières et missions d’Event. Une même action peut les faire progresser en parallèle lorsque leurs conditions respectives sont remplies, sans créer de relation structurelle entre les systèmes.
 
-Les quêtes saisonnières utilisent le calendrier global de [`16-SEASONS.md`](./16-SEASONS.md). Elles constituent un parcours distinct des quêtes journalières et des missions temporaires d’Event.
+## 16. Onboarding et besoins fonctionnels d’interface
 
-Toute interaction future entre ces catégories devra préserver :
+Le système de Quêtes est introduit à un moment cohérent de la progression. Les jalons exacts et le tutoriel restent à définir, mais aucune quête ne peut apparaître avant les systèmes nécessaires à sa compréhension et à sa réalisation.
 
-* l’accessibilité des trois quêtes quotidiennes ;
-* l’absence de dépendance à un Event temporaire ;
-* la lisibilité des récompenses et des périodes ;
-* la règle selon laquelle seules les fonctionnalités débloquées sont utilisées.
+L’interface distingue clairement :
 
-## 11. Dépendances
+* les journalières ;
+* les hebdomadaires ;
+* les mensuelles ;
+* les saisonnières.
+
+Pour chaque quête, elle présente au minimum :
+
+* l’objectif et sa progression utile ;
+* la récompense ;
+* la période et le temps restant ;
+* les états terminé et récupéré ;
+* la disponibilité du reroll lorsqu’il existe.
+
+Cette séparation peut utiliser des onglets, sections, filtres ou une autre architecture. Le présent document n’impose aucun layout final ; les besoins détaillés appartiennent à [`20-UI_FLOW.md`](./20-UI_FLOW.md).
+
+## 17. Dépendances documentaires
 
 | Document | Responsabilité liée |
 | --- | --- |
-| [`01-GAME_DESIGN_DOCUMENT.md`](./01-GAME_DESIGN_DOCUMENT.md) | Session mobile et règles validées des trois quêtes |
-| [`09-GACHA.md`](./09-GACHA.md) | Ressource générale d’invocation |
-| [`10-PROGRESSION.md`](./10-PROGRESSION.md) | Récompenses ayant un effet sur la progression |
-| [`12-MODES.md`](./12-MODES.md) | Cadre commun des activités pouvant servir d’objectif |
-| [`15-GUILDS.md`](./15-GUILDS.md) | Application des quêtes saisonnières au contexte des Guildes |
-| [`16-SEASONS.md`](./16-SEASONS.md) | Calendrier, inter-saison et cadre des quêtes saisonnières |
-| [`17-EVENTS.md`](./17-EVENTS.md) | Missions temporaires distinctes et application locale de la non-rétroactivité |
-| [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Présentation, suivi et récupération |
-| [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Paquets gratuits et séparation économique |
+| [`01-GAME_DESIGN_DOCUMENT.md`](./01-GAME_DESIGN_DOCUMENT.md) | Place des quêtes dans la session et les objectifs du joueur |
+| [`09-GACHA.md`](./09-GACHA.md) | Ressource générale d’invocation distribuée par certaines quêtes |
+| [`10-PROGRESSION.md`](./10-PROGRESSION.md) | Énergie générale et fenêtre temporelle des récompenses non réclamées |
+| [`12-MODES.md`](./12-MODES.md) | Activités pouvant faire progresser des objectifs |
+| [`15-GUILDS.md`](./15-GUILDS.md) | Quêtes saisonnières collectives et absence de quêtes périodiques de Guilde dédiées |
+| [`16-SEASONS.md`](./16-SEASONS.md) | Calendrier des quêtes saisonnières et clôture de la Saison |
+| [`17-EVENTS.md`](./17-EVENTS.md) | Missions temporaires distinctes et progression simultanée possible |
+| [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Présentation, suivi, reroll et récupération manuelle |
+| [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Paquets gratuits et absence de dépense obligatoire |
 
-## 12. Éléments à préciser ultérieurement
+## 18. Éléments à préciser ultérieurement
 
-* La liste concrète des quêtes.
-* Leurs catégories, conditions et récompenses.
-* Les pondérations et règles de sélection aléatoire.
-* Les quantités de récompenses.
-* L’heure de renouvellement.
-* Le wording, les icônes et la présentation finale.
-* Le moment exact de déblocage et le contenu du tutoriel.
-* Les listes et conditions concrètes des quêtes saisonnières individuelles et de Guilde.
-* Les petites récompenses saisonnières, la répartition de la ressource générale d’invocation et leurs quantités.
-* La présence et le contenu exacts d’une éventuelle récompense de complétion globale.
+Le cadrage fonctionnel est établi. Restent réservés au content design, au balancing, à l’UI, à l’onboarding ou à l’implémentation :
 
-## 13. Questions ouvertes
+* les pools et objectifs concrets de chaque catégorie ;
+* les valeurs nécessaires à chaque objectif ;
+* les pondérations et protections techniques contre les répétitions ;
+* l’ajustement éventuel des références `3 / 4 / 5` ;
+* les quantités, répartitions et fréquences exactes des récompenses ;
+* la fréquence réelle des paquets cosmétiques ;
+* les premières quêtes saisonnières ;
+* les jalons exacts de déblocage et le tutoriel ;
+* le wording, les icônes et le layout final.
 
-* Quelles catégories d’objectifs doivent composer la liste prédéfinie ?
-* Comment empêcher les répétitions indésirables ou les combinaisons de quêtes trop proches ?
-* Le joueur peut-il remplacer une quête et, si oui, selon quelles limites sans paiement obligatoire ?
-* Les récompenses sont-elles remises automatiquement ou réclamées manuellement ?
-* Que devient une quête terminée mais non réclamée au renouvellement ?
+Aucune question fonctionnelle bloquante ne subsiste actuellement pour le système de Quêtes.

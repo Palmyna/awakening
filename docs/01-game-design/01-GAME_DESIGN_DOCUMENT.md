@@ -261,7 +261,7 @@ Pendant une activité, le joueur cherche à :
 * obtenir une nouvelle créature ;
 * compléter progressivement son groupe initial ;
 * franchir les prochains niveaux du mode Histoire ;
-* accomplir éventuellement ses quêtes journalières.
+* accomplir éventuellement ses quêtes disponibles.
 
 ### 5.3. Objectifs à moyen terme
 
@@ -336,7 +336,7 @@ Le joueur peut librement :
 * gérer ses créatures ;
 * préparer ses équipes ;
 * participer à une activité particulière ;
-* accomplir une quête journalière ;
+* faire progresser une ou plusieurs quêtes ;
 * poursuivre un objectif personnel.
 
 ### 7.2. Rythme visé
@@ -352,29 +352,19 @@ Le joueur doit également pouvoir :
 
 Cette cible décrit un rythme général et ne fixe pas la durée obligatoire de chaque activité.
 
-### 7.3. Quêtes journalières
+### 7.3. Quêtes périodiques et saisonnières
 
-Chaque jour, le joueur reçoit trois quêtes journalières aléatoires tirées dans une liste prédéfinie.
+Le système propose des quêtes journalières, hebdomadaires et mensuelles. Leurs références initiales sont respectivement de `3`, `4` et `5` quêtes, valeurs de balancing indépendantes et ajustables.
 
-Elles doivent :
+Chaque catégorie utilise sa propre période, son pool et des objectifs adaptés à son horizon. Les sélections emploient seulement des fonctionnalités débloquées, évitent les contenus précis que le joueur pourrait ne pas posséder et ne réduisent pas les périodes longues à des versions multipliées des journalières.
 
-* encourager le retour au jeu ;
-* varier les activités ;
-* utiliser uniquement des fonctionnalités déjà débloquées ;
-* rester réalisables sans durée excessive ;
-* accorder des récompenses ayant un effet sur la progression ;
-* rester facultatives pour la progression normale.
+Les hebdomadaires et mensuelles n’imposent aucune présence quotidienne parfaite. Chaque catégorie périodique possède un reroll gratuit non cumulable par période ; les quêtes saisonnières n’en possèdent aucun.
 
-Une journée manquée fait perdre l’occasion de réaliser les quêtes de cette journée, mais ne retire aucune progression générale et ne supprime pas l’énergie accumulée.
+Une même action peut progresser plusieurs quêtes et une mission d’Event simultanément lorsque leurs conditions sont remplies. Toutes suivent la non-rétroactivité définie dans le référentiel spécialisé.
 
-Aucune série de connexion punitive n’est prévue.
+Une récompense de quête terminée est récupérée manuellement. Après la fin de sa période, une récompense déjà gagnée mais non réclamée rejoint le centre de récompenses pour la fenêtre temporelle commune d’environ sept jours, tandis qu’une quête inachevée disparaît avec sa progression.
 
-**Éléments à préciser ultérieurement :**
-
-* La liste des quêtes possibles.
-* Leurs catégories, conditions et récompenses.
-* Leurs règles de sélection et de renouvellement.
-* Les protections empêchant de proposer une quête inaccessible.
+Les quêtes saisonnières individuelles et de Guilde utilisent le calendrier de la Saison globale, restent distinctes des périodiques et des missions d’Event, et ne créent aucun niveau, XP ou parcours global de Saison. Le fonctionnement détaillé appartient à [`18-QUESTS.md`](./18-QUESTS.md).
 
 ## 8. Mode Histoire
 
@@ -821,7 +811,7 @@ Elle constitue une récompense de progression obtenue par le gameplay. Certaines
 Elle est obtenue principalement grâce :
 
 * au mode Histoire ;
-* aux quêtes journalières ;
+* aux quêtes ;
 * aux activités ;
 * aux récompenses de progression ;
 * aux événements.
@@ -1114,7 +1104,7 @@ Le GDD dépend des documents spécialisés suivants pour les détails :
 * [`15-GUILDS.md`](./15-GUILDS.md) — structure, fonctions et activités de guilde ;
 * [`16-SEASONS.md`](./16-SEASONS.md) — trame transversale, progression durable et systèmes saisonniers ;
 * [`17-EVENTS.md`](./17-EVENTS.md) — animations temporaires légères utilisant les systèmes existants ;
-* [`18-QUESTS.md`](./18-QUESTS.md) — quêtes journalières et saisonnières ;
+* [`18-QUESTS.md`](./18-QUESTS.md) — quêtes journalières, hebdomadaires, mensuelles et saisonnières ;
 * `19-ACHIEVEMENTS.md` — hauts faits, lorsqu’un cadrage suffisant permettra sa création ;
 * [`20-UI_FLOW.md`](./20-UI_FLOW.md) — écrans, navigation, tutoriels et parcours ;
 * `21-SOCIAL_AND_COMMUNICATION.md` — fonctions sociales et de communication, document prévu mais non cadré et non créé ;
@@ -1142,7 +1132,7 @@ Les questions suivantes ne bloquent pas le fonctionnement global décrit par le 
 * le nom, la représentation et le rythme d’obtention de la ressource générale d’invocation ;
 * les premières créatures, invocations garanties et jalons exacts de l’onboarding ;
 * le nombre d’équipes enregistrables et leurs règles de partage des créatures ;
-* les listes et récompenses des quêtes journalières ;
+* les pools, objectifs, valeurs et récompenses concrètes des quêtes ;
 * les règles détaillées des modes envisagés ;
 * les dates, durées réelles et contenus des Saisons, des Events et des mises à jour ;
 * les quantités et données exactes de la vertical slice.

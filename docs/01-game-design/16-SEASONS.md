@@ -168,7 +168,9 @@ Une Saison peut proposer :
 * des quêtes saisonnières individuelles ;
 * des quêtes saisonnières de Guilde.
 
-Elles restent distinctes des trois quêtes journalières. Elles sont disponibles pendant la Saison concernée, sans rotation hebdomadaire artificielle, et doivent rester légères, accessibles et non obligatoires pour la progression normale.
+Elles restent distinctes des quêtes journalières, hebdomadaires et mensuelles. Elles utilisent le calendrier de la Saison, restent légères, accessibles et non obligatoires pour la progression normale, et ne possèdent aucun reroll.
+
+De nouvelles quêtes saisonnières peuvent être ajoutées progressivement. Une fois disponible, une quête reste normalement accessible jusqu’à la clôture ; elle n’est pas retirée après quelques jours par une rotation punitive. Un ajout ne doit pas intervenir si tard que le temps restant devienne irréaliste pour l’objectif demandé.
 
 Les quêtes de Guilde apportent des objectifs collectifs supplémentaires sans recréer une checklist générale quotidienne ou hebdomadaire de Guilde.
 
@@ -178,11 +180,13 @@ Les quêtes saisonnières individuelles et les quêtes saisonnières de Guilde p
 
 Une récompense plus intéressante, par exemple un paquet cosmétique, peut éventuellement récompenser la complétion de l’ensemble des quêtes de la Saison. Cette possibilité n’est pas obligatoire pour chaque Saison.
 
+Ces quêtes ne créent ni niveau, ni XP, ni barre, ni Battle Pass, ni parcours général de récompenses de Saison.
+
 À la clôture :
 
 * une quête non terminée devient immédiatement indisponible et ne peut plus progresser ;
 * une quête terminée reste accomplie ;
-* une récompense déjà gagnée peut encore être récupérée pendant l’inter-saison selon ses règles.
+* une récompense déjà gagnée peut encore être récupérée selon la fenêtre temporelle commune d’environ sept jours portée par [`10-PROGRESSION.md`](./10-PROGRESSION.md).
 
 Le fonctionnement détaillé des quêtes appartient à [`18-QUESTS.md`](./18-QUESTS.md).
 

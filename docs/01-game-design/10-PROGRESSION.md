@@ -339,7 +339,7 @@ Cette architecture définit une modalité réutilisable de remise des récompens
 | [`15-GUILDS.md`](./15-GUILDS.md) | Boss et Expéditions de Guilde, énergie, récompenses collectives et éligibilité locale |
 | [`16-SEASONS.md`](./16-SEASONS.md) | Progression durable, inter-saison et récompenses de fin de Saison |
 | [`17-EVENTS.md`](./17-EVENTS.md) | Récompenses ponctuelles, dont l’énergie générale, et fermeture des occurrences |
-| [`18-QUESTS.md`](./18-QUESTS.md) | Objectifs journaliers et récompenses de progression |
+| [`18-QUESTS.md`](./18-QUESTS.md) | Récompenses manuelles des quêtes périodiques et saisonnières après leur période active |
 | [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Présentation et confirmations des actions de progression |
 
 ## 15. Éléments à préciser ultérieurement

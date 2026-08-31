@@ -28,7 +28,7 @@ La recherche de revenus ne doit jamais prendre le pas sur l’équité, la trans
 
 ### 3.1. Un modèle Free-to-Play centré sur le jeu
 
-Les créatures et les invocations doivent être obtenues principalement en jouant, notamment grâce aux quêtes quotidiennes, aux Events, aux récompenses et aux différentes activités.
+Les créatures et les invocations doivent être obtenues principalement en jouant, notamment grâce aux quêtes, aux Events, aux récompenses et aux différentes activités.
 
 Une dépense ne doit pas être nécessaire pour progresser normalement, développer ses créatures ou rester compétitif.
 

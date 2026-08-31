@@ -238,6 +238,8 @@ Les Guildes proposent un mécanisme simple d’entraide permettant aux membres �
 
 Un système distinct de quêtes hebdomadaires de Guilde n’est pas retenu actuellement. Les Hauts Faits, quêtes saisonnières et véritables activités de Guilde doivent structurer l’activité collective sans ajouter artificiellement une nouvelle checklist régulière.
 
+Les quêtes hebdomadaires générales du compte restent disponibles selon [`18-QUESTS.md`](./18-QUESTS.md), mais ne deviennent pas pour autant des objectifs collectifs de Guilde.
+
 ## 11. Boss de Guilde — identité et combat
 
 Le Boss de Guilde mesure la progression des comptes, la qualité des collections, la construction d’équipes, les builds, les synergies, l’adaptation stratégique et la capacité collective à faire progresser suffisamment de membres.

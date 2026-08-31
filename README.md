@@ -54,7 +54,7 @@ Ces documents constituent les fondations de référence actuelles du projet. Ils
 * ✅ [`15-GUILDS.md`](./docs/01-game-design/15-GUILDS.md) — Rédigé — référence fonctionnelle actuelle, à maintenir à jour
 * ✅ [`16-SEASONS.md`](./docs/01-game-design/16-SEASONS.md) — Rédigé — référence actuelle, à maintenir à jour
 * ✅ [`17-EVENTS.md`](./docs/01-game-design/17-EVENTS.md) — Rédigé — référence actuelle, à maintenir à jour
-* 🚧 [`18-QUESTS.md`](./docs/01-game-design/18-QUESTS.md) — Draft de conception — à relire et valider
+* ✅ [`18-QUESTS.md`](./docs/01-game-design/18-QUESTS.md) — Rédigé — référence actuelle, à maintenir à jour
 * ⬜ `19-ACHIEVEMENTS.md`
 * 🚧 [`20-UI_FLOW.md`](./docs/01-game-design/20-UI_FLOW.md) — Draft de conception développé — à relire et valider
 * ⬜ `21-SOCIAL_AND_COMMUNICATION.md` — Prévu mais non cadré / non créé

@@ -182,7 +182,7 @@ Certaines créatures peuvent être obtenues directement par le gameplay comme ex
 
 Ces parcours doivent employer des terminologies, des ressources, des interfaces, des animations et des règles économiques distinctes. Une ouverture cosmétique ne doit jamais donner de créature, et une invocation de créature ne doit pas être présentée comme l’ouverture d’un paquet cosmétique.
 
-Une ressource générale principale d’invocation est utilisée dans le modèle initial. Elle doit être obtenue principalement grâce au mode Histoire, aux quêtes journalières, aux activités, aux récompenses de progression et aux Events. Elle reste entièrement séparée de l’économie cosmétique.
+Une ressource générale principale d’invocation est utilisée dans le modèle initial. Elle doit être obtenue principalement grâce au mode Histoire, aux quêtes, aux activités, aux récompenses de progression et aux Events. Elle reste entièrement séparée de l’économie cosmétique.
 
 **Éléments à préciser ultérieurement :**
 
@@ -194,7 +194,7 @@ Une ressource générale principale d’invocation est utilisée dans le modèle
 
 ### 6.1. Financer le projet sans faire de l’achat la principale source de puissance
 
-Project Awakening adopte un modèle Free-to-Play. Les créatures doivent s’obtenir principalement en jouant, et les invocations doivent être accessibles grâce aux quêtes quotidiennes, aux Events, aux récompenses et aux différentes activités.
+Project Awakening adopte un modèle Free-to-Play. Les créatures doivent s’obtenir principalement en jouant, et les invocations doivent être accessibles grâce aux quêtes, aux Events, aux récompenses et aux différentes activités.
 
 La boutique est exclusivement consacrée aux contenus cosmétiques. Elle ne vend aucune créature, aucune invocation, aucun avantage de combat et aucune progression de puissance.
 

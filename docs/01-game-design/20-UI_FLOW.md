@@ -14,8 +14,8 @@ Il couvre :
 * la progression et la gestion des instances ;
 * la collection, l’encyclopédie et les skins de carte ;
 * l’invocation de créatures ;
-* les quêtes journalières ;
-* les Saisons et les quêtes saisonnières ;
+* les quêtes périodiques et saisonnières ;
+* les Saisons ;
 * les objets, la fabrication et l’inventaire ;
 * les Guildes, leurs Expéditions, l’entraide entre membres et le centre de récompenses ;
 * les parcours cosmétiques et les services de confort déjà validés.
@@ -57,7 +57,7 @@ Une session ne suit pas une liste d’actions obligatoire. Le joueur doit pouvoi
 
 * progresser dans le mode Histoire ;
 * participer à une activité disponible ;
-* consulter ses trois quêtes journalières ;
+* consulter ses quêtes disponibles ;
 * gérer ses créatures ;
 * préparer ses équipes ;
 * consulter la collection ;
@@ -357,25 +357,39 @@ Il ne révèle pas les branches encore secrètes.
 
 Le choix de la créature de départ et les autres acquisitions directes explicitement prévues utilisent un parcours adapté sans être présentés comme une invocation.
 
-## 18. Quêtes journalières
+## 18. Quêtes
 
-L’interface présente les trois quêtes journalières du jour avec :
+L’interface distingue clairement les quêtes journalières, hebdomadaires, mensuelles et saisonnières sans imposer ici des onglets, sections ou filtres précis.
 
-* leur objectif ;
-* leur progression ;
-* leur condition d’achèvement ;
-* leur récompense ;
-* le temps restant avant le renouvellement.
+Pour chaque quête, elle présente :
 
-Elle ne propose que des quêtes utilisant des fonctionnalités déjà débloquées.
+* son objectif et sa progression utile ;
+* sa récompense ;
+* sa période et son temps restant ;
+* ses états terminé et récupéré ;
+* la disponibilité du reroll lorsqu’il existe.
 
-Une journée manquée ne retire aucune progression générale et ne supprime pas l’énergie accumulée. Aucune série de connexion punitive n’est présentée.
+Un compteur concret remplace un simple statut `En cours` lorsqu’il explique mieux la progression. Une quête terminée met en évidence sa récompense récupérable ; après récupération manuelle, elle passe en état `Récupéré` ou équivalent.
 
-Le renouvellement, la récupération automatique ou manuelle et le traitement d’une récompense non réclamée restent à définir.
+L’interface ne propose que des quêtes compatibles avec les fonctionnalités débloquées et l’état réel du compte. Elle ne présente aucune série de connexion punitive ni aucune obligation quotidienne parfaite pour terminer une hebdomadaire ou une mensuelle.
 
-### 18.1. Quêtes saisonnières
+### 18.1. Quêtes périodiques
 
-Les quêtes saisonnières individuelles et de Guilde utilisent un espace clairement distinct des trois quêtes journalières. Le parcours doit permettre de connaître :
+Les références initiales de `3` journalières, `4` hebdomadaires et `5` mensuelles sont affichées selon la configuration active sans être traitées comme des constantes techniques définitives.
+
+Le parcours expose les périodes définies dans [`18-QUESTS.md`](./18-QUESTS.md), selon l’heure de référence de l’environnement concerné :
+
+* journalières : `23:00 → 22:59` le lendemain ;
+* hebdomadaires : dimanche `23:00 → dimanche suivant 22:59` ;
+* mensuelles : dernier jour du mois précédent `23:00 → dernier jour du mois concerné 22:59`.
+
+Chaque catégorie indique son reroll gratuit disponible pour la période. Avant confirmation, l’interface précise que la quête choisie sera remplacée, que sa progression sera perdue et que la nouvelle quête recommencera à zéro. Une quête terminée ne propose aucune action de reroll.
+
+Au reset, une quête inachevée quitte la liste avec sa progression. La récompense d’une quête terminée mais non réclamée rejoint le centre de récompenses, qui affiche sa provenance et la fenêtre temporelle commune restante d’environ sept jours.
+
+### 18.2. Quêtes saisonnières
+
+Les quêtes saisonnières individuelles et de Guilde utilisent un espace distinct des trois catégories périodiques. Le parcours doit permettre de connaître :
 
 * leurs objectifs et leur progression ;
 * leurs récompenses ;
@@ -383,7 +397,9 @@ Les quêtes saisonnières individuelles et de Guilde utilisent un espace clairem
 * la conséquence de la clôture pour une quête non terminée ;
 * l’état d’une éventuelle récompense globale de complétion.
 
-L’interface ne doit pas suggérer une rotation hebdomadaire, un niveau global de Saison ou une obligation de les accomplir pour progresser normalement. Une récompense déjà gagnée et encore récupérable pendant l’inter-saison rejoint le centre de récompenses selon ses règles temporelles.
+De nouvelles quêtes peuvent apparaître au cours de la Saison sans retirer les précédentes. L’interface ne propose aucun reroll saisonnier et ne suggère ni rotation punitive, ni niveau, XP ou barre globale de Saison, ni obligation de les accomplir pour progresser normalement.
+
+Une récompense déjà gagnée et non réclamée à la clôture rejoint le centre de récompenses selon la même fenêtre temporelle commune.
 
 ## 19. Fabrication, inventaire et sacs
 
@@ -617,7 +633,7 @@ Il dépend également des règles de combat, créatures, Skills, éléments, Eff
 * Le layout final du centre de récompenses et les règles exactes de récupération groupée.
 * Le layout final de la Saison active, de l’inter-saison, des clôtures et des décomptes.
 * Le layout final de la rubrique Events, de sa liste, de ses missions et de sa phase de fermeture.
-* La présentation finale des quêtes saisonnières et des futurs filtres de Hauts Faits.
+* La présentation finale des quêtes périodiques, de leurs rerolls, des quêtes saisonnières et des futurs filtres de Hauts Faits.
 * Le layout final du catalogue, des zones, missions et tâches d’Expédition.
 * L’ergonomie détaillée des demandes et dons de composants.
 
@@ -628,4 +644,3 @@ Il dépend également des règles de combat, créatures, Skills, éléments, Eff
 * Quelles règles d’accessibilité doivent être obligatoires dès la première version ?
 * Comment présenter les choix et filtres avancés de recherche sur écran tactile ?
 * Comment organiser le résultat d’un combat lorsque plusieurs niveaux, évolutions, déblocages et récompenses se produisent ensemble ?
-* Les récompenses de quêtes sont-elles récupérées automatiquement ou manuellement ?

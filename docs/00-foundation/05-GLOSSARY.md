@@ -1028,7 +1028,7 @@ Narrativement, elle établit ou révèle le lien avec une manifestation vivante 
 
 **Définition :** Ressource générale principale utilisée pour effectuer les invocations de créatures dans le modèle initial.
 
-Cette ressource doit être obtenue principalement grâce au mode Histoire, aux quêtes journalières, aux activités, aux récompenses de progression et aux Events. Elle reste entièrement séparée de l’économie cosmétique.
+Cette ressource doit être obtenue principalement grâce au mode Histoire, aux quêtes, aux activités, aux récompenses de progression et aux Events. Elle reste entièrement séparée de l’économie cosmétique.
 
 L’ajout de ressources événementielles ou de catégories particulières d’invocation n’est pas validé.
 

@@ -171,13 +171,15 @@ Un thème peut revenir librement lors d’une nouvelle occurrence. Celle-ci peut
 
 Les missions d’Event sont totalement distinctes :
 
-* des trois quêtes journalières ;
+* des quêtes journalières ;
+* des quêtes hebdomadaires ;
+* des quêtes mensuelles ;
 * des quêtes saisonnières individuelles ;
 * des quêtes saisonnières de Guilde.
 
-Elles ne remplacent, ne réduisent et ne modifient pas la liste, la sélection ou le renouvellement des quêtes journalières. Elles ne deviennent pas des quêtes saisonnières et peuvent coexister avec toutes ces catégories.
+Elles ne remplacent, ne réduisent et ne modifient ni les listes, ni les sélections, ni les calendriers des quêtes périodiques. Elles ne deviennent pas des quêtes saisonnières et peuvent coexister avec toutes ces catégories.
 
-Une mission d’Event peut demander une action dans une activité également utilisée par une quête sans créer de relation fonctionnelle entre les systèmes.
+Une mission d’Event peut demander une action dans une activité également utilisée par une quête sans créer de relation fonctionnelle entre les systèmes. Une même action peut progresser simultanément cette mission et toutes les quêtes actives dont elle remplit les conditions.
 
 ## 17. Notifications et interface
 

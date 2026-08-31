@@ -329,7 +329,7 @@ Le projet adopte un modèle **Free-to-Play**.
 Les principes fondamentaux sont les suivants :
 
 * les créatures s’obtiennent principalement en jouant ;
-* les invocations sont obtenues grâce aux quêtes quotidiennes, aux Events, aux récompenses de jeu et aux différentes activités ;
+* les invocations sont obtenues grâce aux quêtes, aux Events, aux récompenses de jeu et aux différentes activités ;
 * aucun achat effectué dans la boutique cosmétique ne doit permettre directement ou indirectement d’obtenir une créature, une invocation ou de la puissance.
 
 La monétisation repose principalement sur une boutique exclusivement consacrée aux contenus cosmétiques.

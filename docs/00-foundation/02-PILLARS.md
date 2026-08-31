@@ -137,7 +137,7 @@ Quatre services de confort sont actuellement validés en dehors de la boutique c
 ### Conséquences sur la conception
 
 * Les créatures doivent s’obtenir principalement en jouant.
-* Les quêtes quotidiennes, les Events, les récompenses et les différentes activités doivent permettre d’obtenir des invocations.
+* Les quêtes, les Events, les récompenses et les différentes activités doivent permettre d’obtenir des invocations.
 * Les achats ne doivent jamais devenir la principale source de puissance.
 * Les skins de carte et les illustrations alternatives qu’ils utilisent doivent constituer le cœur de la monétisation.
 * Les séries de skins de carte doivent être distribuées principalement au moyen de paquets de skins de carte pouvant être gagnés en jouant ou achetés contre de l’argent réel.

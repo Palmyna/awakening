@@ -138,7 +138,7 @@ Les règles propres à chaque domaine sont réparties ainsi :
 * [`15-GUILDS.md`](./15-GUILDS.md) porte la structure, les fonctions et les activités de guilde ;
 * [`16-SEASONS.md`](./16-SEASONS.md) porte le cadre transversal des Saisons sans récupérer les règles internes des modes saisonniers ;
 * [`17-EVENTS.md`](./17-EVENTS.md) porte les petites animations temporaires utilisant principalement les systèmes existants ;
-* [`18-QUESTS.md`](./18-QUESTS.md) porte les quêtes journalières et saisonnières ;
+* [`18-QUESTS.md`](./18-QUESTS.md) porte les quêtes journalières, hebdomadaires, mensuelles et saisonnières ;
 * le futur `19-ACHIEVEMENTS.md` portera les hauts faits lorsqu’un cadrage suffisant permettra sa création ;
 * [`20-UI_FLOW.md`](./20-UI_FLOW.md) traduit les besoins fonctionnels des modes dans les parcours et écrans.
 
@@ -156,7 +156,7 @@ Un référentiel spécialisé hérite des contrats du présent document. Il déc
 | [`15-GUILDS.md`](./15-GUILDS.md) | Structure, fonctions et activités de guilde |
 | [`16-SEASONS.md`](./16-SEASONS.md) | Cadre transversal et progression saisonnière |
 | [`17-EVENTS.md`](./17-EVENTS.md) | Animations temporaires légères utilisant les activités existantes |
-| [`18-QUESTS.md`](./18-QUESTS.md) | Quêtes journalières et saisonnières |
+| [`18-QUESTS.md`](./18-QUESTS.md) | Quêtes périodiques et saisonnières |
 | [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Sélection, préparation, combat et résultats |
 
 ## 11. Éléments à préciser ultérieurement
