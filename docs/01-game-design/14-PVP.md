@@ -272,6 +272,8 @@ Certains jalons personnels de cote peuvent inclure une petite quantité de resso
 
 Les seuils, les récompenses exactes, les quantités et leur fréquence restent à définir.
 
+Une Saison peut parallèlement proposer un Haut Fait de cote à paliers. S’il est destiné à devenir historique, il rapporte `0` point pendant sa période active puis devient un Tour de force s’il a été obtenu. Il conserve le meilleur seuil réellement atteint, même si la cote redescend avant la clôture ; s’il n’a pas été obtenu, il disparaît.
+
 ### 11.2. Éligibilité par activité régulière
 
 Pour rester éligible au classement officiel, le joueur doit avoir initié au moins `X` combats PvP au cours des quatorze derniers jours.
@@ -322,15 +324,13 @@ Les récompenses de jalons, de saison, de classement final ou d’autres objecti
 
 Lorsqu’un paquet appartient à une série également distribuée commercialement, il utilise le même pool, les mêmes probabilités, le même nombre de skins, les mêmes règles de doublons et les mêmes règles RNG que le paquet acheté correspondant. Son obtention gratuite ne crée aucune version avantagée.
 
-### 12.3. Classement final et hauts faits
+### 12.3. Classement final et Hauts Faits
 
-Le classement final peut alimenter de futurs hauts faits, titres, badges, contours ou bordures de carte, cosmétiques prestigieux, paquets cosmétiques et autres récompenses cohérentes.
+Le classement final peut alimenter un accomplissement saisonnier distinct de celui fondé sur la cote. Après validation du résultat final, cet accomplissement peut devenir un Tour de force conservant le rang de clôture et sa date selon [`19-ACHIEVEMENTS.md`](./19-ACHIEVEMENTS.md).
 
-Les récompenses les plus prestigieuses doivent rester principalement honorifiques ou cosmétiques et ne conférer aucune puissance exclusive indispensable.
+Les récompenses de gameplay et les paquets cosmétiques peuvent rester distribués directement par le PvP. Une récompense spécifiquement liée au prestige d’un accomplissement, notamment un titre, badge, contour, bordure, skin prestigieux ou autre personnalisation, peut être portée par le Haut Fait ou le Tour de force correspondant. Aucune récompense précise n’est rendue obligatoire et aucune ne confère de puissance exclusive indispensable.
 
 Le classement final PvP de la Saison ne distribue jamais de ressource générale d’invocation, d’invocations de créatures ni d’énergie générale. Cette interdiction prévient une boucle dans laquelle les joueurs déjà les plus performants recevraient davantage de puissance leur permettant d’accroître encore leur avantage ; elle ne concerne pas les jalons personnels de cote.
-
-Le futur `19-ACHIEVEMENTS.md` devra définir les critères et récompenses propres aux hauts faits sans être créé artificiellement pendant la présente intervention.
 
 ## 13. Historique et analyse
 
@@ -353,7 +353,7 @@ Chaque entrée doit permettre d’identifier au minimum :
 
 Ouvrir une entrée donne accès au même type de résumé fonctionnel que l’écran final du combat concerné. Il présente l’équipe, le résultat, les performances agrégées par créature et les informations utiles à l’analyse sans créer un second système analytique.
 
-L’historique détaillé n’a pas besoin d’être conservé indéfiniment après la fin de la Saison. Les performances importantes persistent principalement par les futurs Hauts Faits, qui constituent l’historique saisonnier durable du compte ; aucun historique séparé des anciennes Saisons n’est nécessaire.
+L’historique détaillé n’a pas besoin d’être conservé indéfiniment après la fin de la Saison. Les performances importantes peuvent persister par les Tours de force réellement obtenus ; aucun historique séparé des anciennes Saisons n’est nécessaire et les accomplissements manqués ne restent pas consultables.
 
 ### 13.3. Replays
 
@@ -384,6 +384,7 @@ Les besoins fonctionnels des écrans et parcours appartiennent à [`20-UI_FLOW.m
 | [`12-MODES.md`](./12-MODES.md) | Statut de périmètre et contrats transversaux |
 | [`13-PVE.md`](./13-PVE.md) | Philosophie saisonnière commune et usages PvE des effets contextuels |
 | [`16-SEASONS.md`](./16-SEASONS.md) | Cadre transversal des Saisons et protection de la progression durable |
+| [`19-ACHIEVEMENTS.md`](./19-ACHIEVEMENTS.md) | Hauts Faits de cote, Tours de force, meilleurs résultats et récompenses de prestige |
 | [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Préparation, matchmaking, combat, saison, classement et historique |
 | [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Skip lié à `×4`, paquets cosmétiques et équité compétitive |
 

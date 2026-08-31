@@ -15,7 +15,7 @@ Ce document constitue le référentiel spécialisé du système de Guildes de Pr
 * les demandes et dons de composants ;
 * les dépendances avec les Saisons, les Hauts Faits, l’interface et le futur système Social / Communication.
 
-Le système de Guildes est fonctionnellement cadré à son niveau actuel. Les valeurs de balancing, le contenu concret des Expéditions, les Hauts Faits, le système Social / Communication et certaines protections transversales restent à définir dans leurs cadres respectifs. Cette clôture fonctionnelle ne signifie donc pas que ces contenus ou paramètres sont finalisés.
+Le système de Guildes est fonctionnellement cadré à son niveau actuel. Les valeurs de balancing, le contenu concret des Expéditions et des Hauts Faits, le système Social / Communication et certaines protections transversales restent à définir dans leurs cadres respectifs. Cette clôture fonctionnelle ne signifie donc pas que ces contenus ou paramètres sont finalisés.
 
 ## 2. Philosophie générale
 
@@ -133,6 +133,7 @@ Le Chef possède toutes les permissions administratives. Il peut notamment :
 * modifier la présentation et le message d’accueil ;
 * gérer la personnalisation, la bannière et les éléments visuels ;
 * effectuer les actions administratives des activités de Guilde ;
+* récupérer au nom de la Guilde les récompenses de ses Hauts Faits ;
 * transférer son rôle ;
 * déclencher le recalibrage volontaire du Boss de Guilde ;
 * dissoudre la Guilde.
@@ -187,6 +188,7 @@ La dissolution est définitive et exige une double confirmation explicite. La se
 
 * de la Guilde ;
 * de ses Hauts Faits ;
+* de ses Tours de force et points de Hauts Faits ;
 * de son historique ;
 * de ses personnalisations ;
 * de sa progression.
@@ -207,9 +209,13 @@ Il ne s’agit pas de prévoir un serveur de communication complexe intégré av
 
 ### 10.1. Hauts Faits de Guilde
 
-Les Hauts Faits de Guilde représentent l’histoire permanente et le prestige de la Guilde. Ils progressent principalement de manière passive à partir des actions normales des membres et ne doivent pas devenir une checklist artificielle.
+Les Hauts Faits de Guilde représentent l’histoire permanente et le prestige de la Guilde. Ils progressent automatiquement à partir des actions normales des membres et ne doivent pas devenir une checklist artificielle. La Guilde possède son propre score de points et ses propres Tours de force, sans complétion globale ni leaderboard général.
 
-Leur structure détaillée et leurs récompenses éventuelles appartiendront au futur `19-ACHIEVEMENTS.md`. Le présent document ne valide aucune liste exhaustive ni aucune récompense précise.
+Seules les actions réalisées pendant l’appartenance d’un joueur contribuent aux Hauts Faits de sa Guilde actuelle. Un départ ne transfère aucun accomplissement, point, Tour de force ou historique collectif. Un nouveau membre peut consulter l’histoire déjà acquise sans en devenir personnellement propriétaire.
+
+Une récompense de Haut Fait de Guilde appartient à la Guilde et non à ses membres. Lorsqu’elle nécessite une récupération, elle apparaît dans le centre de récompenses du Chef, identifiée comme propriété de la Guilde ; le Chef la récupère au nom de celle-ci. La fiche publique de la Guilde permet de consulter ses points, Hauts Faits, Tours de force, compteur de Tours de force et dates.
+
+La structure commune, les catégories, les récompenses éventuelles et la consultation de ces accomplissements sont définies dans [`19-ACHIEVEMENTS.md`](./19-ACHIEVEMENTS.md). Le présent document ne valide aucune liste exhaustive ni aucune récompense précise.
 
 ### 10.2. Quêtes saisonnières de Guilde
 
@@ -354,9 +360,9 @@ Le contenu, la fréquence et les quantités exactes restent à définir. Les exe
 
 ### 17.2. Récompenses de classement final
 
-Les récompenses principales du classement final appartiennent de préférence à la Guilde et soutiennent son prestige collectif. Elles peuvent notamment prendre la forme de personnalisations de bannière, couleurs, effets, décorations, éléments visuels prestigieux, Hauts Faits de Guilde ou titres de Guilde.
+Les récompenses principales du classement final appartiennent de préférence à la Guilde et soutiennent son prestige collectif. Les paquets cosmétiques et autres récompenses directes du mode peuvent rester portés par le Boss de Guilde, tandis qu’une récompense spécifiquement liée au prestige d’un accomplissement peut être portée par le Haut Fait ou le Tour de force correspondant.
 
-Une performance saisonnière importante peut valider un futur Haut Fait de Guilde, acquis définitivement et intégré à l’histoire permanente de la Guilde. Ces Hauts Faits portent la mémoire durable des résultats saisonniers pertinents sans exiger un historique séparé de toutes les anciennes Saisons.
+Une performance saisonnière importante peut valider un Haut Fait de Guilde temporaire à `0` point. À la clôture, il devient un Tour de force de Guilde s’il a été obtenu et conserve son résultat final et sa date ; s’il a été manqué, il disparaît. Les Tours de force portent la mémoire durable des résultats pertinents sans exiger un historique séparé de toutes les anciennes Saisons.
 
 Aucune récompense de classement ne doit fournir de puissance exclusive ou obligatoire.
 
@@ -571,7 +577,7 @@ Le Boss de Guilde reste le mode compétitif saisonnier principal des Guildes. Se
 
 Les Expéditions sont permanentes : elles ne reset pas, n’expirent pas, ne dépendent d’aucun classement saisonnier et ne possèdent aucun chrono global.
 
-Le futur `19-ACHIEVEMENTS.md` définira le système commun des Hauts Faits, notamment ceux pouvant exploiter les Expéditions terminées, leur complétion à 100 % et leurs secrets. Le présent document conserve uniquement les accomplissements de Guilde susceptibles de les alimenter.
+[`19-ACHIEVEMENTS.md`](./19-ACHIEVEMENTS.md) définit le système commun des Hauts Faits, notamment ceux pouvant exploiter les Expéditions terminées, leur complétion à 100 % et leurs secrets. Le présent document conserve uniquement les accomplissements de Guilde susceptibles de les alimenter.
 
 Le futur `21-SOCIAL_AND_COMMUNICATION.md`, prévu mais non créé, portera le chat de Guilde et les autres règles sociales ou de communication. Les Expéditions peuvent utiliser ce futur chat pour partager indices, pistes, erreurs et découvertes sans définir ici son fonctionnement.
 
@@ -591,12 +597,13 @@ Le futur `21-SOCIAL_AND_COMMUNICATION.md`, prévu mais non créé, portera le ch
 | [`13-PVE.md`](./13-PVE.md) | Distinction avec les Boss personnels, le World Boss et la Tour infinie |
 | [`16-SEASONS.md`](./16-SEASONS.md) | Cadre transversal des Saisons et objectifs saisonniers |
 | [`18-QUESTS.md`](./18-QUESTS.md) | Quêtes saisonnières collectives distinctes des activités permanentes |
+| [`19-ACHIEVEMENTS.md`](./19-ACHIEVEMENTS.md) | Points, Tours de force, récompenses et historique des Hauts Faits de Guilde |
 | [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Parcours de Guilde, Boss, Expéditions, demandes et centre de récompenses |
 | [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Garde-fous économiques et récompenses cosmétiques |
 | [`01-LORE.md`](../02-world/01-LORE.md) | Frontière entre Guildes fonctionnelles, contenu d’Expédition et canon narratif |
 | [`03-FORCES_PEOPLES_AND_FACTIONS.md`](../02-world/03-FORCES_PEOPLES_AND_FACTIONS.md) | Absence de faction obligatoire pour le joueur |
 
-Le futur `19-ACHIEVEMENTS.md` devra prendre en charge les Hauts Faits de Guilde et d’Expédition. Le futur `21-SOCIAL_AND_COMMUNICATION.md` devra prendre en charge les fonctions sociales et de communication communes.
+Le futur `21-SOCIAL_AND_COMMUNICATION.md` devra prendre en charge les fonctions sociales et de communication communes.
 
 ## 27. Éléments à préciser ultérieurement
 
@@ -613,7 +620,7 @@ Le futur `19-ACHIEVEMENTS.md` devra prendre en charge les Hauts Faits de Guilde 
 * Les récompenses honorifiques ou cosmétiques exactes du classement final.
 * La durée exacte des récompenses temporelles concernées.
 * Les protections anti-abus détaillées.
-* Le cadrage détaillé des Hauts Faits de Guilde et d’Expédition.
+* Les Hauts Faits concrets de Guilde et d’Expédition, leurs valeurs, seuils et récompenses précises.
 * Le fonctionnement du système Social / Communication.
 * Le nombre moyen de zones, missions et tâches des Expéditions.
 * Le catalogue concret des mini-mécaniques et le contenu de chaque Expédition.

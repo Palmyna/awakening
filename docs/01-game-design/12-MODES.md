@@ -8,7 +8,7 @@ Ce document constitue le cadre transversal commun à l’ensemble des modes et a
 
 Il distingue le statut de périmètre d’un mode de ses règles détaillées. La présence d’un mode dans une liste de long terme ne valide ni son fonctionnement, ni son ordre de production, ni sa date de disponibilité.
 
-Les règles internes des modes PvE, du PvP, des Guildes, des Saisons, des Events et des futurs systèmes de hauts faits appartiennent à leurs référentiels spécialisés. Le présent document définit leur cadre commun sans les redécrire individuellement.
+Les règles internes des modes PvE, du PvP, des Guildes, des Saisons, des Events et des Hauts Faits appartiennent à leurs référentiels spécialisés. Le présent document définit leur cadre commun sans les redécrire individuellement.
 
 ## 2. Fonction des modes dans l’expérience
 
@@ -139,7 +139,7 @@ Les règles propres à chaque domaine sont réparties ainsi :
 * [`16-SEASONS.md`](./16-SEASONS.md) porte le cadre transversal des Saisons sans récupérer les règles internes des modes saisonniers ;
 * [`17-EVENTS.md`](./17-EVENTS.md) porte les petites animations temporaires utilisant principalement les systèmes existants ;
 * [`18-QUESTS.md`](./18-QUESTS.md) porte les quêtes journalières, hebdomadaires, mensuelles et saisonnières ;
-* le futur `19-ACHIEVEMENTS.md` portera les hauts faits lorsqu’un cadrage suffisant permettra sa création ;
+* [`19-ACHIEVEMENTS.md`](./19-ACHIEVEMENTS.md) porte les Hauts Faits personnels et de Guilde, leurs points et les Tours de force ;
 * [`20-UI_FLOW.md`](./20-UI_FLOW.md) traduit les besoins fonctionnels des modes dans les parcours et écrans.
 
 Un référentiel spécialisé hérite des contrats du présent document. Il décrit uniquement ses règles propres et les exceptions explicitement justifiées.

@@ -275,7 +275,7 @@ Les services de confort validés ne modifient pas ce principe.
 
 ## 13. Disponibilité, éligibilité et récupération des récompenses
 
-Certaines récompenses générées par un palier, un classement, une fin de Saison, un accomplissement collectif ou un système comparable peuvent nécessiter une récupération manuelle.
+Certaines récompenses générées par un palier, un classement, une fin de Saison, un Haut Fait, un accomplissement collectif ou un système comparable peuvent nécessiter une récupération manuelle.
 
 Lorsqu’une récompense utilise cette modalité :
 
@@ -299,6 +299,10 @@ Une récompense **permanente** ne possède aucun délai d’expiration intrinsè
 
 La catégorie dépend de la définition de la récompense elle-même, pas automatiquement du mode, d’une Saison, d’un Event, d’un classement ou d’un autre type de source. Un même système peut contenir des récompenses temporelles et permanentes si leurs définitions respectives le prévoient.
 
+Une récompense propre à un Haut Fait personnel ou de Guilde est permanente selon [`19-ACHIEVEMENTS.md`](./19-ACHIEVEMENTS.md). Sa validation et ses points éventuels sont automatiques, tandis qu’une récompense supplémentaire peut utiliser le centre de récompenses et une récupération manuelle.
+
+Lorsqu’une récompense de Haut Fait appartient à une Guilde, elle apparaît dans le centre de récompenses du Chef, clairement identifiée comme propriété de la Guilde. Le Chef la récupère au nom de la Guilde ; elle n’est jamais attribuée à son compte personnel.
+
 ### 13.2. Disponibilité et éligibilité
 
 La disponibilité et l’éligibilité constituent deux dimensions distinctes. Une récompense est récupérable uniquement si :
@@ -321,6 +325,8 @@ Chaque système doit préciser :
 * ses conditions actuelles d’éligibilité ;
 * sa durée exacte lorsqu’elle est temporelle.
 
+Le système propriétaire précise également si la récompense appartient au compte ou à une Guilde et, dans ce second cas, quelle personne est autorisée à la récupérer.
+
 Cette architecture définit une modalité réutilisable de remise des récompenses, pas une obligation universelle de récupération manuelle ou d’expiration.
 
 ## 14. Interactions et dépendances
@@ -340,6 +346,7 @@ Cette architecture définit une modalité réutilisable de remise des récompens
 | [`16-SEASONS.md`](./16-SEASONS.md) | Progression durable, inter-saison et récompenses de fin de Saison |
 | [`17-EVENTS.md`](./17-EVENTS.md) | Récompenses ponctuelles, dont l’énergie générale, et fermeture des occurrences |
 | [`18-QUESTS.md`](./18-QUESTS.md) | Récompenses manuelles des quêtes périodiques et saisonnières après leur période active |
+| [`19-ACHIEVEMENTS.md`](./19-ACHIEVEMENTS.md) | Permanence, propriété et récupération des récompenses propres aux Hauts Faits |
 | [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Présentation et confirmations des actions de progression |
 
 ## 15. Éléments à préciser ultérieurement

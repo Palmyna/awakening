@@ -18,7 +18,7 @@ Project Awakening utilise une seule Saison globale active à la fois. Elle const
 * la Tour infinie ;
 * le Boss de Guilde ;
 * les quêtes saisonnières individuelles et de Guilde ;
-* les futurs Hauts Faits saisonniers ;
+* les Hauts Faits saisonniers ;
 * certains contenus cosmétiques ;
 * l’habillage général du jeu.
 
@@ -192,13 +192,13 @@ Le fonctionnement détaillé des quêtes appartient à [`18-QUESTS.md`](./18-QUE
 
 ## 11. Hauts Faits et historique durable
 
-Les Saisons peuvent proposer des Hauts Faits liés à la participation ou à des performances individuelles, PvP, PvE ou de Guilde.
+Les Saisons peuvent proposer des Hauts Faits temporaires liés à la participation ou à des performances individuelles, PvP, PvE ou de Guilde. Pendant la Saison, ils peuvent apparaître dans leur catégorie fonctionnelle normale, utiliser des paliers et certaines récompenses de prestige, et rapportent `0` point lorsqu’ils sont destinés à devenir des Tours de force.
 
-Un Haut Fait saisonnier obtenu reste validé définitivement. Les Hauts Faits constituent l’historique saisonnier durable du joueur : aucun système séparé de rejeu ou de journal des anciennes Saisons n’est nécessaire.
+À la clôture, un tel Haut Fait obtenu devient un Tour de force. Il conserve son meilleur résultat pertinent, ou son résultat final lorsqu’il dépend de la clôture, sa date et ses récompenses déjà gagnées. Il rejoint la sous-catégorie adaptée de `Tours de force` et ne rapporte aucun point.
 
-Un Haut Fait saisonnier expiré et non obtenu reste consultable comme contenu historique devenu indisponible. Le futur système doit permettre de filtrer les Hauts Faits réalisés, disponibles, devenus indisponibles ou tous les Hauts Faits. La vue par défaut n’affiche pas les anciens Hauts Faits devenus impossibles.
+Un Haut Fait saisonnier manqué disparaît complètement. Il ne reste consultable ni comme contenu historique indisponible, ni dans un filtre de Tours de force manqués. Aucun système séparé de rejeu ou de journal des anciennes Saisons n’est nécessaire.
 
-Le détail fonctionnel appartient au futur `19-ACHIEVEMENTS.md`, qui reste prévu mais non créé, et les besoins d’affichage à [`20-UI_FLOW.md`](./20-UI_FLOW.md).
+Le cycle de conversion, les compteurs, la visibilité et les récompenses éventuelles appartiennent à [`19-ACHIEVEMENTS.md`](./19-ACHIEVEMENTS.md). Les besoins d’affichage devront être repris lors de la future validation de [`20-UI_FLOW.md`](./20-UI_FLOW.md).
 
 ## 12. Clôture et récompenses finales
 
@@ -206,7 +206,7 @@ Le détail fonctionnel appartient au futur `19-ACHIEVEMENTS.md`, qui reste prév
 
 * les classements finaux sont figés ;
 * les résultats définitifs sont enregistrés ;
-* les Hauts Faits correspondants peuvent être validés ;
+* les Hauts Faits correspondants applicables peuvent être validés et les accomplissements temporaires obtenus sont convertis en Tours de force ;
 * les récompenses finales sont générées ;
 * les récompenses récupérables manuellement restent accessibles pendant l’inter-saison selon leurs règles.
 
@@ -218,7 +218,7 @@ Les catégories de récompenses, leur disponibilité, leur éligibilité et leur
 
 Les classements finaux compétitifs saisonniers ne distribuent jamais de ressource générale d’invocation, d’invocations de créatures ni d’énergie générale.
 
-Cette règle s’applique notamment au PvP, à la Tour infinie, au Boss de Guilde et à tout futur mode utilisant un classement final compétitif saisonnier comparable. Leurs récompenses privilégient le prestige, les Hauts Faits, les titres, badges, personnalisations et cosmétiques afin d’éviter une boucle dans laquelle les joueurs déjà les plus performants obtiendraient davantage de puissance leur permettant d’accroître encore leur avantage.
+Cette règle s’applique notamment au PvP, à la Tour infinie, au Boss de Guilde et à tout futur mode utilisant un classement final compétitif saisonnier comparable. Les paquets cosmétiques et autres récompenses directes compatibles peuvent rester portés par ces systèmes. Les récompenses spécifiquement liées au prestige d’un accomplissement peuvent être portées par le Haut Fait ou le Tour de force correspondant selon [`19-ACHIEVEMENTS.md`](./19-ACHIEVEMENTS.md), afin d’éviter une boucle dans laquelle les joueurs déjà les plus performants obtiendraient davantage de puissance leur permettant d’accroître encore leur avantage.
 
 Cette interdiction ne concerne pas les jalons personnels de progression accessibles au sein de ces modes, dont les récompenses restent définies par leurs référentiels propriétaires.
 
@@ -272,11 +272,10 @@ Une Saison du jeu ne constitue jamais une condition d’évolution, car sa fin r
 | [`15-GUILDS.md`](./15-GUILDS.md) | Boss, quêtes saisonnières et activités permanentes de Guilde |
 | [`17-EVENTS.md`](./17-EVENTS.md) | Animations temporaires distinctes des Saisons |
 | [`18-QUESTS.md`](./18-QUESTS.md) | Quêtes saisonnières individuelles et de Guilde |
+| [`19-ACHIEVEMENTS.md`](./19-ACHIEVEMENTS.md) | Hauts Faits temporaires, conversion en Tours de force et récompenses de prestige |
 | [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Saison active, inter-saison, décomptes, quêtes et récompenses |
 | [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Retours temporaires en boutique et transparence commerciale |
 | [`01-LORE.md`](../02-world/01-LORE.md) | Canon et frontière entre thème éditorial et narration |
-
-Le futur `19-ACHIEVEMENTS.md` devra définir les Hauts Faits saisonniers et leur consultation historique.
 
 ## 17. Éléments à préciser ultérieurement
 

@@ -327,7 +327,7 @@ Au début d’une nouvelle Saison :
 
 Ce reset évite un avantage permanent des joueurs historiquement les plus avancés, demande aux joueurs souhaitant être classés de rejouer le mode et permet de renouveler régulièrement le challenge.
 
-La Tour est temporairement fermée pendant l’inter-saison. Ses performances significatives déjà accomplies peuvent rester conservées par les futurs Hauts Faits, sans maintenir une progression jouable permanente entre les Saisons.
+La Tour est temporairement fermée pendant l’inter-saison. Ses performances significatives peuvent être conservées par des Hauts Faits ou Tours de force sans maintenir une progression jouable permanente entre les Saisons.
 
 ### 7.5. Renouvellement saisonnier
 
@@ -370,9 +370,9 @@ Le classement ne doit pas produire directement une puissance obligatoire.
 
 Le classement final compétitif de la Saison ne distribue jamais de ressource générale d’invocation, d’invocations de créatures ni d’énergie générale. Cette interdiction ne concerne pas les récompenses uniques d’étages ni les autres jalons personnels de progression.
 
-Malgré le reset de la progression jouable, les performances importantes, notamment un rang final ou un étage remarquable, peuvent alimenter le futur `19-ACHIEVEMENTS.md`. Les Hauts Faits obtenus constitueront leur conservation durable ; aucun historique saisonnier séparé de la Tour n’est nécessaire.
+Malgré le reset de la progression jouable, les performances importantes, notamment un rang final ou un étage remarquable, peuvent alimenter des Hauts Faits temporaires destinés à devenir des Tours de force. Lorsqu’un tel accomplissement a été obtenu, le Tour de force conserve son meilleur résultat pertinent, ou le résultat final s’il repose sur le classement de clôture, ainsi que sa date. S’il a été manqué, il disparaît ; aucun historique saisonnier séparé de la Tour n’est nécessaire.
 
-Certains hauts faits ou éléments de prestige pourront éventuellement accorder des récompenses strictement cosmétiques ou honorifiques. Les contours ou bordures de carte constituent une piste privilégiée ; des titres, badges ou autres éléments visuels restent également possibles. Aucune récompense précise n’est obligatoire ou validée à ce stade et aucun bonus de puissance ne peut en résulter.
+Les récompenses uniques d’étages, les récompenses de gameplay et les paquets cosmétiques restent portés directement par la Tour lorsqu’ils sont prévus. Une récompense spécifiquement liée au prestige d’un accomplissement peut être portée par le Haut Fait ou le Tour de force correspondant selon [`19-ACHIEVEMENTS.md`](./19-ACHIEVEMENTS.md). Aucune récompense précise n’est obligatoire et aucun bonus de puissance ne peut en résulter.
 
 ### 7.8. Loot et énergie
 
@@ -394,7 +394,7 @@ Le fonctionnement d’un mode PvE reste défini ici même lorsqu’il utilise un
 
 Les parcours et informations nécessaires sont définis fonctionnellement dans [`20-UI_FLOW.md`](./20-UI_FLOW.md), sans imposer ici leur layout final.
 
-Le futur `19-ACHIEVEMENTS.md` devra définir les hauts faits, leur structure et leurs récompenses éventuelles. Le présent document se limite aux performances PvE susceptibles de les alimenter.
+[`19-ACHIEVEMENTS.md`](./19-ACHIEVEMENTS.md) définit la structure des Hauts Faits, les Tours de force et leurs récompenses éventuelles. Le présent document se limite aux performances PvE susceptibles de les alimenter.
 
 ## 10. Dépendances
 
@@ -409,6 +409,7 @@ Le futur `19-ACHIEVEMENTS.md` devra définir les hauts faits, leur structure et 
 | [`16-SEASONS.md`](./16-SEASONS.md) | Cadre transversal commun aux Saisons sans transfert des règles PvE |
 | [`17-EVENTS.md`](./17-EVENTS.md) | Events légers pouvant utiliser un mode PvE existant |
 | [`18-QUESTS.md`](./18-QUESTS.md) | Objectifs pouvant utiliser les activités débloquées |
+| [`19-ACHIEVEMENTS.md`](./19-ACHIEVEMENTS.md) | Conservation des performances PvE par les Hauts Faits et Tours de force |
 | [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Sélection, préparation, progression, contribution et résultats |
 | [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Absence de puissance obligatoire liée au paiement ou aux cosmétiques |
 
@@ -443,6 +444,6 @@ Le futur `19-ACHIEVEMENTS.md` devra définir les hauts faits, leur structure et 
 * Le coût d’une tentative et la valeur de l’XP de défaite.
 * Les adversaires, compositions, thèmes et modificateurs concrets.
 * Les tables de loot saisonnières et la répartition des récompenses uniques de progression, dont les quantités éventuelles de ressource générale d’invocation.
-* Les hauts faits, récompenses cosmétiques et contours ou bordures de carte éventuels.
+* Les Hauts Faits et Tours de force concrets ainsi que leurs éventuelles récompenses de prestige.
 
 Ces éléments relèvent du balancing, du content design, de la production saisonnière, de l’UI, de l’Art ou de futurs référentiels. Ils ne constituent pas des questions structurelles bloquant le statut actuel du document.

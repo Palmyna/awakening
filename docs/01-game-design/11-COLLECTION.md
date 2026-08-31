@@ -230,7 +230,7 @@ La progression de collection est principalement suivie par série, car son péri
 
 La complétion d’une série n’accorde aucune récompense automatique de gameplay, notamment aucune puissance, statistique, ressource de progression, équipement, invocation ou autre avantage compétitif.
 
-Une reconnaissance future strictement cosmétique ou honorifique reste possible, notamment sous la forme d’un haut fait, d’un badge, d’un titre, d’une bordure ou d’un autre effet visuel. Aucun de ces exemples ne constitue actuellement une récompense validée ou obligatoire. Une éventuelle interaction avec le futur référentiel des hauts faits devra être définie lors de son cadrage.
+Une reconnaissance strictement cosmétique ou honorifique reste possible, notamment sous la forme d’un Haut Fait, d’un badge, d’un titre, d’une bordure ou d’un autre effet visuel. Aucun de ces exemples ne constitue une récompense précise validée ou obligatoire. La structure et les récompenses éventuelles des Hauts Faits appartiennent à [`19-ACHIEVEMENTS.md`](./19-ACHIEVEMENTS.md).
 
 ## 14. Skins obtenus hors paquets
 

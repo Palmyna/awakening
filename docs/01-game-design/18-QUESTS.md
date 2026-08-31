@@ -119,6 +119,8 @@ Une mission, quête ou objectif comparable ne comptabilise pas rétroactivement 
 
 Cette règle s’applique aux quêtes journalières, hebdomadaires, mensuelles, saisonnières et aux missions d’Event selon leur référentiel propriétaire.
 
+Elle ne s’étend pas automatiquement aux Hauts Faits. Selon [`19-ACHIEVEMENTS.md`](./19-ACHIEVEMENTS.md), un Haut Fait peut être validé ou progressé rétroactivement lorsqu’une donnée historique fiable existe ; aucune donnée n’est inventée et aucune reconstruction approximative n’est effectuée lorsqu’elle manque.
+
 Une même action peut en revanche faire progresser simultanément tous les objectifs actifs dont elle remplit les conditions. Un même combat peut ainsi progresser une journalière, une hebdomadaire, une mensuelle, une quête saisonnière et une mission d’Event sans exiger des actions séparées artificiellement.
 
 ## 10. Reroll des quêtes périodiques
@@ -278,6 +280,7 @@ Cette séparation peut utiliser des onglets, sections, filtres ou une autre arch
 | [`15-GUILDS.md`](./15-GUILDS.md) | Quêtes saisonnières collectives et absence de quêtes périodiques de Guilde dédiées |
 | [`16-SEASONS.md`](./16-SEASONS.md) | Calendrier des quêtes saisonnières et clôture de la Saison |
 | [`17-EVENTS.md`](./17-EVENTS.md) | Missions temporaires distinctes et progression simultanée possible |
+| [`19-ACHIEVEMENTS.md`](./19-ACHIEVEMENTS.md) | Rétroactivité fiable et progression automatique des Hauts Faits |
 | [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Présentation, suivi, reroll et récupération manuelle |
 | [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Paquets gratuits et absence de dépense obligatoire |
 

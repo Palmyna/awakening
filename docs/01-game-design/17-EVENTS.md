@@ -199,7 +199,12 @@ La rubrique et les missions réutilisent autant que possible les composants exis
 
 ## 18. Hauts Faits et cohérence narrative
 
-Les Events peuvent alimenter de futurs Hauts Faits conservant la mémoire durable d’une participation, d’une complétion ou d’une performance. Leur fonctionnement appartient au futur `19-ACHIEVEMENTS.md` ; aucun historique événementiel séparé n’est nécessaire.
+Les Events peuvent alimenter deux types d’accomplissements distincts :
+
+* des Hauts Faits généraux et durables liés aux Events, progressant éventuellement au fil de plusieurs occurrences ;
+* des Hauts Faits temporaires propres à une occurrence non reproductible.
+
+Un accomplissement propre à une occurrence peut apparaître dans sa catégorie normale pendant la phase active et rapporter `0` point lorsqu’il est destiné à devenir historique. À la fin de sa période, il devient un Tour de force s’il a été obtenu et conserve son meilleur résultat pertinent et sa date ; s’il a été manqué, il disparaît complètement. Ce fonctionnement appartient à [`19-ACHIEVEMENTS.md`](./19-ACHIEVEMENTS.md) et ne nécessite aucun historique événementiel séparé.
 
 Un Event festif, humoristique ou commémoratif n’est pas automatiquement canonique. Toute révélation, conséquence durable ou évolution narrative canonique doit être décidée explicitement et respecter le [référentiel Lore](../02-world/01-LORE.md).
 
@@ -215,6 +220,7 @@ Un Event festif, humoristique ou commémoratif n’est pas automatiquement canon
 | [`12-MODES.md`](./12-MODES.md) | Règles des activités réutilisées par les missions |
 | [`16-SEASONS.md`](./16-SEASONS.md) | Cadre saisonnier totalement indépendant |
 | [`18-QUESTS.md`](./18-QUESTS.md) | Non-rétroactivité transversale et séparation des catégories de missions et quêtes |
+| [`19-ACHIEVEMENTS.md`](./19-ACHIEVEMENTS.md) | Hauts Faits généraux d’Events et Tours de force propres aux occurrences |
 | [`20-UI_FLOW.md`](./20-UI_FLOW.md) | Rubrique, suivi, états, notifications et fermeture |
 | [`04-MONETIZATION.md`](../00-foundation/04-MONETIZATION.md) | Paquets, offres temporaires et garde-fous commerciaux |
 | [`01-LORE.md`](../02-world/01-LORE.md) | Canon éventuel et cohérence narrative |

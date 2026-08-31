@@ -84,6 +84,8 @@ Un badge ou point rouge dans l’interface signale la présence d’au moins une
 
 Une récompense actuellement non éligible n’apparaît ni en grisé, ni verrouillée, ni inactive. Elle peut réapparaître si ses conditions redeviennent valides. Cette absence reste distincte de l’expiration définitive d’une récompense temporelle.
 
+Une récompense de Haut Fait appartenant à une Guilde apparaît dans le centre du Chef avec une indication fonctionnelle claire de sa propriété collective. Le Chef la récupère au nom de la Guilde ; le choix du pictogramme, de la couleur ou de la présentation reste ouvert.
+
 Ces signaux restent internes au jeu. Aucune notification push ou notification téléphone n’est prévue pour ce système.
 
 ## 5. Onboarding et déblocages
@@ -463,7 +465,9 @@ L’interface transversale des Saisons doit permettre :
 
 Dans un mode fermé pendant l’inter-saison, l’action permettant normalement de jouer est remplacée par son état d’indisponibilité et le décompte disponible. Les activités permanentes ne doivent pas paraître fermées du seul fait de l’inter-saison.
 
-Le futur espace des Hauts Faits devra proposer des filtres pour les éléments réalisés, disponibles, devenus indisponibles ou tous les éléments. Par défaut, il affichera les Hauts Faits réalisés et ceux encore disponibles, sans faire remonter les anciens Hauts Faits saisonniers devenus impossibles.
+La future relecture de l’espace des Hauts Faits devra reprendre les besoins fonctionnels de [`19-ACHIEVEMENTS.md`](./19-ACHIEVEMENTS.md), notamment les espaces Personnel et Guilde, les catégories, les points, les dates, les paliers, les secrets et les Tours de force. Un Tour de force ou sa sous-catégorie n’apparaît que lorsqu’il existe réellement dans la bibliothèque ; les accomplissements temporaires manqués ne sont jamais affichés comme contenus historiques indisponibles.
+
+Des pastilles internes doivent pouvoir signaler les nouveautés jusqu’au Haut Fait concerné. Une action permettant de tout marquer comme vu en une seule fois est obligatoire, sans imposer ici son emplacement ni la navigation finale. Aucune notification téléphone ou push n’est associée aux Hauts Faits.
 
 Le layout, la navigation, l’habillage et les formulations exactes restent à définir.
 
@@ -603,7 +607,7 @@ L’annonce d’une nouvelle occurrence peut utiliser un badge, un marqueur sur 
 
 ## 22. Dépendances
 
-Le présent document traduit les besoins fonctionnels des documents spécialisés, notamment [`09-GACHA.md`](./09-GACHA.md), [`10-PROGRESSION.md`](./10-PROGRESSION.md), [`11-COLLECTION.md`](./11-COLLECTION.md), [`12-MODES.md`](./12-MODES.md), [`13-PVE.md`](./13-PVE.md), [`14-PVP.md`](./14-PVP.md), [`15-GUILDS.md`](./15-GUILDS.md), [`16-SEASONS.md`](./16-SEASONS.md), [`17-EVENTS.md`](./17-EVENTS.md) et [`18-QUESTS.md`](./18-QUESTS.md).
+Le présent document traduit les besoins fonctionnels des documents spécialisés, notamment [`09-GACHA.md`](./09-GACHA.md), [`10-PROGRESSION.md`](./10-PROGRESSION.md), [`11-COLLECTION.md`](./11-COLLECTION.md), [`12-MODES.md`](./12-MODES.md), [`13-PVE.md`](./13-PVE.md), [`14-PVP.md`](./14-PVP.md), [`15-GUILDS.md`](./15-GUILDS.md), [`16-SEASONS.md`](./16-SEASONS.md), [`17-EVENTS.md`](./17-EVENTS.md), [`18-QUESTS.md`](./18-QUESTS.md) et [`19-ACHIEVEMENTS.md`](./19-ACHIEVEMENTS.md).
 
 Il dépend également des règles de combat, créatures, Skills, éléments, Effets de combat, évolutions, objets et monétisation. Une décision d’interface ne peut pas modifier leurs règles fonctionnelles.
 
@@ -633,7 +637,7 @@ Il dépend également des règles de combat, créatures, Skills, éléments, Eff
 * Le layout final du centre de récompenses et les règles exactes de récupération groupée.
 * Le layout final de la Saison active, de l’inter-saison, des clôtures et des décomptes.
 * Le layout final de la rubrique Events, de sa liste, de ses missions et de sa phase de fermeture.
-* La présentation finale des quêtes périodiques, de leurs rerolls, des quêtes saisonnières et des futurs filtres de Hauts Faits.
+* La présentation finale des quêtes périodiques, de leurs rerolls, des quêtes saisonnières et de l’espace des Hauts Faits.
 * Le layout final du catalogue, des zones, missions et tâches d’Expédition.
 * L’ergonomie détaillée des demandes et dons de composants.
 
