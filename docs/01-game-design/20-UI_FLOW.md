@@ -467,6 +467,8 @@ Dans un mode fermé pendant l’inter-saison, l’action permettant normalement 
 
 La future relecture de l’espace des Hauts Faits devra reprendre les besoins fonctionnels de [`19-ACHIEVEMENTS.md`](./19-ACHIEVEMENTS.md), notamment les espaces Personnel et Guilde, les catégories, les points, les dates, les paliers, les secrets et les Tours de force. Un Tour de force ou sa sous-catégorie n’apparaît que lorsqu’il existe réellement dans la bibliothèque ; les accomplissements temporaires manqués ne sont jamais affichés comme contenus historiques indisponibles.
 
+Lorsqu’un joueur n’appartient à aucune Guilde, l’espace des Hauts Faits de Guilde n’est pas consultable. Il peut être masqué ou présenté comme indisponible ou grisé ; ce choix visuel reste ouvert et ne fixe aucun layout final.
+
 Des pastilles internes doivent pouvoir signaler les nouveautés jusqu’au Haut Fait concerné. Une action permettant de tout marquer comme vu en une seule fois est obligatoire, sans imposer ici son emplacement ni la navigation finale. Aucune notification téléphone ou push n’est associée aux Hauts Faits.
 
 Le layout, la navigation, l’habillage et les formulations exactes restent à définir.

@@ -23,6 +23,8 @@ Ils utilisent autant que possible les mêmes principes généraux. Une règle pe
 
 Un Haut Fait personnel lié à une activité de Guilde reste la propriété du compte. Il est conservé après un départ, un changement de Guilde ou la dissolution de la Guilde. À l'inverse, un accomplissement collectif de Guilde, ses points et son historique restent exclusivement attachés à cette Guilde.
 
+Lorsqu'un joueur n'appartient à aucune Guilde, il ne peut pas consulter l'espace des Hauts Faits de Guilde. L'interface peut soit masquer cet espace, soit le présenter comme indisponible ou grisé. Le choix visuel exact reste ouvert et appartient à la future validation de [`20-UI_FLOW.md`](./20-UI_FLOW.md), sans imposer ici de layout ni de comportement graphique final.
+
 ## 3. Catégories initiales
 
 Les catégories personnelles initiales sont :
@@ -175,7 +177,11 @@ Cette règle remplace l'ancienne conservation des Hauts Faits saisonniers expir�
 
 Un Haut Fait classique devenu définitivement impossible à obtenir à la suite d'une évolution du jeu peut être reclassé en Tour de force.
 
-Pour ses propriétaires, il conserve sa date, son état accompli et ses récompenses acquises, rejoint la sous-catégorie adaptée et ses anciens points sont retirés du score global. Pour les comptes ou Guildes qui ne l'avaient pas obtenu, il disparaît. Une reclassification ne retire jamais rétroactivement une récompense gagnée.
+Pour un compte ou une Guilde qui l'avait obtenu, l'accomplissement conserve sa date et son état accompli, rejoint la sous-catégorie adaptée de `Tours de force` et ses anciens points sont retirés du score global. En dehors de ce retrait de points, la reclassification modifie uniquement le statut et la catégorie de l'accomplissement.
+
+Une récompense déjà réclamée reste définitivement acquise. Une récompense permanente déjà générée mais encore non réclamée n'est ni supprimée ni générée une seconde fois : elle reste récupérable selon ses règles initiales. Cette règle s'applique de la même manière aux Hauts Faits personnels et de Guilde.
+
+Pour les comptes ou Guildes qui ne l'avaient pas obtenu, l'ancien Haut Fait disparaît simplement.
 
 ## 9. Saisons, Events et performances temporaires
 
